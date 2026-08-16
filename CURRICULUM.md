@@ -424,8 +424,36 @@
  **Also stated: his existing [x] "function scope, not block scope" is the L
  of LEGB and was never wrong, only incomplete.**
 
-- [ ] `global` and `nonlocal` keywords — NOT YET TAUGHT. `nonlocal` is the
- natural pair to closures and should open with them.
+- [~] **`global` — TAUGHT S21, against `nonlocal` exactly as planned.**
+ (`nonlocal` itself was taught S19 — see its entry below.) The pair:
+ `nonlocal` says "don't create a local — target the ENCLOSING function's
+ cell"; **`global` says the same one level higher — target the MODULE
+ namespace.**
+ ```python
+ count = 0
+ def tick():
+     global count
+     count = count + 1
+ tick(); tick()
+ print(count)      # 2
+ ```
+ **THE MECHANISM UNDERNEATH, and he re-derived the hard part himself by
+ asking the right question ("why UnboundLocalError — shouldn't LEGB find
+ the global?"): locality is decided at FUNCTION-CREATION time, not line by
+ line.** The compiler scans the whole body; an assignment to a name
+ ANYWHERE in the body classifies it local EVERYWHERE in the body, and a
+ name classified local never gets the LEGB walk — reads go only to the
+ local slot. Local-and-unbound = `UnboundLocalError`, which is the
+ S19 three-error separation confirmed from a second direction.
+ **THE WORKING RULE, completed on the mutation case (`scores.append(4)`
+ works fine with no `global`): `global` is about REBINDING A NAME, not
+ about touching an object. Read: free. Mutate: free. Rebind: needs
+ `global`.** He predicted both the read-only case (`0`, no `global`
+ needed) and the mutation case correctly, with the classification story
+ stated unaided. One label fix: he reached for "associativity" for
+ RHS-before-assignment — that is the EVALUATION ORDER of an assignment
+ statement; associativity is the tie-break direction for equal-rank
+ operators.
 
 - [~] **Default arguments — TAUGHT S18.** `def power(base, exp=2):` makes
  `exp` optional; `power(5)` uses `2`, `power(5, 3)` uses `3`.
@@ -461,7 +489,34 @@
  **This is now the only item in the file that has never once been produced
  cold. Fire it every session until it lands.**
 
-- [ ] `*args` and `**kwargs` — NOT YET TAUGHT.
+- [~] **`*args` and `**kwargs` — TAUGHT S21, the item he asked for by name in
+ S17. Motivated by a constraint he could not beat: `print()` accepts any
+ number of arguments, and NO fixed parameter list can do that.**
+ **KEYWORD ARGUMENTS had to be defined first — he stopped the block to say
+ the term had never been taught, and he was right (see Teaching Mistakes
+ S21).** Positional argument = matched by POSITION; keyword argument =
+ passed as `name=value` in the CALL and matched by NAME, so
+ `intro(role="robotics", name="Ankur")` lands correctly in any order.
+ **THE COLLECTORS:** in a signature, `*args` collects all LEFTOVER
+ POSITIONAL arguments into a TUPLE; `**kwargs` collects all LEFTOVER
+ KEYWORD arguments into a DICT (keys = the names as strings). Signature
+ order is fixed: normal parameters, then `*args`, then `**kwargs`.
+ ```python
+ def report(title, *args, **kwargs):
+     print(title); print(args); print(kwargs)
+ report("joints", 1.2, 0.8, unit="rad", safe=True)
+ # joints / (1.2, 0.8) / {'unit': 'rad', 'safe': True}
+ ```
+ **THE EMPTY CASES, and the design point:** nothing left over → `()` and
+ `{}`, never `None` — **one type in all cases, so the body can loop
+ without a special case.** (His first guess was `None`; he self-corrected
+ from output already on screen.)
+ **THE MIRROR RULE, which completes the model: the same symbols in a CALL
+ unpack instead of collecting.** `intro(*pair)` spreads a tuple into
+ separate positional arguments; `intro(**info)` spreads a dict into
+ keyword arguments. **Signature side = collect many into one; call side =
+ spread one into many.** Teach-back correct with one fix: unpacking feeds
+ the call with ARGUMENTS — nothing called a "variable" is created.
 
 - [~] **Functions as first-class objects — TAUGHT/RE-CONFIRMED S18.** A
  function is an ordinary object: bindable to a name, passable as an argument,
@@ -949,15 +1004,13 @@ false.
   only by testing the exact edge. Same bug, twice, in ten minutes.**
 
 - [ ] Lambda functions / [ ] Docstrings
-- [ ] `global` (taught AGAINST `nonlocal`) / [ ] `*args` / `**kwargs`
 
-> **1.7 STATUS: OPEN, and now close to done.** S20 added RECURSION (1.7.9),
+> **1.7 STATUS: OPEN — TWO ITEMS LEFT.** S20 added RECURSION (1.7.9),
 > PURE FUNCTIONS vs SIDE EFFECTS (1.7.10) and EDGE-CASE ANALYSIS (1.7.11, a new
-> subsection added at the student's request).
-> **REMAINING — FOUR ITEMS ONLY: `global` (taught AGAINST `nonlocal`, which he
-> now owns — `nonlocal` targets the enclosing cell, `global` the module),
-> `*args`/`**kwargs` (asked for by name), lambdas, docstrings. 1.7 CANNOT BE
-> MARKED CLOSED until all four are taught.** One good session closes it.
+> subsection added at the student's request). **S21 added `global` and
+> `*args`/`**kwargs` (see their [~] entries above).**
+> **REMAINING — LAMBDAS AND DOCSTRINGS ONLY. 1.7 CANNOT BE MARKED CLOSED
+> until both are taught.** A short session closes it.
 > **Nothing in 1.7 is [x].** The S18 material is owed a later-day cold pass and
 > the S19 material is owed one too.
 > ⚠ **TWO CONSTRUCTS WERE USED IN S19 EXAMPLES WITHOUT EVER BEING TAUGHT and

@@ -37,13 +37,19 @@
 # part was re-written every session, which is where the S15 stale-file and
 # S16 wrong-name incidents came from. Splitting by rate of change fixes both.
 #
-# VERSION: RULES v1, 16 Aug 2026. Derived from python_learning_journey v16.
+# VERSION: RULES v2, 16 Aug 2026. v1 + Session 21 adoption of the seven
+# 16-Aug-review proposals (see next section).
 # ═══════════════════════════════════════════════════
 
-## PROPOSED CHANGES FROM THE 16 AUG 2026 REVIEW — NOT YET ADOPTED
-These were discussed between S20 and S21 and are recorded here so Session 21
-can decide on them explicitly. **None of them is binding until the student
-says so.** Until then, every rule below stands exactly as written.
+## THE SEVEN CHANGES FROM THE 16 AUG 2026 REVIEW — **ADOPTED IN FULL, SESSION 21 (16 Aug 2026)**
+Discussed between S20 and S21, decided explicitly by the student at the S21
+open: **all seven accepted.** They were adopted as ONE pre-negotiated package
+agreed before the rule-change cap (item 3) took effect; from S22 onward the
+cap itself governs — at most one new binding rule per session, adopted at
+close. Where an item below conflicts with an older rule, the item below wins
+(notably: item 2 supersedes the S16 rule-3 promotion gate — the self-rating
+now sets the re-test interval instead of blocking promotion; the rating is
+still taken after the student's answer and before the verdict).
 
 1. **Task-based recall.** For any [RECALL] on a ledger item, the first prompt
    is a small program or a constraint ("write a function that can be passed
@@ -787,7 +793,7 @@ say the single word "protocol" at any point and the mentor stops and audits
 the current step against this file — no explanation required from him.**
 
 
-### INDEX — the seven principles the rules above reduce to (proposal 4, not yet binding)
+### INDEX — the seven principles the rules above reduce to (proposal 4 — ADOPTED S21; the map is the working index, originals kept verbatim)
 1. **Measurement validity** — interval gate; recall-before-notes; confidence
    asked AFTER recall; term-tax later-day only; no promotion on same-day
    evidence. (S9, S15, S16, S17-1)

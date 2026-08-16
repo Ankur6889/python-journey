@@ -367,7 +367,28 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **20**
+- Sessions Completed: **21**
+- **SESSION 21 (Sun 16 Aug 2026, evening — SAME DAY AS S20) — GOVERNANCE
+ SETTLED, ENVIRONMENT MOVED, AND THE 1.7 TAIL HALF-CLOSED.** Interval gate
+ applied at the open: ~2 hours since S20, so **no promotable evidence, term-tax
+ skipped, and the four queued [RECALL]s (post-order transfer, cell causation,
+ closure definition, traceback) deferred to a genuinely later day** — the gate
+ has now run unprompted four sessions running. **All SEVEN proposals from the
+ 16 Aug review were ACCEPTED and adopted as a package** (task-based recall;
+ promotion-on-correctness with confidence setting the interval; the
+ rule-change cap; the seven-principle index; the weekly cold build block;
+ queue tooling; the pushback denominator). **First session run in VS Code +
+ Claude Code on the new four-file git repo** — drills now happen in real
+ files with pytest, which retires the chat-channel whitespace problem by
+ construction. Taught: **`global`** (compile-time locality classification,
+ `UnboundLocalError` mechanism, read/mutate/rebind rule) and
+ **`*args`/`**kwargs`** (keyword arguments defined first after his catch;
+ collect-to-tuple/dict; empty cases; the signature/call mirror). **Count S21
+ as ~0.15 of a subsection** — a short evening session ended at his call.
+ ZERO promotions, correctly (same-day). **One pushback, upheld: "keyword
+ argument" used naked before definition — running total TWENTY-SIX, zero
+ wrong. Under the new denominator rule: 1 challenge raised, 1 upheld.**
+ 1.7 has TWO items left: lambdas, docstrings.
 - **SESSION 20 (Sun 16 Aug 2026) — RECURSION DELIVERED AT LAST, AND THE FILE'S
  OLDEST "STUDENT WEAKNESS" TURNED OUT TO BE A MENTOR GAP.** Interval gate
  passed (FOUR-day gap, the longest of the arc), applied unprompted for the
@@ -544,6 +565,7 @@
 | 17 | **CLOSE 1.6 — the owed tail** | **Found-flag search written by the student (4 iterations) → loop `else` earned by contrast; `pass` + the `pass`/`continue`/`break` three-way; ternary as an EXPRESSION; `if`/`elif`/`else` chain taught on request then CONFIRMED COLD; infinite-loop diagnosis + full `while` trace with the final cycle stated; mutating-vs-non-mutating identification drill (4/5) + the type-first discriminator** | **Complete — 1.6 CLOSED** | **THREE correct student pushbacks, all upheld, taking the running total to 13 with zero false positives — and the first one, refusing a same-day recall test before it ran, produced the INTERVAL GATE. `if`/`elif`/`else` PROMOTED to [x], the last item owed from S16. The owed method drill was delivered, discharging the debt from his own S16 demotion request. His per-item confidence PREDICTED his single wrong answer. Mentor also misread "continue" and opened 1.7 against his explicit request; that material was discarded at his instruction and is not recorded.** |
 | 18 | **Clear the deferred recall block + OPEN 1.7 Functions** | **[RECALL] exception family cold in mixed order (`NameError`/`ValueError`/`TypeError`, exceptions-are-signals, `StopIteration` category, `traceback`); [RECALL] iterator causation; [RECALL] modulo identity in TEXT on a self-chosen negative divisor; [DRILL] `reverse`/`sort` + classification of unseen methods; then 1.7 — `def` vs call, parameters vs arguments, return values and implicit `None`, scope and LEGB, `__defaults__` cold re-test, default arguments, first-class objects, nested functions** | **Complete — deferred block cleared, 1.7 OPENED (~two-thirds)** | **SEVEN promotions to [x] on genuine later-day evidence, including the `NameError`/`ValueError` conflation that had been the single weakest label in the file since S16. The INTERVAL GATE was applied by the MENTOR unprompted for the first time. `traceback` (3/10), iterator causation (3/10, third failure) and `__defaults__` (fourth cold miss) all held at [~]. FIVE correct student pushbacks — running total EIGHTEEN, zero wrong — including a TECHNICAL correction to the mentor's own discriminator rule and a refusal to let closures be tagged as taught. Closures and recursion NOT covered; closures reopen from scratch in TEXT.** || 19 | **Recall the three S18 non-promotions + CLOSURES FROM SCRATCH IN TEXT** | **[RECALL] `traceback`, iterator causation (bug-first), `__defaults__`; [RECALL] def-vs-call / first-class / alias and LEGB; then closures ground-up — free variable, cell, `__closure__`, per-object cells, the one-argument-callback necessity, `sorted` and `key=` from zero, student-built `my_sorted`, `nonlocal` and the three-error separation, alias vs new object vs return value** | **Complete — 1.7 advanced to ~five-sixths; recursion deferred a fourth time** | **THE ITERATOR CAUSATION PASSED ON FIRST ATTEMPT for the first time in four attempts across four days — bug-first delivery vindicated. ZERO promotions and that is correct: 6/10, 4/10 and 7/10 all sit below the bar. Second transcription artefact of the arc fired on "dunder" and the S16 rule handled it — nothing logged against him. FOUR correct student rejections of weak closure motivations, running total TWENTY-TWO with zero wrong. Mentor failures: `sorted(key=)` used before ever being taught (flagged twice by him), four motivations that did not require a closure (~half the session), `zip` and list comprehensions used untaught, and questions consolidated without their code → THE SESSION 19 RULE. Closure DEFINITION declared a gap; cell causation asked a fourth time and still not produced unaided.** |
 | 20 | **Close the owed closure recalls + RECURSION AT LAST + pure functions + edge-case analysis** | **[RECALL] closure definition cold (4/10); [RECALL] cell causation cold — CORRECT UNAIDED at last (5/10); [RECALL] `traceback` → 0/10 and retaught from scratch; then 1.7.9 RECURSION in full (base/recursive case, pre-order vs post-order, value-returning recursion, identity-value base rule, `RecursionError`, the two termination conditions, printer-vs-calculator); [PREDICT] post-order countdown (FAILED), [PREDICT] `total(4)` (PASSED both parts); [DRILL] `count_down_by` (passed, tuple flaw); [DRILL] `digit_sum` (recursive case unaided, base-case boundary bug); 1.7.11 EDGE-CASE ANALYSIS — the five checks, taught as a procedure; [DRILL] `first_char` bug hunt (PASSED via check 2); 1.7.10 pure functions vs side effects + [PREDICT] `scale` (3/3)** | **Complete — 1.7 advanced to four remaining items** | **THE CELL CAUSATION CAME BACK CORRECT UNAIDED after five attempts across two days. ZERO PROMOTIONS — but for a NEW reason: the file's FIRST UNDER-RATING (5/10 on an ~85%-correct answer). ⚠ THE MAJOR FINDING IS A MENTOR FINDING: `traceback` had been FIRED for three sessions and NEVER TAUGHT; the prior "failures" were invalid measurements and are struck. TENTH define-before-building breach (slicing used untaught) → PUSHBACK 25, upheld. Running total TWENTY-FIVE, zero wrong. THREE NEW RULES, all his — DOUBT GATE, RESPONSE LENGTH CAP, DEPTH-BEFORE-ANSWER — and the disclosure behind rule 2 (he does not read long messages to the end) retro-explains several logged student lapses. EDGE-CASE ANALYSIS added to the curriculum as 1.7.11 at his request; it transferred on first use.** |
+| 21 | **Adopt the seven review proposals + move to VS Code/Claude Code + open the 1.7 tail** | **Governance: all seven 16-Aug proposals ACCEPTED (RULES v2). Tooling: repo/drills/pytest workflow established. Taught `global` (compile-time locality, `UnboundLocalError`, read/mutate/rebind rule) with [PREDICT]s on the read-only and mutation cases (both correct); taught `*args`/`**kwargs` (keyword args defined after his catch, collectors, empty cases, signature order, the collect/unpack mirror) with [PREDICT]s and [TEACH-BACK]s throughout** | **Complete — 1.7 down to TWO items (lambdas, docstrings)** | **Same-day session (~2h after S20): interval gate applied unprompted, term-tax skipped, the four queued [RECALL]s deferred — zero promotions, correctly. ONE pushback, upheld ("keyword argument" used before definition — 11th define-before-use breach; running total 26, zero wrong; denominator: 1 raised / 1 upheld). Session ended at his call before lambdas/docstrings.** |
 
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
@@ -1009,3 +1031,60 @@
 - The mentor breached define-before-building with an undefined `for`/`range`
  example; the student caught it; the SUBSTRATE DEFINE-BEFORE-BUILDING rule
  was written. **S15 vindicated that rule immediately.**
+
+### What Session 21 established
+
+- **THE SEVEN 16-AUG REVIEW PROPOSALS ARE ADOPTED, ALL OF THEM, AS A
+ PACKAGE.** Asked for a decision before any teaching, per plan, he accepted
+ all seven without amendment. Recorded in RULES v2. The two with immediate
+ operational force: **promotion = correctness with confidence setting the
+ re-test interval** (ending the zero-promotion-on-under-rating pattern of
+ S19–S20), and **the rule-change cap** (park candidates in STATE.md, adopt
+ at most one per session, at close — binding from S22, since the seven were
+ pre-negotiated before the cap existed).
+
+- **THE COURSE MOVED INTO VS CODE + CLAUDE CODE, AND THE TOOLING QUESTION
+ WAS SETTLED BEFORE CONTENT.** He asked how drills work in the new
+ environment before touching material — the right order. Established: drills
+ are written by him in real files under `drills/`, tests under `tests/`
+ decide correctness via pytest, the mentor reads and runs his files directly,
+ and the mentor never edits a file he has started. **Two structural wins over
+ the chat channel: indentation is now the editor's job (the S17
+ whitespace-artefact class dies by construction), and "does it work" is now
+ decided by pytest rather than by opinion.** Standing caution given: inline
+ AI autocomplete in the editor is a scaffold and must stay off for drill
+ files.
+
+- **`global` WAS TAUGHT AGAINST `nonlocal`, AS PLANNED, AND THE DEEP
+ MECHANISM CAME OUT BECAUSE HE PULLED IT OUT.** His question — "before the
+ assignment runs, `count + 1` executes; why doesn't LEGB find the module
+ `count`?" — is exactly the right attack on the topic, and the answer is the
+ item's real content: **locality is decided at function-creation time by
+ scanning the whole body; an assignment anywhere makes the name local
+ everywhere; a local-classified name never gets the LEGB walk.**
+ Local-and-unbound = `UnboundLocalError` — the S19 three-error separation
+ arrived at from the opposite direction. The completed rule: **read free,
+ mutate free, rebind needs `global`** — he predicted the read-only and
+ mutation cases correctly with the classification story stated unaided, and
+ held the name-vs-object distinction under one correction ("assignment to
+ the count NAME, not the count object").
+
+- **`*args`/`**kwargs` — THE S17 REQUEST-BY-NAME — WAS DELIVERED, AND IT
+ PRODUCED THE SESSION'S ONE PUSHBACK.** The `**kwargs` block used "keyword
+ argument" without ever defining it; he stopped it: *"wait I didn't get it
+ what do you mean by keyword arguments."* **Upheld — the term had never been
+ taught. Eleventh occurrence of the define-before-use breach family; running
+ pushback total TWENTY-SIX, zero wrong.** Keyword arguments were then
+ defined properly (matched by NAME, not position), and the rest landed
+ clean: collect-to-tuple / collect-to-dict, the always-`()`-never-`None`
+ empty-case design point (his `None` guess self-corrected against output
+ already on screen), signature ordering, and the **mirror rule** —
+ signature side collects many into one, call side spreads one into many.
+
+- **THE INTERVAL GATE DID ITS JOB TWICE IN ONE DAY.** S21 opened ~2 hours
+ after S20; the gate was applied unprompted, the term-tax skipped, and the
+ four queued [RECALL]s deferred rather than burned as echo. **A mid-session
+ restart (his request, after a false start and the tooling detour) was
+ honoured cleanly — the adopted proposals carried, the material restarted
+ from the top.** Zero promotions, correctly. Everything taught today is [~]
+ awaiting its first genuine later-day cold test.

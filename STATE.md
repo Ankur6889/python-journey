@@ -1,20 +1,23 @@
 # STATE.md — PYTHON LEARNING JOURNEY — LIVE SESSION STATE
 # ═══════════════════════════════════════════════════
 # One of FOUR files. THIS is the file that changes every session.
-# HOW TO START SESSION 21 (for Claude):
+# HOW TO START SESSION 22 (for Claude):
 #   1. Read RULES.md fully, then this file fully. Do not ask for
 #      re-introductions. Do not load ARCHIVE.md unless this is a gauntlet /
 #      re-baseline session or the student asks.
-#   2. FIRST ACTION: the INTERVAL GATE. Ask how long since S20 (Sun 16 Aug
-#      2026). If it is a later day, cold work today is promotable evidence.
-#   3. Then follow "SESSION 21 STARTS HERE" below, exactly.
-#   4. Before teaching anything, ask the student for a decision on the seven
-#      PROPOSED CHANGES listed at the top of RULES.md. Adopt at most what he
-#      agrees to; record the decision in the RULE-CHANGE PARKING area below.
+#   2. FIRST ACTION: the INTERVAL GATE. Ask how long since S21 (Sun 16 Aug
+#      2026, evening). If it is a later day, cold work today is promotable
+#      evidence — and NOTE THE NEW PROMOTION RULE adopted in S21: a correct,
+#      unaided, later-day answer PROMOTES; the self-rating no longer blocks,
+#      it sets the next re-test gap.
+#   3. Then follow "SESSION 22 STARTS HERE" below, exactly.
+#   4. [RECALL]s now open TASK-FIRST (S21 adoption): a small program or
+#      constraint, in drills/ with pytest where sensible; the name/definition
+#      is asked only after the code runs.
 #   5. At session end: rewrite this file, tick CURRICULUM.md if anything moved,
-#      append one block to ARCHIVE.md, return everything as downloads.
+#      append one block to ARCHIVE.md, commit and push the repo.
 #
-# STATE AS OF: end of Session 20, Sunday 16 Aug 2026. Next: Session 21.
+# STATE AS OF: end of Session 21, Sunday 16 Aug 2026 (evening). Next: Session 22.
 # ═══════════════════════════════════════════════════
 
 ## SCHEDULE POSITION (carried from the v16 progress tracker; recompute 31 Aug)
@@ -23,8 +26,10 @@
 - **Last honest position (10 Aug, end of S18):** 1.6 closed, 1.7 ~two-thirds
   taught, six-and-a-bit subsections remaining (1.7 tail + 1.8–1.13) against
   ~7 weeks; required rate ~1 subsection/week, margin ZERO.
-- Since then: S19 ≈ ? (closures, recursion deferred), S20 ≈ 0.4. **1.7 has
-  FOUR items left; one good session closes it.** 1.8–1.13 untouched.
+- Since then: S19 ≈ 0.35, S20 ≈ 0.4, **S21 ≈ 0.15** (same-day evening session:
+  governance + tooling + `global` + `*args`/`**kwargs`). **1.7 has TWO items
+  left — lambdas and docstrings; a short session closes it.** 1.8–1.13
+  untouched.
 - **RE-BASELINE LADDER STAYS ARMED — formally due 31 Aug 2026.** Observed
   throughput → derived completion date, written into the master whether or
   not it is welcome. The student chose the date himself in S15.
@@ -33,139 +38,135 @@
   arithmetic in ITEMS, not subsections. The student has stated NOTHING is to
   be cut from the curriculum; the re-baseline therefore moves the date, not
   the scope, and must say so plainly.
-- Current Layer: 1. Current Topic: **1.7 Functions — `global`,
-  `*args`/`**kwargs`, lambdas, docstrings remain.**
+- Current Layer: 1. Current Topic: **1.7 Functions — lambdas and docstrings
+  remain.**
 
-## RULE-CHANGE PARKING (proposal 3 — candidates wait here; adopt ≤1 per session, at close)
-- (empty — the seven items at the top of RULES.md await a decision in S21)
+## RULE-CHANGE PARKING (rule 3, ADOPTED S21 — candidates wait here; adopt ≤1 per session, at close)
+- **S21 DECISION, RECORDED: all SEVEN proposals from the 16 Aug review were
+  ACCEPTED and adopted as a pre-negotiated package (RULES v2).** Operative
+  immediately: task-based recall; promotion = correctness with confidence
+  setting the interval; the rule-change cap (governs from S22); the
+  seven-principle index as working map; the weekly cold build block (**not yet
+  scheduled — S22 must put a date on the first one**); queue tooling once the
+  tables pass ~30 rows (**they are near it — raise in S22**); the pushback
+  denominator (S21: 1 raised / 1 upheld).
+- (parking otherwise empty)
 
 ## WHERE WE LEFT OFF
 
-### SESSION 21 STARTS HERE — exact resume point
+### SESSION 22 STARTS HERE — exact resume point
 
-Session 20 ran on SUNDAY 16 AUGUST 2026. **The interval gate passed** — a
-FOUR-day gap since S19, the longest of the arc — and was applied by the mentor
-unprompted for the third session running.
+Session 21 ran on the EVENING of SUNDAY 16 AUGUST 2026, ~2 hours after S20
+ended. **The interval gate was applied unprompted (fourth session running):
+same-day, so the term-tax was skipped, the four queued [RECALL]s were
+deferred, and zero promotions were taken — correctly.** S21 delivered:
+all seven review proposals ADOPTED (RULES v2); the move into VS Code +
+Claude Code on this git repo; `global`; `*args`/`**kwargs`. He ended the
+session before lambdas/docstrings — his call, per rule.
 
-**CHECK THE DATE FIRST, AS ALWAYS.** If S21 runs on a genuinely later day, the
-S20 material is promotable and the [RECALL] block below is legitimate. If it
-runs within hours of S20, skip the block, say why, and go straight to the 1.7
-tail, which is new material and legitimate at any interval.
+**CHECK THE DATE FIRST, AS ALWAYS.** If S22 runs on a genuinely later day,
+everything taught in S20 AND S21 is now eligible for first honest cold tests,
+and the deferred [RECALL] block below is legitimate at last.
 
-**READ THE RULES BEFORE TEACHING ANYTHING: the S16 five, the S17 three, the S18
-two, the S19 one and THE S20 THREE.** Tag every question block [RECALL],
-[PREDICT], [DRILL] or [TEACH-BACK]. State the prerequisite and its status before
-opening any unit. Confidence after his own answer, before the verdict — none at
-all on a [TEACH-BACK]. RECALL FIRST, NOTES SECOND. **Do not propose ending the
-session.**
+**THE ADOPTED PROPOSALS CHANGE HOW S22 RUNS — three operational shifts:**
+- **TASK-BASED RECALL:** every [RECALL] on a ledger item opens with a small
+  program or constraint — now in `drills/` with pytest where sensible — and
+  the name/definition question comes only after the code runs. The constraint
+  must make the mechanism NECESSARY.
+- **PROMOTION = CORRECTNESS; CONFIDENCE = INTERVAL.** A correct, unaided,
+  later-day answer promotes. The rating (still taken after his answer, before
+  the verdict) sets how soon the item comes back, high → longer gap.
+- **WEEKLY COLD BUILD BLOCK is adopted but UNSCHEDULED. Put a date on the
+  first one with him in S22** (≥90 min, timed, no AI, git+pytest,
+  work-adjacent task — LeRobot episode validator or joint-limit clamp).
 
-**THE THREE S20 RULES ARE THE OPERATIVE ONES THIS SESSION AND THEY CHANGE HOW A
-TURN IS WRITTEN, NOT JUST WHAT IS IN IT:**
-- **KEEP MESSAGES SHORT. One teaching idea per turn.** He does not read long
-  messages to the end — he said so plainly — and that, not carelessness, is why
-  asks have been going unanswered. **Put any question or instruction NEAR THE
-  TOP of a turn, never in a tail after a table or a code block.**
-- **RUN THE DOUBT GATE before opening any new subsection.** Ask for doubts,
-  WAIT, and if any come, **restate the just-taught material IN FULL as one clean
-  block** before answering them. Hold any stranded question and say you are
-  holding it.
-- **DEPTH BEFORE ANSWER.** A correct output does not discharge a request for a
-  trace or a mechanism — re-ask. Every drill he writes gets THE FIVE CHECKS run
-  on it by HIM before submission. Boundary values tested first.
+**Standing turn rules (S20 three): short messages, one teaching idea per turn,
+asks near the top; doubt gate before every new subsection, restate in full if
+doubts come; depth-before-answer — traces are never optional, five checks on
+every drill, boundary values first. Tag every block. Do not propose ending
+the session.**
 
 Run in this order:
 
-1. **[RECALL] THE POST-ORDER TRANSFER QUESTION — HIGHEST-VALUE ITEM AVAILABLE.**
-   Give him a recursive function with the work AFTER the call and ask for the
-   output and the reason. **He failed this in S20 by imagining one mutating `n`
-   instead of four frames each holding their own — the identical isolation
-   principle he had correctly explained for cells twenty minutes earlier.**
-   ⚠ **ASK IT AS A TRANSFER QUESTION, NOT A RECURSION QUESTION.** The concept is
-   not missing; its recognition in a new container is. If he stalls, the prompt
-   is *"where have you already told me two things can't collide?"* — do not
-   hand him the frames answer.
+1. **[RECALL] THE POST-ORDER TRANSFER QUESTION — HIGHEST-VALUE ITEM
+   AVAILABLE.** Task-first: give him a recursive function with the work AFTER
+   the call (fresh code, not S20's) and ask for output and reason. **He failed
+   this in S20 by imagining one mutating `n` instead of four frames each
+   holding their own — the same isolation principle he explains correctly for
+   cells.** ⚠ Ask it as a TRANSFER question. If he stalls: *"where have you
+   already told me two things can't collide?"* Do not hand him frames.
 
-2. **[RECALL] THE CELL CAUSATION, AND TELL HIM WHY IT IS BEING ASKED AGAIN.**
-   He got this CORRECT UNAIDED in S20 and rated it 5/10, which blocked the
-   promotion. **This is the first under-rating in the file.** Re-fire it once,
-   cold. If it comes back correct again, **say explicitly that his rating is the
-   only thing standing between this item and an [x]** — his calibration is used
-   as a targeting signal and it has to be accurate in both directions.
-   ⚠ Watch for the two S20 corrections: the new object comes from **THE CALL**,
-   not the loop; and it is a **CELL**, with `cell_contents` as an attribute on
-   it, not a "content cell".
+2. **[RECALL] THE CELL CAUSATION.** Correct unaided in S20, blocked only by
+   his 5/10 — the file's first under-rating. **Under the NEW rule a correct
+   answer today PROMOTES, and his rating just sets the re-test gap — tell him
+   so.** Watch for the S20 corrections: the new object comes from **THE
+   CALL**, not the loop; it is a **CELL** with `cell_contents` an attribute on
+   it.
 
-3. **[RECALL] THE CLOSURE DEFINITION, COLD.** Self-rated 4/10 in S20 and the
-   cold attempt missed the CELL entirely. Target: **a function object that binds
-   a free variable from where it was created into its own private cell, so the
-   value survives after the enclosing frame has died.** Corrections to listen
-   for: "free VARIABLE" not "free value"; `__closure__[0]` is the CELL and the
-   value is `.cell_contents`; `__closure__` is `None`, not an empty tuple, when
-   there are no free variables; **and the binding happens WHEN `def` RUNS** —
-   he had that in his first attempt and lost it in his second.
+3. **[RECALL] THE CLOSURE DEFINITION, COLD.** S20 attempt was 4/10 and missed
+   the CELL. Target: **a function object that binds a free variable from where
+   it was created into its own private cell, so the value survives after the
+   enclosing frame has died.** Listen for: "free VARIABLE"; `__closure__[0]`
+   is the cell, value in `.cell_contents`; `__closure__` is `None` with no
+   free variables; **binding happens WHEN `def` RUNS.**
 
-4. **[RECALL] `traceback` — AND THIS IS ITS FIRST HONEST TEST.** ⚠ **Do not
-   treat it as a carried failure. It was taught for the first time in S20**;
-   S16, S18 and S19 fired it as a recall on material that had never been
-   delivered, and those measurements are struck. Ask what ONE line of a
-   traceback is. Required answer: **one live frame on the call stack.** Do not
-   accept "where the error happened" — that is the location half he already had.
+4. **[RECALL] `traceback` — FIRST HONEST TEST** (taught properly only in S20;
+   earlier "failures" struck). Ask what ONE line of a traceback is. Required:
+   **one live frame on the call stack.** "Where the error happened" is not
+   enough — that is the half he already had.
 
-5. **THEN CLOSE 1.7 — FOUR ITEMS AND ONE SESSION SHOULD DO IT.** `global`
-   (taught AGAINST `nonlocal`, which he owns: `nonlocal` targets the enclosing
-   cell, `global` the module), `*args`/`**kwargs` (**he asked for these by name
-   — say so**), lambdas, docstrings. **1.7 CANNOT BE MARKED CLOSED UNTIL ALL
-   FOUR ARE TAUGHT.**
+5. **[RECALL] `global` AND `*args`/`**kwargs` — FIRST COLD PASS on the S21
+   material, TASK-FIRST in drills/.** Good constraints: a counter that must
+   survive calls WITHOUT a factory (forces `global` rebind); a function that
+   must accept any mix of unknown positionals and keywords and report them
+   (forces both collectors). Then the mechanism questions: the compile-time
+   locality rule; read/mutate/rebind; collect-vs-unpack mirror; the empty
+   cases (`()` / `{}`, never `None`).
 
-6. **THE SPOKEN FEYNMAN RECALL FOR THE WHOLE OF 1.6 — NOW SLIPPED THREE
-   SESSIONS.** It has been scheduled and dropped in S18, S19 and S20. **Either
-   run it in S21 or move it formally into the August gauntlet and stop
-   pretending it is a live item.** Do not schedule it a fourth time and skip it.
+6. **FIRE `__defaults__` (every session until it lands — only item never once
+   produced cold; handle: shelf par naam, dabbe ke andar attribute) and the
+   ITERATOR CAUSATION (open BUG-FIRST with the hoisted `it = iter(range(2))`
+   image — never the definition; bug-first is vindicated twice, definition
+   failed three times).**
+
+7. **THEN CLOSE 1.7 — TWO ITEMS: lambdas, docstrings.** A short block each.
+   1.7 cannot be marked closed until both are taught.
+
+**DECIDED AT S21 CLOSE — THE 1.6 SPOKEN FEYNMAN RECALL IS FORMALLY MOVED INTO
+THE AUGUST GAUNTLET.** It slipped in S18, S19, S20 and was not run in S21
+either; per the S20 instruction ("run it or move it, do not schedule it a
+fourth time") it is now a gauntlet item, not a live session item. Stop
+carrying it.
 
 **CARRY FORWARD:**
-- **THE FOUR S19 CONFIDENCE RATINGS ARE STILL OWED.** Asked once in S20, per
-  plan, and still not given. **Do not ask a third time — it is not worth the
-  friction, and rule 2 explains why they were missed.** Mark them
-  unrecoverable, note it, move on.
-- **`__defaults__` (7/10) and the ITERATOR CAUSATION (4/10) were NOT fired in
-  S20** — the traceback re-teach and the recursion block took the room. **Fire
-  both in S21.** The iterator causation must be opened **BUG-FIRST** (the
-  hoisted `it = iter(range(2))` image); it has now worked twice and the
-  definition-first approach failed three times. `__defaults__` handle: **shelf
-  par naam, dabbe ke andar attribute.**
-- ⚠ **AUDIT THE CARRY-FORWARD LIST FOR THE TRACEBACK DEFECT.** One item on that
-  list turned out to have been repeatedly TESTED and never TAUGHT. **Before the
-  August gauntlet, check every remaining [~] against a simple question: was this
-  ever actually delivered, or only ever asked?** Any others found get their
-  clocks reset the same way.
-- **SLICING IS NOW ON THE UNTAUGHT-BUT-USED LIST alongside `zip` and LIST
-  COMPREHENSIONS.** All three belong to 1.8. He has caught all three himself.
-  **Do not assume any of them.** He was given the bare minimum on `word[:-1]` in
-  S20 and nothing more.
-- **THE FIVE CHECKS (1.7.11) MUST BE REQUIRED ON EVERY DRILL** until he runs
-  them without being asked. It transferred on first use, which is encouraging,
-  but one transfer is not a habit.
-- **THE IDENTITY-VALUE RULE** (`0` for `+`, `1` for `*`, `[]` for concat) should
-  be re-tested **AS A RULE**, not as three worked examples.
-- The three-error set (`TypeError` / `NameError` / `UnboundLocalError`) is still
-  untested cold. **Re-test them MIXED, never singly** — discrimination has
-  always been the failure mode, not definition.
-- The modulo identity in SYMBOLIC FORM is still owed cold. TEXT MODE, low
-  priority.
-- The in-place-mutator ROSTER is still not owned; the DISCRIMINATOR is [x].
-  **1.8 settles the roster — do not re-drill it before then.**
-- `str` immutability is an **[x] CANDIDATE** — one clean later-day pass
-  promotes it. `None` / `is None` and `bool("False")` remain [~].
+- **The four S19 confidence ratings: UNRECOVERABLE, closed.** Do not ask again.
+- ⚠ **AUDIT THE [~] LIST FOR THE TRACEBACK DEFECT before the August gauntlet:**
+  for every remaining [~], was it ever actually DELIVERED, or only asked?
+  Clock-reset any found.
+- **UNTAUGHT-BUT-SEEN (all 1.8, do not assume): SLICING, `zip`, LIST
+  COMPREHENSIONS.** He has caught all three himself.
+- **THE FIVE CHECKS required on every drill** until he runs them unprompted.
+- **THE IDENTITY-VALUE RULE** re-tested AS A RULE, not three examples.
+- **Three-error set (`TypeError`/`NameError`/`UnboundLocalError`) still
+  untested cold — MIXED, never singly.** Note S21 strengthened
+  `UnboundLocalError` from a second direction (the `global` mechanism).
+- Modulo identity SYMBOLIC FORM still owed cold. TEXT, low priority.
+- In-place-mutator ROSTER: settles in 1.8, do not re-drill before.
+- `str` immutability is an [x] CANDIDATE — one clean later-day pass. `None` /
+  `is None` and `bool("False")` remain [~].
+- **TOOLING (new, S21): drills go in `drills/` with tests in `tests/`;
+  pytest decides correctness; the mentor never edits a file he has started;
+  inline AI autocomplete must stay OFF for drill files.**
 - Governance/format requests mid-session → PARK, close material, write at end.
-- **First monthly gauntlet: end of August 2026**, carrying the strict-legend
-  audit of every remaining [x] in Layer 1. Sacred. **Flag the `if`/`elif`/`else`
-  promotion and the S18 exception-triad promotions specifically.**
-- **31 AUG: the RE-BASELINE arithmetic is formally due.** Compute observed
-  throughput over the four preceding weeks, derive the honest completion date,
-  and write it into the master file whatever it says.
+- **First monthly gauntlet: end of August 2026.** Sacred. Carries: the
+  strict-legend audit of every [x]; the `if`/`elif`/`else` and S18
+  exception-triad promotions flagged specifically; **the 1.6 spoken Feynman
+  recall (moved in formally at S21 close).**
+- **31 AUG: the RE-BASELINE arithmetic is formally due — in ITEMS, not
+  subsections.** Write the derived date into the master whatever it says.
 
 Every teaching block shows full runnable source alongside any output.
-Session 21 closes with a ~30-second spoken summary from memory.
+Session 22 closes with a ~30-second spoken summary from memory.
 
 
 ## TERM RE-TEST QUEUE (live — the vocabulary spaced-retrieval track)
@@ -208,6 +209,8 @@ Fire these cold at session open. Student defines from memory; "gap" if empty.
 | **`pass`** | **a no-op statement. Does nothing; exists only to satisfy the rule that a block opened by a colon cannot be empty. NOT `continue` (skip to next iteration) and NOT `break` (exit the loop).** | **S17** | **[PREDICT] PASS — he supplied the function-stub use case from prior exposure ("classes banate hain tab dekha hai") and stated the mechanism correctly: fills the block, tells Python to do nothing. Same-day, [~].** | **~12 Aug** |
 | **ternary / conditional expression** | **`x if condition else y`. An EXPRESSION — it evaluates to a value, so it can go anywhere a value can go (a variable, a `print` argument, inside a list). Read from the middle outward.** | **S17** | **[PREDICT] PASS, and a good one — asked how it differs from `if`/`else`, he went straight to the right axis: the `if` block executes, whereas the ternary PRODUCES something which then gets bound to a name. Same-day, [~].** | **~12 Aug** |
 | **`elif`** | **else-if, contracted. A CHAIN checked top to bottom; the FIRST true condition wins and the rest are not evaluated at all. `else` is optional and catches everything remaining.** | **S17** | **[RECALL] PASS COLD — see the re-test queue row. This one IS promotable: it was owed from S16 and answered unaided, including the part that mattered (with `x = 20` the `elif` is never evaluated). Self-rated 10/10.** | **[x] — 1-month re-test ~10 Sep** |
+| **keyword argument** | **an argument passed as `name=value` in a CALL, matched to its parameter by NAME, not position (`intro(role="robotics", name="Ankur")` lands correctly in any order)** | **S21** | **DEFINED S21 after his own catch that the term had been used naked — the session's one pushback, upheld. Not yet tested.** | **first later-day session** |
+| **`UnboundLocalError`** | **the name IS local (classified at function-creation time because an assignment exists somewhere in the body) but no value is bound yet. Distinct from `NameError` (name exists nowhere in LEGB).** | **S19, reinforced S21** | **S21: he ASKED the exact right question ("why doesn't LEGB find the global?") and then held the compile-time classification story through two teach-backs — the *what* first, the *when* on the re-ask. Same-day, [~].** | **fold into the three-error MIXED re-test** |
 | **mutating vs non-mutating methods** | **A method that changes the object in place returns `None`; a method that returns a new object leaves the original untouched. `sort`/`sorted` and `reverse`/`reversed` are the deliberate name-pairs proving it.** | **S17** | **S18 [DRILL] targeted at `reverse` and `sort`: all three answers CORRECT (`x` → `None`, `y` → `None`, `l` → `[1,2,3]`) — but he said in writing that he still did not know whether `reverse` mutates and had ASSUMED it. Correct output, un-owned roster. He then challenged the generalisation itself and was RIGHT: mutable-type methods do NOT all return `None` (`pop`, `index`, `count` return values). Rule narrowed to IN-PLACE MUTATORS specifically. Self-rated 10/10 concept, roster still soft.** | **[~] on the ROSTER; the DISCRIMINATOR is now [x]-grade. Re-test by naming in-place mutators cold, not by classifying.** |
 
 ## RE-TEST QUEUE (live — update every session)
@@ -270,6 +273,8 @@ Fire these cold at session open. Student defines from memory; "gap" if empty.
 | **THE FIVE CHECKS — boundary, empty, one, assumed type/sign, step-meets-base** | **S20** | **S20: transferred on first use — found the planted bug via check 2 with the correct mechanism. Same-day.** | **due ~16 Sep 26** | **[~] REQUIRE IT ON EVERY DRILL until he runs it unprompted** |
 | **ARGUMENT COUNT AND RETURN VALUE ARE UNRELATED** | **S20** | **NEW — arose from his own written reasoning ("a function call with two arguments so returning a none will not cause problem"). A category confusion, not a slip. `None` is only ever a problem AT THE POINT OF USE, in the CALLER.** | **due ~16 Sep 26** | **[~] re-test — this is the implicit-`None` trap from 1.7.3 in a new dress** |
 | **TRACE-TAIL TRUNCATION — student-side pattern, named S16** | **S16** | **S17: DID NOT FIRE. Required to state the final cycle on the `while i < 5` trace, he traced all five cycles and named the terminating check correctly (`i` = 5, `5 < 5` false, body skipped, 5 never printed).** | **due ~9 Sep 26** | **[~] WATCH — keep requiring the FINAL cycle explicitly, but the countermeasure is working** |
+| **`global` — compile-time locality classification + the read/mutate/rebind rule** | **S21** | **taught S21, same-day only. [PREDICT]s on the read-only case (`0`, no `global` needed) and the mutation case (`append` works, no `global`, full mechanism stated) both CORRECT. He pulled the compile-time classification out himself by asking why LEGB doesn't rescue `count = count + 1`. Label slip corrected: "associativity" offered for RHS-first evaluation — that is assignment EVALUATION ORDER.** | **due ~16 Sep 26** | **[~] first cold test owed — TASK-FIRST (a counter that must survive calls without a factory forces the `global` rebind)** |
+| **`*args` / `**kwargs` — collect in the signature, unpack in the call** | **S21** | **taught S21, same-day only. Collectors → TUPLE / DICT; leftover-POSITIONAL vs leftover-KEYWORD; signature order (normal, `*args`, `**kwargs`); empty cases `()` / `{}` — his first guess was `None`, self-corrected against output already on screen; the MIRROR rule teach-back correct with one fix (unpacking produces ARGUMENTS, not "variables").** | **due ~16 Sep 26** | **[~] first cold test owed — test the MIRROR and the EMPTY CASES, task-first (a function that must accept any mix of unknown positionals and keywords)** |
 
 
 ## WATCH AREAS
