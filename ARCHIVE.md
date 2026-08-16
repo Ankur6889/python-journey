@@ -1,0 +1,1011 @@
+# ARCHIVE.md — PYTHON LEARNING JOURNEY — SESSION HISTORY (append-only)
+# ═══════════════════════════════════════════════════
+# One of FOUR files. NOT loaded at normal session start. Load only for the
+# MONTHLY GAUNTLET, a RE-BASELINE / SCOPE DECISION, or when the student asks
+# ("what happened in Session N?", "when was X taught?").
+# CONTENTS, in order:
+#   A. The original v16 single-file header (superseded, kept for the record)
+#   B. Version notes v16 → v1 (the per-session summary lines)
+#   C. Student's observed strengths (evidence log)
+#   D. Progress tracker (session-by-session yield and schedule notes)
+#   E. Assignments log (table)
+#   F. "What Session N established" — full narratives, S20 → S14
+# NEW MATERIAL IS APPENDED at the end of section F as ONE block per session,
+# plus one row in E and one bullet in D. Nothing here is edited afterwards;
+# if a recorded measurement is struck (as `traceback` S16–S19 was in S20),
+# the strike is recorded in the later block, the earlier text stays.
+# ═══════════════════════════════════════════════════
+
+## A. ORIGINAL v16 HEADER (superseded by the four-file split, 16 Aug 2026)
+
+# PYTHON LEARNING JOURNEY - SESSION REFERENCE FILE
+# ═══════════════════════════════════════════════════
+# HOW TO USE THIS FILE (for Claude):
+# This is a complete context document for an ongoing Python learning journey.
+# When the student shares this file:
+# 1. Read it fully before responding
+# 2. Continue exactly from "Where We Left Off"
+# 3. Follow ALL teaching style agreements listed below — they are non-negotiable
+# 4. Do NOT ask for re-introductions — you already know the student
+# 5. At end of each session, update this file and RETURN IT TO THE STUDENT FOR
+# HIM TO UPLOAD MANUALLY, saved under the naming convention in OUR
+# AGREEMENTS: python_learning_journey_<YYYY-MM-DD>_v<N>.md (date first,
+# version number LAST).
+# **DO NOT attempt to upload to Google Drive directly — Drive upload has
+# failed at session end in Sessions 10, 11 and 12. Hand every file back as
+# a download; the student uploads it himself. This is the standing
+# procedure, not a fallback. Applies to this file, the master file, and the
+# session_<N>.pdf notes.**
+# 6. The student does not need to give any additional prompt —
+# this file contains everything you need to begin immediately
+# 7. At the end of EVERY session, create a separate session notes file named:
+# session_XX_notes.md — concepts covered, mental models explained,
+# code written, key insights, and common mistakes to avoid.
+# Do this automatically — student should never need to ask.
+#
+# CHECKLIST LEGEND (STRICT — imported verbatim from the master curriculum,
+# Session 6 reconciliation):
+# [ ] = not started
+# [~] = introduced / partially covered — taught but NOT yet demonstrated
+# unaided. Also the status an item REVERTS TO if a spaced re-test fails.
+# [x] = fully covered, drilled, and demonstrated WITHOUT AI assistance and
+# WITHOUT notes. Being taught it well is not [x]. Getting it right
+# during the session it was taught is not [x]. Only an unaided,
+# from-cold demonstration on a later day earns [x].
+#
+# GOVERNANCE (Session 6 reconciliation, 29 Jul 2026; SINGLE-FILE SESSION
+# PROTOCOL adopted post-Session 14, 8 Aug 2026, at the student's request to
+# cut per-session context load):
+# This file is one of TWO. The other is robotics_career_curriculum.md, the
+# master file. Until Layer 0 (this file's Layer 1, Python Core) is closed,
+# THIS file governs sessions. After Layer 0 closes, the master governs.
+# LOADING PROTOCOL (binding):
+# - At SESSION START, load THIS file ONLY. It is self-sufficient for running
+# a session: every session-relevant binding rule, watch-area and queue
+# lives here (the master's session-relevant content is mirrored here,
+# including the NORTH STAR below).
+# - The master is loaded at SESSION END, when the teaching is done, so both
+# files can be updated together and returned as downloads.
+# - EXCEPTIONS — load the master at SESSION START instead when: (a) it is a
+# MONTHLY CHECKPOINT / GAUNTLET session; (b) a SCOPE DECISION or
+# re-baseline is on the agenda; (c) the student explicitly asks.
+# **SESSION 15 PRECEDENT: the student asked mid-session for a schedule
+# review ("aaj hamko kitna complete karna chahiye tha aur hum kahan hain?").
+# That is exception (c) and it legitimately triggered loading the master
+# mid-session. Answering a plan question from memory would have been a
+# guess. Load the file, then answer.**
+# - Both files are still UPDATED every session; only the load timing changed.
+#
+
+## B. VERSION NOTES v16 → v1 (as they stood in v16)
+
+# VERSION: v16, 16 Aug 2026 (Session 20). Supersedes v15 of 12 Aug 2026.
+# NOTE: Session 20 ran on SUNDAY 16 AUG 2026. **THE INTERVAL GATE WAS APPLIED AS
+# THE FIRST ACTION AND IT PASSED** — a FOUR-DAY gap since S19, the longest of
+# the arc, so S20's cold work is strong later-day evidence. Third consecutive
+# session where the mentor applied the gate unprompted.
+# WHAT THE SESSION DID: **RECURSION WAS FINALLY DELIVERED after four deferrals,
+# and it was the largest single teaching block since 1.6 closed.** Base case,
+# recursive case, the pre-order/post-order distinction, value-returning
+# recursion, factorial and the identity-value rule for base cases,
+# `RecursionError`, the two termination conditions, and the PRINTER vs
+# CALCULATOR distinction. **1.7.10 pure functions vs side effects was taught on
+# top of it, which leaves only four items before 1.7 can close.**
+# **THE CELL CAUSATION — ASKED FOUR TIMES IN S19 AND NEVER PRODUCED — CAME BACK
+# CORRECT UNAIDED, FROM COLD, ON A GENUINELY LATER DAY.** It did not promote,
+# because he rated it 5/10. **That rating is the session's most important
+# finding and it points the OTHER way from every previous one: the answer was
+# ~85% right and he UNDER-rated it. First recorded under-rating in the file.**
+# **THE TRACEBACK FINDING IS A MENTOR FINDING AND IT IS SERIOUS.** Fired as a
+# [RECALL] for the THIRD consecutive session, he rated it 0/10 — and it then
+# emerged that `traceback` had never been TAUGHT properly, only repeatedly
+# ASKED. Repeating a question is not teaching. **Three sessions of recorded
+# "failure" on this item were measuring a teaching gap, not a retention gap.**
+# It has been retaught in full (each line is ONE LIVE FRAME; a traceback is a
+# printout of the stack at the moment of the crash) and RE-ENTERS THE QUEUE AS
+# NEWLY-TAUGHT MATERIAL with the clock reset.
+# **EDGE-CASE ANALYSIS IS NOW A TAUGHT SKILL WITH ITS OWN PROCEDURE (the five
+# checks), at his direct request** — he named the gap himself: *"I am unable to
+# think about the failure cases and dissect the problem the way you do... I have
+# never done this, and don't know how to find the edge cases."* It transferred
+# on first use, in the same session.
+# **THREE NEW BINDING RULES, ALL THREE HIS: the DOUBT GATE, the RESPONSE LENGTH
+# CAP, and DEPTH-BEFORE-ANSWER.** See **THE THREE SESSION 20 RULES**.
+# **Running total of correct student pushbacks: TWENTY-FIVE, still zero wrong.**
+# VERSION: v15, 12 Aug 2026 (Session 19). Supersedes v14 of 10 Aug 2026.
+# NOTE: Session 19 ran on TUESDAY 12 AUG 2026. **THE INTERVAL GATE WAS APPLIED
+# AS THE FIRST ACTION AND IT PASSED** — a two-day gap since S18, so S19's cold
+# work is REAL later-day evidence and IS promotable. Second consecutive session
+# where the mentor applied the gate unprompted.
+# WHAT THE SESSION DID: **the three items that did not promote in S18 were
+# re-fired cold, and all three improved.** `traceback` PASSED (trigger correct;
+# stream a gap then correct after teach) at 6/10, up from 3/10. **The iterator
+# causation PASSED ON FIRST ATTEMPT for the first time ever** — "forward-only
+# state, can't rewind" — after failing on three separate prior days; delivered
+# bug-first, per the standing instruction, which is now vindicated twice over.
+# `__defaults__` came back NEAR-PASS at 7/10. **None promoted: every one is
+# still carry-forward on his own low confidence.** A second transcription
+# artefact fired on "dunder" and the rule worked — questioned, self-corrected,
+# apologised, nothing logged against him.
+# **CLOSURES WERE THEN TAUGHT FROM SCRATCH IN TEXT, AS HE REQUIRED IN S18** —
+# free variables, cells, `__closure__`, per-object cell isolation, `nonlocal`,
+# and the alias / new-object / return-value trio. `sorted` and `key=` had to be
+# taught from zero mid-flow because they had never been covered.
+# **THE SESSION'S DOMINANT EVENT WAS A REPEAT OF S18'S, AND HE WON IT AGAIN:
+# he rejected FOUR successive motivating examples for closures, correctly every
+# time**, because each one could be done with two parameters, a hardcoded value,
+# or a loop and a dict. The detour cost roughly half the session and it was the
+# MENTOR'S fault, not his: the genuine necessity — a callback that will only
+# ever be handed ONE argument — should have been the first motivation, not the
+# fifth. He reached it himself: *"ye pehla example hai jo sense bana raha hai."*
+# ONE new rule. See **THE SESSION 19 RULE**.
+# VERSION: v14, 10 Aug 2026 (Session 18). Supersedes v13 of the same day.
+# NOTE: Session 18 ran on MONDAY 10 AUG 2026, in the evening. **THE INTERVAL
+# GATE WAS APPLIED AS THE FIRST ACTION OF THE SESSION AND IT PASSED.** The
+# mentor asked, before posing a single question, how long it had been since
+# S17; the answer was that S17 finished LAST NIGHT and the file was saved this
+# morning. That is a genuine LATER DAY, so **S18's cold work is REAL later-day
+# evidence and IS promotable.** This is the first session where the S17 rule
+# was applied by the mentor rather than enforced by the student, and it is the
+# reason this session could finally clear the deferred block.
+# WHAT THE SESSION DID: **the exception-family block — the weakest cluster in
+# this file, deferred out of S17 — was finally run, and it largely PASSED.**
+# The `NameError`/`ValueError`/`TypeError` triad, which had been conflated
+# three separate times in S16 and was the single weakest label in the file,
+# came back CLEAN AND COLD in mixed order. Exceptions-are-signals and the
+# `StopIteration` CATEGORY both passed. `traceback` did not — self-rated 3/10
+# and held at [~]. **The iterator-causation item FAILED FOR A THIRD TIME on
+# first attempt** (he reached again for "one item at a time"), was retaught
+# against the code-as-bug image, and is held at [~] on his own 3/10.
+# **1.7 FUNCTIONS WAS THEN OPENED** and taken from `def`-vs-call through
+# parameters/arguments, return values and implicit `None`, scope and LEGB,
+# `__defaults__` (cold MISS, fourth occurrence), default arguments, and
+# first-class objects. **Nested functions was taught; CLOSURES AND RECURSION
+# WERE NOT TAGGED AT ALL, at the student's explicit instruction.**
+# **THE SESSION'S DOMINANT INTELLECTUAL EVENT WAS A DESIGN CHALLENGE HE
+# PRESSED THREE TIMES: "why does closure need to exist at all?"** He would not
+# accept the factory example, then would not accept the runtime-value defence,
+# then proposed a two-parameter function as a straight substitute — which is
+# correct, and forced the honest answer (closures win when you must hand
+# someone a ONE-ARGUMENT function with a setting already packed inside).
+# **He then stopped the topic himself and asked to restart closures from
+# scratch in TEXT with worked examples.** That is the scope-creep pattern
+# running in REVERSE and it should be recorded as such.
+# FOUR MENTOR FAILURES were logged. See **THE TWO SESSION 18 RULES**.
+# VERSION: v13, 10 Aug 2026 (Session 17). Supersedes v12 of 9 Aug 2026.
+# NOTE: Session 17 began LATE ON SUNDAY 9 AUG and ran into MONDAY 10 AUG 2026,
+# starting only a short time after Session 16 ended. **ITS EVIDENCE IS
+# THEREFORE EFFECTIVELY SAME-DAY AND NOTHING TAUGHT IN IT MAY BE PROMOTED ON
+# ITS OWN EVIDENCE.** The one exception is documented in its place: the
+# `if`/`elif`/`else` confirmation, which was owed from S16 and answered cold.
+# **THE STUDENT ESTABLISHED THE SAME-DAY POINT HIMSELF, IN THE OPENING MINUTE.**
+# The mentor began the planned exception-family [RECALL] exactly as the resume
+# plan instructed, and he stopped it: S16 had only just finished, so a "cold"
+# test measures short-term echo and nothing else. The mentor checked the prior
+# session, confirmed he was right, apologised, and DEFERRED the entire
+# exception-family block to a genuinely later day. **That is the eleventh
+# correct process pushback on his record and the most sophisticated one yet —
+# he did not challenge a fact or a rule, he challenged THE VALIDITY OF A
+# MEASUREMENT BEFORE IT WAS TAKEN.** Note the escalation across sessions: S15
+# he refused a confidence rating; S16 he surrendered a mark already awarded;
+# S17 he refused an entire test on the grounds that the interval was too short.
+# WHAT THE SESSION DID INSTEAD: **1.6 CONTROL FLOW IS NOW CLOSED.** The owed
+# found-flag exercise was completed over four iterations, loop `else` was then
+# EARNED BY CONTRAST rather than told, `pass` and ternary expressions were
+# taught, the infinite-loop and full-trace work ran with the trace tail stated
+# explicitly, the owed `if`/`elif`/`else` confirmation was ANSWERED AND PASSED
+# (and promoted), and the mutating-vs-non-mutating IDENTIFICATION drill — the
+# exact gap he named when requesting his own S16 demotion — ran at 4/5.
+# THREE MENTOR FAILURES were logged. See **THE THREE SESSION 17 RULES**.
+# VERSION: v12, 9 Aug 2026 (Session 16, end-of-session amendment). Supersedes
+# v11 of the same day. ONE addition, no teaching content changed: the
+# END-OF-SESSION PROCEDURE + DRIVE MAP section below, added at the student's
+# request after the master file was again not updated until he asked for it.
+# The root cause was found and it was not forgetfulness: THE TWO FILES LIVE IN
+# DIFFERENT DRIVE FOLDERS, and a search scoped to the Python folder returns
+# NOTHING for the master. The map is now written down so no session has to
+# rediscover it. Read that section at SESSION END, every time, unprompted.
+# VERSION: v11, 9 Aug 2026 (Session 16). Supersedes v10 of 8 Aug 2026.
+# NOTE: Session 16 ran on SUNDAY 9 Aug 2026 — a genuine LATER DAY after the
+# S14+S15 Saturday double. Its cold work is therefore REAL later-day evidence
+# and this session ran the long-overdue PROMOTION PASS. NINE items moved
+# [~] → [x]. The session ran the S15 term-tax cold, re-tested the S15 core,
+# cleared the promotion backlog, and CLOSED most of the remaining 1.6 tail:
+# `print()` formally defined (sep/end), `while` + `break`/`continue`, nested
+# loops, and loop `else`. `pass`, ternary and common-loop-patterns REMAIN.
+# **THE SESSION'S DOMINANT FINDING IS A MENTOR FINDING, NOT A STUDENT ONE.**
+# The student raised an unprompted meta-challenge — *"you have been very
+# irresponsible in teaching, how can we fix that?"* — and he was right. FIVE
+# process failures were logged, THREE of which he caught in real time within
+# a twenty-minute window. See **THE SESSION 16 RULES** below: they exist
+# because pace was being optimised over protocol fidelity while working
+# through a four-phase resume backlog. The five fixes are mechanical and
+# binding, and the most important is INSTRUMENT TAGGING — every question
+# must now declare whether it is RECALL, PREDICT or DRILL, because
+# mislabelling new material as recall corrupts the retention ledger itself.
+# ALSO LOGGED: a VOICE-MODE TRANSCRIPTION ARTIFACT was wrongly recorded as a
+# label slip. The student said "iterable"; the transcription rendered it as
+# "travel"; the mentor logged a retention failure and had to be corrected
+# twice. That near-miss produced the TRANSCRIPTION-ARTIFACT rule.
+# VERSION: v10, 8 Aug 2026 (Session 15). Supersedes v9 of the same day.
+# NOTE: Session 15 ran on SATURDAY 8 Aug 2026, the SAME DAY as Session 14 —
+# the student's weekend block, two sessions in one day. Its cold work is
+# therefore SAME-DAY and earns [~] only; nothing from S15 may be promoted to
+# [x] on S15's evidence. This session taught the ITERATION PROTOCOL
+# (`iter()` once, `next()` per pass, `StopIteration` caught internally by
+# `for`), the iterable-vs-iterator distinction (**iterables are reusable,
+# iterators are consumed**), `range()` (half-open + lazy, and itself an
+# ITERABLE not an iterator), and ran the FAIR function-scope re-test owed
+# from S14 — now legitimate because `for`/`range` had been defined first.
+# Two new terms were forced into definition by student pushbacks: `traceback`
+# and `NameError`. FOUR mentor failures were logged, all caught by the
+# student — the fourth and most serious was READING THE STALE UNVERSIONED
+# MASTER FILE instead of the current v8, and then writing a replacement
+# master on top of it that would have destroyed v2–v8 had it been uploaded.
+# See the FILE NAMING entry for the READ-THE-LATEST-VERSION rule this
+# produced. The first three: (dragging in an
+# undefined `list()`; showing a traceback without defining it) plus a third
+# logged unprompted (asking for a confidence rating immediately after giving
+# the answer). `while` and the formal `print()` definition remain OWED and
+# open Session 16.
+# NOTE: Session 14 ran on SATURDAY 8 Aug 2026 — a THREE-DAY gap from Session 13
+# (Wednesday 5 Aug), so its cold re-tests are strong later-day evidence. It
+# CLEARED the whole S11–S13 owed backlog and OPENED 1.6 (Control Flow). It
+# added the SUBSTRATE DEFINE-BEFORE-BUILDING rule.
+# NOTE: Session 13 ran on WEDNESDAY 5 Aug 2026 and CLOSED subsection 1.5.
+
+## C. STUDENT'S OBSERVED STRENGTHS (evidence log; add to it, do not rewrite)
+
+- Strong systems thinking — naturally breaks problems into components
+- Already thinks in distributed architecture from ROS2 experience
+- Correctly predicted memory behavior before running code (Session 1)
+- Wrote clean, well-commented code on first attempt
+- Self-aware about his own learning flaws — rare and valuable trait
+- Pushes back when coverage feels incomplete (S3 GIL; S10 undefined
+ "aliasing"; S12 undefined "tuple" + symbols-in-voice; S14 the
+ `for`/`range` substrate breach. **S15 — THREE MORE, all upheld: (a) the
+ `list()`/`next()` relation was never drawn, and `list()` itself was never
+ defined; (b) "how do I know you are actually completing things and not
+ quietly dropping them?" — a governance challenge, answered with the live
+ open-ledger of the session's to-do list; (c) "you showed StopIteration
+ printed on the screen, so it IS a value" — a genuine contradiction the
+ mentor had created by showing a traceback without defining it; and (d)
+ after the files were delivered, "you didn't follow the rule for robotics
+ curriculum naming" — and then, when the mentor's explanation didn't fit,
+ he sent a SCREENSHOT OF THE FOLDER rather than accepting it. That
+ screenshot exposed the real failure: the mentor had read a stale 31 Jul
+ master instead of the current v8 and written a replacement on top of it,
+ which would have destroyed v2–v8 had he uploaded it. NINE correct
+ process pushbacks then on record, none of them wrong — and this one was
+ the most valuable, because he did not stop at the mentor's first
+ explanation. Note the shape for future sessions: he escalated from an
+ assertion to EVIDENCE. That instinct is worth more than the catch.**
+ **S17 — THREE MORE, ALL UPHELD, TAKING THE RUNNING TOTAL TO THIRTEEN WITH
+ ZERO FALSE POSITIVES: (a) the same-day recall refusal, before a single
+ question had been answered; (b) "I asked you to make the notes for closing
+ the session not starting a new topic"; (c) the whitespace-channel
+ explanation, which ended three turns of misdirected correction.**)
+- Self-corrects in real time when an error is precisely named
+- Names knowledge gaps precisely under pressure rather than freezing
+- Predict-then-verify discipline locked in (Session 3, 4-for-4)
+- **TRANSFERS A LEARNED RULE TO A NEW CONSTRUCT UNPROMPTED (NEW, S15).**
+ Having just learned that a 4-item list costs FIVE `next()` calls (N+1, the
+ last one raising), he applied N+1 to `range(4)` without being prompted and
+ without being told the rule generalises. This is the OPPOSITE of the
+ wrong-domain flaw: correct transfer across a real domain boundary,
+ self-initiated. Log it as evidence the flaw is directional, not universal
+ — he over-transfers under uncertainty and transfers correctly under
+ understanding. Feed him more transfer opportunities.
+- **REFUSES A MEASUREMENT HE KNOWS IS INVALID (NEW, S15).** See the Session
+ 15 rule above. He declined to give a confidence score on material he had
+ not yet retrieved himself, on the grounds that it would echo the mentor
+ rather than measure him. Calibration behaviour of exactly the kind the
+ file has been trying to build since S6.
+- **REFUSES AN ENTIRE TEST WHOSE INTERVAL IS INVALID (NEW, S17) — THE
+ STRONGEST INSTANCE OF THIS BEHAVIOUR SO FAR.** S15 he refused a rating;
+ S16 he handed back a mark already awarded; **S17 he refused the test
+ itself, before it ran, on the grounds that the gap since the material was
+ taught was too short for the result to mean anything.** He had to argue it
+ — the mentor was following the written resume plan — and he was right. It
+ produced the INTERVAL GATE. **This is no longer calibration; it is
+ experimental design. He is now reasoning about what his own results would
+ be evidence OF.**
+- **CALIBRATION IS NOW ACCURATE ENOUGH TO USE AS A TARGETING SIGNAL (NEW,
+ S17).** On the five-item method drill he attached a confidence to each
+ answer unprompted. The single item he rated 5/10 was the single item he got
+ wrong; the 8/10s and the 10/10 were all correct. **Use his self-ratings to
+ choose what to re-test, not merely to decide whether a promotion is legal.**
+- **Owns the learning system itself** (S5 Teaching Mistakes; S6 notes format;
+ S8 two-mode operation; S9 language precision; S10 short-form cross-check;
+ S12 the Term Retention System; S15 the confidence-after-recall rule;
+ **S17 the interval gate and the whitespace-channel rule**)
+- **STAYS ON THE FRICTION POINT** (S6 frames; S9; S10; S12; S15 — three
+ separate doubts on the same block and he pushed each to a real resolution
+ rather than nodding through)
+- **ASKS THE HARD META-QUESTION RATHER THAN ACCEPTING A ROSTER (NEW, S17).**
+ Given the list of mutating methods he did not accept it: *"mujhe jab pata
+ hi nahi hai to main kaise pehchanoonga ki kaun sa mutate karne wala method
+ hai? Mujhe yeh kaise pata chalega?"* That is the right question and it
+ forced the right answer — the type-first discriminator rather than
+ memorisation. **He reliably refuses to accept a lookup table where a model
+ is possible. Teach to that.**
+- **REFUSES A MARK ON MATERIAL HE DOES NOT YET OWN, AND SETS THE RE-ENTRY
+ TERMS HIMSELF (NEW, S18) — the fourth and most deliberate instance of this
+ behaviour.** S15 he refused a rating; S16 he handed back a mark; S17 he
+ refused a test on interval grounds; **S18 he refused a TAG — "isko taught
+ tag mat karo, isko hum wapas se start karenge" — and specified the
+ conditions under which the topic should reopen (text mode, worked
+ examples).** He is no longer only rejecting bad measurements; he is
+ specifying what a good one would require.
+- **FINDS THE HOLE IN A MODEL HE HAS JUST BEEN HANDED (NEW, S18, and this is
+ the highest-value behaviour in the session).** Given the discriminator
+ "methods on mutable types mutate and return `None`", he did not take it:
+ *"yeh ek general rule to nahi maanunga."* **He was right.** `pop`, `index`
+ and `count` all sit on a mutable type and all return values; the rule is
+ about IN-PLACE MUTATORS, not about mutable types. The mentor's formulation
+ was too broad and he narrowed it. **He accepted a model in S17 and audited
+ it in S18 — that is the difference between being taught and understanding,
+ and it is exactly what the course is for.**
+- **PRESSES A DESIGN QUESTION TO THE THIRD LEVEL (NEW, S18).** On closures he
+ asked "why does this exist?", rejected the factory answer, rejected the
+ runtime-value answer, and then produced the correct rival design himself —
+ a two-parameter function. **Each objection was better than the last.** The
+ honest answer he forced out (closures earn their keep when a one-argument
+ callable is required, or when a setting is fixed once and reused often) is
+ now recorded in 1.7 and must not be softened when the topic reopens.
+ **Feed him "why does this exist rather than the obvious alternative?" as a
+ standing question; it is where he does his best work.**
+- Diagnoses mentor delivery failures precisely, not vaguely
+- Self-rating calibration now tracks reality
+- **ASKS FOR THE HONEST SCHEDULE POSITION RATHER THAN AVOIDING IT (NEW,
+ S15).** He stopped the session to ask where he stands against the original
+ plan and how far behind he is. He then accepted the un-cushioned answer
+ (danger line, zero margin) and made a correct process call himself: don't
+ judge on one day's data, recompute at the month end, because session yield
+ is genuinely uneven. That is the RE-BASELINE LADDER working as designed —
+ and it was the student who invoked its logic, not the mentor.
+
+
+## D. PROGRESS TRACKER
+- Sessions Completed: **20**
+- **SESSION 20 (Sun 16 Aug 2026) — RECURSION DELIVERED AT LAST, AND THE FILE'S
+ OLDEST "STUDENT WEAKNESS" TURNED OUT TO BE A MENTOR GAP.** Interval gate
+ passed (FOUR-day gap, the longest of the arc), applied unprompted for the
+ third session running. **The cell causation — asked four times in S19 and
+ never produced — came back CORRECT UNAIDED FROM COLD.** Recursion taught in
+ full: base/recursive case, pre-order vs post-order, value-returning
+ recursion, the identity-value rule, `RecursionError`, the two termination
+ conditions, printer-vs-calculator. **1.7.10 (pure functions vs side effects)
+ taught on top, and 1.7.11 (EDGE-CASE ANALYSIS) ADDED TO THE CURRICULUM at
+ his request.** **Count S20 as ~0.4 of a subsection.** Yield held back by the
+ traceback re-teach and by the doubt-gate stoppage, both of which were the
+ right calls.
+- **THE SESSION'S DOMINANT FINDING IS A MENTOR FINDING, AND IT IS THE MOST
+ CONSEQUENTIAL ONE IN THE FILE SO FAR.** `traceback` has been fired as a
+ [RECALL] in S16, S18 and S19 and logged as a repeated failure. **In S20 he
+ rated it 0/10 and said plainly that he did not know what `<stdin>` meant —
+ at which point it became clear the item had never been TAUGHT, only
+ repeatedly ASKED.** Three sessions of "he keeps failing this" were measuring
+ a hole in the teaching. **The clock is reset and the prior failures are
+ struck from the record as invalid measurements.** ⚠ **Audit the rest of the
+ carry-forward list for the same defect before the August gauntlet.**
+- **ZERO PROMOTIONS AGAIN — THIRD SESSION RUNNING — AND THE REASON HAS
+ CHANGED.** S19's zero was low confidence on correct answers. **S20's is a
+ 5/10 on an answer that was ~85% right: the file's FIRST RECORDED
+ UNDER-RATING.** His calibration has been the file's most reliable instrument
+ since S17 and it is used as a targeting signal; **under-rating wastes
+ sessions re-teaching what he already owns, and it is as much a measurement
+ error as over-rating.** Watch whether this repeats. One instance is not a
+ trend, but it inverts a two-month pattern.
+- **THREE NEW BINDING RULES, ALL THREE HIS, ALL THREE ABOUT BANDWIDTH.** The
+ DOUBT GATE, the RESPONSE LENGTH CAP and DEPTH-BEFORE-ANSWER. **The second
+ one carries information the file did not have: he does not read long
+ messages to the end.** That single admission retro-explains the four missing
+ S19 ratings, the skipped `digit_sum` trace and the unanswered S19
+ cell-causation re-fire. **Those were not compliance failures — they were
+ asks buried where he never got to them. Message length is the mentor's
+ problem to fix and it is now a rule.**
+- **THE HONEST COUNTERWEIGHT: the [PREDICT] on post-order recursion FAILED, and
+ it failed on a principle he had explained correctly twenty minutes earlier.**
+ Four frames each holding their own `n` is the same isolation he had just
+ described for five objects each holding their own cell. **He owns the concept
+ in one container and does not recognise it in another. That is a transfer
+ failure and it should be tested as one.** Also owed and NOT done: the four
+ S19 confidence ratings (asked once, lightly, per plan — still not given), the
+ spoken Feynman recall for 1.6 (**now slipped THREE sessions**), and the
+ `__defaults__` / iterator-causation fires.
+- **SESSION 19 (Tue 12 Aug 2026) — CLOSURES TAUGHT PROPERLY, AND THE MOST
+ STUBBORN ITEM IN THE FILE FINALLY CAME BACK CORRECT.** Interval gate passed
+ (2-day gap), applied by the mentor unprompted for the second session running.
+ **The iterator causation PASSED ON FIRST ATTEMPT after failing on three
+ separate prior days** — bug-first delivery, exactly as the S18 note
+ instructed. `traceback` improved 3/10 → 6/10 and `__defaults__` came back at
+ 7/10 having never once been produced before. **ZERO PROMOTIONS, and that is
+ correct: all three self-rated below the bar and stay carry-forward.** Closures
+ were then built from scratch in text — free variables, cells, `__closure__`,
+ per-object isolation, `nonlocal`, the three-way alias/new-object/return-value
+ distinction — plus `sorted` and `key=` taught from zero. **Count S19 as ~0.35
+ of a subsection.** The yield is lower than S18's because roughly half the
+ session went to a motivation detour that was the mentor's fault.
+- **THE HONEST COUNTERWEIGHT, and it is a mentor counterweight this time.**
+ Four successive motivating examples for closures were offered and all four
+ were correctly rejected by the student. **The answer that finally worked —
+ the one-argument callback constraint — WAS ALREADY WRITTEN IN THIS FILE from
+ S18 and was not used until the fifth attempt.** `sorted(key=)` was also
+ deployed before it had ever been taught, and he had to flag it twice.
+ **Recursion was deferred a FOURTH time as a direct consequence.**
+- **SESSION 18 (Mon 10 Aug 2026, evening) — THE DEFERRED BLOCK CLEARED AND
+ 1.7 FUNCTIONS OPENED.** The interval gate passed (S17 ended the previous
+ night), so **this session produced the first genuine later-day evidence
+ since S16 — and it was used.** SEVEN items promoted to [x]: the
+ `NameError`/`ValueError`/`TypeError` triad, exceptions-are-signals, the
+ `StopIteration` category, and the mutable/immutable discriminator. **1.7 was
+ then opened and taken about two-thirds of the way through.** **Count S18 as
+ ~0.5 of a subsection** — roughly 0.15 for clearing the deferred re-tests and
+ 0.35 for the Functions material.
+- **THE HONEST COUNTERWEIGHT: three items did NOT promote, and they are the
+ same three the file has been carrying for weeks.** `traceback` (3/10),
+ iterator causation (3/10, third failure on a third separate day) and
+ `__defaults__` (fourth cold miss, and still the only item in the file never
+ once produced cold). **Closures and recursion were not covered at all** —
+ closures deliberately untagged at his instruction, recursion deferred three
+ times by him in favour of the closure argument.
+- **THE STRUCTURAL POINT WORTH KEEPING: the weakest cluster in this file
+ stopped being the weakest because the INTERVAL GATE forced it to be tested
+ properly rather than early.** S17 would have promoted it on echo. S18
+ promoted it on evidence. The gate cost one session and bought a true ledger.
+- **SESSION 17 (late Sun 9 Aug → Mon 10 Aug 2026) — 1.6 CONTROL FLOW CLOSED.**
+ The last five items of the subsection were taught (the owed found-flag
+ exercise and the loop-`else` contrast, `pass`, ternary, loop patterns, and
+ the owed method-identification drill), and the owed `if`/`elif`/`else`
+ confirmation from S16 was answered cold and PROMOTED. **Count S17 as ~0.3
+ of a subsection.** Layer 1 is now 1.1–1.6 taught, with 1.7 opening next.
+- **THE STRUCTURAL CAVEAT, and it is the whole reason this session's yield
+ reads lower than its content: S17 ran within hours of S16, so ITS EVIDENCE
+ IS SAME-DAY.** Everything taught is [~] and stays [~]. The exception-family
+ re-test, the iterator-causation re-test and the modulo-identity re-test were
+ all DEFERRED OUT of this session by the student's own correct objection.
+ **Two sessions in one sitting buys coverage, not consolidation — the same
+ lesson the S14+S15 double taught, learned again.** The next session must be
+ on a genuinely later day and must open with the deferred block.
+- **SESSION 16 (Sun 9 Aug 2026) — THE PROMOTION SESSION.** NINE items moved
+ [~] → [x] on genuine later-day cold evidence, including `==` vs `is` (owed
+ since S7) and the negative-`%` case. Six terms also promoted. **Count S16 as
+ ~0.5 of a subsection.** **THE COUNTERWEIGHT: five mentor process failures in
+ one session, three caught by the student.** Yield and fidelity traded against
+ each other and that trade must not be repeated.
+- **DEADLINE: Layer 0 closes 30 Sep 2026.** Cadence required: ~5 sessions/week.
+ Hour budget ~900h against ~870h available: zero slack.
+- **THE HONEST SCHEDULE POSITION AS OF 10 AUG (end of S18):** 1.6 is closed
+ and 1.7 is ~two-thirds taught, so **six and a bit subsections remain
+ (the 1.7 tail plus 1.8–1.13) against ~7 weeks.** Required rate is still
+ ~1 subsection/week and the margin is still ZERO. **But S18 is the best
+ single-session yield in a fortnight (~0.5) and it was achieved on a WEEKDAY
+ EVENING, not a weekend block** — which is the first real evidence that the
+ 3h weekday commitment can carry the required rate on its own.
+ **The binding constraint remains per-session YIELD rather than session
+ frequency, and the re-baseline arithmetic is still formally due 31 Aug.**
+- **CADENCE — SESSION 15: ~0.4.** Iteration protocol, iterable/iterator,
+ `range`, function-scope. Did not close 1.6.
+- **SESSION 14: ~0.3.** Backlog clearance + 1.6 opened.
+- **SESSION 13: ~0.4.** Closed the 1.5 tail.
+- **RE-BASELINE LADDER STAYS ARMED.** The true arithmetic (observed
+ throughput → derived completion date) is **formally due 31 Aug 2026** and
+ gets written into the master file whether or not it is welcome. The student
+ asked for this himself in S15 and chose the date; honour it on time.
+- **WEEKEND BLOCKS:** Sat 1 Aug used (S10+S11). Sun 2 Aug NOT used.
+ **Sat 8 Aug USED — TWO SESSIONS (S14 + S15). Sun 9 Aug USED — TWO SESSIONS
+ (S16 + S17, the second running past midnight into Mon 10 Aug).** That is two
+ consecutive weekend blocks fully used, which is the committed compensation
+ mechanism actually showing up in the log. **But note the pattern cost: both
+ doubles produced same-day evidence that cannot be promoted.** Log actual
+ hours at the 31 Aug checkpoint.
+- Current Layer: 1
+- Current Topic: **1.7 (Functions). Recursion, pure functions and edge-case
+ analysis all taught in S20. FOUR ITEMS REMAIN: `global`, `*args`/`**kwargs`,
+ lambdas, docstrings. One good session closes 1.7.**
+- **Last Session: Session 17 (late 9 Aug → 10 Aug 2026)** — deferred the
+ exception-family recall on the student's correct objection; completed the
+ owed found-flag exercise across four iterations; earned loop `else` by
+ contrast; taught `pass` (with the three-way `pass`/`continue`/`break`
+ distinction and the comment-is-not-a-body trap); taught the ternary as an
+ EXPRESSION; took the owed `if`/`elif`/`else` confirmation cold and PROMOTED
+ it; taught `elif` chain semantics properly at his request; ran the
+ infinite-loop and full-trace work with the final cycle stated explicitly;
+ ran the owed mutating-vs-non-mutating drill (4/5) and replaced the roster
+ with the type-first discriminator; **and produced three new binding rules —
+ the INTERVAL GATE, AMBIGUOUS ASSENT, and WHITESPACE-IS-NOT-TESTABLE.**
+- Session Before: **Session 16 (9 Aug 2026, Sunday)** — the promotion pass;
+ nine items to [x]; most of the 1.6 tail; five mentor process failures.
+- Session Before That: **Session 15 (8 Aug 2026, Saturday)** — the iteration
+ protocol; same-day as S14.
+
+
+## E. ASSIGNMENTS LOG
+| Session | Topic | Assignment | Status | Notes |
+|---------|-------|------------|--------|-------|
+| 0 | Onboarding | ATM logic exercise (verbal) | Complete | Strong systems thinking |
+| 1 | Name binding | Predict a=10,b=a,b=b+5 | Complete | Correct, clean comments |
+| 2 | Recall + rebinding | Drills 1–3 | Complete | Gaps named honestly; C++ leak self-corrected |
+| 3 | Recall + 1.1 | Drills + empirical tests | Complete | Clean; PVM phrasing sharpened |
+| 4 | Recall + 1.1 final | Call-stack + traceback + REPL | Complete | Mutation/rebinding misclassified |
+| 5 | Recall + open 1.3 | Four demo functions | Complete | Entry-point wrong — corrected |
+| 6 | Diagnostic + rebuild 1.1 | Cold recall + frames rebuilt | Complete | Root cause: "frame" never defined |
+| 7 | Cold re-test + open `str` | Traceback drill + 3 re-tests | INCOMPLETE (carried) | 3 [x]→[~] |
+| 8 | Governance — voice model | Nine binding rules adopted | Complete (governance) | ZERO subsections |
+| 9 | Discharge predictions + `None` | P1–P4 cold + `==`/`is` | Partial | Four str predictions correct cold |
+| 10 | Close 1.3 + open/close 1.4 | Conversion + drills | Complete — TWO closed | Four mechanism doubts pushed to resolution |
+| 11 | Feynman backlog + finish 1.4 | Two Feynman pages + depth doctrine | Complete — 1.4 CLOSED | `int(x)` self-repair |
+| 12 | Cold re-tests + OPEN 1.5 | 6-item cold block + 1.5 core + Term Retention System | Complete — 1.5 OPENED (~60%) | Student caught FIVE mentor process errors |
+| 13 | Term-tax + CLOSE 1.5 tail | membership, short-circuit, bitwise, `%`/`**` drills | Complete — 1.5 covered end-to-end | Wrong-domain flaw on negative `%`, repaired |
+| 14 | Clear owed backlog + OPEN 1.6 | term-tax + 5 Aug re-test batch + `id()` demo + Feynman 1.3/1.4 + `if`/truthiness | Complete — backlog cleared, 1.6 OPENED | Student self-caught the wrong-domain reflex — a first. SUBSTRATE rule added. |
+| 15 | **Iteration protocol + fair function-scope re-test + schedule review** | **`iter()`/`next()`/StopIteration hand-unrolled (text) + iterable-vs-iterator with `list()` drain proof + `range()` half-open/lazy + `for i in range(3)` scope re-test + `range(0)` NameError case + mid-session plan review** | **Complete — 1.6 substantially advanced, NOT closed** | **Three correct student pushbacks, all upheld. Two new terms defined. Student REFUSED a premature confidence rating → new binding rule. Same-day as S14, so all evidence [~].** |
+| 16 | **Term-tax + S15 cold re-test + THE PROMOTION PASS + most of 1.6** | **S15 label volley cold; iterables/iterators + `range(0)` + scope re-tests; nine-item promotion pass; S13 operator drills in text (6/6); `print()` formally defined; `while` + `break`/`continue`; nested loops; loop `else`** | **Complete — 1.6 nearly closed** | **NINE promotions to [x] including `==`/`is` (owed since S7). FIVE mentor process failures, three caught by the student → the five Session 16 rules. Student requested and was granted a DEMOTION. `NameError`/`ValueError` conflated three times.** |
+| 17 | **CLOSE 1.6 — the owed tail** | **Found-flag search written by the student (4 iterations) → loop `else` earned by contrast; `pass` + the `pass`/`continue`/`break` three-way; ternary as an EXPRESSION; `if`/`elif`/`else` chain taught on request then CONFIRMED COLD; infinite-loop diagnosis + full `while` trace with the final cycle stated; mutating-vs-non-mutating identification drill (4/5) + the type-first discriminator** | **Complete — 1.6 CLOSED** | **THREE correct student pushbacks, all upheld, taking the running total to 13 with zero false positives — and the first one, refusing a same-day recall test before it ran, produced the INTERVAL GATE. `if`/`elif`/`else` PROMOTED to [x], the last item owed from S16. The owed method drill was delivered, discharging the debt from his own S16 demotion request. His per-item confidence PREDICTED his single wrong answer. Mentor also misread "continue" and opened 1.7 against his explicit request; that material was discarded at his instruction and is not recorded.** |
+| 18 | **Clear the deferred recall block + OPEN 1.7 Functions** | **[RECALL] exception family cold in mixed order (`NameError`/`ValueError`/`TypeError`, exceptions-are-signals, `StopIteration` category, `traceback`); [RECALL] iterator causation; [RECALL] modulo identity in TEXT on a self-chosen negative divisor; [DRILL] `reverse`/`sort` + classification of unseen methods; then 1.7 — `def` vs call, parameters vs arguments, return values and implicit `None`, scope and LEGB, `__defaults__` cold re-test, default arguments, first-class objects, nested functions** | **Complete — deferred block cleared, 1.7 OPENED (~two-thirds)** | **SEVEN promotions to [x] on genuine later-day evidence, including the `NameError`/`ValueError` conflation that had been the single weakest label in the file since S16. The INTERVAL GATE was applied by the MENTOR unprompted for the first time. `traceback` (3/10), iterator causation (3/10, third failure) and `__defaults__` (fourth cold miss) all held at [~]. FIVE correct student pushbacks — running total EIGHTEEN, zero wrong — including a TECHNICAL correction to the mentor's own discriminator rule and a refusal to let closures be tagged as taught. Closures and recursion NOT covered; closures reopen from scratch in TEXT.** || 19 | **Recall the three S18 non-promotions + CLOSURES FROM SCRATCH IN TEXT** | **[RECALL] `traceback`, iterator causation (bug-first), `__defaults__`; [RECALL] def-vs-call / first-class / alias and LEGB; then closures ground-up — free variable, cell, `__closure__`, per-object cells, the one-argument-callback necessity, `sorted` and `key=` from zero, student-built `my_sorted`, `nonlocal` and the three-error separation, alias vs new object vs return value** | **Complete — 1.7 advanced to ~five-sixths; recursion deferred a fourth time** | **THE ITERATOR CAUSATION PASSED ON FIRST ATTEMPT for the first time in four attempts across four days — bug-first delivery vindicated. ZERO promotions and that is correct: 6/10, 4/10 and 7/10 all sit below the bar. Second transcription artefact of the arc fired on "dunder" and the S16 rule handled it — nothing logged against him. FOUR correct student rejections of weak closure motivations, running total TWENTY-TWO with zero wrong. Mentor failures: `sorted(key=)` used before ever being taught (flagged twice by him), four motivations that did not require a closure (~half the session), `zip` and list comprehensions used untaught, and questions consolidated without their code → THE SESSION 19 RULE. Closure DEFINITION declared a gap; cell causation asked a fourth time and still not produced unaided.** |
+| 20 | **Close the owed closure recalls + RECURSION AT LAST + pure functions + edge-case analysis** | **[RECALL] closure definition cold (4/10); [RECALL] cell causation cold — CORRECT UNAIDED at last (5/10); [RECALL] `traceback` → 0/10 and retaught from scratch; then 1.7.9 RECURSION in full (base/recursive case, pre-order vs post-order, value-returning recursion, identity-value base rule, `RecursionError`, the two termination conditions, printer-vs-calculator); [PREDICT] post-order countdown (FAILED), [PREDICT] `total(4)` (PASSED both parts); [DRILL] `count_down_by` (passed, tuple flaw); [DRILL] `digit_sum` (recursive case unaided, base-case boundary bug); 1.7.11 EDGE-CASE ANALYSIS — the five checks, taught as a procedure; [DRILL] `first_char` bug hunt (PASSED via check 2); 1.7.10 pure functions vs side effects + [PREDICT] `scale` (3/3)** | **Complete — 1.7 advanced to four remaining items** | **THE CELL CAUSATION CAME BACK CORRECT UNAIDED after five attempts across two days. ZERO PROMOTIONS — but for a NEW reason: the file's FIRST UNDER-RATING (5/10 on an ~85%-correct answer). ⚠ THE MAJOR FINDING IS A MENTOR FINDING: `traceback` had been FIRED for three sessions and NEVER TAUGHT; the prior "failures" were invalid measurements and are struck. TENTH define-before-building breach (slicing used untaught) → PUSHBACK 25, upheld. Running total TWENTY-FIVE, zero wrong. THREE NEW RULES, all his — DOUBT GATE, RESPONSE LENGTH CAP, DEPTH-BEFORE-ANSWER — and the disclosure behind rule 2 (he does not read long messages to the end) retro-explains several logged student lapses. EDGE-CASE ANALYSIS added to the curriculum as 1.7.11 at his request; it transferred on first use.** |
+
+
+## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
+
+### What Session 20 established
+
+- **THE FILE'S OLDEST RECORDED STUDENT WEAKNESS WAS NOT A STUDENT WEAKNESS.**
+  `traceback` was fired as a [RECALL] in S16, S18 and S19, logged each time as
+  a failure, and named "PRIORITY — the lowest self-rating of the session". In
+  S20 he rated it 0/10 and explained precisely what he did and did not have:
+  he could read the line-number half and had no idea what `<stdin>` meant.
+  **The item had never been taught. It had only ever been asked.** Repeating a
+  question is not teaching, and three sessions of measurement were measuring a
+  hole in the delivery. **It was retaught in full and the clock reset.**
+  ⚠ **THE GENERALISABLE LESSON IS THE IMPORTANT PART: a repeatedly-failing
+  item is evidence about the TEACHING before it is evidence about the student.
+  Audit the rest of the carry-forward list for the same defect.**
+
+- **THE CELL CAUSATION CAME BACK CORRECT, UNAIDED, FROM COLD — after four
+  failed attempts in S19 and a four-day gap.** He produced the full chain:
+  each iteration creates a new function object with its own cell, and the five
+  values cannot collide because they belong to five different objects. **Two
+  corrections only, both worth carrying: he attributed the new object to THE
+  LOOP when it comes from THE CALL** (five separate calls on five lines give
+  five cells with no loop anywhere), **and he fused two labels into "content
+  cell"** — it is a CELL, and `cell_contents` is an attribute on it.
+
+- **THE FIRST UNDER-RATING IN THE FILE, AND IT INVERTS A TWO-MONTH PATTERN.**
+  That cell-causation answer was ~85% correct and he rated it 5/10, which
+  blocked the promotion. **Every calibration event since S15 has run the other
+  way — he has refused ratings, surrendered marks and rejected tests, always
+  in the direction of demanding MORE evidence.** This is the first time his
+  own number cost him something he had earned. **His rating is used as a
+  targeting signal, so an undershoot wastes sessions re-teaching what he
+  already owns. Say this plainly if it recurs; one instance is not a trend.**
+
+- **RECURSION LANDED, AFTER FOUR DEFERRALS, AND THE FRAMES WORK FROM 1.1 PAID
+  FOR IT.** The whole subsection was delivered on one premise — *nothing new is
+  happening in the machinery; recursion just means several frames of the same
+  function are alive at once* — and that framing carried the base case, the
+  unwind, the identity-value rule and `RecursionError` without new scaffolding.
+  **`total(4)` was predicted correctly including the part most people fumble:
+  that the deepest frame returns a VALUE, not nothing.**
+
+- **BUT THE POST-ORDER PREDICTION FAILED, AND IT IS A TRANSFER FAILURE, NOT A
+  RECURSION FAILURE.** He answered `2 1 0` for a countdown that prints on the
+  way back up. Root cause: he imagined ONE `n` that keeps changing, rather than
+  four frames each holding their own. **He had explained the identical
+  principle — five objects, five cells, no collision — correctly and unaided
+  TWENTY MINUTES EARLIER IN THE SAME SESSION.** Same idea, different container,
+  not recognised. **This is the sharpest instance yet of a pattern the file has
+  been circling: he owns concepts locally and does not carry them across
+  contexts. Test it as transfer.**
+
+- **HE NAMED HIS OWN CORE WEAKNESS, CORRECTLY AND UNPROMPTED, AND ASKED FOR IT
+  TO BE TAUGHT RATHER THAN WATCHED.** *"I am unable to think about the failure
+  cases and dissect the problem the way you do... I have never done this, and
+  don't know how to find the edge cases, are we going to work on that and i
+  believe you need to teach me that as well??"* **He was right that it was
+  missing** — "needs to develop habit of thinking about edge cases" had been a
+  one-line entry in WATCH AREAS since the file was created, describing a gap
+  nothing addressed. **It is now subsection 1.7.11 with a five-check
+  procedure, and it transferred on first use in the same session.**
+  ⚠ **The premise had to be corrected before the content: he was treating this
+  as a knack the mentor has and he lacks. It is a checklist run against the
+  structure of the code. Saying so mattered as much as the checklist.**
+
+- **HIS SECOND SELF-DIAGNOSIS WAS BETTER THAN HIS FIRST, AND IT IS NOW RULE 3.**
+  *"I just did the things at surface level and always do that and that's why i
+  was not able to catch the edge case."* **That is the habit underneath
+  right-answer-without-mechanism, described from the inside.** The ledger has
+  been recording the symptom for months; this is the first time the cause has
+  been named, and he named it.
+
+- **HE DISCLOSED THAT HE DOES NOT READ LONG MESSAGES TO THE END, AND IT
+  RE-EXPLAINS A RUN OF LOGGED LAPSES.** *"I tend to not read the full chat if
+  its too long and that's the reason I don't do things you asked for."*
+  **The four missing S19 confidence ratings, the skipped `digit_sum` trace and
+  the unanswered S19 cell-causation re-fire were not compliance failures — they
+  were asks buried where he never reached them.** The remedy is not to nag; it
+  is to write shorter turns and put the ask near the top. **Message length is a
+  mentor problem and it is now a binding rule.**
+
+- **THREE CORRECT PUSHBACKS, TAKING THE RUNNING TOTAL TO TWENTY-FIVE WITH ZERO
+  WRONG.** (23) The doubt gate — stopping a new subsection opened over
+  unresolved questions. (24) The restatement requirement — the first fix solved
+  only half the problem, exactly as in S19. (25) **Refusing the `first_char`
+  bug hunt on the grounds that SLICING HAS NEVER BEEN TAUGHT — the tenth
+  define-before-building breach**, same class as `zip` and list comprehensions
+  in S19. **He has now caught every single untaught-construct breach in this
+  file. He is a more reliable detector of this failure than the mentor is.**
+
+- **FOUR MENTOR FAILURES, AND THE SHAPE IS DIFFERENT AGAIN.** (1) `traceback`
+  asked for three sessions without ever being taught — **the most serious
+  failure recorded in this file, because it corrupted the ledger rather than
+  just costing time.** (2) An unparseable [RECALL] ("what is a traceback and
+  what does it show you") — two half-questions with no anchor; **correctly
+  logged as no measurement rather than as a student gap.** (3) Slicing used
+  untaught. (4) A new subsection opened with no doubt check, stranding a live
+  prediction. **S16's shape was haste, S17's was literalism, S19's was reaching
+  for examples before checking what they required. S20's is FAILING TO CHECK
+  WHETHER A THING WAS EVER DELIVERED BEFORE MEASURING IT.**
+
+### What Session 19 established
+
+- **THE MOST STUBBORN ITEM IN THE FILE CAME BACK CORRECT, ON FIRST ATTEMPT.**
+  The iterator causation had failed on three separate days, every time by
+  reaching for "one item at a time". Fired bug-first in S19 — the hoisted
+  `it = iter(range(2))` above a nested loop — **he diagnosed it and gave
+  "forward-only state, moves forward only, can't rewind" unaided.**
+  **The instruction that produced this was written in S18 and followed in S19.
+  Definition-first failed three times; bug-first has now worked twice. This is
+  the clearest evidence in the file that HOW a repair is delivered decides
+  whether it holds.**
+
+- **ZERO PROMOTIONS, AND THAT IS THE RIGHT ANSWER.** All three recall items
+  improved and all three stayed [~], because he rated them 6/10, 4/10 and 7/10.
+  **The iterator item is the interesting one: a CORRECT answer that does not
+  promote, because he does not trust it.** That is the strict legend working
+  exactly as designed, and it is worth saying to him — the answer was right and
+  the caution was also right.
+
+- **CLOSURES ARE TAUGHT, AND HE BUILT THE MECHANISM HIMSELF.** Given the
+  contradiction (outer is dead, `n` still reachable) he worked to the answer
+  across three guesses — `__defaults__`, then `<module>`, then the `inner`
+  object. **Both wrong guesses were productive: `__defaults__` failed on role
+  and timing, and `<module>` was refuted by his own earlier reasoning about
+  shared namespaces.** He then predicted the per-object cell values correctly.
+
+- **HE REJECTED FOUR MOTIVATING EXAMPLES AND WAS RIGHT EVERY TIME.** Fixed
+  values; a hardcoded `x*3` he proposed himself; a single global `pct` with one
+  function, **which contained no closure at all**; and a loop plus a dict.
+  **The mentor's examples were the problem, not his comprehension.** The honest
+  answer that ended it — a callback that will only ever be handed ONE argument
+  — **was already recorded in this file from S18 and went unused until the
+  fifth attempt.** He reached it himself: *"ye pehla example hai jo sense bana
+  raha hai."* **Running total of correct pushbacks: TWENTY-TWO, zero wrong.**
+
+- **HIS SECOND CHALLENGE WAS BETTER THAN HIS FIRST, AGAIN.** *"Ek baar ban gaya
+  to wo to fixed hai, dynamism kahan hai?"* — half right, and the productive
+  half. A single closure IS fixed; the dynamism lives in the factory minting
+  unknown numbers of them with unknown values at runtime. **This is the same
+  escalation pattern S18 recorded: each objection sharper than the last. Keep
+  feeding him "why this rather than the obvious alternative?"**
+
+- **HE REVERSE-ENGINEERED `sorted` UNPROMPTED AND THE SKELETON WAS CORRECT.**
+  Run the function on each element, pair keys with elements, compare on keys,
+  lay out the elements. One correction — he proposed a dict, which breaks on
+  duplicate keys. **He reliably tries to build the thing rather than use it.
+  That is the North Star behaviour showing up in a Layer 1 session.**
+
+- **THE CLASS/INSTANCE ANALOGY WAS HIS, AND IT WAS STRUCTURALLY SOUND.**
+  *"Ye to class jaisa hai, har baar ek instance create kar rahe hain."*
+  Correct pattern (behaviour carrying private data), wrong label (a closure is
+  a function object). **Pre-loads 1.12 — reuse this when classes open.**
+
+- **THE RIGHT-ANSWER-WITHOUT-MECHANISM PATTERN FIRED IN ITS SHARPEST FORM YET.**
+  He established `a is b` → `False` (separate objects, separate cells) and then,
+  minutes later, predicted `1, 2, 3` for two independent counters — a
+  prediction that requires a SHARED cell. **The fact was retrievable and was
+  not load-bearing in his reasoning.** He then got the alias case right with
+  the correct causation. **This is the cleanest instance in the file and the
+  standing instruction holds: never accept a correct conclusion without
+  auditing the mechanism, and re-ask the same mechanism in a new dress.**
+
+- **A STUDENT-SIDE PROTOCOL SLIP, THE FIRST IN THE FILE: no confidence ratings
+  were given on any of the four consolidated questions**, despite being asked.
+  Worth one light mention in S20 and nothing more — his calibration record is
+  otherwise excellent and this is a lapse, not a pattern.
+
+- **FIVE MENTOR FAILURES, and the shape is different from S16's and S17's.**
+  (1) `sorted(key=)` deployed before it had ever been taught — he flagged it,
+  a `negate` example was given that still assumed `key`, and he flagged it
+  AGAIN. **Ninth define-before-building breach.** (2) Four motivating examples
+  that did not require a closure, costing roughly half the session and pushing
+  recursion to a fourth deferral. (3) `zip` and list comprehensions used
+  untaught. (4) Questions consolidated without their code, requiring him to ask
+  twice. (5) The second transcription artefact of the arc, on "dunder" —
+  though here the rule WORKED: questioned, self-corrected, apologised, nothing
+  logged. **The common shape is not haste (S16) and not literalism (S17): it is
+  reaching for an example before checking what the example itself requires.**
+
+### What Session 18 established
+
+- **THE WEAKEST CLUSTER IN THE FILE IS NO LONGER THE WEAKEST.** The exception
+ family — `NameError`/`ValueError` conflated three times in one S16 session,
+ exceptions-are-signals a full gap, `StopIteration` miscategorised as "a
+ state" — was fired cold, in mixed order, on a genuine later day. **All of it
+ passed except `traceback`.** Five promotions from one block.
+ **The mechanism that produced this is worth naming: name-decoding plus a
+ spaced term-tax, applied over six sessions, on labels that CAN be decoded.
+ The two items that did not come good — `traceback` and `__defaults__` — are
+ precisely the two that cannot be re-derived from their own names.** That is
+ the S12 diagnosis confirmed with unusual clarity, and it tells the next
+ sessions exactly which tool to use on which item.
+
+- **THE INTERVAL GATE WORKED, AND IT WORKED WITHOUT HIM.** S17's headline rule
+ was applied by the mentor as the first action of S18 — elapsed time
+ established before a single question was posed. **The gate cost S17 an
+ entire block and bought S18 a true promotion.** Had the block run on echo in
+ S17, the file's weakest cluster would now be sitting behind a row of [x]
+ marks it had not earned. **This is the clearest vindication of the strict
+ legend the file has produced.**
+
+- **THE ITERATOR CAUSATION FAILED FOR A THIRD TIME, ON A THIRD SEPARATE DAY.**
+ Asked what "consumed" means, he went straight back to "ek baar mein ek item
+ deta jaata hai" — the exact wrong causation corrected in S15 and again in
+ S16. Repaired a third time with the code-as-bug image, and the teach-back
+ was then correct. **The pattern in the repairs is the finding: the
+ definition does not stick and the bug does. Stop teaching this one as a
+ definition.**
+
+- **HE CORRECTED THE MENTOR'S OWN DISCRIMINATOR, AND HE WAS RIGHT.** Handed
+ "methods on mutable types mutate and return `None`", he refused to
+ generalise it. `pop`, `index` and `count` all sit on a mutable type and all
+ return values. **The rule is about IN-PLACE MUTATORS, not mutable types**,
+ and it was narrowed in session. **He accepted this model in S17 and audited
+ it in S18. That gap — between receiving a model and testing it — is the
+ entire distance this course exists to cover, and he crossed it unprompted.**
+
+- **THE CLOSURE ARGUMENT WAS THE BEST THINKING IN THE FILE SO FAR.** He asked
+ why closures exist, rejected the factory answer, rejected the
+ runtime-determined-value answer, and then **proposed the correct rival
+ design himself: just write `multiply(n, x)` with two parameters.** That IS
+ usually better, and he was told so without softening. The honest answer he
+ forced out — closures earn their place when a ONE-ARGUMENT callable is
+ required by something else, or when a setting is fixed once and reused many
+ times — is recorded in 1.7. **Each of his three objections was better than
+ the one before it. Give him "why this rather than the obvious
+ alternative?" as a standing question.**
+
+- **HE REFUSED A TAG AND SET THE RE-ENTRY TERMS.** "Isko taught tag mat karo,
+ isko hum wapas se start karenge" — closures are not recorded as covered,
+ and he specified how the topic should reopen: text mode, worked examples.
+ **This is the fourth escalation of a behaviour tracked since S15: refused a
+ RATING (S15), handed back a MARK (S16), refused a TEST (S17), refused a TAG
+ and specified the replacement (S18).**
+
+- **THE SCOPE-CREEP PATTERN RAN BACKWARDS.** Recursion — the thing he has
+ wanted most since S17 — was offered three times and declined three times,
+ so that closures could be argued properly and then restarted cleanly.
+ **He slowed his own curriculum down to protect the ledger.** Do not declare
+ the pattern closed on one instance, but log it.
+
+- **1.7 FUNCTIONS IS ~TWO-THIRDS TAUGHT.** `def` versus call (his first
+ answer conflated the two, then repaired), parameters versus arguments,
+ return values with the three-way implicit/explicit `None` case, LEGB with
+ all four layers correct and two precision fixes, default arguments, and
+ first-class objects. **Nested functions defined. Closures and recursion
+ untouched by design.**
+
+- **FOUR MENTOR FAILURES.** (1) Asking for a confidence rating on freshly
+ taught material — a straight breach of the binding S15 rule, caught by him.
+ (2) The same shape a second time on the next teach-back, defensible on the
+ facts but proof the instrument was not being declared. (3) Hearing "done"
+ for "None" and correcting a mistake he had not made — **second occurrence of
+ the exact class the S16 TRANSCRIPTION-ARTIFACT rule was written to
+ prevent.** (4) Putting `d.clear()` in a drill when dictionary methods had
+ never been taught — eighth define-before-building breach. **The common
+ shape this time is not haste and not literalism: it is failing to say out
+ loud which instrument is in use.** Hence the [TEACH-BACK] tag.
+
+
+### What Session 17 established
+
+- **1.6 CONTROL FLOW IS CLOSED.** The five remaining pieces were all taught:
+ the owed found-flag exercise, loop `else` earned by contrast, `pass`,
+ ternary expressions, and common loop patterns — plus the owed
+ mutating-vs-non-mutating drill and the owed `if`/`elif`/`else`
+ confirmation. **The subsection that has been open since Session 14 is done.**
+
+- **THE STUDENT REFUSED A TEST BEFORE IT RAN, AND HE WAS RIGHT.** The session
+ was supposed to open with the exception-family recall. He stopped it on the
+ grounds that S16 had ended minutes earlier, so nothing could have been
+ forgotten and the result would measure echo rather than retention. The
+ mentor checked, confirmed, and deferred the block. **This is the third and
+ most advanced instance of a behaviour this file has been tracking since S15:
+ S15 he refused a confidence RATING, S16 he handed back a MARK, S17 he
+ refused the MEASUREMENT ITSELF. He is now reasoning about what his own
+ results would be evidence of, which is experimental design rather than
+ study skill.** It produced the INTERVAL GATE.
+
+- **LOOP `else` WAS EARNED RATHER THAN TOLD — the S16 prerequisite breach is
+ repaired.** He wrote the search with only `for`, `if`, `break` and a flag,
+ and having felt the cost of it — a variable declared before the loop, set
+ inside it, and checked after it — he articulated the justification himself:
+ the flag exists solely to record whether the loop finished without breaking,
+ and the interpreter already knows that. **The exercise worked exactly as the
+ S16 note predicted it would. When a construct exists to remove a pain, make
+ him feel the pain first.**
+
+- **THE FOUND-FLAG STRUCTURE WAS CORRECT FROM HIS SECOND ATTEMPT.** Four
+ iterations were needed but the classification matters: attempt 1 used loop
+ `else` and so defeated the exercise; attempt 2 had the structure right with
+ two syntax errors (bare names where strings were needed, a missing colon);
+ **attempts 3 and 4 were whitespace only, which turned out to be a CHANNEL
+ ARTEFACT and not his error at all.** Three turns were spent correcting
+ indentation he could not physically type. See Session 17 rule 3.
+
+- **`if`/`elif`/`else` PROMOTED TO [x] — the last item owed from Session 16.**
+ He asked to be re-taught `elif` properly before attempting the confirmation
+ — *"kya tum mujhe ek baar elif ke baare mein poora bataoge? Uske baad hum
+ dobara isko attempt karein?"* — which is exactly the right instinct and the
+ opposite of guessing. He then answered both halves cold: `x = 5` prints "B"
+ with the rest skipped, and with `x = 20` the `elif` is **never evaluated at
+ all**. Self-rated 10/10 before the verdict, per rule 3.
+
+- **HIS CONFIDENCE RATINGS PREDICTED HIS ERROR.** On the five-item method
+ drill he attached a rating to each answer unprompted. The one item he rated
+ 5/10 (`l.reverse()`) was the one he got wrong; the 8/10s and the 10/10 were
+ all right. **His calibration has crossed from honest to USEFUL — it can now
+ be used to target re-tests, not merely to authorise promotions.**
+
+- **HE REFUSED A ROSTER AND ASKED FOR A MODEL.** Given the list of mutating
+ methods he immediately pushed on it: *"mujhe jab pata hi nahi hai to main
+ kaise pehchanoonga?"* The answer given was the type-first discriminator —
+ **immutable types cannot have mutating methods at all, so half the problem
+ disappears; for mutable types, a return of `None` is the tell** — plus the
+ deliberate name-pairs (`sort`/`sorted`, `reverse`/`reversed`) as evidence
+ that Python designed the distinction in on purpose. **This is the single
+ most valuable thing taught in the session and it generalises to every
+ roster-shaped question waiting in 1.8.**
+
+- **TRACE-TAIL TRUNCATION DID NOT FIRE.** Required to state the final cycle
+ explicitly, he traced `while i < 5` all the way through and named the
+ terminating check correctly: `i` becomes 5, control returns to the top,
+ `5 < 5` is false, the body is skipped, 5 never prints. The S16 countermeasure
+ is working; keep applying it.
+
+- **THE SCOPE-CREEP PATTERN FIRED ON EASY MATERIAL, NOT HARD MATERIAL.** After
+ the `elif` promotion he said the flow-control basics were already known to
+ him and asked to move to recursion and nested functions. **The file has
+ always framed this pattern as a response to friction; this instance was a
+ response to BOREDOM.** It was named directly, the two remaining 1.6 pieces
+ were stated as prerequisites with the reason given, and he accepted at once
+ and finished the tail. Update the watch area accordingly.
+
+- **THREE MENTOR FAILURES, ALL CAUGHT BY HIM.** (1) Running a same-day recall
+ because the resume plan said to. (2) Reading his *"continue"* as "continue
+ teaching" and opening 1.7 when he had asked for the session to be closed and
+ the notes written — that material was discarded at his instruction and is
+ not recorded anywhere in this file. (3) Spending three turns marking up
+ indentation he cannot enter in this channel. **The common shape: following
+ a written plan or a literal reading instead of reading the situation.** The
+ S16 rules fixed corners cut for speed; these three fix instructions followed
+ past the point where they still applied.
+
+### What Session 16 established
+
+- **THE PROMOTION BACKLOG IS CLEARED.** Nine items moved [~] → [x] on real
+ later-day evidence: rebinding-vs-mutation, aliasing, implicit-vs-explicit
+ conversion / `"5"+3`, shallow-vs-deep copy, `+=`, precedence and
+ associativity, `**` right-to-left, negative `%` and `//`, `==` vs `is`,
+ function-scope-not-block-scope, `if`-block-scope, and `range()`. **Two of
+ these deserve special note: `==` vs `is` had been owed since Session 7,
+ and the negative-`%` case was one of the two items this file had
+ repeatedly called its weakest. Neither is weak now.**
+
+- **THE OPERATOR DRILL WAS 6-FOR-6 COLD, IN TEXT.** `17 // 4` and `17 % 4`;
+ `-7 // 2` and `-7 % 2` **by applying the identity rather than recalling a
+ special case**; `2 ** 3 ** 2` → 512 with right-associativity named;
+ `a == b` True / `a is b` False with `is` given as `id(a) == id(b)`;
+ `5 > 3 > 1`; and `10 / 2 → 5.0`. He then volunteered `-11 % 5` unprompted
+ with full working, explicitly to demonstrate he held the mechanism.
+ **That is the behaviour of someone who has stopped hoping the answer is
+ right and started proving it.**
+
+- **CHAINED COMPARISON WENT DEEPER THAN THE RULE.** He gave the expansion
+ (`5 > 3 and 3 > 1`) and then the part that matters: in `f() > 3 > 1`,
+ **`f()` is called exactly once.** The middle operand is evaluated a single
+ time, which is why chaining is not merely syntactic sugar for the `and`
+ rewrite. Links directly to short-circuit, which he had already nailed.
+
+- **1.6 WAS NEARLY CLOSED.** `print()` formally defined at last (returns
+ `None`, calls `str()` on its arguments, `sep` and `end` as changeable
+ parameters); `while` taught against `for` by contrast; `break`/`continue`
+ with the `continue`-skips-the-increment infinite loop **found by him
+ unprompted**; nested loops tied back to iterable-reuse; loop `else`.
+
+- **FIVE MENTOR PROCESS FAILURES, THREE CAUGHT BY THE STUDENT IN TWENTY
+ MINUTES, AND ONE UNPROMPTED META-CHALLENGE.** He asked, directly, *"you
+ have been very irresponsible in teaching, how can we fix that?"* — and the
+ honest answer was that pace was being optimised over protocol while
+ clearing a four-phase backlog. **The pattern worth naming: his objection
+ now fires faster than the mentor's own check does.**
+
+- **HE ASKED FOR A MARK TO BE TAKEN AWAY.** Given [x] on
+ mutating-methods-return-`None`, he requested a reversal because he could
+ not yet reliably identify WHICH methods mutate — concept solid, roster
+ not. It produced binding rule 3. **THE DEBT WAS DISCHARGED IN S17: the
+ identification drill he asked for ran, at 4/5.**
+
+- **HE CORRECTED THE MENTOR ON THE MENTOR'S OWN TEACHING.** Told that `for`
+ stops when "the iterable is exhausted", he objected: *"isn't that
+ incorrect, coz iterable never gets exhausted"* — and he was right. It is
+ the ITERATOR that is consumed; the iterable is untouched.
+
+- **THE FALSE-SLIP NEAR-MISS.** The mentor logged a label failure on
+ `iterable` that never happened — the transcription rendered his correct
+ word as "travel" and he was corrected twice for a mistake he had not
+ made. **A false entry in this ledger is worse than a missing one.** Hence
+ the TRANSCRIPTION-ARTIFACT rule.
+
+- **THE EXCEPTION FAMILY IS THE WEAKEST CLUSTER IN THE FILE.**
+ `NameError`/`ValueError` conflated three times, exceptions-are-signals a
+ full gap, `StopIteration` miscategorised as "a state", `traceback` a gap.
+ **Every one has the same signature: mechanism owned, label or category
+ dropped.** S17 was supposed to open here and could not, for interval
+ reasons. **S18 must.**
+
+### What Session 15 established
+
+- **THE ITERATION PROTOCOL IS NOW A MECHANISM, NOT A SYNTAX.** He can state
+ what `for x in <iterable>` does step by step: `iter()` once to get the
+ iterator, `next()` per pass, item bound then block runs, `StopIteration`
+ on exhaustion caught internally by `for`. He identified the N+1 call-count
+ trap correctly on a 4-item list and then TRANSFERRED IT UNPROMPTED to
+ `range(4)`. One precision fix was needed: it is the ITERATOR that is
+ exhausted, not the iterable.
+
+- **THE SESSION'S LOAD-BEARING RESULT: iterables are reusable, iterators are
+ consumed.** Proved in code by draining an iterator twice. **The causation
+ had to be repaired** — he attributed consumption to one-at-a-time
+ delivery; the real cause is forward-only state with no rewind. Confidence
+ 4/5, correctly withheld from 5 pending a later-day test.
+
+- **THE FAIR FUNCTION-SCOPE RE-TEST RAN, AND IT SPLIT.** `print(last)` → 2,
+ correct with reasoning. `print(i)` → predicted `StopIteration`, WRONG,
+ corrected to 2. The miss was the more valuable half: it forced the real
+ rule into the open — **binding happens only on a successful RETURN; an
+ exception raises, so nothing is bound.** And then the scope rule itself:
+ **Python has function scope, not block scope.**
+
+- **THREE STUDENT PUSHBACKS, ALL UPHELD, ALL PRODUCTIVE.** (a) `list()` was
+ dragged into the iterator demo undefined. (b) *"How do I know you are
+ completing things and not quietly dropping them?"* — answered by showing
+ the live session to-do list. (c) *"You showed `StopIteration` printed on
+ screen, so it IS a value"* — a contradiction the mentor had manufactured
+ by showing a traceback without ever defining one.
+
+- **THE STUDENT REFUSED AN INVALID MEASUREMENT.** Asked for a confidence
+ rating immediately after being given an answer, he declined on the grounds
+ that he had not yet recalled it himself. He was right and it is now a
+ binding rule.
+
+- **HE ASKED FOR THE HONEST SCHEDULE POSITION AND THEN MADE THE RIGHT CALL
+ ON IT.** Told plainly that the margin is zero and that the constraint is
+ per-session yield rather than frequency, he chose to defer re-baselining to
+ the 31 Aug checkpoint on the correct reasoning that session density varies
+ too much to judge from one day.
+
+### What Session 14 established
+
+- The entire S11–S13 owed backlog was CLEARED: the `id()` shallow/deep-copy
+ demo cold-passed with mechanism; `result = q.append(4)` PASSED cold on a
+ 3-day gap after three prior slips; the spoken Feynman recalls for 1.3 and
+ 1.4 both cold-passed; the 5 Aug 1-week re-test batch ran.
+- 1.6 was OPENED term-first: control-flow, conditional, condition→`bool`,
+ truthy/falsy all name-decoded and cold-passed.
+- **The student SELF-CAUGHT the wrong-domain reflex for the first time** on
+ block scope, killing the "does a new frame open after the colon?"
+ speculation himself before correction.
+- The mentor breached define-before-building with an undefined `for`/`range`
+ example; the student caught it; the SUBSTRATE DEFINE-BEFORE-BUILDING rule
+ was written. **S15 vindicated that rule immediately.**
