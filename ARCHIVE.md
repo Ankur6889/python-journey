@@ -367,7 +367,24 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **21**
+- Sessions Completed: **22**
+- **SESSION 22 (Mon 17 Aug 2026) — THE QUEUE GETS PAID: SIX PROMOTIONS, THE
+ REPO'S FIRST DRILLS, AND 1.7 CLOSED.** First genuine later-day session since
+ S19, and the first run of the new S21 promotion rule — it worked exactly as
+ designed. **Promoted to [x] on later-day evidence: post-order transfer
+ (10/10, clean four-frame trace — the S20 failure did not recur), cell
+ causation (7/10, plus the same-argument tricky case), `global` (10/10, via
+ task-first drill `drills/s22_counter.py`, 3/3 pytest), `*args`/`**kwargs`
+ (8/10, `drills/s22_report.py`, 4/4 pytest), `__defaults__` (7/10 — PRODUCED
+ COLD FOR THE FIRST TIME IN FIVE ATTEMPTS), and iterator causation (5/10,
+ bug-first, first later-day pass with no one-at-a-time relapse — the short
+ gap his rating buys re-fires it in S23).** The closure DEFINITION failed at
+ 5/10 (layers muddled, survival clause missing) and stays the priority [~].
+ Taught: **lambdas and docstrings — 1.7 CLOSED.** Decisions settled: first
+ weekly cold build block Sat 22/Sun 23 Aug; queue tooling = a script in the
+ repo. Zero pushbacks (0 raised / 0). **Mentor miss: term-tax skipped on a
+ valid later day — owed first thing in S23.** Count S22 as ~0.25 subsection
+ taught, but the real yield was the ledger: biggest promotion day since S16.
 - **SESSION 21 (Sun 16 Aug 2026, evening — SAME DAY AS S20) — GOVERNANCE
  SETTLED, ENVIRONMENT MOVED, AND THE 1.7 TAIL HALF-CLOSED.** Interval gate
  applied at the open: ~2 hours since S20, so **no promotable evidence, term-tax
@@ -565,6 +582,7 @@
 | 17 | **CLOSE 1.6 — the owed tail** | **Found-flag search written by the student (4 iterations) → loop `else` earned by contrast; `pass` + the `pass`/`continue`/`break` three-way; ternary as an EXPRESSION; `if`/`elif`/`else` chain taught on request then CONFIRMED COLD; infinite-loop diagnosis + full `while` trace with the final cycle stated; mutating-vs-non-mutating identification drill (4/5) + the type-first discriminator** | **Complete — 1.6 CLOSED** | **THREE correct student pushbacks, all upheld, taking the running total to 13 with zero false positives — and the first one, refusing a same-day recall test before it ran, produced the INTERVAL GATE. `if`/`elif`/`else` PROMOTED to [x], the last item owed from S16. The owed method drill was delivered, discharging the debt from his own S16 demotion request. His per-item confidence PREDICTED his single wrong answer. Mentor also misread "continue" and opened 1.7 against his explicit request; that material was discarded at his instruction and is not recorded.** |
 | 18 | **Clear the deferred recall block + OPEN 1.7 Functions** | **[RECALL] exception family cold in mixed order (`NameError`/`ValueError`/`TypeError`, exceptions-are-signals, `StopIteration` category, `traceback`); [RECALL] iterator causation; [RECALL] modulo identity in TEXT on a self-chosen negative divisor; [DRILL] `reverse`/`sort` + classification of unseen methods; then 1.7 — `def` vs call, parameters vs arguments, return values and implicit `None`, scope and LEGB, `__defaults__` cold re-test, default arguments, first-class objects, nested functions** | **Complete — deferred block cleared, 1.7 OPENED (~two-thirds)** | **SEVEN promotions to [x] on genuine later-day evidence, including the `NameError`/`ValueError` conflation that had been the single weakest label in the file since S16. The INTERVAL GATE was applied by the MENTOR unprompted for the first time. `traceback` (3/10), iterator causation (3/10, third failure) and `__defaults__` (fourth cold miss) all held at [~]. FIVE correct student pushbacks — running total EIGHTEEN, zero wrong — including a TECHNICAL correction to the mentor's own discriminator rule and a refusal to let closures be tagged as taught. Closures and recursion NOT covered; closures reopen from scratch in TEXT.** || 19 | **Recall the three S18 non-promotions + CLOSURES FROM SCRATCH IN TEXT** | **[RECALL] `traceback`, iterator causation (bug-first), `__defaults__`; [RECALL] def-vs-call / first-class / alias and LEGB; then closures ground-up — free variable, cell, `__closure__`, per-object cells, the one-argument-callback necessity, `sorted` and `key=` from zero, student-built `my_sorted`, `nonlocal` and the three-error separation, alias vs new object vs return value** | **Complete — 1.7 advanced to ~five-sixths; recursion deferred a fourth time** | **THE ITERATOR CAUSATION PASSED ON FIRST ATTEMPT for the first time in four attempts across four days — bug-first delivery vindicated. ZERO promotions and that is correct: 6/10, 4/10 and 7/10 all sit below the bar. Second transcription artefact of the arc fired on "dunder" and the S16 rule handled it — nothing logged against him. FOUR correct student rejections of weak closure motivations, running total TWENTY-TWO with zero wrong. Mentor failures: `sorted(key=)` used before ever being taught (flagged twice by him), four motivations that did not require a closure (~half the session), `zip` and list comprehensions used untaught, and questions consolidated without their code → THE SESSION 19 RULE. Closure DEFINITION declared a gap; cell causation asked a fourth time and still not produced unaided.** |
 | 20 | **Close the owed closure recalls + RECURSION AT LAST + pure functions + edge-case analysis** | **[RECALL] closure definition cold (4/10); [RECALL] cell causation cold — CORRECT UNAIDED at last (5/10); [RECALL] `traceback` → 0/10 and retaught from scratch; then 1.7.9 RECURSION in full (base/recursive case, pre-order vs post-order, value-returning recursion, identity-value base rule, `RecursionError`, the two termination conditions, printer-vs-calculator); [PREDICT] post-order countdown (FAILED), [PREDICT] `total(4)` (PASSED both parts); [DRILL] `count_down_by` (passed, tuple flaw); [DRILL] `digit_sum` (recursive case unaided, base-case boundary bug); 1.7.11 EDGE-CASE ANALYSIS — the five checks, taught as a procedure; [DRILL] `first_char` bug hunt (PASSED via check 2); 1.7.10 pure functions vs side effects + [PREDICT] `scale` (3/3)** | **Complete — 1.7 advanced to four remaining items** | **THE CELL CAUSATION CAME BACK CORRECT UNAIDED after five attempts across two days. ZERO PROMOTIONS — but for a NEW reason: the file's FIRST UNDER-RATING (5/10 on an ~85%-correct answer). ⚠ THE MAJOR FINDING IS A MENTOR FINDING: `traceback` had been FIRED for three sessions and NEVER TAUGHT; the prior "failures" were invalid measurements and are struck. TENTH define-before-building breach (slicing used untaught) → PUSHBACK 25, upheld. Running total TWENTY-FIVE, zero wrong. THREE NEW RULES, all his — DOUBT GATE, RESPONSE LENGTH CAP, DEPTH-BEFORE-ANSWER — and the disclosure behind rule 2 (he does not read long messages to the end) retro-explains several logged student lapses. EDGE-CASE ANALYSIS added to the curriculum as 1.7.11 at his request; it transferred on first use.** |
+| 22 | **Pay the deferred recall queue + close 1.7** | **[RECALL] post-order transfer (fresh `climb(3)`, frame trace demanded and delivered); [RECALL] cell causation + same-argument tricky case + the `start = start + 1` locality trap (miss → unaided repair); [RECALL] closure definition cold (FAILED 5/10, four-layer walk retaught); [RECALL] traceback line-=-frame (partial, repaired, teach-back correct); TASK-FIRST DRILLS: `s22_counter.py` (forced `global`, 3/3) and `s22_report.py` (forced collectors, 4/4); [RECALL] `__defaults__` (COLD AT LAST); [RECALL] iterator causation bug-first (later-day pass); then LAMBDAS (key=, closure transfer, two [PREDICT]s passed) and DOCSTRINGS (`__doc__`, None-absence discriminator) — 1.7 CLOSED** | **Complete — SIX promotions, 1.7 closed, first two repo drills** | **First run of the new promotion rule: correctness promotes, rating sets the gap — iterator causation promoted at 5/10 with a deliberately short re-test. Label slips ran opposite to mechanism wins all session (pre/post-order gap, "UnboundError" ×2, `cell_content`, "inner iterable") — consistent with the S12 diagnosis. Zero pushbacks raised. Mentor misses: term-tax skipped on a valid later day; lambda teaching turn ran long undeclared. Decisions: cold build block this weekend; queue tooling = script.** |
 | 21 | **Adopt the seven review proposals + move to VS Code/Claude Code + open the 1.7 tail** | **Governance: all seven 16-Aug proposals ACCEPTED (RULES v2). Tooling: repo/drills/pytest workflow established. Taught `global` (compile-time locality, `UnboundLocalError`, read/mutate/rebind rule) with [PREDICT]s on the read-only and mutation cases (both correct); taught `*args`/`**kwargs` (keyword args defined after his catch, collectors, empty cases, signature order, the collect/unpack mirror) with [PREDICT]s and [TEACH-BACK]s throughout** | **Complete — 1.7 down to TWO items (lambdas, docstrings)** | **Same-day session (~2h after S20): interval gate applied unprompted, term-tax skipped, the four queued [RECALL]s deferred — zero promotions, correctly. ONE pushback, upheld ("keyword argument" used before definition — 11th define-before-use breach; running total 26, zero wrong; denominator: 1 raised / 1 upheld). Session ended at his call before lambdas/docstrings.** |
 
 
@@ -1088,3 +1106,72 @@
  honoured cleanly — the adopted proposals carried, the material restarted
  from the top.** Zero promotions, correctly. Everything taught today is [~]
  awaiting its first genuine later-day cold test.
+
+### What Session 22 established
+
+- **THE NEW PROMOTION RULE WORKED ON ITS FIRST OUTING, AND THE CLEAREST CASE
+ IS THE ITERATOR CAUSATION.** Correct, unaided, later-day, bug-first — and
+ self-rated 5/10. Under the old rule that rating would have blocked the
+ promotion for a fourth session running; under the new rule it promoted with
+ a deliberately SHORT re-test gap (re-fires S23 and at the gauntlet). The
+ file stopped measuring his self-doubt and started measuring his knowledge,
+ which is exactly what the 16-Aug review intended.
+
+- **SIX PROMOTIONS ON LATER-DAY EVIDENCE — the biggest ledger day since S16,
+ and the first with drills as evidence.** Post-order transfer (10/10): the
+ fresh `climb(3)` was traced frame-by-frame with each frame holding its own
+ `n` — the exact S20 failure, not recurring. Cell causation (7/10),
+ including the tricky follow-up he requested himself: two `make_counter(10)`
+ calls with the SAME argument give separate objects and separate cells,
+ because sharing comes from the same CALL, never from equal values.
+ `global` (10/10) and `*args`/`**kwargs` (8/10) were earned through the
+ repo's first two task-first drills — `drills/s22_counter.py` (3/3 pytest)
+ and `drills/s22_report.py` (4/4, including the `()`/`{}` empty case) —
+ with the mechanism questions answered after the code ran, per the S21
+ adoption. And **`__defaults__` was produced cold for the first time in
+ five attempts across four sessions** ("when the def runs,
+ greet.__defaults__ is created") — the only item in the file that had never
+ once come back cold, now promoted at 7/10.
+
+- **THE CLOSURE DEFINITION FAILED HONESTLY AND THE FAILURE IS SPECIFIC.**
+ 5/10, and both halves of the gap are named: he muddled the three storage
+ layers (called `cell_contents` a tuple; the order is `__closure__` tuple →
+ cell → `cell_contents` value) and omitted the SURVIVAL clause — that the
+ cell keeps the value alive after the enclosing frame has died, which is the
+ entire point of the mechanism. The four-layer walk was retaught with the
+ shelf/dabba handle that landed `__defaults__`, and his subsequent teach-back
+ was clean. The same layer-muddle then fired a second time inside the lambda
+ block (`print(add5.__closure__)` predicted as `5`), confirming it as the
+ thing to watch in the S23 cold re-test.
+
+- **LABELS RAN OPPOSITE TO MECHANISMS ALL SESSION, WHICH IS THE S12 DIAGNOSIS
+ IN ITS PUREST FORM YET.** Six mechanisms promoted; four labels slipped in
+ the same hours — the pre-/post-order names (a declared "gap", decoded in
+ session), "UnboundError" twice for `UnboundLocalError` (then typed back
+ with a lowercase l — the case is part of the name), "the inner iterable
+ exhausted" for the ITERATOR, and `cell_content` for `cell_contents`. His
+ own words: "if not used for long I tend to forget terminology." The
+ countermeasure split stands: decodable labels decode; arbitrary ones
+ (lambda now joins traceback and `__defaults__`) go to brute-force spaced
+ repetition.
+
+- **1.7 CLOSED WITH LAMBDAS AND DOCSTRINGS, both taught against constraints
+ rather than definitions.** Lambda arrived as the EXPRESSION form of a
+ function, motivated by the only motivation he has ever accepted for this
+ family — a function demanded as an argument (`sorted(key=...)`) — and both
+ [PREDICT]s passed, including the closure-transfer case. His own question
+ (do two-parameter lambdas work?) extended the material unprompted.
+ Docstrings arrived as the third member of the def-time attribute family
+ (`__defaults__`, `__closure__`, `__doc__`), and his one [PREDICT] miss
+ (guessing `""` for an absent docstring) bought the absence discriminator:
+ collectors hand back empty containers, optional attributes hand back
+ `None`.
+
+- **GOVERNANCE: two S21 decisions were settled before any teaching** (first
+ cold build block this weekend, Sat 22/Sun 23 Aug; queue tooling as a repo
+ script, his call, made after asking what Anki was and choosing the build).
+ **Zero pushbacks were raised — the first zero since the denominator rule
+ began — and the reading is benign: the protocol held without needing him.**
+ Two mentor misses for the record: the TERM-TAX was skipped despite a valid
+ later-day gap (owed first in S23), and the lambda teaching turn ran long
+ without declaring itself. Interval gate: applied, fifth session running.

@@ -424,7 +424,11 @@
  **Also stated: his existing [x] "function scope, not block scope" is the L
  of LEGB and was never wrong, only incomplete.**
 
-- [~] **`global` — TAUGHT S21, against `nonlocal` exactly as planned.**
+- [x] **`global` — TAUGHT S21; PROMOTED S22 on a later-day task-first drill:
+ `drills/s22_counter.py` (3/3 pytest, written unaided) plus the full
+ compile-time-locality mechanism stated cold when asked what deleting
+ `global count` would do. Self-rated 10/10. Taught against `nonlocal`
+ exactly as planned.**
  (`nonlocal` itself was taught S19 — see its entry below.) The pair:
  `nonlocal` says "don't create a local — target the ENCLOSING function's
  cell"; **`global` says the same one level higher — target the MODULE
@@ -470,8 +474,12 @@
  He got `exp = 2` immediately and connected it to `__defaults__` unprompted.
  One label fix: `__defaults__` is an ATTRIBUTE (a tuple), **not a namespace**.
 
-- [~] **`__defaults__` — RE-TESTED IN ISOLATION AT LAST, S18, AND MISSED COLD
- FOR THE FOURTH TIME.** Asked which attribute on a function object holds its
+- [x] **`__defaults__` — PRODUCED COLD AT LAST, S22, FIRST TIME IN FIVE
+ ATTEMPTS: "when the def is run... the object greet.__defaults__ is created
+ which stores the default value." Self-rated 7/10; promoted; gauntlet-
+ flagged. One sharpening owed on re-test: it is a TUPLE, `("world",)`.
+ (History: RE-TESTED IN ISOLATION S18 AND MISSED COLD FOR THE FOURTH
+ TIME.)** Asked which attribute on a function object holds its
  default values, he described the **local namespace** instead. **The repair
  to reuse: `__defaults__` is built at `def` time and lives on the function
  OBJECT permanently; the local namespace is built at CALL time and dies with
@@ -489,7 +497,10 @@
  **This is now the only item in the file that has never once been produced
  cold. Fire it every session until it lands.**
 
-- [~] **`*args` and `**kwargs` — TAUGHT S21, the item he asked for by name in
+- [x] **`*args` and `**kwargs` — TAUGHT S21; PROMOTED S22 on a later-day
+ task-first drill: `drills/s22_report.py` (4/4 pytest including the empty
+ case, signature written unaided) plus the collect/unpack mirror stated
+ both ways cold. Self-rated 8/10. The item he asked for by name in
  S17. Motivated by a constraint he could not beat: `print()` accepts any
  number of arguments, and NO fixed parameter list can do that.**
  **KEYWORD ARGUMENTS had to be defined first — he stopped the block to say
@@ -779,7 +790,11 @@
   Recursion only means several frames OF THE SAME FUNCTION are alive at once.
   **Cash in the 1.1 frames work — it is the whole explanation.**
 
-- [~] **PRE-ORDER vs POST-ORDER — taught as a matched pair, and THE PAIR IS THE
+- [x] **PRE-ORDER vs POST-ORDER — PROMOTED S22: fresh post-order code
+  (`climb(3)`) traced frame-by-frame, unaided, later-day, 10/10 — the S20
+  one-mutating-`n` error did not recur; the `0`-never-prints point held.
+  ⚠ The LABELS (pre-/post-order) were a gap; decoded in session, now in the
+  term queue. Taught as a matched pair, and THE PAIR IS THE
   LESSON.** Identical function, identical base case; the only change is whether
   `print(n)` sits above or below the recursive call.
   ```python
@@ -1003,16 +1018,37 @@ false.
   the planted `len(word) == 1` are the SAME BUG — a base case too narrow, caught
   only by testing the exact edge. Same bug, twice, in ten minutes.**
 
-- [ ] Lambda functions / [ ] Docstrings
+- [~] **Lambda functions — TAUGHT S22.** The EXPRESSION form of a function:
+ evaluates to a function object where it stands, no name. Body is ONE
+ expression, its value auto-returned — no statements, no `return`. The
+ parameter list works exactly like a `def`'s (he asked about two-parameter
+ lambdas himself; confirmed). **Motivated honestly via the S18/S19 answer —
+ a function demanded as an argument:** `sorted(robots, key=lambda s:
+ s.lower())` beats a named one-use helper. `key=` re-taught from S19:
+ called once per element, ONE argument, sorts by RESULTS, returns ORIGINAL
+ items — he held that last part unprompted in the squares [PREDICT]
+ (`[-1, -3, 4, 7]`, correct). Closure transfer [PREDICT] also passed
+ (lambda closes over `k` like any `def`). **Label is brute-force (Greek λ)
+ — spaced queue, not decoding.**
+- [~] **Docstrings — TAUGHT S22.** A string literal as the FIRST statement of
+ a body, stored on the function object as **`__doc__`** at `def` time —
+ same attribute family as `__defaults__`/`__closure__` (shelf/dabba handle
+ reused). Comment vs docstring: comments are discarded before run; a
+ docstring is DATA on the object (`help()`, hover-tooltips read it).
+ Convention: triple quotes, imperative one-liner. **[PREDICT] miss worth
+ keeping: absent docstring → he guessed `""`; it is `None` — taught the
+ absence discriminator: collectors give empty containers (`()`/`{}`),
+ optional attributes give `None`.**
 
-> **1.7 STATUS: OPEN — TWO ITEMS LEFT.** S20 added RECURSION (1.7.9),
-> PURE FUNCTIONS vs SIDE EFFECTS (1.7.10) and EDGE-CASE ANALYSIS (1.7.11, a new
-> subsection added at the student's request). **S21 added `global` and
-> `*args`/`**kwargs` (see their [~] entries above).**
-> **REMAINING — LAMBDAS AND DOCSTRINGS ONLY. 1.7 CANNOT BE MARKED CLOSED
-> until both are taught.** A short session closes it.
-> **Nothing in 1.7 is [x].** The S18 material is owed a later-day cold pass and
-> the S19 material is owed one too.
+> **1.7 STATUS: CLOSED — SESSION 22.** Every item is now taught. S20 added
+> RECURSION (1.7.9), PURE FUNCTIONS vs SIDE EFFECTS (1.7.10) and EDGE-CASE
+> ANALYSIS (1.7.11); S21 added `global` and `*args`/`**kwargs`; S22 added
+> lambdas and docstrings and closed the unit.
+> **FIVE items in 1.7 are [x] as of S22** (`global`, `*args`/`**kwargs`,
+> `__defaults__`, pre/post-order, plus the S18 discriminator) — all earned on
+> later-day evidence, the first four under the new promotion rule. The rest
+> of the S18–S22 material is owed its later-day cold passes; the closure
+> definition FAILED its S22 cold test (5/10) and is the priority re-test.
 > ⚠ **TWO CONSTRUCTS WERE USED IN S19 EXAMPLES WITHOUT EVER BEING TAUGHT and
 > must not be quietly assumed later: `zip` (in `zip(customers, percents)` — he
 > flagged it himself) and LIST COMPREHENSIONS (in `[(key(x), x) for x in

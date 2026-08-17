@@ -1,423 +1,255 @@
 # STATE.md — PYTHON LEARNING JOURNEY — LIVE SESSION STATE
 # ═══════════════════════════════════════════════════
 # One of FOUR files. THIS is the file that changes every session.
-# HOW TO START SESSION 22 (for Claude):
-#   1. Read RULES.md fully, then this file fully. Do not ask for
-#      re-introductions. Do not load ARCHIVE.md unless this is a gauntlet /
-#      re-baseline session or the student asks.
-#   2. FIRST ACTION: the INTERVAL GATE. Ask how long since S21 (Sun 16 Aug
-#      2026, evening). If it is a later day, cold work today is promotable
-#      evidence — and NOTE THE NEW PROMOTION RULE adopted in S21: a correct,
-#      unaided, later-day answer PROMOTES; the self-rating no longer blocks,
-#      it sets the next re-test gap.
-#   3. Then follow "SESSION 22 STARTS HERE" below, exactly.
-#   4. [RECALL]s now open TASK-FIRST (S21 adoption): a small program or
-#      constraint, in drills/ with pytest where sensible; the name/definition
-#      is asked only after the code runs.
-#   5. At session end: rewrite this file, tick CURRICULUM.md if anything moved,
-#      append one block to ARCHIVE.md, commit and push the repo.
+# HOW TO START SESSION 23 (for Claude):
+#   1. Read RULES.md fully, then this file fully. No re-introductions.
+#      No ARCHIVE.md unless gauntlet / re-baseline / asked.
+#   2. FIRST ACTION: the INTERVAL GATE. Ask how long since S22
+#      (Mon 17 Aug 2026). Later day → cold work is promotable.
+#   3. SECOND ACTION: run the TERM-TAX. It was NOT run in S22 despite a
+#      valid later-day gap — mentor miss, logged. Many rows are overdue.
+#   4. [RECALL]s open TASK-FIRST: drills/ + pytest where sensible; the
+#      name/definition question comes only after the code runs.
+#   5. At session end: rewrite this file, tick CURRICULUM.md if anything
+#      moved, append one block to ARCHIVE.md, commit and push.
 #
-# STATE AS OF: end of Session 21, Sunday 16 Aug 2026 (evening). Next: Session 22.
+# STATE AS OF: end of Session 22, Monday 17 Aug 2026. Next: Session 23.
 # ═══════════════════════════════════════════════════
 
-## SCHEDULE POSITION (carried from the v16 progress tracker; recompute 31 Aug)
-- **DEADLINE: Layer 0 closes 30 Sep 2026.** Cadence required: ~5 sessions/week.
-  Hour budget ~900h against ~870h available: zero slack.
-- **Last honest position (10 Aug, end of S18):** 1.6 closed, 1.7 ~two-thirds
-  taught, six-and-a-bit subsections remaining (1.7 tail + 1.8–1.13) against
-  ~7 weeks; required rate ~1 subsection/week, margin ZERO.
-- Since then: S19 ≈ 0.35, S20 ≈ 0.4, **S21 ≈ 0.15** (same-day evening session:
-  governance + tooling + `global` + `*args`/`**kwargs`). **1.7 has TWO items
-  left — lambdas and docstrings; a short session closes it.** 1.8–1.13
-  untouched.
-- **RE-BASELINE LADDER STAYS ARMED — formally due 31 Aug 2026.** Observed
-  throughput → derived completion date, written into the master whether or
-  not it is welcome. The student chose the date himself in S15.
-- Review note (16 Aug): the "fraction of a subsection" unit treats all
-  subsections as equal. 1.8 and 1.12 are several times 1.6. Do the 31 Aug
-  arithmetic in ITEMS, not subsections. The student has stated NOTHING is to
-  be cut from the curriculum; the re-baseline therefore moves the date, not
-  the scope, and must say so plainly.
-- Current Layer: 1. Current Topic: **1.7 Functions — lambdas and docstrings
-  remain.**
+## SCHEDULE POSITION (recompute formally 31 Aug — in ITEMS, not subsections)
+- **DEADLINE: Layer 0 closes 30 Sep 2026.** ~5 sessions/week needed; zero slack.
+- **S22 yield: 1.7 FULLY TAUGHT AND CLOSED** (lambdas + docstrings, the last
+  two items) **plus SIX ledger promotions to [x]** — the biggest promotion day
+  since S16, and the first under the new promotion-on-correctness rule.
+- Position: 1.1–1.7 closed. **1.8–1.13 remain, ~6 weeks. 1.8 opens S23** and
+  is several times the size of 1.6 — count the 31 Aug arithmetic in items.
+- **RE-BASELINE formally due 31 Aug.** Observed throughput → derived date,
+  written into the master whether or not it is welcome. Scope moves NEVER cut.
+- Current Layer: 1. Current Topic: **1.8 Data Structures — opens S23.**
 
-## RULE-CHANGE PARKING (rule 3, ADOPTED S21 — candidates wait here; adopt ≤1 per session, at close)
-- **S21 DECISION, RECORDED: all SEVEN proposals from the 16 Aug review were
-  ACCEPTED and adopted as a pre-negotiated package (RULES v2).** Operative
-  immediately: task-based recall; promotion = correctness with confidence
-  setting the interval; the rule-change cap (governs from S22); the
-  seven-principle index as working map; the weekly cold build block (**not yet
-  scheduled — S22 must put a date on the first one**); queue tooling once the
-  tables pass ~30 rows (**they are near it — raise in S22**); the pushback
-  denominator (S21: 1 raised / 1 upheld).
-- (parking otherwise empty)
+## RULE-CHANGE PARKING (adopt ≤1 per session, at close)
+- (empty — nothing proposed in S22, nothing adopted)
+- Two S21 operational decisions were SETTLED in S22 (not rules, recorded here):
+  **(a) First weekly cold build block: THIS WEEKEND, Sat 22 or Sun 23 Aug**,
+  his pick on the day. ≥90 min, timed, no AI, git+pytest, work-adjacent
+  (LeRobot episode validator or joint-limit clamp). **Hold him to it.**
+  **(b) Queue tooling = a SCRIPT in this repo** (not Anki): stores items +
+  due dates, prints today's queue. Build incrementally; candidate task for
+  the weekend block itself.
 
 ## WHERE WE LEFT OFF
 
-### SESSION 22 STARTS HERE — exact resume point
+### SESSION 23 STARTS HERE — exact resume point
 
-Session 21 ran on the EVENING of SUNDAY 16 AUGUST 2026, ~2 hours after S20
-ended. **The interval gate was applied unprompted (fourth session running):
-same-day, so the term-tax was skipped, the four queued [RECALL]s were
-deferred, and zero promotions were taken — correctly.** S21 delivered:
-all seven review proposals ADOPTED (RULES v2); the move into VS Code +
-Claude Code on this git repo; `global`; `*args`/`**kwargs`. He ended the
-session before lambdas/docstrings — his call, per rule.
-
-**CHECK THE DATE FIRST, AS ALWAYS.** If S22 runs on a genuinely later day,
-everything taught in S20 AND S21 is now eligible for first honest cold tests,
-and the deferred [RECALL] block below is legitimate at last.
-
-**THE ADOPTED PROPOSALS CHANGE HOW S22 RUNS — three operational shifts:**
-- **TASK-BASED RECALL:** every [RECALL] on a ledger item opens with a small
-  program or constraint — now in `drills/` with pytest where sensible — and
-  the name/definition question comes only after the code runs. The constraint
-  must make the mechanism NECESSARY.
-- **PROMOTION = CORRECTNESS; CONFIDENCE = INTERVAL.** A correct, unaided,
-  later-day answer promotes. The rating (still taken after his answer, before
-  the verdict) sets how soon the item comes back, high → longer gap.
-- **WEEKLY COLD BUILD BLOCK is adopted but UNSCHEDULED. Put a date on the
-  first one with him in S22** (≥90 min, timed, no AI, git+pytest,
-  work-adjacent task — LeRobot episode validator or joint-limit clamp).
-
-**Standing turn rules (S20 three): short messages, one teaching idea per turn,
-asks near the top; doubt gate before every new subsection, restate in full if
-doubts come; depth-before-answer — traces are never optional, five checks on
-every drill, boundary values first. Tag every block. Do not propose ending
-the session.**
+S22 ran Monday 17 Aug 2026, the day after S21 — first genuine later-day
+session since S19, and the queue finally got paid. **Six promotions: post-order
+transfer (10/10, clean frame trace), cell causation (7/10), `global` (10/10,
+via drill), `*args`/`**kwargs` (8/10, via drill), `__defaults__` (7/10 —
+PRODUCED COLD FOR THE FIRST TIME IN FIVE ATTEMPTS), iterator causation (5/10,
+bug-first, promoted with a SHORT gap under the new rule).** The repo's first
+two drills were written and passed pytest (`drills/s22_counter.py` 3/3,
+`drills/s22_report.py` 4/4). Lambdas and docstrings taught → **1.7 CLOSED.**
+Zero pushbacks raised (denominator: 0/0). One mentor miss: **term-tax skipped
+on a valid later day** — run it first thing in S23.
 
 Run in this order:
 
-1. **[RECALL] THE POST-ORDER TRANSFER QUESTION — HIGHEST-VALUE ITEM
-   AVAILABLE.** Task-first: give him a recursive function with the work AFTER
-   the call (fresh code, not S20's) and ask for output and reason. **He failed
-   this in S20 by imagining one mutating `n` instead of four frames each
-   holding their own — the same isolation principle he explains correctly for
-   cells.** ⚠ Ask it as a TRANSFER question. If he stalls: *"where have you
-   already told me two things can't collide?"* Do not hand him frames.
+1. **TERM-TAX — OWED AND OVERDUE.** Sweep the overdue rows (~12–15 Aug dues)
+   plus the new S22 terms: lambda, docstring/`__doc__`, pre-/post-order,
+   `UnboundLocalError` (HE MUST TYPE IT — spelled it wrong twice in S22),
+   iterator-vs-iterable label, the closure four layers.
 
-2. **[RECALL] THE CELL CAUSATION.** Correct unaided in S20, blocked only by
-   his 5/10 — the file's first under-rating. **Under the NEW rule a correct
-   answer today PROMOTES, and his rating just sets the re-test gap — tell him
-   so.** Watch for the S20 corrections: the new object comes from **THE
-   CALL**, not the loop; it is a **CELL** with `cell_contents` an attribute on
-   it.
+2. **[RECALL] ITERATOR CAUSATION — his 5/10 bought a short gap, so it fires
+   again NOW.** Bug-first ALWAYS (hoisted `it = iter(range(2))`); never the
+   definition. S22 was the first later-day pass (forward-only state, no
+   "one-at-a-time" relapse). A second clean pass here makes it solid before
+   the gauntlet.
 
-3. **[RECALL] THE CLOSURE DEFINITION, COLD.** S20 attempt was 4/10 and missed
-   the CELL. Target: **a function object that binds a free variable from where
-   it was created into its own private cell, so the value survives after the
-   enclosing frame has died.** Listen for: "free VARIABLE"; `__closure__[0]`
-   is the cell, value in `.cell_contents`; `__closure__` is `None` with no
-   free variables; **binding happens WHEN `def` RUNS.**
+3. **[RECALL] CLOSURE DEFINITION, COLD — FAILED S22 at 5/10.** He had nesting
+   + free variable but MUDDLED THE LAYERS (called `cell_contents` a tuple)
+   and MISSED THE SURVIVAL CLAUSE. Target line: *a function object that binds
+   a free variable from its enclosing scope into a cell, so the value
+   survives after the enclosing frame has died.* Also listen for: binding
+   when `def` RUNS; `__closure__` is `None` with no free variables. The
+   four-layer walk (name → function object → `__closure__` tuple →
+   cell → `cell_contents`) was retaught via the shelf/dabba handle and his
+   teach-back was clean — test it cold now.
 
-4. **[RECALL] `traceback` — FIRST HONEST TEST** (taught properly only in S20;
-   earlier "failures" struck). Ask what ONE line of a traceback is. Required:
-   **one live frame on the call stack.** "Where the error happened" is not
-   enough — that is the half he already had.
+4. **[RECALL] LAMBDAS + DOCSTRINGS — first cold pass, TASK-FIRST in drills/.**
+   Good constraints: sort a list of strings case-insensitively / by computed
+   value WITHOUT defining a named helper (forces lambda as `key=`); a module
+   whose functions must carry runtime-readable documentation checked via
+   `__doc__` (forces docstring placement). Then the mechanism questions:
+   lambda = EXPRESSION form of a function, one-expression body, auto-return;
+   docstring = first statement, stored on `__doc__` at `def` time,
+   comment-vs-docstring (comment discarded, docstring is data);
+   `f.__doc__` is `None` when absent, NOT `""`.
 
-5. **[RECALL] `global` AND `*args`/`**kwargs` — FIRST COLD PASS on the S21
-   material, TASK-FIRST in drills/.** Good constraints: a counter that must
-   survive calls WITHOUT a factory (forces `global` rebind); a function that
-   must accept any mix of unknown positionals and keywords and report them
-   (forces both collectors). Then the mechanism questions: the compile-time
-   locality rule; read/mutate/rebind; collect-vs-unpack mirror; the empty
-   cases (`()` / `{}`, never `None`).
+5. **[RECALL] TRACEBACK — repaired S22, one honest line-item still open.**
+   S22: he tied each line to A FRAME (the S20 content held) but called it
+   "the problematic line" — corrected to *one live frame frozen at the line
+   it was executing; for callers that line is the call itself*. His a→b→c
+   teach-back was correct. Ask cold: "what is one line of a traceback?"
 
-6. **FIRE `__defaults__` (every session until it lands — only item never once
-   produced cold; handle: shelf par naam, dabbe ke andar attribute) and the
-   ITERATOR CAUSATION (open BUG-FIRST with the hoisted `it = iter(range(2))`
-   image — never the definition; bug-first is vindicated twice, definition
-   failed three times).**
+6. **THEN OPEN 1.8 — LISTS FIRST.** Cash in the S17 discriminator by name
+   (this is where the mutating-methods ROSTER gets owned). Teach SLICING
+   formally — he has flagged it untaught himself (pushback 25); `word[:-1]`
+   and `l[::-1]` are seen-but-not-taught. `zip` and list comprehensions
+   likewise owed here. The iteration protocol (S15) is the machinery under
+   comprehensions — say so when they open.
 
-7. **THEN CLOSE 1.7 — TWO ITEMS: lambdas, docstrings.** A short block each.
-   1.7 cannot be marked closed until both are taught.
+7. **WEEKEND: the first cold build block (Sat 22 / Sun 23).** If S23 runs
+   before the weekend, confirm the day with him at close.
 
-**DECIDED AT S21 CLOSE — THE 1.6 SPOKEN FEYNMAN RECALL IS FORMALLY MOVED INTO
-THE AUGUST GAUNTLET.** It slipped in S18, S19, S20 and was not run in S21
-either; per the S20 instruction ("run it or move it, do not schedule it a
-fourth time") it is now a gauntlet item, not a live session item. Stop
-carrying it.
+**Standing turn rules: short messages, one teaching idea per turn, asks near
+the top; doubt gate before every new subsection; depth-before-answer — traces
+never optional, five checks on every drill (HE DID NOT REPORT RUNNING THEM on
+the two S22 drills — require it explicitly next drill), boundary values
+first. Tag every block. Do not propose ending the session.**
 
 **CARRY FORWARD:**
-- **The four S19 confidence ratings: UNRECOVERABLE, closed.** Do not ask again.
-- ⚠ **AUDIT THE [~] LIST FOR THE TRACEBACK DEFECT before the August gauntlet:**
-  for every remaining [~], was it ever actually DELIVERED, or only asked?
-  Clock-reset any found.
-- **UNTAUGHT-BUT-SEEN (all 1.8, do not assume): SLICING, `zip`, LIST
-  COMPREHENSIONS.** He has caught all three himself.
-- **THE FIVE CHECKS required on every drill** until he runs them unprompted.
-- **THE IDENTITY-VALUE RULE** re-tested AS A RULE, not three examples.
-- **Three-error set (`TypeError`/`NameError`/`UnboundLocalError`) still
-  untested cold — MIXED, never singly.** Note S21 strengthened
-  `UnboundLocalError` from a second direction (the `global` mechanism).
+- **August gauntlet (last session of August): SACRED.** Carries: strict-legend
+  audit of every [x]; the `if`/`elif`/`else` and S18 exception-triad
+  promotions; the 1.6 spoken Feynman recall; the S22 promotions flagged
+  short-gap (iterator causation, `__defaults__`, cell causation).
+- **31 AUG: RE-BASELINE arithmetic due, in ITEMS.**
+- ⚠ Audit the [~] list for the traceback defect (asked-but-never-taught)
+  before the gauntlet.
+- Three-error set (`TypeError`/`NameError`/`UnboundLocalError`) still untested
+  cold — MIXED, never singly. Include the SPELLING of UnboundLocalError.
 - Modulo identity SYMBOLIC FORM still owed cold. TEXT, low priority.
-- In-place-mutator ROSTER: settles in 1.8, do not re-drill before.
-- `str` immutability is an [x] CANDIDATE — one clean later-day pass. `None` /
-  `is None` and `bool("False")` remain [~].
-- **TOOLING (new, S21): drills go in `drills/` with tests in `tests/`;
-  pytest decides correctness; the mentor never edits a file he has started;
-  inline AI autocomplete must stay OFF for drill files.**
+- `str` immutability is an [x] candidate — one clean later-day pass.
+  `None`/`is None` and `bool("False")` remain [~].
+- **Keyword argument** (defined S21) still owed its first cold test.
 - Governance/format requests mid-session → PARK, close material, write at end.
-- **First monthly gauntlet: end of August 2026.** Sacred. Carries: the
-  strict-legend audit of every [x]; the `if`/`elif`/`else` and S18
-  exception-triad promotions flagged specifically; **the 1.6 spoken Feynman
-  recall (moved in formally at S21 close).**
-- **31 AUG: the RE-BASELINE arithmetic is formally due — in ITEMS, not
-  subsections.** Write the derived date into the master whatever it says.
+- Drills: mentor never edits a file the student started; autocomplete OFF.
 
-Every teaching block shows full runnable source alongside any output.
-Session 22 closes with a ~30-second spoken summary from memory.
+Every teaching block shows full runnable source alongside output.
+Session 23 closes with a ~30-second spoken summary from memory.
 
 
-## TERM RE-TEST QUEUE (live — the vocabulary spaced-retrieval track)
-Fire these cold at session open. Student defines from memory; "gap" if empty.
-**NOT RUN IN S17 — interval gate. Everything below carries its S16 due date.**
+## TERM RE-TEST QUEUE (live — fire cold at session open; "gap" if empty)
+Histories live in ARCHIVE.md; this table carries only current status.
+**⚠ NOT RUN IN S22 (mentor miss) — many rows overdue. Sweep in S23.**
 
-| Term | Decode hook / one-line mechanism | Seeded | Latest result | Next cold-tax due |
-|---|---|---|---|---|
-| coercion | coerce = force; Python silently forcing one type into another where safe (`1 + 2.0 → 3.0`) | S12 | **S16 PASS cold — "forcefully... ek tarah ki implicit conversion". Name-decode intact. PROMOTED.** | **[x] — 1-month re-test ~9 Sep** |
-| ValueError | value wrong, type OK; `int("2.5")` | S12 | **S18 PASS COLD, LATER-DAY, IN MIXED ORDER — and this is the single most important result in the file. He gave `int("335")`/`int("2.5")` as the value-is-bad case with the label attached, and the `NameError` conflation that failed THREE TIMES in S16 did not recur. Self-rated 8/10 before the verdict. PROMOTED.** | **[x] — 1-month re-test ~10 Sep** |
-| TypeError | operation doesn't exist between these types; `"5" + 3` | S12 | **S18 PASS COLD again inside the mixed triad — string plus integer, label correct. One precision fix repeated from S16: Python does not "guess", it REFUSES, because it cannot know whether you mean `8` or `"53"`. Holds.** | **[x] — 1-month re-test ~10 Sep** |
-| truncation | truncate = cut off; `int()` drops decimal toward zero | S12 | S13 PASS | ~12 Aug |
-| floor division | `//` floors toward −∞; `-7//2 → -4` | S12 | S13 PASS | ~12 Aug |
-| alias | two names, one object; `b = a` never copies | S10/S12 | S13 PASS | ~12 Aug |
-| rebind | `=` points a NAME at a (possibly new) object | S12 | S13 PASS | ~12 Aug |
-| operand | the value an operator acts on | S12 | S13 PASS | ~12 Aug |
-| expression vs statement | expression evaluates to a value; statement performs an action | S12 | **S17 RE-CONFIRMED IN USE (not a formal test): he applied the distinction correctly and unprompted to explain what ternary produces. The concept is load-bearing and holding.** | ~12 Aug |
-| precedence | which operator runs first, by RANK not position | S12 | S13 PASS | ~12 Aug |
-| associativity | direction when ranks tie; `**` is right→left | S12 | S13 PASS | ~12 Aug |
-| short-circuit | `and`/`or` stop the moment the result is settled; return the OPERAND | S13 | **S16 PASS cold, textbook-clean — including the return-the-VALUE subtlety, unprompted. PROMOTED.** | **[x] — 1-month re-test ~9 Sep** |
-| modulo identity | `a == b * (a // b) + (a % b)`; sign follows the DIVISOR | S13 | **S18 SPLIT AGAIN, and honestly so. Asked for the symbolic form cold he said plainly he had NOT memorised the formula and offered to demonstrate the mechanism instead — which he then did, in TEXT, on `a = 17, b = -5`, A NEGATIVE DIVISOR HE CHOSE HIMSELF because it was harder. `a // b = -4` correct with flooring toward −∞; `r = -3` correct; the identity closed. BUT the middle step ran BACKWARDS (he guessed `r` first, then reasoned to the quotient), and the word `quotient` was used loosely for the raw division. Self-rated 9/10. NOT PROMOTED — the mechanism is [x]-grade, the SYMBOLIC FORM has still never been produced cold.** | **[~] — re-test the FORMULA FORM alone, TEXT MODE. Lower priority than `traceback` and iterator causation.** |
-| control flow | steering which line runs next | S14 | S14 PASS (name-decoded cold) | ~15 Aug |
-| conditional | code gated on a condition | S14 | S14 PASS | ~15 Aug |
-| truthy / falsy | empty/zero = falsy, everything else = truthy | S14 | S14 PASS (all three cases derived unaided) | ~15 Aug |
-| block vs frame | a block creates NO scope; only a FUNCTION CALL creates a frame | S14 | S14 PASS (student self-caught the wrong-domain reflex) | ~15 Aug |
-| **indentation** | **the spacing that DELIMITS a block after the colon opens it** | **S15** | **S16 PASS cold, clean. PROMOTED. ⚠ S17 NOTE: do NOT re-test this by asking him to TYPE indented code — he cannot enter tabs in this channel. Test it by asking him to state the nesting in words. See S17 rule 3.** | **[x] — 1-month re-test ~9 Sep** |
-| **iterable** | **able-to-be-iterated; hands you an iterator when asked. list, str, dict, tuple, range. REUSABLE.** | **S15** | **S16 PASS cold with full mechanism and examples. ⚠ THE MENTOR LOGGED A FALSE SLIP HERE — see the TRANSCRIPTION-ARTIFACT rule. NO retention failure occurred. PROMOTED.** | **[x] — 1-month re-test ~9 Sep** |
-| **iterator** | **the nozzle: gives the next item on demand, raises StopIteration when exhausted. Holds FORWARD-ONLY state. CONSUMED.** | **S15** | **S16 PASS on mechanism and on the reuse contrast. CAUSATION still [gap] — see next row.** | **[~] — causation only** |
-| **StopIteration** | **the signal raised when an iterator is exhausted; `for` catches it internally and stops quietly. A SIGNAL, NEVER A VALUE — it is never bound to a name.** | **S15** | **S18 PASS COLD on the CATEGORY, which was the exact thing S16 got wrong ("ek state"). Asked what category of thing it is, he said: an exception. Self-rated 7/10 alongside exceptions-are-signals. PROMOTED. ⚠ TRANSCRIPTION NOTE: the channel rendered his spoken "StopIteration" as "stock attrition" — read through it, nothing was logged.** | **[x] — 1-month re-test ~10 Sep** |
-| **forward-only state (iterator causation)** | **an iterator holds a position that only ever moves forward. THAT is why it cannot rewind and is consumed — NOT because it yields one item at a time.** | **S15** | **S19 PASSED ON FIRST ATTEMPT — THE FIRST TIME IN FOUR ATTEMPTS ACROSS FOUR SEPARATE DAYS. Fired bug-first per the standing instruction (hoisted `it = iter(range(2))` above a nested loop) and he gave the CORRECT causation unaided: "forward-only state, moves forward only, can't rewind." He did NOT reach for "one item at a time", which had beaten him in S15, S16 and S18. THE BUG-FIRST METHOD IS NOW VINDICATED TWICE — never open this item with the definition. Self-rated 4/10, and that rating is the reason it does not promote: a correct answer he does not trust is not yet owned. S18 FAILED ON FIRST ATTEMPT FOR A THIRD TIME — he went straight back to "ek baar mein ek item deta jaata hai", the exact wrong causation. Retaught against the S16 code-as-bug image (hoisted `it = iter(range(2))`) rather than the definition, and the teach-back then came back CORRECT: forward-only, consumed is a STATE, the pointer has moved on. One over-claim corrected — he added "saare elements khatam ho gaye", which is not required; partial consumption still counts. Self-rated 3/10.** | **[~] — STILL TOP PRIORITY. Failed on three separate days now. Do NOT open with the definition; open with the bug.** |
-| **range** | **a stretch of numbers, start UP TO stop. HALF-OPEN (stop excluded) and LAZY (computed on demand). It is an ITERABLE, not an iterator.** | **S15** | **S16 PASS cold and COMPLETE — the strongest single answer of the term-tax. PROMOTED.** | **[x] — 1-month re-test ~9 Sep** |
-| **traceback** | **the crash report the interpreter writes when an exception goes uncaught; last line names the exception. Goes to the error stream.** | **S15** | **S19 PASS COLD on a genuine later day, and the improvement is real: he gave the TRIGGER correctly unaided ("exception uncaught → traceback generated"), which is the exact part he missed in S18. The STREAM was a gap, honestly declared, and after teaching he restated it correctly — error stream / stderr, last line names the exception. Self-rated 6/10, DOUBLE his S18 rating of 3/10. NOT PROMOTED — 6/10 is below the bar and this label is arbitrary rather than decodable, so it stays in brute-force spaced repetition. S18 PARTIAL. He had runtime and "tells you which line" but MISSED THE TRIGGER — that a traceback is produced only when an exception goes UNCAUGHT. Retaught with an uncaught-error handle; on the re-ask the transcription garbled badly, the question was re-posed cleanly with an "un-" hint, and he then produced `uncaught` himself and stated it correctly. Self-rated 3/10 with the honest rider that he will need to hear it repeatedly.** | **[~] — PRIORITY, joint-first with iterator causation. His own 3/10 is the targeting signal.** |
-| **NameError** | **named after the part that broke: the NAME does not exist. Raised when you use a name that was never created.** | **S15** | **S18 PASS COLD, UNCUED, IN MIXED ORDER — "name used but never defined". This is the item the file has called its single weakest label since S16, and it is now clean on genuine later-day evidence. Self-rated 8/10. PROMOTED.** | **[x] — 1-month re-test ~10 Sep. ⚠ Re-test it MIXED with `ValueError`, never alone; the failure mode was always discrimination, not definition.** |
-| **function scope, not block scope** | **`for`/`if`/`while`/`try` create NO new scope. Only a `def` does. Names born inside a block survive after it.** | **S15** | **S16 PASS cold on a genuine later day — BOTH `print(last)` and `print(i)` → 2. PROMOTED.** | **[x] — 1-month re-test ~9 Sep** |
-| **`print()` — `sep` and `end`** | **`print` is a function returning `None`. It calls `str()` on each argument. `sep` (default `" "`) goes BETWEEN items; `end` (default `"\\n"`) goes after. Both are changeable.** | **S16** | **Return-`None` derived cold. `sep` was a GAP. `end` right mechanism, wrong symbol (`/n` for `\\n`). Post-teaching check PASSED.** | **~12 Aug** |
-| **`while`** | **repeats while a CONDITION stays true. `for` asks an iterator for the next item; `while` re-evaluates a condition.** | **S16** | **S17: [PREDICT] PASS on the infinite-loop case, with the full mechanism stated unprompted — `i` never increments, so `i < 5` is permanently true. Same-day, so not promotable.** | **~12 Aug** |
-| **`break` / `continue`** | **`break` exits the innermost loop entirely. `continue` abandons THIS ITERATION only and jumps back to the condition check. Loop lives; iteration dies.** | **S16** | **S17 [RECALL] on `break`: PASS — "loop khatam, bahar nikal jayega", and he volunteered the INNERMOST-ONLY precision for nested loops unprompted. Same-day, so [~] stands. `continue` was re-stated but not tested.** | **~12 Aug — `continue` still owes a RECALL test** |
-| **chained comparison** | **`5 > 3 > 1` expands to `5 > 3 and 3 > 1`, but the MIDDLE OPERAND IS EVALUATED ONCE. Not plain syntactic sugar.** | **S16** | **PASS both halves, including `f() > 3 > 1` calling `f()` exactly once. PROMOTED.** | **[x] — 1-month re-test ~9 Sep** |
-| **loop `else`** | **runs if the loop finished WITHOUT hitting `break`. Nothing to do with `if`/`else` — do not read it as "otherwise".** | **S16** | **S17 EARNED BY CONTRAST, which was the owed repair for the S16 prerequisite breach. After writing the found-flag version himself he derived the purpose unprompted: the flag only ever answers "did the loop finish without breaking?", and Python already knows that. Rule re-stated and confirmed.** | **~12 Aug** |
-| **`pass`** | **a no-op statement. Does nothing; exists only to satisfy the rule that a block opened by a colon cannot be empty. NOT `continue` (skip to next iteration) and NOT `break` (exit the loop).** | **S17** | **[PREDICT] PASS — he supplied the function-stub use case from prior exposure ("classes banate hain tab dekha hai") and stated the mechanism correctly: fills the block, tells Python to do nothing. Same-day, [~].** | **~12 Aug** |
-| **ternary / conditional expression** | **`x if condition else y`. An EXPRESSION — it evaluates to a value, so it can go anywhere a value can go (a variable, a `print` argument, inside a list). Read from the middle outward.** | **S17** | **[PREDICT] PASS, and a good one — asked how it differs from `if`/`else`, he went straight to the right axis: the `if` block executes, whereas the ternary PRODUCES something which then gets bound to a name. Same-day, [~].** | **~12 Aug** |
-| **`elif`** | **else-if, contracted. A CHAIN checked top to bottom; the FIRST true condition wins and the rest are not evaluated at all. `else` is optional and catches everything remaining.** | **S17** | **[RECALL] PASS COLD — see the re-test queue row. This one IS promotable: it was owed from S16 and answered unaided, including the part that mattered (with `x = 20` the `elif` is never evaluated). Self-rated 10/10.** | **[x] — 1-month re-test ~10 Sep** |
-| **keyword argument** | **an argument passed as `name=value` in a CALL, matched to its parameter by NAME, not position (`intro(role="robotics", name="Ankur")` lands correctly in any order)** | **S21** | **DEFINED S21 after his own catch that the term had been used naked — the session's one pushback, upheld. Not yet tested.** | **first later-day session** |
-| **`UnboundLocalError`** | **the name IS local (classified at function-creation time because an assignment exists somewhere in the body) but no value is bound yet. Distinct from `NameError` (name exists nowhere in LEGB).** | **S19, reinforced S21** | **S21: he ASKED the exact right question ("why doesn't LEGB find the global?") and then held the compile-time classification story through two teach-backs — the *what* first, the *when* on the re-ask. Same-day, [~].** | **fold into the three-error MIXED re-test** |
-| **mutating vs non-mutating methods** | **A method that changes the object in place returns `None`; a method that returns a new object leaves the original untouched. `sort`/`sorted` and `reverse`/`reversed` are the deliberate name-pairs proving it.** | **S17** | **S18 [DRILL] targeted at `reverse` and `sort`: all three answers CORRECT (`x` → `None`, `y` → `None`, `l` → `[1,2,3]`) — but he said in writing that he still did not know whether `reverse` mutates and had ASSUMED it. Correct output, un-owned roster. He then challenged the generalisation itself and was RIGHT: mutable-type methods do NOT all return `None` (`pop`, `index`, `count` return values). Rule narrowed to IN-PLACE MUTATORS specifically. Self-rated 10/10 concept, roster still soft.** | **[~] on the ROSTER; the DISCRIMINATOR is now [x]-grade. Re-test by naming in-place mutators cold, not by classifying.** |
+| Term | Decode hook / mechanism | Status | Next due |
+|---|---|---|---|
+| coercion | coerce = force; implicit safe conversion | [x] S16 | ~9 Sep |
+| ValueError | value wrong, type OK; `int("2.5")` | [x] S18 | ~10 Sep |
+| TypeError | operation not defined between types; `"5"+3` | [x] S18 | ~10 Sep |
+| truncation | cut off; `int()` drops decimals toward zero | [~] S13 pass | **OVERDUE — S23** |
+| floor division | `//` floors toward −∞; `-7//2 → -4` | [~] S13 pass | **OVERDUE — S23** |
+| alias | two names, one object | [~] S13 pass | **OVERDUE — S23** |
+| rebind | `=` points a NAME at an object | [~] S13 pass | **OVERDUE — S23** |
+| operand | value an operator acts on | [~] S13 pass | **OVERDUE — S23** |
+| expression vs statement | value vs action | [~] held in use S17 | **OVERDUE — S23** |
+| precedence / associativity | rank; direction on ties, `**` right→left | [~] S13 pass | **OVERDUE — S23** |
+| short-circuit | and/or stop early, return the OPERAND | [x] S16 | ~9 Sep |
+| modulo identity | `a == b*(a//b) + (a%b)`; sign follows divisor | [~] formula form never cold | low priority, TEXT |
+| control flow / conditional / truthy-falsy / block-vs-frame | S14 set | [~] S14 pass | **OVERDUE — S23** |
+| indentation | spacing that DELIMITS a block | [x] S16 | ~9 Sep (in words, never typed) |
+| iterable | able-to-be-iterated; hands out iterators; REUSABLE | [x] S16 | ~9 Sep |
+| iterator | the nozzle; forward-only; CONSUMED | label slipped again S22 ("inner iterable exhausted") | fold into S23 term-tax |
+| StopIteration | the stop signal; an EXCEPTION | [x] S18 | ~10 Sep |
+| forward-only state (iterator causation) | position only moves forward — THAT is why consumed | **[x] PROMOTED S22 — first later-day pass, bug-first, no relapse. 5/10 = short gap.** | **S23 + gauntlet. Bug-first ALWAYS.** |
+| range | half-open, lazy, an ITERABLE | [x] S16 | ~9 Sep |
+| traceback | crash report on uncaught exception; each line = one live frame | [~] repaired S22 (frame link held, "problematic line" skew fixed) | S23, then gauntlet |
+| NameError | the NAME does not exist anywhere | [x] S18 | ~10 Sep, MIXED with ValueError |
+| function scope, not block scope | only `def` makes scope | [x] S16 | ~9 Sep |
+| `print()` `sep`/`end` | between items; after everything; returns `None` | [~] | **OVERDUE — S23** |
+| `while` / `break` / `continue` | condition re-checked; exit loop; kill iteration | [~]; `continue` owes a RECALL | **OVERDUE — S23** |
+| chained comparison | middle operand evaluated ONCE | [x] S16 | ~9 Sep |
+| loop `else` | ran without `break` | [~] earned S17 | **OVERDUE — S23** |
+| `pass` | no-op filling a block that cannot be empty | [~]; test the pass/continue/break 3-way | **OVERDUE — S23** |
+| ternary | EXPRESSION: `x if cond else y`, evaluates to a value | [~] | **OVERDUE — S23** |
+| elif | chain, first true wins, rest never evaluated | [x] S17 | ~10 Sep |
+| keyword argument | `name=value` in the CALL, matched by NAME | [~] defined S21, never tested | S23 |
+| UnboundLocalError | name IS local (compile-time), no value bound yet | [~] mechanism [x]-grade; **SPELLED WRONG TWICE S22 ("UnboundError", lowercase l)** | S23 — he TYPES it; then mixed 3-error test |
+| mutating vs non-mutating | in-place mutators return `None`; check TYPE first | discriminator [x]; ROSTER settles in 1.8 | 1.8 |
+| **pre-order / post-order** | **work before the call / after the call** | **NEW S22 — mechanism [x] (10/10 trace), LABEL was a gap; decoded in session** | **S23 term-tax** |
+| **lambda** | **EXPRESSION form of a function; one-expression body, auto-return. Brute-force label (Greek λ)** | **NEW S22, [~]** | **S23 task-first** |
+| **docstring / `__doc__`** | **doc-string decodes; first statement of body, stored on `__doc__` at `def` time; absent = `None` not `""`** | **NEW S22, [~]** | **S23 task-first** |
+| **`key=`** | **sorted calls it once per element, ONE argument, sorts by RESULTS, returns ORIGINAL items** | **NEW S22 (re-taught from S19), [~]** | **S23** |
+| **closure four layers** | **name → function object → `__closure__` TUPLE → CELL → `cell_contents`** | **NEW S22 — muddled twice in session, teach-back clean after shelf/dabba handle** | **S23, inside the closure-definition recall** |
+| **None-as-absence vs empty container** | **collectors give `()`/`{}` (empty thing exists); optional attributes give `None` (never created)** | **NEW S22, [~] — his `""` guess for absent `__doc__`** | **S23** |
 
 ## RE-TEST QUEUE (live — update every session)
 
-| Item | First taught | Latest re-test | 1-month re-test | Status |
-|---|---|---|---|---|
-| Frames: definition and three contents | S6 | S14: held WITH A HINT for the exact three | due 29 Aug 26 | [~] hint ≠ pass; re-test |
-| `<module>` / script entry point | S5, retaught S6 | S14 PASS cold | due 29 Aug 26 | [~] strong |
-| Running vs paused frames | S6 | S14 completed | due 29 Aug 26 | [~] |
-| Why a stack not a queue | S4, retaught S6 | S14 PASS cold | due 29 Aug 26 | [~] strong |
-| Namespace vs frame | S6 | S14: NOT unaided, retaught | due 29 Aug 26 | [~] |
-| Rebinding vs mutation (left-of-`=` rule) | S4 | **S16 PASSED cold — immutable→rebind, mutable→mutate, stated unprompted with the object/name distinction intact** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| `==` vs `is` | S2/S3, FAILED S7 | **S16 PASSED cold at last — `==` compares value, `is` compares identity, given as `id(a) == id(b)`. Owed since S7.** | due ~9 Sep 26 | **[x] PROMOTED S16 — longest-outstanding item in the file, now closed** |
-| Execution pipeline: source → bytecode → PVM | S3 | FAILED S7 | pending | [~] DUE re-test |
-| REPL vs script | S4 | FAILED S7 | pending | [~] DUE re-test |
-| `str` immutability + methods return new objects | S7 | **S17 SUPPORTING EVIDENCE (not a formal cold test): in the method drill he classified `s.upper()` as returning a new string at 10/10 and, when asked WHY strings cannot have a mutating method, gave immutability as the reason. Consistent with S9's four cold predictions.** | due 29 Aug 26 | **[x] CANDIDATE — one clean later-day pass promotes** |
-| `None` / `is None` / None vs 0 vs False | S9 | S10 same-day only | due ~29 Aug 26 | **[~] needs unaided from-cold re-test** |
-| Type conversion: int/str/float/bool + traps | S10 | S12 cold pass on the hinge | due ~1 Sep 26 | **[~]; `bool("False")` and `10/2`-float STILL OWED** |
-| Implicit vs explicit conversion / `"5"+3` TypeError | S10 | **S16 PASSED cold; "no coercion happens here, that's why it errors" — correct** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| Mutability, aliasing, mutable args in functions | S10 | **S16 PASSED cold — change visible through both names because the change happened in the OBJECT, not the name** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| Mutable default argument trap + `None` sentinel fix | S10 | S12 cold: trap+fix correct | due ~1 Sep 26 | **[~]; trap strong, WHERE-it-lives weak** |
-| Conversion returns a NEW object; original UNTOUCHED | S10 | **S16 PASSED cold for the general case — the immutable-optimisation follow-up (`tuple(t)` may return the SAME object) was new material. NOT PROMOTED — deliberately.** | due ~9 Sep 26 | **[~] the immutable-optimisation half is owed a cold test** |
-| Mutating methods return `None` (`result=q.append(4)`) | S11 | **S18: the targeted `reverse`/`sort` [DRILL] ran and all three answers were correct, INCLUDING `l.append(5)` → `None`, `s.upper()` → new string and `l.pop()` → the removed element in the second half. But he stated in writing that `reverse` was an ASSUMPTION, not knowledge. The concept is owned; the roster is not. ⚠ `d.clear()` was also asked and he correctly refused it as never-taught — MENTOR ERROR, see Teaching Mistakes; nothing logged.** | due ~10 Sep 26 | **[~] CONCEPT [x]-grade, ROSTER not owned. 1.8 is where the roster gets settled.** |
-| WHERE the default lives: `__defaults__` NOT the frame | S10 | **S19 NEAR-PASS — the first time it has ever come back. Asked in isolation he produced the name `__defaults__` correctly. ⚠ TRANSCRIPTION ARTEFACT, SECOND OF THE ARC: the channel rendered his spoken "dunder" ambiguously, the mentor briefly questioned a correct answer, then self-corrected and apologised. NOTHING LOGGED AGAINST HIM — the S16 rule worked. Self-rated 7/10. A SEPARATE SLIP DID occur later in the same block: asked where `__defaults__` LIVES, he said "module ki namespace mein". Wrong. Repaired across three passes and he closed it himself — *"wo dunder default us object ka attribute hai na?"* — which is the correct statement. REPAIR HANDLE THAT LANDED: **shelf par naam, dabbe ke andar attribute** — the NAME sits in the module namespace and points at the object; the ATTRIBUTE lives inside the function object. S18 COLD MISS — FOURTH OCCURRENCE. Tested in isolation at last, in its natural home (1.7 default arguments), after being untouched since S12. He answered with the FUNCTION'S LOCAL NAMESPACE — the call-time construct — rather than `__defaults__`, an attribute that lives on the function OBJECT from definition time onward. Retaught with the durable-vs-momentary contrast: `__defaults__` is built at `def` time and persists; the local namespace is built at call time and dies with the call.** | due ~10 Sep 26 | **[~] FOURTH SLIP. It is no longer merely the weakest item — it is the only item in the file that has never once been produced cold. Re-test it EVERY session until it lands.** |
-| `//` with NEGATIVE numbers vs `int()` truncation | S12 | **S16 PASSED cold: `-7 // 2 → -4`, floors toward −∞ stated unprompted.** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| Shallow vs deep copy (`id()` proof) | S11 | **S16 PASSED cold with a self-built nested example.** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| Comparison / logical operators → boolean | S12 | **S16: `10 / 2 → 5.0` and `a == b` / `a is b` both PASSED cold.** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| Operator precedence + associativity | S12 | **S16 DRILL PASSED cold in text: `2 ** 3 ** 2` → 512, right-associativity named explicitly** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| Augmented assignment `+=` | S12 | **S16 PASSED cold — mutable mutates, immutable rebinds** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| Membership `in` / `not in` | S13 | same-day only | due ~5 Sep 26 | [~] |
-| Short-circuit evaluation | S13 | S14 PASS cold | due ~3 Sep 26 | [~] one more pass promotes |
-| `%` modulo — value AND sign on negatives | S13 | **S16 PASSED COLD TWICE on a later day. No longer weak.** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| `**` exponentiation + right-to-left | S13 | **S16 DRILL PASSED cold, no hedging** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| `if` block scope — a block creates no frame | S14 | **S16 PASSED cold on a genuine later day, both halves** | due ~9 Sep 26 | **[x] PROMOTED S16** |
-| **ITERATION PROTOCOL: `iter()` once, `next()` per pass, StopIteration ends it** | **S15** | **same-day PASS only** | **due ~8 Sep 26** | **[~] SAME-DAY ONLY. Needs a genuine later-day cold pass.** |
-| **Iterables are REUSABLE, iterators are CONSUMED (forward-only state)** | **S15** | **S18: the CAUSATION FAILED A THIRD TIME on first attempt ("one item at a time"), was repaired with the code-as-bug image, and the teach-back was then correct. Self-rated 3/10.** | **due ~10 Sep 26** | **[~] STILL THE MOST STUBBORN ITEM IN THE FILE. Three failures on three separate days.** |
-| **`range()`: half-open and lazy; an ITERABLE not an iterator** | **S15** | **S16 PASSED cold on a later day, including the memory rationale for laziness** | **due ~9 Sep 26** | **[x] PROMOTED S16** |
-| **Python has FUNCTION scope, not BLOCK scope — `i` survives the loop as 2** | **S15** | **S16 PASSED cold — BOTH prints → 2** | **due ~9 Sep 26** | **[x] PROMOTED S16** |
-| **Exceptions are SIGNALS, never bound to a name** | **S15** | **S18 PASS COLD on a genuine later day — "signal hote hain jo Python ko batate hain ki yahan galti hui hai", explicitly not a value that sits somewhere. Full gap in S16, clean in S18. Self-rated 7/10 before the verdict.** | **due ~10 Sep 26** | **[x] PROMOTED S18 — the weakest cluster in the file has started to come good** |
-| **A name created only inside a loop body does not exist if the body never ran (`range(0)` → NameError)** | **S15** | **S16 SPLIT — MECHANISM PERFECT, LABEL WRONG (said `ValueError`).** | **due ~9 Sep 26** | **[~] mechanism [x]-grade; the LABEL needs the re-test** |
-| **`traceback` — each line is ONE LIVE FRAME; the whole thing is a printout of the STACK at the moment of the crash** | **S15 asked, S16 asked, S18 asked, S19 asked — ⚠ PROPERLY TAUGHT ONLY IN S20** | **S20 SELF-RATED 0/10, AND THE FINDING IS A MENTOR FINDING. It emerged that this item had been FIRED as a [RECALL] for three consecutive sessions and NEVER ACTUALLY TAUGHT — repeating a question is not teaching. THREE SESSIONS OF RECORDED "FAILURE" ON THIS ITEM WERE MEASURING A TEACHING GAP, NOT A RETENTION GAP. He could read the location half unaided ("the remaining part points to the fault happening in line 2") and correctly reported that `<stdin>` was meaningless to him. TAUGHT IN FULL: `<stdin>` is just the FILENAME SLOT (code from standard input, not from disk; `<string>` for `exec`, `<module>` for top level) — nothing deep. THE REAL CONTENT, which he did not have: EACH LINE IS ONE LIVE FRAME ON THE CALL STACK. That is why they repeat — line 2 did not fail 999 times, there were 999 frames all paused at line 2. A traceback is read bottom-up as "who called whom" in reverse; the bottom line is where the exception was raised, the lines above are the chain of callers. Demonstrated on a clean `a → b → c` chain. TIED TO HIS OWN WORK: when a traceback bottoms out in library code, the useful line is the LOWEST ONE NAMING HIS OWN FILE. [TEACH-BACK] on the ordering was CORRECT.** | **due ~16 Sep 26 — CLOCK RESET** | **[~] RE-ENTERS AS NEWLY-TAUGHT MATERIAL. Do not carry the S16/S18/S19 "failures" against him; they were not valid measurements. Next cold test is the FIRST honest one.** |
-| **`print()` returns `None`; `sep` and `end` are parameters** | **S16** | **return-`None` reasoned out cold; `sep` GAP; `end` symbol wrong (`/n`); post-teach check PASSED** | **due ~9 Sep 26** | **[~]** |
-| **`while` — condition re-checked before every pass** | **S16** | **S17: [PREDICT] PASS on the missing-increment infinite loop. He named the exact cause unprompted — no increment in the body, so `i` stays 0 and the condition never turns false. Same-day.** | **due ~9 Sep 26** | **[~] strong** |
-| **`continue` in a `while` loop skips the state update — the classic infinite loop** | **S16** | **FOUND UNPROMPTED in S16 with the correct reason. Re-stated in S17 as a warning attached to the `pass`/`continue`/`break` contrast; NOT re-tested.** | **due ~9 Sep 26** | **[~] strong** |
-| **Nested loops — inner runs to completion for every outer value; a FRESH iterator each pass** | **S16** | **PREDICT PASS on all three parts.** | **due ~9 Sep 26** | **[~]** |
-| **Loop `else` — runs only if the loop finished WITHOUT `break`** | **S16** | **S17: THE OWED EARN-IT EXERCISE COMPLETED. He wrote the found-flag equivalent himself, then derived WHY loop `else` exists — the flag is only ever recording "did the loop finish without breaking", which the interpreter already knows. The S16 prerequisite breach is now repaired.** | **due ~9 Sep 26** | **[~] — now taught in the right order** |
-| **THE FOUND-FLAG PATTERN — search a sequence, report found / not found** | **S17** | **WRITTEN BY HIM, unaided on structure: `flag = False` before the loop; `flag = True` + `print` + `break` on the hit; `if not flag` after the loop. Four iterations, all fixes were syntax/idiom (bare names for strings, missing colon, `== False`) or channel artefacts (indentation), NOT structure. Same-day.** | **due ~10 Sep 26** | **[~]** |
-| **`pass` — the no-op that satisfies a non-empty block** | **S17** | **[PREDICT] PASS with a use case supplied from his own prior exposure. The `pass` vs `continue` vs `break` three-way contrast was taught alongside it and is the part most likely to blur — test THAT, not `pass` alone.** | **due ~10 Sep 26** | **[~]** |
-| **Ternary / conditional EXPRESSION — `x if cond else y`** | **S17** | **[PREDICT] PASS. He identified the expression-vs-statement axis himself: the ternary produces a value that gets bound, the `if` block just executes. Caveat taught: use it only when both branches select a simple value.** | **due ~10 Sep 26** | **[~]** |
-| **`if` / `elif` / `else` AS A CHAIN — first true condition wins, the rest are never evaluated** | **S14 (`if`), S17 (`elif`/`else`)** | **S17 [RECALL] PASS COLD, and this one IS later-day evidence: the question was posed at the end of S16 and went unanswered, so it was genuinely untested when he answered it. `x = 5` → "B", with the skip stated; and with `x = 20`, "A" prints and `elif x > 3` is NEVER EVALUATED. Self-rated 10/10 BEFORE the verdict, per rule 3. ⚠ HONEST CAVEAT: he asked to be re-taught `elif` before attempting, so the chain rule was explained minutes earlier. The PROMOTION IS AWARDED on the strength of the answer and his rating, but flag it for the August gauntlet.** | **due ~10 Sep 26** | **[x] PROMOTED S17 — the last owed item from S16** |
-| **The MUTABLE/IMMUTABLE DISCRIMINATOR — how to tell mutating from non-mutating without a roster** | **S17** | **S18 PASS COLD, AND BETTER THAN A PASS. He applied it to unseen methods correctly (`append` → `None` because in-place, `s.upper()` → new string because `str` is immutable, `pop` → returns the removed element) AND HE FOUND THE HOLE IN THE MENTOR'S OWN FORMULATION: "mutable type ke saare methods mutate karenge, yeh main general rule nahi maanunga." Correct. The rule is not about MUTABLE TYPES, it is about IN-PLACE MUTATORS; `pop`, `index` and `count` are counter-examples. Rule narrowed in session. Self-rated 10/10 on concept.** | **due ~10 Sep 26** | **[x] PROMOTED S18 — and note HOW it was earned: by him correcting the model, not by him reciting it** |
-| **CELL CAUSATION — WHY five calls give five non-colliding values** | **S19** | **S20 CORRECT UNAIDED FROM COLD — first time in five attempts across two days. "each loop iteration a new function object with a new cell... the five values are not overwriting each other because they are all associated with five different objects." TWO CORRECTIONS: (a) he attributed the new object to THE LOOP; it is THE CALL — five separate `make_counter(3)` calls on five lines give five cells with no loop anywhere. (b) LABEL SLIP: "content cell" — it is a CELL; `cell_contents` is an attribute ON the cell. Self-rated 5/10.** | **due ~16 Sep 26** | **[~] NOT PROMOTED on his 5/10 — but see the calibration note: this is the file's FIRST recorded UNDER-rating, ~85% correct and rated 5.** |
-| **CLOSURE DEFINITION — stated as one line joining free variable, cell, function object** | **S19** | **S20 COLD ATTEMPT self-rated 4/10. Substance largely right — nesting, free variable, binding at function-object creation, persistence — but he did NOT name the CELL, and "retains itself during different sessions" is wrong wording for "survives after the enclosing frame has died". A SECOND, stronger interview-style version followed, but AFTER the cell and the frame-death were handed to him, so it is SCAFFOLDED and not evidence. Corrections owed on re-test: "free VARIABLE" not "free value"; `__closure__[0]` is a CELL, the value is `.cell_contents`; `__closure__` is `None` (not an empty tuple) when there are no free variables; and the BINDING HAPPENS WHEN `def` RUNS, not at call time — he had this in attempt one and lost it in attempt two.** | **due ~16 Sep 26** | **[~] re-test COLD. His 4/10 was well calibrated.** |
-| **RECURSION — base case, recursive case, frames of the same function stacked** | **S20** | **taught S20; [PREDICT] on value-returning recursion PASSED both parts (`total(4)` → 10, deepest frame `n=0` returns 0). Same-day only.** | **due ~16 Sep 26** | **[~]** |
-| **PRE-ORDER vs POST-ORDER — work before the call vs after it** | **S20** | **S20 [PREDICT] FAILED: answered `2 1 0` for the post-order countdown (actual `liftoff 1 2 3`). ROOT CAUSE: imagined ONE mutating `n` instead of four frames each holding its own. ⚠ THE SAME ISOLATION PRINCIPLE HE HAD CORRECTLY EXPLAINED FOR CELLS MINUTES EARLIER — owned in one container, dropped in another. Also printed `0`, which never prints.** | **due ~16 Sep 26** | **[~] PRIORITY — re-test as a TRANSFER question, not a recursion question** |
-| **THE IDENTITY-VALUE RULE — a base case returns the identity for the operation (`0` for `+`, `1` for `*`, `[]` for concat)** | **S20** | **taught S20 across three instances; not tested as a RULE** | **due ~16 Sep 26** | **[~] test it as a RULE, not as three examples** |
-| **TERMINATION — base case must EXIST and the step must LAND on it** | **S20** | **S20 BUG HUNT PASSED: found the `first_char("")` non-shrinking input via check 2 and connected it to the step never reaching the base, unaided.** | **due ~16 Sep 26** | **[~] strong** |
-| **PRINTER vs CALCULATOR — does this function print, or return?** | **S20** | **S20: his `count_down_by` mixed the two (`return 0, step` — a tuple nobody uses). Base case and step-passing both correct unaided. Retaught with the testability argument.** | **due ~16 Sep 26** | **[~]** |
-| **PURE FUNCTIONS vs SIDE EFFECTS + the disguised mutator** | **S10 pre-load, TAUGHT S20** | **S20 [PREDICT] on `scale` — ALL THREE LINES CORRECT and he named the mutation and aliasing before being asked. ⚠ But he then asked what "pure" meant — the definition had been in the block lost to the doubt-gate breach.** | **due ~16 Sep 26** | **[~] mechanism strong, LABEL owed** |
-| **THE FIVE CHECKS — boundary, empty, one, assumed type/sign, step-meets-base** | **S20** | **S20: transferred on first use — found the planted bug via check 2 with the correct mechanism. Same-day.** | **due ~16 Sep 26** | **[~] REQUIRE IT ON EVERY DRILL until he runs it unprompted** |
-| **ARGUMENT COUNT AND RETURN VALUE ARE UNRELATED** | **S20** | **NEW — arose from his own written reasoning ("a function call with two arguments so returning a none will not cause problem"). A category confusion, not a slip. `None` is only ever a problem AT THE POINT OF USE, in the CALLER.** | **due ~16 Sep 26** | **[~] re-test — this is the implicit-`None` trap from 1.7.3 in a new dress** |
-| **TRACE-TAIL TRUNCATION — student-side pattern, named S16** | **S16** | **S17: DID NOT FIRE. Required to state the final cycle on the `while i < 5` trace, he traced all five cycles and named the terminating check correctly (`i` = 5, `5 < 5` false, body skipped, 5 never printed).** | **due ~9 Sep 26** | **[~] WATCH — keep requiring the FINAL cycle explicitly, but the countermeasure is working** |
-| **`global` — compile-time locality classification + the read/mutate/rebind rule** | **S21** | **taught S21, same-day only. [PREDICT]s on the read-only case (`0`, no `global` needed) and the mutation case (`append` works, no `global`, full mechanism stated) both CORRECT. He pulled the compile-time classification out himself by asking why LEGB doesn't rescue `count = count + 1`. Label slip corrected: "associativity" offered for RHS-first evaluation — that is assignment EVALUATION ORDER.** | **due ~16 Sep 26** | **[~] first cold test owed — TASK-FIRST (a counter that must survive calls without a factory forces the `global` rebind)** |
-| **`*args` / `**kwargs` — collect in the signature, unpack in the call** | **S21** | **taught S21, same-day only. Collectors → TUPLE / DICT; leftover-POSITIONAL vs leftover-KEYWORD; signature order (normal, `*args`, `**kwargs`); empty cases `()` / `{}` — his first guess was `None`, self-corrected against output already on screen; the MIRROR rule teach-back correct with one fix (unpacking produces ARGUMENTS, not "variables").** | **due ~16 Sep 26** | **[~] first cold test owed — test the MIRROR and the EMPTY CASES, task-first (a function that must accept any mix of unknown positionals and keywords)** |
+| Item | Latest result | Status / next due |
+|---|---|---|
+| Frames: definition, three contents | S14 held WITH HINT | [~] due 29 Aug |
+| `<module>` entry point; running vs paused; stack not queue | S14 pass cold | [~] due 29 Aug |
+| Namespace vs frame | S14 not unaided | [~] due 29 Aug |
+| Execution pipeline; REPL vs script | FAILED S7, never re-run | [~] **DUE — overdue badly** |
+| Rebinding vs mutation; `==` vs `is`; implicit/explicit conversion; mutability+aliasing; shallow/deep copy; comparison ops; precedence; `+=`; negative `//`; `%` negatives; `**`; if-block scope; range(); function scope | all PROMOTED S16 | [x] — gauntlet + ~9 Sep |
+| `str` immutability | S17 supporting evidence | **[x] CANDIDATE — one clean later-day pass** |
+| `None`/`is None`/vs 0/False | S10 same-day only | [~] due 29 Aug |
+| Type conversion traps (`bool("False")`, `10/2` float) | owed | [~] due ~1 Sep |
+| Mutable default trap + sentinel | S12 pass | [~] due ~1 Sep |
+| In-place mutators return `None` | S18: concept owned, roster assumed | [~] roster settles in 1.8 |
+| **`__defaults__` — attribute on the function object, built at `def` time, a TUPLE** | **S22 PRODUCED COLD, FIRST TIME IN FIVE ATTEMPTS, 7/10. PROMOTED.** | **[x] — re-test ~31 Aug (gauntlet) then ~17 Sep** |
+| Membership `in`/`not in` | S13 same-day | [~] due ~5 Sep |
+| Short-circuit | S14 pass | [~] one more pass promotes |
+| Iteration protocol (`iter()` once, `next()` per pass) | S15 same-day only | [~] due ~8 Sep |
+| **Iterator causation (forward-only state)** | **S22 PASS later-day, bug-first, unaided. PROMOTED at 5/10.** | **[x] — SHORT GAP: re-fire S23, then gauntlet. Bug-first always.** |
+| Exceptions are signals | S18 pass | [x] ~10 Sep |
+| Loop-body name after zero iterations | S16 label wrong (`ValueError`) | [~] label re-test |
+| **Traceback: each line = one live frame** | **S22 first honest test: PARTIAL — frame link held, "problematic line" skew corrected, a→b→c teach-back correct** | [~] S23 cold ask, then ~16 Sep |
+| `print()` returns `None`; `sep`/`end` | S16 | [~] ~9 Sep |
+| `while` mechanics; `continue`-skips-update trap; nested loops; loop `else`; found-flag; `pass`; ternary | S16/S17 | [~] ~9–10 Sep |
+| `if`/`elif`/`else` chain | S17 pass cold | [x] gauntlet-flagged, ~10 Sep |
+| Mutable/immutable discriminator | S18 pass + corrected the rule | [x] ~10 Sep |
+| **Cell causation (five calls, five cells, no collision)** | **S22 PASS 7/10 + tricky follow-up (same-arg calls → separate cells: the CALL creates the object). PROMOTED. `cell_contents` spelling fixed.** | **[x] — ~31 Aug, then ~17 Sep** |
+| **Closure definition (one line)** | **S22 FAILED at 5/10 — layers muddled, survival clause missing. Clean line handed after; four-layer walk retaught (shelf/dabba), teach-back clean.** | **[~] PRIORITY — cold S23** |
+| Recursion: base/recursive case, frames stacked | S20 same-day | [~] ~16 Sep |
+| **Pre-order vs post-order (transfer)** | **S22 PASS 10/10 — full four-frame trace, the S20 one-mutating-n error did NOT recur. PROMOTED. Labels were a gap → term queue.** | **[x] — gauntlet, then ~17 Sep** |
+| Identity-value rule (as a RULE) | S20, untested as rule | [~] ~16 Sep |
+| Termination: base exists + step lands | S20 bug-hunt pass | [~] strong |
+| Printer vs calculator | S20 | [~] ~16 Sep |
+| Pure functions + disguised mutator | S20; label "pure" owed | [~] ~16 Sep |
+| Five checks | S20 transfer on first use; **not visibly run on S22 drills** | [~] REQUIRE explicitly next drill |
+| Argument count ⊥ return value | S20 category confusion | [~] ~16 Sep |
+| Trace-tail truncation | S17 did not fire | [~] watch, require final cycle |
+| **`global` (compile-time locality; read/mutate/rebind)** | **S22 PASS via task-first drill (3/3 pytest) + full mechanism unaided, 10/10. PROMOTED. Evidence: `drills/s22_counter.py`.** | **[x] — gauntlet, then ~17 Sep** |
+| **`*args`/`**kwargs` (collect/unpack mirror, empty cases)** | **S22 PASS via drill (4/4 pytest) + mirror stated both ways, 8/10. PROMOTED. Evidence: `drills/s22_report.py`.** | **[x] — ~7 Sep** |
+| **Compile-time locality TRAP inside a closure (`start = start + 1` kills the cell)** | **S22: predicted 11 (MISS), repaired unaided when pointed at the line** | **[~] NEW — re-test; it is the `nonlocal` motivation for 1.13** |
+| **Lambdas** | **taught S22; [PREDICT]s passed (closure transfer 15, squares sort); two-param question his own** | **[~] first cold test S23, task-first** |
+| **Docstrings / `__doc__`** | **taught S22; [PREDICT] miss on absent case (`""` for `None`) → discriminator taught** | **[~] first cold test S23, task-first** |
 
+## WATCH AREAS (full histories in ARCHIVE.md)
+- Structured foundation over patches; solo-first; AI-reliance guarded.
+- **Jump-ahead pattern:** fires on BOREDOM as well as friction (S17). Ran in
+  reverse in S18 (protected ledger integrity over wanted topic). Weakening;
+  not closed. **Not observed S20–S22.**
+- **Term/label retention — first-class watch area.** S22 evidence BOTH ways:
+  mechanisms promoted six times, while labels slipped four times (pre/post-order
+  gap, "UnboundError" twice, "inner iterable" for iterator, `cell_content`).
+  The countermeasure works on decodable labels (S18 exception triad holds);
+  arbitrary labels (traceback, lambda, `__defaults__` history) need
+  brute-force spaced repetition. **His own self-diagnosis in S22: "if not used
+  for long I tend to forget terminology" — accurate.**
+- **Right answer / wrong or missing mechanism:** standing audit; S22 was
+  CLEAN — every promoted answer carried its mechanism.
+- **Wrong-domain / surface-syntax flaw** (most persistent, ~S4–S15): not
+  observed S22.
+- **Depth-before-answer:** S22 first answer to the post-order recall was
+  output-only; the trace came complete on ONE re-ask. Keep re-asking.
+- **Layer-muddle (NEW, S22): tuple/cell/cell_contents confused twice in one
+  session** — watch it in the closure re-test; shelf/dabba handle repaired it.
+- Five checks not yet self-initiated on drills — require verbally until he
+  runs them unprompted.
+- False attribution: his record stands 26 pushbacks, zero wrong. When he says
+  a rule broke, check the rule.
 
-## WATCH AREAS
-- Knows bits and pieces — needs structured foundation, not patches
-- Risk of over-relying on AI tools early — enforce the solo-first rule
-- **EDGE CASES AND FAILURE MODES — PROMOTED FROM A ONE-LINE WATCH ITEM TO A
- TAUGHT SUBSECTION (1.7.11) IN S20, AT HIS OWN REQUEST.** This line had sat
- here since the file was created, describing a gap that was never actually
- addressed by anything. **He closed that hole himself**, naming the deficit
- precisely and asking for it to be taught rather than merely watched.
- **HIS OWN DIAGNOSIS, unprompted, and it is the sharpest self-assessment in
- the file:** *"I just did the things at surface level and always do that and
- that's why i was not able to catch the edge case."*
- **THIS IS THE SAME ROOT CAUSE AS RIGHT-ANSWER-WITHOUT-MECHANISM, VIEWED FROM
- THE OTHER END.** That pattern names the symptom that shows up in the ledger;
- this names the habit that produces it — the first plausible answer is treated
- as the finished answer and the probing pass never runs.
- **THE COUNTERMEASURE IS NOW MECHANICAL AND IS S20 RULE 3
- (DEPTH-BEFORE-ANSWER): he runs the five checks on his own code before
- submitting it, and a boundary value is always tested first.** The method
- transferred on first use in the same session, which is encouraging, but
- **one transfer is not a habit — require the five checks explicitly on every
- drill until he runs them without being asked.**
-- Known tendency to jump ahead or switch resources — **OBSERVED S17 after
- eleven clean sessions. See LEARNING PATTERN TO ACTIVELY CORRECT for the
- instance and how it was handled. It fired at the moment a unit felt easy
- ("yeh sab to mujhe pehle se aata tha"), not at the moment it felt hard —
- worth noting, because the file has always framed this pattern as a
- friction response. IT IS ALSO A BOREDOM RESPONSE. Watch for it on easy
- material as well as hard.**
- **S18 RAN THE PATTERN IN REVERSE, AND IT DESERVES ITS OWN LINE.** Offered
- recursion three times — the single topic he has most wanted since S17 — he
- declined each time, first to finish arguing about why closures exist at all,
- and then to insist closures be RESTARTED FROM SCRATCH in text rather than
- tagged as taught. **He turned down the thing he wanted in order to protect
- the integrity of the thing he had just been given.** That is the exact
- opposite of the self-sabotage pattern this section exists to counter.
- **Read it as the pattern weakening rather than as a one-off, but do not
- declare it closed on one instance.**
-- **TERM / LABEL RETENTION — FIRST-CLASS WATCH AREA (S12, named by the
- student himself). S15 CONFIRMS IT SHARPLY.** In the closing spoken summary
- he had every mechanism right and reached for the wrong LABEL three times:
- "margins/spacing" for **indentation**, "iterative" for **iterable**, and a
- garbled attempt at **StopIteration**. This is the exact profile the Term
- Retention System was built for — mechanism retained, label dropped. The
- countermeasure is unchanged (name-decoding, term-tax, no naked terms).
- **S18 IS THE FIRST REAL EVIDENCE THAT THE COUNTERMEASURE WORKS.** The
- exception LABELS — the exact failure this watch area was opened for, and the
- ones conflated three times in a single S16 session — came back cold, in
- mixed order, on a genuine later day, and were correct. `NameError`,
- `ValueError`, `TypeError`, and the `StopIteration` CATEGORY all held.
- **Six sessions of name-decoding and spaced term-tax produced this. Do not
- quietly drop the mechanism now that it is paying.** The residue is narrower
- than it was: `traceback` and `__defaults__` are the two labels still loose,
- and both are ARBITRARY rather than decodable, which is consistent with the
- S12 diagnosis — **what he drops is the label that cannot be re-derived from
- its own name. Those two belong in brute-force spaced repetition, not in
- name-decoding.**
-- **REASONING HYGIENE / ABSENT CROSS-CHECK — recurring, structural.**
- Not a problem in S15, S16 or S17.
-- **WRONG CAUSATION ATTACHED TO A RIGHT ANSWER — S15 INSTANCE.** He stated
- correctly that an iterator is consumed, but justified it with "because it
- gives one item at a time." That is not the cause — a spoon dispensing one
- item at a time could rewind. The cause is **forward-only state: the
- iterator holds a position that only ever moves forward**. Corrected in
- session. This is the right-answer-wrong-model family (now ~7 occurrences)
- and the standing instruction holds: never accept a correct conclusion
- without auditing the mechanism underneath it.
- **NOT OBSERVED IN S17.** **BUT IT FIRED AGAIN IN S18, ON THE SAME ITEM AS
- S15 AND S16 — the iterator. Asked what "consumed" means he went straight
- back to "ek baar mein ek item deta jaata hai".** That is now a THIRD failure
- of the same causation on a third separate day, and it is the clearest
- evidence in the file that **a repaired mechanism does not stay repaired if
- the repair was delivered as a DEFINITION.** The fix that worked both times
- was the same one: the S16 code-as-bug image (a hoisted iterator making a
- nested loop's inner body run once and then silently never again).
- **STANDING INSTRUCTION: for this item, never lead with the definition. Lead
- with the bug, make him diagnose it, and let the causation fall out.**
-- **Rule application by surface syntax / wrong domain instead of semantic
- structure — THE MOST PERSISTENT STRUCTURAL FLAW** (S4, S5, S6, S7, S9,
- S12, S13, S15). **S17 INSTANCE, ONE, AND IT IS A CLEAN EXAMPLE OF THE
- FLAW'S SIGNATURE: `l.reverse()` classified as returning a new list.** The
- surface cue is the word "reverse", which sounds like it produces something;
- the semantic structure is that `reverse` is a plain-named method on a
- MUTABLE object, which by Python's own design convention mutates in place
- and returns `None`. **He rated it 5/10 himself** — the flaw fired exactly
- where he already suspected it would, which is the mitigating detail.
-- **TRACE-TAIL TRUNCATION (named S16) — RESOLVED IN S17, PENDING A LATER-DAY
- RE-TEST.** In S16 he twice ended a loop trace one cycle early. In S17 he was
- explicitly required to state the final cycle, and did: he traced
- `while i < 5` cycle by cycle to the end and named the terminating check
- correctly — `i` becomes 5, the condition is re-evaluated, `5 < 5` is false,
- the body does not run, 5 is never printed. **Keep the countermeasure (require
- the FINAL cycle explicitly on every trace) until it survives a later-day
- test, but the pattern did not fire this session.**
-- **STYLE HABITS NEED REPETITION, NOT EXPLANATION (NEW, S17).** `if flag ==
- False` → `if not flag` had to be issued three separate times, and the code
- came back with `== False` each time in between. He understood it the first
- time; understanding is not the mechanism here. **For idiom-level habits,
- stop re-explaining and instead require him to type the corrected line back
- once.**
-- `==` vs `is` conflation — **CLOSED S16, promoted to [x].**
-- Box model leak under pressure — S2, S6. Not observed S9–S17.
-- "I got it" offered as evidence — refused cleanly whenever it appears.
-- False attribution of a gap to the mentor — **S15, S16 and S17: every
- attribution was TRUE and upheld. He attributes accurately; when he says the
- mentor broke a rule, check the rule, because he is usually right.**
-
-
-## CURIOSITY PARKING LOT
-- venv and virtual environments (master Layer 1)
-- VS Code extensions and best practices (master Layer 1)
-- .ipynb notebooks vs .py files (master Layer 4)
-- CPython's experimental JIT (Python 3.13+) — 1.13
-- IEEE 754 float internals — PROMOTED to a definite 1.13 deep dive (S5)
-- 32-bit vs 64-bit processors — 1.13
-- `globals()` vs `locals()` at module level — still needs its formal drill
-- Reading tracebacks like a senior engineer — **PARTIALLY DISCHARGED S15**
- (the term is now defined and the argument-evaluation subtlety taught);
- the full senior-level read stays parked for the exceptions work in 1.9
-- When does Python actually generate .pyc files? — 1.10
-- The GIL — working definition held; full mechanics in 1.13
-- CONCURRENCY / THREADS — deferred to a concurrency block after Layer 1
-- PYTHON CERTIFICATIONS — researched S11, NOT scheduled
-- Garbage collection mechanics — parked for 1.13
-- **S15 — `__iter__` / `__next__` as dunder methods, i.e. how an object
- DECLARES itself iterable, and generators as the lazy-iterator factory.**
- Level 3 material by the depth doctrine. Correctly out of scope now;
- lands in **1.13 (generators and iterators)** where it is already listed.
- Flag to the student when 1.13 opens that this is the promised payoff of
- the S15 protocol teaching.
-- **NEW, S17 — RECURSION AND NESTED FUNCTIONS, requested by name.** He named
- these unprompted as the concepts he most wants to learn properly: *"function
- ke andar function, recursion type ke concepts mujhe acche seekhne hain."*
- **NOT parked indefinitely — both are already scheduled in 1.7, which is the
- very next unit.** Tell him so when 1.7 opens; the request is about to be
- met and that is worth saying out loud, because it converts his impatience
- into momentum. Nested functions land with closures; recursion has its own
- line item.
-- **NEW, S17 — `reversed()` and `l[::-1]`.** Mentioned in passing as the
- non-mutating counterparts to `l.reverse()`. Slicing proper belongs to 1.8;
- do not open it early, but the name-pair (`sort`/`sorted`,
- `reverse`/`reversed`) is a legitimate hook to reuse there.
+## CURIOSITY PARKING LOT (unchanged S22 except as noted)
+- venv; VS Code practices; notebooks; JIT; IEEE 754 (1.13, promised); 32/64-bit;
+  `globals()`/`locals()` drill; senior traceback read (1.9); .pyc (1.10); GIL
+  (1.13); concurrency (post-Layer 1); certifications (not scheduled); GC (1.13)
+- `__iter__`/`__next__` + generators — 1.13, the promised S15 payoff
+- Recursion + nested functions — DELIVERED (S18–S20). Line retired.
+- `reversed()` / `l[::-1]` — lands in 1.8 slicing, next session
+- **NEW S22: lambdas with `*args` (parameter list works like `def`'s) — noted
+  in passing when he asked about two-parameter lambdas; nothing owed, the
+  question was answered in session.**
 
 ---
-
