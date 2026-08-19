@@ -1018,7 +1018,11 @@ false.
   the planted `len(word) == 1` are the SAME BUG — a base case too narrow, caught
   only by testing the exact edge. Same bug, twice, in ten minutes.**
 
-- [~] **Lambda functions — TAUGHT S22.** The EXPRESSION form of a function:
+- [x] **Lambda functions — TAUGHT S22, EARNED S23** (`drills/s23_ordering.py`,
+ 6/6 pytest COLD ON FIRST ATTEMPT, unaided, two lambdas written under a
+ constraint forbidding a third `def`; auto-return then recalled unaided —
+ *"lambda automatically returns the computed"* — corrected to EXPRESSION,
+ not statement). The EXPRESSION form of a function:
  evaluates to a function object where it stands, no name. Body is ONE
  expression, its value auto-returned — no statements, no `return`. The
  parameter list works exactly like a `def`'s (he asked about two-parameter
@@ -1039,16 +1043,31 @@ false.
  keeping: absent docstring → he guessed `""`; it is `None` — taught the
  absence discriminator: collectors give empty containers (`()`/`{}`),
  optional attributes give `None`.**
+ **S23 — STAYS [~], AND THE SPLIT IS THE POINT. PLACEMENT held cold and
+ unaided (`drills/s23_ordering.py`, both functions documented, tests
+ green). MECHANISM missed: asked what `__doc__` returns when the same
+ string sits on the SECOND line of the body, he predicted the string.
+ It is `None`. Taught then: TRIPLE QUOTES DO NOT MAKE A DOCSTRING,
+ POSITION DOES — elsewhere the literal is an expression evaluated and
+ discarded. He can place one correctly without knowing why it works,
+ which is exactly what [~] is for.**
 
 > **1.7 STATUS: CLOSED — SESSION 22.** Every item is now taught. S20 added
 > RECURSION (1.7.9), PURE FUNCTIONS vs SIDE EFFECTS (1.7.10) and EDGE-CASE
 > ANALYSIS (1.7.11); S21 added `global` and `*args`/`**kwargs`; S22 added
 > lambdas and docstrings and closed the unit.
-> **FIVE items in 1.7 are [x] as of S22** (`global`, `*args`/`**kwargs`,
-> `__defaults__`, pre/post-order, plus the S18 discriminator) — all earned on
-> later-day evidence, the first four under the new promotion rule. The rest
-> of the S18–S22 material is owed its later-day cold passes; the closure
-> definition FAILED its S22 cold test (5/10) and is the priority re-test.
+> **SIX items in 1.7 are [x] as of S23** (`global`, `*args`/`**kwargs`,
+> `__defaults__`, pre/post-order, the S18 discriminator, plus LAMBDAS earned
+> S23) — all earned on later-day evidence, under the new promotion rule. The
+> rest of the S18–S22 material is owed its later-day cold passes.
+> ⚠ **THE CLOSURE DEFINITION FAILED A SECOND TIME IN S23 (7/10), with the
+> SAME two defects as S22 — `cell_contents` called a tuple, and the survival
+> clause missing. Root cause found and it is a MENTOR one: the four layers
+> had been taught as a stack of LABELS. What a cell IS was never given —
+> that it is a TYPE, a one-slot box, and that `__closure__` is a tuple
+> because there is one cell PER FREE VARIABLE. Taught in S23 with `type()`
+> output. Re-test the definition cold; if the structure now holds, the
+> muddle was never his.**
 > ⚠ **TWO CONSTRUCTS WERE USED IN S19 EXAMPLES WITHOUT EVER BEING TAUGHT and
 > must not be quietly assumed later: `zip` (in `zip(customers, percents)` — he
 > flagged it himself) and LIST COMPREHENSIONS (in `[(key(x), x) for x in

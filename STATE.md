@@ -1,177 +1,189 @@
 # STATE.md — PYTHON LEARNING JOURNEY — LIVE SESSION STATE
 # ═══════════════════════════════════════════════════
 # One of FOUR files. THIS is the file that changes every session.
-# HOW TO START SESSION 23 (for Claude):
+# HOW TO START SESSION 24 (for Claude):
 #   1. Read RULES.md fully, then this file fully. No re-introductions.
 #      No ARCHIVE.md unless gauntlet / re-baseline / asked.
-#   2. FIRST ACTION: the INTERVAL GATE. Ask how long since S22
-#      (Mon 17 Aug 2026). Later day → cold work is promotable.
-#   3. SECOND ACTION: run the TERM-TAX. It was NOT run in S22 despite a
-#      valid later-day gap — mentor miss, logged. Many rows are overdue.
+#   2. FIRST ACTION: the INTERVAL GATE. Ask how long since S23
+#      (Wed 19 Aug 2026). Later day → cold work is promotable.
+#   3. SECOND ACTION: the TERM-TAX. Run it — S23 swept most of the backlog,
+#      so S24's volley is SHORT. Do not let it eat the session again.
 #   4. [RECALL]s open TASK-FIRST: drills/ + pytest where sensible; the
 #      name/definition question comes only after the code runs.
 #   5. At session end: rewrite this file, tick CURRICULUM.md if anything
 #      moved, append one block to ARCHIVE.md, commit and push.
 #
-# STATE AS OF: end of Session 22, Monday 17 Aug 2026. Next: Session 23.
+# STATE AS OF: end of Session 23, Wednesday 19 Aug 2026. Next: Session 24.
 # ═══════════════════════════════════════════════════
 
 ## SCHEDULE POSITION (recompute formally 31 Aug — in ITEMS, not subsections)
 - **DEADLINE: Layer 0 closes 30 Sep 2026.** ~5 sessions/week needed; zero slack.
-- **S22 yield: 1.7 FULLY TAUGHT AND CLOSED** (lambdas + docstrings, the last
-  two items) **plus SIX ledger promotions to [x]** — the biggest promotion day
-  since S16, and the first under the new promotion-on-correctness rule.
-- Position: 1.1–1.7 closed. **1.8–1.13 remain, ~6 weeks. 1.8 opens S23** and
-  is several times the size of 1.6 — count the 31 Aug arithmetic in items.
+- **S23 yield: the two-session term-tax backlog CLEARED, eight promotions, two
+  drills passed, and LAMBDAS closed to [x]. 1.8 DID NOT OPEN.**
+- ⚠ **1.8 has now slipped a session. It was the S23 plan and the recall backlog
+  ate it.** That was the right call once — the backlog was two sessions deep —
+  but it cannot happen twice. **1.8 OPENS IN S24, early, before any long
+  recall block.**
+- Position: 1.1–1.7 closed. **1.8–1.13 remain, ~5.5 weeks.**
 - **RE-BASELINE formally due 31 Aug.** Observed throughput → derived date,
   written into the master whether or not it is welcome. Scope moves NEVER cut.
-- Current Layer: 1. Current Topic: **1.8 Data Structures — opens S23.**
+- Current Layer: 1. Current Topic: **1.8 Data Structures — opens S24.**
 
 ## RULE-CHANGE PARKING (adopt ≤1 per session, at close)
-- (empty — nothing proposed in S22, nothing adopted)
-- Two S21 operational decisions were SETTLED in S22 (not rules, recorded here):
+- **(empty — nothing adopted S23.)**
+- **PARKED CANDIDATE, raised by the mentor, for the student to decide in S24:**
+  **"A [RECALL] block has a budget. State it at the top and stop when it is
+  spent."** S23 spent roughly two-thirds of the session on the recall queue and
+  1.8 never opened; S22 had the same shape. The counter-argument is real — the
+  backlog was genuine and the closure gap it exposed was worth the time — which
+  is why this is parked and not adopted. **His call.**
+- Settled operational decisions still standing:
   **(a) First weekly cold build block: THIS WEEKEND, Sat 22 or Sun 23 Aug**,
   his pick on the day. ≥90 min, timed, no AI, git+pytest, work-adjacent
-  (LeRobot episode validator or joint-limit clamp). **Hold him to it.**
-  **(b) Queue tooling = a SCRIPT in this repo** (not Anki): stores items +
-  due dates, prints today's queue. Build incrementally; candidate task for
+  (LeRobot episode validator or joint-limit clamp). **Hold him to it — it was
+  NOT re-confirmed at the S23 close; confirm the day first thing in S24.**
+  **(b) Queue tooling = a SCRIPT in this repo** (not Anki). Candidate task for
   the weekend block itself.
 
 ## WHERE WE LEFT OFF
 
-### SESSION 23 STARTS HERE — exact resume point
+### SESSION 24 STARTS HERE — exact resume point
 
-S22 ran Monday 17 Aug 2026, the day after S21 — first genuine later-day
-session since S19, and the queue finally got paid. **Six promotions: post-order
-transfer (10/10, clean frame trace), cell causation (7/10), `global` (10/10,
-via drill), `*args`/`**kwargs` (8/10, via drill), `__defaults__` (7/10 —
-PRODUCED COLD FOR THE FIRST TIME IN FIVE ATTEMPTS), iterator causation (5/10,
-bug-first, promoted with a SHORT gap under the new rule).** The repo's first
-two drills were written and passed pytest (`drills/s22_counter.py` 3/3,
-`drills/s22_report.py` 4/4). Lambdas and docstrings taught → **1.7 CLOSED.**
-Zero pushbacks raised (denominator: 0/0). One mentor miss: **term-tax skipped
-on a valid later day** — run it first thing in S23.
+S23 ran Wednesday 19 Aug 2026, two days after S22. The overdue term-tax was
+swept in two waves, **eight promotions**, two drills written and passed
+(`drills/s23_sort_key.py` 6/6, `drills/s23_ordering.py` 6/6 **cold on the
+first attempt**), one demotion, and **one root cause found that had been
+mis-attributed to the student for two sessions** (see the closure entry below).
 
 Run in this order:
 
-1. **TERM-TAX — OWED AND OVERDUE.** Sweep the overdue rows (~12–15 Aug dues)
-   plus the new S22 terms: lambda, docstring/`__doc__`, pre-/post-order,
-   `UnboundLocalError` (HE MUST TYPE IT — spelled it wrong twice in S22),
-   iterator-vs-iterable label, the closure four layers.
+1. **CONFIRM THE WEEKEND BUILD BLOCK — Sat 22 or Sun 23.** One line, first
+   thing. It was missed at the S23 close.
 
-2. **[RECALL] ITERATOR CAUSATION — his 5/10 bought a short gap, so it fires
-   again NOW.** Bug-first ALWAYS (hoisted `it = iter(range(2))`); never the
-   definition. S22 was the first later-day pass (forward-only state, no
-   "one-at-a-time" relapse). A second clean pass here makes it solid before
-   the gauntlet.
+2. **OPEN 1.8 — LISTS FIRST. Do this EARLY, before any long recall block.**
+   Cash in the S17 discriminator by name — **this is where the mutating-methods
+   ROSTER finally gets owned rather than derived.** Teach SLICING formally (he
+   flagged it untaught himself, pushback 25; `word[:-1]` and `l[::-1]` are
+   seen-but-not-taught). `zip` and list comprehensions are owed here too and
+   are marked seen-but-not-taught. The iteration protocol (S15) is the
+   machinery under comprehensions — say so when they open.
+   ⚠ **Prerequisite honesty: the iteration protocol is [~] and got WORSE in
+   S23 (see item 4). Comprehensions rest on it. Gate them out loud.**
 
-3. **[RECALL] CLOSURE DEFINITION, COLD — FAILED S22 at 5/10.** He had nesting
-   + free variable but MUDDLED THE LAYERS (called `cell_contents` a tuple)
-   and MISSED THE SURVIVAL CLAUSE. Target line: *a function object that binds
-   a free variable from its enclosing scope into a cell, so the value
-   survives after the enclosing frame has died.* Also listen for: binding
-   when `def` RUNS; `__closure__` is `None` with no free variables. The
-   four-layer walk (name → function object → `__closure__` tuple →
-   cell → `cell_contents`) was retaught via the shelf/dabba handle and his
-   teach-back was clean — test it cold now.
+3. **[RECALL] CLOSURE DEFINITION, COLD — FAILED TWICE NOW (S22 5/10, S23
+   7/10), SAME TWO DEFECTS BOTH TIMES.** Target line: *a function object that
+   binds a free variable from its enclosing scope into a cell, so the value
+   survives after the enclosing frame has died.* The two things he drops:
+   (a) the **survival clause** — missing both times; (b) the **layers** —
+   he called `cell_contents` a tuple both times.
+   **DO NOT LOG A THIRD FAILURE WITHOUT READING THIS FIRST: the root cause was
+   found in S23 and it is a MENTOR defect.** The four layers had been taught
+   as a stack of labels; what a cell *is* was never taught. He asked directly —
+   *"I am still unsure what a cell is, is it a memory cell?"* — and it was
+   then taught properly: **a cell is a TYPE (`<class 'cell'>`), a one-slot
+   box, and `__closure__` is a TUPLE because there is one cell PER FREE
+   VARIABLE.** Shown with `type()` output and a two-free-variable example.
+   **If the definition holds now, the muddle was never his.**
 
-4. **[RECALL] LAMBDAS + DOCSTRINGS — first cold pass, TASK-FIRST in drills/.**
-   Good constraints: sort a list of strings case-insensitively / by computed
-   value WITHOUT defining a named helper (forces lambda as `key=`); a module
-   whose functions must carry runtime-readable documentation checked via
-   `__doc__` (forces docstring placement). Then the mechanism questions:
-   lambda = EXPRESSION form of a function, one-expression body, auto-return;
-   docstring = first statement, stored on `__doc__` at `def` time,
-   comment-vs-docstring (comment discarded, docstring is data);
-   `f.__doc__` is `None` when absent, NOT `""`.
+4. **[RECALL] THE ITERATION PROTOCOL — DEMOTED IN S23, RE-TEACH IS DONE, TEST
+   IT.** He passed the *causation* (exhausted iterator → second loop prints
+   nothing, zero body runs) but **could not name `next()` and guessed
+   "EndofIterator" / "EndofIteration" for `StopIteration`.** `StopIteration`
+   **reverts [x] → [~]** — failed re-test. Re-taught in S23 with the three-call
+   demo and a real traceback. Ask cold: **what does a `for` loop call to get
+   each item, and what comes back to stop it?**
 
-5. **[RECALL] TRACEBACK — repaired S22, one honest line-item still open.**
-   S22: he tied each line to A FRAME (the S20 content held) but called it
-   "the problematic line" — corrected to *one live frame frozen at the line
-   it was executing; for callers that line is the call itself*. His a→b→c
-   teach-back was correct. Ask cold: "what is one line of a traceback?"
+5. **[RECALL] DOCSTRING MECHANISM — placement is owned, mechanism is not.**
+   He documents functions correctly and unaided, but predicted `__doc__` would
+   still return the string when it sits on the SECOND line of the body. It is
+   `None`. The line to get back: **triple quotes do not make a docstring,
+   POSITION does — first statement of the body, attached at `def` time;
+   anywhere else it is an expression evaluated and discarded.**
 
-6. **THEN OPEN 1.8 — LISTS FIRST.** Cash in the S17 discriminator by name
-   (this is where the mutating-methods ROSTER gets owned). Teach SLICING
-   formally — he has flagged it untaught himself (pushback 25); `word[:-1]`
-   and `l[::-1]` are seen-but-not-taught. `zip` and list comprehensions
-   likewise owed here. The iteration protocol (S15) is the machinery under
-   comprehensions — say so when they open.
+6. **THE FIVE CHECKS — he now has a mnemonic; test that it survived.**
+   He could not name a single one cold (they were taught S20 and transferred
+   on first use — gone in three days). He then asked for a memory hook, and
+   one was built with him: **"Boundary pe khaali ek bahar mila"** →
+   Boundary / Khaali (empty-zero-nothing) / Ek (one) / Bahar (outside your
+   assumption) / Mila (two things that must agree). Fire it cold in S24.
 
-7. **WEEKEND: the first cold build block (Sat 22 / Sun 23).** If S23 runs
-   before the weekend, confirm the day with him at close.
+7. **STILL OWED FROM THE S23 TERM-TAX (all failed or gapped, all overdue):**
+   `pass` (gave a *use*, not the mechanism), **loop `else` (0/10, flat gap)**,
+   **ternary (0/10, flat gap)**, `print()` `sep` (said `"_"`; it is a single
+   SPACE) and what `print()` returns, **associativity** (he gave precedence
+   only, both times), statement-half of expression-vs-statement.
 
 **Standing turn rules: short messages, one teaching idea per turn, asks near
 the top; doubt gate before every new subsection; depth-before-answer — traces
-never optional, five checks on every drill (HE DID NOT REPORT RUNNING THEM on
-the two S22 drills — require it explicitly next drill), boundary values
-first. Tag every block. Do not propose ending the session.**
+never optional, five checks on every drill, boundary values first. Tag every
+block. Do not propose ending the session.**
 
 **CARRY FORWARD:**
 - **August gauntlet (last session of August): SACRED.** Carries: strict-legend
-  audit of every [x]; the `if`/`elif`/`else` and S18 exception-triad
-  promotions; the 1.6 spoken Feynman recall; the S22 promotions flagged
-  short-gap (iterator causation, `__defaults__`, cell causation).
+  audit of every [x]; the 1.6 spoken Feynman recall; the S22 short-gap
+  promotions (iterator causation, `__defaults__`, cell causation); the eight
+  S23 promotions.
 - **31 AUG: RE-BASELINE arithmetic due, in ITEMS.**
-- ⚠ Audit the [~] list for the traceback defect (asked-but-never-taught)
-  before the gauntlet.
 - Three-error set (`TypeError`/`NameError`/`UnboundLocalError`) still untested
-  cold — MIXED, never singly. Include the SPELLING of UnboundLocalError.
-- Modulo identity SYMBOLIC FORM still owed cold. TEXT, low priority.
-- `str` immutability is an [x] candidate — one clean later-day pass.
-  `None`/`is None` and `bool("False")` remain [~].
+  MIXED. **Spelling of `UnboundLocalError` is FIXED — typed correctly in S23.**
 - **Keyword argument** (defined S21) still owed its first cold test.
+- `None`/`is None` and `bool("False")` remain [~]. `str` immutability is an
+  [x] candidate on one clean later-day pass.
 - Governance/format requests mid-session → PARK, close material, write at end.
 - Drills: mentor never edits a file the student started; autocomplete OFF.
 
 Every teaching block shows full runnable source alongside output.
-Session 23 closes with a ~30-second spoken summary from memory.
+Session 24 closes with a ~30-second spoken summary from memory.
 
 
 ## TERM RE-TEST QUEUE (live — fire cold at session open; "gap" if empty)
 Histories live in ARCHIVE.md; this table carries only current status.
-**⚠ NOT RUN IN S22 (mentor miss) — many rows overdue. Sweep in S23.**
+**S23 swept the backlog. The rows below marked S24 are the FAILURES only.**
 
 | Term | Decode hook / mechanism | Status | Next due |
 |---|---|---|---|
 | coercion | coerce = force; implicit safe conversion | [x] S16 | ~9 Sep |
 | ValueError | value wrong, type OK; `int("2.5")` | [x] S18 | ~10 Sep |
 | TypeError | operation not defined between types; `"5"+3` | [x] S18 | ~10 Sep |
-| truncation | cut off; `int()` drops decimals toward zero | [~] S13 pass | **OVERDUE — S23** |
-| floor division | `//` floors toward −∞; `-7//2 → -4` | [~] S13 pass | **OVERDUE — S23** |
-| alias | two names, one object | [~] S13 pass | **OVERDUE — S23** |
-| rebind | `=` points a NAME at an object | [~] S13 pass | **OVERDUE — S23** |
-| operand | value an operator acts on | [~] S13 pass | **OVERDUE — S23** |
-| expression vs statement | value vs action | [~] held in use S17 | **OVERDUE — S23** |
-| precedence / associativity | rank; direction on ties, `**` right→left | [~] S13 pass | **OVERDUE — S23** |
+| **truncation** | **cut off TOWARD ZERO; `int(-5.98)` → `-5`** | **[x] S23 — 7/10, then 10/10 on the direction discriminator vs `//`** | ~10 Sep |
+| **floor division** | **floors toward −∞; `-5.98 // 1` → `-6`** | **[x] S23, 9/10** | ~10 Sep |
+| **alias** | **two names, one object** | **[x] S23, 10/10** | ~10 Sep |
+| **rebind** | **`=` points a NAME at an object** | **[x] S23, 10/10** | ~10 Sep |
+| **operand** | **value an operator acts on** | **[x] S23, 7/10** | ~10 Sep |
+| expression vs statement | value vs action | [~] S23: expression half correct, **statement half he flagged himself as confused** | **S24** |
+| precedence / associativity | rank; direction on ties, `**` right→left | [~] S23 8/10: **precedence correct, ASSOCIATIVITY not given at all** | **S24 — ask associativity ALONE** |
 | short-circuit | and/or stop early, return the OPERAND | [x] S16 | ~9 Sep |
-| modulo identity | `a == b*(a//b) + (a%b)`; sign follows divisor | [~] formula form never cold | low priority, TEXT |
-| control flow / conditional / truthy-falsy / block-vs-frame | S14 set | [~] S14 pass | **OVERDUE — S23** |
-| indentation | spacing that DELIMITS a block | [x] S16 | ~9 Sep (in words, never typed) |
+| **modulo identity** | **`a == b*(a//b) + (a%b)`; sign follows divisor** | **[x] S23 — PRODUCED COLD AND UNPROMPTED to prove `-13 % 10 == 7` while bug-hunting his own lambda. Owed since S13.** | ~10 Sep |
+| control flow / conditional / truthy-falsy / block-vs-frame | S14 set | [~] S14 pass | **OVERDUE — S24** |
+| indentation | spacing that DELIMITS a block | [x] S16 | ~9 Sep |
 | iterable | able-to-be-iterated; hands out iterators; REUSABLE | [x] S16 | ~9 Sep |
-| iterator | the nozzle; forward-only; CONSUMED | label slipped again S22 ("inner iterable exhausted") | fold into S23 term-tax |
-| StopIteration | the stop signal; an EXCEPTION | [x] S18 | ~10 Sep |
-| forward-only state (iterator causation) | position only moves forward — THAT is why consumed | **[x] PROMOTED S22 — first later-day pass, bug-first, no relapse. 5/10 = short gap.** | **S23 + gauntlet. Bug-first ALWAYS.** |
+| **iterator** | **the nozzle; forward-only; CONSUMED** | **[x] S23, 7/10 — the S22 label slip did NOT recur** | ~10 Sep |
+| **StopIteration** | **the stop signal; an EXCEPTION raised by `next()`** | **⚠ DEMOTED [x] → [~] S23. Guessed "EndofIterator"/"EndofIteration". Failed re-test.** | **S24 — retaught, test it** |
+| forward-only state (iterator causation) | position only moves forward | [x] S22; S23 causation held, naming failed | gauntlet, bug-first |
+| **`next()` / `iter()`** | **`iter()` once at the top; `next()` once per pass** | **[~] S23 — could not name `next()` at all. Retaught with the three-call demo + real traceback.** | **S24** |
 | range | half-open, lazy, an ITERABLE | [x] S16 | ~9 Sep |
-| traceback | crash report on uncaught exception; each line = one live frame | [~] repaired S22 (frame link held, "problematic line" skew fixed) | S23, then gauntlet |
-| NameError | the NAME does not exist anywhere | [x] S18 | ~10 Sep, MIXED with ValueError |
+| **traceback** | **crash report; each line = one live frame** | **[~] S23 — read one correctly in the wild (named the error and the line it points at) but this was cued, not cold** | **S24 cold, then gauntlet** |
+| NameError | the NAME does not exist anywhere | [x] S18 | ~10 Sep, MIXED |
 | function scope, not block scope | only `def` makes scope | [x] S16 | ~9 Sep |
-| `print()` `sep`/`end` | between items; after everything; returns `None` | [~] | **OVERDUE — S23** |
-| `while` / `break` / `continue` | condition re-checked; exit loop; kill iteration | [~]; `continue` owes a RECALL | **OVERDUE — S23** |
+| `print()` `sep`/`end` | between items; after everything; returns `None` | [~] S23 8/10: **`end` correct, `sep` WRONG (said `"_"`, it is a SPACE), return value not given** | **S24** |
+| `while` vs `for` | condition re-checked vs walking an iterable | [x]-grade answer S23, 7/10 | ~10 Sep |
+| `break` / `continue` | exit loop / **end this ITERATION** | [~] S23: `break` correct; **`continue` phrased as "exits the current loop" → precision fix issued** | **S24** |
+| `pass` | no-op filling a block that cannot be empty | [~] S23 7/10 — **gave a USE ("we don't know the body yet"), not the mechanism; said so himself** | **S24, 3-way vs continue/break** |
 | chained comparison | middle operand evaluated ONCE | [x] S16 | ~9 Sep |
-| loop `else` | ran without `break` | [~] earned S17 | **OVERDUE — S23** |
-| `pass` | no-op filling a block that cannot be empty | [~]; test the pass/continue/break 3-way | **OVERDUE — S23** |
-| ternary | EXPRESSION: `x if cond else y`, evaluates to a value | [~] | **OVERDUE — S23** |
+| **loop `else`** | **ran without `break`** | **[~] S23 — FLAT GAP, 0/10** | **S24 — re-teach** |
+| **ternary** | **EXPRESSION: `x if cond else y`** | **[~] S23 — FLAT GAP, could not retrieve it** | **S24 — re-teach** |
 | elif | chain, first true wins, rest never evaluated | [x] S17 | ~10 Sep |
-| keyword argument | `name=value` in the CALL, matched by NAME | [~] defined S21, never tested | S23 |
-| UnboundLocalError | name IS local (compile-time), no value bound yet | [~] mechanism [x]-grade; **SPELLED WRONG TWICE S22 ("UnboundError", lowercase l)** | S23 — he TYPES it; then mixed 3-error test |
-| mutating vs non-mutating | in-place mutators return `None`; check TYPE first | discriminator [x]; ROSTER settles in 1.8 | 1.8 |
-| **pre-order / post-order** | **work before the call / after the call** | **NEW S22 — mechanism [x] (10/10 trace), LABEL was a gap; decoded in session** | **S23 term-tax** |
-| **lambda** | **EXPRESSION form of a function; one-expression body, auto-return. Brute-force label (Greek λ)** | **NEW S22, [~]** | **S23 task-first** |
-| **docstring / `__doc__`** | **doc-string decodes; first statement of body, stored on `__doc__` at `def` time; absent = `None` not `""`** | **NEW S22, [~]** | **S23 task-first** |
-| **`key=`** | **sorted calls it once per element, ONE argument, sorts by RESULTS, returns ORIGINAL items** | **NEW S22 (re-taught from S19), [~]** | **S23** |
-| **closure four layers** | **name → function object → `__closure__` TUPLE → CELL → `cell_contents`** | **NEW S22 — muddled twice in session, teach-back clean after shelf/dabba handle** | **S23, inside the closure-definition recall** |
-| **None-as-absence vs empty container** | **collectors give `()`/`{}` (empty thing exists); optional attributes give `None` (never created)** | **NEW S22, [~] — his `""` guess for absent `__doc__`** | **S23** |
+| keyword argument | `name=value` in the CALL, matched by NAME | [~] defined S21, never tested | S24 |
+| **UnboundLocalError** | **name IS local (compile-time), no value bound yet** | **SPELLING FIXED — typed correctly, unaided, S23** | mixed 3-error test |
+| mutating vs non-mutating | in-place mutators return `None`; check TYPE first | discriminator [x]; ROSTER settles in 1.8 | **1.8 — S24** |
+| **pre-order / post-order** | **work before the call / after the call** | **[x] S23, 6/10 — both labels correct cold, the S22 gap closed** | ~10 Sep |
+| **lambda** | **EXPRESSION form of a function; one-expression body, auto-returned** | **[x] S23 — two written cold in a drill (6/6 first attempt) + auto-return recalled unaided** | ~10 Sep |
+| **docstring / `__doc__`** | **FIRST statement of the body; POSITION makes it, not the quotes; absent = `None`** | **[~] S23 — placement owned, MECHANISM missed (predicted the string on a second-line literal)** | **S24** |
+| `key=` | called once per element, ONE argument, sorts by RESULTS, returns ORIGINAL items | **[x]-grade in use S23 (both drills), signature looked up not recalled** | ~10 Sep |
+| **cell** | **a TYPE — a one-slot box; `__closure__` is a TUPLE with one cell per free variable; `.cell_contents` is the value inside** | **⚠ NEWLY TAUGHT PROPERLY S23. Previously taught as labels only — that is why the layers collapsed twice.** | **S24, inside the closure recall** |
+| **closure four layers** | **name → function object → `__closure__` TUPLE → CELL → `cell_contents`** | **[~] — muddled AGAIN S23 (same error as S22), then the substrate was finally given** | **S24** |
+| None-as-absence vs empty container | collectors give `()`/`{}`; optional attributes give `None` | [~] S22; **reinforced S23 via `plain.__closure__` → `None` and absent `__doc__` → `None`** | S24 |
+| **THE FIVE CHECKS (mnemonic)** | **"Boundary pe khaali ek bahar mila"** | **[~] — could not name ONE cold in S23 despite S20 transfer; mnemonic built with him afterwards** | **S24 — fire the mnemonic cold** |
 
 ## RE-TEST QUEUE (live — update every session)
 
@@ -180,76 +192,89 @@ Histories live in ARCHIVE.md; this table carries only current status.
 | Frames: definition, three contents | S14 held WITH HINT | [~] due 29 Aug |
 | `<module>` entry point; running vs paused; stack not queue | S14 pass cold | [~] due 29 Aug |
 | Namespace vs frame | S14 not unaided | [~] due 29 Aug |
-| Execution pipeline; REPL vs script | FAILED S7, never re-run | [~] **DUE — overdue badly** |
-| Rebinding vs mutation; `==` vs `is`; implicit/explicit conversion; mutability+aliasing; shallow/deep copy; comparison ops; precedence; `+=`; negative `//`; `%` negatives; `**`; if-block scope; range(); function scope | all PROMOTED S16 | [x] — gauntlet + ~9 Sep |
+| Execution pipeline; REPL vs script | FAILED S7, never re-run | [~] **overdue badly** |
+| The S16 promotion block (rebinding vs mutation, `==` vs `is`, mutability+aliasing, copies, precedence, `+=`, negative `//` and `%`, `**`, if-block scope, `range()`, function scope) | all PROMOTED S16 | [x] — gauntlet + ~9 Sep |
 | `str` immutability | S17 supporting evidence | **[x] CANDIDATE — one clean later-day pass** |
 | `None`/`is None`/vs 0/False | S10 same-day only | [~] due 29 Aug |
 | Type conversion traps (`bool("False")`, `10/2` float) | owed | [~] due ~1 Sep |
 | Mutable default trap + sentinel | S12 pass | [~] due ~1 Sep |
-| In-place mutators return `None` | S18: concept owned, roster assumed | [~] roster settles in 1.8 |
-| **`__defaults__` — attribute on the function object, built at `def` time, a TUPLE** | **S22 PRODUCED COLD, FIRST TIME IN FIVE ATTEMPTS, 7/10. PROMOTED.** | **[x] — re-test ~31 Aug (gauntlet) then ~17 Sep** |
+| In-place mutators return `None` | S18: concept owned, roster assumed | [~] **roster settles in 1.8 — S24** |
+| `__defaults__` | S22 produced cold, 7/10 | [x] — gauntlet, then ~17 Sep |
 | Membership `in`/`not in` | S13 same-day | [~] due ~5 Sep |
 | Short-circuit | S14 pass | [~] one more pass promotes |
-| Iteration protocol (`iter()` once, `next()` per pass) | S15 same-day only | [~] due ~8 Sep |
-| **Iterator causation (forward-only state)** | **S22 PASS later-day, bug-first, unaided. PROMOTED at 5/10.** | **[x] — SHORT GAP: re-fire S23, then gauntlet. Bug-first always.** |
+| **Iteration protocol (`iter()` once, `next()` per pass, `StopIteration` to stop)** | **S23 FAILED — causation held, both NAMES lost. Retaught with live traceback.** | **[~] PRIORITY — cold S24** |
+| Iterator causation (forward-only state) | S22 pass; S23 causation held under a new bug shape | [x] — gauntlet, bug-first always |
 | Exceptions are signals | S18 pass | [x] ~10 Sep |
-| Loop-body name after zero iterations | S16 label wrong (`ValueError`) | [~] label re-test |
-| **Traceback: each line = one live frame** | **S22 first honest test: PARTIAL — frame link held, "problematic line" skew corrected, a→b→c teach-back correct** | [~] S23 cold ask, then ~16 Sep |
-| `print()` returns `None`; `sep`/`end` | S16 | [~] ~9 Sep |
-| `while` mechanics; `continue`-skips-update trap; nested loops; loop `else`; found-flag; `pass`; ternary | S16/S17 | [~] ~9–10 Sep |
+| Loop-body name after zero iterations | S16 label wrong | [~] label re-test |
+| Traceback: each line = one live frame | S22 partial; **S23 read one correctly in the wild, but cued** | [~] S24 cold, then ~16 Sep |
+| `while` mechanics; `continue`-skips-update; nested loops; loop `else`; found-flag; `pass`; ternary | **S23: `while`/`for` distinction PASSED; loop `else` and ternary FLAT GAPS; `pass` mechanism missing** | [~] **S24 — this cluster is the weakest thing in the file** |
 | `if`/`elif`/`else` chain | S17 pass cold | [x] gauntlet-flagged, ~10 Sep |
 | Mutable/immutable discriminator | S18 pass + corrected the rule | [x] ~10 Sep |
-| **Cell causation (five calls, five cells, no collision)** | **S22 PASS 7/10 + tricky follow-up (same-arg calls → separate cells: the CALL creates the object). PROMOTED. `cell_contents` spelling fixed.** | **[x] — ~31 Aug, then ~17 Sep** |
-| **Closure definition (one line)** | **S22 FAILED at 5/10 — layers muddled, survival clause missing. Clean line handed after; four-layer walk retaught (shelf/dabba), teach-back clean.** | **[~] PRIORITY — cold S23** |
+| Cell causation (five calls, five cells) | S22 pass 7/10 | [x] — ~31 Aug, then ~17 Sep |
+| **Closure definition (one line)** | **S23 FAILED AGAIN, 7/10 — identical two defects as S22. ROOT CAUSE IS MENTOR-SIDE (see resume item 3).** | **[~] TOP PRIORITY — cold S24** |
+| **Closure APPLICATION (write one under a forcing constraint)** | **S23: `drills/s23_sort_key.py` reached 6/6, but through THREE guided debug cycles — missing argument, call-vs-object, missing `abs()`. Not unaided.** | **[~] — needs one clean unaided build** |
+| **Function object vs call (`f` vs `f()`)** | **S23: the drill's central bug. Two Socratic attempts failed; taught directly. `key=f()` runs it NOW.** | **[~] NEW — re-test S24** |
 | Recursion: base/recursive case, frames stacked | S20 same-day | [~] ~16 Sep |
-| **Pre-order vs post-order (transfer)** | **S22 PASS 10/10 — full four-frame trace, the S20 one-mutating-n error did NOT recur. PROMOTED. Labels were a gap → term queue.** | **[x] — gauntlet, then ~17 Sep** |
+| Pre-order vs post-order (transfer) | S22 pass 10/10 | [x] — gauntlet, then ~17 Sep |
 | Identity-value rule (as a RULE) | S20, untested as rule | [~] ~16 Sep |
 | Termination: base exists + step lands | S20 bug-hunt pass | [~] strong |
 | Printer vs calculator | S20 | [~] ~16 Sep |
 | Pure functions + disguised mutator | S20; label "pure" owed | [~] ~16 Sep |
-| Five checks | S20 transfer on first use; **not visibly run on S22 drills** | [~] REQUIRE explicitly next drill |
+| **Five checks** | **S23: could not name one cold (GAP). Applied them well WITH the list in hand and found a real bug. Mnemonic now exists.** | **[~] — fire the mnemonic cold S24** |
 | Argument count ⊥ return value | S20 category confusion | [~] ~16 Sep |
-| Trace-tail truncation | S17 did not fire | [~] watch, require final cycle |
-| **`global` (compile-time locality; read/mutate/rebind)** | **S22 PASS via task-first drill (3/3 pytest) + full mechanism unaided, 10/10. PROMOTED. Evidence: `drills/s22_counter.py`.** | **[x] — gauntlet, then ~17 Sep** |
-| **`*args`/`**kwargs` (collect/unpack mirror, empty cases)** | **S22 PASS via drill (4/4 pytest) + mirror stated both ways, 8/10. PROMOTED. Evidence: `drills/s22_report.py`.** | **[x] — ~7 Sep** |
-| **Compile-time locality TRAP inside a closure (`start = start + 1` kills the cell)** | **S22: predicted 11 (MISS), repaired unaided when pointed at the line** | **[~] NEW — re-test; it is the `nonlocal` motivation for 1.13** |
-| **Lambdas** | **taught S22; [PREDICT]s passed (closure transfer 15, squares sort); two-param question his own** | **[~] first cold test S23, task-first** |
-| **Docstrings / `__doc__`** | **taught S22; [PREDICT] miss on absent case (`""` for `None`) → discriminator taught** | **[~] first cold test S23, task-first** |
+| Trace-tail truncation | S17 did not fire | [~] watch |
+| `global` | S22 pass 10/10, `drills/s22_counter.py` | [x] — gauntlet, then ~17 Sep |
+| `*args`/`**kwargs` | S22 pass 8/10, `drills/s22_report.py` | [x] — ~7 Sep |
+| Compile-time locality TRAP inside a closure | S22 miss → unaided repair | [~] — the `nonlocal` motivation for 1.13 |
+| **Lambdas** | **S23 PASS — `drills/s23_ordering.py`, 6/6 cold first attempt, unaided. PROMOTED.** | **[x] — ~10 Sep** |
+| **Docstrings / `__doc__`** | **S23 SPLIT: placement unaided and correct; mechanism (first-statement rule) MISSED.** | **[~] — S24** |
+| **Spec-vs-implementation agreement (check 5, generalised)** | **S23 NEW: his docstring said "last digit", his code said `% 10`; they disagree for `-13`. He judged BOTH partly wrong and said the contract should be explicit — a mature answer.** | **[~] strong first showing** |
 
 ## WATCH AREAS (full histories in ARCHIVE.md)
 - Structured foundation over patches; solo-first; AI-reliance guarded.
-- **Jump-ahead pattern:** fires on BOREDOM as well as friction (S17). Ran in
-  reverse in S18 (protected ledger integrity over wanted topic). Weakening;
-  not closed. **Not observed S20–S22.**
-- **Term/label retention — first-class watch area.** S22 evidence BOTH ways:
-  mechanisms promoted six times, while labels slipped four times (pre/post-order
-  gap, "UnboundError" twice, "inner iterable" for iterator, `cell_content`).
-  The countermeasure works on decodable labels (S18 exception triad holds);
-  arbitrary labels (traceback, lambda, `__defaults__` history) need
-  brute-force spaced repetition. **His own self-diagnosis in S22: "if not used
-  for long I tend to forget terminology" — accurate.**
-- **Right answer / wrong or missing mechanism:** standing audit; S22 was
-  CLEAN — every promoted answer carried its mechanism.
-- **Wrong-domain / surface-syntax flaw** (most persistent, ~S4–S15): not
-  observed S22.
-- **Depth-before-answer:** S22 first answer to the post-order recall was
-  output-only; the trace came complete on ONE re-ask. Keep re-asking.
-- **Layer-muddle (NEW, S22): tuple/cell/cell_contents confused twice in one
-  session** — watch it in the closure re-test; shelf/dabba handle repaired it.
-- Five checks not yet self-initiated on drills — require verbally until he
-  runs them unprompted.
-- False attribution: his record stands 26 pushbacks, zero wrong. When he says
-  a rule broke, check the rule.
+- **Jump-ahead pattern:** not observed S20–S23. Weakening; not closed.
+- **Term/label retention — first-class watch area.** S23 evidence both ways:
+  **eight promotions** (including labels that had slipped before —
+  iterator, pre/post-order) against **two flat gaps** (loop `else`, ternary)
+  and **one demotion** (`StopIteration` → guessed name). Decodable labels are
+  holding; arbitrary ones still need brute-force spacing. **`UnboundLocalError`
+  spelling is now FIXED.**
+- ⚠ **CONFIDENCE CALIBRATION RAN HOT — NEW, S23, and it matters because his
+  ratings had been a usable targeting signal for six sessions.** Three
+  over-ratings in one session: 8 on precedence with associativity entirely
+  missing; 8 on `sep`/`end` with `sep` wrong; **7 on a closure definition that
+  repeated both of S22's defects.** Named to him in session. **Watch whether
+  this was one bad day or a drift; if it drifts, the rating stops being usable
+  for setting re-test intervals.**
+- **Depth-before-answer:** ⚠ **fired hard in S23.** The five-checks report was
+  asked FOUR times — once as item 1 at the top of a short message — and skipped
+  each time; he answered the mechanism question instead and moved on. Named to
+  him directly. **He also declared the first drill "works" without running it;
+  it crashed on the next line.** RUNNING IT IS PART OF THE ANSWER.
+- **Layer-muddle:** recurred S23 (`cell_contents` called a tuple, second
+  session running) — **but the root cause is now known to be mentor-side.**
+  Re-classify only after the S24 re-test.
+- **Right answer / wrong or missing mechanism:** S23 showed the *inverse* and
+  it is worth naming — **working code with the mechanism absent** (docstrings
+  placed correctly with no idea why; lambdas written correctly before the
+  auto-return rule was stated). Task-first recall makes this visible; it did
+  not used to be.
+- False attribution: **28 pushbacks, zero wrong.** S23 raised three: syntax
+  lookup is legitimate (upheld); "we haven't studied unit testing" (partially
+  upheld — pytest is a harness he only runs, testing is not taught); **"why
+  didn't you tell me all this when you used `cell` the first time" (UPHELD,
+  and it found a real two-session mis-attribution).**
 
-## CURIOSITY PARKING LOT (unchanged S22 except as noted)
+## CURIOSITY PARKING LOT
 - venv; VS Code practices; notebooks; JIT; IEEE 754 (1.13, promised); 32/64-bit;
   `globals()`/`locals()` drill; senior traceback read (1.9); .pyc (1.10); GIL
   (1.13); concurrency (post-Layer 1); certifications (not scheduled); GC (1.13)
 - `__iter__`/`__next__` + generators — 1.13, the promised S15 payoff
-- Recursion + nested functions — DELIVERED (S18–S20). Line retired.
-- `reversed()` / `l[::-1]` — lands in 1.8 slicing, next session
-- **NEW S22: lambdas with `*args` (parameter list works like `def`'s) — noted
-  in passing when he asked about two-parameter lambdas; nothing owed, the
-  question was answered in session.**
+- `reversed()` / `l[::-1]` — lands in 1.8 slicing, **next session**
+- **NEW S23: unit testing / pytest as a SUBJECT.** He correctly observed it has
+  never been taught — he only runs the command. Not scheduled in Layer 0;
+  say so plainly if it comes up again, and keep using pytest as a harness.
+- **NEW S23: `nonlocal`** — surfaced implicitly by the closure locality trap.
+  Belongs to 1.13. Do not open early.
 
 ---
