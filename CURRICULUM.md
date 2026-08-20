@@ -994,6 +994,24 @@ false.
   zero/empty; test one; ask what type or sign you silently assumed; if
   recursive, check the step always LANDS on the base. Five checks, ninety
   seconds.**
+  **S24 COLD RE-TEST — 4/5 UNAIDED, later day, self-rated 5/10 (well
+  calibrated). The mnemonic "Boundary pe khaali ek bahar mila", built with him
+  in S23, WORKED: three days earlier he could not name one.** Boundary,
+  khaali, ek and bahar all came back with correct content. **`Mila` did not —
+  he glossed it "similar inputs".** Check 5 has now been generalised past
+  recursion and restated for him in both languages: **`mila` compares the
+  PROMISE (docstring/spec) against the CODE, one sentence at a time — "iske
+  peeche kaunsi line hai?"** He then performed it correctly on
+  `take_last([])` without recognising that he was doing it — ruling the
+  `IndexError` NOT a bug because the spec says the list may be assumed
+  non-empty. **Naming the move he had already made is what landed it.**
+  He then applied all five to `drills/s24_lists.py` and found the one real
+  edge case in it. **Stays [~] on the missing fifth; one clean 5/5 promotes.**
+  ⚠ **He also challenged the cost — "shouldn't I just write the relevant
+  cases?" PARTIALLY UPHELD and the resolution is worth keeping: SCAN all five,
+  REPORT only the ones that bite. Pre-filtering by "relevant" uses the same
+  assumption that produced the bug — which is exactly how the S20 `n <= 10`
+  boundary looked irrelevant until it was the bug.**
 
 - [~] **[DRILL] THE BUG HUNT — and THE METHOD TRANSFERRED ON FIRST USE.**
   ```python
@@ -1074,10 +1092,28 @@ false.
 > items]`). Both are listed in 1.8. Mark them seen-but-not-taught.**
 
 #### 1.8 Data Structures
-- [ ] list — methods, indexing, slicing (**pre-loaded S17: the mutating /
- non-mutating method distinction and the `sort`/`sorted`,
- `reverse`/`reversed` name-pairs are already taught — cash them in here,
- and this is where the ROSTER finally gets owned rather than derived**)
+- [~] list — methods, indexing, slicing — **TAUGHT S24** (`drills/s24_lists.py`,
+ 11/11 pytest, one guided fix). Covered: INDEXING formally (0-based, last
+ index is `len-1`, negative indices, `IndexError`) — **it had never been
+ defined, despite `__closure__[0]` being used for two sessions; caught by
+ checking rather than assuming**. SLICING in full (`[start:stop:step]`,
+ half-open like `range()`, omitted ends, negative step, `l[:]` as the copy
+ idiom, slices build a NEW list, out-of-range slices return `[]` and NEVER
+ raise, same operator on `str` — which retro-explains the `word[:-1]` given
+ as a minimum in S20 and DISCHARGES pushback 25). METHOD ROSTER exercised
+ cold: `append`, `extend`, `insert`, `sort`, `remove`, `pop` — all six
+ mutating, five returning `None`, `pop` returning the removed item.
+ ⚠ **THE REAL YIELD IS THE CORRECTED DISCRIMINATOR: the S17 tell runs ONE
+ WAY ONLY. returns `None` ⇒ mutating (true); mutating ⇒ returns `None`
+ (FALSE — `pop` is the counterexample). TYPE first, return value as a
+ one-directional hint, never as a biconditional.**
+ NOT YET [x]: everything here is same-session. He inverted `sort`/`sorted`
+ in the volley (`sort` "returns a new list for sure") — the block was
+ tagged [PREDICT], so **that miss is NOT ledgered**; it needs a clean cold
+ [RECALL] pass. Shallow-vs-deep copy PARKED to "nested data structures".
+- [ ] **Copy semantics: a slice copies the REFERENCES, not the items** —
+ parked S24 when he described `tools[:]` as "an identical new list object".
+ Only bites on nested structures; belongs with the bullet below.
 - [ ] tuple — immutable; when to use over list
 - [ ] dict / [ ] set
 - [ ] When to use which — decision framework

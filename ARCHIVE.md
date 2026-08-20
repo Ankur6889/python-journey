@@ -367,7 +367,23 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **23**
+- Sessions Completed: **24**
+- **SESSION 24 (Thu 20 Aug 2026) — 1.8 OPENED; INDEXING AND SLICING DEFINED AT
+ LAST; THE S17 DISCRIMINATOR CORRECTED; AND THE MNEMONIC WORKED.** One-day gap;
+ interval gate applied, seventh session running. He chose material over the
+ recall queue at the open, so the queue is carried forward INTACT and he asked
+ for it first next time. **Indexing had NEVER been formally taught** — found by
+ checking the curriculum rather than assuming, after two sessions of using
+ `__closure__[0]`. **Slicing taught in full, discharging pushback 25 from S20.**
+ The list method roster was exercised cold and produced the session's real
+ yield: **the S17 tell is ONE-DIRECTIONAL** — returns `None` ⇒ mutating, but
+ mutating ⇏ returns `None`, with `pop` as the counterexample. He had been
+ reading it as a biconditional. `drills/s24_lists.py` reached **11/11** with a
+ single guided fix. **THE FIVE-CHECKS MNEMONIC BUILT IN S23 SURVIVED THREE DAYS
+ AND RETURNED 4/5 COLD**, after a flat gap the session before — the first hard
+ evidence in this file that a hook beats a re-teach for arbitrary labels.
+ **Count S24 as ~0.15 of a subsection** — low, but 1.8 is open and the two
+ prerequisites it had been blocked on are now taught.
 - **SESSION 23 (Wed 19 Aug 2026) — THE TERM BACKLOG CLEARED, EIGHT PROMOTIONS,
  AND A TWO-SESSION MIS-ATTRIBUTION CORRECTED.** Two-day gap; interval gate
  applied, sixth session running. The term-tax, skipped in S22 and two sessions
@@ -606,6 +622,7 @@
 | 20 | **Close the owed closure recalls + RECURSION AT LAST + pure functions + edge-case analysis** | **[RECALL] closure definition cold (4/10); [RECALL] cell causation cold — CORRECT UNAIDED at last (5/10); [RECALL] `traceback` → 0/10 and retaught from scratch; then 1.7.9 RECURSION in full (base/recursive case, pre-order vs post-order, value-returning recursion, identity-value base rule, `RecursionError`, the two termination conditions, printer-vs-calculator); [PREDICT] post-order countdown (FAILED), [PREDICT] `total(4)` (PASSED both parts); [DRILL] `count_down_by` (passed, tuple flaw); [DRILL] `digit_sum` (recursive case unaided, base-case boundary bug); 1.7.11 EDGE-CASE ANALYSIS — the five checks, taught as a procedure; [DRILL] `first_char` bug hunt (PASSED via check 2); 1.7.10 pure functions vs side effects + [PREDICT] `scale` (3/3)** | **Complete — 1.7 advanced to four remaining items** | **THE CELL CAUSATION CAME BACK CORRECT UNAIDED after five attempts across two days. ZERO PROMOTIONS — but for a NEW reason: the file's FIRST UNDER-RATING (5/10 on an ~85%-correct answer). ⚠ THE MAJOR FINDING IS A MENTOR FINDING: `traceback` had been FIRED for three sessions and NEVER TAUGHT; the prior "failures" were invalid measurements and are struck. TENTH define-before-building breach (slicing used untaught) → PUSHBACK 25, upheld. Running total TWENTY-FIVE, zero wrong. THREE NEW RULES, all his — DOUBT GATE, RESPONSE LENGTH CAP, DEPTH-BEFORE-ANSWER — and the disclosure behind rule 2 (he does not read long messages to the end) retro-explains several logged student lapses. EDGE-CASE ANALYSIS added to the curriculum as 1.7.11 at his request; it transferred on first use.** |
 | 22 | **Pay the deferred recall queue + close 1.7** | **[RECALL] post-order transfer (fresh `climb(3)`, frame trace demanded and delivered); [RECALL] cell causation + same-argument tricky case + the `start = start + 1` locality trap (miss → unaided repair); [RECALL] closure definition cold (FAILED 5/10, four-layer walk retaught); [RECALL] traceback line-=-frame (partial, repaired, teach-back correct); TASK-FIRST DRILLS: `s22_counter.py` (forced `global`, 3/3) and `s22_report.py` (forced collectors, 4/4); [RECALL] `__defaults__` (COLD AT LAST); [RECALL] iterator causation bug-first (later-day pass); then LAMBDAS (key=, closure transfer, two [PREDICT]s passed) and DOCSTRINGS (`__doc__`, None-absence discriminator) — 1.7 CLOSED** | **Complete — SIX promotions, 1.7 closed, first two repo drills** | **First run of the new promotion rule: correctness promotes, rating sets the gap — iterator causation promoted at 5/10 with a deliberately short re-test. Label slips ran opposite to mechanism wins all session (pre/post-order gap, "UnboundError" ×2, `cell_content`, "inner iterable") — consistent with the S12 diagnosis. Zero pushbacks raised. Mentor misses: term-tax skipped on a valid later day; lambda teaching turn ran long undeclared. Decisions: cold build block this weekend; queue tooling = script.** |
 | 23 | **Clear the overdue term-tax + task-first recalls; 1.8 planned but not reached** | **TERM-TAX in two waves (~24 rows swept cold); [RECALL] iterator causation bug-first via a two-loop exhaustion program (causation held, BOTH protocol names lost); [RECALL] closure definition cold (FAILED again, 7/10, same two defects as S22) → cells finally taught as a TYPE with `type()` output and a two-free-variable example; TASK-FIRST DRILLS: `s23_sort_key.py` (closure forced by the one-argument `key=` constraint, 6/6 after three guided debug cycles — missing argument, call-vs-object, missing `abs()`) and `s23_ordering.py` (lambdas + docstrings under a no-third-`def` constraint, **6/6 cold first attempt**); the FIVE CHECKS re-taught after a flat gap and a mnemonic built with him; [RECALL] docstring placement mechanism (MISS — second-line literal predicted to survive)** | **Complete — EIGHT promotions, one demotion, lambdas closed; ⚠ 1.8 NOT OPENED** | **THE TERM BACKLOG IS CLEARED. Eight promotions including the modulo identity, produced cold and unprompted to find a real negative-modulo bug in his own lambda — the strongest single moment of the session and an item owed since S13. `UnboundLocalError` typed correctly, spelling fixed. THREE pushbacks, all sound (syntax-lookup legitimacy; "unit testing was never taught" — partially upheld; **"why didn't you tell me all this when you used `cell` the first time" — UPHELD and it corrected a two-session mis-attribution**), running total TWENTY-EIGHT, zero wrong. TWO NEW WATCH AREAS: **confidence calibration ran HOT for the first time** (three over-ratings, including 7/10 on a repeat failure), and **depth-before-answer fired hard** — the five-checks report was asked four times and skipped each time, and he declared a drill "works" without running it. Mentor misses: cells taught as labels in S22; the call-vs-object question ground through two failed Socratic attempts before going direct.** |
+| 24 | **OPEN 1.8 — lists, and the two prerequisites it was blocked on** | **Governance: weekend cold build block CONFIRMED for Sat 22 Aug; the parked [RECALL]-budget rule offered twice and declined twice in favour of material. INDEXING defined for the first time (0-based, `len-1` as the last index, negative indices, `IndexError`) after a check showed it had never been taught. SLICING in full — `[start:stop:step]`, half-open like `range()`, omitted ends, negative step, `l[:]` as the copy idiom, slices build a NEW list, out-of-range slices return `[]` and never raise, the same operator on `str` — discharging pushback 25 from S20. [TEACH-BACK] slice-vs-alias (correct, and he separated mutation from rebinding unprompted). [PREDICT] the six-method roster volley (`append` `extend` `insert` `sort` `remove` `pop`) — 3/6, then the ONE-DIRECTIONAL correction to the S17 tell. [RECALL] the five checks cold via the S23 mnemonic — 4/5, `mila` missing, re-taught in English and Hindi. TASK-FIRST DRILL `drills/s24_lists.py` — four functions under observable-behaviour-only contracts, 11/11 pytest after one guided fix** | **Complete — 1.8 OPENED, ~15%** | **NO PROMOTIONS, correctly — everything taught was same-session; the two later-day items that DID hold (aliasing, rebinding-vs-mutation) were already [x] and simply re-passed. THE SESSION'S FINDING IS THE MNEMONIC: 4/5 cold after a flat gap three days earlier. THREE pushbacks (running total 31): the `last_three` spec is ambiguous — UPHELD, mentor error, I had written "oldest" and imported a time ordering that was never in the spec; "isn't the corrected code a proof of my understanding?" — **NOT UPHELD, the first non-upheld challenge in the file's history**, answered with reasoning rather than authority and accepted; "shouldn't I just write the relevant cases?" on the five checks — PARTIALLY UPHELD, resolved as SCAN all five / REPORT what bites. Mentor misses: the roster volley was tagged [PREDICT] but `sort` had been taught in S17, so a genuine recall miss went unledgered — declared to him in session rather than back-dated; and the `last_three` docstring was ambiguous. Depth-before-answer fired twice and BOTH re-asks produced the correct mechanism in one line.** |
 | 21 | **Adopt the seven review proposals + move to VS Code/Claude Code + open the 1.7 tail** | **Governance: all seven 16-Aug proposals ACCEPTED (RULES v2). Tooling: repo/drills/pytest workflow established. Taught `global` (compile-time locality, `UnboundLocalError`, read/mutate/rebind rule) with [PREDICT]s on the read-only and mutation cases (both correct); taught `*args`/`**kwargs` (keyword args defined after his catch, collectors, empty cases, signature order, the collect/unpack mirror) with [PREDICT]s and [TEACH-BACK]s throughout** | **Complete — 1.7 down to TWO items (lambdas, docstrings)** | **Same-day session (~2h after S20): interval gate applied unprompted, term-tax skipped, the four queued [RECALL]s deferred — zero promotions, correctly. ONE pushback, upheld ("keyword argument" used before definition — 11th define-before-use breach; running total 26, zero wrong; denominator: 1 raised / 1 upheld). Session ended at his call before lambdas/docstrings.** |
 
 
@@ -1308,3 +1325,149 @@ implementation** — his docstring claimed "last digit" while his code computed
 `% 10`, and the two disagree for negatives. Asked which was wrong, he said
 both, and that the contract should be stated explicitly. That is an
 engineering answer, not a Python one.
+
+### What Session 24 established
+
+**THE SESSION OPENED WITH A GOVERNANCE REFUSAL, AND IT WAS THE RIGHT ONE.**
+The interval gate ran first: one day since S23, so cold work was promotable.
+The parked rule candidate — *"a [RECALL] block has a budget; state it at the
+top and stop when it is spent"* — was put to him twice, and twice he moved past
+it: *"lets start with new content now we will do recall later."* **Note what
+that is: the rule was proposed because two consecutive sessions let the recall
+queue eat the teaching slot, and he settled it by DOING the thing the rule
+would have forced rather than by writing the rule.** 1.8 opened as a result,
+one session after it slipped. The candidate stays parked; if he declines a
+third time, the behaviour has answered it and it should be dropped.
+The Saturday 22 Aug cold build block was confirmed in one line, as owed.
+
+**THE MAJOR FINDING IS A MENTOR FINDING, AND IT WAS CAUGHT BY LOOKING RATHER
+THAN BY BEING CAUGHT.** Before teaching slicing, the curriculum was searched
+for `indexing` — and it returned nothing but `__closure__[0]` in code blocks.
+**Indexing had never been formally taught in twenty-three sessions, while
+being used since S22.** This is the same class as `traceback` (S20), `list()`
+(S15), and slicing itself (S20, pushback 25) — but for the first time it was
+found by a pre-emptive check instead of by the student's objection. The
+declaration was made out loud before the material opened. **That is the
+define-before-building rule finally being self-enforcing rather than
+student-enforced, which is what the S18 note asked for.**
+
+**INDEXING, THEN SLICING — AND SLICING IS THE DEBT FROM S20 DISCHARGED.**
+Indexing: `[]` takes a position and returns the object there; 0-based; the last
+valid index is `len - 1`; negatives count back from the end; out of range
+raises `IndexError`. **A precision fix was issued and it matters for
+interviews:** he said *"the length is `len(list) - 1`"*. The length is the
+count; `len - 1` is the last INDEX. Slicing then followed: `[start:stop:step]`,
+**half-open exactly like `range()`**, which he already owns — omitted ends,
+negative step, `l[:]` as the copy idiom, and the same operator on `str`, which
+retro-explains the `word[:-1]` he was given as a bare minimum in S20.
+
+**THE BEST MOMENT OF THE SESSION WAS UNPROMPTED DEPTH.** Asked whether
+`tools[1:3]` returns an item or a list, he answered *"it returns a new list —
+oh that means it creates a new list object"* and went a level past the
+question on his own. **That is the probing pass the depth-before-answer rule
+exists to force, running without the rule.** It was cashed in immediately:
+`b = tools` versus `c = tools[:]`, `append` on `b`, and the observation that
+`tools is b` is `True` while `tools is c` is `False`. His explanation used
+`alias`, `object` and `mutate` correctly and closed with **"I didn't see
+rebinding here"** — separating mutation from rebinding cold, unasked, on a
+later day. Both `alias` and `rebind` re-passed on that alone.
+
+**THE ROSTER VOLLEY, AND THE CORRECTION IT PRODUCED.** Six list methods —
+`append`, `extend`, `insert`, `sort`, `remove`, `pop` — were fired for
+name-decoding: does it change the list, and what does the call evaluate to?
+He got three. He believed `extend` builds a new list ("append already adds
+elements, so extend must do something different") and that `sort` *"returns a
+new list object for sure"*. All six mutate; five return `None`; **`pop`
+returns the removed item.** Asked what that does to the tell he was using, he
+answered *"mutating methods usually return None, which is correct to an
+extent"* — and the sharpening is the session's real yield:
+
+> **The S17 tell runs ONE WAY ONLY. Returns `None` ⇒ mutating (returning
+> `None` has no other purpose). Mutating ⇒ returns `None` is FALSE, and `pop`
+> is the counterexample. TYPE first, return value as a one-directional hint,
+> never as a biconditional.**
+
+**He had been reading a one-directional heuristic as an equivalence, and that
+is precisely the shape of error the depth doctrine's "give the discriminator,
+not the roster" policy is exposed to.** The roster was then owned by running
+it, not by being handed a table.
+
+**A MENTOR TAGGING ERROR, DECLARED IN SESSION AND NOT BACK-DATED.** The volley
+was tagged [PREDICT] on the grounds that the methods were unseen — but `sort`
+was taught in **S17** as half of the `sort`/`sorted` pair, so that line was
+[RECALL] and his inversion of it was a genuine retention miss. **Because
+[PREDICT] had been declared before the questions, the miss was NOT entered in
+the ledger** — booking a PREDICT miss as a RECALL miss is exactly what S16
+rule 1 forbids, and the prohibition does not bend just because the miss is
+real. It went to the re-test list for a clean cold pass instead. **The S18
+principle — an unseen method on a taught type tests the discriminator — is
+sound, but it does not license sweeping a TAUGHT method into the same block.**
+
+**THE FIVE CHECKS: THE MNEMONIC WORKED, AND THIS IS THE FINDING TO CARRY.**
+In S23 he could not name one of the five checks cold, three days after they had
+been taught and successfully transferred; a hook was built with him,
+**"Boundary pe khaali ek bahar mila."** Fired cold in S24 he returned
+**four of five with correct content** — boundary conditions, empty/zero/None,
+the smallest non-empty case, and the value outside the assumption — and
+self-rated **5/10, which was well calibrated** (*"I still need to learn to
+apply it"*). **`Mila` was the miss**, glossed as "similar inputs". It was
+re-taught, generalised past recursion, and given in both languages: **`mila`
+holds the PROMISE (docstring/spec) against the CODE, one sentence at a time —
+"iske peeche kaunsi line hai?"** ⚠ **The decisive detail: he had already
+PERFORMED `mila` correctly minutes earlier without recognising it**, ruling the
+`IndexError` on `take_last([])` NOT a bug because the spec says the list may be
+assumed non-empty. **Naming the move he had already made is what landed it,
+and that is a better teaching instrument than another definition.**
+
+**THE DRILL — `drills/s24_lists.py`, 11/11.** Four functions specified purely
+by what the CALLER must be able to observe, with no mechanism named, so that
+choosing between mutating and non-mutating WAS the exercise: return a sorted
+copy leaving the caller's list intact; sort the caller's own list and evaluate
+to nothing usable; remove the last item and hand it back; and return the last
+three values without raising for any length including zero. **Three of four
+were right first time**, and `last_three` handled the empty and short cases
+correctly **by construction, before he had been told that slices never raise**
+— the "right answer, mechanism absent" pattern in its benign direction.
+The failure was `return readings[:].sort()`: the slice copy was the correct
+instinct and the bug sat downstream of it. Pointed at the one line, he fixed it
+by separating the mutation from the return.
+
+**THE FIRST NON-UPHELD PUSHBACK IN THE FILE'S HISTORY.** Re-asked what
+`.sort()` evaluates to, he challenged the question itself: *"isn't the
+corrected code a proof of my understanding?"* **It is a reasonable claim and it
+was answered with reasoning rather than authority:** the fix followed a
+pointer, so it is guided rather than unaided, and his own S23 record contains
+two cases of correct code with the mechanism absent — docstrings placed
+perfectly with no idea why, lambdas written before the auto-return rule was
+known. **For this student, on this evidence, "it works" has already been shown
+not to imply "I know why."** He accepted it and then answered the question
+correctly in one line. Running total: **31 raised, 30 upheld or part-upheld,
+one not upheld.** The other two: **the `last_three` docstring was ambiguous —
+UPHELD, a mentor error** (it said "oldest of the three", importing a time
+ordering that was nowhere in the spec; corrected in chat rather than in the
+file, since the drill file was his); and **"shouldn't I just write the relevant
+cases?"** on the five-checks report — **PARTIALLY UPHELD**, resolved as
+**SCAN all five, REPORT only the ones that bite**, with the reason stated:
+pre-filtering by "relevant" applies the same assumption that produced the bug,
+which is exactly how his S20 `n <= 10` boundary looked irrelevant until it was
+the bug.
+
+**DEPTH-BEFORE-ANSWER FIRED TWICE, AND BOTH RECOVERIES TOOK ONE LINE.** Asked
+to mark his own six roster answers, he restated the output instead; asked what
+`.sort()` evaluates to, he fixed the code instead. **Both times the re-ask
+produced a correct, complete mechanism immediately.** That is the S20
+`digit_sum` shape exactly — he has it and skips it — and it confirms the
+intervention: **re-ask, do not re-teach.**
+
+**CONFIDENCE CALIBRATION: MIXED, SO S23's THREE OVER-RATINGS ARE NOT YET A
+DRIFT.** One hot reading (*"for sure"* attached to a wrong answer about `sort`)
+against one well-calibrated (5/10 on a 4/5 answer, with an accurate reason for
+the number). Keep watching; do not yet discount the rating as a targeting
+signal.
+
+**ZERO PROMOTIONS, AND THAT IS THE CORRECT OUTCOME.** Everything taught in S24
+was same-session. The two items that held on later-day evidence — aliasing and
+rebinding-vs-mutation — were already [x] and simply re-passed. **1.8's list
+bullet moves [ ] → [~]; nothing moves to [x].** The recall queue was untouched
+at his request and carries forward intact, and he asked for it first next
+session in his own words.
