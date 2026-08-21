@@ -124,7 +124,7 @@
 - [x] Identity operators (is, is not) — **CONFIRMED S16**
 - [~] Membership operators (in, not in) — S13
 - [~] Bitwise operators — S13, AWARENESS ONLY by design
-- [x] Operator precedence / [x] Associativity — **PROMOTED S16**
+- [x] Operator precedence / **[~] Associativity — DEMOTED S25.** Promoted S16; asked ALONE and cold in S25 he answered **"gap"** — a flat empty. Re-taught S25 with a hook (*rank barabar? ab direction dekho; sab left se, sirf `**` right se*). **The S16 promotion had bundled it with precedence and never tested it on its own.**
 - [x] Augmented assignment (+=, -=, etc.) — **PROMOTED S16**
 - [~] Short-circuit evaluation in and/or — S13
 
@@ -148,7 +148,7 @@
  ALL. Self-rated 10/10. PROMOTED — this was the last item owed from S16.**
 - [~] **Truthiness — TAUGHT S14.** Emptiness falsy, zero falsy, everything
  else truthy.
-- [~] **THE ITERATION PROTOCOL — TAUGHT S15.** What `for x in <iterable>`
+- [x] **THE ITERATION PROTOCOL — TAUGHT S15, DEMOTED S23, PROMOTED S25. All three parts cold: `iter()` once, `next()` per pass, `StopIteration` to stop (`drills/s25_iteration.py`, 7/7). THIS UNBLOCKS LIST COMPREHENSIONS.** What `for x in <iterable>`
  actually does: **Stage A**, call `iter()` ONCE to get an iterator;
  **Stage B**, call `next()` on each pass — the returned item is bound to
  `x` and the block runs. When the iterator is exhausted `next()` raises
@@ -177,7 +177,7 @@
  scope, not BLOCK scope. `for`, `if`, `while` and `try` create no new
  scope. Names born inside them survive in the enclosing scope. Only a `def`
  makes a new scope.**
-- [~] **`StopIteration` IS A SIGNAL, NOT A VALUE — TAUGHT S15.** An
+- [x] **`StopIteration` IS A SIGNAL, NOT A VALUE — TAUGHT S15, DEMOTED S23 ("EndofIteration"), PROMOTED S25 cold at 7/10.** An
  exception travels; it is never bound to a name. `i` keeps `2` because the
  final `next()` RAISED instead of RETURNING, so no binding occurred.
 - [~] **`NameError` — DEFINED S15** via the `range(0)` case. Named after the
@@ -199,7 +199,7 @@
  above the outer loop → the inner body runs only on the first pass, then
  silently never again). **Reuse that image — it is the best handle on the
  causation gap he keeps failing.**
-- [~] **Loop `else` clause — TAUGHT S16, EARNED S17.** Runs if the loop
+- [~] **Loop `else` clause — TAUGHT S16, EARNED S17, FLAT GAP S23, RE-TAUGHT S25 WITH A HOOK (read it as `nobreak`).** Runs if the loop
  completed WITHOUT hitting `break`; skipped if it broke out. **It has
  nothing to do with the `else` of `if` — it must not be read as
  "otherwise".** **THE S16 PREREQUISITE BREACH IS NOW REPAIRED: the owed
@@ -243,7 +243,7 @@
  structure right with `print(found)` writing bare names instead of strings
  and a missing colon; iterations 3 and 4 were **whitespace only, which is a
  CHANNEL ARTEFACT and not a student error — see Session 17 rule 3.**
-- [~] **`pass` statement — TAUGHT S17.** A no-op: a statement that does
+- [~] **`pass` statement — TAUGHT S17, FLAT GAP S25, RE-TAUGHT S25 WITH A HOOK (`pass` = jagah bharo / `continue` = agla chakkar / `break` = bahar niklo).** A no-op: a statement that does
  nothing at all. **It exists because of a hard syntactic rule — once a colon
  opens a block, that block cannot be empty; leaving it empty raises
  `IndentationError: expected an indented block`.** So when the syntax
@@ -260,7 +260,7 @@
  not a body.** A block containing only `# todo` still raises
  `IndentationError`, because comments are not code. He supplied the
  class-stub use case himself from prior exposure.
-- [~] **Ternary / conditional EXPRESSION — TAUGHT S17.** `x if condition
+- [~] **Ternary / conditional EXPRESSION — TAUGHT S17, FLAT GAP S23, RE-TAUGHT S25 WITH A HOOK (`ter-` = three: value, condition, value).** `x if condition
  else y`. Where an `if`/`else` block spends four lines doing nothing but
  choosing between two values, the ternary does it in one:
  ```python
@@ -554,7 +554,7 @@
  outer is the inner's ENCLOSING scope (the E of LEGB). He defined it back
  correctly and immediately.
 
-- [~] **CLOSURES — TAUGHT FROM SCRATCH IN TEXT, S19.** He required this in S18
+- [x] **CLOSURES — TAUGHT FROM SCRATCH IN TEXT, S19. PROMOTED S25: definition cold at 7/10 with survival clause AND layers both present, plus `drills/s25_closure.py` 10/10 unaided.** He required this in S18
   and nothing from S18 counted as coverage. Built bottom-up from LEGB.
   **THE SETUP THAT CREATES THE PROBLEM — return the inner function WITHOUT
   brackets, so it outlives its birthplace:**
@@ -654,7 +654,7 @@
   that the factory can mint any number of them at runtime, each sealing a value
   unknown at write time**, in a count also unknown at write time.
 
-- [~] **`sorted` AND `key=` — TAUGHT FROM ZERO, S19, MID-FLOW.** These had
+- [x] **`sorted` AND `key=` — TAUGHT FROM ZERO, S19, MID-FLOW. PROMOTED S25: all four `sort`/`sorted` outputs correct cold, 8/10, reversing the S24 inversion.** These had
   never been covered and were deployed as a closure example anyway; he flagged
   it twice and was right both times. See Teaching Mistakes.
   `sorted(list)` returns a **NEW list** in ascending order; the original is
@@ -976,7 +976,7 @@ run against the STRUCTURE of the code.** Saying so was as important as the
 content, because "I can't think like that" is a self-limiting frame and it is
 false.
 
-- [~] **THE FIVE CHECKS — where bugs actually live.** Not spread evenly across
+- [x] **THE FIVE CHECKS — where bugs actually live. PROMOTED S25: 5/5 COLD, `mila` recovered, self-rated 4/5.** Not spread evenly across
   the input range; they cluster in five places.
   1. **THE BOUNDARY OF EVERY CONDITION.** Any `if` with `<`, `<=`, `>`, `>=`
      has an exact value where the branches meet. **Test THAT value, not values
@@ -1052,7 +1052,7 @@ false.
  (`[-1, -3, 4, 7]`, correct). Closure transfer [PREDICT] also passed
  (lambda closes over `k` like any `def`). **Label is brute-force (Greek λ)
  — spaced queue, not decoding.**
-- [~] **Docstrings — TAUGHT S22.** A string literal as the FIRST statement of
+- [x] **Docstrings — TAUGHT S22. PROMOTED S25 — `drills/s25_closure.py` session, cold `__doc__` prediction.** A string literal as the FIRST statement of
  a body, stored on the function object as **`__doc__`** at `def` time —
  same attribute family as `__defaults__`/`__closure__` (shelf/dabba handle
  reused). Comment vs docstring: comments are discarded before run; a

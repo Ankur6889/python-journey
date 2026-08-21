@@ -367,7 +367,21 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **24**
+- Sessions Completed: **25**
+- **SESSION 25 (Fri 21 Aug 2026) — THE RECALL BLOCK CLEARED; ELEVEN PROMOTIONS,
+ ONE DEMOTION, AND THE HOOK TECHNIQUE CONFIRMED.** One-day gap; interval gate
+ applied, eighth session running. **He had asked at the S24 close for recall
+ first, and the whole session was spent on it — the largest promotion count in
+ the file's history.** Closures fell at last: the definition came back cold with
+ BOTH previously-missing parts, and `drills/s25_closure.py` was built 10/10
+ unaided with zero debug cycles. The entire iteration protocol returned
+ (`iter()`, `next()`, `StopIteration`), unblocking comprehensions. **The one
+ demotion matters more than the eleven promotions: ASSOCIATIVITY, [x] since S16,
+ came back a flat "gap" when finally asked ALONE — it had been ticked bundled
+ with precedence and never tested separately.** Four flat-gap items were given
+ HOOKS rather than another explanation, on the strength of the five-checks
+ mnemonic going 4/5 → 5/5. **Three pushbacks raised, all upheld or part-upheld,
+ taking the record to 34/33.**
 - **SESSION 24 (Thu 20 Aug 2026) — 1.8 OPENED; INDEXING AND SLICING DEFINED AT
  LAST; THE S17 DISCRIMINATOR CORRECTED; AND THE MNEMONIC WORKED.** One-day gap;
  interval gate applied, seventh session running. He chose material over the
@@ -624,6 +638,7 @@
 | 23 | **Clear the overdue term-tax + task-first recalls; 1.8 planned but not reached** | **TERM-TAX in two waves (~24 rows swept cold); [RECALL] iterator causation bug-first via a two-loop exhaustion program (causation held, BOTH protocol names lost); [RECALL] closure definition cold (FAILED again, 7/10, same two defects as S22) → cells finally taught as a TYPE with `type()` output and a two-free-variable example; TASK-FIRST DRILLS: `s23_sort_key.py` (closure forced by the one-argument `key=` constraint, 6/6 after three guided debug cycles — missing argument, call-vs-object, missing `abs()`) and `s23_ordering.py` (lambdas + docstrings under a no-third-`def` constraint, **6/6 cold first attempt**); the FIVE CHECKS re-taught after a flat gap and a mnemonic built with him; [RECALL] docstring placement mechanism (MISS — second-line literal predicted to survive)** | **Complete — EIGHT promotions, one demotion, lambdas closed; ⚠ 1.8 NOT OPENED** | **THE TERM BACKLOG IS CLEARED. Eight promotions including the modulo identity, produced cold and unprompted to find a real negative-modulo bug in his own lambda — the strongest single moment of the session and an item owed since S13. `UnboundLocalError` typed correctly, spelling fixed. THREE pushbacks, all sound (syntax-lookup legitimacy; "unit testing was never taught" — partially upheld; **"why didn't you tell me all this when you used `cell` the first time" — UPHELD and it corrected a two-session mis-attribution**), running total TWENTY-EIGHT, zero wrong. TWO NEW WATCH AREAS: **confidence calibration ran HOT for the first time** (three over-ratings, including 7/10 on a repeat failure), and **depth-before-answer fired hard** — the five-checks report was asked four times and skipped each time, and he declared a drill "works" without running it. Mentor misses: cells taught as labels in S22; the call-vs-object question ground through two failed Socratic attempts before going direct.** |
 | 24 | **OPEN 1.8 — lists, and the two prerequisites it was blocked on** | **Governance: weekend cold build block CONFIRMED for Sat 22 Aug; the parked [RECALL]-budget rule offered twice and declined twice in favour of material. INDEXING defined for the first time (0-based, `len-1` as the last index, negative indices, `IndexError`) after a check showed it had never been taught. SLICING in full — `[start:stop:step]`, half-open like `range()`, omitted ends, negative step, `l[:]` as the copy idiom, slices build a NEW list, out-of-range slices return `[]` and never raise, the same operator on `str` — discharging pushback 25 from S20. [TEACH-BACK] slice-vs-alias (correct, and he separated mutation from rebinding unprompted). [PREDICT] the six-method roster volley (`append` `extend` `insert` `sort` `remove` `pop`) — 3/6, then the ONE-DIRECTIONAL correction to the S17 tell. [RECALL] the five checks cold via the S23 mnemonic — 4/5, `mila` missing, re-taught in English and Hindi. TASK-FIRST DRILL `drills/s24_lists.py` — four functions under observable-behaviour-only contracts, 11/11 pytest after one guided fix** | **Complete — 1.8 OPENED, ~15%** | **NO PROMOTIONS, correctly — everything taught was same-session; the two later-day items that DID hold (aliasing, rebinding-vs-mutation) were already [x] and simply re-passed. THE SESSION'S FINDING IS THE MNEMONIC: 4/5 cold after a flat gap three days earlier. THREE pushbacks (running total 31): the `last_three` spec is ambiguous — UPHELD, mentor error, I had written "oldest" and imported a time ordering that was never in the spec; "isn't the corrected code a proof of my understanding?" — **NOT UPHELD, the first non-upheld challenge in the file's history**, answered with reasoning rather than authority and accepted; "shouldn't I just write the relevant cases?" on the five checks — PARTIALLY UPHELD, resolved as SCAN all five / REPORT what bites. Mentor misses: the roster volley was tagged [PREDICT] but `sort` had been taught in S17, so a genuine recall miss went unledgered — declared to him in session rather than back-dated; and the `last_three` docstring was ambiguous. Depth-before-answer fired twice and BOTH re-asks produced the correct mechanism in one line.** |
 | 21 | **Adopt the seven review proposals + move to VS Code/Claude Code + open the 1.7 tail** | **Governance: all seven 16-Aug proposals ACCEPTED (RULES v2). Tooling: repo/drills/pytest workflow established. Taught `global` (compile-time locality, `UnboundLocalError`, read/mutate/rebind rule) with [PREDICT]s on the read-only and mutation cases (both correct); taught `*args`/`**kwargs` (keyword args defined after his catch, collectors, empty cases, signature order, the collect/unpack mirror) with [PREDICT]s and [TEACH-BACK]s throughout** | **Complete — 1.7 down to TWO items (lambdas, docstrings)** | **Same-day session (~2h after S20): interval gate applied unprompted, term-tax skipped, the four queued [RECALL]s deferred — zero promotions, correctly. ONE pushback, upheld ("keyword argument" used before definition — 11th define-before-use breach; running total 26, zero wrong; denominator: 1 raised / 1 upheld). Session ended at his call before lambdas/docstrings.** |
+| 25 | Recall block — closures, iteration, docstrings, five checks | `drills/s25_closure.py` (10/10) + `drills/s25_iteration.py` (7/7) | Complete | ELEVEN promotions, one demotion (associativity); 3 pushbacks, all upheld |
 
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
@@ -1471,3 +1486,171 @@ rebinding-vs-mutation — were already [x] and simply re-passed. **1.8's list
 bullet moves [ ] → [~]; nothing moves to [x].** The recall queue was untouched
 at his request and carries forward intact, and he asked for it first next
 session in his own words.
+
+### What Session 25 established
+
+**Friday 21 Aug 2026. One day after S24. Interval gate applied at the open for
+the eighth session running, and it opened clean: a real overnight gap, so
+everything produced cold today was promotable. He confirmed the gap himself.**
+
+**THE SHAPE OF THE SESSION.** He had asked at the S24 close, in his own words —
+*"tomorrow we will do the recall first"* — and the whole session honoured that.
+No new curriculum subsection was opened. **The recall backlog had been carried
+untouched for two sessions and was the largest single debt in the file; S25
+cleared it entirely.** ELEVEN items promoted on cold later-day evidence, which
+is the highest count any session in this file has produced.
+
+**CLOSURES FELL, AND THE S23 DIAGNOSIS IS VINDICATED.** The definition had
+failed twice — S22 at 5/10 and S23 at 7/10, with the *identical* two defects
+both times: the survival clause dropped and `cell_contents` miscalled a tuple.
+S23 located the root cause and placed it MENTOR-SIDE: cells had been taught as
+a stack of labels, never as a TYPE. **S25 tested the prediction and it held.**
+Cold, unprompted, he produced free variables, cells, the tuple, the attribute on
+the function object, *and* the survival clause — *"can be accessed even after
+the enclosing function frame has come to an end."* **The muddle was never his,
+and that is now evidence rather than a hypothesis.**
+⚠ **ONE IMPRECISION CORRECTED, and it is the standard one:** he opened with
+*"when we define a function inside another function."* A [PREDICT] on
+`inner.__closure__` being `None` for a non-capturing nested function broke it in
+one step. **The corrected line: nesting is necessary but NOT sufficient — the
+capture of a free variable is what makes the closure.**
+
+**THE APPLICATION HALF, WHICH HAD BEEN OWED SINCE S23, WAS DISCHARGED IN ONE
+PASS.** `drills/s25_closure.py` — a symmetric joint-limit clamp under four
+forcing constraints (one-argument tool, no `global`, maker must have returned,
+two clamps alive simultaneously) — **10/10 pytest, unaided, ZERO guided debug
+cycles.** S23's closure build had needed three. Two details worth keeping: he
+collapsed both directions into `abs(given_value) > limit` rather than writing a
+symmetric if/else, and he used `>` not `>=`, so the boundary test at exactly
+`90` passed. **Boundary-first, applied without being told — the S20 rule 3(c)
+habit is taking.**
+
+**THE ITERATION PROTOCOL RETURNED IN FULL, AND IT UNBLOCKS COMPREHENSIONS.**
+S23 had demoted it: he kept the causation but lost both names, producing
+"EndofIteration". `drills/s25_iteration.py` banned `for`, `while`, indexing,
+slicing, `.pop()`, `.remove()`, `.index()` and `enumerate`, with the ban
+enforced by a test that greps the source — leaving exactly one way to get an
+item out of a list. **He named `iter()` and `next()` cold and unprompted, 8/10.
+`StopIteration` came back with its exact spelling, 7/10.** 7/7 on the drill.
+⚠ **The gate this opens should be declared out loud in S26: comprehensions were
+blocked on this item being [~], and it is now [x].**
+
+**⚠ THE DEMOTION IS THE MOST IMPORTANT FINDING IN THE SESSION.** Asked for
+`associativity` **alone** — as STATE.md explicitly instructed, because every
+previous attempt had drifted into precedence — he answered **"gap"**. A flat
+empty. **It had been sitting at [x] since S16.** The reason it survived nine
+sessions undetected: the S16 tick reads *"[x] Operator precedence / [x]
+Associativity — PROMOTED S16"*, one bullet, two items, promoted together and
+never asked separately. **A bundled tick can conceal a completely empty item
+indefinitely.** Demoted to [~], re-taught with `10 - 3 - 2` against
+`2 ** 3 ** 2`, and a new gauntlet action recorded: **audit every [x] that shares
+a bullet with another item and re-ask each half separately.** This is precisely
+what the strict legend exists for, and it is the first time the file has caught
+a false [x] by instrument rather than by accident.
+
+**THE HOOK TECHNIQUE IS NOW CONFIRMED RATHER THAN PROMISING.** S24 recorded the
+first evidence: the mnemonic *"Boundary pe khaali ek bahar mila"*, built in S23,
+returned 4/5 cold after the same material had been a flat gap. **S25 took it to
+5/5 — and the recovered item was `mila`, the one he had glossed wrongly as
+"similar inputs" in S24.** Two precisions were issued on the way through
+(`ek` = exactly ONE, not "small inputs"; `bahar` = outside what you assumed,
+covering TYPE as well as sign). **THE FIVE CHECKS → [x].**
+**On that evidence, the three remaining flat gaps were given hooks instead of
+another explanation:**
+- **`pass` = jagah bharo / `continue` = agla chakkar / `break` = bahar niklo.**
+  Gated first on the `IndentationError` that proves a block cannot be empty,
+  then taught as one loop written three times with one word changed.
+  **The reason this one needs a hook: the name decodes to the WRONG keyword —
+  "pass" sounds like "skip it", which is `continue`'s job.**
+- **loop `else` = read the keyword as `nobreak`.** He then predicted the
+  empty-iterable case correctly on the hook's first use, with the right reason.
+- **ternary = `ter-` is THREE** — value, condition, value, middle is the
+  condition. Taught with the placement motivation (an `if` block cannot go
+  inside a `+`) rather than brevity. **S26 is the experiment that tests all
+  four cold.**
+⚠ **A MENTOR CATCH WORTH RECORDING: the first draft of the ternary demo used a
+LIST COMPREHENSION and a bool-as-index trick, neither of which has been taught.
+Caught before it was shown.** Substrate define-before-building, self-enforced.
+
+**DEPTH-BEFORE-ANSWER FIRED THREE TIMES; ALL THREE RECOVERED IN ONE LINE.**
+(a) Asked what Python does with a non-first string literal, he said "considers
+it as a comment" — wrong, and repaired completely on a single probe (`is 5 a
+comment?`) into *"an object will be created for it, occupying memory, but will
+not be used anywhere"*. (b) He gave the one-directional tell without the
+counterexample; re-asked, `pop` came instantly. (c) He answered `sep` and `end`
+but skipped what `print()` evaluates to; re-asked, `None`. **Across S24–S25 the
+re-ask has now worked six times out of six. The knowledge is not the bottleneck;
+the first-answer habit is. RE-ASK, DO NOT RE-TEACH.**
+
+**THREE PUSHBACKS, ALL UPHELD OR PART-UPHELD — RECORD NOW 34 RAISED / 33.**
+- **(32) THE DRILL SPEC WAS UNINTELLIGIBLE — UPHELD, MENTOR ERROR, AND IT IS THE
+  SECOND CONSECUTIVE SESSION.** He stopped before writing a line: *"I am unable
+  to understand this instruction, again, this has been happening to me a lot
+  lately, is this my problem?"* **It was not.** The sentence contained "oldest
+  order preserved" (meaningless — copied from a time-ordered drill), "a NEW list
+  of the same angles, each pulled inside the limit" (self-contradictory), and
+  four requirements welded into one sentence, inside a file written to test him.
+  **S24's `last_three` spec failed the same way.** Rewriting item 5 as lettered
+  sub-requirements, one per line, fixed it immediately and he built the drill
+  10/10. **STANDING FIX: drill specs are written as (a)/(b)/(c), never prose.**
+  ⚠ **His question deserves its answer recorded: his record is 34 challenges
+  raised and 33 upheld. Spotting an ambiguous spec IS the engineering skill;
+  the failure mode would be building the wrong thing silently.**
+- **(33) HE REFUSED A TEACH-BACK AS ECHO — UPHELD.** Offered the corrected
+  closure line and asked to say it back, he declined: *"saying the line will be
+  just copying, so not worth saying, will definitely give the whole thing in
+  cold recall."* **That is the Session 15 confidence rule and the Term Retention
+  System's own same-day caveat, applied to the mentor by the student. Eighth
+  instance of him owning the learning system itself.**
+- **(34) `list()` — PART-UPHELD, AND THE UPHELD HALF IS A BOOKKEEPING FAILURE.**
+  Needing `list()` to drain a partially-consumed iterator, he opened his S15
+  notes, **said so unprompted**, and asked whether expecting recall after that
+  gap was fair. **NOT upheld:** "it was long ago" is no defence in a course built
+  to survive exactly that gap. **UPHELD:** `list()` was defined in S15 *as a
+  patch to a breach he himself caught*, and was then **never entered in the
+  re-test queue, never drilled, and never re-tested across nine sessions**. The
+  system had not once asked him for it. Added to the queue in-session.
+  ⚠ **He could have stayed silent and taken a clean 7/7. Third time he has
+  protected the accuracy of his own ledger at his own expense.**
+
+**JUMP-AHEAD: COUNTER-EVIDENCE, NOT AN INSTANCE.** Mid-session he proposed
+extending the clamp with `*args`/`**kwargs` for multiple named joints. **That is
+[x] material from S22, so it is application appetite rather than scope creep** —
+and it was redirected, not refused, into the Saturday 22 Aug cold build block,
+which RULES already names "joint-limit clamp with tests". **One design hole was
+named and deliberately left unanswered: `*args` delivers angles positionally and
+anonymously while `**kwargs` delivers limits by name, and nothing pairs them.**
+S17's instruction — read his enthusiasm as fuel and spend it — worked exactly as
+written.
+
+**CONFIDENCE CALIBRATION IS IMPROVING AND S24's HOT READING NOW LOOKS LIKE
+NOISE.** Every S25 rating (7, 8, 6, 4/5, 8, 8, 8) sat on a correct answer, none
+inflated, and the lowest — 6/10 on docstrings — correctly identified the weakest
+of the set. **Contrast S24's *"returns a new list object for sure"* attached to
+a wrong answer about `sort`. The rating stays usable as a targeting signal.**
+The `sort`/`sorted` inversion itself was cleared: all four printed values right,
+cold, 8/10.
+
+**HONEST GAPS: TWO, BOTH DECLARED RATHER THAN GUESSED** — `pass` and
+associativity. **In a session that promoted eleven items, the two refusals to
+guess are worth as much as the promotions**, because they are what makes the
+other numbers trustworthy.
+
+**TEACHING MISTAKES THIS SESSION.**
+1. **The `clamp_all` spec — pushback 32 above. Second consecutive session of
+   ambiguous drill prose. Now a standing format rule: lettered sub-requirements.**
+2. **`list()` was never queued after S15 — pushback 34. A term defined as a
+   breach patch was left out of the very system built to carry it.** Any term
+   defined mid-session must be entered into the queue in the same session.
+3. **A list comprehension and a bool-as-index trick reached the first draft of
+   the ternary demo, neither taught.** Caught before delivery — but the draft
+   should not have contained them.
+4. **The parked "[RECALL] budget" rule was offered a third time** despite
+   STATE.md saying "do not nag a third time" alongside "offer it once more".
+   The instruction was self-contradictory; it has now been DROPPED and the
+   record closed, settled by behaviour rather than by ruling.
+
+**WHAT HE ASKED FOR AT THE CLOSE, VERBATIM:** *"close this session here but next
+session should start without recall actually studying 1.8 further."* **S26 opens
+on 1.8 content — tuple, dict, set — and the four hooked items are fired later in
+the session, not at the open.**

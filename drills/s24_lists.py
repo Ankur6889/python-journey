@@ -47,6 +47,8 @@ def order_in_place(readings):
 
 
 def take_last(readings):
+    if readings == []:
+        return 
     return readings.pop()
 
 
