@@ -1111,11 +1111,40 @@ false.
  in the volley (`sort` "returns a new list for sure") — the block was
  tagged [PREDICT], so **that miss is NOT ledgered**; it needs a clean cold
  [RECALL] pass. Shallow-vs-deep copy PARKED to "nested data structures".
-- [ ] **Copy semantics: a slice copies the REFERENCES, not the items** —
- parked S24 when he described `tools[:]` as "an identical new list object".
- Only bites on nested structures; belongs with the bullet below.
-- [ ] tuple — immutable; when to use over list
-- [ ] dict / [ ] set
+- [~] **Copy semantics: a slice copies the REFERENCES, not the items** —
+ **TAUGHT S26**, discharging the S24 park (`tools[:]` = "an identical new list
+ object" — true of the OUTER list only). SHALLOW COPY defined: the container is
+ new, the references inside are copied, so nested mutables are SHARED. He
+ predicted BOTH output lines wrong on `original[:]` with nested lists — tagged
+ [PREDICT], so not ledgered. Only bites when the container holds MUTABLES.
+ ⚠ `copy.deepcopy` still owed, parked to "nested data structures".
+- [~] tuple — immutable; when to use over list — **TAUGHT IN FULL S26.**
+ Covered: immutable ordered sequence; **THE COMMA MAKES THE TUPLE, NOT THE
+ PARENTHESES** (`(5)` is an `int`, `(5,)` is a tuple); `TypeError` on item
+ assignment vs `AttributeError` on `.append` — **immutability has no error of
+ its own, it arrives as `TypeError`**; `+` builds a NEW tuple; UNPACKING
+ (`low, high = t`) and count-mismatch ⇒ `ValueError`; **a function never returns
+ more than ONE object — `return a, b` builds a tuple**; the two-method roster
+ (`count`, `index`) **DERIVED BY HIM from the type, unaided — an immutable type
+ can only carry methods that REPORT**; SHALLOW immutability (a tuple stores
+ REFERENCES; the references can't be re-pointed, the objects they point at can
+ change) — **which he stated before being asked**; and the choice rationale
+ (guarantee you can stop reading / loud failure at the cause / states intent).
+ ⚠ NOT [x]: SAME-DAY SESSION, and **no drill file was written**. Needs a
+ task-first cold pass.
+- [~] dict — **~⅔ TAUGHT S26.** Motivated from the parallel-lists failure — he
+ found BOTH defects unaided (the pairing isn't enforced; `.index()` costs a
+ LINEAR scan, which he named). Covered: key→value; `[]` takes a KEY; **keys are
+ UNIQUE and it is derivable — `[]` must return one value**; existing key
+ OVERWRITES, new key INSERTS, never duplicates; `KeyError`; **HASHABILITY —
+ which he reasoned out himself from collision/lost-value; the hash must be
+ STABLE, so the key must be immutable, which is the FOURTH tuple reason**;
+ `in` tests KEYS; `.get()` / `.get(k, default)` and **the design rule — `[]`
+ when a missing key is a BUG, `.get()` when absence is EXPECTED; `.get()` with
+ no default MOVES the crash away from the cause**; looping gives KEYS;
+ `.keys()`/`.values()`/`.items()`, and **`.items()` is tuple unpacking in
+ disguise**. ⚠ STILL OWED: deletion (`del`, `.pop()`), insertion ordering.
+- [ ] set
 - [ ] When to use which — decision framework
 - [ ] List comprehensions (**pre-loaded S15: the iteration protocol is the
  machinery underneath every comprehension — say so when this opens**)
@@ -1134,7 +1163,18 @@ false.
  exceptions-are-signals and the `StopIteration` CATEGORY all promoted to [x]
  on genuine later-day cold evidence. **`traceback` is the one that did NOT
  (self-rated 3/10) — when 1.9 opens, build from the UNCAUGHT-exception
- trigger rather than from the label.**)
+ trigger rather than from the label.**
+ ⚠ **PRE-LOADED S26, AND IT IS SUBSTANTIAL.** A full error reference was built
+ at the student's own request, in Hindi, with real generated output:
+ `SyntaxError`, `IndentationError`, `NameError`, `UnboundLocalError`,
+ `AttributeError`, `TypeError`, `ValueError`, `IndexError`, `KeyError`,
+ `ZeroDivisionError`, `StopIteration`, `RecursionError` — grouped into four
+ families (code never ran / name not found / operation failed / not an error at
+ all). **`KeyError` had NEVER appeared in the course before S26; `AttributeError`
+ had been mentioned twice and never defined.** ⚠ **THE RETENTION ARTEFACT IS THE
+ FOUR-STATION HOOK — NAAM → DOT → TYPE → CHEEZ, with station 4 splitting three
+ ways (jagah = Index, chaabi = Key, cheez = Value).** It was built after a
+ delivered TABLE demonstrably failed within twenty minutes. **Untested — S27.**)
 - [ ] try / except blocks
 - [ ] Catching specific exceptions vs bare except (**pre-loaded S15: `for`
  catching `StopIteration` internally is the first real example of an

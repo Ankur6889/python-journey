@@ -367,7 +367,29 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **25**
+- Sessions Completed: **26**
+- **SESSION 26 (Fri 21 Aug 2026) — 1.8 MOVED AT LAST: TUPLE TAUGHT IN FULL,
+ DICT TWO-THIRDS TAUGHT. ZERO PROMOTIONS, AND THAT IS CORRECT.** SAME-DAY as
+ S25, so nothing was promotable and the four hook tests were deferred rather
+ than run — the interval gate applied unprompted for the ninth session running.
+ **He asked at the S25 close for content and no recall; honoured exactly.**
+ The yield is real curriculum movement after two sessions where the recall queue
+ consumed the teaching slot: the comma-not-parentheses trap, unpacking, the
+ one-object return, shallow immutability, shallow copy (discharging the S24
+ park), dict motivation from parallel-lists, hashability, `.get()` vs `[]`, and
+ `.items()`. **He DERIVED the tuple method roster from the type unaided and
+ REASONED OUT hashability from first principles**, both without being told.
+ ⚠ **NO DRILL FILE WAS WRITTEN — the session ran on live code and prediction
+ only, so none of it can promote until drilled.** **THE SESSION'S REAL FINDING
+ IS A MENTOR ONE, and it is the third consecutive spec-writing failure: FOUR
+ defective asks in one session, including `KeyError` demanded by name having
+ never appeared once in the entire course.** He then raised the structural
+ version — *"you are asking things without teaching, is it my fault or yours?"*
+ — which was audited and mostly upheld. **Two standing fixes adopted: teach with
+ code and output BEFORE asking, and every [PREDICT] declares whether it is
+ derivable or a genuine guess.** Second finding: a delivered error TABLE failed
+ within twenty minutes and was rebuilt as the FOUR-STATION HOOK — the S25 hook
+ result reproduced from the other side.
 - **SESSION 25 (Fri 21 Aug 2026) — THE RECALL BLOCK CLEARED; ELEVEN PROMOTIONS,
  ONE DEMOTION, AND THE HOOK TECHNIQUE CONFIRMED.** One-day gap; interval gate
  applied, eighth session running. **He had asked at the S24 close for recall
@@ -639,6 +661,7 @@
 | 24 | **OPEN 1.8 — lists, and the two prerequisites it was blocked on** | **Governance: weekend cold build block CONFIRMED for Sat 22 Aug; the parked [RECALL]-budget rule offered twice and declined twice in favour of material. INDEXING defined for the first time (0-based, `len-1` as the last index, negative indices, `IndexError`) after a check showed it had never been taught. SLICING in full — `[start:stop:step]`, half-open like `range()`, omitted ends, negative step, `l[:]` as the copy idiom, slices build a NEW list, out-of-range slices return `[]` and never raise, the same operator on `str` — discharging pushback 25 from S20. [TEACH-BACK] slice-vs-alias (correct, and he separated mutation from rebinding unprompted). [PREDICT] the six-method roster volley (`append` `extend` `insert` `sort` `remove` `pop`) — 3/6, then the ONE-DIRECTIONAL correction to the S17 tell. [RECALL] the five checks cold via the S23 mnemonic — 4/5, `mila` missing, re-taught in English and Hindi. TASK-FIRST DRILL `drills/s24_lists.py` — four functions under observable-behaviour-only contracts, 11/11 pytest after one guided fix** | **Complete — 1.8 OPENED, ~15%** | **NO PROMOTIONS, correctly — everything taught was same-session; the two later-day items that DID hold (aliasing, rebinding-vs-mutation) were already [x] and simply re-passed. THE SESSION'S FINDING IS THE MNEMONIC: 4/5 cold after a flat gap three days earlier. THREE pushbacks (running total 31): the `last_three` spec is ambiguous — UPHELD, mentor error, I had written "oldest" and imported a time ordering that was never in the spec; "isn't the corrected code a proof of my understanding?" — **NOT UPHELD, the first non-upheld challenge in the file's history**, answered with reasoning rather than authority and accepted; "shouldn't I just write the relevant cases?" on the five checks — PARTIALLY UPHELD, resolved as SCAN all five / REPORT what bites. Mentor misses: the roster volley was tagged [PREDICT] but `sort` had been taught in S17, so a genuine recall miss went unledgered — declared to him in session rather than back-dated; and the `last_three` docstring was ambiguous. Depth-before-answer fired twice and BOTH re-asks produced the correct mechanism in one line.** |
 | 21 | **Adopt the seven review proposals + move to VS Code/Claude Code + open the 1.7 tail** | **Governance: all seven 16-Aug proposals ACCEPTED (RULES v2). Tooling: repo/drills/pytest workflow established. Taught `global` (compile-time locality, `UnboundLocalError`, read/mutate/rebind rule) with [PREDICT]s on the read-only and mutation cases (both correct); taught `*args`/`**kwargs` (keyword args defined after his catch, collectors, empty cases, signature order, the collect/unpack mirror) with [PREDICT]s and [TEACH-BACK]s throughout** | **Complete — 1.7 down to TWO items (lambdas, docstrings)** | **Same-day session (~2h after S20): interval gate applied unprompted, term-tax skipped, the four queued [RECALL]s deferred — zero promotions, correctly. ONE pushback, upheld ("keyword argument" used before definition — 11th define-before-use breach; running total 26, zero wrong; denominator: 1 raised / 1 upheld). Session ended at his call before lambdas/docstrings.** |
 | 25 | Recall block — closures, iteration, docstrings, five checks | `drills/s25_closure.py` (10/10) + `drills/s25_iteration.py` (7/7) | Complete | ELEVEN promotions, one demotion (associativity); 3 pushbacks, all upheld |
+| 26 | 1.8 — tuple in full, dict two-thirds | **NONE — no drill file written** | ⚠ **MISSING** | Same-day as S25, so zero promotions and the four hook tests correctly deferred. Ran on live code + [PREDICT] only. **4 pushbacks, all upheld/part-upheld (running total 38/37) — third consecutive spec-writing failure, incl. `KeyError` demanded having never appeared in the course.** Error TABLE failed in 20 min → rebuilt as the FOUR-STATION HOOK. Two standing fixes adopted: teach-before-ask, and every [PREDICT] declares its kind. **S27 must produce `drills/s27_*.py`.** |
 
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
@@ -1654,3 +1677,225 @@ other numbers trustworthy.
 session should start without recall actually studying 1.8 further."* **S26 opens
 on 1.8 content — tuple, dict, set — and the four hooked items are fired later in
 the session, not at the open.**
+
+---
+
+### What Session 26 established
+
+**Friday 21 Aug 2026. THE SAME DAY AS S25, and that fact governs everything
+below: ZERO PROMOTIONS, and zero is the correct number.** The interval gate was
+applied unprompted as the first action — ninth consecutive session — and it did
+real work this time rather than merely passing: **the four hook tests built in
+S25 (`pass`, loop `else`, ternary, associativity) were DEFERRED rather than
+fired.** Running them hours after the hooks were taught would have measured echo
+and written it into the ledger as retention. **That is precisely the failure
+mode that produced the false associativity [x] in S16, discovered nine sessions
+later.** The hooks stay untested until a later day. **S27 is their first
+legitimate test.**
+
+**HIS S25 CLOSING INSTRUCTION WAS HONOURED EXACTLY:** *"next session should
+start without recall, actually studying 1.8 further."* The session opened on
+content, and no recall block was run at any point. **Second consecutive session
+shaped by his own instruction — S25 all recall at his request, S26 all content
+at his request — and both times the instruction was followed rather than
+negotiated.**
+
+**THE CURRICULUM MOVED, WHICH IT HAD NOT DONE MEANINGFULLY SINCE S24.** 1.8 went
+from ~15% to ~40%: **tuple taught in full, dict taught to roughly two-thirds.**
+
+**TUPLE, IN FULL.** Opened not from the definition but from the failure it
+prevents — the S24-era aliasing bug, a function "helpfully" appending to a list
+its caller owns. **He produced the entire causal chain cold and unprompted:
+parameter/argument → alias → mutable object → mutating method.** From there:
+immutability as a guarantee; **`TypeError` on item assignment versus
+`AttributeError` on `.append`, and the point that immutability has no error of
+its own — it arrives as `TypeError`**; `+` building a new tuple; **THE COMMA
+MAKES THE TUPLE, NOT THE PARENTHESES** (`(5)` is an `int`); unpacking, and count
+mismatch raising **`ValueError`** because the type is fine and the count is not;
+and **a function never returning more than one object — `return a, b` builds one
+tuple, so "multiple return values" is tuples wearing a costume.**
+
+⚠ **THE BEST MOMENT OF THE SESSION IS THE METHOD ROSTER, AND IT VALIDATES THE
+S17 DEPTH-DOCTRINE DECISION NOT TO GIVE HIM A ROSTER TO MEMORISE.** Asked which
+of the six list methods a tuple could possibly have, he reasoned entirely from
+the type and got all six right — **and went further than the question, observing
+that a new-object `append` COULD exist in principle.** That is correct, and the
+reason it does not exist is a design answer rather than a memory one: **that
+version already exists and is spelled `+`; naming it `append` would be a lie,
+because `append` promises in-place.** He was then given the derivable rule — **an
+immutable type can only carry methods that REPORT** — and the actual two-method
+roster (`count`, `index`) as a consequence rather than a fact. **This is the
+S17 discriminator paying off four months later: he did not recall the answer, he
+computed it.**
+
+**SHALLOW IMMUTABILITY, STATED BEFORE IT WAS ASKED FOR.** Given
+`config = ("arm", [10.0, 20.0])` and `config[1].append(30.0)`, he answered:
+*"tuple is itself immutable, but the object inside if it's a mutable it should
+be mutated."* Correct, unprompted, and it carried the model with it. The mentor
+formalised it: **a tuple stores REFERENCES; immutable means the references
+cannot be re-pointed, and says nothing about the objects they point at.**
+
+**THAT SENTENCE, ONE LEVEL DOWN, DISCHARGES THE S24 PARK.** He had described
+`tools[:]` as *"an identical new list object"* — true of the outer list, and it
+hides the trap. Given nested lists and two mutations at different levels he
+**predicted both output lines wrong**, treating the slice as a deep copy. Tagged
+[PREDICT], so nothing ledgered, and it is the single most valuable wrong answer
+of the session. **SHALLOW COPY was then defined with a reference diagram: the
+container is new, the references inside are copied, so nested mutables are
+SHARED — and the trap can only fire when the container holds mutables.**
+`copy.deepcopy` remains owed, parked to nested data structures.
+
+**DICT, MOTIVATED FROM ITS ALTERNATIVE — which is the S18 finding about him
+applied deliberately.** He presses *"why does this exist rather than the obvious
+thing?"*, so dict was opened on parallel lists doing the same job. **He found
+both defects unaided:** that nothing in the language enforces the pairing, so
+the lists can drift apart; and that `.index()` must walk the list, **naming the
+cost as LINEAR himself** and correctly identifying it as DSA territory (master
+Layer 8). Then: key→value; `[]` taking a key; **keys unique, and derivable —
+`[]` must return one value**; existing key overwrites and new key inserts;
+`KeyError`; `in` testing keys; `.get()`; iteration giving keys; and **`.items()`
+revealed as tuple unpacking in disguise**, which closed the loop back to the
+first half of the session.
+
+⚠ **HE REASONED OUT HASHABILITY FROM FIRST PRINCIPLES, WHICH WAS NOT EXPECTED.**
+Asked why a list cannot be a dict key, he worked through it aloud — *"if its
+mutable someone change the key, the value for that pair lost... but what if
+someone make it same to other keys, then value collision"* — and arrived at
+**"it needs to be immutable"** by himself. The mechanism was then supplied: the
+dict computes a number from the key to jump straight to a slot, that number must
+stay stable, so the key's contents must never change. **One claim of his was
+corrected, and he had flagged the doubt himself mid-sentence (*"what am I
+saying, is that correct??"*): immutability does NOT imply uniqueness — `(1,2)`
+and `(1,2)` are equal and are the SAME key.** This also delivered the fourth
+tuple-over-list reason, which had been promised and deferred earlier in the
+session.
+
+**`.get()` WAS TAUGHT AS A DESIGN TRAP RATHER THAN A CONVENIENCE**, and the
+design half came back correct on the re-ask: **"silent failures."** The rule
+recorded: `[]` when a missing key is a BUG, `.get()` when absence is EXPECTED
+and there is a real default; **`.get()` with no default is the dangerous middle,
+because it does not prevent the crash — it MOVES it away from the cause.** Same
+principle as the tuple safety-limit example: **loud failure at the cause beats a
+silent wrong value far away.** That principle now appears in two independent
+places in one session and should be treated as a spine of 1.8.
+
+---
+
+**TEACHING MISTAKES THIS SESSION — AND THIS IS THE SESSION'S REAL FINDING.**
+**FOUR DEFECTIVE ASKS IN ONE SESSION. Spec-writing is now the mentor watch area
+for the THIRD CONSECUTIVE SESSION and S26 was the worst instance yet.**
+
+1. **`sum()` was used in the opening example having never been defined. NINTH
+   substrate define-before-building breach.** Found by the mentor grepping the
+   repo rather than assuming — the rule working — but it should never have
+   reached the example. Defined in-session.
+2. **`KeyError` was demanded by name having NEVER appeared once in the entire
+   course**, verified by grep across all four files and every note. **A straight
+   define-before-use breach, and the fourth time an error label has been asked
+   for before being given.** His `ValueError` guess was reasonable from what he
+   had been taught; nothing logged.
+3. **Dict-key uniqueness was never stated before a [PREDICT] depended on it.**
+   Part-upheld — it *is* derivable, but the derivation should have been flagged
+   rather than slid past.
+4. **"Given you have `[]`"**, meaning the bracket operator, was read as *"you
+   have a list"* and sent him to a wrong answer built on two parallel lists —
+   **the very design the dict had just replaced.** Ambiguous notation in an ask.
+5. **The linear-cost question was unanswerable as worded.** He said so plainly:
+   *"I don't understand both the questions actually what you are trying to get
+   out of me."* Restated as *"does it jump straight there or check one at a
+   time, and how many comparisons if the match is last?"* — **answered correctly
+   and immediately.** The question was the defect, not the student.
+
+⚠ **AND THEN THE STRUCTURAL ONE, WHICH HE RAISED HIMSELF AND WHICH MATTERS MORE
+THAN THE FOUR ABOVE.** *"I think all your questions are looking to me like you
+are asking things without teaching, it's daunting — is it my fault of thinking
+or your fault, lets clarify this first."* **Audited honestly and MOSTLY UPHELD:**
+
+- **DENSITY.** Almost every turn was a question. The correct ratio is *teach a
+  piece with code and output → ask ONE question on it.* The session ran
+  predict → predict → predict with almost no exposition between.
+- **The four defective asks meant a real share of the difficulty was
+  unanswerable questions rather than hard material.**
+- **THE TAG WAS DECLARED BUT ITS MEANING WAS NOT.** Some [PREDICT]s are
+  derivable from what is on screen; others are genuine guesses where being wrong
+  is the point. **From the student's side those are indistinguishable, and they
+  must not be. This is the S18 rule-1 finding recurring one level up: if the
+  student cannot tell one instrument from another, the instrument is not being
+  declared clearly enough.**
+- **NOT upheld:** [PREDICT] asking before teaching is the instrument working as
+  designed, and is never ledgered in either direction.
+
+**TWO STANDING FIXES COMMITTED TO HIM AND WRITTEN INTO STATE.md: (a) teach the
+piece WITH CODE AND OUTPUT first, then ask ONE question on it; (b) every
+[PREDICT] declares up front whether it is "derivable from what's on screen" or
+"a genuine guess — wrong is fine and expected."**
+
+**THE SECOND FINDING REPRODUCES S25's HOOK RESULT FROM THE OTHER SIDE.** He
+asked mid-session for a consolidated explanation of every error met so far, in
+Hindi, *"with the hook so I can recall everything fresh"* — **note that he asked
+for a hook by name; the technique has been internalised.** It was delivered as
+twelve errors in four families with real generated output, and a **decision
+TABLE** at the end. **Twenty minutes later he mislabelled `AttributeError` as
+`TypeError`, and diagnosed the cause himself: *"maybe its not sticking in my
+mind."* He was right, and the cause was the table.** RULES has known since S25
+that arbitrary labels need HOOKS rather than explanations, **and a table is an
+explanation.** It was rebuilt as:
+
+> **NAAM → DOT → TYPE → CHEEZ** — four stations; wherever the train stops, that
+> is the error. **Station 4 splits three ways: jagah = `IndexError`, chaabi =
+> `KeyError`, cheez khud = `ValueError`.**
+
+**He then specified his own retention protocol for it**, unprompted: *"in order
+to stick it you need to ask me again and again, different error — when using
+regularly it will definitely stick."* **That is spaced retrieval, requested by
+name, and it is parked as the single rule candidate for S27's ruling.**
+
+---
+
+**PUSHBACKS: FOUR RAISED, ALL UPHELD OR PART-UPHELD. RUNNING TOTAL 38 RAISED,
+37 UPHELD.**
+
+- **(35) The linear-cost ask was unintelligible — UPHELD**, mentor wording.
+  Restated, answered immediately and correctly.
+- **(36) *"you didn't tell me if one dictionary can have two same keys; and you
+  are straight asking the questions, that's not fair"* — UPHELD.** Auditing his
+  challenge turned up a second, larger defect he had not named: **`KeyError` had
+  never appeared anywhere in the course.** ⚠ **He challenged the fairness of one
+  question and the audit found a nine-session-scale bookkeeping hole — the same
+  shape as pushback 34's `list()` finding in S25.**
+- **(37) *"your question was not properly asked, I thought you said you have
+  `[]` list"* — UPHELD**, ambiguous notation.
+- **(38) *"is it my fault of thinking or your fault, lets clarify this first"* —
+  PART-UPHELD.** ⚠ **NOTE THE SHAPE OF THIS ONE. It is not a complaint about
+  difficulty. It is a request for a DIAGNOSIS, offered with his own fault as the
+  first hypothesis, and with the explicit instruction to settle the attribution
+  before continuing. That is the ninth instance of him auditing the teaching
+  system itself, and the first time he has asked for an attribution to be
+  DECIDED rather than asserting it.** The honest split was given: mostly mine.
+
+**HONEST GAPS: THREE, ALL DECLARED RATHER THAN GUESSED** — *"I don't know"* on
+the unpacking mismatch, *"I don't get the second question"* on what a tuple
+buys, and the self-flagged *"what am I saying, is that correct??"* on his own
+uniqueness claim. **The third is the most valuable: he interrupted his own
+correct-sounding sentence to mark the part he was unsure of.**
+
+**DEPTH-BEFORE-ANSWER fired twice and BOTH re-asks recovered.** The `.get()`
+design half came back in one line. **Seven successful re-asks across S24–S26
+with zero failures. The re-ask IS the intervention — do not re-teach, re-ask.**
+
+**CONFIDENCE CALIBRATION: NO DATA, CORRECTLY.** Every block was [PREDICT] or
+[TEACH-BACK], neither of which carries a rating, and the session was same-day.
+**Do not read the absence as regression.**
+
+⚠ **WHAT WAS NOT DONE, AND IT IS THE SESSION'S DEBT: NO DRILL FILE WAS WRITTEN.**
+S26 ran entirely on live code and prediction. **Nothing taught today can promote
+until it is drilled task-first.** Also still owed inside 1.8: dict deletion and
+ordering, `set`, when-to-use-which, comprehensions (**gate open since S25 and
+still not opened**), `zip`, f-strings (**he uses them correctly and cannot yet
+explain them**), nested structures, `reversed()`.
+
+**HE ENDED THE SESSION HIMSELF:** *"I guess lets close the teaching for today, I
+have done more than enough for the day"* — **called immediately after the
+attribution question was settled, which reads as calibration rather than
+avoidance. Session length is his call (S18 rule 2); it was honoured without
+argument and the closing procedure ran unasked.**
