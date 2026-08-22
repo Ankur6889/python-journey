@@ -37,8 +37,10 @@
 # part was re-written every session, which is where the S15 stale-file and
 # S16 wrong-name incidents came from. Splitting by rate of change fixes both.
 #
-# VERSION: RULES v2, 16 Aug 2026. v1 + Session 21 adoption of the seven
-# 16-Aug-review proposals (see next section).
+# VERSION: RULES v3, 22 Aug 2026. v2 + the SESSION 27 rule (name the error
+# before the mentor shows it) — the first rule in this file proposed AND
+# ruled on by the student himself. v2 = v1 + Session 21 adoption of the
+# seven 16-Aug-review proposals (see next section).
 # ═══════════════════════════════════════════════════
 
 ## THE SEVEN CHANGES FROM THE 16 AUG 2026 REVIEW — **ADOPTED IN FULL, SESSION 21 (16 Aug 2026)**
@@ -624,6 +626,37 @@ fixed *skipping* steps under time pressure. These fix the opposite failure —
  CHANNEL could have produced it.** Once the switch was made to asking him
  to describe the nesting in words, he stated it correctly and immediately.
 
+### THE SESSION 27 RULE (22 Aug 2026) — **RAISED BY THE STUDENT, ADOPTED AT CLOSE**
+
+**This is the session's one rule change under the cap, and it is the FIRST rule in
+this file that the student both proposed AND ruled on himself.** It was offered
+once in S26 with no ruling taken; it was put to him as the second and final offer
+at the S27 open (citing the dropped-rule precedent), and he answered in one word:
+*"adopted."*
+
+1. **NAME THE ERROR BEFORE THE MENTOR SHOWS IT (binding).** **Every snippet put on
+   screen that will raise gets its error NAMED by the student before the traceback
+   is revealed.** No warning that it will crash, no menu of candidate labels. The
+   mentor writes the snippet, asks for the label, and only then runs it.
+   HIS OWN WORDS, from S26: *"in order to stick it you need to ask me again and
+   again, different error — when using regularly it will definitely stick."*
+   **WHY IT IS THE RIGHT RULE AND NOT MERELY HIS PREFERENCE:** it is the S25 hook
+   finding applied to the error labels. The one thing this student reliably drops
+   is the ARBITRARY LABEL sitting on top of machinery he owns, and the file has
+   twice now proved that EXPLANATION does not fix that — the S26 error TABLE failed
+   inside twenty minutes, and he diagnosed the failure himself. This rule converts
+   every crash in the course from a reading rep into a RETRIEVAL rep, at a cost of
+   about five seconds each.
+   **IT PAID FOR ITSELF ON FIRST USE, IN BOTH DIRECTIONS.** First firing: he
+   labelled `print(if n > 10: "high")` as `TypeError`; it is `SyntaxError`, and the
+   miss is what produced **Station 0 of the four-station hook** ("did it run at
+   all?") — a hole in the hook that no amount of re-explaining the table would have
+   exposed. Second and later firings: `"5" + 3` vs `5 +`, `del d["gripper"]`,
+   `seen[0]`, `set.remove` — **all named correctly, with mechanism.**
+   OPERATIONALLY: the ask is one line, it carries no confidence rating of its own
+   unless the item is ledger-eligible, and **a miss here is data about the LABEL,
+   not about the mechanism** — check which one actually failed before logging it.
+
 ### THE THREE SESSION 20 RULES (16 Aug 2026)
 
 **All three came from the student, in the last twenty minutes of the session,
@@ -800,7 +833,8 @@ the current step against this file — no explanation required from him.**
 2. **Define before use, substrate included** — no construct, function or
    syntax appears in a drill before it has been taught. (S12, S14, S19)
 3. **Tag every question** — [RECALL] / [PREDICT] / [DRILL] / [TEACH-BACK], and
-   its evidence weight. (S16)
+   its evidence weight. (S16) **S27 extension: every snippet that raises gets its
+   error NAMED by the student before the traceback is shown. (S27)**
 4. **Channel before blame** — transcription artefact, whitespace,
    ambiguous assent: check the channel before logging a student error.
    (S16, S17-2, S17-3)

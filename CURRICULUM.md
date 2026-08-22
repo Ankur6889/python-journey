@@ -118,13 +118,36 @@
 > the Session 16 promotion pass. The discriminator above was added S17.
 
 #### 1.5 Operators and Expressions — COVERED END-TO-END (S13)
+- [x] **EXPRESSION vs STATEMENT — THE STATEMENT HALF FINALLY CLOSED, S27.** Owed
+ since S14; the expression half had been carried alone for thirteen sessions.
+ **An EXPRESSION evaluates to a VALUE** (`n > 10`, `"high"`, `n + 1`, `len(x)`, a
+ ternary, and every set operation). **A STATEMENT DOES something and evaluates to
+ nothing** (`x = 5`, `if n > 10:`, `for i in values:`, `return i`, `break`,
+ `del d[k]`, `d[k] = v`).
+ ⚠ **THE TEST HE PRODUCED HIMSELF, before it was named: CAN IT GO INSIDE
+ `print(...)`?** Values can; actions cannot. It was closed off the back of his own
+ ternary answer, which is why it finally landed — **the distinction was earned from
+ a case he had just argued, not delivered as a definition.**
+ Demonstrated with `print(if n > 10: "high")` ⇒ `SyntaxError`, and the proof shown
+ in the output rather than asserted: **`n = 12` on line 1 never ran and line 3 never
+ printed. Not one line of the file executed.**
+ Applied immediately afterwards: **`d[k] = v` and `del d[k]` are STATEMENTS, not
+ methods** — which is why neither can be caught in a variable.
 - [~] Arithmetic operators (+, -, *, /, //, %, **)
 - [~] Comparison operators (==, !=, >, <, >=, <=)
 - [~] Logical operators (and, or, not)
 - [x] Identity operators (is, is not) — **CONFIRMED S16**
 - [~] Membership operators (in, not in) — S13
 - [~] Bitwise operators — S13, AWARENESS ONLY by design
-- [x] Operator precedence / **[~] Associativity — DEMOTED S25.** Promoted S16; asked ALONE and cold in S25 he answered **"gap"** — a flat empty. Re-taught S25 with a hook (*rank barabar? ab direction dekho; sab left se, sirf `**` right se*). **The S16 promotion had bundled it with precedence and never tested it on its own.**
+- [x] Operator precedence / **[x] Associativity — RE-PROMOTED S27.**
+ **S27 EVIDENCE, AND IT IS THE UNBUNDLED KIND THE GAUNTLET ASKS FOR: the two
+ halves were tested SEPARATELY and both passed cold. `2 ** 3 ** 2` — he named
+ associativity, gave the grouping `2 ** (3 ** 2)` BEFORE the number, stated the
+ rule (`**` right-to-left, everything else left-to-right) and got 512. Self-rated
+ 7/10. Then `2 + 3 * 4 ** 2` cold: order first, then 50, self-rated 7/10 — and on
+ the re-ask he produced the distinction unaided: precedence = rank between
+ DIFFERENT operators; associativity = direction within the SAME rank. The S25
+ hook (*rank barabar? ab direction dekho*) held. ORIGINALLY:** Promoted S16; asked ALONE and cold in S25 he answered **"gap"** — a flat empty. Re-taught S25 with a hook (*rank barabar? ab direction dekho; sab left se, sirf `**` right se*). **The S16 promotion had bundled it with precedence and never tested it on its own.**
 - [x] Augmented assignment (+=, -=, etc.) — **PROMOTED S16**
 - [~] Short-circuit evaluation in and/or — S13
 
@@ -184,7 +207,14 @@
  part that broke: the NAME does not exist. **The distinction taught:
  "scoped away" (Python does not have this) vs "never created" (the only
  failure mode Python has).**
-- [~] **`while` loops — break, continue — TAUGHT S16.** `for` asks an iterator
+- [~] **`while` loops — break, continue — TAUGHT S16.**
+ ⚠ **S27, AND THE BUNDLING IS DELIBERATELY NOT HONOURED: `break` and `continue`
+ BOTH passed cold and unaided in `drills/s27_flow.py` (self-rated 8/10) — `break`
+ under a one-return-last-line constraint in `first_big`, `continue` under an
+ if-has-no-else constraint in `total_positive`. `break` was the last [~] of the
+ three-way set and it is now [x] AS AN ITEM (see the `pass` bullet). THE BULLET
+ STAYS [~] BECAUSE `while` MECHANICS WERE NOT TESTED — promoting the bullet would
+ be exactly the bundling the gauntlet exists to catch.** `for` asks an iterator
  for the next item; **`while` re-evaluates a CONDITION before every pass.**
  `break` exits the innermost loop entirely (there is no `break 2` in
  Python); `continue` abandons only the current iteration and jumps back to
@@ -199,7 +229,11 @@
  above the outer loop → the inner body runs only on the first pass, then
  silently never again). **Reuse that image — it is the best handle on the
  causation gap he keeps failing.**
-- [~] **Loop `else` clause — TAUGHT S16, EARNED S17, FLAT GAP S23, RE-TAUGHT S25 WITH A HOOK (read it as `nobreak`).** Runs if the loop
+- [x] **Loop `else` clause — PROMOTED S27** (`drills/s27_flow.py`, 20/20 pytest,
+ commit below). Cold, later-day, unaided: *"else block run when the loop ends
+ normally without breaking"*, self-rated 8/10. **He also USED it unprompted in
+ `first_big`, where the task did not require it — and that is what made his
+ empty-list case work instead of raising.** TAUGHT S16, EARNED S17, FLAT GAP S23, RE-TAUGHT S25 WITH A HOOK (read it as `nobreak`). Runs if the loop
  completed WITHOUT hitting `break`; skipped if it broke out. **It has
  nothing to do with the `else` of `if` — it must not be read as
  "otherwise".** **THE S16 PREREQUISITE BREACH IS NOW REPAIRED: the owed
@@ -243,7 +277,11 @@
  structure right with `print(found)` writing bare names instead of strings
  and a missing colon; iterations 3 and 4 were **whitespace only, which is a
  CHANNEL ARTEFACT and not a student error — see Session 17 rule 3.**
-- [~] **`pass` statement — TAUGHT S17, FLAT GAP S25, RE-TAUGHT S25 WITH A HOOK (`pass` = jagah bharo / `continue` = agla chakkar / `break` = bahar niklo).** A no-op: a statement that does
+- [x] **`pass` statement — PROMOTED S27** (`drills/s27_flow.py`, the `todo`
+ constraint: body exactly one line, not a `return`, not a string, not an
+ assignment). Cold three-way separation produced unaided — *"break stops the
+ entire loop... continue stops the current iteration and continues with the
+ next... pass is just a placeholder"* — self-rated 8/10. **TAUGHT S17, FLAT GAP S25, RE-TAUGHT S25 WITH A HOOK (`pass` = jagah bharo / `continue` = agla chakkar / `break` = bahar niklo).** A no-op: a statement that does
  nothing at all. **It exists because of a hard syntactic rule — once a colon
  opens a block, that block cannot be empty; leaving it empty raises
  `IndentationError: expected an indented block`.** So when the syntax
@@ -260,7 +298,13 @@
  not a body.** A block containing only `# todo` still raises
  `IndentationError`, because comments are not code. He supplied the
  class-stub use case himself from prior exposure.
-- [~] **Ternary / conditional EXPRESSION — TAUGHT S17, FLAT GAP S23, RE-TAUGHT S25 WITH A HOOK (`ter-` = three: value, condition, value).** `x if condition
+- [x] **Ternary / conditional EXPRESSION — PROMOTED S27** (`drills/s27_flow.py`,
+ `label`, single-line-return constraint met). Cold: asked what the ternary can do
+ that a four-line `if`/`else` cannot, he answered *"can return a value"*, and on
+ the depth re-ask supplied the concrete case unaided —
+ `print("high" if n>10 else "low")`, *"we can't put an if else block inside a
+ print"*. Self-rated 8/10. **This is the answer that let EXPRESSION vs STATEMENT
+ finally be closed (see 1.4).** TAUGHT S17, FLAT GAP S23, RE-TAUGHT S25 WITH A HOOK (`ter-` = three: value, condition, value).** `x if condition
  else y`. Where an `if`/`else` block spends four lines doing nothing but
  choosing between two values, the ternary does it in one:
  ```python
@@ -505,7 +549,18 @@
  number of arguments, and NO fixed parameter list can do that.**
  **KEYWORD ARGUMENTS had to be defined first — he stopped the block to say
  the term had never been taught, and he was right (see Teaching Mistakes
- S21).** Positional argument = matched by POSITION; keyword argument =
+ S21).**
+ ⚠ **KEYWORD ARGUMENT AS AN ITEM: [~] since S21 (defined, NEVER TESTED) → [x] S27.**
+ Cold, later-day, unaided, self-rated 7/10. Asked why `clamp(50, high=90, low=10)`
+ is legal with the arguments out of order, he gave the whole mechanism: *"if we give
+ without the keyword, it expects them in the same order as specified, but if with a
+ keyword, the values go to respective arguments irrespective of the position."*
+ **ONE VOCABULARY CORRECTION ISSUED, and it is the watch area exactly: he called
+ them "placeholders inside the function objects". They are PARAMETERS (the names in
+ the `def` line); what you pass are ARGUMENTS. Mechanism owned, labels loose.**
+ **THE BRIDGE THAT PRODUCED THIS ASK: he wrote `{"a"=99}` for a dict literal. Inside
+ a dict it is `"a": 99` — a COLON. The `=` form is a keyword argument and lives in a
+ function CALL. Same shape, different machine.** Positional argument = matched by POSITION; keyword argument =
  passed as `name=value` in the CALL and matched by NAME, so
  `intro(role="robotics", name="Ankur")` lands correctly in any order.
  **THE COLLECTORS:** in a signature, `*args` collects all LEFTOVER
@@ -1143,9 +1198,92 @@ false.
  when a missing key is a BUG, `.get()` when absence is EXPECTED; `.get()` with
  no default MOVES the crash away from the cause**; looping gives KEYS;
  `.keys()`/`.values()`/`.items()`, and **`.items()` is tuple unpacking in
- disguise**. ⚠ STILL OWED: deletion (`del`, `.pop()`), insertion ordering.
-- [ ] set
-- [ ] When to use which — decision framework
+ disguise**.
+ ⚠ **COMPLETED S27 — the tail that was owed is now taught.** DELETION, three ways
+ and the difference is WHAT YOU GET BACK: `del d[k]` is a STATEMENT and hands back
+ nothing (`x = del d[k]` is impossible); `d.pop(k)` hands back the VALUE — the same
+ counterexample to the returns-`None` tell as on `list`, now seen on a SECOND type;
+ `d.clear()` empties the dict and returns `None`, leaving `{}` — **empty, not gone,
+ same object**. `d.update(other)` given in the reference table. `del` on a missing
+ key ⇒ `KeyError`, which **he named cold and correctly, forty minutes after
+ mislabelling `KeyError` as `IndexError`**. `d.pop(k, default)` = the shrugging
+ form, exactly like `.get(k, default)`.
+ INSERTION ORDERING: **a dict keeps keys in the order they were FIRST inserted**
+ (guaranteed 3.7+); **overwriting a value does NOT move the key**; delete-then-re-add
+ DOES move it to the back — **he predicted that correctly from the rule**. Taught
+ with the warning that **ordered is not sorted**.
+ ⚠ **A FULL METHOD REFERENCE TABLE WAS DELIVERED AT HIS REQUEST**, against the S17
+ no-roster doctrine — but **paired with the discriminator rather than instead of
+ it**, and prefaced with the S26 finding that a delivered table had failed inside
+ twenty minutes. He then raised the fear himself (*"I still fear I am going to
+ forget these methods, is that fair??"*) and was told plainly: yes you will forget
+ the names, no that is not the thing to protect — **the model is three ideas (is the
+ type mutable / does it return `None` / raising form or shrugging form) and the
+ roster is lookup-able**. ⚠ STILL OWED: dict comprehensions (with 1.8 comprehensions).
+ ⚠ NOT [x]: **S26's two-thirds was never cold-tested. Task-first cold pass owed.**
+- [~] **set — TAUGHT S27, essentially in full.** Motivated as **"a dict with the
+ values thrown away"** — same braces, same hashing machinery, same uniqueness rule,
+ therefore **set items must be hashable for exactly the reason dict keys must be**.
+ Covered: five items in, three out — **duplicates are absorbed SILENTLY, not
+ rejected**; `len`; **`{}` is an empty DICT — the only way to write an empty set is
+ `set()`**, a constructor call like `list()`; `add` returns `None` (the tell);
+ **`remove` raises `KeyError` when absent, `discard` shrugs** — and the label is
+ `KeyError`, not some set-specific error, because **a set item IS its own chaabi**.
+ ⚠ **THE REAL YIELD IS THAT THE RAISE-VS-SHRUG PAIRING WAS GENERALISED**: `d[k]`/
+ `.get()`, `del d[k]`/`.pop(k,default)`, `remove`/`discard` were shown as **ONE
+ design rule seen three times** — raise when a missing thing is a BUG, shrug when
+ absence is EXPECTED.
+ **NOT SUBSCRIPTABLE, and this was the best block of the session.** He predicted
+ `KeyError` for `seen[0]`; it is `TypeError: 'set' object is not subscriptable`, and
+ the discriminator was drawn: **`b[0]` on a dict is `KeyError` because Python
+ PERFORMED the lookup and the chaabi was absent (station 4); `seen[0]` on a set is
+ `TypeError` because the operation does not exist for the type and no attempt was
+ possible (station 3). The test is: could Python even attempt it?** He then asked
+ the right question unprompted — *"why can't 0 mean first element in the set"* —
+ and was answered with the machine, not a rule: **the same file run three times
+ printed the set in three different orders** (string hashing is randomised per
+ process), so there is no stable first element to return. **Python does not offer
+ operations it cannot make mean anything.** Also banked: `a == b` is `True` for
+ different insertion orders — **a set compares purely by CONTENTS**; and `sorted(s)`
+ returns a LIST, because there is no such thing as a sorted set.
+ SET OPERATIONS: `|` union, `&` intersection, `-` difference. **All build a NEW set,
+ so they are EXPRESSIONS and go straight inside `print()`**; **`-` is not
+ symmetric**. Read as English they are real robot checks: `commanded - supported` is
+ the joints someone asked for that you cannot drive — **one operator, no loop, no
+ `if`**. And **`.keys()` is a view, and views support set operations directly**:
+ `command.keys() - supported` needs no conversion. `if bad:` on the empty set as the
+ falsy idiom. ⚠ NOT [x]: same-session throughout, and **no set drill file was
+ written** — task-first cold pass owed.
+- [~] **When to use which — decision framework — TAUGHT S27.**
+ Asked for **ONE deciding question**, he gave four correct usage statements instead
+ (*tuple if it must not change / list for flexibility / dict if things come in pairs
+ / set if things are unique*) — **all four correct, all four about what you STORE,
+ which is the downstream half.**
+ **THE UPSTREAM HALF, AND IT IS THE ITEM: "WHAT AM I GOING TO ASK THIS
+ CONTAINER?"** — *give me the one at position N* ⇒ list; same but fixed-size record
+ that must not change ⇒ tuple; *give me the value for this key* ⇒ dict; *is this in
+ you? what's in both?* ⇒ set.
+ TWO CORRECTIONS ISSUED: **(a) pairing is not the reason for a dict — LOOKUP is.**
+ `[("shoulder",30),("elbow",45)]` stores pairs perfectly well but must be WALKED to
+ answer "what's the elbow at?"; the dict hashes and jumps. **(b) "must not change"
+ is the WEAKER of tuple's two reasons; the stronger one he derived himself in S26 —
+ a tuple is HASHABLE, so it can be a dict key or a set item, and a list cannot.**
+ `reachable = {(0,0),(0,1),(1,1)}` exists only because of that.
+ ⚠ **THE APPLIED EXERCISE — log every joint angle across a 30-second motion — AND
+ IT IS THE MOST DIAGNOSTIC THING IN THE SESSION. He got the INNER container right,
+ unprompted and for the right reason: each sample is a TUPLE, a fixed-size record
+ where position means a specific joint. He got the OUTER one wrong via a precise
+ slip — *"because I want order, its a tuple"* — and ORDER IS NOT THE
+ LIST/TUPLE DISCRIMINATOR; both are ordered. GROWTH is.** Asked what the container
+ must do when a new sample arrives at 15 s, he **changed the design instead of
+ answering — twice — proposing a dict keyed by timestamp**; on the third, direct
+ re-ask he got it: *"tuple can't grow, list can grow, dictionary can grow."*
+ The resolution taught: **list of tuples** — outer grows and is replayed in order;
+ inner is the fixed record; **the timestamp is not a key, it is just another field
+ of the sample**, and the dict's one superpower (jump to a key) is never used
+ because you never hold the exact float to look up. **The dict design was credited
+ where it WOULD win — replay by discrete frame number, `frames[1500]`, real random
+ access.** ⚠ NOT [x]: same-session.
 - [ ] List comprehensions (**pre-loaded S15: the iteration protocol is the
  machinery underneath every comprehension — say so when this opens**)
 - [ ] Dict comprehensions
@@ -1174,7 +1312,29 @@ false.
  had been mentioned twice and never defined.** ⚠ **THE RETENTION ARTEFACT IS THE
  FOUR-STATION HOOK — NAAM → DOT → TYPE → CHEEZ, with station 4 splitting three
  ways (jagah = Index, chaabi = Key, cheez = Value).** It was built after a
- delivered TABLE demonstrably failed within twenty minutes. **Untested — S27.**)
+ delivered TABLE demonstrably failed within twenty minutes.
+ ⚠⚠ **TESTED COLD S27 — THE EXPERIMENT RAN AND THE RESULT IS MIXED, WHICH IS THE
+ USEFUL OUTCOME. Fired on three snippets against a dict: `robot.append(5)` →
+ `AttributeError` CORRECT; `robot["speed"]` → he said `IndexError`, it is
+ `KeyError`, MISS; `rbot["joint"]` → *"I don't remember this"*, honest gap, it is
+ `NameError`. Self-rated 6/10 on both attempts — CALIBRATED AGAIN (the 6/10 he got
+ right and the 6/10 he got wrong were both 6/10, and he declared the third).**
+ **THE DIAGNOSIS: he read the `[ ]` and reached for Index. THE FIX TAUGHT — the
+ brackets are identical on a list and a dict; THE BRACKETS DO NOT DECIDE THE ERROR,
+ WHAT YOU PUT INSIDE THEM DOES.** And `rbot["joint"]` is why the stations are an
+ ORDER, not a menu: it has a bad name AND brackets, and **Python never reached the
+ brackets**.
+ ⚠ **THE HOOK GAINED A STATION 0 IN S27, AND IT WAS A REAL HOLE: "DID IT RUN AT
+ ALL?"** He labelled `print(if n > 10: "high")` as `TypeError`; it is `SyntaxError`,
+ and the tell is that **no line of the file executed at all**. `TypeError` requires a
+ RUNNING program attempting an operation. Re-tested immediately on `"5" + 3` vs
+ `5 +` — **both correct with full mechanism.** Later in the same session he took
+ `seen[0]` on a set (`TypeError`, station 3) and `b[0]` on a dict (`KeyError`,
+ station 4) — **the sharpest station-3-vs-4 pair in the course, and the test given
+ for it is "could Python even ATTEMPT it?"**
+ ⚠ **`KeyError` IS THE ONE MISS OF S27 AND IT COMES BACK COLD IN S28** — noting that
+ he then named `KeyError` correctly twice later in the session, on `del d["gripper"]`
+ and on `set.remove`, both same-session and therefore NOT promotable.)
 - [ ] try / except blocks
 - [ ] Catching specific exceptions vs bare except (**pre-loaded S15: `for`
  catching `StopIteration` internally is the first real example of an

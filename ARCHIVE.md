@@ -367,7 +367,19 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **26**
+- Sessions Completed: **27**
+- **SESSION 27 (Sat 22 Aug 2026) — THE WEAKEST CLUSTER IN THE FILE CLEARED, AND
+ 1.8 ADVANCED FROM ~40% TO ~70%. EIGHT PROMOTIONS PLUS A DRILL FILE.** Later-day
+ gap after S26, so the whole cold block was legitimate and it paid: `break`,
+ `continue`, `pass`, loop `else`, ternary, associativity (**re-promoted after the
+ S25 demotion, asked ALONE**), precedence (**tested separately for the first
+ time**), `traceback` and keyword argument all promoted on cold unaided evidence.
+ **`drills/s27_flow.py` — five constrained functions, 20/20 pytest — is the drill
+ file S26 owed.** Content: dict FINISHED (`del`/`.pop()`/`.clear()`/`.update()`,
+ insertion ordering), `set` taught in full, when-to-use-which taught.
+ **EXPRESSION vs STATEMENT was finally closed — owed since S14 — off the back of
+ his own ternary answer.** One rule adopted, and it is the first he both proposed
+ and ruled on. ONE MISS: `KeyError` read as `IndexError`.
 - **SESSION 26 (Fri 21 Aug 2026) — 1.8 MOVED AT LAST: TUPLE TAUGHT IN FULL,
  DICT TWO-THIRDS TAUGHT. ZERO PROMOTIONS, AND THAT IS CORRECT.** SAME-DAY as
  S25, so nothing was promotable and the four hook tests were deferred rather
@@ -662,6 +674,7 @@
 | 21 | **Adopt the seven review proposals + move to VS Code/Claude Code + open the 1.7 tail** | **Governance: all seven 16-Aug proposals ACCEPTED (RULES v2). Tooling: repo/drills/pytest workflow established. Taught `global` (compile-time locality, `UnboundLocalError`, read/mutate/rebind rule) with [PREDICT]s on the read-only and mutation cases (both correct); taught `*args`/`**kwargs` (keyword args defined after his catch, collectors, empty cases, signature order, the collect/unpack mirror) with [PREDICT]s and [TEACH-BACK]s throughout** | **Complete — 1.7 down to TWO items (lambdas, docstrings)** | **Same-day session (~2h after S20): interval gate applied unprompted, term-tax skipped, the four queued [RECALL]s deferred — zero promotions, correctly. ONE pushback, upheld ("keyword argument" used before definition — 11th define-before-use breach; running total 26, zero wrong; denominator: 1 raised / 1 upheld). Session ended at his call before lambdas/docstrings.** |
 | 25 | Recall block — closures, iteration, docstrings, five checks | `drills/s25_closure.py` (10/10) + `drills/s25_iteration.py` (7/7) | Complete | ELEVEN promotions, one demotion (associativity); 3 pushbacks, all upheld |
 | 26 | 1.8 — tuple in full, dict two-thirds | **NONE — no drill file written** | ⚠ **MISSING** | Same-day as S25, so zero promotions and the four hook tests correctly deferred. Ran on live code + [PREDICT] only. **4 pushbacks, all upheld/part-upheld (running total 38/37) — third consecutive spec-writing failure, incl. `KeyError` demanded having never appeared in the course.** Error TABLE failed in 20 min → rebuilt as the FOUR-STATION HOOK. Two standing fixes adopted: teach-before-ask, and every [PREDICT] declares its kind. **S27 must produce `drills/s27_*.py`.** |
+| 27 | **Clear the S25 hook backlog task-first + FINISH DICT + SET + when-to-use-which** | **TASK-FIRST [RECALL]: `drills/s27_flow.py` — five functions under lettered CONSTRAINTS forcing `break` (one-return-last-line), `continue` (if-has-no-else), loop `else` (print only on natural end, no `if` after the loop), ternary (single-line return), `pass` (one-line body, not a return/string/assignment); 20/20 pytest, then a guided rewrite of `find_index` from items to positions; naming half of each mechanism taken after the code ran; [DRILL] `2 ** 3 ** 2` then `2 + 3 * 4 ** 2` for associativity and precedence SEPARATELY; [RECALL] traceback frames off a live `KeyError`; [RECALL] keyword argument; four-station error hook fired cold on three dict snippets; EXPRESSION vs STATEMENT closed; then dict deletion + ordering, `set` in full (uniqueness, `set()` vs `{}`, add/discard/remove, not-subscriptable, order instability across three runs, `|`/`&`/`-`), and when-to-use-which with the 30-second joint-log exercise** | **Complete — EIGHT promotions, 1.8 to ~70%; comprehensions declared open and NOT walked through** | **THE `while`/loop-`else`/`pass`/ternary CLUSTER — WEAKEST IN THE FILE SINCE S23 — CLEARED IN ONE DRILL, AND THE S25 HOOKS ARE WHY. Associativity RE-PROMOTED after its S25 demotion, asked alone; precedence tested separately; the `while` bullet DELIBERATELY LEFT [~] because `while` mechanics were untested — the first time this file has refused a bundle. His `find_index` rewrite killed a latent bug he never saw (`None` serving as both sentinel and value) — a five-checks `bahar`-by-TYPE miss. RULE ADOPTED (his own, proposed and ruled on by him): name the error before the mentor shows it; it paid for itself on first use by exposing STATION 0 of the four-station hook (`SyntaxError` = did it run at all?). Hook result mixed and therefore useful: `AttributeError` hit, `KeyError`→`IndexError` MISS, `NameError` honest gap. Confidence calibration accurate across eight ratings. Depth-before-answer fired three times, all three recovered on re-ask (ten straight). NEW WATCH AREA: DESIGN-SWITCHING — asked three times what the outer container must DO, he twice proposed a different design instead of answering, then got it instantly on the direct re-ask. Mentor: ONE defective ask (down from four), upheld; two self-caught mis-tags corrected in opposite directions. Build block moved to Sun 23 Aug — second date it has carried.** |
 
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
@@ -1899,3 +1912,245 @@ have done more than enough for the day"* — **called immediately after the
 attribution question was settled, which reads as calibration rather than
 avoidance. Session length is his call (S18 rule 2); it was honoured without
 argument and the closing procedure ran unasked.**
+
+---
+
+### What Session 27 established
+**Saturday 22 August 2026. A LATER-DAY session after S26 — the first legitimate
+cold block in three sittings, and the largest promotion haul since S25.**
+
+**THE HEADLINE: THE WEAKEST CLUSTER IN THIS FILE SINCE S23 HAS CLEARED, AND IT
+CLEARED IN A SINGLE DRILL FILE.** `break`, `continue`, `pass`, loop `else` and
+the ternary — five items that between them had produced three flat "gap"
+answers across S23 and S25 — were all produced cold, unaided, one day after the
+hooks were built. **`drills/s27_flow.py`, five functions under lettered
+constraints, 20/20 pytest.** This is also the drill file S26 owed and did not
+write, so it retroactively unblocks nothing from S26 and everything from S25.
+
+**READ THE CAUSE CORRECTLY: it was the HOOKS, not the explanations.** All five
+had been explained repeatedly before S25 and all five failed. They were
+re-taught in S25 with mnemonics (*jagah bharo / agla chakkar / bahar niklo*;
+loop `else` read as `nobreak`; `ter-` = three) and one day later he produced the
+MECHANISMS, not the mnemonics — which is what a working hook looks like.
+
+**THE DRILL DESIGN IS WORTH REUSING.** Each function carried lettered
+sub-requirements that made the target mechanism NECESSARY rather than merely
+possible: one-`return`-as-the-last-line forced `break`; an `if` with no `else`
+plus the adding line outside it forced `continue`; "the printing line runs only
+when the loop reaches its natural end" plus "no `if` after the loop" forced loop
+`else`; a single-line `return` forced the ternary; a one-line body that is not a
+return, a string or an assignment forced `pass`. **pytest decided behaviour; the
+constraints were checked by reading his code.** He met four of five cleanly.
+
+**THE `find_index` REWRITE IS THE BEST TEACHING MOMENT OF THE SESSION.** His
+first version looped over ITEMS, broke on a match, then recovered the position
+with `values.index(i)` and guarded it with a ternary — passing all 20 tests. He
+was pointed at ONE line and asked what the loop's first line would become if it
+walked positions; he answered "range", rewrote it himself, and the ternary
+became unnecessary. **The rewrite silently killed a bug neither of us had
+tested: `find_index([None, 5], None)` returned `None` instead of `0`, because
+`None` was serving as both "the thing I found" and "I found nothing". That is a
+five-checks `bahar` miss BY TYPE, and he did not catch it on his own pass.**
+
+**PROMOTIONS — EIGHT, ALL COLD, ALL LATER-DAY, ALL RATED:**
+`break`, `continue`, `pass` (8/10) · loop `else` (8/10) · ternary (8/10) ·
+**associativity, RE-PROMOTED after its S25 demotion and asked ALONE (7/10)** ·
+**precedence, tested separately for the first time (7/10)** · **`traceback`,
+[~] as "cued only" since S23 (8/10)** · **keyword argument, defined S21 and
+NEVER tested until now (7/10)**.
+
+⚠ **THE FIRST REFUSED BUNDLE IN THE HISTORY OF THIS FILE.** `break` and
+`continue` both passed, but the CURRICULUM bullet that carries them is
+*"`while` loops — break, continue"* and `while` mechanics were not tested. **The
+items were promoted; the bullet was left [~].** This is exactly the audit the
+August gauntlet exists to perform, executed in advance rather than in arrears.
+
+**EXPRESSION vs STATEMENT — CLOSED, OWED SINCE S14.** The expression half had
+been carried alone for thirteen sessions. It closed off the back of his own
+ternary answer: asked what a ternary can do that a four-line `if`/`else` cannot,
+he said *"can return a value"*, and on the depth re-ask produced
+`print("high" if n>10 else "low")` with *"we can't put an if else block inside a
+print"*. **He had produced the TEST before it was named.** The statement half was
+then delivered against `print(if n > 10: "high")` ⇒ `SyntaxError`, proved by the
+output rather than asserted — **`n = 12` on line 1 never ran and line 3 never
+printed.** Applied immediately: `d[k] = v` and `del d[k]` are STATEMENTS.
+
+**THE RULE ADOPTED — AND IT IS A FIRST.** *"Every snippet that raises gets its
+error NAMED by the student before the mentor shows it."* **He proposed it in S26
+and ruled on it himself at the S27 open** — the first rule in this file both
+raised and decided by the student. RULES.md is now v3. **It paid for itself on
+first use, through a MISS:** he labelled the `SyntaxError` snippet as
+`TypeError`, and that miss exposed a hole in the four-station hook that no
+amount of re-explaining the error table would have found.
+
+⚠ **THE FOUR-STATION HOOK GAINED A STATION 0: "DID IT RUN AT ALL?"** If Python
+could not read the sentence, nothing executes ⇒ `SyntaxError`. Only a RUNNING
+program can reach NAAM → DOT → TYPE → CHEEZ. Re-tested immediately on `"5" + 3`
+versus `5 +` — both correct with full mechanism.
+
+**THE HOOK EXPERIMENT ITSELF: RUN, AND MIXED, WHICH IS THE USEFUL RESULT.**
+Fired cold on three dict snippets: `robot.append(5)` → `AttributeError`, HIT;
+`robot["speed"]` → he said `IndexError`, it is `KeyError`, **THE ONE MISS OF THE
+SESSION**; `rbot["joint"]` → *"actually I don't remember this"*, honest gap, it
+is `NameError`. **The diagnosis: he read the `[ ]` and reached for Index. The
+correction taught — the brackets are IDENTICAL on a list and a dict; what goes
+INSIDE them decides.** And `rbot["joint"]` is why the stations are an ORDER and
+not a menu: bad name AND brackets, and Python never reached the brackets.
+
+**THE SHARPEST DISCRIMINATION OF THE SESSION CAME LATER, ON SETS.** `b[0]` on a
+dict is `KeyError` — Python PERFORMED the lookup and the chaabi was absent
+(station 4). `seen[0]` on a set is `TypeError: 'set' object is not
+subscriptable` — the operation does not exist for the type and no attempt was
+possible (station 3). **The test given: could Python even ATTEMPT it?**
+
+**DICT FINISHED.** Deletion three ways, and the difference is what you get back:
+`del d[k]` is a statement and hands back nothing; `d.pop(k)` hands back the
+VALUE — **the returns-`None` counterexample now seen on a SECOND type**;
+`d.clear()` returns `None` and leaves `{}`, **empty but not gone, same object**.
+`del` on a missing key ⇒ `KeyError`, **which he named cold and correctly forty
+minutes after mislabelling it**. Insertion ordering: keys hold their
+FIRST-insertion position; **overwriting a value does not move the key**;
+delete-then-re-add does, **which he predicted correctly from the rule**. Taught
+with the warning that **ordered is not sorted**.
+
+⚠ **A FULL DICT METHOD TABLE WAS DELIVERED AT HIS REQUEST, AGAINST THE S17
+NO-ROSTER DOCTRINE — AND THE WAY IT WAS DELIVERED IS THE PRECEDENT.** It was
+prefaced with the S26 finding (a delivered table failed inside twenty minutes),
+framed as a reference sheet rather than a memorisation task, and **paired with
+the discriminator rather than offered instead of it.** He then raised the fear
+himself — *"I still fear I am going to forget these methods, is that fair??"* —
+and was answered plainly: **yes you will forget the names, and no, that is not
+what to protect. The model is three ideas (is the type mutable / does it return
+`None` / raising form or shrugging form) and the roster is lookup-able.** Tenth
+instance of him auditing the learning system itself.
+
+**SET TAUGHT IN FULL**, motivated as **"a dict with the values thrown away"** —
+same braces, same hashing, same uniqueness rule, **therefore set items must be
+hashable for exactly the reason dict keys must be.** Five items in, three out:
+**duplicates are absorbed SILENTLY**. `{}` is an empty DICT; **the only way to
+write an empty set is `set()`**. `add` returns `None`; **`remove` raises,
+`discard` shrugs**, and the label is `KeyError` because **a set item IS its own
+chaabi**. `sorted(s)` returns a LIST — there is no sorted set. Set operations
+`|`, `&`, `-`: **all build a NEW set, so they are EXPRESSIONS**, and **`-` is
+not symmetric**. Read as English they are real robot checks —
+`commanded - supported` is the joints someone asked for that you cannot drive,
+one operator, no loop, no `if`. **`.keys()` is a VIEW and views support set
+operations directly**, so `command.keys() - supported` needs no conversion.
+
+⚠ **THE RAISE-VS-SHRUG PAIRING WAS GENERALISED, AND THAT IS THE REAL YIELD OF
+THE SET BLOCK.** `d[k]`/`.get()`, `del d[k]`/`.pop(k, default)`,
+`remove`/`discard` — **three facts collapsed into ONE design rule: raise when a
+missing thing is a BUG, shrug when absence is EXPECTED.** Tested on a fault
+handler that may fire twice; **he argued for the raising form on instinct
+("silently discarding can cause catastrophic result") and the SPEC overrode
+him.** The lesson taught was not that `discard` is safer — it was that **the
+choice is a reading of the spec, not a temperament**, and that changing the spec
+to "fires exactly once" makes his first answer correct.
+
+**HE ASKED THE BEST QUESTION OF THE SESSION UNPROMPTED:** *"why can't 0 mean
+first element in the set"* — and it was answered with the machine rather than a
+rule. **The same file run three times printed the set in three different
+orders** (string hashing is randomised per process). There is no stable first
+element to return. **Python does not offer operations it cannot make mean
+anything.** Also banked from that output: `a == b` is `True` across different
+insertion orders — **a set compares purely by CONTENTS**.
+
+**HE ALSO ASKED WHETHER TO GO AND LEARN HASHING PROPERLY**, and the Level 2 /
+Level 3 boundary was drawn to his face: he already has the Level 2 model (a
+number computed from the contents, used to jump to a slot, must be stable), and
+**how the number is computed, collisions and resizing are DSA — master Layer 8.**
+He accepted immediately. **Reuse this exchange as the template for future "how
+deep here?" questions.**
+
+**WHEN-TO-USE-WHICH — TAUGHT, AND THE DIAGNOSTIC IS THE INTERESTING PART.**
+Asked for **ONE deciding question**, he gave four correct usage statements
+instead — all four right, and all four about what you STORE. **The upstream half
+is the item: "WHAT AM I GOING TO ASK THIS CONTAINER?"** Two corrections issued:
+**pairing is not the reason for a dict, LOOKUP is** (a list of 2-tuples stores
+pairs perfectly well but must be walked); and **"must not change" is the WEAKER
+of tuple's two reasons — the stronger one he derived himself in S26: a tuple is
+HASHABLE, so it can be a dict key or a set item.**
+
+⚠⚠ **THE NEW WATCH AREA — DESIGN-SWITCHING UNDER A HARD QUESTION.** The applied
+exercise (log every joint angle across a 30-second motion) produced the sharpest
+finding of the session. **He got the INNER container right, unprompted and for
+the right reason: each sample is a TUPLE, a fixed-size record where position
+means a specific joint.** He got the outer one wrong via a precise slip —
+*"because I want order, its a tuple"* — and **order is not the list/tuple
+discriminator; both are ordered. GROWTH is.** Asked what the container must DO
+when a new sample arrives at 15 s, **he twice answered by proposing a different
+design (a dict keyed by timestamp) rather than answering the question.** On the
+third, direct re-ask he had it instantly: *"tuple can't grow, list can grow,
+dictionary can grow."* **He had the answer the whole time; the escape route was
+redesign, not guessing.** COUNTERMEASURE, and it worked on first use: **name the
+switch and re-issue the ORIGINAL question unchanged.** This is adjacent to
+depth-before-answer but distinct — that pattern stops early, this one goes
+sideways. The resolution taught: **list of tuples**; the timestamp is not a key,
+it is another field of the sample, and the dict's one superpower is never used
+because you never hold the exact float to look up. **His dict design was
+credited where it WOULD win — replay by discrete frame number, real random
+access.**
+
+**PUSHBACK 39, UPHELD IN FULL.** *"why would I be removing or discard a joint
+name after checking if its the one I support?? question is itself senseless??"*
+— correct. A membership scenario was welded to a removal question with no reason
+to remove anything. **Running total: 39 raised, 38 upheld or part-upheld.**
+⚠ **SPEC-WRITING REMAINS THE MENTOR WATCH AREA FOR A FOURTH CONSECUTIVE SESSION,
+BUT THE VOLUME COLLAPSED — FOUR defective asks in S26, ONE in S27.** The fix that
+worked should now be standard: **the re-issued version supplied the missing
+condition explicitly ("the handler may fire TWICE"), and that single clause made
+the question decidable.**
+
+⚠ **TWO SELF-CAUGHT MIS-TAGS, CORRECTED IN SESSION, IN OPPOSITE DIRECTIONS —
+AND BOTH DIRECTIONS MATTER.** (a) A [RECALL] was fired thirty seconds after
+teaching the station-4 table; it should have been [TEACH-BACK] and was corrected
+before anything reached the ledger — **that protects the ledger from echo.**
+(b) A traceback read was tagged [TEACH-BACK] when it was genuinely later-day
+cold material; it was corrected UP to [RECALL] and promoted — **that stops real
+evidence being thrown away.** The standing instruction is to check the tag in
+BOTH directions, not only the generous one.
+
+**CONFIDENCE CALIBRATION: STRONG DATA AND ACCURATE.** Eight ratings between 6
+and 8. **The two 6/10s were the two shakiest answers — one right, one wrong.**
+Keep using the self-rating as a targeting signal, not merely as a gate.
+
+**DEPTH-BEFORE-ANSWER fired three times and ALL THREE recovered on the re-ask**
+(the precedence concept half, the ternary concrete case, the
+set-meaninglessness half). **Ten successful re-asks across S24–S27 with zero
+failures. THE RE-ASK IS THE INTERVENTION — do not re-teach.** One related
+instance was logged and not punished: *"I am lazy to calculate so will say 512"*
+— he had in fact done the work, so nothing was recorded, but the instinct was
+named to his face as the exact habit he asked to have policed.
+
+**TEACH:ASK RATIO — THE S26 FINDING HELD.** Every teaching block carried code
+and output before its question, and the pure-question stretch was **DECLARED as
+a cold block up front**. He did not push back on it once.
+
+**LANGUAGE PRECISION — THREE CORRECTIONS ISSUED, ALL LABEL-LEVEL, ALL ON
+MACHINERY HE OWNS.** (a) *"python can definitely add a string to a integer"* →
+**`+` is not DEFINED for `str` and `int`; Python refuses rather than guessing.**
+(b) *"placeholders inside the function objects"* → **PARAMETERS are the names in
+the `def`; ARGUMENTS are what you pass.** (c) `{"a"=99}` → **inside a dict it is
+`"a": 99`, a COLON; the `=` form is a keyword argument and lives in a CALL** —
+and that slip is what produced the keyword-argument recall that promoted.
+
+⚠ **THE TERM-RETENTION WATCH AREA SPLIT CLEANLY IN TWO FOR THE FIRST TIME, AND
+THIS IS THE MOST IMPORTANT STRUCTURAL FINDING OF THE SESSION. MECHANISMS ARE NOW
+STRONG** — the three-way keyword separation in one breath, loop `else`, the
+ternary, associativity versus precedence, keyword matching. **LABELS ARE STILL
+THE FAILURE POINT** — `KeyError`→`IndexError`, `SyntaxError`→`TypeError`,
+"placeholders" for parameters, `=` for `:`. **The hooks fixed the mechanism
+recall and have NOT yet fixed the labels. That is precisely what the rule he
+adopted this morning is aimed at.**
+
+**WHAT WAS NOT DONE, DECLARED RATHER THAN GLOSSED:** the S26 backlog — tuple,
+dict's first two-thirds, shallow copy, unpacking, `list()`, `.get()`,
+`.items()` — was listed in the plan and **never run, for the second session in a
+row.** It is now the priority for S28 and must go in a drill file or it will
+rot. **Comprehensions were declared open at the very end and not walked
+through** — he closed the session at exactly that point, to protect the cold
+build block, which he moved to **Sunday 23 August: the second date it has
+carried.** He asked for the progress audit himself before deciding
+(*"how much have we covered till now?? is it enough for a 3 hours session??"*)
+and chose to trade the last block of teaching for a full day on the measurement
+instrument. **That is scheduling judgement, not avoidance.**
