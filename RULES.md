@@ -37,10 +37,12 @@
 # part was re-written every session, which is where the S15 stale-file and
 # S16 wrong-name incidents came from. Splitting by rate of change fixes both.
 #
-# VERSION: RULES v3, 22 Aug 2026. v2 + the SESSION 27 rule (name the error
-# before the mentor shows it) — the first rule in this file proposed AND
-# ruled on by the student himself. v2 = v1 + Session 21 adoption of the
-# seven 16-Aug-review proposals (see next section).
+# VERSION: RULES v4, 22 Aug 2026 (evening). v3 + the SESSION 28 rule
+# (FRAME FIRST). ⚠ SECOND CONSECUTIVE RULE PROPOSED BY THE STUDENT, and the
+# first he ordered written DURING the session rather than at close — his
+# words: "Add this rule right now before closing the session." v3 = v2 + the
+# SESSION 27 rule (name the error before the mentor shows it). v2 = v1 +
+# Session 21 adoption of the seven 16-Aug-review proposals (see next section).
 # ═══════════════════════════════════════════════════
 
 ## THE SEVEN CHANGES FROM THE 16 AUG 2026 REVIEW — **ADOPTED IN FULL, SESSION 21 (16 Aug 2026)**
@@ -657,6 +659,44 @@ at the S27 open (citing the dropped-rule precedent), and he answered in one word
    unless the item is ledger-eligible, and **a miss here is data about the LABEL,
    not about the mechanism** — check which one actually failed before logging it.
 
+### THE SESSION 28 RULE (22 Aug 2026, evening) — **RAISED BY THE STUDENT, ADOPTED AT CLOSE**
+
+**The second consecutive rule proposed by the student, in consecutive sessions on
+the same day.** He ordered it written before the close rather than parked
+(*"Add this rule right now before closing the session"*), which is a first.
+
+1. **FRAME FIRST (binding).** **Before any mechanics, a new unit opens with three
+   things: WHAT the thing is, WHY it exists, and WHAT IT BUYS YOU.** No
+   show-and-ask until the frame is stated. His words, mid-session:
+   *"I am getting confused, you are focussing too much in showing and asking but
+   not being specific what you are teaching."* And after the fix:
+   *"this explanation seems more logical, you need to start explaining like this,
+   not just come up with something new randomly."*
+   THE BREACH THAT PRODUCED IT: comprehensions were opened with a code contrast,
+   a three-point anatomy and a [TEACH-BACK] — **four turns of mechanics without a
+   single sentence saying what a comprehension is FOR.** He stopped it.
+   **WHY IT IS NOT MERELY A PREFERENCE, AND THIS IS THE PART THAT MAKES IT A
+   RULE:** it is the S18/S19 finding already written into this file — *he presses
+   "why does this exist rather than the obvious alternative?"* — promoted from an
+   observation about him into an obligation on the mentor. S19 recorded that the
+   honest motivation for closures **was in this file and went unused until the
+   fifth attempt.** This rule makes the frame the FIRST move rather than the
+   fifth.
+   ⚠ **THE FRAME MUST BE HONEST OR HE WILL DEMOLISH IT — see the motivation-
+   rejection pattern (S18/S19, four closure examples destroyed; S28, the `pass`
+   scope example destroyed).** A frame that oversells is worse than none. Two
+   S28 moves that worked and should be reused: (a) **naming which half of the
+   material is cheap** — "the four part-names are vocabulary; the ORDER is
+   load-bearing" — which bought credibility for the half that mattered; and
+   (b) **stating what is NOT being claimed** — "comprehensions are not better
+   than loops; for real logic write the loop."
+   ⚠ **THE COROLLARY, EARNED THE SAME SESSION: RIGHT-SIZE THE FACT.** Four turns
+   were spent on comprehension scope before he asked *"why would I even in first
+   place use the same variable"* — and he was right. **The frame includes saying
+   how much a fact is worth.** The honest version was one line ("the variable
+   does not exist afterwards") and it was labelled a footnote out loud. Rank
+   facts against each other, in the student's hearing.
+
 ### THE THREE SESSION 20 RULES (16 Aug 2026)
 
 **All three came from the student, in the last twenty minutes of the session,
@@ -835,6 +875,8 @@ the current step against this file — no explanation required from him.**
 3. **Tag every question** — [RECALL] / [PREDICT] / [DRILL] / [TEACH-BACK], and
    its evidence weight. (S16) **S27 extension: every snippet that raises gets its
    error NAMED by the student before the traceback is shown. (S27)**
+   **S28 extension: FRAME FIRST — what it is, why it exists, what it buys you —
+   before any mechanics, and say out loud how much each fact is worth. (S28)**
 4. **Channel before blame** — transcription artefact, whitespace,
    ambiguous assent: check the channel before logging a student error.
    (S16, S17-2, S17-3)

@@ -1284,13 +1284,59 @@ false.
  because you never hold the exact float to look up. **The dict design was credited
  where it WOULD win — replay by discrete frame number, `frames[1500]`, real random
  access.** ⚠ NOT [x]: same-session.
-- [ ] List comprehensions (**pre-loaded S15: the iteration protocol is the
- machinery underneath every comprehension — say so when this opens**)
-- [ ] Dict comprehensions
+- [~] List comprehensions — **TAUGHT S28** (commit S28). The S15 pre-load was
+ honoured: the iteration protocol was named out loud as the machinery
+ underneath, and it was [x] going in, so the gate opened clean with no credit.
+ Covered: the form; **the expression-vs-statement fact, which HE derived from
+ his own `print(...)` test and which is the whole reason the construct exists**
+ (`sum([abs(r) for r in readings])` — a loop living inside a call, a position
+ no `for` statement can occupy); the `if` filter as a GATE; the formal anatomy
+ `[EXPRESSION for VAR in ITERABLE if CONDITION]` with **written order ≠
+ execution order (4→2→3→1)**; **the order PROVED, not asserted** — `[100/v for
+ v in speeds]` raises `ZeroDivisionError` while `[100/v for v in speeds if
+ v != 0]` does not, so the gate demonstrably protects the expression; the
+ comprehension's own namespace (variable does not survive — `NameError`);
+ and WHEN NOT TO USE ONE (`[print(j) for j in joints]` builds `[None, None,
+ None]` — **which he can already explain from his own S25 returns-`None`
+ rule**). ⚠ NOT [x]: same-session throughout, and **HE refused the drill
+ tonight specifically to keep it ledger-eligible tomorrow.** ⚠ CORRECTION
+ ISSUED IN SESSION: the mentor claimed a comprehension IS a hidden function;
+ true to Python 3.11, but he is on **3.12**, where PEP 709 inlines list
+ comprehensions and keeps the scope isolation deliberately. The Level 2
+ statement that stands: **it gets its own namespace, discarded at the end.**
+ The version mechanics are Level 3 and parked.
+- [~] Dict comprehensions — **TAUGHT S28** (commit S28). `{KEY: VALUE for VAR
+ in ITERABLE}`; **the two things that make it a dict rather than a list are
+ the braces and the COLON, and he produced both himself**; walking an existing
+ dict with `.items()` + two-name unpacking (`{name: a for name, a in
+ angles.items() if a > 180}`); the filter working on the VALUE. ⚠ NOT [x]:
+ same-session.
+- [~] **`zip` — TAUGHT S28** (commit S28). **DISCHARGES the S19
+ seen-but-not-taught debt logged at line 1145**, alongside comprehensions —
+ both settled in one session. Covered: pairing two parallel iterables; **the
+ motivation taken from his own S27 code** (`range(len(...))` is manual index
+ bookkeeping and `zip` removes the index entirely); each pass yields a
+ **TUPLE**, which is why `for name, angle in zip(...)` unpacks; **and the
+ headline finding — `zip` FAILS SILENTLY, TWICE OVER**: unequal lengths
+ truncate to the shortest with no error, and an exhausted `zip` returns `[]`
+ rather than raising, because `list()` is the thing that catches
+ `StopIteration`. ⚠ NOT [x]: same-session.
 - [ ] Nested data structures
 - [ ] Common patterns and pitfalls
-- [ ] **String formatting / f-strings — PARKED HERE FROM S16** at the
- student's own raising.
+- [~] **String formatting / f-strings — PARKED HERE FROM S16 at the student's
+ own raising; TAUGHT S28** (commit S28). **Opened by naming the reason out
+ loud: he USES them correctly and could not EXPLAIN them — the one construct
+ in the course he was operating at Level 1 on.** Covered: the `f` prefix (without
+ it `{angle}` is eight literal characters); **the three steps — evaluate the
+ expression, call `str()` on it, splice it in** — with step 2 motivated by the
+ `TypeError` from `"..." + angle`, which he named cold; **what sits in the
+ braces is an EXPRESSION, not a name** (calls, dict lookups, arithmetic,
+ comparisons — and a COMPREHENSION, but never a `for` loop, **which he
+ reasoned out himself from expression-vs-statement**); nested quote choice;
+ and the format spec — `.2f`, `8.2f`, `03d`, `10s`. ⚠ TWO CORRECTIONS: the
+ width number is TOTAL field width, not extra spaces; and **the default
+ alignment differs by type — text hugs the LEFT, numbers hug the RIGHT**,
+ which is why decimal points line up in a column. ⚠ NOT [x]: same-session.
 
 #### 1.9 Error Handling and Exceptions
 - [ ] What exceptions are — the exception hierarchy (**pre-loaded S15:

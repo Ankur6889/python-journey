@@ -367,7 +367,24 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **27**
+- Sessions Completed: **28**
+- **SESSION 28 (Sat 22 Aug 2026, EVENING) — FOUR CURRICULUM ITEMS TAUGHT AND
+ THE S19 DEBT DISCHARGED; ZERO PROMOTIONS, BY HIS OWN CHOICE.** Same-day as S27
+ and declared as such at the open, so the whole session ran as CONTENT with the
+ recall block correctly skipped. Comprehensions (list and dict), `zip` and
+ f-strings all taught in full — **the second and last construct flagged
+ "seen-but-not-taught" back in S19 is now discharged, and HE caught the first
+ one himself before being told.** 1.8 moved ~70% → ~90%. **He was offered a
+ drill and REFUSED IT so it would count tomorrow** — the single strongest data
+ point in the session. **SIX pushbacks, the most in any session, all upheld or
+ part-upheld (running total 45/44)** — and all six landed on the same mentor
+ defect: teaching mechanics without stating the point. That produced **RULES
+ v4: FRAME FIRST**, the second consecutive student-proposed rule and the first
+ he ordered written mid-session. **A factual over-claim was made and
+ self-corrected in the same turn** (comprehensions as hidden functions — true
+ to 3.11, not to his 3.12). **The S27 error-naming rule fired five times and
+ hit five times — the first session in which the LABEL half did not fail once.**
+
 - **SESSION 27 (Sat 22 Aug 2026) — THE WEAKEST CLUSTER IN THE FILE CLEARED, AND
  1.8 ADVANCED FROM ~40% TO ~70%. EIGHT PROMOTIONS PLUS A DRILL FILE.** Later-day
  gap after S26, so the whole cold block was legitimate and it paid: `break`,
@@ -675,6 +692,7 @@
 | 25 | Recall block — closures, iteration, docstrings, five checks | `drills/s25_closure.py` (10/10) + `drills/s25_iteration.py` (7/7) | Complete | ELEVEN promotions, one demotion (associativity); 3 pushbacks, all upheld |
 | 26 | 1.8 — tuple in full, dict two-thirds | **NONE — no drill file written** | ⚠ **MISSING** | Same-day as S25, so zero promotions and the four hook tests correctly deferred. Ran on live code + [PREDICT] only. **4 pushbacks, all upheld/part-upheld (running total 38/37) — third consecutive spec-writing failure, incl. `KeyError` demanded having never appeared in the course.** Error TABLE failed in 20 min → rebuilt as the FOUR-STATION HOOK. Two standing fixes adopted: teach-before-ask, and every [PREDICT] declares its kind. **S27 must produce `drills/s27_*.py`.** |
 | 27 | **Clear the S25 hook backlog task-first + FINISH DICT + SET + when-to-use-which** | **TASK-FIRST [RECALL]: `drills/s27_flow.py` — five functions under lettered CONSTRAINTS forcing `break` (one-return-last-line), `continue` (if-has-no-else), loop `else` (print only on natural end, no `if` after the loop), ternary (single-line return), `pass` (one-line body, not a return/string/assignment); 20/20 pytest, then a guided rewrite of `find_index` from items to positions; naming half of each mechanism taken after the code ran; [DRILL] `2 ** 3 ** 2` then `2 + 3 * 4 ** 2` for associativity and precedence SEPARATELY; [RECALL] traceback frames off a live `KeyError`; [RECALL] keyword argument; four-station error hook fired cold on three dict snippets; EXPRESSION vs STATEMENT closed; then dict deletion + ordering, `set` in full (uniqueness, `set()` vs `{}`, add/discard/remove, not-subscriptable, order instability across three runs, `|`/`&`/`-`), and when-to-use-which with the 30-second joint-log exercise** | **Complete — EIGHT promotions, 1.8 to ~70%; comprehensions declared open and NOT walked through** | **THE `while`/loop-`else`/`pass`/ternary CLUSTER — WEAKEST IN THE FILE SINCE S23 — CLEARED IN ONE DRILL, AND THE S25 HOOKS ARE WHY. Associativity RE-PROMOTED after its S25 demotion, asked alone; precedence tested separately; the `while` bullet DELIBERATELY LEFT [~] because `while` mechanics were untested — the first time this file has refused a bundle. His `find_index` rewrite killed a latent bug he never saw (`None` serving as both sentinel and value) — a five-checks `bahar`-by-TYPE miss. RULE ADOPTED (his own, proposed and ruled on by him): name the error before the mentor shows it; it paid for itself on first use by exposing STATION 0 of the four-station hook (`SyntaxError` = did it run at all?). Hook result mixed and therefore useful: `AttributeError` hit, `KeyError`→`IndexError` MISS, `NameError` honest gap. Confidence calibration accurate across eight ratings. Depth-before-answer fired three times, all three recovered on re-ask (ten straight). NEW WATCH AREA: DESIGN-SWITCHING — asked three times what the outer container must DO, he twice proposed a different design instead of answering, then got it instantly on the direct re-ask. Mentor: ONE defective ask (down from four), upheld; two self-caught mis-tags corrected in opposite directions. Build block moved to Sun 23 Aug — second date it has carried.** |
+| 28 | **OPEN AND TEACH COMPREHENSIONS + the 1.8 tail: `zip` and f-strings** | **NONE — drill DEFERRED TO S29 AT THE STUDENT'S OWN REQUEST so it would be ledger-eligible.** Taught: LIST COMPREHENSIONS (the form; expression-vs-statement as the reason the construct exists — **derived by him from his own `print(...)` test**; the `if` filter as a GATE; the formal anatomy with written-order ≠ execution-order 4→2→3→1, **PROVED with a live `ZeroDivisionError` rather than asserted**; the comprehension's own namespace via `NameError`, explicitly right-sized as a footnote; and WHEN NOT TO USE ONE via `[print(j) for j in joints]` → `[None, None, None]`). DICT COMPREHENSIONS (braces + colon; `.items()` + two-name unpacking; filtering on the value). `zip` (pairing; yields TUPLES; **the motivation taken from his own S27 `range(len(...))` code**; **and the headline — it FAILS SILENTLY TWICE, truncating to the shortest and returning `[]` when exhausted because `list()` catches the `StopIteration`**). F-STRINGS (the three steps evaluate→`str()`→splice; braces hold an EXPRESSION not a name — **he reasoned out the `for`-loop exclusion himself**; the format spec `.2f`/`8.2f`/`03d`/`10s`, total width, and text-left/numbers-right alignment). [DRILL] `{name: angle for name, angle in zip(names, angles)}` written cold, one guided fix (missing braces). | **Complete — 1.8 to ~90%; ⚠ NO DRILL FILE, deliberately** | **ZERO PROMOTIONS and that is correct — same-day throughout. ⚠ THE HEADLINE IS HIS: offered a drill, he refused it to protect ledger eligibility (*"atleast it goes to the ledger then"*) — the jump-ahead pattern running backwards for the second time in one session, after he also stopped the mentor mislabelling comprehensions as "1.9". SIX pushbacks, ALL upheld/part-upheld (running total 45/44), the most in any session and all on ONE mentor defect → **RULES v4: FRAME FIRST**, ordered written mid-session. MENTOR ERRORS: four — no frame before mechanics (he stopped the session); a scope example built on `pass` so the branches did not do equal work (demolished, correctly); four turns spent on a footnote before he asked why it mattered; and a FACTUAL OVER-CLAIM (comprehension = hidden function; true ≤3.11, wrong on his 3.12/PEP 709) self-caught and corrected in the same turn, with the `<genexpr>` proof deliberately withheld because generator expressions are untaught. STUDENT: five-for-five on cold error labels under the S27 rule — the label half's first clean session; sideways-answering repeated TWICE (output instead of the four parts; format codes instead of the two output lines), both fixed by re-issuing the question unchanged — twelve straight re-ask recoveries; THIRD boundary bug (`len(n) > 5` with two 5-letter words), then boundary-first applied UNPROMPTED one rep later. NEW WATCH AREA: LEVEL-1 CONSTRUCTS HE USES WITHOUT A MODEL — f-strings hid for 27 sessions precisely because he types them correctly.** |
 
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
@@ -2154,3 +2172,245 @@ carried.** He asked for the progress audit himself before deciding
 (*"how much have we covered till now?? is it enough for a 3 hours session??"*)
 and chose to trade the last block of teaching for a full day on the measurement
 instrument. **That is scheduling judgement, not avoidance.**
+
+---
+
+## What Session 28 established (Saturday 22 August 2026, evening)
+
+**THE SECOND SESSION OF THE SAME DAY, DECLARED AS SUCH AT THE OPEN AND RUN
+CORRECTLY BECAUSE OF IT.** The interval gate was applied unprompted as the first
+action: S27's commit was stamped 15:56 the same afternoon, so nothing taught in
+S27 was promotable and the entire recall block was skipped. He confirmed and
+chose content: *"today lets skip the recall for now lets go for new material."*
+**Zero promotions, by design. The S26→S27 pattern is now the S27→S28 pattern —
+morning session for recall, evening session for content — and it works.**
+
+### THE MATERIAL — FOUR ITEMS, AND A NINE-SESSION DEBT CLOSED
+
+**1.8 moved from ~70% to ~90%.** List comprehensions, dict comprehensions,
+`zip` and f-strings were taught in full, all with runnable code and real output.
+
+⚠ **THE S19 "SEEN-BUT-NOT-TAUGHT" DEBT IS DISCHARGED IN FULL.** Two constructs
+were logged in S19 as having been used in examples without ever being taught —
+`zip` and list comprehensions. **Both were taught tonight, nine sessions later.
+And he caught the comprehension half HIMSELF, unprompted, three turns in:**
+*"j * 2 for j in joints] have we seen this form earlier?? I understand what this
+line is doing but have we studied it earlier, i don't think so."* **The file
+agreed with him — CURRICULUM.md:1145 had written it down precisely so nobody
+could later pretend otherwise.** That is define-before-building being enforced by
+the student against a record he was not reading at the time.
+
+**THE PREREQUISITE GATE WAS OPENED CLEAN AND ON CREDIT FROM NOBODY.** The
+iteration protocol went [x] in S25 specifically to unblock this, and the S15
+pre-load instruction — *say out loud that the iteration protocol is the machinery
+underneath every comprehension* — was honoured. **It then carried the entire
+unit**, including the explanation of why an exhausted `zip` returns `[]`.
+
+**THE SINGLE MOST PRODUCTIVE FACT OF THE SESSION WAS ONE HE ALREADY OWNED.**
+Expression-vs-statement, closed in S27 with his own test (*can it go inside
+`print(...)`?*), paid out **three separate times in ninety minutes**: it told him
+a comprehension is an expression and a `for` loop is not; it explained why
+`sum([abs(r) for r in readings])` is legal and a loop in that position is not;
+and it let him reason out, unaided, that a comprehension can live inside an
+f-string's braces while a `for` loop cannot. **This is what a properly closed
+item looks like in use, and it is the best argument in the file for the strict
+legend.**
+
+**THE ORDER-OF-EXECUTION BLOCK WAS PROVED, NOT ASSERTED — BECAUSE HE DEMANDED
+IT.** Asked *"how important is to know the order of execution, if important
+prove me"*, the answer was a live pair: `[100 / v for v in speeds]` raises
+`ZeroDivisionError` on a list containing `0`, while
+`[100 / v for v in speeds if v != 0]` returns `[10.0, 20.0, 50.0]`. **The filter
+can only protect the expression because the gate runs first.** The honest framing
+that came with it — *"the four part-names are vocabulary, forget them; the ORDER
+is load-bearing"* — is the move that made the proof land.
+
+**`zip` FAILS SILENTLY, TWICE OVER, AND THAT IS THE HEADLINE OF THAT BLOCK.**
+Unequal lengths truncate to the shortest with no error; an exhausted `zip`
+returns `[]` rather than raising. **He predicted the exhaustion correctly and the
+consequence wrongly** — he expected an error. The repair connected to material he
+owns: `StopIteration` **is** raised, and `list()` is the thing that catches it,
+which is `list()`'s entire job. **Two silent failures in one construct, in five
+minutes, on a tool he will use to pair joint names with sensor readings.**
+
+**F-STRINGS MOVED HIM FROM LEVEL 1 TO LEVEL 2 ON A CONSTRUCT HE HAS USED
+CORRECTLY FOR 27 SESSIONS.** The file had flagged it — *he uses them correctly
+and cannot yet explain them* — and the block was opened by saying exactly that.
+Taught: the `f` prefix (without it `{angle}` is eight literal characters); the
+three steps **evaluate → `str()` → splice**, with step 2 motivated by the
+`TypeError` from `"the angle is " + angle` which he named cold; **what sits in
+the braces is an EXPRESSION, not a name**; and the format spec. **Two corrections
+issued on the spec: the width number is TOTAL field width, not extra spaces; and
+the default alignment differs by type — text hugs the LEFT, numbers hug the
+RIGHT, which is why a column of readings lines up on the decimal point.**
+
+### THE STUDENT — TWO MOMENTS THAT MATTER MORE THAN THE MATERIAL
+
+⚠ **HE REFUSED A DRILL HE WAS OFFERED, TO PROTECT THE MEASUREMENT.** At the end
+of the teaching he was offered a comprehensions drill file. He declined:
+*"wait lets do the drill tommorow then, atleast it goes to the ledger then, lets
+continue with further content."* **He traded immediate practice for valid
+evidence, unprompted, having correctly worked out that same-day work cannot
+promote.** This is the strongest single data point in the session and it belongs
+next to the S18 (e) precedent where he refused the "taught" tag on closures.
+
+⚠ **HE STOPPED THE MENTOR MISNUMBERING THE CURRICULUM.** A teaching block was
+headed "1.9 — LIST COMPREHENSIONS". He challenged it: *"I think 1.8 was not
+complete yet why are you moving to 1.9??"* **Checked and upheld — comprehensions
+are inside 1.8; 1.9 is Error Handling and is not open.** He was tracking the plan
+he holds against the claim in front of him.
+
+**Both are the jump-ahead pattern running BACKWARDS, in one session.**
+
+### THE MENTOR — FOUR ERRORS, AND THE RULE THEY PRODUCED
+
+⚠⚠ **THE SPEC-WRITING WATCH AREA IS RETIRED (four defective asks in S26, one in
+S27, ZERO in S28) AND REPLACED BY A LARGER ONE: FRAMING.** Three of tonight's
+four errors have one root — **mechanics taught without the point being stated.**
+
+**(a) THE BREACH THAT PRODUCED THE RULE.** Comprehensions opened with a code
+contrast, a three-point anatomy and a [TEACH-BACK] — four turns of show-and-ask
+with **not one sentence saying what a comprehension is FOR.** He stopped the
+session: *"I am not getting the point in this session what are you trying to
+teach me, I am getting confused, you are focussing too much in showing and asking
+but not being specific what you are teaching."* **The frame was then given in
+full — what it is, why it exists (the expression capability), the honest second
+reason (LeRobot/openpi are written in this idiom and reading them is a stated
+Layer 0 deliverable), and explicitly what was NOT being claimed (comprehensions
+are not better than loops).** His verdict: *"this explanation seems more logical,
+you need to start explaining like this, not just come up with something new
+randomly."*
+
+**(b) A DEMOLISHED EXAMPLE — THE FIFTH ON HIS RECORD.** The scope contrast was
+built with `for angle in [1,2,3]: pass`, so the loop appeared to do nothing and
+the two branches were not comparable. *"you used pass after the for loop, so I am
+not sure if the variable was even used, or anything happened can you give a
+better example."* **Upheld.** Rebuilt so both forms built `[2, 4, 6]`, leaving
+the form as the only difference. **This is the S18/S19 motivation-rejection
+pattern and it is completely reliable: a weak example will not survive him.**
+
+**(c) A RIGHT-SIZING FAILURE, CONCEDED IN SESSION.** Four turns were spent on
+comprehension scope before he asked *"why would I even in first place use the
+same variable as I have used to name an object"* — and he was right. The honest
+version is one line (**the comprehension's variable does not exist afterwards,
+which is the bug people actually hit**), and it was relabelled a footnote out
+loud, with the four wasted turns named as a mentor cost. **This became the
+COROLLARY inside the new rule: rank facts against each other, in his hearing.**
+
+**(d) A FACTUAL OVER-CLAIM, SELF-CAUGHT AND CORRECTED IN THE SAME TURN — a
+different class of error and it needs its own line.** "A comprehension IS a
+hidden function" was stated, with a `<listcomp>` traceback frame promised as
+proof. **The frame did not appear: he is on Python 3.12, where PEP 709 inlines
+list comprehensions while deliberately keeping the scope isolation.** The claim
+was true through 3.11. It was corrected to his face with the reason, the Level 2
+statement restated (**it gets its own namespace, discarded at the end**), and the
+mechanics parked to 1.13. ⚠ **A working `<genexpr>` proof existed and was
+DELIBERATELY NOT USED, because generator expressions are untaught — define-
+before-building held under pressure to rescue a claim.** **The lesson: verify the
+demonstration on THIS machine before promising what it will show.**
+
+### THE RULE ADOPTED — RULES v4, FRAME FIRST
+
+**FRAME FIRST (binding): before any mechanics, a new unit opens with WHAT the
+thing is, WHY it exists, and WHAT IT BUYS YOU. No show-and-ask until the frame is
+stated. And say out loud how much each fact is worth.**
+
+**Second consecutive rule proposed by the student, in two sessions on the same
+day — and the first he ordered written DURING the session rather than parked:**
+*"Add this rule right now before closing the session."* The cap was honoured (one
+rule), and the timing exception is now recorded: **the cap governs the COUNT, not
+the moment.**
+
+**Why it is a rule and not a preference:** it promotes an existing observation
+about him — *he presses "why does this exist rather than the obvious
+alternative?"*, written down in S18 — into an obligation on the mentor. **S19
+recorded that the honest motivation for closures was already in this file and
+went unused until the fifth attempt.** This rule makes the frame the first move
+instead of the fifth.
+
+### MEASUREMENT AND WATCH AREAS
+
+**FIVE ERROR LABELS ASKED COLD UNDER THE S27 RULE. FIVE CORRECT** —
+`SyntaxError` (with the Station 0 proof that line 3 never printed),
+`ZeroDivisionError` (decoded on first-ever exposure), `NameError`, `TypeError`,
+and his own missing-brace diagnosis on code he had just written. ⚠ **This is the
+first session in which the LABEL half of the term-retention split did not fail
+once.** It is same-day-adjacent and must be re-fired cold in S29 before anything
+is concluded — **but the rule he proposed one session ago is doing exactly what
+he said it would.**
+
+⚠ **SIDEWAYS-ANSWERING REPEATED TWICE AND IS NOW A PATTERN, NOT AN INCIDENT.**
+S27 recorded design-switching under a hard question. S28 shows the same shape in
+a new form: asked for the four parts of a comprehension **by name**, he gave the
+**output** instead; asked for two printed lines from a format-spec snippet, he
+explained the **format codes** instead. **The countermeasure held both times —
+name the substitution, re-issue the ORIGINAL question unchanged.** On the first,
+he then produced all four parts correctly **and in execution order, unprompted.**
+**Twelve successful re-asks across S24–S28 with zero failures. THE RE-ASK IS THE
+INTERVENTION — do not re-teach.**
+
+⚠ **THIRD BOUNDARY BUG, AND THE FASTEST CORRECTION YET.** He read
+`[n.upper() for n in names if len(n) > 5]` as keeping `"elbow"` and `"wrist"`,
+both exactly five letters. Same class as his S20 `n <= 10` and the planted
+`len(word) == 1`. **The habit was named to his face — "your bugs live on the
+boundary" — and ONE rep later he opened his next answer with *"condition is >180
+not >=180"* without being prompted.** Naming the pattern outperformed re-teaching
+it. **Plant a boundary in the S29 drill.**
+
+⚠ **A NEW WATCH AREA, AND IT IS A CATEGORY RATHER THAN AN ITEM: LEVEL-1
+CONSTRUCTS HE USES WITHOUT A MODEL.** f-strings sat unexamined for 27 sessions
+**because he uses them correctly**, so nothing ever raised a flag. **Correct
+usage is not evidence of a model, and it actively hides the gap.** Audit for
+others of the same shape — things he types fluently and has never been asked to
+explain. Visible candidates: `len()`, `range()` as an object rather than a
+keyword, `print()`'s return value, `.append()` vs `+`, `import`.
+
+**NO CONFIDENCE RATINGS WERE TAKEN, correctly** — everything was same-day
+teaching and RULES forbids a rating on fresh material. **Do not read the empty
+column as a lapse.**
+
+**HONEST-GAP DECLARATION REMAINS RELIABLE.** *"I am confused, can't think of
+anything"* on the comprehension-scope mechanism; *"well I don't know that"* on
+the f-string prefix. **Both times he then reasoned forward from what he did
+have** — the second produced a correct Level 1 answer unaided.
+
+**LANGUAGE PRECISION — THREE CORRECTIONS, ALL LABEL-LEVEL.** (a) *"the list
+function goes on the iterator"* → **`list()` calls `next()` on the iterator
+repeatedly until `StopIteration`.** (b) `i`/`j` as names when unpacking a name
+and an angle → **`i` and `j` read as INDEX names to any Python developer; call
+them `name, angle`.** (c) *"left indentation"* for a string field → **strings pad
+on the RIGHT; it is the numbers that pad on the left.**
+
+**FALSE ATTRIBUTION / PUSHBACK DENOMINATOR: 45 raised, 44 upheld or
+part-upheld.** ⚠ **S28 raised SIX — the highest of any session in the file — and
+every one was sound:** (40) *"I think 1.8 was not complete yet why are you moving
+to 1.9"*; (41) *"have we seen this form earlier?? i don't think so"*; (42) *"you
+are focussing too much in showing and asking but not being specific what you are
+teaching"*; (43) *"how important is to know the order of execution, if important
+prove me"* — **part-upheld: the proof was given and half the block was conceded
+as cheap**; (44) *"you used pass after the for loop... can you give a better
+example"*; (45) *"why would I even in first place use the same variable"*.
+**Six challenges and four mentor errors in one session is the highest defect rate
+recorded here — and every one was caught by him, not by the mentor.**
+
+### WHAT WAS NOT DONE, DECLARED RATHER THAN GLOSSED
+
+**NO DRILL FILE — at his request, and for a good reason (see above). It is owed
+as the FIRST item of S29.**
+
+⚠⚠ **THE S26 BACKLOG WAS DECLARED FOR S27, DECLARED AGAIN FOR S28, AND HAS NOW
+RUN IN NEITHER.** Tuple, the dict two-thirds, set, shallow copy, unpacking,
+`list()`, `.get()`, `.items()`, the raise-vs-shrug pairing, when-to-use-which —
+all still untested, some of it four sessions overdue. **This is the third
+declaration. S29 either runs it task-first in one drill file or the file should
+stop calling it a priority.** The `KeyError`/`IndexError` miss from S27 is
+untouched. `while` mechanics remain untested for a second session.
+
+**`*args`/`**kwargs` WAS DELIBERATELY AVOIDED FOR THE SECOND SESSION RUNNING**,
+to protect tomorrow's cold build block. ⚠ **`zip` is now taught and `zip` is
+exactly the tool that pairs two parallel sequences — do not point him at it
+before the block runs.**
+
+**1.8 remaining: nested data structures, common patterns and pitfalls,
+`reversed()`, `copy.deepcopy`.** Nested structures is next and it is the block
+that finally makes shallow copy make sense.
