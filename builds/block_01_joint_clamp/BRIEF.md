@@ -3,7 +3,14 @@
 90 min, timed. No AI, no autocomplete. git commit at start and end.
 pytest decides whether it works.
 
-Write `clamp.py` and `test_clamp.py` in this folder.
+**You write ONE file: `clamp.py`.**
+`test_clamp.py` is already here and I wrote it — pytest has never been
+taught, so writing tests is not your job. Do not edit it, do not read it
+for hints. It is the acceptance criteria, nothing more.
+
+Run it:  `python3 -m pytest builds/block_01_joint_clamp -q`
+One level: add `-k L1`
+
 Keep `LOG.md`: where you stalled, and what you had to look up.
 
 ## THE ARM
@@ -121,11 +128,10 @@ Then a final line: how many were clamped.
 
 ---
 
-# TESTS — half the mark
+# GREEN IS THE BAR
 
-Every expected value above becomes a test. Then add one test for each of
-THE FIVE CHECKS, with the check's name in the test name. If you cannot
-recall all five, write down which ones you missed and move on.
+13 tests. All red now. Make them green, in level order.
+L4 and L5 are not tested — L4 is your decision, and it goes in LOG.md.
 
 # TIME
 
