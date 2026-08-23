@@ -52,3 +52,79 @@ This task is built entirely out of the thing you keep getting wrong.
 
 Come back, say done, and Session 29 opens on the result. I hold two things
 back until then, deliberately, and I am not going to slip.
+
+---
+
+# THE EXERCISE (added 23 Aug, at his request)
+
+Build a module that clamps robot joint angles to their safe limits.
+
+**One name is fixed so we can talk about it: `clamp_joints`.**
+**Everything else — the parameter list above all — is yours to design.
+The signature IS the deliverable.**
+
+Work the levels in order. Getting to L3 with clean tests beats reaching L5
+with a broken L2. Stop where you stop; where you stop is the measurement.
+
+## L1 — one joint
+
+Given an angle and a low/high limit pair, produce the safe angle.
+
+- inside the limits  -> unchanged
+- below the low limit -> becomes the low limit
+- above the high limit -> becomes the high limit
+- **EXACTLY ON a limit -> unchanged, and it is NOT clamped.**
+  This is spec, not a detail. Both ends. Test it first.
+
+## L2 — many joints, one shared limit pair
+
+One call must accept ANY NUMBER of angles positionally:
+
+    clamp_joints(10, -200, 95, ...)
+
+and give back all of them, clamped, in the same order. Two angles, five
+angles, one angle, zero angles — same call shape, no list built by the caller.
+
+## L3 — per-joint limits, supplied BY NAME
+
+Different joints have different limits. The caller must be able to say, in
+the same call, which limits belong to which joint — by name, not by position.
+
+The result must make clear WHICH JOINT ended up with WHICH VALUE. A bare
+sequence of numbers is not enough at this level.
+
+⚠ This is the level the whole block exists for. Expect it to be harder than
+it looks. When it fights you, that is the exercise working — log the stall
+and keep going.
+
+## L4 — absence
+
+Some joint gets an angle but no limits were supplied for it.
+
+You decide: raise, or shrug and pass the value through. **Whichever you
+choose, write ONE line in LOG.md saying why.** There is a right answer and
+it depends on whether that situation is a BUG or an EXPECTED CASE — say
+which you think it is.
+
+## L5 — stretch, only if time remains
+
+Report how many joints were actually clamped, and print a readable summary
+line per joint: name, angle in, angle out, and whether it was clamped.
+
+## TESTS — required, and they are half the mark
+
+`pytest` decides whether it works. Your test file must contain a test for
+**each of the five checks**, and each test's NAME must make clear which
+check it is. You know the five. Map them onto this task yourself — that
+mapping is part of what is being measured.
+
+Beyond those: L1's four cases, L3's per-joint routing, and L4's decision.
+
+## ROUGH TIME SPLIT (guide, not a rule)
+
+L1 + its tests: 20 min. L2: 15 min. L3: 35 min. L4: 10 min. Five checks
+and a final pytest run: 10 min.
+
+## THE ONE THING THAT MAKES THIS VOID
+
+Do not ask me anything until the timer stops.
