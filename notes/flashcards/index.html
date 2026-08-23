@@ -1,0 +1,498 @@
+<title>Python Recall Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+:root {
+  --paper:   #EDEFEC;
+  --surface: #FBFCFA;
+  --raised:  #FFFFFF;
+  --ink:     #141C1A;
+  --ink-mid: #4C5B58;
+  --ink-dim: #77837F;
+  --rule:    #D2D8D2;
+  --rule-soft:#E2E7E1;
+  --teal:    #0F6B5C;
+  --teal-bg: #E0EDE8;
+  --trap:    #A61B54;
+  --trap-bg: #F7E4EC;
+  --shadow:  0 1px 2px rgba(20,28,26,.06), 0 8px 24px -12px rgba(20,28,26,.18);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:   #0C1312;
+    --surface: #131C1A;
+    --raised:  #182320;
+    --ink:     #DDE6E1;
+    --ink-mid: #A2B0AB;
+    --ink-dim: #7A8884;
+    --rule:    #27352F;
+    --rule-soft:#1E2A26;
+    --teal:    #5CCCAF;
+    --teal-bg: #14312B;
+    --trap:    #FF7BA9;
+    --trap-bg: #351123;
+    --shadow:  0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"] {
+  --paper:   #0C1312;
+  --surface: #131C1A;
+  --raised:  #182320;
+  --ink:     #DDE6E1;
+  --ink-mid: #A2B0AB;
+  --ink-dim: #7A8884;
+  --rule:    #27352F;
+  --rule-soft:#1E2A26;
+  --teal:    #5CCCAF;
+  --teal-bg: #14312B;
+  --trap:    #FF7BA9;
+  --trap-bg: #351123;
+  --shadow:  0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+code, .mono { font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace; }
+
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+  padding: 10px 14px 0;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.bar-top { display: flex; align-items: baseline; gap: 10px; }
+.wordmark {
+  font-family: "Zilla Slab", Georgia, serif;
+  font-weight: 700; font-size: 17px; letter-spacing: -.01em;
+  margin: 0; white-space: nowrap;
+}
+.wordmark em { font-style: normal; color: var(--teal); }
+.counter {
+  margin-left: auto;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px; color: var(--ink-dim);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.modes { display: flex; gap: 2px; background: var(--paper); border: 1px solid var(--rule); border-radius: 999px; padding: 2px; }
+.modes button {
+  font: inherit; font-size: 12px; font-weight: 500;
+  border: 0; background: none; color: var(--ink-mid);
+  padding: 4px 11px; border-radius: 999px; cursor: pointer;
+}
+.modes button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+.chips {
+  display: flex; gap: 6px; overflow-x: auto; padding: 0 0 10px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: 0 0 auto;
+  font: inherit; font-size: 12.5px; font-weight: 500;
+  font-family: "IBM Plex Mono", monospace;
+  border: 1px solid var(--rule); background: var(--surface); color: var(--ink-mid);
+  padding: 5px 11px; border-radius: 6px; cursor: pointer; white-space: nowrap;
+}
+.chip[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: var(--surface); }
+
+.progress { height: 2px; background: var(--rule-soft); }
+.progress span { display: block; height: 100%; background: var(--teal); transition: width .25s ease; }
+
+/* ---------- card stage ---------- */
+.stage {
+  flex: 1;
+  display: flex; flex-direction: column;
+  padding: 16px 14px 0;
+  min-height: 0;
+  max-width: 680px; width: 100%; margin: 0 auto;
+}
+
+.card {
+  background: var(--raised);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  padding: 22px 20px 24px;
+  display: flex; flex-direction: column;
+  cursor: pointer;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+.card:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-dim);
+  display: flex; gap: 8px; align-items: center;
+}
+.eyebrow .kind { color: var(--teal); }
+.eyebrow .dot { color: var(--rule); }
+
+.prompt {
+  font-family: "Zilla Slab", Georgia, serif;
+  font-size: clamp(23px, 6vw, 30px);
+  font-weight: 600; line-height: 1.22; letter-spacing: -.012em;
+  margin: 14px 0 0; text-wrap: balance;
+}
+.prompt.term {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500; font-size: clamp(21px, 5.4vw, 27px);
+  letter-spacing: -.02em; word-break: break-word;
+}
+.carets {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--teal); opacity: .55;
+  font-size: 13px; letter-spacing: .04em;
+  margin-top: 6px; overflow: hidden; white-space: nowrap; user-select: none;
+}
+
+.tap-hint {
+  margin-top: auto; padding-top: 22px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.answer { margin-top: 20px; display: flex; flex-direction: column; gap: 16px; }
+.answer[hidden] { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .answer { animation: rise .22s ease-out both; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.does { font-size: 17px; line-height: 1.5; margin: 0; color: var(--ink); }
+
+.trap {
+  border-left: 3px solid var(--trap);
+  background: var(--trap-bg);
+  padding: 11px 13px;
+  border-radius: 0 3px 3px 0;
+}
+.trap b {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--trap); margin-bottom: 3px;
+}
+.trap p { margin: 0; font-size: 15.5px; line-height: 1.45; }
+
+/* ---------- controls ---------- */
+.controls {
+  position: sticky; bottom: 0; z-index: 20;
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  display: flex; gap: 8px;
+  max-width: 680px; width: 100%; margin: 16px auto 0;
+}
+.controls button {
+  font: inherit; font-weight: 500; font-size: 14px;
+  border: 1px solid var(--rule); background: var(--raised); color: var(--ink);
+  border-radius: 4px; padding: 11px 0; cursor: pointer; flex: 1;
+  min-height: 44px;
+}
+.controls button:active { transform: translateY(1px); }
+.controls button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.controls .nav { flex: 0 0 52px; font-family: "IBM Plex Mono", monospace; color: var(--ink-mid); }
+.controls .again { color: var(--trap); border-color: var(--trap); }
+.controls .known { background: var(--teal); border-color: var(--teal); color: var(--surface); }
+
+.state-tag {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 3px; margin-left: auto;
+}
+.state-tag.known { background: var(--teal-bg); color: var(--teal); }
+.state-tag.again { background: var(--trap-bg); color: var(--trap); }
+
+/* ---------- table view ---------- */
+.sheet { max-width: 940px; width: 100%; margin: 0 auto; padding: 18px 14px 60px; }
+.sheet h2 {
+  font-family: "Zilla Slab", Georgia, serif;
+  font-size: 20px; font-weight: 700; letter-spacing: -.01em;
+  margin: 34px 0 2px; padding-top: 14px; border-top: 2px solid var(--ink);
+  display: flex; align-items: baseline; gap: 10px;
+}
+.sheet h2:first-child { margin-top: 0; }
+.sheet h2 .sn {
+  font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600;
+  color: var(--teal); letter-spacing: .04em;
+}
+.sheet .topic { color: var(--ink-dim); font-size: 13.5px; margin: 0 0 14px; }
+
+.rows { display: flex; flex-direction: column; }
+.row {
+  display: grid; grid-template-columns: 1fr; gap: 3px;
+  padding: 12px 0; border-bottom: 1px solid var(--rule-soft);
+}
+.row .n { font-family: "IBM Plex Mono", monospace; font-size: 14.5px; font-weight: 500; color: var(--teal); word-break: break-word; }
+.row .n.q { font-family: "Zilla Slab", Georgia, serif; font-size: 16px; font-weight: 600; color: var(--ink); }
+.row .d { font-size: 14.5px; color: var(--ink-mid); }
+.row .t { font-size: 14.5px; color: var(--trap); }
+.row .t::before { content: "⚠ "; opacity: .7; }
+@media (min-width: 760px) {
+  .row { grid-template-columns: minmax(150px, 1fr) 1.35fr 1.35fr; gap: 18px; align-items: start; }
+  .row.solo { grid-template-columns: minmax(150px, 1fr) 2.7fr; }
+}
+
+/* ---------- hooks ---------- */
+.hook {
+  background: var(--raised); border: 1px solid var(--rule); border-radius: 4px;
+  padding: 18px 18px 20px; margin-bottom: 18px; box-shadow: var(--shadow);
+}
+.hook h3 {
+  font-family: "Zilla Slab", Georgia, serif; font-size: 21px; font-weight: 700;
+  margin: 0; letter-spacing: -.01em;
+}
+.hook .sub { color: var(--ink-dim); font-size: 12.5px; margin: 2px 0 12px; }
+.hook .line { font-size: 15px; margin: 0 0 12px; }
+.hook table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.hook td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+.hook td:first-child {
+  font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--teal);
+  white-space: nowrap; font-size: 13px;
+}
+.hook td:last-child { color: var(--trap); }
+.hook .tail { margin: 12px 0 0; font-size: 14px; color: var(--ink-mid); border-left: 3px solid var(--rule); padding-left: 11px; }
+.hook-wrap { overflow-x: auto; }
+
+.empty { text-align: center; color: var(--ink-dim); padding: 60px 20px; font-size: 15px; }
+.foot { text-align: center; color: var(--ink-dim); font-size: 12px; padding: 26px 14px 40px; font-family: "IBM Plex Mono", monospace; }
+</style>
+
+<header class="bar">
+  <div class="bar-top">
+    <h1 class="wordmark">Python <em>Recall</em></h1>
+    <span class="counter" id="counter"></span>
+  </div>
+  <div class="bar-top" style="gap:8px">
+    <div class="modes" role="group" aria-label="View">
+      <button id="mCards" aria-pressed="true">Cards</button>
+      <button id="mSheet" aria-pressed="false">Sheet</button>
+    </div>
+    <div class="modes" role="group" aria-label="Options">
+      <button id="mShuffle" aria-pressed="false">Shuffle</button>
+      <button id="mDue" aria-pressed="false">Unlearned</button>
+    </div>
+  </div>
+  <div class="chips" id="chips"></div>
+</header>
+<div class="progress"><span id="bar" style="width:0%"></span></div>
+
+<main class="stage" id="stage">
+  <div class="card" id="card" tabindex="0" role="button" aria-label="Flashcard — tap to reveal the answer"></div>
+</main>
+
+<footer class="controls" id="controls">
+  <button class="nav" id="prev" aria-label="Previous card">←</button>
+  <button class="again" id="again">Again</button>
+  <button class="known" id="known">Got it</button>
+  <button class="nav" id="next" aria-label="Next card">→</button>
+</footer>
+
+<section class="sheet" id="sheet" hidden></section>
+
+<script>
+const DATA = {"title": "Python Journey — Recall Deck", "sessions": [{"n": 0, "title": "Day Zero", "topic": "Onboarding — how engineers think", "cards": [{"k": "p", "q": "What is every program you will ever write?", "a": "A system. Failure cases are the engineering; the happy path is the easy half."}, {"k": "p", "q": "Atomicity — define it, and say where it recurs.", "a": "All-or-nothing. It recurs everywhere: banking, databases, distributed systems, AI pipelines."}, {"k": "p", "q": "Friction is the signal to do what?", "a": "To stay, not to leave."}, {"k": "p", "q": "How do the people who build things like LLMs think?", "a": "They break every problem into smaller problems, and ask why does this work — not just how do I make it work. They are comfortable sitting with confusion."}]}, {"n": 1, "title": "The Memory Model", "topic": "Names, objects, namespaces, id()", "cards": [{"k": "p", "q": "Are names containers?", "a": "No. Names are labels tied to objects. Nothing is ever stored 'in' a name."}, {"k": "p", "q": "Where does type live — on the name or on the object?", "a": "The type is a property of the object, never of the name."}, {"k": "p", "q": "What is the namespace, concretely?", "a": "A real dictionary you can print."}, {"k": "p", "q": "What does assignment do to the object on the right-hand side?", "a": "Nothing. Assignment rebinds the name. It never edits the object on the right."}, {"k": "t", "q": "id(obj)", "a": "Returns the object's memory address.", "x": "Equal values may share an address — that is reuse, not a rule to rely on."}, {"k": "t", "q": "locals()", "a": "Dumps the current namespace as a dict.", "x": "Also shows Python's internal entries."}, {"k": "t", "q": "rebinding", "a": "Points a name at a different object.", "x": "Looks like mutation, isn't — other names are unaffected."}, {"k": "t", "q": "refcount", "a": "How many names currently point at an object.", "x": "Hits zero → the object is destroyed, automatically."}]}, {"n": 2, "title": "Rebinding, Identity vs Equality", "topic": "== vs is, the int cache, operators belong to types", "cards": [{"k": "p", "q": "How much of the namespace does a rebinding touch?", "a": "One key in the namespace dict. Nothing else moves."}, {"k": "p", "q": "== and is — which question is each asking?", "a": "== is a value question, is is an identity question. They are not interchangeable, and is on values is a bug waiting for a number above 256."}, {"k": "p", "q": "Is the small-int cache a language rule?", "a": "No — an implementation optimisation. Never write code that depends on it."}, {"k": "p", "q": "Who owns operator behaviour?", "a": "The type. + on lists concatenates into a new object; + on NumPy arrays adds elementwise."}, {"k": "p", "q": "Mutation and rebinding — one sentence each.", "a": "Different verbs. One changes the object, the other changes the name."}, {"k": "t", "q": "==", "a": "Value comparison via __eq__.", "x": "Says nothing about identity."}, {"k": "t", "q": "is", "a": "Identity comparison via id().", "x": "True for small ints by accident; use only for None-style singletons."}, {"k": "t", "q": "int cache −5…256", "a": "CPython reuses these objects.", "x": "is 'works' inside the range and fails outside it."}, {"k": "t", "q": "list + list", "a": "Builds a new concatenated list.", "x": "Originals untouched; the name is rebound."}, {"k": "t", "q": "list.append(x)", "a": "Mutates the list in place.", "x": "Every alias sees the change; returns None."}]}, {"n": 3, "title": "How Python Runs Code", "topic": "1.1 — bytecode, the PVM, implementations", "cards": [{"k": "p", "q": "Trace the pipeline from your file to execution.", "a": "Source → bytecode → PVM. A two-stage pipeline, not a line-by-line translator."}, {"k": "p", "q": "What is the PVM?", "a": "A virtual CPU in software. Layers, not translations."}, {"k": "p", "q": "How do you test compile time vs run time empirically?", "a": "Syntax errors stop everything before any line runs; runtime errors only stop what follows."}, {"k": "p", "q": "'The GIL' and 'Python is slow' — facts about what?", "a": "About CPython, the implementation — not about the language."}, {"k": "p", "q": "What actually costs Python its speed?", "a": "Dynamism. Bytecode is not the bottleneck. JIT plus type specialisation is how you make a dynamic language fast."}, {"k": "t", "q": "bytecode", "a": "Python-specific intermediate instructions.", "x": "Not machine code; the CPU never sees it."}, {"k": "t", "q": ".pyc / __pycache__", "a": "Cached bytecode.", "x": "Tied to the exact minor version; written on import, not on a direct run."}, {"k": "t", "q": "PVM", "a": "Software CPU that executes bytecode.", "x": "It doesn't 'translate for the CPU' — it IS the executor."}, {"k": "t", "q": "CPython", "a": "The reference C implementation.", "x": "Its properties get mistaken for the language's."}, {"k": "t", "q": "PyPy", "a": "JIT implementation, 5–10× on hot loops.", "x": "cpyext makes C extensions slow/partial — no good for the ML stack."}, {"k": "t", "q": "REPL", "a": "Live read-eval-print process.", "x": "State persists, unlike a script run."}, {"k": "t", "q": "GIL", "a": "One thread runs bytecode at a time.", "x": "A CPython property, not a language rule."}]}, {"n": 4, "title": "The Call Stack & the REPL", "topic": "1.1 closed — frames, LIFO, tracebacks", "cards": [{"k": "p", "q": "Stack — the one-line definition.", "a": "Push/pop at the top only, LIFO. Plates on a counter."}, {"k": "p", "q": "Why is the call stack LIFO?", "a": "Because the innermost call always finishes first. A frame is pushed on call and popped on return."}, {"k": "p", "q": "What is in a frame?", "a": "Local namespace + current line + return address."}, {"k": "p", "q": "What is a traceback, and which way do you read it?", "a": "A frozen snapshot of the call stack, printed bottom-of-stack first so it reads as a story. Read it bottom-up. LIFO ≠ print direction."}, {"k": "p", "q": "REPL or script — which is for what?", "a": "REPL is for exploration (auto-print); scripts are for automation (explicit print)."}, {"k": "p", "q": "Rebinding or mutation — how do you classify?", "a": "By what is on the LEFT of the =. The right side never decides."}, {"k": "t", "q": "call stack", "a": "Holds one frame per active call.", "x": "Depth is finite — deep recursion overflows it."}, {"k": "t", "q": "frame", "a": "Locals + current line + return address.", "x": "Locals die with the frame."}, {"k": "t", "q": "x[0] = v", "a": "__setitem__ — mutates in place.", "x": "Looks like assignment; every alias sees the change."}, {"k": "t", "q": "REPL auto-print", "a": "Echoes each expression's value.", "x": "Doesn't happen in scripts."}]}, {"n": 5, "title": "Data Types", "topic": "1.3 opened — int, float, bool, type checks", "cards": [{"k": "p", "q": "Where does a script start executing?", "a": "At <module>, before any function call."}, {"k": "p", "q": "int vs float in one line each.", "a": "int is exact and unbounded; float is 64-bit and approximate — compare with a tolerance."}, {"k": "p", "q": "Is float error a printing quirk?", "a": "No. It compounds, and it is a real numeric difference."}, {"k": "p", "q": "What is bool, really?", "a": "A subclass of int. Same value, different type, different object."}, {"k": "p", "q": "isinstance or type() == — how do you pick?", "a": "isinstance is permissive (inheritance-aware); type() == is strict. Pick by intent."}, {"k": "t", "q": "<module>", "a": "The top-level frame.", "x": "Not main — main is just its first call."}, {"k": "t", "q": "int", "a": "Arbitrary-precision integer.", "x": "No overflow, but big ints cost memory and time."}, {"k": "t", "q": "float", "a": "64-bit IEEE 754.", "x": "== on floats is a bug; use a tolerance."}, {"k": "t", "q": "bool", "a": "Subclass of int.", "x": "True == 1 yet True is not 1; the hierarchy inverts easily."}, {"k": "t", "q": "type(x)", "a": "Exact runtime type.", "x": "Rejects subclasses — including bool for int."}, {"k": "t", "q": "isinstance(x, T)", "a": "Type check honouring inheritance.", "x": "Accepts bool where you may have meant strict int."}, {"k": "t", "q": "abs(a - b) < tol", "a": "Float comparison.", "x": "Choosing the tolerance is your problem, not Python's."}]}, {"n": 6, "title": "Frames and the Module Frame", "topic": "What a frame is, and what it is not", "cards": [{"k": "p", "q": "Frame — full definition.", "a": "The container Python creates to run one chunk of code: namespace, current line, return address. Created at runtime, destroyed on return. It is not the code."}, {"k": "p", "q": "Do frames require functions?", "a": "No. A file with zero defs still gets exactly one frame."}, {"k": "p", "q": "Namespace vs frame.", "a": "A namespace is a dictionary mapping names to references; a frame owns a namespace. Objects live in memory, not inside namespaces."}, {"k": "p", "q": "Why do local names die?", "a": "They were entries in that frame's namespace, and the frame is gone."}, {"k": "p", "q": "What is true of every frame except the top one?", "a": "It is paused, each on its own calling line. A frame on the stack is never finished."}, {"k": "p", "q": "Can a paused frame be paused on a def line?", "a": "Never. And a line finishing is not a frame finishing."}, {"k": "p", "q": "Is the stack chosen?", "a": "No. The stack is forced by the shape of the calls, not chosen."}, {"k": "t", "q": "namespace", "a": "Dict of names → references.", "x": "Does not hold objects, and is not global."}, {"k": "t", "q": "traceback.print_stack()", "a": "Dumps the live stack, no exception needed.", "x": "Prints bottom-of-stack first, like a traceback."}]}, {"n": 7, "title": "Tracebacks, Object Namespaces, str", "topic": "Reading the stack; attributes; immutability", "cards": [{"k": "p", "q": "Do objects own namespaces?", "a": "Yes. Attributes are entries in the object's own namespace — which is why config.speed = 5 works."}, {"k": "p", "q": "A call raised deep below. Has the caller's line finished?", "a": "No. A line containing a call is not finished until that call returns — the caller sits paused on it."}, {"k": "p", "q": "Compile time and run time — what are they?", "a": "Two different moments. CPython produces bytecode at one; the PVM executes it at the other. Frames are created only at the second."}, {"k": "t", "q": "config.speed = 5", "a": "Sets an attribute in the object's own namespace — mutation.", "x": "id(config) does not change. Classify by the LEFT of the =."}, {"k": "t", "q": "s[0] = \"X\"", "a": "Attempted item assignment on a str.", "x": "Raises TypeError — str has no item assignment at all. Contrast obj.attr = …, which succeeds."}, {"k": "t", "q": "p = True; q = 1 → p == q? p is q?", "a": "True, then False.", "x": "== calls __eq__ (value); is compares id(). Different type ⇒ different object."}]}, {"n": 9, "title": "Strings, None, and the Left-of-Equals Rule", "topic": "Immutable types and the discarded return value", "cards": [{"k": "p", "q": "Which way round is binding?", "a": "Bind the OBJECT to a NAME — never 'the name to the object'."}, {"k": "p", "q": "What decides mutate vs rebind?", "a": "The LEFT of the =. The right side never does. Mutation keeps id(); rebinding changes which object a name points at."}, {"k": "p", "q": "What happens when you 'change' an immutable object?", "a": "You don't. Every change is a new object."}, {"k": "p", "q": "Why is None tested with is?", "a": "Identity cannot be faked; equality can be overridden by __eq__."}, {"k": "p", "q": "A function with no return — what comes back?", "a": "None. Every call, including print, gets its own frame; the caller stays alive and paused underneath it."}, {"k": "t", "q": ".strip()", "a": "Returns a copy with leading/trailing whitespace removed.", "x": "Returns a NEW string — discarding the return value is the single most common string bug. Use s = s.strip()."}, {"k": "t", "q": ".upper() / .lower()", "a": "Return a new case-changed copy.", "x": "New object at a new id(); the original is unchanged because str is immutable."}, {"k": "t", "q": ".replace(a, b)", "a": "Returns a copy with a replaced by b.", "x": "Also a new object — assign it or it is lost."}, {"k": "t", "q": "repr(x)", "a": "The unambiguous printable form of an object.", "x": "Use it to SEE whitespace and quotes that print hides ('  culham  ')."}, {"k": "t", "q": "None", "a": "The sole NoneType object; 'no value present'.", "x": "Not equal to 0 or False even though all are falsy."}, {"k": "t", "q": "is None", "a": "Identity test against the single None object.", "x": "Prefer over == None: == calls __eq__ and can be made to lie; is checks the address."}]}, {"n": 10, "title": "Conversion and Mutability", "topic": "1.4 — explicit/implicit conversion, aliasing, default args", "cards": [{"k": "t", "q": "int(x) from a number", "a": "Converts to integer.", "x": "Truncates TOWARD ZERO, silently: int(3.9)→3, int(-3.9)→-3. Not rounding."}, {"k": "t", "q": "int(x) from a string", "a": "Parses an integer literal.", "x": "Strict. int(\"3.5\") raises ValueError; whitespace is tolerated, a decimal point is not."}, {"k": "t", "q": "float(x)", "a": "Converts to floating point.", "x": "float(\"3.5\") works — unlike int. float(\"nan\")/float(\"inf\") are valid and break comparisons (nan != nan)."}, {"k": "t", "q": "str(x)", "a": "Builds the string representation.", "x": "Almost never raises. str(3) + str(4) is \"34\" — concatenation, not addition."}, {"k": "t", "q": "bool(x)", "a": "Truthiness test.", "x": "Never reads string content. bool(\"False\"), bool(\"0\"), bool(\" \") are ALL True."}, {"k": "t", "q": "1 + 2.0", "a": "3.0, a float.", "x": "Python widens int→float because it is safe and lossless."}, {"k": "t", "q": "True + 1", "a": "2, an int.", "x": "bool subclasses int; the value is obvious, the type is the twist."}, {"k": "t", "q": "\"5\" + 3", "a": "TypeError.", "x": "No safe direction — \"53\" and 8 are both defensible, so Python refuses to guess."}, {"k": "t", "q": "10 / 2  vs  10 // 2", "a": "5.0 (float) vs 5 (int).", "x": "/ always returns a float. // floors toward −∞: -7 // 2 is -4, whereas int(-7/2) is -3."}, {"k": "t", "q": "Aliasing (b = a)", "a": "Two or more names referring to the same object.", "x": "b = a NEVER copies — mutate via either, see it via both."}, {"k": "t", "q": "Passing an argument", "a": "Is an assignment — binds a new local name to the same object.", "x": "The function can mutate the caller's object."}, {"k": "t", "q": "def f(x, bucket=[])", "a": "The default is evaluated ONCE, at def time.", "x": "It accumulates across calls; one shared list living in f.__defaults__."}, {"k": "t", "q": "The mutable-default fix", "a": "bucket=None, then if bucket is None: bucket = [].", "x": "Use is None, never == None."}, {"k": "t", "q": "Safe vs unsafe defaults", "a": "Safe: 0, \"\", None, tuples. Unsafe: [], {}, set(), any mutable.", "x": "The bug only bites when the default actually applies — supplying your own argument hides it."}]}, {"n": 11, "title": "The Depth Doctrine; 1.4 Closed", "topic": "How deep to learn; the complete mutability table", "cards": [{"k": "p", "q": "How deep are you learning this?", "a": "Level 2 — predict and debug — is the target. Level 3 only for what you intend to build."}, {"k": "p", "q": "What is the GIL good and bad for?", "a": "It makes threads useless for CPU-bound work and valuable for I/O-bound work."}, {"k": "p", "q": "ValueError vs TypeError in six words.", "a": "ValueError: right type, unusable value. TypeError: these types don't combine."}, {"k": "p", "q": "When does aliasing matter?", "a": "Only for mutable objects."}, {"k": "p", "q": "Why do mutating methods return None?", "a": "They are statements, not expressions."}, {"k": "p", "q": "Why does a mutable default accumulate?", "a": "It lives on the durable function object, which outlives every call."}, {"k": "t", "q": "Mutable vs immutable types", "a": "Mutable: list, dict, set. Immutable: int, float, bool, str, tuple.", "x": "Same id() after mutation. 'Changing' an immutable builds a NEW object and rebinds the name."}, {"k": "t", "q": "MUTATE vs REBIND inside a function", "a": "lst.append(v) acts on the object; lst = [v] rebinds the local name.", "x": "The caller SEES the first and sees NOTHING of the second."}, {"k": "t", "q": "__defaults__", "a": "Tuple on the FUNCTION OBJECT holding the defaults.", "x": "Not in the frame, not in the namespace — those are rebuilt each call."}, {"k": "t", "q": "b = a.copy()", "a": "New OUTER object; nested objects are aliased.", "x": "Shallow. Nested mutation leaks through."}, {"k": "t", "q": "copy.deepcopy(a)", "a": "New objects all the way down.", "x": "Nothing shared. Slower."}]}, {"n": 12, "title": "Operators", "topic": "Comparison, logic, precedence, +=", "cards": [{"k": "p", "q": "// and int() — when do they differ?", "a": "// floors toward −∞; int() truncates toward zero. They agree on positives, which is why positives prove nothing."}, {"k": "p", "q": "= and == in three words.", "a": "= acts, == asks."}, {"k": "p", "q": "Precedence vs associativity.", "a": "Precedence is rank; associativity is direction when ranks tie."}, {"k": "p", "q": "What decides whether += mutates or rebinds?", "a": "Mutability, not the operator. += mutates a list and rebinds an int/str/tuple. id() is the ground truth."}, {"k": "t", "q": "!=", "a": "True when the two values differ.", "x": "'True' here means 'they differ' — read it slowly."}, {"k": "t", "q": "and / or / not", "a": "and: both true. or: at least one. not: flips one operand.", "x": "Sides evaluate to booleans FIRST, then combine — two stages."}, {"k": "t", "q": "Precedence", "a": "Rank decides order: brackets > * / > + −.", "x": "Order is by RANK, not by left-to-right position."}, {"k": "t", "q": "Associativity", "a": "Direction when ranks tie: mostly left→right.", "x": "** is the exception: right→left (2**3**2 = 512)."}, {"k": "t", "q": "+= on a list", "a": "Mutates the SAME object in place (like .extend).", "x": "Every alias sees it; id() is unchanged."}, {"k": "t", "q": "+= on int/str/tuple", "a": "Rebinds the name to a NEW object.", "x": "The original and any alias are untouched; id() changes."}]}, {"n": 13, "title": "Side Effects, Membership, Short-Circuiting", "topic": "Mutate-vs-build; in; and/or return operands", "cards": [{"k": "p", "q": "What are the two independent facts about any call?", "a": "Its side effect and its return value."}, {"k": "p", "q": "What is the real test for a method's return value?", "a": "Mutate → returns None. Build → returns a new object. That is the test — not method-vs-function."}, {"k": "p", "q": "What does in mean on a dict? On a string?", "a": "On a dict it means keys. On a string it means substring."}, {"k": "p", "q": "What makes a guard expression safe?", "a": "Short-circuiting: and/or return an operand and stop as soon as the answer is settled."}, {"k": "p", "q": "Why do negatives behave oddly under %?", "a": "% is defined by the FLOORED quotient, so negatives shift the magnitude, not just the sign."}, {"k": "t", "q": "in / not in", "a": "Membership test returning a bool. list/tuple/set → elements; str → substring; dict → keys.", "x": "On a dict it checks KEYS, not values. Use .values() for values."}, {"k": "t", "q": "and / or (short-circuit)", "a": "Return an OPERAND: and → first falsy else last; or → first truthy else last. Evaluation STOPS when settled.", "x": "They return an operand, not True/False. 2 or 1/0 → 2, and 1/0 never runs."}, {"k": "t", "q": "& | ^ ~ << >>", "a": "Bitwise — operate on the binary bits of ints.", "x": "& is bitwise, and is logical — different animals."}, {"k": "t", "q": "% (modulo)", "a": "The leftover forced by floored //: (a//b)*b + r == a. Floor the quotient, then solve for r.", "x": "NOT school-remainder on negatives. -7 % 3 = 2, not 1. 'Sign follows divisor' is only the SIGN."}, {"k": "t", "q": "** (power)", "a": "Exponentiation; binds RIGHT-to-left, rightmost pair first.", "x": "2**3**2 = 512, not 64. The only common right-associative operator."}]}, {"n": 14, "title": "Copies, Truthiness, Blocks", "topic": "Shallow vs deep; falsy; a block makes no scope", "cards": [{"k": "p", "q": "What do shallow copies share?", "a": "Their inner objects. Mutation through one is visible through the other — id() settles it."}, {"k": "p", "q": "Which comes first, objects or names?", "a": "Objects come first; names are tags attached afterwards."}, {"k": "p", "q": "Immutable vs mutable, in terms of what moves.", "a": "Immutable → the NAME moves. Mutable → the OBJECT changes and the name stays."}, {"k": "p", "q": "What is falsy?", "a": "Emptiness is falsy, zero is falsy, everything else is truthy."}, {"k": "p", "q": "Colon, indent, dedent — and scope?", "a": "Colon opens a block, indentation delimits it, dedent ends it — and a block makes NO scope. Only a call does."}, {"k": "t", "q": "shallow copy", "a": "New outer box, same inner refs (aliases).", "x": "Mutating a nested object shows in the original too."}, {"k": "t", "q": "deep copy", "a": "Rebuilds everything recursively.", "x": "Slower, but fully independent."}, {"k": "t", "q": "building method", "a": "Returns a NEW object (e.g. str.upper).", "x": "You MUST assign its result to keep it."}]}, {"n": 15, "title": "The Iteration Protocol", "topic": "iter/next, iterable vs iterator, range, function scope", "cards": [{"k": "p", "q": "What is a for loop, mechanically?", "a": "iter() ONCE, then next() every pass, until StopIteration."}, {"k": "p", "q": "How many next() calls do N items cost?", "a": "N+1 — the loop learns it is done by being refused."}, {"k": "p", "q": "Why are iterators consumed and iterables not?", "a": "Iterators hold forward-only state. Iterables just hand out fresh iterators."}, {"k": "p", "q": "Is range an iterator?", "a": "No. range is lazy and half-open, and it is an ITERABLE."}, {"k": "p", "q": "What creates a scope in Python?", "a": "Only def. Python has function scope, not block scope."}, {"k": "p", "q": "When is a name bound?", "a": "Only on a successful return. A raise binds nothing. An exception is a signal that travels, never a value that lands."}, {"k": "t", "q": "iterable", "a": "Can hand you an iterator when asked: list, str, dict, tuple, range.", "x": "Reusable. Saying 'the iterable is exhausted' is wrong — it never is."}, {"k": "t", "q": "iterator", "a": "Gives the next item on demand; raises StopIteration when spent.", "x": "Consumed because it holds forward-only state — NOT because it yields one at a time."}, {"k": "t", "q": "iter()", "a": "Called ONCE by a for loop, at the start, to get the iterator.", "x": "Two iter() calls on one iterable give two INDEPENDENT iterators."}, {"k": "t", "q": "StopIteration", "a": "The signal raised by an exhausted iterator; for catches it internally.", "x": "A SIGNAL, never a value. It is never bound to a name."}, {"k": "t", "q": "list(x)", "a": "Runs next() to exhaustion and collects everything into a NEW list.", "x": "A consumer of the protocol, not part of it. Drains an iterator in one call."}, {"k": "t", "q": "range(n)", "a": "A lazy, half-open stretch of integers from 0 up to (not including) n.", "x": "Stop is a fence, not a fencepost. And it is an ITERABLE, not an iterator."}, {"k": "t", "q": "range(0)", "a": "A legal empty range; the body runs zero times.", "x": "Not an error — but names created only in the body then never exist."}, {"k": "t", "q": "NameError", "a": "Named after what broke: the NAME does not exist.", "x": "'Never created' is Python's only failure mode here — there is no 'scoped away'."}]}, {"n": 16, "title": "Loops and print", "topic": "for vs while, break/continue, nested loops", "cards": [{"k": "p", "q": "for vs while in three words.", "a": "for asks; while checks. One consumes items from an iterator; the other re-evaluates a condition."}, {"k": "p", "q": "break vs continue.", "a": "break kills the LOOP; continue kills the ITERATION. Opposites, not variants."}, {"k": "p", "q": "Which direction does continue skip?", "a": "Downward. Anything below it in the body — including your state update — does not run."}, {"k": "p", "q": "Why do inner loops restart?", "a": "A fresh for gets a fresh iterator. That is also why a hoisted iterator silently breaks."}, {"k": "p", "q": "print and + on a type mismatch.", "a": "print converts; + refuses. Two different policies."}, {"k": "p", "q": "What does a while condition guard?", "a": "Entry to the body — not the printed value. Trace to the last cycle, always."}, {"k": "t", "q": "print()", "a": "Writes arguments to stdout after calling str() on each.", "x": "Returns None, not the text."}, {"k": "t", "q": "sep / end", "a": "sep goes between printed items (default \" \"); end goes after everything (default newline).", "x": "It is \\n, not /n; the last newline is invisible; people assume the space lives in the strings."}, {"k": "t", "q": "break", "a": "Exits the innermost loop entirely.", "x": "Only one level; there is no break 2."}, {"k": "t", "q": "continue", "a": "Ends this iteration, jumps to the condition check.", "x": "Skips the state update below it → infinite while."}, {"k": "t", "q": "Loop else", "a": "Runs if the loop ended without break.", "x": "It is not 'otherwise' — nothing to do with if/else."}, {"k": "t", "q": "Chained comparison", "a": "a > b > c means a > b and b > c.", "x": "The middle operand is evaluated ONCE."}]}, {"n": 17, "title": "Loop else, pass, Ternaries", "topic": "The found-flag, expression vs statement, elif ladders", "cards": [{"k": "p", "q": "What does a found-flag actually record?", "a": "'Did the loop finish without breaking?' — which Python already knows. That is what loop else is."}, {"k": "p", "q": "Expression vs statement.", "a": "An expression evaluates TO a value; a statement performs an action. That is why a ternary fits inside print() and an if/else block does not."}, {"k": "p", "q": "What is an elif chain?", "a": "One ladder: the first true condition wins and everything below it is never evaluated."}, {"k": "p", "q": "How do you classify a method?", "a": "TYPE first, return value second. Never by the name."}, {"k": "t", "q": "found-flag pattern", "a": "Flag False before the loop, True on the hit, checked after.", "x": "Three touch-points for one question — which is exactly why loop else exists."}, {"k": "t", "q": "pass", "a": "A no-op. Fills a block the syntax requires but you have nothing to put in.", "x": "Not continue (skip iteration), not break (exit loop). And a comment is not a body."}, {"k": "t", "q": "IndentationError", "a": "Raised when a colon opens a block and no indented statement follows.", "x": "Comments do not count as a body. Only real statements do."}, {"k": "t", "q": "ternary / conditional expression", "a": "x if condition else y. Evaluates TO a value.", "x": "Use only when both branches select one simple value; otherwise write the block."}, {"k": "t", "q": "else in a chain", "a": "Optional catch-all. Evaluates no condition of its own.", "x": "Absence of else means nothing runs when all conditions are false. That is legal."}, {"k": "t", "q": "the final loop check", "a": "The loop re-tests the condition one more time than it prints, then exits silently.", "x": "Trace-tail truncation: stating the last PRINTED value is not stating the last CYCLE."}, {"k": "t", "q": "non-mutating method", "a": "Returns a new object: copy, sorted, upper, strip, split.", "x": "Original untouched — the return value is the only result, so you must bind it."}]}, {"n": 18, "title": "Errors, and Functions Opened", "topic": "Exception families; def vs call; LEGB", "cards": [{"k": "p", "q": "What do exception names point at?", "a": "The broken part: name, value, or type. TypeError is a refusal, not a confusion."}, {"k": "p", "q": "When does a traceback appear?", "a": "Only when an exception goes UNCAUGHT. An exception travels; it never lands in a variable."}, {"k": "p", "q": "def vs the call — what does each build?", "a": "def builds the object; the call builds the namespace."}, {"k": "p", "q": "Parameter vs argument.", "a": "Parameter = name (a slot). Argument = value."}, {"k": "p", "q": "LEGB — what stops it, and how is E decided?", "a": "It stops at the first hit. E is decided LEXICALLY — where it is written, not where it is called."}, {"k": "t", "q": "NameError vs ValueError vs TypeError", "a": "Name never created / right type & wrong value / the operation doesn't exist between these types.", "x": "int(\"2.5\") is a ValueError; \"5\" + 3 is a TypeError. Python doesn't guess — it refuses."}, {"k": "t", "q": "a == b*(a//b) + (a%b)", "a": "Defines // and % together.", "x": "Floor the quotient FIRST, then solve for r. 17 // -5 is -4, not -3; sign follows the divisor."}, {"k": "t", "q": "in-place mutator", "a": "Changes the object, returns None.", "x": "Not ALL methods on mutable types — pop/index/count return values."}, {"k": "t", "q": "sort/sorted, reverse/reversed", "a": "Mutates / returns new.", "x": "l = l.sort() silently sets l to None."}, {"k": "t", "q": "def", "a": "Builds a function object and binds a name.", "x": "The body does not run; there is no local namespace yet."}, {"k": "t", "q": "implicit None", "a": "Returned when a function ends with no return.", "x": "No return, bare return, and return None are all the same."}, {"k": "t", "q": "f = greet", "a": "A second name for the same object — an alias.", "x": "No brackets means nothing runs."}, {"k": "t", "q": "function scope", "a": "Only def creates scope; if/for/while/try don't.", "x": "That is the L only — a quarter of the LEGB story."}]}, {"n": 19, "title": "Closures", "topic": "Cells, free variables, nonlocal, key=", "cards": [{"k": "p", "q": "Define a closure in one line.", "a": "A function object that binds a free variable from where it was created into its own private CELL, so the value survives after the enclosing frame has died."}, {"k": "p", "q": "Why doesn't the dead frame matter?", "a": "The bond lives on the OBJECT, not the frame."}, {"k": "p", "q": "Five calls to a factory — how many cells?", "a": "Five. Every call re-runs def → new object → new cell. Cells are per-object, never shared."}, {"k": "p", "q": "What do closures actually add?", "a": "No power, only a SHAPE: one argument from outside, the rest sealed inside. Required when someone ELSE calls your function."}, {"k": "p", "q": "When is a name decided to be local?", "a": "At def time. Assignment ANYWHERE in a body makes the name local for the WHOLE body."}, {"k": "p", "q": "Brackets or no brackets?", "a": "Brackets give you the return value; no brackets give you the object."}, {"k": "t", "q": "free variable", "a": "A name a function uses that is not its own local.", "x": "It is 'free' relative to that function, not undefined."}, {"k": "t", "q": "cell / __closure__", "a": "Tuple of cells on the function object; the value is in cell.cell_contents.", "x": "Per-object — two closures from one factory never share."}, {"k": "t", "q": "enclosing (the E of LEGB)", "a": "The function this one is WRITTEN INSIDE — lexical.", "x": "Decided by where it is written, not where it is called from."}, {"k": "t", "q": "key=", "a": "Takes a function; sorted calls it once per element, with one argument.", "x": "You never call it yourself; the output holds ORIGINAL elements, not key values."}, {"k": "t", "q": "nonlocal", "a": "Makes assignment target the enclosing cell.", "x": "Enclosing only — never module-level global."}, {"k": "t", "q": "UnboundLocalError", "a": "The name IS local, but no value is bound yet.", "x": "Distinct from NameError — the name exists, the value doesn't."}]}, {"n": 20, "title": "Recursion and Purity", "topic": "Base cases, pre/post-order, pure functions, edge cases", "cards": [{"k": "p", "q": "What is recursion, in terms of frames?", "a": "Not new machinery: several frames of the same function alive at once, each with its own locals."}, {"k": "p", "q": "What are the two required parts of a recursive function?", "a": "A base case that returns without recursing, and a recursive case that calls itself on a strictly smaller input."}, {"k": "p", "q": "What are the TWO termination conditions?", "a": "(1) A base case exists. (2) Every call moves the input strictly closer to it. A base case that gets stepped over is not one."}, {"k": "p", "q": "Why does work placed AFTER the recursive call run in reverse order?", "a": "Each frame parks mid-body waiting for the call below it; when that returns, the frame resumes — deepest first."}, {"k": "p", "q": "What must a base case return, and why?", "a": "The IDENTITY for the operation: 0 for +, 1 for *, [] for list concatenation. The wrong one skews every answer."}, {"k": "p", "q": "Is RecursionError a law of recursion?", "a": "No. It is CPython's default depth guard at 1000 frames, to stop runaway memory use."}, {"k": "p", "q": "Printer or calculator — how do you tell?", "a": "Does it print or return? A printer uses a bare return and calls itself WITHOUT return in front. A calculator returns on every branch. The calculator is the testable one."}, {"k": "p", "q": "What are the two conditions for a pure function?", "a": "Output depends only on its arguments, and nothing outside the function changes."}, {"k": "p", "q": "How can a function that takes input and returns output still be impure?", "a": "If it mutates the object it was handed and returns that same object. The is check exposes it."}, {"k": "p", "q": "What is ONE line of a traceback?", "a": "One live frame on the call stack — not 'where the error happened', which is only the location half."}, {"k": "p", "q": "Why do traceback lines repeat in a recursion crash?", "a": "Because there were that many frames, all paused at the same line. The line did not fail repeatedly."}, {"k": "p", "q": "What is <stdin>?", "a": "The filename slot, for code that came from standard input rather than a file on disk. Nothing deeper."}, {"k": "p", "q": "Name the five checks for finding edge cases.", "a": "Boundary of every condition; empty/zero; one; the type or sign you silently assumed; whether the base case and the step agree."}, {"k": "p", "q": "Which check finds a bug like n <= 10 vs n < 10?", "a": "Check 1. Read the operator, test the exact value sitting ON the boundary — not a value near it."}, {"k": "p", "q": "Does argument count affect whether returning None is safe?", "a": "No. They are unrelated. None is only ever a problem at the point of USE, in the caller."}, {"k": "p", "q": "What exactly is __closure__[0]?", "a": "A cell object. The value is __closure__[0].cell_contents. And __closure__ is None, not an empty tuple, when there are no free variables."}]}, {"n": 21, "title": "global, *args, **kwargs", "topic": "Locality as a compile-time property; collect vs unpack", "cards": [{"k": "p", "q": "When is locality decided, and over what span?", "a": "At compile time, over the WHOLE body. One assignment anywhere makes the name local everywhere, before any line runs. The LEGB walk only exists for names NOT classified local."}, {"k": "p", "q": "The three-way test for needing global/nonlocal.", "a": "Read / mutate / rebind. Only REBINDING needs the keyword."}, {"k": "p", "q": "Which direction do * and ** go?", "a": "Direction-dependent: the SIGNATURE collects, the CALL spreads."}, {"k": "p", "q": "Empty-but-typed or None?", "a": "Empty-but-typed beats None — () and {} keep the body uniform."}, {"k": "t", "q": "global x", "a": "Assignments to x inside the function target the module namespace.", "x": "Not needed for reads or mutations — only REBINDING."}, {"k": "t", "q": "*args (signature)", "a": "Collects leftover positional args into a TUPLE.", "x": "The empty case is (), never None; args is just a conventional name."}, {"k": "t", "q": "**kwargs (signature)", "a": "Collects leftover keyword args into a DICT.", "x": "Keys are strings; the empty case is {}."}, {"k": "t", "q": "signature order", "a": "normal params → *args → **kwargs.", "x": "Fixed by rule."}, {"k": "t", "q": "* / ** at a CALL", "a": "UNPACK a tuple/dict into separate arguments.", "x": "Opposite direction from the signature; produces arguments, not variables."}, {"k": "t", "q": "keyword argument", "a": "name=value in a CALL, matched by NAME.", "x": "It is a property of the call, not of the parameter."}]}, {"n": 22, "title": "lambda and Docstrings", "topic": "1.6 consolidation", "cards": [{"k": "t", "q": "lambda", "a": "An expression that evaluates to a function object.", "x": "One-expression body; auto-return; the letter λ decodes nothing."}, {"k": "t", "q": "docstring / __doc__", "a": "The first statement of the body, stored on the object.", "x": "Absent → None, not \"\". Comments are not data."}, {"k": "t", "q": "pre-/post-order", "a": "Work before / after the recursive call.", "x": "There is no single mutating n — one per frame."}, {"k": "t", "q": "traceback line", "a": "One live frame frozen at its executing line.", "x": "Callers' lines are calls, not 'problems'."}, {"k": "t", "q": "forward-only state", "a": "The iterator's position; no rewind.", "x": "Not 'one at a time'; iterable ≠ iterator."}, {"k": "t", "q": "compile-time locality", "a": "Assignment anywhere → local everywhere in the body.", "x": "Kills the cell inside a closure → UnboundLocalError."}]}, {"n": 23, "title": "Recall Block — Iterators, Closures, lambda", "topic": "Re-testing 1.5–1.7", "cards": [{"k": "t", "q": "int() truncation vs // floor division", "a": "int() drops the fraction toward ZERO; // drops it toward −∞.", "x": "int(-5.98) is -5, not -6. They agree only for positives."}, {"k": "t", "q": "iter(x)", "a": "Asks an iterable for a fresh iterator.", "x": "Called ONCE per loop, not once per pass."}, {"k": "t", "q": "next(it)", "a": "Asks the iterator for the next item.", "x": "Moves the position FORWARD ONLY."}, {"k": "t", "q": "exhausted iterator", "a": "Position sits past the end.", "x": "The loop body runs ZERO times; no error."}, {"k": "t", "q": "cell", "a": "A TYPE — a one-slot box holding a free variable.", "x": "cell_contents is the VALUE; __closure__ is the TUPLE."}, {"k": "t", "q": "__closure__", "a": "Tuple of cells, one per free variable.", "x": "None when there are none — not ()."}, {"k": "t", "q": "f vs f()", "a": "The object handed over vs the function run now.", "x": "key=f() runs it immediately and fails."}, {"k": "t", "q": "sorted(it, key=, reverse=)", "a": "Returns a new list; key is called once per element.", "x": "key takes EXACTLY ONE argument — that is what forces the closure."}, {"k": "t", "q": "docstring position", "a": "First statement of the body → __doc__ at def time.", "x": "POSITION makes it, not the quotes; absent is None."}, {"k": "t", "q": "the five checks", "a": "boundary / empty / one / outside / agree.", "x": "The mnemonic gives you the list, never the thinking."}]}, {"n": 24, "title": "Lists — Indexing and Slicing", "topic": "1.8 opened", "cards": [{"k": "t", "q": "index operator []", "a": "Takes a POSITION, returns the object there.", "x": "0-based; the last valid index is len − 1. Length ≠ last index."}, {"k": "t", "q": "negative index", "a": "Counts backward from the end; -1 is last.", "x": "-len is the first; anything beyond raises."}, {"k": "t", "q": "IndexError", "a": "Raised when the position does not exist.", "x": "ONLY indexing raises it — slicing never does."}, {"k": "t", "q": "slice [start:stop]", "a": "Builds a NEW list.", "x": "HALF-OPEN — stops before stop; the same rule as range()."}, {"k": "t", "q": "step [start:stop:step]", "a": "How far to jump; negative walks backward.", "x": "l[::-1] is a reversed COPY, not a reversal in place."}, {"k": "t", "q": "l[:]", "a": "Full slice — the copy idiom.", "x": "Copies the REFERENCES, not the items — matters when nested."}, {"k": "t", "q": "out-of-range slice", "a": "Returns [].", "x": "SILENT — no crash, so out-of-range bugs hide."}, {"k": "t", "q": "append vs extend", "a": "One item at the end vs many items at the end; both in place.", "x": "Both return None; extend does not build a new list."}, {"k": "t", "q": "insert(i, x) / remove(x)", "a": "Puts x at position i / deletes the first occurrence of the VALUE.", "x": "remove takes a value, not an index. Both return None."}, {"k": "t", "q": "pop()", "a": "Removes the last item AND RETURNS IT.", "x": "The counterexample to the tell — it mutates but does NOT return None."}, {"k": "t", "q": "the tell", "a": "Returns None ⇒ mutating.", "x": "ONE-DIRECTIONAL — mutating does NOT imply returns None."}, {"k": "t", "q": "the discriminator", "a": "TYPE first, then the return value.", "x": "Immutable type ⇒ mutation impossible, so no method can do it."}, {"k": "t", "q": "mila (the fifth check)", "a": "Hold the PROMISE against the CODE, sentence by sentence.", "x": "The only check that looks at your own words instead of the input."}]}, {"n": 25, "title": "Recall Block — Eleven Promotions", "topic": "Closures, iterators, control flow re-tested", "cards": [{"k": "t", "q": "closure — the nesting trap", "a": "A function object binding a free variable into a cell.", "x": "NESTING ALONE IS NOT ENOUGH — no capture ⇒ __closure__ is None."}, {"k": "t", "q": "free variable", "a": "A name used, not defined locally, and not a parameter.", "x": "The thing that TRIGGERS the closure."}, {"k": "t", "q": "list(it) on a partly consumed iterator", "a": "Drains what is left into a new list.", "x": "You get only what's LEFT, not the whole sequence."}, {"k": "t", "q": "__doc__", "a": "The attribute holding the docstring.", "x": "It ALWAYS exists; an absent docstring ⇒ None, not AttributeError."}, {"k": "t", "q": "pass", "a": "A no-op placeholder.", "x": "The name suggests 'skip' — that is continue."}, {"k": "t", "q": "break", "a": "Ends the WHOLE loop.", "x": "Also suppresses loop else."}, {"k": "t", "q": "loop else", "a": "Runs if no break happened.", "x": "Nothing to do with if/else — read it as nobreak."}, {"k": "t", "q": "ternary", "a": "A if C else B — an EXPRESSION.", "x": "The MIDDLE is the condition; the value comes first."}, {"k": "t", "q": "precedence vs associativity", "a": "Rank between DIFFERENT operators vs direction within the SAME rank.", "x": "Precedence cannot break ties. ** is right-to-left; everything else left-to-right."}, {"k": "t", "q": "the five checks (Hindi hook)", "a": "boundary / khaali / ek / bahar / mila.", "x": "ek = exactly ONE; bahar covers TYPE as well as sign."}]}, {"n": 26, "title": "Tuples and Dicts", "topic": "1.8 — tuple in full, dict opened", "cards": [{"k": "t", "q": "tuple", "a": "Immutable ordered sequence; indexable, iterable.", "x": "Immutability is SHALLOW — a mutable object inside can still be mutated."}, {"k": "t", "q": "the comma", "a": "MAKES the tuple.", "x": "(5) is an int. (5,) is a tuple. Parens are grouping, not construction."}, {"k": "t", "q": "t.count / t.index", "a": "The ONLY two tuple methods; both report.", "x": "Anything that would change it cannot exist. Derive it from the type."}, {"k": "t", "q": "unpacking", "a": "low, high = t binds items to names left-to-right.", "x": "Count mismatch ⇒ ValueError, not TypeError — the type is fine, the count is wrong."}, {"k": "t", "q": "multiple return", "a": "return a, b builds ONE tuple.", "x": "A function never returns more than one object."}, {"k": "t", "q": "sum(iterable)", "a": "Totals an iterable of numbers; returns a new value.", "x": "Does not mutate."}, {"k": "t", "q": "dict", "a": "key → value; [] takes a KEY; no scan.", "x": "Keys are unique — assigning an existing key OVERWRITES, never duplicates."}, {"k": "t", "q": "hashable", "a": "A key's hash must be stable, so the key must be immutable.", "x": "The error says 'unhashable type', not 'immutable'. Immutability ⇏ uniqueness."}, {"k": "t", "q": "d[k] vs d.get(k)", "a": "Lookup that raises vs lookup that returns None.", "x": ".get MOVES THE CRASH AWAY FROM THE CAUSE. Use [] when a missing key is a bug."}, {"k": "t", "q": "d.get(k, default)", "a": "A fallback instead of None.", "x": "Only safe when absence is genuinely expected."}, {"k": "t", "q": "in on a dict", "a": "Tests KEYS.", "x": "Not values. Not pairs."}, {"k": "t", "q": "for k in d", "a": "Walks the KEYS.", "x": "Then d[k] does the lookup a SECOND time — use .items()."}, {"k": "t", "q": ".keys() / .values() / .items()", "a": "Keys / values / (key, value) TUPLES.", "x": ".items() is tuple unpacking in disguise."}, {"k": "t", "q": "AttributeError", "a": "The name after the dot is not on the object.", "x": "vs TypeError: there the operation exists but the type refuses it."}, {"k": "t", "q": "KeyError", "a": "The key is not in the dict.", "x": "vs IndexError (position) vs ValueError (value) — station 4's three siblings."}]}, {"n": 27, "title": "Sets, del, and Container Choice", "topic": "1.8 finished; the error hook gains station 0", "cards": [{"k": "t", "q": "expression vs statement", "a": "An expression evaluates to a VALUE; a statement DOES something and yields nothing.", "x": "Test it: can it go inside print(...)? d[k] = v and del d[k] are statements."}, {"k": "t", "q": "SyntaxError", "a": "Grammar broken; NOTHING ran.", "x": "Line 1 never executes either — that is the tell."}, {"k": "t", "q": "TypeError vs SyntaxError", "a": "TypeError: the operation is not defined for these types.", "x": "TypeError needs a RUNNING program; SyntaxError never gets that far."}, {"k": "t", "q": "IndexError / KeyError / ValueError", "a": "jagah / chaabi / cheez absent.", "x": "The brackets are IDENTICAL on a list and a dict — what's INSIDE decides."}, {"k": "t", "q": "subscriptable", "a": "Can be indexed with [ ].", "x": "set is NOT; list/tuple/str/dict are."}, {"k": "t", "q": "del d[k]", "a": "Removes the pair.", "x": "A STATEMENT — hands back nothing; raises KeyError if absent."}, {"k": "t", "q": "d.pop(k)", "a": "Removes and RETURNS the value.", "x": "The counterexample to the returns-None tell, on a second type."}, {"k": "t", "q": "d.clear()", "a": "Empties the dict, returns None.", "x": "Leaves {} — empty, not gone; the SAME object."}, {"k": "t", "q": "dict ordering", "a": "Keys stay in FIRST-INSERTION order.", "x": "Ordered ≠ sorted; overwriting a value does NOT move the key."}, {"k": "t", "q": "set", "a": "Unique, unordered, hashable items.", "x": "{} is an empty DICT — use set()."}, {"k": "t", "q": "set.add", "a": "Adds; returns None.", "x": "Adding something already present is a SILENT no-op."}, {"k": "t", "q": "remove vs discard", "a": "Raise vs shrug when absent.", "x": "Pick by whether absence is a BUG — the spec decides, not temperament."}, {"k": "t", "q": "| & -", "a": "Union / intersection / difference.", "x": "All build a NEW set; − is NOT symmetric."}, {"k": "t", "q": "set order", "a": "There is NO first element.", "x": "The same file printed three different orders in three runs."}, {"k": "t", "q": ".keys()", "a": "A VIEW of the keys.", "x": "Not a list — but it DOES support set operations directly."}, {"k": "t", "q": "when-to-use-which container", "a": "Ask: 'what am I going to ASK this container?'", "x": "Not 'what am I storing?' — that is the downstream half."}, {"k": "t", "q": "list vs tuple", "a": "GROWTH, not order.", "x": "Both are ordered; only one can grow."}, {"k": "t", "q": "sentinel values", "a": "Mark 'nothing here'.", "x": "Must be something the data can NEVER contain — None in a list of Nones is a bug."}]}, {"n": 28, "title": "Comprehensions, zip, f-strings", "topic": "1.9 opened; the S19 debt closed", "cards": [{"k": "p", "q": "What is the master key that explains comprehensions?", "a": "Expression vs statement. It explains why comprehensions exist, why sum([… for …]) is legal, and why a for loop cannot live in an f-string's braces."}, {"k": "p", "q": "Written order vs execution order in a comprehension.", "a": "Iterable → var → gate → expression. The gate protects the expression BECAUSE it runs first."}, {"k": "p", "q": "When should you not use a comprehension?", "a": "When you are not building a container. A comprehension BUILDS one."}, {"k": "p", "q": "How does zip fail?", "a": "Silently — both of its failure modes. It never raises. Check lengths yourself."}, {"k": "p", "q": "Why does an exhausted iterator give [] instead of a crash?", "a": "list() catches StopIteration."}, {"k": "p", "q": "What is an f-string, mechanically?", "a": "Evaluate → str() → splice. The braces hold an EXPRESSION."}, {"k": "p", "q": "Is correct usage evidence of a model?", "a": "No. f-strings hid for 27 sessions precisely because you type them right."}, {"k": "t", "q": "list comprehension", "a": "An expression that builds a new list.", "x": "It is an EXPRESSION — that's the point, not the brevity."}, {"k": "t", "q": "anatomy", "a": "[EXPR for VAR in ITERABLE if COND]", "x": "Written order ≠ execution order (4→2→3→1)."}, {"k": "t", "q": "the filter", "a": "A gate; failures never reach the expression.", "x": "It only protects you BECAUSE it runs first."}, {"k": "t", "q": "comprehension scope", "a": "Its own namespace, discarded at the end.", "x": "The variable DOES NOT EXIST afterwards ⇒ NameError."}, {"k": "t", "q": "dict comprehension", "a": "{KEY: VALUE for VAR in ITERABLE}", "x": "Braces AND colon — forgetting the braces is a SyntaxError."}, {"k": "t", "q": ".items() in a comprehension", "a": "Yields (key, value) tuples.", "x": "Needs TWO names in the VAR slot."}, {"k": "t", "q": "zip", "a": "Pairs parallel iterables; yields TUPLES.", "x": "It REMOVES THE INDEX — that's why you use it."}, {"k": "t", "q": "zip truncation", "a": "Stops at the SHORTEST.", "x": "Silent. No error. Ever."}, {"k": "t", "q": "zip exhaustion", "a": "A second pass gives [].", "x": "Silent — list() catches the StopIteration."}, {"k": "t", "q": "f-string", "a": "Evaluate → str() → splice.", "x": "No f ⇒ {x} is literal characters."}, {"k": "t", "q": "format spec", "a": "{value:.2f}, {v:8.2f}, {n:03d}, {s:10s}", "x": "The number is TOTAL WIDTH; text goes left, numbers go right."}]}], "hooks": [{"name": "NAAM → DOT → TYPE → CHEEZ", "sub": "The four-station error hook (S26) — with station 0 added in S27", "line": "Python ek line chalate waqt chaar station se guzarti hai. Gaadi jahan ruk gayi, wahi error.", "rows": [["0. SYNTAX", "Vaakya sahi hai?", "SyntaxError / IndentationError — ek bhi line nahi chalti"], ["1. NAAM", "Ye naam hai bhi kahin?", "NameError"], ["2. DOT", "Dot ke baad wala naam is object pe hai?", "AttributeError"], ["3. TYPE", "Is type pe ye kaam hota hi hai?", "TypeError"], ["4. CHEEZ", "Kaam ho sakta hai — par cheez andar hai?", "ValueError / IndexError / KeyError"]], "tail": "Station 4 ke teen bhai — poochho \"dhoondh kaise rahe the?\": position se → IndexError · chaabi se → KeyError · value se → ValueError."}, {"name": "The five checks", "sub": "Finding edge cases (S20, S23, S25)", "line": "boundary · khaali · ek · bahar · mila", "rows": [["boundary", "Every condition's boundary", "Read the operator; test the exact value ON the boundary"], ["khaali", "Empty / zero", "The container with nothing in it"], ["ek", "Exactly ONE", "Not 'few' — one"], ["bahar", "The type or sign you silently assumed", "Covers TYPE as well as sign"], ["mila", "Do the base case and the step agree?", "Hold the PROMISE against the CODE, sentence by sentence"]], "tail": "The mnemonic gives you the list, never the thinking."}, {"name": "Error ka naam batata hai KYA toota", "sub": "The full error reference (S26)", "line": "Four families, by how far the program got.", "rows": [["A — code chala hi nahi", "SyntaxError · IndentationError", "Grammar toota, ya colon ne block khola aur andar kuch nahi mila"], ["B — naam nahi mila", "NameError · UnboundLocalError · AttributeError", "Poore LEGB me nahi · local hai par value nahi · object pe attribute hai hi nahi"], ["C — kaam nahi ho saka", "TypeError · ValueError · IndexError · KeyError · ZeroDivisionError", "Type ke liye defined nahi · andar ki cheez galat · position/chaabi hai hi nahi"], ["D — galti hai hi nahi", "StopIteration · RecursionError", "Iterator khatam (for chupchaap pakadta hai) · CPython ka ~1000-frame depth guard"]], "tail": "IndexError vs slicing: slicing NEVER raises. l[5:9] returns []. Only indexing raises."}]};
+
+/* ---- flatten ---- */
+const ALL = [];
+DATA.sessions.forEach(s => s.cards.forEach((c, i) => {
+  ALL.push({ ...c, s: s.n, title: s.title, id: "s" + s.n + "-" + i });
+}));
+
+/* ---- persisted state ---- */
+const KEY = "pyrecall.v1";
+let marks = {};
+try { marks = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { marks = {}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(marks)); } catch (e) {} };
+
+let filter = "all", shuffled = false, dueOnly = false, idx = 0, shown = false, order = [];
+
+/* ---- deck building ---- */
+function build() {
+  let pool = ALL.filter(c => filter === "all" || c.s === filter);
+  if (dueOnly) pool = pool.filter(c => marks[c.id] !== "known");
+  if (shuffled) {
+    pool = pool.slice();
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+  }
+  order = pool;
+  if (idx >= order.length) idx = 0;
+  render();
+}
+
+/* ---- card render ---- */
+const card = document.getElementById("card");
+const counter = document.getElementById("counter");
+const bar = document.getElementById("bar");
+
+function esc(s) { return String(s).replace(/[&<>]/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[m])); }
+
+function render() {
+  const total = order.length;
+  const done = ALL.filter(c => marks[c.id] === "known").length;
+  counter.textContent = total ? (idx + 1) + " / " + total + " · " + done + " learned" : done + " learned";
+  bar.style.width = total ? ((idx + 1) / total * 100) + "%" : "0%";
+
+  if (!total) {
+    card.innerHTML = '<p class="empty">Nothing left in this filter.<br>Every card here is marked learned.</p>';
+    return;
+  }
+  const c = order[idx];
+  const mark = marks[c.id];
+  const isTerm = c.k === "t";
+  const tag = mark ? '<span class="state-tag ' + mark + '">' + mark + '</span>' : "";
+
+  let html = '<div class="eyebrow">'
+    + '<span>S' + c.s + '</span><span class="dot">/</span><span>' + esc(c.title) + '</span>'
+    + '<span class="dot">/</span><span class="kind">' + (isTerm ? "name" : "principle") + '</span>'
+    + tag + '</div>'
+    + '<div class="prompt' + (isTerm ? " term" : "") + '">' + esc(c.q) + '</div>';
+
+  if (isTerm) html += '<div class="carets" aria-hidden="true">' + "~".repeat(4) + "^".repeat(60) + '</div>';
+
+  if (shown) {
+    html += '<div class="answer"><p class="does">' + esc(c.a) + '</p>';
+    if (c.x) html += '<div class="trap"><b>the trap</b><p>' + esc(c.x) + '</p></div>';
+    html += '</div>';
+  } else {
+    html += '<div class="tap-hint">tap to reveal</div>';
+  }
+  card.innerHTML = html;
+  card.scrollTop = 0;
+}
+
+/* ---- navigation ---- */
+function go(d) {
+  if (!order.length) return;
+  idx = (idx + d + order.length) % order.length;
+  shown = false;
+  render();
+}
+function mark(state) {
+  if (!order.length) return;
+  const c = order[idx];
+  if (marks[c.id] === state) delete marks[c.id]; else marks[c.id] = state;
+  save();
+  go(1);
+}
+
+card.addEventListener("click", () => { shown = !shown; render(); });
+card.addEventListener("keydown", e => {
+  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); shown = !shown; render(); }
+});
+document.getElementById("prev").onclick = () => go(-1);
+document.getElementById("next").onclick = () => go(1);
+document.getElementById("again").onclick = () => mark("again");
+document.getElementById("known").onclick = () => mark("known");
+
+document.addEventListener("keydown", e => {
+  if (document.getElementById("sheet").hidden === false) return;
+  if (e.key === "ArrowRight") go(1);
+  else if (e.key === "ArrowLeft") go(-1);
+  else if (e.key === " " && e.target === document.body) { e.preventDefault(); shown = !shown; render(); }
+});
+
+/* swipe */
+let sx = 0, sy = 0;
+card.addEventListener("touchstart", e => { sx = e.changedTouches[0].clientX; sy = e.changedTouches[0].clientY; }, { passive: true });
+card.addEventListener("touchend", e => {
+  const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.6) go(dx < 0 ? 1 : -1);
+}, { passive: true });
+
+/* ---- chips ---- */
+const chips = document.getElementById("chips");
+function chipEl(label, val) {
+  const b = document.createElement("button");
+  b.className = "chip";
+  b.textContent = label;
+  b.setAttribute("aria-pressed", filter === val ? "true" : "false");
+  b.onclick = () => {
+    filter = val; idx = 0; shown = false;
+    [...chips.children].forEach(x => x.setAttribute("aria-pressed", "false"));
+    b.setAttribute("aria-pressed", "true");
+    build(); if (!document.getElementById("sheet").hidden) renderSheet();
+  };
+  return b;
+}
+chips.appendChild(chipEl("All " + ALL.length, "all"));
+DATA.sessions.forEach(s => chips.appendChild(chipEl("S" + s.n, s.n)));
+
+/* ---- toggles ---- */
+function toggle(el, get, set) {
+  el.onclick = () => { set(!get()); el.setAttribute("aria-pressed", get() ? "true" : "false"); idx = 0; shown = false; build(); };
+}
+toggle(document.getElementById("mShuffle"), () => shuffled, v => shuffled = v);
+toggle(document.getElementById("mDue"), () => dueOnly, v => dueOnly = v);
+
+/* ---- sheet view ---- */
+const sheet = document.getElementById("sheet");
+const stage = document.getElementById("stage");
+const controls = document.getElementById("controls");
+
+function renderSheet() {
+  let h = "";
+  DATA.hooks.forEach(k => {
+    if (filter !== "all") return;
+    h += '<div class="hook"><h3>' + esc(k.name) + '</h3><p class="sub">' + esc(k.sub) + '</p>'
+      + '<p class="line">' + esc(k.line) + '</p><div class="hook-wrap"><table><tbody>';
+    k.rows.forEach(r => { h += "<tr>" + r.map(c => "<td>" + esc(c) + "</td>").join("") + "</tr>"; });
+    h += '</tbody></table></div><p class="tail">' + esc(k.tail) + "</p></div>";
+  });
+  DATA.sessions.forEach(s => {
+    if (filter !== "all" && s.n !== filter) return;
+    h += '<h2><span class="sn">S' + s.n + '</span>' + esc(s.title) + "</h2>"
+      + '<p class="topic">' + esc(s.topic) + '</p><div class="rows">';
+    s.cards.forEach(c => {
+      const solo = !c.x ? " solo" : "";
+      h += '<div class="row' + solo + '">'
+        + '<div class="n' + (c.k === "p" ? " q" : "") + '">' + esc(c.q) + "</div>"
+        + '<div class="d">' + esc(c.a) + "</div>"
+        + (c.x ? '<div class="t">' + esc(c.x) + "</div>" : "")
+        + "</div>";
+    });
+    h += "</div>";
+  });
+  h += '<p class="foot">' + ALL.length + " cards · sessions 0–28 · built from notes/</p>";
+  sheet.innerHTML = h;
+}
+
+const mCards = document.getElementById("mCards"), mSheet = document.getElementById("mSheet");
+function setMode(isSheet) {
+  mCards.setAttribute("aria-pressed", isSheet ? "false" : "true");
+  mSheet.setAttribute("aria-pressed", isSheet ? "true" : "false");
+  sheet.hidden = !isSheet;
+  stage.hidden = isSheet;
+  controls.hidden = isSheet;
+  if (isSheet) { renderSheet(); window.scrollTo(0, 0); }
+}
+mCards.onclick = () => setMode(false);
+mSheet.onclick = () => setMode(true);
+
+build();
+</script>

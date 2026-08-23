@@ -1,0 +1,498 @@
+<title>Python Recall Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+:root {
+  --paper:   #EDEFEC;
+  --surface: #FBFCFA;
+  --raised:  #FFFFFF;
+  --ink:     #141C1A;
+  --ink-mid: #4C5B58;
+  --ink-dim: #77837F;
+  --rule:    #D2D8D2;
+  --rule-soft:#E2E7E1;
+  --teal:    #0F6B5C;
+  --teal-bg: #E0EDE8;
+  --trap:    #A61B54;
+  --trap-bg: #F7E4EC;
+  --shadow:  0 1px 2px rgba(20,28,26,.06), 0 8px 24px -12px rgba(20,28,26,.18);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:   #0C1312;
+    --surface: #131C1A;
+    --raised:  #182320;
+    --ink:     #DDE6E1;
+    --ink-mid: #A2B0AB;
+    --ink-dim: #7A8884;
+    --rule:    #27352F;
+    --rule-soft:#1E2A26;
+    --teal:    #5CCCAF;
+    --teal-bg: #14312B;
+    --trap:    #FF7BA9;
+    --trap-bg: #351123;
+    --shadow:  0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"] {
+  --paper:   #0C1312;
+  --surface: #131C1A;
+  --raised:  #182320;
+  --ink:     #DDE6E1;
+  --ink-mid: #A2B0AB;
+  --ink-dim: #7A8884;
+  --rule:    #27352F;
+  --rule-soft:#1E2A26;
+  --teal:    #5CCCAF;
+  --teal-bg: #14312B;
+  --trap:    #FF7BA9;
+  --trap-bg: #351123;
+  --shadow:  0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+code, .mono { font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace; }
+
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+  padding: 10px 14px 0;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.bar-top { display: flex; align-items: baseline; gap: 10px; }
+.wordmark {
+  font-family: "Zilla Slab", Georgia, serif;
+  font-weight: 700; font-size: 17px; letter-spacing: -.01em;
+  margin: 0; white-space: nowrap;
+}
+.wordmark em { font-style: normal; color: var(--teal); }
+.counter {
+  margin-left: auto;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px; color: var(--ink-dim);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.modes { display: flex; gap: 2px; background: var(--paper); border: 1px solid var(--rule); border-radius: 999px; padding: 2px; }
+.modes button {
+  font: inherit; font-size: 12px; font-weight: 500;
+  border: 0; background: none; color: var(--ink-mid);
+  padding: 4px 11px; border-radius: 999px; cursor: pointer;
+}
+.modes button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+.chips {
+  display: flex; gap: 6px; overflow-x: auto; padding: 0 0 10px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: 0 0 auto;
+  font: inherit; font-size: 12.5px; font-weight: 500;
+  font-family: "IBM Plex Mono", monospace;
+  border: 1px solid var(--rule); background: var(--surface); color: var(--ink-mid);
+  padding: 5px 11px; border-radius: 6px; cursor: pointer; white-space: nowrap;
+}
+.chip[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: var(--surface); }
+
+.progress { height: 2px; background: var(--rule-soft); }
+.progress span { display: block; height: 100%; background: var(--teal); transition: width .25s ease; }
+
+/* ---------- card stage ---------- */
+.stage {
+  flex: 1;
+  display: flex; flex-direction: column;
+  padding: 16px 14px 0;
+  min-height: 0;
+  max-width: 680px; width: 100%; margin: 0 auto;
+}
+
+.card {
+  background: var(--raised);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  padding: 22px 20px 24px;
+  display: flex; flex-direction: column;
+  cursor: pointer;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+.card:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-dim);
+  display: flex; gap: 8px; align-items: center;
+}
+.eyebrow .kind { color: var(--teal); }
+.eyebrow .dot { color: var(--rule); }
+
+.prompt {
+  font-family: "Zilla Slab", Georgia, serif;
+  font-size: clamp(23px, 6vw, 30px);
+  font-weight: 600; line-height: 1.22; letter-spacing: -.012em;
+  margin: 14px 0 0; text-wrap: balance;
+}
+.prompt.term {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500; font-size: clamp(21px, 5.4vw, 27px);
+  letter-spacing: -.02em; word-break: break-word;
+}
+.carets {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--teal); opacity: .55;
+  font-size: 13px; letter-spacing: .04em;
+  margin-top: 6px; overflow: hidden; white-space: nowrap; user-select: none;
+}
+
+.tap-hint {
+  margin-top: auto; padding-top: 22px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.answer { margin-top: 20px; display: flex; flex-direction: column; gap: 16px; }
+.answer[hidden] { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .answer { animation: rise .22s ease-out both; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.does { font-size: 17px; line-height: 1.5; margin: 0; color: var(--ink); }
+
+.trap {
+  border-left: 3px solid var(--trap);
+  background: var(--trap-bg);
+  padding: 11px 13px;
+  border-radius: 0 3px 3px 0;
+}
+.trap b {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--trap); margin-bottom: 3px;
+}
+.trap p { margin: 0; font-size: 15.5px; line-height: 1.45; }
+
+/* ---------- controls ---------- */
+.controls {
+  position: sticky; bottom: 0; z-index: 20;
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  display: flex; gap: 8px;
+  max-width: 680px; width: 100%; margin: 16px auto 0;
+}
+.controls button {
+  font: inherit; font-weight: 500; font-size: 14px;
+  border: 1px solid var(--rule); background: var(--raised); color: var(--ink);
+  border-radius: 4px; padding: 11px 0; cursor: pointer; flex: 1;
+  min-height: 44px;
+}
+.controls button:active { transform: translateY(1px); }
+.controls button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.controls .nav { flex: 0 0 52px; font-family: "IBM Plex Mono", monospace; color: var(--ink-mid); }
+.controls .again { color: var(--trap); border-color: var(--trap); }
+.controls .known { background: var(--teal); border-color: var(--teal); color: var(--surface); }
+
+.state-tag {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 3px; margin-left: auto;
+}
+.state-tag.known { background: var(--teal-bg); color: var(--teal); }
+.state-tag.again { background: var(--trap-bg); color: var(--trap); }
+
+/* ---------- table view ---------- */
+.sheet { max-width: 940px; width: 100%; margin: 0 auto; padding: 18px 14px 60px; }
+.sheet h2 {
+  font-family: "Zilla Slab", Georgia, serif;
+  font-size: 20px; font-weight: 700; letter-spacing: -.01em;
+  margin: 34px 0 2px; padding-top: 14px; border-top: 2px solid var(--ink);
+  display: flex; align-items: baseline; gap: 10px;
+}
+.sheet h2:first-child { margin-top: 0; }
+.sheet h2 .sn {
+  font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600;
+  color: var(--teal); letter-spacing: .04em;
+}
+.sheet .topic { color: var(--ink-dim); font-size: 13.5px; margin: 0 0 14px; }
+
+.rows { display: flex; flex-direction: column; }
+.row {
+  display: grid; grid-template-columns: 1fr; gap: 3px;
+  padding: 12px 0; border-bottom: 1px solid var(--rule-soft);
+}
+.row .n { font-family: "IBM Plex Mono", monospace; font-size: 14.5px; font-weight: 500; color: var(--teal); word-break: break-word; }
+.row .n.q { font-family: "Zilla Slab", Georgia, serif; font-size: 16px; font-weight: 600; color: var(--ink); }
+.row .d { font-size: 14.5px; color: var(--ink-mid); }
+.row .t { font-size: 14.5px; color: var(--trap); }
+.row .t::before { content: "⚠ "; opacity: .7; }
+@media (min-width: 760px) {
+  .row { grid-template-columns: minmax(150px, 1fr) 1.35fr 1.35fr; gap: 18px; align-items: start; }
+  .row.solo { grid-template-columns: minmax(150px, 1fr) 2.7fr; }
+}
+
+/* ---------- hooks ---------- */
+.hook {
+  background: var(--raised); border: 1px solid var(--rule); border-radius: 4px;
+  padding: 18px 18px 20px; margin-bottom: 18px; box-shadow: var(--shadow);
+}
+.hook h3 {
+  font-family: "Zilla Slab", Georgia, serif; font-size: 21px; font-weight: 700;
+  margin: 0; letter-spacing: -.01em;
+}
+.hook .sub { color: var(--ink-dim); font-size: 12.5px; margin: 2px 0 12px; }
+.hook .line { font-size: 15px; margin: 0 0 12px; }
+.hook table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.hook td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+.hook td:first-child {
+  font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--teal);
+  white-space: nowrap; font-size: 13px;
+}
+.hook td:last-child { color: var(--trap); }
+.hook .tail { margin: 12px 0 0; font-size: 14px; color: var(--ink-mid); border-left: 3px solid var(--rule); padding-left: 11px; }
+.hook-wrap { overflow-x: auto; }
+
+.empty { text-align: center; color: var(--ink-dim); padding: 60px 20px; font-size: 15px; }
+.foot { text-align: center; color: var(--ink-dim); font-size: 12px; padding: 26px 14px 40px; font-family: "IBM Plex Mono", monospace; }
+</style>
+
+<header class="bar">
+  <div class="bar-top">
+    <h1 class="wordmark">Python <em>Recall</em></h1>
+    <span class="counter" id="counter"></span>
+  </div>
+  <div class="bar-top" style="gap:8px">
+    <div class="modes" role="group" aria-label="View">
+      <button id="mCards" aria-pressed="true">Cards</button>
+      <button id="mSheet" aria-pressed="false">Sheet</button>
+    </div>
+    <div class="modes" role="group" aria-label="Options">
+      <button id="mShuffle" aria-pressed="false">Shuffle</button>
+      <button id="mDue" aria-pressed="false">Unlearned</button>
+    </div>
+  </div>
+  <div class="chips" id="chips"></div>
+</header>
+<div class="progress"><span id="bar" style="width:0%"></span></div>
+
+<main class="stage" id="stage">
+  <div class="card" id="card" tabindex="0" role="button" aria-label="Flashcard — tap to reveal the answer"></div>
+</main>
+
+<footer class="controls" id="controls">
+  <button class="nav" id="prev" aria-label="Previous card">←</button>
+  <button class="again" id="again">Again</button>
+  <button class="known" id="known">Got it</button>
+  <button class="nav" id="next" aria-label="Next card">→</button>
+</footer>
+
+<section class="sheet" id="sheet" hidden></section>
+
+<script>
+const DATA = /*__DECK__*/;
+
+/* ---- flatten ---- */
+const ALL = [];
+DATA.sessions.forEach(s => s.cards.forEach((c, i) => {
+  ALL.push({ ...c, s: s.n, title: s.title, id: "s" + s.n + "-" + i });
+}));
+
+/* ---- persisted state ---- */
+const KEY = "pyrecall.v1";
+let marks = {};
+try { marks = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { marks = {}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(marks)); } catch (e) {} };
+
+let filter = "all", shuffled = false, dueOnly = false, idx = 0, shown = false, order = [];
+
+/* ---- deck building ---- */
+function build() {
+  let pool = ALL.filter(c => filter === "all" || c.s === filter);
+  if (dueOnly) pool = pool.filter(c => marks[c.id] !== "known");
+  if (shuffled) {
+    pool = pool.slice();
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+  }
+  order = pool;
+  if (idx >= order.length) idx = 0;
+  render();
+}
+
+/* ---- card render ---- */
+const card = document.getElementById("card");
+const counter = document.getElementById("counter");
+const bar = document.getElementById("bar");
+
+function esc(s) { return String(s).replace(/[&<>]/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[m])); }
+
+function render() {
+  const total = order.length;
+  const done = ALL.filter(c => marks[c.id] === "known").length;
+  counter.textContent = total ? (idx + 1) + " / " + total + " · " + done + " learned" : done + " learned";
+  bar.style.width = total ? ((idx + 1) / total * 100) + "%" : "0%";
+
+  if (!total) {
+    card.innerHTML = '<p class="empty">Nothing left in this filter.<br>Every card here is marked learned.</p>';
+    return;
+  }
+  const c = order[idx];
+  const mark = marks[c.id];
+  const isTerm = c.k === "t";
+  const tag = mark ? '<span class="state-tag ' + mark + '">' + mark + '</span>' : "";
+
+  let html = '<div class="eyebrow">'
+    + '<span>S' + c.s + '</span><span class="dot">/</span><span>' + esc(c.title) + '</span>'
+    + '<span class="dot">/</span><span class="kind">' + (isTerm ? "name" : "principle") + '</span>'
+    + tag + '</div>'
+    + '<div class="prompt' + (isTerm ? " term" : "") + '">' + esc(c.q) + '</div>';
+
+  if (isTerm) html += '<div class="carets" aria-hidden="true">' + "~".repeat(4) + "^".repeat(60) + '</div>';
+
+  if (shown) {
+    html += '<div class="answer"><p class="does">' + esc(c.a) + '</p>';
+    if (c.x) html += '<div class="trap"><b>the trap</b><p>' + esc(c.x) + '</p></div>';
+    html += '</div>';
+  } else {
+    html += '<div class="tap-hint">tap to reveal</div>';
+  }
+  card.innerHTML = html;
+  card.scrollTop = 0;
+}
+
+/* ---- navigation ---- */
+function go(d) {
+  if (!order.length) return;
+  idx = (idx + d + order.length) % order.length;
+  shown = false;
+  render();
+}
+function mark(state) {
+  if (!order.length) return;
+  const c = order[idx];
+  if (marks[c.id] === state) delete marks[c.id]; else marks[c.id] = state;
+  save();
+  go(1);
+}
+
+card.addEventListener("click", () => { shown = !shown; render(); });
+card.addEventListener("keydown", e => {
+  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); shown = !shown; render(); }
+});
+document.getElementById("prev").onclick = () => go(-1);
+document.getElementById("next").onclick = () => go(1);
+document.getElementById("again").onclick = () => mark("again");
+document.getElementById("known").onclick = () => mark("known");
+
+document.addEventListener("keydown", e => {
+  if (document.getElementById("sheet").hidden === false) return;
+  if (e.key === "ArrowRight") go(1);
+  else if (e.key === "ArrowLeft") go(-1);
+  else if (e.key === " " && e.target === document.body) { e.preventDefault(); shown = !shown; render(); }
+});
+
+/* swipe */
+let sx = 0, sy = 0;
+card.addEventListener("touchstart", e => { sx = e.changedTouches[0].clientX; sy = e.changedTouches[0].clientY; }, { passive: true });
+card.addEventListener("touchend", e => {
+  const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.6) go(dx < 0 ? 1 : -1);
+}, { passive: true });
+
+/* ---- chips ---- */
+const chips = document.getElementById("chips");
+function chipEl(label, val) {
+  const b = document.createElement("button");
+  b.className = "chip";
+  b.textContent = label;
+  b.setAttribute("aria-pressed", filter === val ? "true" : "false");
+  b.onclick = () => {
+    filter = val; idx = 0; shown = false;
+    [...chips.children].forEach(x => x.setAttribute("aria-pressed", "false"));
+    b.setAttribute("aria-pressed", "true");
+    build(); if (!document.getElementById("sheet").hidden) renderSheet();
+  };
+  return b;
+}
+chips.appendChild(chipEl("All " + ALL.length, "all"));
+DATA.sessions.forEach(s => chips.appendChild(chipEl("S" + s.n, s.n)));
+
+/* ---- toggles ---- */
+function toggle(el, get, set) {
+  el.onclick = () => { set(!get()); el.setAttribute("aria-pressed", get() ? "true" : "false"); idx = 0; shown = false; build(); };
+}
+toggle(document.getElementById("mShuffle"), () => shuffled, v => shuffled = v);
+toggle(document.getElementById("mDue"), () => dueOnly, v => dueOnly = v);
+
+/* ---- sheet view ---- */
+const sheet = document.getElementById("sheet");
+const stage = document.getElementById("stage");
+const controls = document.getElementById("controls");
+
+function renderSheet() {
+  let h = "";
+  DATA.hooks.forEach(k => {
+    if (filter !== "all") return;
+    h += '<div class="hook"><h3>' + esc(k.name) + '</h3><p class="sub">' + esc(k.sub) + '</p>'
+      + '<p class="line">' + esc(k.line) + '</p><div class="hook-wrap"><table><tbody>';
+    k.rows.forEach(r => { h += "<tr>" + r.map(c => "<td>" + esc(c) + "</td>").join("") + "</tr>"; });
+    h += '</tbody></table></div><p class="tail">' + esc(k.tail) + "</p></div>";
+  });
+  DATA.sessions.forEach(s => {
+    if (filter !== "all" && s.n !== filter) return;
+    h += '<h2><span class="sn">S' + s.n + '</span>' + esc(s.title) + "</h2>"
+      + '<p class="topic">' + esc(s.topic) + '</p><div class="rows">';
+    s.cards.forEach(c => {
+      const solo = !c.x ? " solo" : "";
+      h += '<div class="row' + solo + '">'
+        + '<div class="n' + (c.k === "p" ? " q" : "") + '">' + esc(c.q) + "</div>"
+        + '<div class="d">' + esc(c.a) + "</div>"
+        + (c.x ? '<div class="t">' + esc(c.x) + "</div>" : "")
+        + "</div>";
+    });
+    h += "</div>";
+  });
+  h += '<p class="foot">' + ALL.length + " cards · sessions 0–28 · built from notes/</p>";
+  sheet.innerHTML = h;
+}
+
+const mCards = document.getElementById("mCards"), mSheet = document.getElementById("mSheet");
+function setMode(isSheet) {
+  mCards.setAttribute("aria-pressed", isSheet ? "false" : "true");
+  mSheet.setAttribute("aria-pressed", isSheet ? "true" : "false");
+  sheet.hidden = !isSheet;
+  stage.hidden = isSheet;
+  controls.hidden = isSheet;
+  if (isSheet) { renderSheet(); window.scrollTo(0, 0); }
+}
+mCards.onclick = () => setMode(false);
+mSheet.onclick = () => setMode(true);
+
+build();
+</script>
