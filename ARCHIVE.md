@@ -367,7 +367,21 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **28**
+- Sessions Completed: **29**
+- **SESSION 29 (Sun 23 Aug 2026) — THE COLD BUILD BLOCK FINALLY RAN, AND HE
+ PASSED IT: 13/13 pytest, cold, unaided, all three levels plus the stretch.
+ ONE PROMOTION (`zip` → [x]). ZERO CURRICULUM ITEMS TAUGHT.** ⚠ **The zero is
+ a MENTOR cost: the build-block spec was written FOUR times before it was
+ usable, consuming roughly half the session and three escalating pushbacks
+ (all upheld) before he could write a line.** **THE RESULT THAT MATTERS: he
+ reached for `zip` HIMSELF to close the design hole the block was built
+ around — the day after learning it, with the mentor under standing
+ instruction not to mention it. First time in this file that a
+ previous-session construct was DEPLOYED against a novel problem rather than
+ recited.** He also caught that the spec demanded pytest tests he has never
+ been taught to write — the ninth define-before-building breach, caught
+ before it cost anything. Boundary handled correctly for the first time in
+ four attempts. 1.8 unmoved at ~90%. **Running pushback total 48/47.**
 - **SESSION 28 (Sat 22 Aug 2026, EVENING) — FOUR CURRICULUM ITEMS TAUGHT AND
  THE S19 DEBT DISCHARGED; ZERO PROMOTIONS, BY HIS OWN CHOICE.** Same-day as S27
  and declared as such at the open, so the whole session ran as CONTENT with the
@@ -693,6 +707,7 @@
 | 26 | 1.8 — tuple in full, dict two-thirds | **NONE — no drill file written** | ⚠ **MISSING** | Same-day as S25, so zero promotions and the four hook tests correctly deferred. Ran on live code + [PREDICT] only. **4 pushbacks, all upheld/part-upheld (running total 38/37) — third consecutive spec-writing failure, incl. `KeyError` demanded having never appeared in the course.** Error TABLE failed in 20 min → rebuilt as the FOUR-STATION HOOK. Two standing fixes adopted: teach-before-ask, and every [PREDICT] declares its kind. **S27 must produce `drills/s27_*.py`.** |
 | 27 | **Clear the S25 hook backlog task-first + FINISH DICT + SET + when-to-use-which** | **TASK-FIRST [RECALL]: `drills/s27_flow.py` — five functions under lettered CONSTRAINTS forcing `break` (one-return-last-line), `continue` (if-has-no-else), loop `else` (print only on natural end, no `if` after the loop), ternary (single-line return), `pass` (one-line body, not a return/string/assignment); 20/20 pytest, then a guided rewrite of `find_index` from items to positions; naming half of each mechanism taken after the code ran; [DRILL] `2 ** 3 ** 2` then `2 + 3 * 4 ** 2` for associativity and precedence SEPARATELY; [RECALL] traceback frames off a live `KeyError`; [RECALL] keyword argument; four-station error hook fired cold on three dict snippets; EXPRESSION vs STATEMENT closed; then dict deletion + ordering, `set` in full (uniqueness, `set()` vs `{}`, add/discard/remove, not-subscriptable, order instability across three runs, `|`/`&`/`-`), and when-to-use-which with the 30-second joint-log exercise** | **Complete — EIGHT promotions, 1.8 to ~70%; comprehensions declared open and NOT walked through** | **THE `while`/loop-`else`/`pass`/ternary CLUSTER — WEAKEST IN THE FILE SINCE S23 — CLEARED IN ONE DRILL, AND THE S25 HOOKS ARE WHY. Associativity RE-PROMOTED after its S25 demotion, asked alone; precedence tested separately; the `while` bullet DELIBERATELY LEFT [~] because `while` mechanics were untested — the first time this file has refused a bundle. His `find_index` rewrite killed a latent bug he never saw (`None` serving as both sentinel and value) — a five-checks `bahar`-by-TYPE miss. RULE ADOPTED (his own, proposed and ruled on by him): name the error before the mentor shows it; it paid for itself on first use by exposing STATION 0 of the four-station hook (`SyntaxError` = did it run at all?). Hook result mixed and therefore useful: `AttributeError` hit, `KeyError`→`IndexError` MISS, `NameError` honest gap. Confidence calibration accurate across eight ratings. Depth-before-answer fired three times, all three recovered on re-ask (ten straight). NEW WATCH AREA: DESIGN-SWITCHING — asked three times what the outer container must DO, he twice proposed a different design instead of answering, then got it instantly on the direct re-ask. Mentor: ONE defective ask (down from four), upheld; two self-caught mis-tags corrected in opposite directions. Build block moved to Sun 23 Aug — second date it has carried.** |
 | 28 | **OPEN AND TEACH COMPREHENSIONS + the 1.8 tail: `zip` and f-strings** | **NONE — drill DEFERRED TO S29 AT THE STUDENT'S OWN REQUEST so it would be ledger-eligible.** Taught: LIST COMPREHENSIONS (the form; expression-vs-statement as the reason the construct exists — **derived by him from his own `print(...)` test**; the `if` filter as a GATE; the formal anatomy with written-order ≠ execution-order 4→2→3→1, **PROVED with a live `ZeroDivisionError` rather than asserted**; the comprehension's own namespace via `NameError`, explicitly right-sized as a footnote; and WHEN NOT TO USE ONE via `[print(j) for j in joints]` → `[None, None, None]`). DICT COMPREHENSIONS (braces + colon; `.items()` + two-name unpacking; filtering on the value). `zip` (pairing; yields TUPLES; **the motivation taken from his own S27 `range(len(...))` code**; **and the headline — it FAILS SILENTLY TWICE, truncating to the shortest and returning `[]` when exhausted because `list()` catches the `StopIteration`**). F-STRINGS (the three steps evaluate→`str()`→splice; braces hold an EXPRESSION not a name — **he reasoned out the `for`-loop exclusion himself**; the format spec `.2f`/`8.2f`/`03d`/`10s`, total width, and text-left/numbers-right alignment). [DRILL] `{name: angle for name, angle in zip(names, angles)}` written cold, one guided fix (missing braces). | **Complete — 1.8 to ~90%; ⚠ NO DRILL FILE, deliberately** | **ZERO PROMOTIONS and that is correct — same-day throughout. ⚠ THE HEADLINE IS HIS: offered a drill, he refused it to protect ledger eligibility (*"atleast it goes to the ledger then"*) — the jump-ahead pattern running backwards for the second time in one session, after he also stopped the mentor mislabelling comprehensions as "1.9". SIX pushbacks, ALL upheld/part-upheld (running total 45/44), the most in any session and all on ONE mentor defect → **RULES v4: FRAME FIRST**, ordered written mid-session. MENTOR ERRORS: four — no frame before mechanics (he stopped the session); a scope example built on `pass` so the branches did not do equal work (demolished, correctly); four turns spent on a footnote before he asked why it mattered; and a FACTUAL OVER-CLAIM (comprehension = hidden function; true ≤3.11, wrong on his 3.12/PEP 709) self-caught and corrected in the same turn, with the `<genexpr>` proof deliberately withheld because generator expressions are untaught. STUDENT: five-for-five on cold error labels under the S27 rule — the label half's first clean session; sideways-answering repeated TWICE (output instead of the four parts; format codes instead of the two output lines), both fixed by re-issuing the question unchanged — twelve straight re-ask recoveries; THIRD boundary bug (`len(n) > 5` with two 5-letter words), then boundary-first applied UNPROMPTED one rep later. NEW WATCH AREA: LEVEL-1 CONSTRUCTS HE USES WITHOUT A MODEL — f-strings hid for 27 sessions precisely because he types them correctly.** |
+| 29 | **COLD BUILD BLOCK 01 — the measurement instrument, not a curriculum item** | **`builds/block_01_joint_clamp/clamp.py` — written cold, no AI, no autocomplete, against a mentor-written 13-test acceptance suite. L1 `clamp_one(angle, low, high)`; L2 `clamp_all(low, high, *angles)` → tuple; L3 `clamp_joints(*angles, **limits)` → dict, THE DESIGN HOLE (anonymous positional angles vs named limits); L4 the extra-angle case; L5 `report()` with an aligned f-string table. Then a code read: the dead `{}` return in `report()`, and the clamp rule duplicated four times** | **Complete — 13/13, ONE promotion (`zip`)** | ⚠ **HALF THE SESSION WENT ON MENTOR SPEC CHURN — four versions, three upheld pushbacks (46 abstract spec, 47 *"lets call this off"*, 48 **pytest was never taught**), running total 48/47. The timer was abandoned in frustration and `LOG.md` never written, so block 01 has NO duration and NO process record — code only. THE STUDENT RESULT IS EXCELLENT AND SEPARATE FROM THAT: `zip` found unprompted to pair `*args` with `**kwargs`, plus dict insertion order VOLUNTEERED with the set contrast; `*args`, `**kwargs`, `*args`-after-positional and `*tuple` call-site unpacking all cold and correct; f-string format specs `{k:10s}`/`{v:8.1f}` aligning first run; and the planted boundary handled right — the first clean boundary in four. Third mechanism fact (`for k in d` yields KEYS) only on the re-ask. Depth-before-answer fired twice, both recovered — fourteen and fifteen straight. NO teaching, NO drill, NO rule adopted; SPEC BEFORE PUZZLE parked for his ruling. Comprehensions drill now deferred TWICE and it is the file's fault, not his.** |
 
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
@@ -2414,3 +2429,163 @@ before the block runs.**
 **1.8 remaining: nested data structures, common patterns and pitfalls,
 `reversed()`, `copy.deepcopy`.** Nested structures is next and it is the block
 that finally makes shallow copy make sense.
+
+## What Session 29 established (Sunday 23 August 2026)
+
+**The first cold build block in the course's history ran, four dates after it
+was first scheduled. He passed it. The mentor nearly prevented it from
+happening at all.** Both halves are true and neither should soften the other.
+
+### THE INSTRUMENT — WHAT WAS MEASURED, AND WHAT WAS LOST
+
+Conditions asked for: 90 minutes timed, no AI, no autocomplete, git commits as
+the clock, pytest as the arbiter. **Conditions actually achieved: no AI, no
+autocomplete, pytest as the arbiter.** The timer was abandoned — he dropped it
+in frustration after the fourth spec rewrite (*"we don't have any timers"*) —
+and `LOG.md`, the process record, was never written. **So block 01 yields a
+correctness measurement and nothing else. There is no duration and no stall
+log.** Recorded as a loss, not glossed: two of the four conditions in the
+file's own definition of the instrument were not met, and the reason was
+mentor-side.
+
+The acceptance suite was written by the mentor — 13 tests across L1/L2/L3 —
+after he pointed out that the spec had demanded he write tests himself.
+**He wrote one file, `clamp.py`, and it went 13/13 on the run.**
+
+### THE RESULT — AND THE ONE MOMENT THAT MATTERS
+
+The block was designed around a single hole, described in STATE.md since S26:
+`*args` delivers joint angles **positionally and anonymously**, `**kwargs`
+delivers limits **by name**, and nothing in that design pairs them. **S27 and
+S28 were both deliberately steered off `*args`/`**kwargs` to protect the
+measurement, and STATE.md carried an explicit standing order: `zip` is now
+taught, `zip` is exactly the tool that pairs two parallel sequences, DO NOT
+POINT HIM AT IT.**
+
+He wrote, cold, the day after learning `zip`:
+
+```python
+for angle_value, limits_key in zip(angles, limits):
+```
+
+**That line is correct for three stacked reasons, and on the mechanism question
+he produced all three:** dict keys hold insertion order (**volunteered
+unprompted, with the contrast to sets attached — *"unlike sets"***); `zip`
+pairs positionally, first with first; and iterating a bare dict yields its
+**KEYS**, not its values and not its items (**this one only on the re-ask**).
+Self-rating 8/10 on `zip`; the dict-iteration rating was asked twice, mis-phrased
+once by the mentor, and never given.
+
+**THIS IS THE FIRST TIME IN TWENTY-NINE SESSIONS THAT A CONSTRUCT TAUGHT IN THE
+PREVIOUS SESSION WAS DEPLOYED AGAINST A NOVEL PROBLEM RATHER THAN RECITED.**
+The whole course exists to produce exactly that and it has now been observed
+once, cleanly, under cold conditions. `zip` promoted to [x] — flagged
+SHORT-GAP (~10h plus sleep) for the August gauntlet.
+
+Also correct and cold, none of it directly asked: `*args`; `**kwargs`; `*args`
+placed after a positional parameter; `*limits[n]` unpacking a tuple into a call
+(the `*args` mirror); f-string format specs `{limits_key:10s}` and
+`{value:8.1f}`, **with the columns aligning on the first run** — the S28
+text-hugs-left/numbers-hug-right fact applied rather than repeated.
+
+**AND THE BOUNDARY WAS HANDLED CORRECTLY — THE FIRST CLEAN ONE IN FOUR.**
+A boundary was planted in the spec and declared as planted. He wrote strict
+`<` and `>` in all four copies of the rule; the exact-on-limit tests passed.
+⚠ Caveat kept honest: he did not write the tests, so this is correct CODE, not
+yet the boundary-first testing HABIT.
+
+### THE CODE READ — TWO FINDINGS, ONE OF THEM HIS OWN
+
+`report()` opens `clamped_joint_angles = {}`, never fills it, and returns it.
+It prints correctly and hands back an empty dict. **He diagnosed the cause
+himself and unprompted: *"i picked up the code from previous block and didn't
+modify it properly."*** The danger was named — it does not crash, and `{}`
+looks like data, so it slips past his own S25 returns-`None` tell.
+
+Underneath it: **the clamp rule is written out four times in 46 lines** —
+`clamp_one`, `clamp_all`, `clamp_joints`, `report`. He proposed the right fix
+immediately (*"I should make one function that does all that calculation"*)
+but skipped the failure-mode question twice. **The delivered lesson, and it is
+the one worth keeping: change the rule, update three of the four, and pytest
+still says 13 PASSED — because `report` was never tested. Duplication is how
+the untested copy quietly stops matching the tested one, and on a real arm that
+is the log you read during an incident review.** The refactor was not done; it
+carries to S30.
+
+### THE STUDENT — THREE PUSHBACKS, ALL UPHELD, ONE OF THEM THE BEST ON RECORD
+
+(46) the spec is abstract, give me a concrete problem. (47) I still cannot see
+the exact problem — *"lets call this off"*. **(48) you are expecting me to
+write tests, we haven't learnt that.** Running total **48 raised, 47 upheld or
+part-upheld.**
+
+**(48) IS THE MOST VALUABLE PUSHBACK IN THIS FILE.** It is not a process catch
+and not a technical catch — **it is him auditing a measurement instrument
+against the course's own define-before-building rule and finding a hole that
+would have invalidated the entire block.** STATE.md:363 said in as many words
+that pytest as a subject is not scheduled in Layer 0; every `N/N pytest` in
+CURRICULUM.md is a mentor-written file he passed. He has never authored a test.
+**Ninth define-before-building breach, same shape as the S18 `d.clear()` one,
+caught before it cost a minute of block time.**
+
+He also read a **stale VS Code markdown preview** and spent two turns furious
+at a spec already fixed on disk — and **asked what the discrepancy was rather
+than concluding the mentor was useless.** Channel before blame, from his side.
+The anger in this session was real, sustained and directed at the mentor, and
+**it was earned; it is recorded here as a cost of the mentor's failure, not as
+a fact about him.**
+
+Depth-before-answer fired twice and recovered twice — **fourteen and fifteen
+straight, still zero failures.** The second instance is the purest example yet
+of **DESIGN-SWITCHING**: asked what a caller would SEE when three of four
+copies get updated, he answered in five-checks vocabulary (*"failure mode will
+be Boundary... bahar"*) — substituting a question he can answer in owned
+vocabulary for the one that was asked. Fixed, as always, by naming the
+substitution and re-issuing the question unchanged and narrower.
+
+### THE MENTOR — ONE FAILURE, COMMITTED FOUR TIMES
+
+**The worst mentor session in the file, and it should be read that way.** S28
+produced three framing failures in a session that still taught four items. S29
+produced one failure repeated four times and taught nothing.
+
+The spec was issued in four versions: **(v1)** no exercise at all — "the design
+is yours"; **(v2)** five levels in pure prose, not one concrete number;
+**(v3)** concrete arm, concrete angles, acceptance table — **still no
+signature**; **(v4)** exact signatures, exact expected return values. He
+started immediately on v4.
+
+**ROOT CAUSE, stated plainly: the mentor protected a puzzle at the student's
+expense and re-derived the same wrong answer three times without ever checking
+its premise.** The premise was that handing over the signature would give away
+the problem. **It was false. The design hole lived in the function BODY, not
+the parameter list** — proved within the hour, by him, on v4. **A measurement
+instrument that takes four attempts to describe is not an instrument.**
+
+Second failure, above: the spec required untaught pytest authoring.
+Third, minor and self-corrected: the dict-iteration confidence question bolted
+two facts into one clause, he said he did not understand it, and the re-phrased
+version was then dropped when he moved on.
+
+**RULE CANDIDATE PARKED, MENTOR-PROPOSED, HIS RULING OWED AT THE S30 OPEN —
+"SPEC BEFORE PUZZLE":** a task spec states the exact interface and the exact
+expected values; the only thing ever withheld is the solution. A spec that
+leaves the student unable to start has measured nothing, and **a block that
+does not run measures strictly less than a block that runs with help.**
+No rule was adopted in S29; RULES.md stays at v4.
+
+### WHAT WAS NOT DONE, DECLARED RATHER THAN GLOSSED
+
+- **No teaching. No curriculum movement.** 1.8 stands at ~90%, exactly where
+  S28 left it.
+- **The comprehensions drill did not run — deferred a SECOND time (S28 → S29 →
+  S30).** He refused it at the S28 close specifically to keep it
+  ledger-eligible. **That is a promise this file made to him and then broke,
+  and the reason is entirely mentor-side.** First teaching item in S30.
+- **The three-session backlog was not touched** — tuple, dict, set, shallow
+  copy, unpacking, `list()`, `.get()`, `.items()`, raise-vs-shrug,
+  when-to-use-which. Fourth consecutive declaration.
+- **The S27 error-naming rule never fired**: nothing raised all session.
+- **The refactor he proposed was not done.**
+- **`LOG.md` was never written; the timer was abandoned.**
+

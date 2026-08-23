@@ -1311,7 +1311,7 @@ false.
  dict with `.items()` + two-name unpacking (`{name: a for name, a in
  angles.items() if a > 180}`); the filter working on the VALUE. ⚠ NOT [x]:
  same-session.
-- [~] **`zip` — TAUGHT S28** (commit S28). **DISCHARGES the S19
+- [x] **`zip` — TAUGHT S28, PROMOTED S29** (`builds/block_01_joint_clamp/clamp.py`, 13/13 pytest, cold and unaided). ⚠ **THE PROMOTION IS NOT A RECITATION — HE REACHED FOR `zip` HIMSELF, THE DAY AFTER LEARNING IT, TO SOLVE A DESIGN PROBLEM HE HAD NOT SEEN BEFORE** (pairing anonymous `*args` angles with named `**kwargs` limits). The mentor was under standing instruction from S28 NOT to point him at it. He then gave all three supporting facts on the mechanism question — dict insertion order (volunteered, with the set contrast), `zip` pairing positionally, and bare `for k in d` yielding KEYS — the third only on a re-ask. Self-rating 8/10. ⚠ SHORT-GAP (~10h + sleep): flag for the August gauntlet. **DISCHARGES the S19
  seen-but-not-taught debt logged at line 1145**, alongside comprehensions —
  both settled in one session. Covered: pairing two parallel iterables; **the
  motivation taken from his own S27 code** (`range(len(...))` is manual index
@@ -1320,7 +1320,7 @@ false.
  headline finding — `zip` FAILS SILENTLY, TWICE OVER**: unequal lengths
  truncate to the shortest with no error, and an exhausted `zip` returns `[]`
  rather than raising, because `list()` is the thing that catches
- `StopIteration`. ⚠ NOT [x]: same-session.
+ `StopIteration`.
 - [ ] Nested data structures
 - [ ] Common patterns and pitfalls
 - [~] **String formatting / f-strings — PARKED HERE FROM S16 at the student's
@@ -1337,6 +1337,11 @@ false.
  width number is TOTAL field width, not extra spaces; and **the default
  alignment differs by type — text hugs the LEFT, numbers hug the RIGHT**,
  which is why decimal points line up in a column. ⚠ NOT [x]: same-session.
+ **S29 SUPPORTING, AND IT IS STRONG: he wrote `{limits_key:10s}` and
+ `{float(angle):8.1f}` COLD in `report()` and the columns came out aligned on
+ the first run — the text-left/numbers-right fact applied, not recited. No
+ direct question was asked and no rating taken, so it stays [~]; ONE cold ask
+ promotes it.**
 
 #### 1.9 Error Handling and Exceptions
 - [ ] What exceptions are — the exception hierarchy (**pre-loaded S15:
