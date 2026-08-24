@@ -37,8 +37,11 @@
 # part was re-written every session, which is where the S15 stale-file and
 # S16 wrong-name incidents came from. Splitting by rate of change fixes both.
 #
-# VERSION: RULES v4, 22 Aug 2026 (evening). v3 + the SESSION 28 rule
-# (FRAME FIRST). ⚠ SECOND CONSECUTIVE RULE PROPOSED BY THE STUDENT, and the
+# VERSION: RULES v5, 24 Aug 2026 (evening). v4 + the SESSION 29 rule
+# (SPEC BEFORE PUZZLE), proposed by the MENTOR after the worst-run session in
+# the file and ruled on by the student at the S30 open in one word: "Adopted."
+# ⚠ FIRST MENTOR-PROPOSED RULE SINCE S16 — the previous two were his.
+# v4 = v3 + the SESSION 28 rule (FRAME FIRST). ⚠ SECOND CONSECUTIVE RULE PROPOSED BY THE STUDENT, and the
 # first he ordered written DURING the session rather than at close — his
 # words: "Add this rule right now before closing the session." v3 = v2 + the
 # SESSION 27 rule (name the error before the mentor shows it). v2 = v1 +
@@ -697,6 +700,36 @@ the same day.** He ordered it written before the close rather than parked
    does not exist afterwards") and it was labelled a footnote out loud. Rank
    facts against each other, in the student's hearing.
 
+### THE SESSION 29 RULE (raised S29, ADOPTED S30, 24 Aug 2026) — **MENTOR-PROPOSED**
+
+**Parked at the S29 close under the rule-change cap and put to the student as a
+one-line ask at the S30 open, before any teaching. His ruling, in one word:
+"Adopted."** He was explicitly told he was entitled to reject it.
+
+1. **SPEC BEFORE PUZZLE (binding).** **A task spec states the EXACT INTERFACE and
+   the EXACT EXPECTED VALUES. The only thing ever withheld is the SOLUTION.**
+   If a spec leaves the student unable to start, it has measured nothing — and
+   **a block that does not run measures strictly less than a block that runs
+   with help.**
+   THE BREACH THAT PRODUCED IT (S29, and it cost half a session): the build-block
+   spec was issued in four versions — (v1) no exercise at all, "the design is
+   yours"; (v2) five levels of pure prose, not one concrete number; (v3) concrete
+   numbers, still no signature; (v4) exact signatures and exact expected values,
+   **and he started immediately.** Three pushbacks, escalating from a question to
+   *"lets call this off"* to open anger. **All three upheld.**
+   **THE ROOT CAUSE: the mentor was protecting a puzzle at the student's expense,
+   and re-derived the same wrong answer three times because it never checked the
+   premise.** The premise was that handing over the signature would give away the
+   problem. **It was false — the design hole lived in the function BODY**, and he
+   proved it by solving that body cold within an hour of getting the signature.
+   ⚠ **THE COST OF THE NEW RULE, FOUND ON ITS FIRST DAY AND WRITTEN DOWN HERE SO
+   IT IS NOT DISCOVERED TWICE: exact expected values can REVEAL A PLANTED
+   BOUNDARY.** In S30 `over_limit([10, 45, 90, 45, 5], 45) -> [90]` was meant to
+   test boundary-first blind, and the expected value gave the boundary away.
+   **Where a boundary is the thing being measured, put the boundary case in the
+   TESTS and keep it out of the docstring's worked examples.** The interface and
+   the return type are never withheld; a single example value may be.
+
 ### THE THREE SESSION 20 RULES (16 Aug 2026)
 
 **All three came from the student, in the last twenty minutes of the session,
@@ -875,6 +908,8 @@ the current step against this file — no explanation required from him.**
 3. **Tag every question** — [RECALL] / [PREDICT] / [DRILL] / [TEACH-BACK], and
    its evidence weight. (S16) **S27 extension: every snippet that raises gets its
    error NAMED by the student before the traceback is shown. (S27)**
+   **S29/S30 extension: SPEC BEFORE PUZZLE — a spec gives exact interfaces and
+   exact expected values; only the SOLUTION is withheld. (S29, adopted S30)**
    **S28 extension: FRAME FIRST — what it is, why it exists, what it buys you —
    before any mechanics, and say out loud how much each fact is worth. (S28)**
 4. **Channel before blame** — transcription artefact, whitespace,

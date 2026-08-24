@@ -1284,7 +1284,7 @@ false.
  because you never hold the exact float to look up. **The dict design was credited
  where it WOULD win — replay by discrete frame number, `frames[1500]`, real random
  access.** ⚠ NOT [x]: same-session.
-- [~] List comprehensions — **TAUGHT S28** (commit S28). The S15 pre-load was
+- [x] List comprehensions — **TAUGHT S28, PROMOTED S30** (`drills/s30_comprehensions.py`, 16/16 pytest, cold, unaided, later-day gap; self-rating 8/10). **The promotion covers the code AND the mechanism: he stated the execution order (iterable → variable → condition → expression) cold, named the condition as the part that gates the expression, and explained unprompted why `[100/v for v in speeds if v != 0]` cannot raise `ZeroDivisionError`.** ⚠ The second half of the mechanism question needed ONE re-ask — depth-before-answer, recovered. The S15 pre-load was
  honoured: the iteration protocol was named out loud as the machinery
  underneath, and it was [x] going in, so the gate opened clean with no credit.
  Covered: the form; **the expression-vs-statement fact, which HE derived from
@@ -1305,7 +1305,7 @@ false.
  comprehensions and keeps the scope isolation deliberately. The Level 2
  statement that stands: **it gets its own namespace, discarded at the end.**
  The version mechanics are Level 3 and parked.
-- [~] Dict comprehensions — **TAUGHT S28** (commit S28). `{KEY: VALUE for VAR
+- [x] Dict comprehensions — **TAUGHT S28, PROMOTED S30** (`drills/s30_comprehensions.py`, cold, unaided; self-rating 8/10). **He wrote `{key: value*factor for key, value in limits.items()}` and `[key for key, value in limits.items() if value > ceiling]` cold, reaching for `.items()` and two-name unpacking without being pointed at either.** `{KEY: VALUE for VAR
  in ITERABLE}`; **the two things that make it a dict rather than a list are
  the braces and the COLON, and he produced both himself**; walking an existing
  dict with `.items()` + two-name unpacking (`{name: a for name, a in
