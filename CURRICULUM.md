@@ -1323,7 +1323,7 @@ false.
  `StopIteration`.
 - [ ] Nested data structures
 - [ ] Common patterns and pitfalls
-- [~] **String formatting / f-strings — PARKED HERE FROM S16 at the student's
+- [x] **String formatting / f-strings — PARKED HERE FROM S16 at the student's
  own raising; TAUGHT S28** (commit S28). **Opened by naming the reason out
  loud: he USES them correctly and could not EXPLAIN them — the one construct
  in the course he was operating at Level 1 on.** Covered: the `f` prefix (without
@@ -1342,6 +1342,17 @@ false.
  the first run — the text-left/numbers-right fact applied, not recited. No
  direct question was asked and no rating taken, so it stays [~]; ONE cold ask
  promotes it.**
+ **S31 — PROMOTED TO [x]. THE ASK FINALLY HAPPENED, THIRD TIME OF ASKING.**
+ Off his own live code (`f"{limits_key:10s} : {angle_value:8.1f} -> {safe:8.1f}"`
+ in `builds/block_01_joint_clamp/clamp.py`, written cold that evening). He gave
+ the three steps — evaluate, convert to string, splice — with **one narrowing
+ re-ask needed on the `str()` step**; he offered braces-hold-an-EXPRESSION
+ unprompted as his first move; and on the format spec he named the number as
+ **TOTAL FIELD WIDTH**, which is the trap, without being led. Rated 8 and 10.
+ ⚠ **ONE HALF DOES NOT GO WITH IT: ALIGNMENT.** He stated it INVERTED (text
+ right, numbers left) and then **self-repaired it unprompted, with no evidence
+ shown and no re-ask** — a first for this file. The ROW is [x]; the alignment
+ half is queued for a short-gap re-test in S32. Evidence: commit for S31.
 
 #### 1.9 Error Handling and Exceptions
 - [ ] What exceptions are — the exception hierarchy (**pre-loaded S15:
