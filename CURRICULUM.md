@@ -1321,7 +1321,33 @@ false.
  truncate to the shortest with no error, and an exhausted `zip` returns `[]`
  rather than raising, because `list()` is the thing that catches
  `StopIteration`.
-- [ ] Nested data structures
+- [~] **Nested data structures — OPENED AND TAUGHT S32.** Framed honestly:
+ **nesting is not a feature, it is a consequence** — containers hold objects,
+ lists and dicts ARE objects, so nothing was added to the language for this.
+ Motivated from his own S29 `range(len(...))` habit: flat containers lose the
+ shape of the data and force you to keep the relationship in your head.
+ Covered: chained subscripting read left-to-right (`limits["elbow"][1]` — the
+ first `[]` hands back something indexable, so the second `[]` is the same
+ operator he already owns); `len()` on the OUTER container only; and the
+ explicit non-claim that deep nesting is a smell (two levels normal, four
+ usually wants a class).
+ ⚠ **THE REAL YIELD IS SHALLOW COPY, AND HE DERIVED IT UNPROMPTED BEFORE IT
+ WAS TAUGHT.** Given `a = [[1,2],[3,4]]; b = a[:]; b[0][0] = 99`, he stated the
+ whole mechanism cold off S24 aliasing — *"the list object is new but the
+ objects inside this list are same objects... so a and b both"* — with only a
+ slip in the final VALUE (he wrote `[[1,2],[3,4]]`, forgetting to apply his own
+ `99`). Proved with `a is b` → `False` and `a[0] is b[0]` → `True`. The name
+ decoded: **shallow = ONE level deep; new box, same contents.** Then he
+ TRANSFERRED it to a container it had not been shown in — `dict(config)` —
+ correctly and unprompted. Also banked: **for a flat list of immutables a
+ shallow copy is indistinguishable from a real copy**, which retro-explains why
+ `angles[:]` never bit him in S30; and the three shallow forms `a[:]`,
+ `list(a)`, `a.copy()`, with `.copy()` preferred for intent.
+ **CONSTRUCTORS CORRECTED: `dict(config)` is not a type conversion, it is a
+ CONSTRUCTOR CALL** — it walks the pairs and stores the same value objects,
+ which is *why* it comes out shallow. Same for `list()`, `set()`, `tuple()`.
+ ⚠ NOT [x]: same-session throughout, **no drill file written**, and
+ `copy.deepcopy` is still owed. Task-first cold pass owed S33.
 - [ ] Common patterns and pitfalls
 - [x] **String formatting / f-strings — PARKED HERE FROM S16 at the student's
  own raising; TAUGHT S28** (commit S28). **Opened by naming the reason out

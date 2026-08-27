@@ -367,7 +367,21 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **31**
+- Sessions Completed: **32**
+- **SESSION 32 (Thu 27 Aug 2026, evening → 00:15 Fri 28) — FOUR LEDGER
+ PROMOTIONS, all cold and later-day, and 1.8 NESTED DATA STRUCTURES OPENED.**
+ `drills/s31_shrug.py` finished 17/17 with all six tools chosen cold and not one
+ `if`/`in`/`else`/`try` — the raise-vs-shrug row, which has been the file's
+ longest-standing concept-owned/tool-missing split, closed on both halves.
+ ⚠ **THE SESSION OPENED WITH HIS OWN SELF-DIAGNOSIS — *"I feel like I have
+ started forgetting things, but we can't just waste time revising"* — and the
+ answer that worked is worth reusing: THE FORGETTING IS REAL BUT IT IS LABELS,
+ NOT MACHINERY.** ⚠ **THE FINDING OF THE SESSION IS NEW AND IT IS NOT A LABEL
+ GAP: `None` IS NOT NOTHING**, conflated twice in one night on unrelated
+ mechanisms. ⚠ **THE MENTOR FAILURE: DEFINE-BEFORE-USE, NINTH OCCURRENCE** —
+ `<`/`>` fired inside a ledger-eligible [RECALL] having never been taught, in a
+ snippet that announced its own answer; he caught it, and the row was held
+ rather than promoted.
 - **SESSION 31 (Tue 25 Aug 2026, evening, ~1h) — BUILD BLOCK 01 CLOSED FOR
  REAL. ONE CURRICULUM TICK (1.8 f-strings/format spec) AND FOUR LEDGER
  PROMOTIONS, all cold, all later-day.** The refactor he deferred at the S30
@@ -739,6 +753,7 @@
 | 29 | **COLD BUILD BLOCK 01 — the measurement instrument, not a curriculum item** | **`builds/block_01_joint_clamp/clamp.py` — written cold, no AI, no autocomplete, against a mentor-written 13-test acceptance suite. L1 `clamp_one(angle, low, high)`; L2 `clamp_all(low, high, *angles)` → tuple; L3 `clamp_joints(*angles, **limits)` → dict, THE DESIGN HOLE (anonymous positional angles vs named limits); L4 the extra-angle case; L5 `report()` with an aligned f-string table. Then a code read: the dead `{}` return in `report()`, and the clamp rule duplicated four times** | **Complete — 13/13, ONE promotion (`zip`)** | ⚠ **HALF THE SESSION WENT ON MENTOR SPEC CHURN — four versions, three upheld pushbacks (46 abstract spec, 47 *"lets call this off"*, 48 **pytest was never taught**), running total 48/47. The timer was abandoned in frustration and `LOG.md` never written, so block 01 has NO duration and NO process record — code only. THE STUDENT RESULT IS EXCELLENT AND SEPARATE FROM THAT: `zip` found unprompted to pair `*args` with `**kwargs`, plus dict insertion order VOLUNTEERED with the set contrast; `*args`, `**kwargs`, `*args`-after-positional and `*tuple` call-site unpacking all cold and correct; f-string format specs `{k:10s}`/`{v:8.1f}` aligning first run; and the planted boundary handled right — the first clean boundary in four. Third mechanism fact (`for k in d` yields KEYS) only on the re-ask. Depth-before-answer fired twice, both recovered — fourteen and fifteen straight. NO teaching, NO drill, NO rule adopted; SPEC BEFORE PUZZLE parked for his ruling. Comprehensions drill now deferred TWICE and it is the file's fault, not his.** |
 | 30 | **Comprehensions drill (deferred twice) + the container backlog (declared four times)** | **`drills/s30_comprehensions.py` — `over_limit` (list comp + filter), `scaled` (dict comp), `names_over` (dict comp over `.items()`), `format_row` (f-string + format spec); one `return` per body, 16 mentor-written tests. Then `drills/s30_containers.py` — `limits_for`, `shared_joints`, `pop_limit`, `snapshot`, `span`, `total`; 19 mentor-written tests. Then `builds/block_01_joint_clamp/test_report.py` written by the mentor to expose the dead `{}`, and the refactor spec issued** | **Complete — 16/16 and 19/19 cold; refactor DEFERRED to S31 at his call** | **EIGHT PROMOTIONS: list comprehension, dict comprehension, comprehension execution order, the filter-as-gate, `.items()`, unpacking (core), dict insertion ordering, `KeyError`/`IndexError` (the S27 miss, cleared). Ratings 8/8/8/8/8/7/7 — well calibrated except one. ⚠ RAISE-VS-SHRUG DID NOT PROMOTE: both tools aided, and the choosing rule stated INVERTED before two narrowing re-asks fixed it; he self-rated 8, the mentor challenged it to 5–6 with the evidence named — the first overt miscalibration in a long while, and it sits exactly where the CONCEPT is solid and only the TOOL is missing. Depth-before-answer fired THREE times, all three recovered (16, 17, 18 straight). `abs()` used unprompted and never taught — and it made his `span` more robust than the mentor's own reference. ⚠ CHANNEL: the unsaved-VS-Code-buffer artefact fired FOUR times and cost five turns; mtime and `git status` were checked every time and nothing was logged against him. ONE pushback (49) — the mentor said "give me a minute" and stalled — upheld; running total 49/48. RULES v5 adopted: SPEC BEFORE PUZZLE, with its cost written in the same breath (exact expected values can reveal a planted boundary; boundary cases belong in the TESTS).** |
 | 31 | **THE BLOCK-01 REFACTOR (deferred from S30) + the owed cold asks S30 exercised in code but never asked** | **`builds/block_01_joint_clamp/clamp.py` refactored by him against `BRIEF_REFACTOR.md`: Part A — the clamp decision reduced from FOUR written copies to ONE, with the acceptance stated mechanically ("count the function bodies comparing an angle to a low/high; that count must be 1"); Part B — `report` made to PRINT *and* RETURN the dict `clamp_joints` returns, killing the dead `{}`. Then a second pass he proposed himself, collapsing three redundant `clamp_one` calls per loop pass to one local. Then cold asks: f-string three steps, format spec, single-return-builds-a-tuple, the comma-makes-a-tuple, tuple immutability via a raising snippet. `drills/s31_shrug.py` + `tests/test_s31_shrug.py` written and issued, NOT attempted** | **Complete — 19/19 green, build block 01 CLOSED; ⚠ `LOG.md` skipped a FOURTH time** | **FOUR PROMOTIONS (f-string three steps, format-spec width/precision, single return value, the comma makes the tuple) and ONE CURRICULUM TICK (1.8 f-strings). ⚠ TUPLE IMMUTABILITY HELD [~] DELIBERATELY: mechanism cold and complete, `TypeError` label AIDED — he declared an honest gap and then DERIVED the label from his own four-station hook. ⚠ THE STUDENT MOMENT OF THE SESSION: on format-spec alignment he stated text-right/numbers-left, then SELF-REPAIRED unprompted before any evidence was shown — a first. ⚠ THE MENTOR FAILURE OF THE SESSION AND IT IS THE HEADLINE: SPEC BEFORE PUZZLE, adopted the previous day, was breached — the spec was issued in CHAT ONLY and the first brief file written was abstract with no concrete finish line. FOUR pushbacks (50 where are the instructions; 51 the brief is not clear; 52 the [TEACH-BACK] was not worth a turn, part-upheld; 53 you took my rating and never gave a verdict), running total 53/52. Depth-before-answer fired twice, both recovered — 19 and 20 straight. Zero unsaved-buffer firings, down from four.** |
+| 32 | **FINISH `drills/s31_shrug.py` (issued S31, never attempted) + open 1.8 NESTED DATA STRUCTURES** | **`drills/s31_shrug.py` — six functions, three raise/shrug pairs (`limit_for`/`must_limit`, `drop_limit`/`must_drop`, `retire`/`must_retire`) under a constraint banning `if`, `in`, `else` and `try` below the docstring, enforced by a test; 17 mentor-written tests, 4 passing at the start. Then cold asks: `del` vs `.pop` (student-initiated), `SyntaxError` via `print(del d[k])`, tuple immutability, format-spec alignment (INSTRUMENT SCRAPPED), `list()` on a spent iterator. Then TAUGHT: nested data structures, chained subscripting, SHALLOW COPY on lists and dicts, constructors as constructors, and the `<`/`>`/`^` alignment operators** | **Complete — 17/17 green, four promotions; ⚠ no drill file for nested structures** | **FOUR PROMOTIONS (the raise-vs-shrug pairing 7/10 — stated INVERTED in S30 and correct cold now; `.get()` vs `[]`; `remove` vs `discard`, taught S27 and never once tested until tonight; tuple immutability 5/10, the label unaided after being AIDED in S31). ⚠ **THE STUDENT MOMENT: HE DERIVED SHALLOW COPY UNPROMPTED, BEFORE IT WAS TAUGHT**, straight off S24 aliasing — *"the list object is new but the objects inside this list are same objects"* — then TRANSFERRED it to `dict(config)`, a container it had not been shown in. Same shape as the S29 `zip` moment, and again unpromotable because [PREDICT] never is. ⚠ **STATION 0 FIRED UNPROMPTED TWICE, both times prefaced with "I forgot the hook"** — use has outrun recall. ⚠⚠ **NEW WATCH AREA AND IT IS NOT A LABEL GAP: `None` IS NOT NOTHING** — he had `.pop`'s default argument creating the return value, and `[None]` for `list()` on a spent iterator; `None` occupies a slot, nothing does not. ⚠ **NAMED REPEAT: `SyntaxError` labelled `TypeError`, identical to the S27 miss five sessions earlier.** ⚠ **MENTOR: define-before-use, NINTH occurrence — `<`/`>` in a recall snippet, never taught, and they announce the answer; pushback 54, upheld in full, running total 54/53. The row was HELD rather than promoted.** Confidence calibration good throughout — every rating at or below 6 sat on something genuinely shaky. Depth-before-answer fired twice, one recovered (21 straight), one an honest gap he declared himself. Five checks unreported for the THIRD session; unsaved-buffer artefact fired twice, both caught by mtime, nothing logged against him.** |
 
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
@@ -2875,3 +2890,240 @@ about the same thing: give him something concrete he can act on without asking.*
 closes with code and tests but **no process record and no duration**, which is
 the one thing a measurement instrument was supposed to produce.
 **For block 02 it goes FIRST, before any code is written.**
+
+
+## What Session 32 established (Thursday 27 August 2026, evening → 00:15 Friday 28)
+
+**Ran with a two-day gap from S31. Everything asked was ledger-eligible.
+Four promotions, all cold, all later-day. 1.8 moved from ~93% to ~95% with
+nested data structures opened. No rule adopted; the parking lot stayed empty
+deliberately.**
+
+---
+
+**1. THE SESSION OPENED WITH A SELF-DIAGNOSIS, AND IT IS THE MOST IMPORTANT
+THING IN IT.** Before any teaching he said: *"I feel like I have started
+forgetting things, but also we can't just waste time just revising we need to
+learn new content as well."*
+
+**Both halves are true and the file already agreed with both.** The answer
+given, which held up across the whole night and should be reused verbatim:
+
+> The forgetting is real, but it is **LABELS, not machinery.** In S31 he
+> produced the entire mechanism of tuple immutability and then said *"I can't
+> come up with the error type."* Understanding intact; name gone.
+> **Therefore retrieval is the CHEAP operation — sixty seconds — and
+> re-teaching is the expensive one.** Revision is not the remedy; testing is.
+
+The session was then run ~50/50 old/new, with the cold asks **mixed into** the
+material rather than fired as an opening block, and he did not push back once.
+**That split is the operational answer to his complaint and it should be the
+default shape from here.**
+
+---
+
+**2. THE DRILL: `drills/s31_shrug.py`, 17/17, AND THE ROW IT CLOSED.**
+
+Written and issued in S31, untouched for two days, finished tonight. Six
+functions, three pairs, under a constraint banning `if`, `in`, `else` and `try`
+below the docstring — a constraint enforced by one of the tests, and aimed
+squarely at the hand-rolled guards he wrote in S30.
+
+**Every one of the six tools was chosen cold and correctly on the first
+attempt:** `.get(k, default)`, `d[k]`, `.pop(k, default)`, `.pop(k)`,
+`discard`, `remove`. Not one guard was written. **In S30 both tools in this
+family were AIDED and the choosing rule was stated INVERTED; tonight the tool
+half was clean.**
+
+Three fixes were needed and they are worth separating by kind:
+- **`drop_limit` and `must_drop` were missing their `return`** — he called
+  `.pop(...)` and threw the value away. **Twenty minutes after being taught
+  that `.pop` hands the value back.** This is the five-checks gap, not a
+  comprehension gap.
+- **`limit_for`'s default was `None` instead of `(-180, 180)`** — a spec-read
+  slip; the value was written in his own docstring four lines up.
+
+**THE CHOOSING RULE THEN PROMOTED, 7/10, ASKED AFTER THE TESTS WERE GREEN.**
+He gave the direction correctly — *"the user expects the input to be missing
+then we chose the shrug"* — which is the exact statement he got **backwards**
+in S30. **But the second half was CIRCULAR:** *"if the user want the missing
+values to raise an error he choses the second column."* That renames the choice
+instead of grounding it.
+
+The sharpening that landed, and it is the reusable version:
+
+> **Is a missing key a legitimate state of the world, or does it mean my
+> program's assumptions are already broken?** Legitimate ⇒ shrug. Broken ⇒
+> raise, deliberately and early, so the failure appears where the CAUSE is
+> instead of travelling.
+
+Grounded in his own domain: `limits.get(joint, (-180, 180))` on a misspelled
+joint name hands back a ±180° range, so the safety clamp clamps **nothing** and
+the arm moves; `limits[joint]` stops at the config-load line with the bad name
+in the traceback. **Absence you did not plan for is a bug wearing a disguise,
+and shrugging is what puts the disguise on.**
+
+---
+
+**3. ⚠⚠ THE FINDING OF THE SESSION, AND IT IS A NEW KIND: `None` IS NOT
+NOTHING.**
+
+Twice in one night, on two unrelated mechanisms, hours apart:
+
+- On `.pop`, unprompted and self-initiated: *"`.pop` by default doesent hand
+  back anything, but we can add a default parameter for it to return, by
+  default it should be returning `None`."*
+- On `list()` over a spent iterator: *"so `None` in the second list"* — for a
+  result that is `[]`.
+
+**`None` is an OBJECT. It occupies a slot: `len([None])` is 1. "Nothing" is the
+absence of a slot: `len([])` is 0.** `del` hands back nothing at all; a
+function with no `return` hands back `None`; an empty list contains neither.
+
+**WHY THIS MATTERS MORE THAN ANY OTHER ENTRY TONIGHT.** Every retention finding
+in this file for twenty sessions has had the same shape — *mechanism intact,
+label lost*. **This one is the opposite: a distinction he does not have.** It is
+a knowledge-structure gap, and it must be taught as new material rather than
+re-tested as revision. It also retro-explains the `.pop` error, which was
+otherwise a *smart* wrong answer: he was reaching for the
+in-place-mutators-return-`None` tell he genuinely owns, and running it
+**backwards** — the exact failure the S24 one-directionality warning exists to
+prevent.
+
+---
+
+**4. STATION 0 FIRED UNPROMPTED, TWICE, WITHIN AN HOUR OF BEING MISSED.**
+
+The miss came first. `print(del d["shoulder"])` — he labelled it `TypeError`,
+rated 6. It is `SyntaxError`, **and it is the identical miss to his first-ever
+error-naming ask in S27** (`print(if n > 10: "high")`, also called `TypeError`).
+Five sessions apart, same shape: a statement placed where a value belongs.
+**Logged as a named pattern, not a one-off.** Taught: a `TypeError` is a
+RUNTIME verdict, so the line must be grammatical before it can be reached — and
+the traceback carries **no frames at all**, because there was never a running
+program to have frames.
+
+**Then, within the hour, twice, without being asked:**
+
+- On tuple item assignment: *"is the syntax correct, yes, ok then can we do the
+  `.` for this datatype, now so type error"* — Station 0, then Station 3.
+- On the (untaught) `<`/`>` snippet: he checked the grammar first and concluded
+  `SyntaxError`. **Wrong conclusion, right instinct** — and tagged [PREDICT],
+  so nothing was logged.
+
+**He prefaced both with "I forgot the hook".** The hook has stopped being a
+thing he recites and become a thing he uses. **USE IS NOT RECALL, so the row
+stays [~] and S33 must ask the stations BY NAME** — but this is the mechanism
+working exactly as designed.
+
+---
+
+**5. TUPLE IMMUTABILITY PROMOTED — THE S31 GAP CLOSED IN ONE ASK.** S31 held it
+at [~] deliberately: mechanism cold and complete, `TypeError` **aided**. Tonight,
+cold, two days later, he produced the label unaided in one move by walking the
+hook. Rated 5, so it comes back on a short gap. Sharpened afterwards:
+**Python is not objecting to the `0` or to the `10` — it is objecting that the
+operation does not exist for the type. Immutability has no error of its own; it
+always arrives as `TypeError`.**
+
+---
+
+**6. ⚠ THE MENTOR FAILURE: DEFINE-BEFORE-USE, NINTH OCCURRENCE — AND THIS ONE
+HAD TEETH.**
+
+A ledger-eligible [RECALL] on format-spec alignment was fired as
+`f"{name:<10}{angle:>8.1f}"`. **`<` and `>` had never been taught.** He stopped
+it: *"wait you worte a `<` and `>` sign after the `:` for both of them, I havent
+seen these before."* **Pushback 54, upheld in full.** S31 taught the *default*
+alignment only — verified by grepping the S31 notes rather than reasoning from
+memory, which is itself the S15 rule being applied.
+
+**The breach is not the serious half. The serious half is that `<` means left
+and `>` means right — so the snippet ANNOUNCED THE ANSWER to the question it
+was asking.** Had he guessed what the arrows meant, a pass would have been
+recorded that he had not earned. **This is the same defect class as the S30
+planted boundary, and it is the second time an instrument has leaked its own
+answer.** The row was **HELD at [~]** and scrapped for the night, because with
+the arrows on screen no answer could be clean.
+
+The check that was skipped costs nothing: **grep the notes for every symbol in a
+recall snippet before firing it.** Not parked as a rule — it *is* define
+before use, and adding a second rule to enforce the first is governance
+scope-creep (the same ruling as S31).
+
+The *why* behind alignment was then taught as new material: **right-aligning
+numbers makes place value and decimal points stack, so magnitudes can be
+compared down a column without reading a digit; left-aligning text gives the eye
+a straight margin to scan.** The default matches what you scan the column FOR.
+
+---
+
+**7. NESTED DATA STRUCTURES OPENED — AND HE DERIVED THE PAYOFF BEFORE IT WAS
+TAUGHT.**
+
+Framed honestly, per FRAME FIRST: **nesting is not a feature, it is a
+consequence.** Containers hold objects; lists and dicts *are* objects; nothing
+was added to the language for this. Motivated from his own S29 `range(len(...))`
+habit — flat containers lose the shape of the data and force the relationship to
+live in your head. Non-claim stated out loud: deep nesting is a smell.
+
+Then the trap. Given `a = [[1,2],[3,4]]; b = a[:]; b[0][0] = 99`, tagged
+[PREDICT], **he produced the entire mechanism cold, off S24 aliasing, before any
+teaching:**
+
+> *"`:` will create a new copy, but what we studied earlier the object in this
+> copy are the same object, so the list object is new but the objects inside
+> this list are same objects in the old list... and thus `b[0][0]` mutates the 1
+> in this so `a` and `b` both..."*
+
+Only the final **value** slipped — he wrote `[[1,2],[3,4]]`, forgetting to apply
+his own `99`. Proved with `a is b` → `False` and `a[0] is b[0]` → `True`.
+
+**Then he TRANSFERRED it, unprompted, to a container it had not been shown in:**
+given `dict(config)` he flagged honest uncertainty about the constructor, then
+reasoned the shallow-copy consequence through correctly and got
+`{'limits': [0, 90]}`.
+
+**THIS IS THE SAME SHAPE AS THE S29 `zip` MOMENT — transfer to an unseen case,
+which is the strongest evidence this course produces. And for the second time it
+arrived inside a [PREDICT], which can never promote.** Worth a decision at the
+gauntlet: these should be re-asked cold so they can count.
+
+Also banked: **for a flat list of immutables a shallow copy is
+indistinguishable from a real copy**, which retro-explains why `angles[:]` never
+bit him in S30; the three shallow forms `a[:]`, `list(a)`, `a.copy()`, with
+`.copy()` preferred for intent; and **constructors corrected — `dict(config)` is
+not a type conversion, it is a CONSTRUCTOR CALL that walks the pairs and stores
+the same value objects, which is exactly why it comes out shallow.**
+
+---
+
+**8. `list()` ASKED AT LAST — SEVEN SESSIONS OVERDUE — AND HALF PASSED.**
+`list(box)` twice on an exhausted iterator: first line `[1,2,3]` right, second
+`[None]` where it is `[]`. Rated 7. **The mechanism was cold and correct** —
+*"iterator after going through the iterable goes empty, it has forward only
+state"* — and only the value was wrong, which is the `None`-is-not-nothing
+finding again rather than a fact about `list()`. Not promoted; short gap.
+
+---
+
+**9. CONFIDENCE CALIBRATION WAS GOOD AND HONESTLY LOW WHERE IT SHOULD BE.**
+5 on `.pop` (wrong), 6 on `SyntaxError` (wrong), 5 on tuple immutability
+(right), 7 on the raise/shrug rule (right but circular), 7 on `list()` (half
+right). **Every rating at or below 6 sat on something genuinely shaky.** Per the
+S17 finding these are a targeting signal, and S33 should re-fire exactly those.
+
+---
+
+**10. PROCESS.** Depth-before-answer fired twice: once recovered on re-ask (the
+*why* behind `TypeError` — **21 straight**), once answered with an honest gap he
+declared himself rather than guessing (*"I know this heappnes, I belive we
+havent discussed why"* — and he was right, so nothing was logged).
+**The five checks went unreported for the THIRD consecutive session**, and they
+are precisely what would have caught the two missing `return`s before pytest
+did — **so the ask changes: the five checks are the GATE on saying "done", not a
+postscript.** The unsaved-buffer artefact fired **twice** (one "done" with no
+write at all, one save producing a byte-identical file); mtime and size caught
+both and nothing was logged against him. **`print()` joins the level-1 audit
+list** — he described it as taking a string; it takes any object and calls
+`str()` on it.

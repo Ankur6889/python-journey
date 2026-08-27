@@ -52,24 +52,26 @@ The SOLUTION is withheld. Nothing else is.
 
 
 def limit_for(limits, joint):
-    ...
+    return limits.get(joint,(-180,180))
 
 
 def must_limit(limits, joint):
-    ...
+    return limits[joint]
 
 
 def drop_limit(limits, joint):
-    ...
+    return limits.pop(joint,None)
 
 
 def must_drop(limits, joint):
-    ...
+    return limits.pop(joint)
 
 
 def retire(active, joint):
-    ...
+    active.discard(joint)
+    return active 
 
 
 def must_retire(active, joint):
-    ...
+    active.remove(joint)
+    return active
