@@ -1180,7 +1180,16 @@ false.
  predicted BOTH output lines wrong on `original[:]` with nested lists — tagged
  [PREDICT], so not ledgered. Only bites when the container holds MUTABLES.
  ⚠ `copy.deepcopy` still owed, parked to "nested data structures".
-- [~] tuple — immutable; when to use over list — **TAUGHT IN FULL S26.**
+- [x] tuple — immutable; when to use over list — **TAUGHT IN FULL S26, PROMOTED
+ S34** (`drills/s34_tail.py::reading_stats`, cold, later-day, task-first). The
+ outstanding requirement written below — *"needs a task-first cold pass", no
+ drill file — was met: from a docstring naming no mechanism he reached for
+ `.count()` and `.index()` on a tuple unaided and returned a tuple `(0, -1)`.
+ ⚠ **ECHO CAVEAT, WRITTEN NEXT TO THE TICK RATHER THAN HIDDEN: `.count()` was an
+ honest gap in S33 a few hours earlier** (*"I don't remember this method"*), so
+ that ONE method is not fully cold. Re-ask it specifically at the gauntlet.
+ ⚠ The first version returned `None` for the absent-target case where the spec
+ said `(0, -1)`; he found and fixed it from the test output. **TAUGHT IN FULL S26.**
  Covered: immutable ordered sequence; **THE COMMA MAKES THE TUPLE, NOT THE
  PARENTHESES** (`(5)` is an `int`, `(5,)` is a tuple); `TypeError` on item
  assignment vs `AttributeError` on `.append` — **immutability has no error of
@@ -1192,8 +1201,8 @@ false.
  REFERENCES; the references can't be re-pointed, the objects they point at can
  change) — **which he stated before being asked**; and the choice rationale
  (guarantee you can stop reading / loud failure at the cause / states intent).
- ⚠ NOT [x]: SAME-DAY SESSION, and **no drill file was written**. Needs a
- task-first cold pass.
+ ⚠ (Historic, S26: NOT [x] — SAME-DAY SESSION, and **no drill file was
+ written**. Needs a task-first cold pass.) **DISCHARGED S34.**
 - [~] dict — **~⅔ TAUGHT S26.** Motivated from the parallel-lists failure — he
  found BOTH defects unaided (the pairing isn't enforced; `.index()` costs a
  LINEAR scan, which he named). Covered: key→value; `[]` takes a KEY; **keys are

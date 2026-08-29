@@ -1,78 +1,107 @@
 # STATE.md — PYTHON LEARNING JOURNEY — LIVE SESSION STATE
 # ═══════════════════════════════════════════════════
 # One of FOUR files. THIS is the file that changes every session.
-# HOW TO START SESSION 34 (for Claude):
-#   1. Read RULES.md fully (**v5 — unchanged in S33**), then this file fully.
-#      No re-introductions. No ARCHIVE.md unless gauntlet.
-#   2. FIRST ACTION: the INTERVAL GATE. S33 ran Fri 28 Aug 16:00 → Sat 29 Aug
-#      ~12:00, with a sleep break in the middle. Ask the gap.
-#   3. ⚠ **NO RULE DECISION IS OWED. The parking lot is EMPTY and that is
-#      deliberate — do not invent a candidate to fill it.** Two mentor failures
-#      in S33 (define-before-use tenth occurrence; FRAME FIRST breached) are
-#      BEHAVIOUR failures on rules that already exist. Fix the behaviour.
+# HOW TO START SESSION 35 (for Claude):
+#   1. Read RULES.md fully (**v5 — unchanged in S33 and S34**), then this file
+#      fully. No re-introductions. No ARCHIVE.md unless gauntlet.
+#   2. FIRST ACTION: the INTERVAL GATE. S34 ran Sat 29 Aug ~16:00–18:30, a few
+#      hours after S33 closed. Ask the gap.
+#   3. ⚠⚠ **ONE RULING IS OWED AT THE OPEN, AND HE RAISED IT (pushback 57).**
+#      He asked that revision be RANDOM and spread across days, not
+#      "taught yesterday, tested today". **THE MENTOR'S RECOMMENDATION IS: NOT
+#      A NEW RULE.** Random spaced recall is already binding doctrine (RETENTION
+#      SYSTEM 2, 3 and 5), and the adopted remedy for the queue being unrunnable
+#      by hand is RULES proposal 6 — **move it into a SCRIPT, which is already
+#      designated build block 02 and still unbuilt.** Put that to him in one
+#      line; he is entitled to overrule it and have a rule written.
 #   4. ⚠⚠ **THE AUGUST GAUNTLET IS THE LAST SESSION OF AUGUST AND IT IS
-#      SACRED. Only Sun 30 and Mon 31 remain.** He said at the S33 open that he
-#      would sit again before 1 Sep, and at the S33 close that he wanted 1.9 as
-#      a fresh session. **BOTH CANNOT BE THE LAST SESSION. Ask at the S34 open
-#      which this is — gauntlet, or 1.9 — and SAY WHICH BEFORE TEACHING.** If
+#      SACRED. Only Sun 30 and Mon 31 remain.** He closed S34 saying he wanted
+#      to start a fresh session for 1.9 immediately. **ASK AT THE OPEN which
+#      this is — 1.9, or the gauntlet — and SAY WHICH BEFORE TEACHING.** If
 #      gauntlet: load ARCHIVE.md and master/ at START, pure mixed recall, no new
 #      material, carrying the strict-legend audit under CARRY FORWARD.
-#   5. ⚠ **MENTOR FAILURE, DEFINE-BEFORE-USE, TENTH OCCURRENCE, SECOND NIGHT
-#      RUNNING.** `*` on a sequence (`[[0] * 3] * 3`) was fired inside a
-#      [PREDICT] having never been taught. He caught it. **The check is cheap
-#      and it was skipped again: GREP THE NOTES FOR EVERY SYMBOL AND EVERY
-#      OPERATOR IN A SNIPPET BEFORE FIRING IT.** When it was finally run, the
-#      grep took one command and settled it in seconds.
-#   6. ⚠ **MENTOR FAILURE, FRAME FIRST (S28 rule), BREACHED.** The
-#      when-to-use-which block was fired as three scenarios with no frame; he
-#      said TWICE he did not understand the question. The fix that worked was
-#      to stop, own it, and state the unit in one sentence
-#      (**"what am I going to ASK this container?"**) before any scenario.
-#      **Two "I don't understand" replies in a row is not a comprehension
-#      signal — it is a frame signal. Stop and frame.**
-#   7. ⚠ **THE FIVE CHECKS WERE REPORTED, FIRST TIME SINCE S25.** The change
-#      that did it: they were declared THE GATE ON THE WORD "DONE", not a
-#      postscript. **Keep issuing them that way in every drill brief.** He gave
-#      boundary + `mila` unprompted and needed one push for the other three.
-#   8. ⚠ **PYTEST IS NOT TAUGHT AND IS NOT SCHEDULED IN LAYER 0. THE MENTOR
-#      WRITES EVERY TEST FILE. Never ask him to.** Held clean in S33.
-#   9. ⚠ **CHECK THE FILE IS SAVED (mtime) BEFORE READING IT.** Fired ONCE in
-#      S33 and **he caught it himself** before the mentor read anything.
-#  10. At session end: rewrite this file, tick CURRICULUM.md if anything moved,
+#   5. ⚠⚠ **MENTOR FAILURE, S34, AND IT IS THE HEADLINE: THE MENTOR ASKED HIM
+#      TO RUN PYTEST.** Item 8 below has said for two sessions that he never
+#      runs it. Worse, it was asked while ENFORCING the five-checks gate — so
+#      the gate was made impossible to discharge and he was held to it twice.
+#      **He caught it: *"I am not able to run the test myself... don't delay the
+#      session for unnecessary things."* Pushback 56, upheld in full.**
+#      **THE FIVE CHECKS ARE DISCHARGED BY CALLING HIS OWN FUNCTION AND LOOKING
+#      AT WHAT COMES BACK. Never by pytest. Say so when issuing the drill.**
+#   6. ⚠ **THE FIVE CHECKS: NEW FAILURE MODE. REPORTED BUT NOT RUN.** S33's win
+#      was getting them reported at all. S34 got a full report — "khaali taken
+#      care of, ek taken care of, bahar taken care of" — on two functions that
+#      both FAILED, one of them on the worked example printed in its own
+#      docstring. **He wrote the report by READING HIS CODE, not by executing a
+#      case.** The gate now has to name the form: **the case, the value that
+#      came back, matched or not.** An `if` existing in the body is not a check.
+#   7. ⚠ **PYTEST IS NOT TAUGHT AND IS NOT SCHEDULED IN LAYER 0. THE MENTOR
+#      WRITES AND RUNS EVERY TEST FILE. Never ask him to.** ⚠ **BREACHED S34.**
+#   8. ⚠ **CHECK THE FILE IS SAVED (mtime) BEFORE READING IT.** Held clean in
+#      S34 — the first "Done" came on an untouched file and mtime caught it
+#      before a word was said about his code. Keep doing exactly that.
+#   9. At session end: rewrite this file, tick CURRICULUM.md if anything moved,
 #      append one block to ARCHIVE.md, commit and push.
 #
-# STATE AS OF: end of Session 33, Fri 28 Aug 2026 16:00 → Sat 29 Aug ~12:00.
-# Next: Session 34 — **1.9, or the AUGUST GAUNTLET. ASK.**
+# STATE AS OF: end of Session 34, Sat 29 Aug 2026 ~16:00–18:30.
+# Next: Session 35 — **1.9 ERROR HANDLING, or the AUGUST GAUNTLET. ASK.**
 # ═══════════════════════════════════════════════════
 
 ## SCHEDULE POSITION (recompute formally 31 Aug — in ITEMS, not subsections)
 - **DEADLINE: Layer 0 closes 30 Sep 2026.** ~5 sessions/week needed; zero slack.
-- **S33 yield: SEVEN LEDGER PROMOTIONS, ONE DEMOTION, THREE CURRICULUM TICKS.**
-  `drills/s33_copies.py` 25/25 cold, and the five checks reported as the gate.
-- **Position: 1.1–1.7 closed. 1.8 at ~98% — FIVE bullets still [~]. 1.9–1.13
-  remain, ~4½ wk.**
-- ⚠ **1.8 DID NOT CLOSE, AND THE MENTOR SAID IN SESSION THAT IT HAD.** Corrected
-  before the close, but the over-claim is logged. **What remains, exactly:**
-  - `list` — method roster 3/6 cold since S24; ⚠ **honest gap on `.count()` in
-    S33** ("I don't remember this method").
-  - `tuple` — taught in full S26, never given a task-first cold pass, no drill.
-  - `dict` — `.keys()`/`.values()` as VIEWS supporting set operations NEVER asked.
-  - `set` — ORDER INSTABILITY and `{}`-is-a-dict never asked.
-  - `when to use which` — properly taught for the FIRST time in S33 (see below);
-    cannot promote before S34.
-  **All five are cold-ask shaped, not teaching shaped. One focused block closes
-  1.8 — put it at the front of the next non-gauntlet session.**
+- **S34 yield: TWO LEDGER PROMOTIONS, ONE CURRICULUM TICK (tuple).**
+  `drills/s34_tail.py` 36/36 green, but only after three wrong fixes on one
+  function. **A short session (~2½ h) and a same-sitting one, declared as such.**
+- **Position: 1.1–1.7 closed. 1.8 — THREE bullets still [~]. 1.9–1.13 remain,
+  ~4½ wk.**
+- **1.8 — what remains, exactly. It shrank from five to three:**
+  - ✅ `tuple` — **CLOSED S34**, `drills/s34_tail.py::reading_stats`, task-first
+    and cold. ⚠ Caveat written next to the tick: `.count()` was an honest gap in
+    S33 hours earlier, so that one method carries an ECHO RISK — re-ask at the
+    gauntlet.
+  - `set` — **[x] CANDIDATE, ONE ONE-LINE ASK AWAY.** Order instability asked
+    and PASSED cold (7/10). Only **`{}` builds a dict, `set()` is the only empty
+    set** is un-asked. Fire it first thing.
+  - `dict` — **`.keys()`/`.values()` as VIEWS supporting set operations STILL
+    never asked.** He solved `shared_keys` with `set(a) & set(b)` — correct, and
+    it proves he owns "looping a dict gives the KEYS", but it converts instead of
+    using the view. ⚠ **The mentor said it would ask this after the drill and
+    then never did.** ONE line: *what is `a.keys()`, and why does `&` work on it?*
+  - `list` — **HELD [~] DELIBERATELY.** Roster, slicing and `sorted`/`.sort()`
+    were all clean cold, but the bullet's own named core — the returns-`None`
+    tell — **broke live in his code**. Will not tick a bullet whose load-bearing
+    half failed in front of the mentor the same hour.
+  - `when to use which` — untouched; taught S33, still ineligible until a
+    later-day ask.
 - **AUGUST GAUNTLET: last session of August. SACRED.** See header item 4.
 - **RE-BASELINE formally due 31 Aug.** Observed throughput → derived date.
   Scope moves NEVER cut.
-- ✅ **BUILD BLOCK 01 FULLY CLOSED.** ⚠ **`LOG.md` STILL NOT WRITTEN. FOURTH
+- ✅ **BUILD BLOCK 01 FULLY CLOSED.** ⚠ **`LOG.md` STILL NOT WRITTEN. FIFTH
   SKIP. For block 02 it is step ONE, before any code.**
-- **NEXT BUILD BLOCK: the re-test queue SCRIPT** — settled since S21, still
-  unbuilt, this file is 75+ rows past its own trigger. That is block 02.
-- Current Layer: 1. Current Topic: **1.8 tail (five cold asks), then 1.9.**
+- ⚠⚠ **NEXT BUILD BLOCK IS NOW URGENT AND HE HAS INDEPENDENTLY ASKED FOR IT:
+  the re-test queue SCRIPT.** Settled since S21, 75+ rows against a ~30-row
+  trigger, and S34 produced the evidence that hand-scheduling has failed —
+  `while` mechanics SEVEN sessions overdue, `.keys()`/`.values()` never asked
+  since S26, `SyntaxError` missed in S27 and again in S32. **That is block 02.**
+- Current Layer: 1. Current Topic: **1.9 error handling; 1.8's three-bullet tail
+  rides the queue.**
 
 ## RULE-CHANGE PARKING (adopt ≤1 per session, at close)
-- **NOTHING PARKED. Do not manufacture a candidate.**
+- ⚠⚠ **PARKED S34, RAISED BY THE STUDENT (pushback 57), RULING OWED AT THE S35
+  OPEN:** *"revision should be random and not like this-this-yesterday-should-be-
+  tested-today, I need random recall even after days."*
+  **MENTOR RECOMMENDATION: DO NOT WRITE A RULE.** It is already doctrine —
+  RETENTION SYSTEM 2 (spaced re-tests at ~1 wk / ~1 mo), 3 (monthly gauntlet =
+  pure MIXED recall) and 5 (question bank as a pool). What has failed is not the
+  policy but its EXECUTION by hand, and the remedy for that is also already
+  adopted: **RULES proposal 6 — put the queue in a SCRIPT. That is build block
+  02.** Same shape as the S33 ruling: fix the behaviour, build the tool, do not
+  grow the rulebook. **He is entitled to overrule this and have a rule written —
+  put it to him in one line and take his word for it.**
+  ⚠ One correction owed with it, on the facts: **S34 did not test S33 material.**
+  Everything asked was S24–S27, two to five days cold, and everything from S33
+  was DEFERRED at the open for exactly his reason. His policy point stands; his
+  factual premise about this session did not.
 - **DROPPED, RECORD CLOSED:** *"A [RECALL] block has a budget."* Do not re-raise.
 - ⚠ Considered and **NOT** parked in S33: a rule requiring an operator-level
   grep before any snippet. **It is not a new rule — it is DEFINE BEFORE USE,
@@ -80,81 +109,84 @@
 
 ## WHERE WE LEFT OFF
 
-### SESSION 34 STARTS HERE — exact resume point
+### SESSION 35 STARTS HERE — exact resume point
 
-S33 ran Fri 28 Aug 16:00 into the early hours, broke for sleep, and finished
-Sat 29 Aug at midday when he closed it himself. He asked for 1.9 to be a
-**fresh session**.
+S34 ran Sat 29 Aug ~16:00–18:30, a few hours after S33 closed — declared a SAME
+SITTING at the open, so all S33 material was deferred and only S24–S27 material
+was tested. He closed it himself and said he wanted **1.9 as a fresh session,
+starting immediately**.
 
 Run in this order:
 
-1. **INTERVAL GATE, then DECLARE THE SESSION KIND** (gauntlet or 1.9 — header
-   item 4). No rule decision owed.
+1. **INTERVAL GATE, then DECLARE THE SESSION KIND** (1.9 or gauntlet — header
+   item 4). **Then take the RULE RULING he is owed** — header item 3, one line.
 
-2. ⚠⚠ **THE DEMOTION IS THE FIRST THING TO RE-TEST: THE MUTATING TELL.**
-   `[x]` → `[~]` in S33. Asked to state the rule he produced *"a method on a
-   mutable object mutates the object"* — false — and then **could not produce
-   the tell at all** ("I cannot come up with the statement as well").
-   **THIRD BREAK OF THIS ROW IN TWO SESSIONS, each in a different direction:**
-   S32 had `.pop(k)` returning nothing because it mutates; S33 had `.count()`
-   mutating because the object is mutable; S33 then had no statement at all.
-   **The re-taught model, in three parts — ask for ALL THREE:**
-   (1) **TYPE FIRST** — on an immutable object mutation is not on the table.
-   (2) **THE TELL** — returns `None` ⇒ it mutated (nothing else is worth
-       returning `None` for).
-   (3) **THE DIRECTION IT DOES NOT RUN** — a value coming back tells you
-       **NOTHING**; `.pop()` returns the item AND mutates.
+2. ⚠ **TWO ONE-LINE ASKS THAT CLOSE TWO 1.8 BULLETS. FIRE THEM FIRST; THEY COST
+   THREE MINUTES.** Both were queued at the end of S34 and dropped when he
+   called stop, and one of them the mentor had already promised once and forgot.
+   - **`{}` builds a DICT; `set()` is the only empty set.** → closes `set`.
+   - **What is `a.keys()`, and why does `&` work on it directly?** → closes
+     `dict`. He wrote `set(a) & set(b)` in S34: correct, but a conversion where
+     a view would do.
 
-3. ⚠ **`reversed()` — RE-ASK, AND IT IS THE SESSION'S SHARPEST FINDING.**
-   Taught S33 with full output. Nine hours later, in the drill, he did NOT
-   reach for it: he wrote `[steps[-(i+1)] for i in range(len(steps))]` and
-   explained *"couldn't use reverse because it mutates the list itself"*.
-   **He merged `steps.reverse()` (method, mutates, returns `None`) with
-   `reversed(steps)` (built-in, mutates nothing, returns an ITERATOR).** A pure
-   name collision over intact machinery. **Ask for the table, both rows.**
-   ⚠ And name the habit under it: **`range(len(...))` index bookkeeping,
-   already caught in S29 where `zip` removed it.** When he computes indices to
-   get at items, there is usually a built-in that hands him the items.
+3. ⚠⚠ **THE MUTATING TELL — AND S34 SPLIT IT PRECISELY. READ THIS BEFORE
+   RE-TEACHING IT.** The row is not broken as a whole. In `ranked` he wrote
+   `sorted(values)` and commented, unaided, *"could have also used values.sort()
+   but that will mutate the passed list so not using that"* — **he owns TYPE and
+   he owns MUTATES.** Ninety seconds later he wrote `list(set(names.sort()))`.
+   **What is gone is only the RETURN-VALUE half: that a mutating method hands
+   back `None`.** Teach and test THAT half alone; the other two are intact.
+   (Still `[~]`, demoted S33. Not promotable on S34 evidence — it failed.)
 
-4. ⚠ **`SyntaxError` — NOT FIRED IN S33. STILL OWED, STILL PRIORITY.** It was
-   on the S33 plan and the session never reached it. **Named repeat pattern:
-   missed in S27 and again in S32, five sessions apart, same shape (a statement
-   put where a value belongs). Fire it cold, in a shape he has not seen.**
+4. ⚠⚠ **`reversed()` IS NOW BROKEN IN BOTH DIRECTIONS AND THIS IS THE FILE'S
+   CLEANEST NAME-COLLISION EVIDENCE.** S33: he avoided `reversed()` believing it
+   mutates. S34: he reached for `reversed()` believing it ORDERS — offering
+   `return reversed(list(set(names)))` for a docstring asking ascending
+   alphabetical. **Same collision, opposite error, one day apart.**
+   ⚠ **HE STILL OWES THE ANSWER TO "what does `reversed(x)` hand back?" — asked
+   in S34 and never answered; he jumped straight to a corrected line.** That is
+   depth-before-answer and it was not re-asked. **Re-ask it, and teach the two
+   as a PAIR IN ONE TABLE (the S33 watch-area remedy for collisions).**
 
-5. ⚠ **THE FOUR-STATION HOOK BY NAME — NOT FIRED IN S33. STILL OWED.**
+5. ⚠ **`SyntaxError` — NOT FIRED IN S33 OR S34. STILL OWED, STILL PRIORITY.**
+   **Named repeat pattern: missed in S27 and again in S32, five sessions apart,
+   same shape (a statement put where a value belongs). Fire it cold, in a shape
+   he has not seen.** It is 1.9 substrate — fire it inside the subsection.
+
+6. ⚠ **THE FOUR-STATION HOOK BY NAME — NOT FIRED IN S33 OR S34. STILL OWED.**
    S32 showed USE without RECALL. Ask him to name the stations, in order,
-   including Station 0.
+   including Station 0. ⚠ **S34 gave a live datapoint: shown
+   `list(set(names.sort()))` he could not name the error at all** (*"I can't see
+   the fault... I believe its correct"*) — an honest gap, declared. The label
+   `TypeError: 'NoneType' object is not iterable` is Station 3.
 
-6. ⚠ **`del` and `.clear()` — HALF-DISCHARGED ONLY.** S33 got `.pop(k)` right
-   unaided (*"returns the removed value, KeyError if the key is missing"*).
-   **`del` as a STATEMENT handing back nothing, and `.clear()` → `None`
-   leaving `{}`, were never asked.** They pair naturally with `SyntaxError`
-   (`print(del d[k])`) — but use a DIFFERENT shape from S32's snippet.
+7. ⚠ **`del` and `.clear()` — HALF-DISCHARGED ONLY.** `del` as a STATEMENT
+   handing back nothing, and `.clear()` → `None` leaving `{}`, were never asked.
+   They pair naturally with `SyntaxError` (`print(del d[k])`) — but use a
+   DIFFERENT shape from S32's snippet.
 
-7. ⚠ **CONSTRUCTORS — cold ask owed.** In S33 his first word was still
-   *"converts it to a dictionary"*; *"builds a new object from the iterable"*
-   only arrived after the mentor pointed at the word. **Row held [~]
-   deliberately. It promotes when the right word is his FIRST word.**
+8. ⚠ **CONSTRUCTORS — cold ask owed.** His first word is still *"converts"*.
+   **Row held [~] deliberately. It promotes when the right word is his FIRST
+   word.**
 
-8. ⚠ **`when to use which` — TAUGHT PROPERLY FOR THE FIRST TIME IN S33, so a
-   cold ask is now legitimate and it has never had one.** THE ASK QUESTION:
-   *"WHAT AM I GOING TO ASK THIS CONTAINER?"* → in here? `set`. Value for a
-   name? `dict`. Order/position? `list`. Must never change? `tuple`.
+9. ⚠ **`when to use which` — TAUGHT PROPERLY FOR THE FIRST TIME IN S33, and
+   S34 was a same sitting so it was correctly deferred. IT IS NOW LEGITIMATE.**
+   THE ASK QUESTION: *"WHAT AM I GOING TO ASK THIS CONTAINER?"* → in here?
+   `set`. Value for a name? `dict`. Order/position? `list`. Must never change?
+   `tuple`.
 
-9. **THE SMALL COLD SET, fired mixed, NOT as a block:**
-   - **`while` mechanics — NOT touched since S23. SEVEN sessions overdue.**
-   - HASHABILITY; set order instability; `{}` is an empty dict.
-   - `.keys()`/`.values()` as VIEWS supporting set operations.
-   - unpacking count-mismatch ⇒ `ValueError`; the `count`/`index` roster
-     (⚠ he had an honest gap on `.count()` in S33).
-   - `AttributeError`, `subscriptable`.
-   - `zip` fails silently — twice.
-   - ⚠ Build a raising snippet in. S30–S33 all did.
+10. **THE SMALL COLD SET, fired mixed, NOT as a block:**
+    - **`while` mechanics — NOT touched since S23. EIGHT sessions overdue.**
+    - HASHABILITY; `subscriptable`; `AttributeError`.
+    - unpacking count-mismatch ⇒ `ValueError`.
+    - `zip` fails silently — twice.
+    - ⚠ Build a raising snippet in. S30–S33 all did; S34's arrived by accident
+      out of his own bug, which worked well — **but that was luck, not design.**
 
-10. **THEN 1.9 — ERROR HANDLING.** ⚠ **The overdue error-label set IS 1.9's
+11. **THEN 1.9 — ERROR HANDLING.** ⚠ **The overdue error-label set IS 1.9's
     substrate** — `SyntaxError`, `AttributeError`, `KeyError`/`IndexError`, the
     four-station hook. **Run the revision INSIDE the new subsection rather than
-    ahead of it; this was the S33 plan and it is still the right one.**
+    ahead of it; this was the S33 and S34 plan and it is still the right one.**
     Build `traceback` from the UNCAUGHT-exception trigger (self-rated 3/10 when
     1.9 was scoped).
 
@@ -163,16 +195,24 @@ question" TWICE, that is a frame failure, not a comprehension failure; SPEC
 gives exact interfaces and exact expected values, IN A FILE IN THE REPO, with a
 mechanical check per acceptance condition (boundary cases live in the TESTS);
 short messages, one teaching idea per turn, asks near the top; doubt gate before
-every new subsection; depth-before-answer — traces never optional, THE FIVE
-CHECKS ARE THE GATE ON THE WORD "DONE", boundary values first. Tag every block
-and CHECK THE TAG IS RIGHT. Give the verdict after the rating. Do not propose
-ending the session.**
+every new subsection; depth-before-answer — traces never optional AND A CORRECTED
+LINE DOES NOT DISCHARGE AN UNANSWERED MECHANISM QUESTION (S34: `reversed`);
+THE FIVE CHECKS ARE THE GATE ON THE WORD "DONE" AND THEY ARE RUN BY CALLING HIS
+FUNCTION, NEVER BY PYTEST — ask for the case, the value back, and matched-or-not;
+boundary values first. Tag every block and CHECK THE TAG IS RIGHT. Give the
+verdict after the rating. Do not propose ending the session.**
 
 **CARRY FORWARD:**
 - **August gauntlet: SACRED.** Carries: strict-legend audit of every [x] —
   every BUNDLED S16 promotion; the 1.6 spoken Feynman recall; the S22
   short-gap promotions; the eight S23; the eleven S25; the eight S27; the S29
-  `zip`; the eight S30; the four S31; the four S32; **and the seven S33.**
+  `zip`; the eight S30; the four S31; the four S32; the seven S33; **and the two
+  S34 — plus the `.count()` echo caveat attached to the tuple tick.**
+- ⚠ **NEITHER S34 PROMOTION CARRIES A CONFIDENCE RATING EXCEPT `set` UNORDERED
+  (7/10).** `sorted` vs `.sort()` was promoted off code and an unaided written
+  comment, with no rating taken — the mentor did not ask. Under RULES proposal 2
+  the rating sets the INTERVAL, not the promotion, so **the interval defaults to
+  SHORT: re-ask it early.**
 - **31 AUG: RE-BASELINE arithmetic due, in ITEMS.**
 - `None`/`is None` and `bool("False")` remain [~] — **though the `None`-is-not-
   nothing row that made them urgent CLOSED in S33.**
@@ -200,8 +240,8 @@ is the designated build block 02.**
 
 | Term | Decode hook / mechanism | Status | Next due |
 |---|---|---|---|
-| ⚠⚠ **mutating vs non-mutating — THE TELL** | **(1) TYPE FIRST (2) returns `None` ⇒ it mutated (3) a VALUE back tells you NOTHING — `.pop()` returns the item AND mutates** | **[x] → [~] DEMOTED S33. Could not state the rule at all; before that stated it INVERTED (*"a method on a mutable object mutates the object"*). THIRD break in two sessions, three different directions** | **S34 cold, PRIORITY — ask all three parts** |
-| ⚠ **`reversed()` vs `.reverse()`** | **`reversed(x)` is a BUILT-IN returning an ITERATOR, mutates nothing. `x.reverse()` is a METHOD, mutates, returns `None`** | **[~] TAUGHT S33. ⚠ Nine hours later he did not reach for it and gave the method's behaviour as the reason. NAME COLLISION over intact machinery** | **S34 cold, PRIORITY** |
+| ⚠⚠ **mutating vs non-mutating — THE TELL** | **(1) TYPE FIRST (2) returns `None` ⇒ it mutated (3) a VALUE back tells you NOTHING — `.pop()` returns the item AND mutates** | **[~] DEMOTED S33. ⚠⚠ S34 SPLIT IT PRECISELY: he owns TYPE and owns MUTATES — wrote *"could have used values.sort() but that will mutate the passed list"* unaided — then 90 s later wrote `set(names.sort())`. **ONLY THE RETURN-VALUE HALF IS GONE.** Teach and test that half alone** | **S35 PRIORITY — the return-value half** |
+| ⚠⚠ **`reversed()` vs `.reverse()`** | **`reversed(x)` is a BUILT-IN returning an ITERATOR, mutates nothing, and REVERSES — it does not ORDER. `x.reverse()` is a METHOD, mutates, returns `None`** | **[~] ⚠⚠ NOW BROKEN IN BOTH DIRECTIONS. S33: avoided it believing it mutates. S34: reached for it believing it sorts — `reversed(list(set(names)))` for an ascending-alphabetical spec. ⚠ "What does it hand back?" ASKED S34 AND NEVER ANSWERED** | **S35 PRIORITY — teach as a PAIR IN ONE TABLE** |
 | **`copy.deepcopy`** | **new outer container AND new contents recursively, all the way down. Not "the better copy" — slower, and buys nothing on a flat container of immutables** | **[x] PROMOTED S33 — written cold in `drills/s33_copies.py` from a docstring that never named it; all six independence tests green first run. Rated 7** | **short gap — ~2 Sep** |
 | **slicing / SHALLOW COPY** | **`[start:stop:step]` half-open, builds a NEW list; `l[:]`, `list(l)`, `l.copy()` copy the OUTER container, references SHARED. Shallow = ONE level deep** | **[x] PROMOTED S33 — cold on `dict(defaults)` with a nested list: correct value AND both halves (why the inner edit leaks, why the new key does not). Derived unprompted S32** | **~3 Sep** |
 | **`*` ON A SEQUENCE** | **repeats the REFERENCE, not the contents. SAFE when the element is immutable, a TRAP when mutable — `[[0]*3]*3` shares one row** | **[~] NEW S33, taught after the breach (pushback 55). He resolved the trap himself off shallow copy and asked the right question — *"but 0 is not mutable"*** | **S34** |
@@ -209,7 +249,7 @@ is the designated build block 02.**
 | **when-to-use-which** | **⚠ THE DECIDING QUESTION IS "WHAT AM I GOING TO ASK THIS CONTAINER?" in here → `set`; value for a name → `dict`; order/position → `list`; never changes → `tuple`** | **[~] ⚠ FRAMED PROPERLY FOR THE FIRST TIME S33 after he twice said he did not understand the question — mentor's FRAME FIRST breach. He had `dict` and `list` right and folded the `set` in** | **S34 cold — first legitimate ask** |
 | **set difference `-`** | **`set(a) - set(b)` builds a NEW set ⇒ an EXPRESSION. `-` is NOT symmetric** | **[x] PROMOTED S33 — `missing_joints` written in one line cold. Taught S30, never once tested until now** | **~5 Sep** |
 | **BOUNDARY-FIRST (his own S20 rule)** | **when a condition uses `<` `<=` `>` `>=`, test the value ON the boundary FIRST** | **[x] PROMOTED S33 — he read `<=` off the PROMISE before writing, and reported it unprompted as check 1** | **~5 Sep** |
-| **THE FIVE CHECKS** | **"Boundary pe khaali ek bahar mila". ⚠ `ek` = smallest NON-EMPTY case, not the number 1. ⚠ `bahar` = TYPE as well as sign** | **[x] — ⚠ REPORTED S33, FIRST TIME SINCE S25, because they were made the GATE on "done". Two halves loose: `ek` given as "the number 1"; `bahar` given as sign only** | **~5 Sep — re-ask `ek` and `bahar` specifically** |
+| **THE FIVE CHECKS** | **"Boundary pe khaali ek bahar mila". ⚠ `ek` = smallest NON-EMPTY case. ⚠ `bahar` = TYPE as well as sign. ⚠⚠ A CHECK IS A CASE YOU RAN AND LOOKED AT — not an `if` in the body** | **⚠⚠ NEW FAILURE MODE S34: REPORTED BUT NOT RUN. Full report given — "khaali taken care of, ek taken care of, bahar taken care of" — on two functions that both FAILED, one on the worked example in its own docstring. Written by READING the code** | **S35 — demand case / value back / matched** |
 | **format spec — ALIGNMENT** | **TEXT HUGS LEFT, NUMBERS HUG RIGHT — which is why decimal points stack and you compare magnitudes without reading digits** | **[x] PROMOTED S33, 8/10, cold, NO ARROWS — fourth session live, closed. The *why* was volunteered too but was taught S32** | **~8 Sep** |
 | **⚠ `None` IS NOT NOTHING** | **`None` is an OBJECT and fills a slot: `len([None]) == 1`. Nothing is the absence of a slot: `len([]) == 0`** | **[x] PROMOTED S33, 7/10 — `[150, None]` given cold with the mechanism, then `0 1` stated directly. ⚠ A KNOWLEDGE-STRUCTURE gap closed in ONE NIGHT** | **short gap — ~2 Sep** |
 | **`list()`** | **CONSTRUCTOR CALL — new list from any iterable; drains an iterator; CATCHES `StopIteration` ⇒ `[]`, not `[None]`** | **[x] PROMOTED S33, 7/10 — value corrected unaided, and he re-derived the reason himself** | **~2 Sep** |
@@ -218,11 +258,12 @@ is the designated build block 02.**
 | **FOUR-STATION HOOK + STATION 0** | **DID IT RUN? → NAAM → DOT → TYPE → CHEEZ. Station 4: jagah=Index, chaabi=Key, cheez=Value** | **[~] ⚠ NOT FIRED IN S33. S32 showed USE without RECALL** | **S34 cold, full hook by name** |
 | **`del` vs `.pop()` vs `.clear()`** | **`del` is a STATEMENT, hands back nothing; `.pop(k)` hands back the VALUE — ALWAYS; `.clear()` → `None`, leaves `{}`** | **[~] HALF-DISCHARGED S33 — `.pop(k)` stated correctly unaided, including `KeyError` on a missing key. `del` and `.clear()` never asked** | **S34 cold — the other two halves** |
 | **`while` vs `for`** | **condition re-checked vs walking an iterable** | **[x]-grade S23. ⚠ NOT touched S27–S33** | **⚠ SEVEN sessions overdue** |
-| **`.items()` / `.keys()` / `.values()`** | **looping a dict gives the KEYS; `.items()` gives TUPLES; `.keys()` is a VIEW supporting SET operations** | **[x] `.items()` S30. ⚠ `.keys()`/`.values()` NOT asked — blocks the 1.8 dict bullet** | **S34** |
-| **set (unit)** | **a dict with the values thrown away. Unique, unordered, hashable** | **[~] ORDER INSTABILITY and `{}`-is-a-dict never asked — blocks the 1.8 set bullet** | **S34 cold** |
-| tuple roster | `count` and `index` ONLY | **[~] ⚠ S33 HONEST GAP on `.count()` — "I don't remember this method"** | **S34 cold** |
-| **tuple (unit)** | **immutable ordered sequence; the COMMA makes it; `TypeError` on item assignment** | **[~] taught in full S26, never given a task-first cold pass — blocks the 1.8 tuple bullet** | **S34** |
-| **list method roster** | `append` `extend` `insert` `sort` `remove` mutate → `None`; `pop` returns the ITEM | **[~] 3/6 cold S24 — blocks the 1.8 list bullet** | **S34** |
+| **`.items()` / `.keys()` / `.values()`** | **looping a dict gives the KEYS; `.items()` gives TUPLES; `.keys()` is a VIEW supporting SET operations** | **[x] `.items()` S30. ⚠⚠ `.keys()`/`.values()` AS VIEWS **STILL** NOT ASKED — blocks the 1.8 dict bullet. S34: he wrote `set(a) & set(b)`, which proves looping-a-dict-gives-KEYS but converts instead of using the view. **The mentor promised this ask in S34 and never fired it*** | **S35, first thing** |
+| **set — UNORDERED** | **a set has NO positions at all — not "no fixed order". Which is why it is not subscriptable, and why `set()` destroys any order you built before it** | **[x] PROMOTED S34, 7/10, cold — named unprompted off his own failing output `['b','c','a']`. Sharpened from "doesn't have a fixed order" to UNORDERED** | **~5 Sep** |
+| **`{}` is a DICT** | **`{}` builds an empty dict; `set()` is the ONLY way to write an empty set** | **[~] STILL NEVER ASKED — the last thing blocking the 1.8 set bullet** | **S35, first thing** |
+| tuple roster | `count` and `index` ONLY | **[x] PROMOTED S34 — both reached for unaided in `reading_stats` from a docstring naming neither. ⚠ ECHO CAVEAT: `.count()` was an honest gap in S33 a few hours earlier, so this one method is not fully cold** | **gauntlet — re-ask `.count()` specifically** |
+| **tuple (unit)** | **immutable ordered sequence; the COMMA makes it; `TypeError` on item assignment** | **[x] CURRICULUM BULLET TICKED S34 — the task-first cold pass owed since S26 was run: `reading_stats` over a tuple, `.count()`/`.index()`, and a returned tuple `(0, -1)`** | **~5 Sep** |
+| **list method roster** | `append` `extend` `insert` `sort` `remove` mutate → `None`; `pop` returns the ITEM | **[~] S34: `insert`, `remove`, `sort` used cold and correctly, `append`/`extend` named unprompted in his own comments. ⚠ HELD — the roster is fine, the returns-`None` half is what broke** | **S35** |
 | **hashable** | **hash must be STABLE ⇒ key must be immutable** | **[~] S26/S27, untested** | **S34 cold** |
 | **`zip` FAILS SILENTLY — TWICE** | **unequal lengths ⇒ truncates to the SHORTEST; exhausted ⇒ `[]`, no error** | **[~] S28, untested S29–S33** | **S34 cold** |
 | `AttributeError` | the name after the DOT is not on the object | **[~] passed cold S27, 6/10. One clean pass promotes** | **S34** |
@@ -239,7 +280,7 @@ is the designated build block 02.**
 | **format spec — width + precision** | **`{v:8.1f}`. ⚠ THE NUMBER IS TOTAL FIELD WIDTH** | **[x] S31, 10/10 — restated correctly again unprompted in S33** | **~10 Sep** |
 | **`<` `>` `^` in a format spec** | **force left / right / centre — they OVERRIDE the type default** | **[~] NEW S32, taught after the breach** | **S34** |
 | **DRY / one copy of a decision** | **if a rule is written in four places you will change three and miss one** | **[~] S31 — applied correctly and fast, but taught same session** | **S34 — later-day ask** |
-| **`set()` / `\|` `&` `-`** | **`set()` is the ONLY empty set. Union / intersection / difference build a NEW set ⇒ EXPRESSIONS** | **[x] the `-` half PROMOTED S33. `\|` and `&` still untested** | **`\|`/`&` S34** |
+| **`set()` / `\|` `&` `-`** | **`set()` is the ONLY empty set. Union / intersection / difference build a NEW set ⇒ EXPRESSIONS** | **[x] the `-` half S33; **the `&` half PROMOTED S34** — `shared_keys` written in one expression cold. `\|` still untested** | **`\|` S35** |
 | **`sum()`** | **totals an iterable; returns a new value; `sum([])` is `0`** | **[~] S30 SUPPORTING, written cold** | **S34** |
 | **`abs()`** | **distance from zero, sign discarded** | **[~] ⚠ USED UNPROMPTED IN S30 AND STILL NEVER TAUGHT** | **S34 — define it properly** |
 | **`print()`** | **⚠ takes ANY object and calls `str()` on it — NOT "a string"** | **[~] NEW S32. Level-1 audit item** | **S34** |
@@ -286,7 +327,7 @@ is the designated build block 02.**
 | elif | chain, first true wins | [x] S17 | ~10 Sep |
 | **keyword argument / parameter vs argument** | **`name=value` in the CALL / name in the `def` vs what you pass** | **[x] kwarg S27. ⚠ parameter-vs-argument labels still [~]** | **S34** |
 | UnboundLocalError | name IS local, no value bound yet | spelling FIXED S23 | mixed 3-error test |
-| `sort` vs `sorted` | `sort()` mutates → `None`; `sorted()` builds a NEW list | **[x] S25 — ⚠ re-test alongside the demoted TELL** | **S34** |
+| **`sort` vs `sorted`** | **`sort()` mutates → `None`; `sorted()` builds a NEW list** | **[x] RE-PROMOTED S34 — the clean cold pass CURRICULUM said was owed since the S24 inversion. Wrote `sorted(values)` and `values.sort()` correctly in adjacent functions and explained the choice unaided. ⚠ NO RATING TAKEN — interval defaults SHORT** | **~1 Sep** |
 | pre-order / post-order | before the call / after the call | [x] S23 | ~10 Sep |
 | lambda | EXPRESSION form of a function | [x] S23 | ~10 Sep |
 | docstring / `__doc__` | FIRST statement of the body; POSITION makes it | [x] S25 | ~1 Sep |
@@ -300,10 +341,10 @@ is the designated build block 02.**
 |---|---|---|
 | **NESTED STRUCTURES + SHALLOW COPY + DEEPCOPY** | **S33 `drills/s33_copies.py` 25/25 cold, later-day; independence proven at both levels** | **[x] — CURRICULUM TICKED. ~3 Sep** |
 | **COMMON PATTERNS AND PITFALLS (1.8)** | **S33 taught: mutate-while-iterating, `[[0]*3]*3`, container choice** | **[x] TICKED as taught+closed; the three rows themselves are [~] and re-ask S34** |
-| **⚠ THE MUTATING TELL** | **S33: stated INVERTED, then could not state it at all** | **[x] → [~] DEMOTED — S34 PRIORITY, all three parts** |
-| **`reversed()`** | **S33 taught; nine hours later not reached for, merged with `.reverse()`** | **[~] — S34 PRIORITY** |
-| **THE FIVE CHECKS** | **S33 REPORTED as the gate — first time since S25. `ek` and `bahar` both loose** | **[x] — re-ask `ek` and `bahar` specifically, ~5 Sep** |
-| **`while` mechanics; nested loops; found-flag** | **NOT tested S27–S33** | **[~] ⚠ SEVEN sessions overdue** |
+| **⚠ THE MUTATING TELL** | **S34 SPLIT IT: TYPE and MUTATES intact (his own unaided comment on `.sort()`); the RETURN-VALUE half gone (`set(names.sort())`)** | **[~] — S35 PRIORITY, the return-value half ALONE** |
+| **`reversed()`** | **S34: reached for it believing it SORTS. Broken in BOTH directions now, one day apart. "What does it hand back?" asked and never answered** | **[~] — S35 PRIORITY, teach as a PAIR in one table** |
+| **THE FIVE CHECKS** | **⚠⚠ S34: REPORTED BUT NOT RUN — a clean report on two functions that both failed. Written from reading the code** | **[x] concept / ⚠ PRACTICE BROKEN — demand case, value back, matched** |
+| **`while` mechanics; nested loops; found-flag** | **NOT tested S27–S34** | **[~] ⚠ EIGHT sessions overdue** |
 | Frames: definition, three contents | S14 held WITH HINT | [~] **overdue** |
 | `<module>` entry point; running vs paused; stack not queue | S14/S27/S28 | **[x] candidate — one direct ask promotes** |
 | Namespace vs frame | S14 not unaided | [~] **overdue** |
@@ -327,70 +368,78 @@ is the designated build block 02.**
 | **`global` / `*args`/`**kwargs`** | **S22 10/10 and 8/10; S29 build block used all four forms cold** | **[x] CONFIRMED — use freely** |
 | Lambdas | S23 PASS 6/6 cold | [x] — ~10 Sep |
 | **COMPREHENSIONS (list + dict)** | **S30 16/16 cold; S33 used cold twice more** | **[x] — ~8 Sep** |
-| **CONTAINERS AS CODE** | **S30 19/19; S32 17/17 all six tools cold** | **[x] — the tool half CLOSED** |
+| **CONTAINERS AS CODE** | **S30 19/19; S32 17/17; **S34 36/36** across list, tuple, dict and set in one file** | **[x] — the tool half CLOSED** |
 | **f-strings + format spec** | **S31 promoted; ALIGNMENT half PROMOTED S33, 8/10** | **[x] BOTH HALVES — ~8 Sep** |
-| **TUPLE: the comma / immutability** | **S31 comma; S32 immutability COLD** | **[x] BOTH — ~1 Sep** |
+| **TUPLE: the comma / immutability / roster** | **S31 comma; S32 immutability; **S34 the task-first cold pass owed since S26 — CURRICULUM BULLET TICKED** | **[x] — ~1 Sep** |
 | **RAISE-VS-SHRUG (all three pairs)** | **S32 17/17 cold + the choosing rule** | **[x] — ~2 Sep** |
-| **Four-station hook + Station 0** | **S32 RUN correctly twice unprompted; ⚠ NOT ASKED IN S33** | **[~] — S34, ask the hook BY NAME** |
-| **DRY / one copy of a decision** | **S31 applied fast; taught same session** | **[~] — later-day ask, S34** |
+| **Four-station hook + Station 0** | **S32 RUN correctly twice unprompted; ⚠ NOT ASKED IN S33 OR S34. ⚠ S34 live datapoint: could not label `TypeError: 'NoneType' object is not iterable` at all — honest gap declared** | **[~] — S35, ask the hook BY NAME** |
+| **DRY / one copy of a decision** | **S31 applied fast; taught same session** | **[~] — later-day ask, S35** |
 
 ## WATCH AREAS (full histories in ARCHIVE.md)
 - Structured foundation over patches; solo-first; AI-reliance guarded.
-- ⚠⚠ **THE S33 HEADLINE, AND IT IS ABOUT HOW HE LEARNS: A KNOWLEDGE-STRUCTURE
-  GAP CLOSED OVERNIGHT.** S32 found that he had no line between an object that
-  fills a slot and the absence of a slot. It was named, not drilled. Sixteen
-  hours later he produced `[150, None]`, `len` of `0` and `1`, and the
-  correction to his own `.pop` model — unaided. **When the gap is STRUCTURAL,
-  naming it precisely appears to be enough; he builds the piece himself. That
-  is the opposite of the LABEL gaps, which need repetition.** Two different
-  failure modes needing two different treatments — file this and use it.
-- ⚠⚠ **NAME COLLISIONS ARE A DISTINCT AND NEWLY-EVIDENCED FAILURE MODE.**
-  `reversed()` vs `.reverse()` in S33 is the cleanest instance yet: taught nine
-  hours earlier with full output, and it lost to a near-identical name over
-  machinery he demonstrably owns. **Where two constructs have near-identical
-  names, TEACH THEM AS A PAIR IN ONE TABLE or he will merge them.** Related
-  prior instances: `sort`/`sorted`, `remove`/`discard`, `iterable`/`iterator`.
-- ⚠ **THE MUTATING TELL IS NOW THE MOST BROKEN ROW IN THE FILE** — three
-  failures in two sessions, each in a different direction. It is not a label
-  problem: he has repeatedly rebuilt it as a TWO-WAY rule. **Teach the
-  one-directionality as the headline, not as a caveat.**
-- ⚠ **THE FIVE CHECKS FINALLY LANDED, AND THE FIX WAS STRUCTURAL, NOT SOCIAL.**
-  Three sessions of asking produced nothing; declaring them the GATE ON THE WORD
-  "DONE" produced a report in the very next drill. **When an ask fails
-  repeatedly, change WHERE it sits in the workflow, not how loudly it is made.**
-- ⚠ **"I DON'T UNDERSTAND THE QUESTION" IS A FRAME SIGNAL.** He said it twice on
-  when-to-use-which. The mentor rephrased once (wrong fix) before stopping and
-  admitting there had been no frame at all. **Second occurrence of the S19/S20
-  shape: the first fix solves the wrong half.**
-- ⚠ **HE ASKS THE RIGHT QUESTION MID-DERIVATION.** On `[[0]*3]*3` he stopped
-  himself with *"but 0 is not mutable"* — which is precisely the discriminator
-  that decides when `* n` is safe. Same shape as the S32 shallow-copy
-  derivation. **When he interrupts his own answer with an objection, that
-  objection is usually the load-bearing part; let it run.**
-- ⚠ **MENTOR: DEFINE-BEFORE-USE, TENTH OCCURRENCE, SECOND NIGHT RUNNING.**
-  `*` on a sequence, fired in a [PREDICT], never taught. **The grep that settles
-  it takes one command.** Also logged: a [PREDICT] example whose data hid the
-  very bug it was meant to expose — recovered by making that the lesson, but it
-  was luck, not design. **Choose failing data deliberately.**
-- ⚠ **MENTOR: AN OVER-CLAIM ABOUT HIS OWN PROGRESS.** "That closes 1.8" was said
-  in session and was false — five bullets remain [~]. Caught at close and
-  corrected to his face. **This is the exact class the END-OF-SESSION section
-  warns about: an artefact that looks authoritative while being wrong.**
-- ⚠ **CONFIDENCE CALIBRATION — steady all session.** 8 on alignment (right), 7
-  on `len(results)` (right), 7 on the shallow-copy trace (right), 8 on the five
-  checks (right, two halves loose), 7 on the drill (25/25). **No rating below 7
-  all session, and nothing below 7 was wrong. The two genuine misses — the tell
-  and `reversed()` — he never rated, because he could not produce an answer to
-  rate. Watch for that: silence is the new low rating.**
-- ⚠ **CHANNEL — the unsaved-buffer artefact fired ONCE and HE caught it**
-  (*"sorry I forgot to save"*) before anything was read. Down from four in S30
-  and two in S32. Keep checking mtime anyway.
+- ⚠⚠ **THE S34 HEADLINE: A CHECK REPORTED IS NOT A CHECK RUN.** S33's win was
+  getting the five checks reported at all, by making them the gate on "done".
+  S34 got a fluent report — *"khaali taken care of, ek taken care of, bahar also
+  taken care of"* — **on two functions that both failed, one of them on the
+  worked example printed in its own docstring.** He wrote it by reading his code
+  and seeing an `if`. **The S33 lesson was "change WHERE the ask sits". The S34
+  lesson is the next one: an ask that can be satisfied without executing anything
+  will be. Demand the ARTEFACT — the case, the value that came back, matched or
+  not — not the assertion.**
+- ⚠⚠ **THE MUTATING TELL IS NOT BROKEN AS A WHOLE, AND S34 PROVED WHICH THIRD IS
+  GONE.** In `ranked` he wrote, unaided, *"could have also used values.sort() but
+  that will mutate the passed list so not using that"* — TYPE owned, MUTATES
+  owned. Ninety seconds later: `list(set(names.sort()))`. **Only the
+  returns-`None` half is missing.** Four sessions of re-teaching all three parts
+  have been treating a two-thirds-intact model as a ruin. **Teach the third.**
+- ⚠⚠ **NAME COLLISION, AND `reversed()` IS NOW THE FILE'S CLEANEST CASE.** S33:
+  avoided it believing it mutates. S34: reached for it believing it ORDERS. **Same
+  pair, opposite errors, one day apart** — which is what a collision looks like
+  when the machinery is intact and only the label is floating. **Teach collided
+  names as a PAIR IN ONE TABLE.** Related: `sort`/`sorted`, `remove`/`discard`,
+  `iterable`/`iterator`.
+- ⚠ **HE DEBUGS WELL ONCE HE HAS THE TRACEBACK, AND POORLY WITHOUT IT.** Shown
+  the failing line he said *"I can't see the fault, I believe its correct"* and
+  could not name the error. Shown the traceback he found it in one line —
+  *"ah fuck .sort returns None"* — unaided. **The gap is not reasoning; it is
+  that he does not run the thing.** Same root as the five-checks failure above,
+  and it is the strongest argument yet for the checks being executed.
+- ⚠ **THREE WRONG FIXES BEFORE THE RIGHT ONE, AND THE SECOND WAS THE GOOD NEWS.**
+  `sorted` → `set` → `reversed` → `sorted(list(set(...)))`. The middle step was
+  him correctly applying the set-unordered fact he had just been promoted on, to
+  demolish his own proposed fix. **He self-corrects when asked to trace; he does
+  not self-correct when asked to write.**
+- ⚠ **SELF-REPORTED FATIGUE, AND HE NAMED IT HIMSELF** — *"I am actually doing
+  this for long, and lost my concentration."* It arrived immediately before the
+  correct answer. Session length is his call; the mentor did not propose an end,
+  stated what remained, and he chose.
+- ⚠⚠ **MENTOR, AND IT IS THE WORST KIND: A GATE MADE IMPOSSIBLE TO DISCHARGE.**
+  The five-checks gate was enforced twice on the word "done" — correct — but the
+  form demanded was `python3 -m pytest`, **which STATE has said for two sessions
+  he never runs.** He was held to a standard the channel could not deliver.
+  **Check that an instruction is EXECUTABLE BY HIM before enforcing it.**
+- ⚠ **MENTOR: A PROMISED ASK, NEVER FIRED.** The `.keys()`-as-a-view question was
+  announced as coming "after the drill" and then lost to the `unique_sensors` fix.
+  It blocks a 1.8 bullet. **Write promised asks into the resume point the moment
+  they are made.**
+- ⚠ **CONFIDENCE CALIBRATION — one rating all session (7 on set-unordered,
+  correct). Everything else went unrated because the mentor did not ask.** ⚠ The
+  S33 finding holds and got a second instance: **the real misses carried no
+  rating because he could not produce an answer to rate. Silence is the low
+  rating.**
+- ⚠ **CHANNEL — mtime caught an untouched file on the first "Done".** Nothing was
+  said about his code until he confirmed it was saved. Keep doing exactly that.
 - ⚠ **LEVEL-1 CONSTRUCTS HE USES WITHOUT A MODEL.** `len()`, `range()` as an
   object, `.append()` vs `+`, `abs()`, `print()`. ✅ `import` discharged S33.
-- **FALSE ATTRIBUTION / PUSHBACK DENOMINATOR: 55 raised, 54 upheld or
-  part-upheld.** S33 raised ONE — (55) *"normally for brackets we use () but
-  here we are using [] , this hasn't been taught"* on `[[0] * 3] * 3`.
-  **Upheld in full after a grep of every note file.**
+- **FALSE ATTRIBUTION / PUSHBACK DENOMINATOR: 57 raised, 56 upheld or
+  part-upheld.** S34 raised TWO. **(56)** *"I am not able to run the test myself
+  — don't delay the session for unnecessary things"* — **upheld in full**, a
+  direct breach of a standing STATE item. **(57)** *"revision should be random
+  and not this-yesterday-tested-today, I need random recall even after days"* —
+  **part-upheld**: the policy is right and is already doctrine, and the evidence
+  that hand-scheduling has failed is overwhelming; **but his premise about this
+  session was factually wrong** — S34 tested S24–S27 material only, and S33's was
+  deferred at the open for his exact reason. Both halves were said to his face.
 
 ## CURIOSITY PARKING LOT
 - venv; VS Code practices; notebooks; JIT; **IEEE 754 (1.13, promised)**;
