@@ -367,7 +367,35 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **32**
+- Sessions Completed: **33**
+- **SESSION 33 (Fri 28 Aug 2026 16:00 → Sat 29 Aug ~12:00, with a sleep break) —
+ SEVEN LEDGER PROMOTIONS, ONE DEMOTION, THREE CURRICULUM TICKS.** The longest
+ session in the file, requested by him as such (*"one of the longer ones where
+ we need to focus on covering more content, approximately 6-8 hour window,
+ so mix learning with revision"*). `drills/s33_copies.py` finished 25/25 cold
+ the following morning, **and the five checks were reported BEFORE the word
+ "done" for the first time since S25** — the fix was structural, not social:
+ they were declared the GATE rather than asked for as a postscript.
+ ⚠ **THE HEADLINE IS A FINDING ABOUT HOW HE LEARNS: THE `None`-IS-NOT-NOTHING
+ GAP, OPENED IN S32 AS A KNOWLEDGE-STRUCTURE HOLE, CLOSED OVERNIGHT WITHOUT
+ BEING DRILLED.** Named precisely at the end of S32; sixteen hours later he
+ produced `[150, None]`, `len([]) == 0` / `len([None]) == 1`, and an unaided
+ correction of his own `.pop` model. **Structural gaps appear to close on
+ naming; LABEL gaps need repetition. Two failure modes, two treatments.**
+ ⚠ **THE SHARPEST MISS IS A NAME COLLISION: `reversed()` vs `.reverse()`.**
+ Taught with full output at midnight; nine hours later he did not reach for it
+ in the drill, writing `[steps[-(i+1)] for i in range(len(steps))]` and
+ explaining *"couldn't use reverse because it mutates the list itself"*.
+ ⚠ **AND THE FILE'S MOST BROKEN ROW IS NOW THE MUTATING TELL, DEMOTED [x] →
+ [~]** after three failures in two sessions, each in a different direction.
+ ⚠ **MENTOR: define-before-use TENTH occurrence** (`*` on a sequence, fired in
+ a [PREDICT], never taught — pushback 55, upheld in full after a grep);
+ **FRAME FIRST breached** on when-to-use-which, which he stopped twice with
+ *"I don't understand the question"*; and **an over-claim — "that closes 1.8"
+ — said in session and false**, caught at close and corrected to his face.
+ **1.8 is at ~98%: nested structures, copy semantics and patterns-and-pitfalls
+ ticked; `list`, `tuple`, `dict`, `set` and when-to-use-which still [~], all
+ five cold-ask shaped rather than teaching shaped.**
 - **SESSION 32 (Thu 27 Aug 2026, evening → 00:15 Fri 28) — FOUR LEDGER
  PROMOTIONS, all cold and later-day, and 1.8 NESTED DATA STRUCTURES OPENED.**
  `drills/s31_shrug.py` finished 17/17 with all six tools chosen cold and not one
@@ -754,6 +782,7 @@
 | 30 | **Comprehensions drill (deferred twice) + the container backlog (declared four times)** | **`drills/s30_comprehensions.py` — `over_limit` (list comp + filter), `scaled` (dict comp), `names_over` (dict comp over `.items()`), `format_row` (f-string + format spec); one `return` per body, 16 mentor-written tests. Then `drills/s30_containers.py` — `limits_for`, `shared_joints`, `pop_limit`, `snapshot`, `span`, `total`; 19 mentor-written tests. Then `builds/block_01_joint_clamp/test_report.py` written by the mentor to expose the dead `{}`, and the refactor spec issued** | **Complete — 16/16 and 19/19 cold; refactor DEFERRED to S31 at his call** | **EIGHT PROMOTIONS: list comprehension, dict comprehension, comprehension execution order, the filter-as-gate, `.items()`, unpacking (core), dict insertion ordering, `KeyError`/`IndexError` (the S27 miss, cleared). Ratings 8/8/8/8/8/7/7 — well calibrated except one. ⚠ RAISE-VS-SHRUG DID NOT PROMOTE: both tools aided, and the choosing rule stated INVERTED before two narrowing re-asks fixed it; he self-rated 8, the mentor challenged it to 5–6 with the evidence named — the first overt miscalibration in a long while, and it sits exactly where the CONCEPT is solid and only the TOOL is missing. Depth-before-answer fired THREE times, all three recovered (16, 17, 18 straight). `abs()` used unprompted and never taught — and it made his `span` more robust than the mentor's own reference. ⚠ CHANNEL: the unsaved-VS-Code-buffer artefact fired FOUR times and cost five turns; mtime and `git status` were checked every time and nothing was logged against him. ONE pushback (49) — the mentor said "give me a minute" and stalled — upheld; running total 49/48. RULES v5 adopted: SPEC BEFORE PUZZLE, with its cost written in the same breath (exact expected values can reveal a planted boundary; boundary cases belong in the TESTS).** |
 | 31 | **THE BLOCK-01 REFACTOR (deferred from S30) + the owed cold asks S30 exercised in code but never asked** | **`builds/block_01_joint_clamp/clamp.py` refactored by him against `BRIEF_REFACTOR.md`: Part A — the clamp decision reduced from FOUR written copies to ONE, with the acceptance stated mechanically ("count the function bodies comparing an angle to a low/high; that count must be 1"); Part B — `report` made to PRINT *and* RETURN the dict `clamp_joints` returns, killing the dead `{}`. Then a second pass he proposed himself, collapsing three redundant `clamp_one` calls per loop pass to one local. Then cold asks: f-string three steps, format spec, single-return-builds-a-tuple, the comma-makes-a-tuple, tuple immutability via a raising snippet. `drills/s31_shrug.py` + `tests/test_s31_shrug.py` written and issued, NOT attempted** | **Complete — 19/19 green, build block 01 CLOSED; ⚠ `LOG.md` skipped a FOURTH time** | **FOUR PROMOTIONS (f-string three steps, format-spec width/precision, single return value, the comma makes the tuple) and ONE CURRICULUM TICK (1.8 f-strings). ⚠ TUPLE IMMUTABILITY HELD [~] DELIBERATELY: mechanism cold and complete, `TypeError` label AIDED — he declared an honest gap and then DERIVED the label from his own four-station hook. ⚠ THE STUDENT MOMENT OF THE SESSION: on format-spec alignment he stated text-right/numbers-left, then SELF-REPAIRED unprompted before any evidence was shown — a first. ⚠ THE MENTOR FAILURE OF THE SESSION AND IT IS THE HEADLINE: SPEC BEFORE PUZZLE, adopted the previous day, was breached — the spec was issued in CHAT ONLY and the first brief file written was abstract with no concrete finish line. FOUR pushbacks (50 where are the instructions; 51 the brief is not clear; 52 the [TEACH-BACK] was not worth a turn, part-upheld; 53 you took my rating and never gave a verdict), running total 53/52. Depth-before-answer fired twice, both recovered — 19 and 20 straight. Zero unsaved-buffer firings, down from four.** |
 | 32 | **FINISH `drills/s31_shrug.py` (issued S31, never attempted) + open 1.8 NESTED DATA STRUCTURES** | **`drills/s31_shrug.py` — six functions, three raise/shrug pairs (`limit_for`/`must_limit`, `drop_limit`/`must_drop`, `retire`/`must_retire`) under a constraint banning `if`, `in`, `else` and `try` below the docstring, enforced by a test; 17 mentor-written tests, 4 passing at the start. Then cold asks: `del` vs `.pop` (student-initiated), `SyntaxError` via `print(del d[k])`, tuple immutability, format-spec alignment (INSTRUMENT SCRAPPED), `list()` on a spent iterator. Then TAUGHT: nested data structures, chained subscripting, SHALLOW COPY on lists and dicts, constructors as constructors, and the `<`/`>`/`^` alignment operators** | **Complete — 17/17 green, four promotions; ⚠ no drill file for nested structures** | **FOUR PROMOTIONS (the raise-vs-shrug pairing 7/10 — stated INVERTED in S30 and correct cold now; `.get()` vs `[]`; `remove` vs `discard`, taught S27 and never once tested until tonight; tuple immutability 5/10, the label unaided after being AIDED in S31). ⚠ **THE STUDENT MOMENT: HE DERIVED SHALLOW COPY UNPROMPTED, BEFORE IT WAS TAUGHT**, straight off S24 aliasing — *"the list object is new but the objects inside this list are same objects"* — then TRANSFERRED it to `dict(config)`, a container it had not been shown in. Same shape as the S29 `zip` moment, and again unpromotable because [PREDICT] never is. ⚠ **STATION 0 FIRED UNPROMPTED TWICE, both times prefaced with "I forgot the hook"** — use has outrun recall. ⚠⚠ **NEW WATCH AREA AND IT IS NOT A LABEL GAP: `None` IS NOT NOTHING** — he had `.pop`'s default argument creating the return value, and `[None]` for `list()` on a spent iterator; `None` occupies a slot, nothing does not. ⚠ **NAMED REPEAT: `SyntaxError` labelled `TypeError`, identical to the S27 miss five sessions earlier.** ⚠ **MENTOR: define-before-use, NINTH occurrence — `<`/`>` in a recall snippet, never taught, and they announce the answer; pushback 54, upheld in full, running total 54/53. The row was HELD rather than promoted.** Confidence calibration good throughout — every rating at or below 6 sat on something genuinely shaky. Depth-before-answer fired twice, one recovered (21 straight), one an honest gap he declared himself. Five checks unreported for the THIRD session; unsaved-buffer artefact fired twice, both caught by mtime, nothing logged against him.** |
+| 33 | **CLOSE THE 1.8 TAIL — `copy.deepcopy`, `reversed()`, common patterns and pitfalls — mixed 50/50 with revision across a 6–8 hour window he asked for** | **`drills/s33_copies.py` — four functions under constraints that never name a mechanism: `snapshot` (independence at every depth), `drop_unsafe` (new list, input untouched, boundary kept out of the docstring and put in the tests), `replay_order` (new list, last-to-first, input untouched), `missing_joints` (returns a set); 25 mentor-written tests. Cold asks fired MIXED INTO the material, never as a block: format-spec alignment on the default form with NO ARROWS; `len([get_limit(...), get_limit(...)])` for `None`-is-not-nothing; `len([])` vs `len([None])`; `dict(defaults)` with a nested list for shallow copy; `path.reverse()` for the mutating tell; the five checks unpacked. TAUGHT: `copy.deepcopy`, `reversed()`, `*` on a sequence, mutate-while-iterating, `[[0]*3]*3`, `_`, and when-to-use-which framed properly at last** | **Complete — 25/25 green, SEVEN promotions, ONE demotion, 1.8 to ~98%** | **PROMOTIONS: format-spec alignment (8/10, fourth session live, closed); `None` is not nothing (7/10); `list()` (7/10, seven sessions overdue); shallow copy / slice-copies-references (7/10); `copy.deepcopy`; set difference `-` (taught S30, never tested until now); boundary-first. ⚠ **DEMOTION: THE MUTATING TELL, [x] → [~]** — he stated it inverted (*"a method on a mutable object mutates the object"*), was shown `.count()` as the counterexample, declared an honest gap on the method, and then could not state the rule at all. Re-taught in three parts with the one-directionality as the headline. ⚠ **THE OVERNIGHT RESULT: a knowledge-STRUCTURE gap named in S32 closed with no drill in between.** ⚠ **THE MISS: `reversed()` lost to `.reverse()` on the name, nine hours after being taught — and under it the `range(len(...))` index habit S29 already caught once.** ⚠ **HELD DELIBERATELY: constructors [~]**, because *"converts"* was still his first word and *"builds a new object"* only came after the mentor pointed at it. ⚠ **MENTOR: THREE.** Define-before-use tenth occurrence (`*` on a sequence in a [PREDICT]; pushback 55, upheld in full after grepping every note file); FRAME FIRST breached on when-to-use-which, where two *"I don't understand the question"* replies were met with a rephrase before the real defect — no frame at all — was admitted; and an over-claim that 1.8 had closed when five bullets remain [~]. ⚠ **A [PREDICT] whose data hid its own bug**: the mutate-while-iterating list returned the RIGHT answer and he predicted it correctly; only a second list exposed the skip. Turned into the lesson, but it was luck. **CHANNEL: unsaved buffer fired ONCE and HE caught it.** Confidence 7–8 throughout and nothing at 7 or above was wrong — the two real misses carried no rating because he could not produce an answer to rate. |
 
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
@@ -3127,3 +3156,208 @@ write at all, one save producing a byte-identical file); mtime and size caught
 both and nothing was logged against him. **`print()` joins the level-1 audit
 list** — he described it as taking a string; it takes any object and calls
 `str()` on it.
+
+## What Session 33 established (Friday 28 August 2026, 16:00 → Saturday 29 August, ~12:00)
+
+**The longest session in the file, and he specified its shape at the open:**
+*"one of the longer ones where we need to focus on covering more content,
+approximately 6-8 hour window today so mix learning with revision."* Both halves
+were honoured — seven promotions came out of cold asks fired **mixed into** the
+material, never as a revision block, and the 1.8 tail was taught end to end.
+
+### The interval gate, and a ruling worth reusing
+
+S32's commit landed at 00:43 on 28 Aug; the session opened at 16:02 the same
+calendar day. **The ruling given out loud rather than assumed: a sleep cycle and
+~15 hours is later-day evidence and it promotes**, because the S17 gate asks
+whether forgetting was *possible*, not whether the date changed. Anything
+promoted on it was given a short gap rather than a long one. The session then
+ran past midnight, broke for sleep, and finished the next morning — which had
+the useful side effect of making the drill, issued at ~00:30, later-day evidence
+for everything taught the previous evening including `deepcopy` and `reversed()`.
+
+### The overnight result, and it is the finding of the session
+
+S32 ended having identified something the file had never seen before: not a lost
+label but a **missing distinction** — `None` conflated with nothing, twice in one
+night, on unrelated mechanisms. It was named precisely and **not drilled**.
+
+Sixteen hours later, cold:
+
+- `len([get_limit(limits, "elbow"), get_limit(limits, "wrist")])` → **2**, with
+  the mechanism volunteered: *"the previous line makes a list `[150, None]`"*.
+- `len([])` and `len([None])` → **0 and 1**, and he connected it back to his own
+  `list()` error himself: *"I confused it with the None"*.
+- His `.pop` model repaired unaided: *"`.pop` returns the removed value, and if
+  the given key is not there then `KeyError`"* — the exact thing he had had
+  backwards.
+
+**The lesson to carry: structural gaps and label gaps need different treatments.**
+A label gap needs repetition; this one closed on being named accurately, because
+he built the missing piece himself between sessions. **Diagnose which kind it is
+before deciding how much drilling it needs.**
+
+### What was taught
+
+**`copy.deepcopy`** — framed first, as the rule requires: what it is (new outer
+container and new contents recursively, no floor), why it exists (one level of
+copying is not a copy, it is a trap that looks like one), and what it buys (a
+snapshot). **And what was explicitly NOT claimed**: it is not the better copy —
+slower, and it copies things you may have wanted shared; it buys nothing over
+`[:]` on a flat container of immutables; and most of the time the right answer is
+to build the data fresh rather than copy it. `import` was given a one-line Level-2
+model in passing — it binds the NAME to a module object, and the `.` is the one he
+already owns — **discharging an item from the level-1 audit list.**
+
+**`reversed()`** — an iterator that walks a sequence back to front with no copy,
+motivated against `path[::-1]` building an entire second list. `print(reversed(path))`
+showing the iterator object rather than its contents. He then predicted the
+exhaustion case correctly from the `list()` machinery he had repaired two hours
+earlier — **transfer onto a construct he had met five minutes before.**
+
+**`*` on a sequence** — taught only because he stopped the session to demand it
+(see the mentor section). Repetition builds a new sequence; on `str` too.
+
+**Mutate-while-iterating** — `for` keeps an internal position counter and does not
+know the list is changing underneath it. **The replacement pattern is one he
+already owns: don't remove, SELECT.**
+
+**`[[0] * 3] * 3`** — `*` repeats the reference, not the contents. He resolved it
+himself off the previous night's shallow-copy work, and **interrupted his own
+answer with the load-bearing objection** — *"but `[0][0]` is 0 which is not a
+mutable"* — which is exactly the discriminator: `* n` is safe when the element is
+immutable and a trap when it is mutable.
+
+**When-to-use-which** — the ASK question, framed properly for the first time in
+the course. See the mentor section for why that took two attempts.
+
+### The drill
+
+`drills/s33_copies.py` — four bodies against 25 mentor-written tests, issued at
+~00:30 and written the following morning. **25/25 green, cold, unaided.**
+
+```python
+def snapshot(config):      return copy.deepcopy(config)
+def drop_unsafe(a, c):     return [i for i in a if i <= c]
+def replay_order(steps):   return [steps[-(i+1)] for i in range(len(steps))]
+def missing_joints(r, p):  return set(r) - set(p)
+```
+
+**The boundary was kept out of the docstring and put in the tests**, per the S30
+cost-of-SPEC-BEFORE-PUZZLE note — and he found it anyway, off the promise:
+*"boundary is one thing I needed to take care of, `<=` or `<`, otherwise `mila`
+would have come into action."* **That is checks 1 and 5 working as a pair, and it
+is the first time in four sessions they have been reported at all.**
+
+`missing_joints` is the quiet win: **set difference was taught in S30 as a
+supporting move and had sat untested for three sessions.** One line, cold, and the
+container chosen for a job whose only question is *"is this in here?"* — the rule
+from ninety minutes earlier, applied rather than recited.
+
+### The demotion
+
+**THE MUTATING TELL, `[x]` → `[~]`.** Asked what rule let him work out
+`path.reverse()`, he gave *"a method on a mutable object mutates the object"* —
+false. Shown `path.count("home")` as the counterexample he declared an honest gap
+on the method itself (*"I don't remember this method"*), and then, asked to
+restate the tell, produced *"I cannot come up with the statement as well."*
+
+**Third break of this row in two sessions, in three different directions:** S32
+had `.pop(k)` returning nothing because it mutates; S33 had `.count()` mutating
+because the object is mutable; then no statement at all. **He keeps rebuilding it
+as a two-way rule.** Re-taught with the one-directionality as the headline rather
+than a caveat: TYPE FIRST; returns `None` ⇒ it mutated; **a value coming back
+tells you nothing**, because `.pop()` returns the item AND mutates.
+
+### The miss that matters most — a name collision
+
+Nine hours after `reversed()` was taught with full runnable output, he did not
+reach for it. He wrote `[steps[-(i+1)] for i in range(len(steps))]` and explained:
+*"couldn't use reverse because it mutates the list itself."*
+
+**`steps.reverse()` and `reversed(steps)` had merged into one thing on the
+strength of their names.** The machinery was intact — his code is correct and
+passes — and the tool was invisible. **New watch area: where two constructs have
+near-identical names, teach them as a PAIR IN ONE TABLE or he will merge them.**
+Prior instances now readable as the same pattern: `sort`/`sorted`,
+`remove`/`discard`, `iterable`/`iterator`.
+
+Underneath it, an older habit: **`range(len(...))` index bookkeeping, already
+caught in S29** where `zip` removed it. When he computes indices to get at items,
+there is usually a built-in that hands him the items.
+
+### Held deliberately
+
+**Constructors stayed `[~]`.** His first word for `dict(defaults)` was still
+*"converts it to a dictionary"*; *"the constructor is actually making a new object
+from the iterable"* arrived only after the mentor pointed at the word. **A
+correction that has to be pulled out is not evidence**, and he was told so in
+those terms. It promotes when the right word is his first word.
+
+### Mentor failures — three
+
+1. **DEFINE-BEFORE-USE, SUBSTRATE INCLUDED — TENTH OCCURRENCE, SECOND NIGHT
+   RUNNING.** `[[0] * 3] * 3` was fired inside a [PREDICT] and **`*` on a sequence
+   had never been taught anywhere in the course.** He stopped it: *"normally for
+   brackets we use () but here we are using [], this hasn't been taught."* Every
+   note file and the curriculum were grepped rather than argued with; he was
+   right; the snippet was withdrawn, repetition taught properly with output, and
+   the trap re-issued afterwards. **Pushback 55, upheld in full; running total
+   55/54.** The check that was skipped costs one command.
+
+2. **FRAME FIRST (RULES v4) BREACHED.** When-to-use-which was fired as three
+   scenarios with no frame. He replied *"I don't understand the question itself"*;
+   the mentor rephrased — **the wrong fix, and the same first-fix-solves-the-wrong-
+   half shape as S19 and S20** — and only after a second *"I still don't
+   understand the question that well"* did it stop and state the unit in one
+   sentence. **Two "I don't understand" replies in a row is a frame signal, not a
+   comprehension signal.** Two thirds of his answer had been right all along.
+
+3. **AN OVER-CLAIM ABOUT HIS OWN PROGRESS.** *"That closes 1.8"* was said in
+   session and was false — five bullets remain `[~]`. Caught during the closing
+   procedure by counting them, and corrected to his face before the files were
+   written. **This is precisely the class the end-of-session section names: an
+   artefact that looks authoritative while being wrong. Missing gets noticed;
+   wrong gets believed.**
+
+A fourth, smaller: **the mutate-while-iterating [PREDICT] used data that hid its
+own bug.** He predicted it correctly because the code genuinely returns the right
+answer on that list. Recovered by making the hiding itself the lesson — and the
+recovery was the better teaching — but it was luck, not design. **Choose failing
+data deliberately.**
+
+### Student record
+
+- **Seven promotions**, all cold and later-day: format-spec alignment (8/10,
+  fourth session live, finally closed on a clean instrument with no arrows);
+  `None` is not nothing (7/10); `list()` (7/10, seven sessions overdue); shallow
+  copy (7/10); `copy.deepcopy`; set difference; boundary-first.
+- **Confidence 7–8 all session and nothing at 7 or above was wrong.** ⚠ **The two
+  genuine misses carried no rating at all, because he could not produce an answer
+  to rate. Silence is the new low rating — watch for it.**
+- **Self-repair, unprompted, twice.** On *"the iterable was empty"* he corrected
+  himself to the iterator's forward-only state and classified his own error
+  precisely: *"not an error in my concept, was an error in saying."*
+- **He stopped an untaught construct on sight** — the fourth consecutive session
+  in which the biggest catch of the night was his.
+- **Channel: the unsaved-buffer artefact fired once and he caught it himself**
+  before anything was read. Down from four in S30 and two in S32.
+- Two style corrections issued: `import` belongs at the top of the file, and `i`
+  conventionally means an index — `[i for i in angles ...]` should be `[a for a
+  in angles ...]`.
+
+### Where 1.8 actually stands
+
+**Ticked this session:** nested data structures `[~]` → `[x]`; copy semantics
+`[~]` → `[x]`; common patterns and pitfalls `[ ]` → `[x]`.
+
+**Still `[~]`, and all five are cold-ask shaped rather than teaching shaped:**
+`list` (method roster 3/6, plus the fresh `.count()` gap), `tuple` (taught in full
+S26, never given a task-first pass), `dict` (`.keys()`/`.values()` as views never
+asked), `set` (order instability and `{}`-is-a-dict never asked), and
+when-to-use-which (taught properly only today, so ineligible until S34).
+**One focused block closes the subsection.**
+
+**No rule was adopted. The parking lot is deliberately empty** — both process
+failures this session were breaches of rules that already exist, and the file's
+own S32 precedent says to fix the behaviour rather than grow the rulebook.

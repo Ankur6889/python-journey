@@ -1166,7 +1166,14 @@ false.
  in the volley (`sort` "returns a new list for sure") — the block was
  tagged [PREDICT], so **that miss is NOT ledgered**; it needs a clean cold
  [RECALL] pass. Shallow-vs-deep copy PARKED to "nested data structures".
-- [~] **Copy semantics: a slice copies the REFERENCES, not the items** —
+- [x] **Copy semantics: a slice copies the REFERENCES, not the items** —
+ **TAUGHT S26, DERIVED UNPROMPTED S32, PROMOTED S33.** Asked cold the next
+ evening on `dict(defaults)` with a nested list: he gave the correct printed
+ value AND both halves of the mechanism — why `session["elbow"][1] = 90` leaks
+ into `defaults` (same inner list object) and why `session["wrist"] = [...]`
+ does not (the outer dict is new). Rated 7. Then applied twice more the same
+ night, to `[[0] * 3] * 3` and to `copy.deepcopy`. Evidence: this session's
+ transcript + `drills/s33_copies.py`.
  **TAUGHT S26**, discharging the S24 park (`tools[:]` = "an identical new list
  object" — true of the OUTER list only). SHALLOW COPY defined: the container is
  new, the references inside are copied, so nested mutables are SHARED. He
@@ -1321,7 +1328,7 @@ false.
  truncate to the shortest with no error, and an exhausted `zip` returns `[]`
  rather than raising, because `list()` is the thing that catches
  `StopIteration`.
-- [~] **Nested data structures — OPENED AND TAUGHT S32.** Framed honestly:
+- [x] **Nested data structures — OPENED AND TAUGHT S32, PROMOTED S33** (`drills/s33_copies.py`, 25/25 pytest, cold and unaided the morning after). Framed honestly:
  **nesting is not a feature, it is a consequence** — containers hold objects,
  lists and dicts ARE objects, so nothing was added to the language for this.
  Motivated from his own S29 `range(len(...))` habit: flat containers lose the
@@ -1346,9 +1353,81 @@ false.
  **CONSTRUCTORS CORRECTED: `dict(config)` is not a type conversion, it is a
  CONSTRUCTOR CALL** — it walks the pairs and stores the same value objects,
  which is *why* it comes out shallow. Same for `list()`, `set()`, `tuple()`.
- ⚠ NOT [x]: same-session throughout, **no drill file written**, and
- `copy.deepcopy` is still owed. Task-first cold pass owed S33.
-- [ ] Common patterns and pitfalls
+ **S33 — PROMOTED. The task-first cold pass ran the next morning and the
+ whole block held**: `snapshot(config)` written as `copy.deepcopy(config)` from
+ a docstring that never named the mechanism, and the six independence tests
+ (outer `is not`, inner `is not`, edit-copy, edit-original, empty dict) all
+ green first run. Earlier the same evening he predicted the `dict(defaults)`
+ leak cold — both levels, correct value, and the reason the second assignment
+ line does NOT leak. Rated 7. ⚠ **CONSTRUCTORS STAYED [~] DELIBERATELY**: his
+ first word was still *"converts it to a dictionary"* and *"makes a new
+ object"* only arrived after the mentor pointed at the word. A correction that
+ has to be pulled out is not evidence.
+ **`copy.deepcopy` — TAUGHT AND PROMOTED S33.** New outer container and new
+ contents recursively, all the way down; framed against what it is NOT (not
+ the better copy — slower, copies things you may want shared; buys nothing
+ over `[:]` on a flat container of immutables; and most of the time the right
+ answer is to build the data fresh rather than copy it). `import copy` given a
+ one-line Level-2 model — it binds the NAME `copy` to a module object, and
+ `copy.deepcopy` is the same `.` he already owns — which discharges one item
+ from the level-1 audit list.
+ **`reversed()` — TAUGHT S33, NOT PROMOTED, and the miss is the session's
+ sharpest finding.** Taught as an ITERATOR that walks a sequence back to front
+ with NO copy, motivated against `path[::-1]` building an entire second list;
+ `print(reversed(path))` showing the iterator object rather than contents; and
+ the exhaustion case predicted correctly by him from the `list()` machinery he
+ had repaired two hours earlier. ⚠ **Nine hours later he did not reach for it
+ in the drill**, writing `[steps[-(i+1)] for i in range(len(steps))]` and
+ explaining *"couldn't use reverse because it mutates the list itself"* — the
+ method `steps.reverse()` and the built-in `reversed(steps)` merged into one
+ thing by their names. Correct code, wrong tool, and it is the `range(len(...))`
+ index-bookkeeping habit S29 already named once.
+- [x] **Common patterns and pitfalls — TAUGHT AND CLOSED S33.** Three, chosen
+ because each one fails silently rather than raising.
+ **(1) NEVER MUTATE A CONTAINER WHILE ITERATING OVER IT.** `for` keeps an
+ internal POSITION COUNTER and does not know the list is changing under it;
+ removing an item slides the next one into a slot already passed, so it is
+ never looked at. ⚠ **THE TEACHING ACCIDENT THAT BECAME THE LESSON: the first
+ example the mentor picked happened to return the RIGHT answer** —
+ `[10,200,30,250,50]` filtered to `[10,30,50]`, which he predicted correctly.
+ Changing only the data to `[10,200,250,30]` returned `[10,250,30]` with the
+ unsafe value SURVIVING. He was then walked through the counter trace and shown
+ that the first list had silently skipped TWO elements as well; both happened
+ to be keepers. **The bug was always there and the data hid it** — the same
+ shape as the boundary bugs of S20. The replacement pattern is one he already
+ owns: **don't remove, SELECT** — `[a for a in angles if a <= 180]`, build a
+ new list and rebind.
+ **(2) `[[0] * 3] * 3` — THE SHARED-ROW TRAP.** `*` on a sequence repeats the
+ REFERENCE, not the contents, so all three rows are one object and
+ `grid[0][0] = 99` shows up in every row (`grid[0] is grid[1]` → `True`).
+ Resolved by him off the shallow-copy machinery from the night before, and he
+ asked the right question unprompted — *"but 0 is not mutable"* — which is
+ exactly the discriminator: **`* n` is safe when the element is immutable and a
+ trap when it is mutable**, because `[0] * 3` shares zeros you cannot mutate.
+ The fix is a comprehension, `[[0] * 3 for _ in range(3)]`, because the
+ expression re-runs once per pass while `*` evaluates its operand once.
+ ⚠ **SUBSTRATE FAILURE, MENTOR, TENTH OCCURRENCE: `*` ON A SEQUENCE HAD NEVER
+ BEEN TAUGHT** and was fired inside a [PREDICT]. He stopped it (*"this hasn't
+ been taught"*); the notes and curriculum were grepped, he was right, the
+ snippet was withdrawn and repetition taught properly first — `[0] * 5`,
+ `["home"] * 3`, `"ab" * 3`, `[1,2] * 2` — before the trap was re-issued.
+ Pushback 55, upheld in full. `_` as the throwaway-name convention defined in
+ one line at the same time.
+ **(3) WHEN-TO-USE-WHICH — THE ASK QUESTION, FINALLY TAUGHT RATHER THAN
+ FISHED FOR.** ⚠ He could not produce it in S27 and could not produce it here
+ either, twice saying he did not understand the question — **and the second
+ time the mentor stopped and admitted the real defect: the block had been fired
+ as show-and-ask with NO FRAME, in breach of the S28 rule.** Stated properly:
+ the four containers hold the same objects and differ only in what they make
+ CHEAP, so the deciding question is **"WHAT AM I GOING TO ASK THIS CONTAINER?"**
+ — not what am I putting in it. *"Is this in here?"* → `set`; *"what is the
+ value FOR this name?"* → `dict`; *"what came first / what is at position 3?"*
+ → `list`; *"this must never change"* → `tuple`. ⚠ **TWO THIRDS OF HIS ANSWER
+ WAS ALREADY RIGHT** — dict for id→count (*"faster to search for the ids"*) and
+ list for frames in recorded order — **and the one he missed was the `set`**,
+ which he folded into the dict. The tell he was given: storing keys with
+ nothing on the other side IS a set, which is the definition he already had.
+ Applied cold ninety minutes later in `missing_joints`.
 - [x] **String formatting / f-strings — PARKED HERE FROM S16 at the student's
  own raising; TAUGHT S28** (commit S28). **Opened by naming the reason out
  loud: he USES them correctly and could not EXPLAIN them — the one construct
