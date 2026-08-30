@@ -1237,7 +1237,13 @@ false.
  type mutable / does it return `None` / raising form or shrugging form) and the
  roster is lookup-able**. ⚠ STILL OWED: dict comprehensions (with 1.8 comprehensions).
  ⚠ NOT [x]: **S26's two-thirds was never cold-tested. Task-first cold pass owed.**
-- [~] **set — TAUGHT S27, essentially in full.** Motivated as **"a dict with the
+- [x] **set — TAUGHT S27, CLOSED S35** (`drills/s35_faults.py` commit; the
+ closing ask was `set()` vs `{}`, written cold seven days after S27 with the
+ mechanism attached to BOTH containers unprompted, self-rated 7/10). **The
+ order-instability half passed cold in S34 (7/10, named unprompted off his own
+ failing output). The last un-asked fact was `{}`-builds-a-dict, and it was the
+ first thing fired in S35 — three minutes, and the bullet closed.**
+ **TAUGHT S27, essentially in full.** Motivated as **"a dict with the
  values thrown away"** — same braces, same hashing machinery, same uniqueness rule,
  therefore **set items must be hashable for exactly the reason dict keys must be**.
  Covered: five items in, three out — **duplicates are absorbed SILENTLY, not
@@ -1469,7 +1475,36 @@ false.
  half is queued for a short-gap re-test in S32. Evidence: commit for S31.
 
 #### 1.9 Error Handling and Exceptions
-- [ ] What exceptions are — the exception hierarchy (**pre-loaded S15:
+- [~] **What exceptions are — the exception hierarchy.**
+ ⚠⚠ **S35: THE FOUR-STATION HOOK WAS RETIRED.** Asked to name the stations in
+ order he said *"I still don't remember that hook, it has not been working for
+ me."* **That is the SECOND artefact failure on this same material** — the S26
+ error TABLE failed inside twenty minutes, and the hook built to replace it has
+ now failed outright. **Diagnosis, and it was predicted by this file's own Term
+ Retention System: the hook was five arbitrary words stacked on machinery he
+ already owns, which is exactly the thing he reliably drops.** Logged against
+ the artefact, not the student.
+ ✅ **THE REPLACEMENT, AND IT WORKED ON FIRST USE: "HOW FAR DID PYTHON GET?"**
+ Not a list to memorise — a TIMELINE to walk. Fired cold on
+ `angles["shoulder"]`, he produced the whole walk unaided: did it parse → does
+ the name exist → is the operation possible → is the specific key there.
+ Self-rated 6 and under-rated. **This is the S17 discriminator ruling applied to
+ error labels: give him a question he can ask the code, never a roster.**
+ ⚠⚠ **HE DERIVED THE COMPILE/RUN SPLIT HIMSELF, UNPROMPTED, OFF ONE TRACEBACK** —
+ *"python compiler is compiling the file to bytecode, and all the syntax error is
+ checked there itself… once the bytecode is there, then execution starts, and
+ then we come towards the other errors."* Confirmed, and sharpened with the one
+ thing missing: **the compiler checks GRAMMAR, never MEANING — a typo'd NAME
+ compiles perfectly, which is why `NameError` is a runtime error WITH frames and
+ `SyntaxError` is the only error you meet with NONE.** Proved by running a file
+ whose line 1 printed with a bad name on line 5, against one whose line 1 did
+ **not** print because line 5 was missing a colon. `.pyc` parked to 1.10.
+ ⚠ **`SyntaxError` — LABEL HALF HIT COLD, FIRST TIME IN THREE FIRINGS** (missed
+ S27, missed S32), on a NEW shape (a missing colon, not a statement inside
+ `print`). **The no-frames half BROKE in the same breath: asked whether line 1
+ printed he said yes, and rated it 7 — his first over-rating in a long while.**
+ Row held [~].
+ (**pre-loaded S15:
  `StopIteration` as a signal, `NameError`, and the traceback definition.
  He has now met three exceptions as MECHANISM rather than as noise.
  ⚠ NOTE UPDATED S18: the deferred re-test finally RAN and this cluster is no
@@ -1511,12 +1546,61 @@ false.
  ⚠ **`KeyError` IS THE ONE MISS OF S27 AND IT COMES BACK COLD IN S28** — noting that
  he then named `KeyError` correctly twice later in the session, on `del d["gripper"]`
  and on `set.remove`, both same-session and therefore NOT promotable.)
-- [ ] try / except blocks
-- [ ] Catching specific exceptions vs bare except (**pre-loaded S15: `for`
+- [~] **try / except blocks — TAUGHT S35, DRILLED SAME SESSION.** Framed on a
+ four-string reading list where one bad entry cost the three good ones: `int("n/a")`
+ kills the loop and `45` and `90` are lost with it. **The honest frame was given in
+ the same breath, because he would have demolished a dishonest one: where you CAN
+ check cheaply in advance you should — `.get()` beats `try` on a dict lookup.
+ `try` earns its place in exactly two places: (1) when you cannot ask in advance
+ (there is no `"n/a".can_be_int()`; checking a file exists and then opening it is a
+ lie), and (2) when the failure is FIVE CALLS DOWN and you cannot write an `if`
+ around a possibility you cannot see.** Evidence: `drills/s35_faults.py`
+ `total_valid` / `safe_angles`, 29/29 first run. ⚠ **SAME-SESSION, therefore [~];
+ one cold later-day ask promotes.**
+- [~] **Catching specific exceptions vs bare except — TAUGHT S35, AND IT PRODUCED
+ THE SESSION'S HEADLINE FINDING.** Demonstrated by typo'ing a variable name inside
+ the `try`: with `except ValueError:` the program dies loudly on a `NameError`
+ (correct — the bug screams); with a bare `except:` the SAME file prints "skipping
+ bad reading" for all four readings, returns `total: 0`, and **exits with status 0
+ as if nothing had happened.** He predicted both, and when asked which was more
+ dangerous answered unprompted: *"obviously total:0 is more dangerous, because you
+ ended up believing that program is running fine."* **THE RULE: catch the exception
+ you are EXPECTING — which is his own raise-vs-shrug rule one level up.**
+ ⚠⚠ **AND THEN HE WROTE A BARE `except:` IN `total_valid` FORTY MINUTES LATER.**
+ A transfer gap, not a knowledge gap. **This bullet does NOT promote until his own
+ code stops containing one.**
+ (**pre-loaded S15: `for`
  catching `StopIteration` internally is the first real example of an
  exception being caught and handled quietly — reuse it here**)
-- [ ] else and finally clauses
-- [ ] Raising exceptions with raise
+- [~] **else and finally clauses — TAUGHT S35, with the worth of each stated out
+ loud before the mechanics (S28 corollary): "finally is load-bearing, else is a
+ scoping tool worth about one line."** `else` = the `try` did NOT raise; `finally`
+ = **always**. ⚠ **The load-bearing demonstration was a function with NO `except`
+ at all, whose body was `return int(text)` and whose `finally` printed on the way
+ out of BOTH a successful `return` and an uncaught exception that killed the
+ program.** He did not follow it first time and said so; it was restated one call
+ at a time under the doubt gate and he then produced the structure himself
+ correctly. ⚠ **He then talked himself OUT of the right answer on "does `finally`
+ run when nothing catches it?" — first instinct correct, reversed because the
+ mentor had singled the case out. Named to his face: the framing of a question is
+ not evidence.** `else` motivated honestly as narrowing by SCOPE, the twin of
+ `except X` narrowing by TYPE. Evidence: `measure` in `drills/s35_faults.py`,
+ written correctly and unaided after ONE pointing question.
+- [~] **Raising exceptions with raise — TAUGHT S35.** Motivated on the one thing
+ `try`/`except` cannot do: **Python knows what an integer looks like; it has no
+ idea 200° is illegal for a shoulder joint.** ⚠ **THE FRAME THAT LANDED WAS HIS
+ OWN OLD BUG** — S27's `find_index`, where `None` served as both sentinel and
+ value: *an exception cannot be mistaken for data, because it isn't data.*
+ **THE DIVISION OF LABOUR IS THE POINT: the function DETECTS, the caller DECIDES**
+ (skip / clamp / abort). ⚠⚠ **DEFINE-BEFORE-USE BREACH, ELEVENTH OCCURRENCE, AND
+ HE CAUGHT IT HIMSELF BEFORE ANSWERING** — `ValueError(f"…")` was used before
+ exception classes had ever been defined as TYPES. Pushback 58, upheld in full.
+ The repair, and it is worth reusing: **every error name is a CLASS; `ValueError("…")`
+ is a CONSTRUCTOR CALL that BUILDS an exception object; and the text after the colon
+ in every traceback he has ever read IS that constructor's argument.** Then
+ `except … as e` binds the object itself. Evidence: `check_angle` and `safe_angles`
+ in `drills/s35_faults.py`, 29/29 first run, including a test asserting the message
+ names both numbers in order.
 - [ ] Creating custom exceptions
 - [ ] Common built-in exceptions
 - [ ] Using exceptions for control flow vs error handling (**pre-loaded S15
