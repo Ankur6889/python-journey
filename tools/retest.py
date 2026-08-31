@@ -134,6 +134,14 @@ def main(argv=None):
         row["rating"] = args.rating
         if args.result == "fail":
             row["status"] = "~"          # a failed re-test reverts to [~]
+        else:
+            # RULES proposal 2 (adopted S21): promotion = CORRECTNESS. A pass
+            # recorded here has already been judged unaided and later-day by
+            # the mentor, so it promotes. The rating sets the INTERVAL only.
+            # BUG FIXED S36: this branch did not exist, so the script demoted
+            # on failure but never promoted on success -- every pass since the
+            # script was built would have been silently under-recorded.
+            row["status"] = "x"
         save(rows)
         rated = f", rated {args.rating}" if args.rating is not None else ""
         print(f"{row['term']}: {args.result}{rated} -> next due {row['next_due']} "

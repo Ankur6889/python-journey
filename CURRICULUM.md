@@ -1546,7 +1546,7 @@ false.
  ⚠ **`KeyError` IS THE ONE MISS OF S27 AND IT COMES BACK COLD IN S28** — noting that
  he then named `KeyError` correctly twice later in the session, on `del d["gripper"]`
  and on `set.remove`, both same-session and therefore NOT promotable.)
-- [~] **try / except blocks — TAUGHT S35, DRILLED SAME SESSION.** Framed on a
+- [x] **try / except blocks — TAUGHT S35, PROMOTED S36 (31 Aug 2026) on cold later-day evidence: `drills/s36_signals.py`, commit at S36 close.** Framed on a
  four-string reading list where one bad entry cost the three good ones: `int("n/a")`
  kills the loop and `45` and `90` are lost with it. **The honest frame was given in
  the same breath, because he would have demolished a dishonest one: where you CAN
@@ -1557,6 +1557,18 @@ false.
  around a possibility you cannot see.** Evidence: `drills/s35_faults.py`
  `total_valid` / `safe_angles`, 29/29 first run. ⚠ **SAME-SESSION, therefore [~];
  one cold later-day ask promotes.**
+ ✅ **S36, THE DAY AFTER: PROMOTED.** Two cold [RECALL]s, both correct, both
+ self-rated 7 and both under-rated. (a) A NEW snippet — `int(cel)` typo'd inside a
+ `try` with a bare `except: pass` — he gave the printed value (`0`), named the
+ error (`NameError`) and named the cost in his own words: *"the user might end up
+ thinking the program ran perfectly."* (b) Asked which exception his own
+ `total_valid` should name, he answered `ValueError` with the consequence attached:
+ *"if NameError occurs it will again stop for that exception."* **Reframed to his
+ face: that is not a downside, that is the feature.** He then wrote `sort_faults`
+ and `audited` cold in `drills/s36_signals.py`, 35/35.
+ ⚠ **LANGUAGE CORRECTION ISSUED (S9 rule): he said "no errors will be caught."
+ INVERTED — the error IS caught; that is the crime. The phrase is "no error is
+ REPORTED."****
 - [~] **Catching specific exceptions vs bare except — TAUGHT S35, AND IT PRODUCED
  THE SESSION'S HEADLINE FINDING.** Demonstrated by typo'ing a variable name inside
  the `try`: with `except ValueError:` the program dies loudly on a `NameError`
@@ -1569,6 +1581,19 @@ false.
  ⚠⚠ **AND THEN HE WROTE A BARE `except:` IN `total_valid` FORTY MINUTES LATER.**
  A transfer gap, not a knowledge gap. **This bullet does NOT promote until his own
  code stops containing one.**
+ ⚠⚠ **S36: THE ASK PASSED AND THE BULLET IS STILL HELD [~], DELIBERATELY.** Both
+ cold [RECALL]s passed at 7/10 (see the try/except bullet). He then fixed his own
+ `total_valid` to `except ValueError:` on one pointing question. **AND THEN SHIPPED
+ A CATCH-ALL IN FRESH CODE THE SAME EVENING** — `sort_faults` carried a trailing
+ `except Exception: state_dict["broken"].append(r)`, **correctly ORDERED last**, so
+ he had taken the ordering lesson and not the catch-all one. Removed only after a
+ [PREDICT] about a future typo. **THE UPGRADE ON S35'S FINDING, and it is the
+ sharper version: a bare `except:` HIDES a fault; a catch-all filing into a NAMED
+ bucket actively LIES about it.** `"broken"` means *this sensor sent garbage* — so
+ a `NameError` in his own code would send someone to swap a cable on a sensor that
+ was working perfectly. He named that consequence himself once asked.
+ **The condition on this bullet is unchanged and was not met: his first draft
+ contained one. It promotes when a fresh file does not.**
  (**pre-loaded S15: `for`
  catching `StopIteration` internally is the first real example of an
  exception being caught and handled quietly — reuse it here**)
@@ -1601,12 +1626,78 @@ false.
  `except … as e` binds the object itself. Evidence: `check_angle` and `safe_angles`
  in `drills/s35_faults.py`, 29/29 first run, including a test asserting the message
  names both numbers in order.
-- [ ] Creating custom exceptions
+- [~] **Creating custom exceptions — TAUGHT S36, DRILLED SAME SESSION.**
+ Motivated honestly on a COLLISION he could see: `int("n/a")` and his own
+ `raise ValueError` in `check_angle` are the SAME TYPE, so one `except ValueError`
+ cannot tell "the sensor is dead" from "the joint is over its limit". **The frame
+ that landed was the physical one — one fault means the arm may be about to hit
+ something, the other means you have gone blind on that joint, and the code
+ returned `[45, 90]` for both.** The shape given was exactly
+ `class OverLimit(Exception): pass`, with the three parts priced out loud (S28
+ corollary): the NAME is cheap, `(Exception)` is LOAD-BEARING, the `...Error`
+ suffix is a footnote. ⚠ **The `class` keyword was declared open-on-credit — he
+ has never written one and 1.11 owns it; he was given the one line exceptions need
+ and nothing more.** Evidence: `OverLimit` and a self-invented `UnknownJointError`
+ in `drills/s36_signals.py`, 35/35. **SAME-SESSION, therefore [~].**
+ ⚠ **HE INVENTED A SECOND EXCEPTION TYPE UNASKED and flagged it himself** — *"I
+ have done more than what was asked"*. Ruled NOT scope-creep but a defensible
+ design trade, and priced honestly: let `KeyError` fly in internal code; raise your
+ own type in a library, because it **hides that `config` happens to be a dict.**
+ ⚠⚠ **TWO CONSECUTIVE IDENTIFIER MISSES ON A NAME THE SPEC WROTE DOWN.** The drill
+ said `OverLimit`; he wrote `JointLimitError` (the name from the mentor's demo),
+ then `OverLimitError` (the mentor's own "convention" footnote applied over the
+ literal spec). Two collection failures, zero tests run. **Named as its own finding:
+ identifiers are not paraphrasable.**
+- [~] **The exception hierarchy + `except` ORDERING — TAUGHT S36.** He supplied the
+ tool himself before it was taught — *"I want to catch all types of exception…
+ something more general"* — which is the second session running he has asked for a
+ mechanism by its shape before being handed it. Taught as a FAMILY TREE:
+ `ValueError`, `NameError`, `TypeError`, `KeyError` are all kinds of `Exception`,
+ so naming an ancestor catches every descendant. ⚠ **THE ORDERING RULE, and it was
+ PROVED by running it, not asserted: "specific first, general last -- `except`
+ blocks are checked top to bottom, first match wins, so the ancestor eats its own
+ children."** With `except Exception` moved to the top, the `except JointLimitError`
+ block below it became DEAD CODE and **Python issued no warning whatsoever.**
+ ⚠ **HE MISSED THIS PREDICTION FIRST TIME** — *"the output will still be the same
+ because the exception caught depends on the inputs not on the try except block"* —
+ and recovered fully on one narrowing question, supplying **"child class"** from his
+ own prior knowledge and flagging that it was his and not the mentor's.
+ ⚠ **CHANNEL NOTE: the first miss was partly a channel artefact.** The swap was
+ described in PROSE and he rebuilt it wrong, not having noticed that the
+ `print("SAFETY:")` moves DOWN with its block. Re-posed as literal code, he got it
+ immediately. **S19's rule again: the code goes next to the question.**
 - [ ] Common built-in exceptions
-- [ ] Using exceptions for control flow vs error handling (**pre-loaded S15
+- [~] **Using exceptions for control flow vs error handling — TAUGHT S36, and the S15 IOU was finally paid.** (**pre-loaded S15
  — the iteration protocol IS exception-driven control flow, and that is a
  genuinely interesting design point to raise here**)
-- [ ] Defensive programming mindset
+ ✅ **DELIVERED S36.** `for x in box:` was written out as the `while True` /
+ `try` / `except StopIteration: break` it actually is. **Every `for` loop he has
+ written in twenty sessions catches an exception on every successful run, as its
+ NORMAL way of finishing.** Asked what that does to the sentence "exceptions are
+ for errors", he answered in one line and unprompted: *"as per the definition we
+ already know exceptions are for signals"* — **S15 material, three weeks cold,
+ intact.** Sharpened to: **an exception is a signal that TRAVELS; whether it is an
+ "error" is a judgement the CALLER makes, not a property of the mechanism.**
+ ⚠ **`StopIteration` — MECHANISM INTACT, LABEL LOST, AND THE ROW IS DEMOTED [x] →
+ [~].** On `next(it)` past the end of a two-item list he gave `10`, `20`, then
+ **"EndofIteration"**, and correctly said the third `print` never runs. Self-rated
+ 6. **This is his exact signature — the machinery held for three weeks and the
+ arbitrary word did not.** Re-derivation given rather than the word: the thing that
+ happens is that *iteration stops*, and Python named it in that order.
+- [~] **Defensive programming mindset — TAUGHT S36 as the RAISE-VS-RETURN decision,
+ and this is 1.9's takeaway.** The table given: a RETURN VALUE can be ignored
+ silently; a PRINT can be ignored AND steals the caller's output policy; a RAISE
+ cannot be ignored. ⚠ **PROVED ON A SENTINEL BUG, run live:** `get_joint` returned
+ `None` for a missing key, and the crash landed on **line 14** (`if angle > limit`)
+ while the actual mistake — the typo `"elbw"` — was on **line 11**. He named the
+ `TypeError` cold before the traceback was shown (S27 rule), self-rated 7,
+ under-rated again, and it fits yesterday's discriminator exactly: *give `limit` an
+ int and it works ⇒ TypeError.* **THE LESSON IN ONE LINE: a sentinel return moves
+ the failure away from its cause; `raise` keeps them together.**
+ ⚠ **THE OWED STYLE NOTE WAS DELIVERED (once, as STATE required):** he left
+ `print(e)` in `safe_angles` and a debug `print` in `measure`. **A library function
+ that prints has decided its caller's output policy for them** — same
+ division-of-labour argument `raise` was taught with in S35.
 
 #### 1.10 Modules, Packages, and Imports
 - [ ] What a module is / [ ] import statement / [ ] from x import y

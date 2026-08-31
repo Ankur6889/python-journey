@@ -37,7 +37,11 @@
 # part was re-written every session, which is where the S15 stale-file and
 # S16 wrong-name incidents came from. Splitting by rate of change fixes both.
 #
-# VERSION: RULES v5, 24 Aug 2026 (evening). v4 + the SESSION 29 rule
+# VERSION: RULES v6, 31 Aug 2026. v5 + the SESSION 36 rule (THE DONE LINE),
+# proposed by the STUDENT in S35 under pushback 60, parked under the cap, and
+# ruled on by him at the S36 open in four words: "Adopt with the extra line."
+# ⚠ THIRD STUDENT-PROPOSED RULE, and the first that CUTS mentor-imposed work
+# rather than adding any. v5 = v4 + the SESSION 29 rule
 # (SPEC BEFORE PUZZLE), proposed by the MENTOR after the worst-run session in
 # the file and ruled on by the student at the S30 open in one word: "Adopted."
 # ⚠ FIRST MENTOR-PROPOSED RULE SINCE S16 — the previous two were his.
@@ -730,6 +734,40 @@ one-line ask at the S30 open, before any teaching. His ruling, in one word:
    TESTS and keep it out of the docstring's worked examples.** The interface and
    the return type are never withheld; a single example value may be.
 
+### THE SESSION 36 RULE (raised S35, ADOPTED S36, 31 Aug 2026) — **STUDENT-PROPOSED**
+
+**The third rule in this file that the student proposed himself, and the first one
+that REMOVES work rather than adding it.** Raised in S35 as pushback 60 (*"I will
+just say Done and you execute the test on the drill file, and if some error comes
+you can ask me to find the error, then I will implement the check"*), parked under
+the cap, and ruled at the S36 open: **"Adopt with the extra line."**
+
+1. **THE DONE LINE (binding).** **The student ends a drill by saying "done" PLUS
+   ONE LINE: the function he trusts least, and the case about it that worries him.
+   Only then does the mentor run pytest. Anything red comes back to him as
+   "find it" — never as an answer, never as a fix.**
+   **WHAT IT REPLACES:** hand-running and hand-REPORTING all five checks on every
+   function before submitting. **He was right that this duplicated work** — the
+   mentor's tests already cover boundary / empty / single / out-of-range, and his
+   own S24 ruling (*scan five, report only the ones that bite*) had been silently
+   escalated past by the mentor across several sessions. The execution requirement
+   stood; the reporting burden was the thing that had no buyer.
+   **WHY THE EXTRA LINE IS NOT OPTIONAL, and this is the whole of the mentor's
+   half of the bargain:** in an interview nobody hands him a test suite, and this
+   file has recorded twice that **he debugs well with a traceback and poorly
+   without one.** The done-line is the only surviving instrument that makes him
+   predict a failure before a machine names it for him. Drop the line and the rule
+   becomes "the mentor finds all my bugs", which is the condition this course
+   exists to fix.
+   ⚠ **FIRST DATA POINT, S35, AND IT WAS GOOD:** unprompted, he flagged
+   `check_angle` for missing bahar-by-TYPE — the subtle half.
+   ⚠ **SECOND DATA POINT, S36, AND IT WAS NOT.** He said only *"Done"* and the
+   gate was held for the line; what came back was *"the function that worries me
+   is `sort_faults` … I have done more than what was asked"* — **a scope report,
+   not a failure prediction.** And `sort_faults` did carry the session's real bug.
+   **The line is asking WHICH CASE BREAKS IT, not which function felt biggest.
+   Hold that distinction or the rule decays into a formality.**
+
 ### THE THREE SESSION 20 RULES (16 Aug 2026)
 
 **All three came from the student, in the last twenty minutes of the session,
@@ -917,6 +955,9 @@ the current step against this file — no explanation required from him.**
    (S16, S17-2, S17-3)
 5. **Bandwidth** — doubt gate, response length cap, depth-before-answer,
    text for ledger-eligible work. (S18, S20)
+   **S36 extension: THE DONE LINE — the student submits a drill with "done" plus
+   the function he trusts least and the case that worries him; the mentor then
+   runs pytest and returns red as "find it", never as an answer. (S36)**
 6. **Session length and stopping are the student's call.** (S8, S10, S11)
 7. **Closing procedure runs unasked** — files, PDF, spoken summary. (S16, S17)
 

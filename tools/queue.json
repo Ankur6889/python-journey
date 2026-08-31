@@ -123,9 +123,9 @@
     "term": "SyntaxError",
     "hook": "STATION 0 -- grammar broke, so NOTHING ran. NO FRAMES IN THE TRACEBACK. S35: LABEL half hit cold (first in 3 firings); no-frames half BROKE",
     "status": "~",
-    "next_due": "2026-09-04",
-    "last_asked": "2026-08-30",
-    "rating": 6
+    "next_due": "2026-09-01",
+    "last_asked": "2026-08-31",
+    "rating": null
   },
   {
     "term": "HOW FAR DID PYTHON GET?",
@@ -507,9 +507,9 @@
     "term": "TypeError",
     "hook": "operation not defined for the type; '5'+3. Change only the TYPE and it works => TypeError. S35 WOBBLE: called 1+'a' a ValueError, recovered on one narrowing",
     "status": "x",
-    "next_due": "2026-09-01",
-    "last_asked": "2026-08-30",
-    "rating": 5
+    "next_due": "2026-09-05",
+    "last_asked": "2026-08-31",
+    "rating": 7
   },
   {
     "term": "truncation",
@@ -610,9 +610,9 @@
   {
     "term": "StopIteration",
     "hook": "the stop signal; an EXCEPTION. list() is what CATCHES it",
-    "status": "x",
-    "next_due": "2026-09-11",
-    "last_asked": null,
+    "status": "~",
+    "next_due": "2026-09-01",
+    "last_asked": "2026-08-31",
     "rating": null
   },
   {
@@ -914,18 +914,19 @@
   {
     "term": "try / except",
     "hook": "run this; if it RAISES, run that instead of dying. NEW S35",
-    "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-05",
+    "last_asked": "2026-08-31",
+    "rating": 7
   },
   {
     "term": "specific vs bare except",
     "hook": "catch the exception you EXPECT. A bare except: turns a typo into a SILENT WRONG ANSWER. NEW S35 -- and he wrote one 40 min after agreeing it was the worst case",
     "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-05",
+    "last_asked": "2026-08-31",
+    "rating": 7,
+    "note": "S36: the cold ASK passed (7/10) but CURRICULUM sets a stricter condition on this bullet -- it does not promote until his own fresh code stops containing a catch-all. s36_signals shipped an `except Exception` filing into \"broken\"; removed only after a PREDICT. Held [~]."
   },
   {
     "term": "raise",

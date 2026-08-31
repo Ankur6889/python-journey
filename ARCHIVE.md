@@ -367,7 +367,22 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **35**
+- Sessions Completed: **36**
+- **SESSION 36 (Mon 31 Aug 2026, ~11:00–23:30) — 1.9 TAUGHT TO COMPLETION;
+ `drills/s36_signals.py` 35/35; ONE CURRICULUM PROMOTION (`try`/`except` → [x]),
+ FOUR NEW BULLETS OPENED, ONE LEDGER DEMOTION (`StopIteration` [x] → [~]), AND
+ RULES ADOPTED TO v6.** Custom exceptions, the exception hierarchy and `except`
+ ORDERING, re-raise, exceptions-as-control-flow (the S15 IOU paid: `for` IS a
+ `try`/`except StopIteration`), and raise-vs-return. ⚠⚠ **THE HEADLINE IS THE
+ S35 TRANSFER GAP, MEASURED AGAIN AND SHARPER: he passed both cold bare-`except:`
+ recalls at 7/10, fixed his own `total_valid` — and then shipped a CATCH-ALL in
+ fresh code the same evening, correctly ORDERED last. He took the ordering lesson
+ and not the catch-all one.** ⚠ **THE DATE DISPUTE FROM S35 IS SETTLED BY
+ EVIDENCE, NOT BY ASKING: `git log` puts S35 at Sun 30 Aug 17:24 and S34 at Sat
+ 29 Aug 18:29. S34's material WAS eligible in S35 and was wrongly deferred.**
+ ⚠ **A BUG WAS FOUND IN THE MENTOR'S OWN NEW `tools/retest.py`: it demoted on a
+ fail but NEVER PROMOTED ON A PASS.** Every pass since the script was built would
+ have been silently under-recorded. Fixed in session and shown to him.
 - **SESSION 35 (Sun 30 Aug 2026 — ⚠ DATE DISPUTED, see below; ~4h) — 1.9 OPENED
  AND HALF-TAUGHT; ONE LEDGER PROMOTION; ONE CURRICULUM TICK (1.8 `set` CLOSED);
  `drills/s35_faults.py` 29/29 GREEN ON THE FIRST RUN.** The strongest
@@ -823,7 +838,7 @@
 | 33 | **CLOSE THE 1.8 TAIL — `copy.deepcopy`, `reversed()`, common patterns and pitfalls — mixed 50/50 with revision across a 6–8 hour window he asked for** | **`drills/s33_copies.py` — four functions under constraints that never name a mechanism: `snapshot` (independence at every depth), `drop_unsafe` (new list, input untouched, boundary kept out of the docstring and put in the tests), `replay_order` (new list, last-to-first, input untouched), `missing_joints` (returns a set); 25 mentor-written tests. Cold asks fired MIXED INTO the material, never as a block: format-spec alignment on the default form with NO ARROWS; `len([get_limit(...), get_limit(...)])` for `None`-is-not-nothing; `len([])` vs `len([None])`; `dict(defaults)` with a nested list for shallow copy; `path.reverse()` for the mutating tell; the five checks unpacked. TAUGHT: `copy.deepcopy`, `reversed()`, `*` on a sequence, mutate-while-iterating, `[[0]*3]*3`, `_`, and when-to-use-which framed properly at last** | **Complete — 25/25 green, SEVEN promotions, ONE demotion, 1.8 to ~98%** | **PROMOTIONS: format-spec alignment (8/10, fourth session live, closed); `None` is not nothing (7/10); `list()` (7/10, seven sessions overdue); shallow copy / slice-copies-references (7/10); `copy.deepcopy`; set difference `-` (taught S30, never tested until now); boundary-first. ⚠ **DEMOTION: THE MUTATING TELL, [x] → [~]** — he stated it inverted (*"a method on a mutable object mutates the object"*), was shown `.count()` as the counterexample, declared an honest gap on the method, and then could not state the rule at all. Re-taught in three parts with the one-directionality as the headline. ⚠ **THE OVERNIGHT RESULT: a knowledge-STRUCTURE gap named in S32 closed with no drill in between.** ⚠ **THE MISS: `reversed()` lost to `.reverse()` on the name, nine hours after being taught — and under it the `range(len(...))` index habit S29 already caught once.** ⚠ **HELD DELIBERATELY: constructors [~]**, because *"converts"* was still his first word and *"builds a new object"* only came after the mentor pointed at it. ⚠ **MENTOR: THREE.** Define-before-use tenth occurrence (`*` on a sequence in a [PREDICT]; pushback 55, upheld in full after grepping every note file); FRAME FIRST breached on when-to-use-which, where two *"I don't understand the question"* replies were met with a rephrase before the real defect — no frame at all — was admitted; and an over-claim that 1.8 had closed when five bullets remain [~]. ⚠ **A [PREDICT] whose data hid its own bug**: the mutate-while-iterating list returned the RIGHT answer and he predicted it correctly; only a second list exposed the skip. Turned into the lesson, but it was luck. **CHANNEL: unsaved buffer fired ONCE and HE caught it.** Confidence 7–8 throughout and nothing at 7 or above was wrong — the two real misses carried no rating because he could not produce an answer to rate. |
 | 34 | **THE 1.8 TAIL — the four bullets a same sitting still made testable (list, tuple, dict, set); `when to use which` deferred at the open as ineligible** | **`drills/s34_tail.py` — seven functions under constraints naming no mechanism: `build_queue` (new list, front insert, tail extend, input untouched), `drop_task` (in-place, first occurrence only, absent name is a no-op), `ranked`/`rank_in_place` (a deliberate `sorted`-vs-`.sort()` PAIR in adjacent functions), `reading_stats` (tuple roster, `(0, -1)` when absent), `shared_keys` (returns a set), `unique_sensors` (unique AND ordered); 36 mentor-written tests** | **Complete — 36/36 green, after 32/36 then 31/36** | **TWO PROMOTIONS: set-UNORDERED (7/10, named unprompted off his own failing output `['b','c','a']`, and sharpened from "no fixed order" to UNORDERED); `sort` vs `sorted` (the clean cold pass CURRICULUM had said was owed since the S24 inversion — both written correctly in adjacent functions with the choice explained unaided; ⚠ no rating taken, interval defaults SHORT). ONE CURRICULUM TICK: **tuple [~] → [x]**, with an ECHO CAVEAT on `.count()` written beside it. ⚠ **`list` HELD [~] DELIBERATELY** — roster and slicing clean, but the bullet's named core, the returns-`None` tell, broke live in `list(set(names.sort()))`. ⚠⚠ **THE FIVE CHECKS: NEW FAILURE MODE — REPORTED BUT NOT RUN**, written from reading the code rather than executing a case, on two functions that both failed. ⚠⚠ **`reversed()` BROKE IN THE OPPOSITE DIRECTION TO S33** — reached for as a SORT (`reversed(list(set(names)))`) one day after being avoided as a MUTATOR. ⚠ **HE DEBUGS WELL WITH A TRACEBACK AND POORLY WITHOUT ONE**: could not name the error on the failing line at all (honest gap, declared), then found it in one line the moment the traceback appeared. ⚠ **THREE WRONG FIXES BEFORE THE RIGHT ONE — and the middle one was him correctly demolishing his own fix with the set-unordered fact he had just been promoted on.** ⚠⚠ **MENTOR: A GATE MADE IMPOSSIBLE TO DISCHARGE** — the five checks demanded via pytest, which he has never been taught and which STATE item 8 forbids asking for; enforced TWICE before he stopped it. **Pushback 56, upheld in full.** ⚠ **MENTOR: a promised ask never fired** — `.keys()`-as-a-view, announced and then lost, and it blocks a 1.8 bullet. **Pushback 57 (random spaced revision) part-upheld — policy right and already doctrine, factual premise about this session wrong; both halves said to his face. Running total 57/56.** He self-reported fatigue unprompted and closed the session himself.** |
 | 35 | **1.9 ERROR HANDLING — opened, framed and half-taught; plus the two one-line asks that closed the 1.8 `set` bullet** | **`drills/s35_faults.py` — four functions under constraints naming no mechanism: `total_valid` (sum the strings that spell whole numbers, ignore the rest, never crash), `check_angle` (hand back an allowed angle; report a disallowed one as a `ValueError` whose message names both numbers in order), `safe_angles` (keep only allowed readings, deciding via `check_angle` and holding NO second copy of the rule — enforced by a source-inspecting test), `measure` (hand back the number, do not hide the failure from the caller, and log `"closed"` on every way out); 29 mentor-written tests. Plus `drills/s35_check.py`, a mentor-built five-checks runner that calls his functions and prints what came back** | **Complete — 29/29 GREEN ON THE FIRST RUN** | **ONE PROMOTION (`{}` builds a dict / `set()` is the only empty set, 7/10, cold, seven days after S27, mechanism attached to both containers unprompted) — **CLOSING THE 1.8 `set` BULLET**. ONE CURRICULUM TICK. ⚠⚠ **THE HEADLINE: A TRANSFER GAP.** He predicted the bare-`except:` disaster, named the silent `total: 0` as more dangerous than the crash unprompted — *"you ended up believing that program is running fine"* — and wrote `except: pass` in his own code forty minutes later. **Understanding held in [PREDICT] and did not survive into PRODUCTION.** ⚠⚠ **FOUR-STATION HOOK RETIRED** — *"I still don't remember that hook, it has not been working for me"* — second artefact failure on the same material, logged against the artefact; replaced by **"HOW FAR DID PYTHON GET?"**, which he walked correctly and unaided on first use (6/10, under-rated). ⚠⚠ **HE DERIVED THE COMPILE→BYTECODE→RUN SPLIT HIMSELF off one traceback**, third session running with an unprompted derivation. ⚠ **`SyntaxError` LABEL HIT COLD — first time in three firings** (missed S27, S32), on a new shape; **the no-frames half broke in the same breath and he rated the wrong half 7 — his first over-rating in a long while.** ⚠ **`constructors` was one word from `[x]` and the mentor's own [TEACH-BACK] tag cost it** — he said *"the constructor… **builds** the set object"* as his first word, inside a block that is never ledger-eligible. ⚠ **He talked himself OUT of a correct answer because the mentor singled a case out** — named to his face: the framing of a question is not evidence. **THREE PUSHBACKS, ALL UPHELD IN WHOLE OR PART, 60/59: (58)** he refused to answer a `raise ValueError(...)` question because exception classes had never been defined as TYPES — **define-before-use, ELEVENTH occurrence, and the first time he has invoked the eligibility rule himself**; **(59)** the cost of reporting five checks per function — part-upheld, the mentor had escalated past his own S24 ruling, and the cost was fixed with a TOOL not a lecture; **(60)** the drill flow — *"I will just say Done and you execute the test"* — upheld, now parked as the S36 rule candidate with the one-line pre-run call he accepted. ⚠⚠ **MENTOR: THE INTERVAL GATE MAY HAVE BEEN RULED ON THE WRONG DATE.** |
-
+| 36 | 1.9 finished — custom exceptions, hierarchy + ordering, re-raise, control flow | `drills/s36_signals.py` (1 type, 4 functions) | Complete | **35/35.** 3 collection failures first (`OverLimit` misnamed twice), then 2 real bugs found by him on "find it": str-not-int in `"over"`, and a fresh `raise` losing the traceback. ⚠ Shipped a catch-all `except Exception` — removed after a [PREDICT] |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -3806,3 +3821,200 @@ candidate.**
 
 **No rule was adopted. RULES stays at v5.** The S36 candidate is parked in
 STATE.md with the mentor's recommendation recorded as **adopt**.
+
+---
+
+## What Session 36 established (Monday 31 August 2026, ~11:00–23:30)
+
+**The session that finished 1.9, and the third consecutive session whose real
+finding is about TRANSFER rather than knowledge.**
+
+### 0. THE OPEN — three rulings before any teaching
+
+1. **THE INTERVAL GATE, VERIFIED FROM EVIDENCE AND NOT FROM HIM.** `date` gave
+   Mon 31 Aug 11:03; `git log` put S35's commit at **Sun 30 Aug 17:24** and
+   S34's at **Sat 29 Aug 18:29**; `drills/s35_faults.py` mtime **Sun 30 Aug
+   17:10**. Gap ~18 hours, crossing a day boundary ⇒ **later-day evidence
+   eligible.** ✅ **THE S35 DATE DISPUTE IS CLOSED: S35 ran Sunday the 30th, so
+   S34's material was a day cold and was wrongly deferred.** STATE had ordered
+   the mentor to *ask him*; the header's own item 2 had ordered it to *check*.
+   **Checking was right and asking would have re-run the S35 error.**
+2. **THE RULE RULING.** The S35 candidate was put in one line with the mentor's
+   recommendation. His words: **"Adopt with the extra line."** RULES → **v6**.
+3. **BUILD BLOCK 02 AGREED IN ONE LINE:** an episode validator over in-memory
+   dicts (no file I/O — not taught), a custom exception for the unreportable
+   case, ≥90 min, timed, no AI, **`LOG.md` in the definition of done (seventh
+   time of asking).** He ruled it runs *after* 1.9, not instead of it.
+
+### 1. THE HEADLINE — the transfer gap, measured twice more and sharpened
+
+S35 established that a fact he can PREDICT is not yet a fact he will APPLY.
+S36 tested that directly and got a **split result that is more useful than
+either a pass or a fail would have been.**
+
+- ✅ **THE RECALLS PASSED.** On a NEW snippet (`int(cel)` typo'd inside a `try`
+  under a bare `except: pass`) he gave the printed value, named `NameError`, and
+  named the cost unprompted: *"the user might end up thinking the program ran
+  perfectly."* Asked what his own `total_valid` should name, he said `ValueError`
+  and volunteered the consequence. **Both 7/10, both under-rated.**
+- ✅ **HE FIXED HIS OWN S35 CODE** — `except:` → `except ValueError:` — on one
+  pointing question.
+- ⚠⚠ **AND THEN HE SHIPPED A CATCH-ALL IN FRESH CODE THE SAME EVENING.**
+  `sort_faults` in `drills/s36_signals.py` carried a trailing
+  `except Exception: state_dict["broken"].append(r)` — **ordered correctly,
+  last.** He had taken the ORDERING lesson from ninety minutes earlier and not
+  the CATCH-ALL lesson from four hours earlier.
+
+**THE SHARPENED FINDING, and it is the line to carry forward: a bare `except:`
+HIDES a fault; a catch-all that files into a NAMED bucket actively LIES about
+one.** `"broken"` means *this sensor sent garbage text*. A `NameError` in his own
+code would land there and send an engineer to swap a cable on a sensor that was
+working perfectly. **He derived that consequence himself once asked, and deleted
+the block with a correct one-sentence justification.** Bullet held `[~]`; it
+promotes when a fresh file does not contain one.
+
+### 2. WHAT WAS TAUGHT — 1.9 finished
+
+- **THE EXCEPTION HIERARCHY.** ⚠ **HE ASKED FOR THE TOOL BEFORE IT WAS TAUGHT**,
+  by shape rather than by name: *"I want to catch all types of exception … like
+  `except error as e`"*. Second session running he has done this. Taught as a
+  family tree; priced out loud — the word `Exception` is cheap, **the tree is
+  load-bearing**, `except Exception:` vs bare `except:` is a footnote.
+- **`except` ORDERING, PROVED BY RUNNING IT.** *Specific first, general last;
+  first match wins; the ancestor eats its own children.* With `except Exception`
+  moved to the top, the block below became **dead code and Python warned about
+  nothing.** ⚠ He MISSED the prediction first time (*"the output will still be
+  the same because the exception caught depends on the inputs"*) and recovered
+  fully on one narrowing question, supplying **"child class"** from his own prior
+  knowledge and **flagging that it was his and not the mentor's.**
+- **CUSTOM EXCEPTIONS.** Motivated on a collision he could SEE: `int("n/a")` and
+  his own `raise ValueError` are the same type, so one `except ValueError` cannot
+  separate *the sensor is dead* from *the joint is over limit* — **one means the
+  arm may be about to hit something, the other means you have gone blind on that
+  joint, and the code returned `[45, 90]` for both.** `class OverLimit(Exception):
+  pass` given as the whole of it, with `class` declared **open on credit** (1.11
+  owns it).
+- **RE-RAISE.** Bare `raise` inside `except` = throw the same exception again,
+  original traceback intact. ⚠ **A REAL MISCONCEPTION WAS CAUGHT AND KILLED:** he
+  believed a re-raised exception is re-offered to the SIBLING `except` blocks of
+  the same `try`. Demonstrated live that `except Exception` sitting directly
+  below **does not run**. **THE RULE: once Python enters an `except` block, that
+  `try` is finished; anything raised inside it goes OUTWARD.** The traceback
+  pointing at **line 2, not line 5**, was the evidence for what a bare `raise`
+  buys over `raise e`.
+- **EXCEPTIONS AS CONTROL FLOW — THE S15 IOU, PAID.** `for x in box:` written out
+  as the `while True` / `try` / `except StopIteration: break` it actually is.
+  **Every `for` he has ever written catches an exception on every successful
+  run.** Asked what that does to "exceptions are for errors" he answered in one
+  line: *"as per the definition we already know exceptions are for signals"* —
+  **S15 material, three weeks cold, intact.**
+- **RAISE-VS-RETURN, 1.9's TAKEAWAY.** A return value can be ignored silently; a
+  print can be ignored *and* steals the caller's output policy; a raise cannot be
+  ignored. **Proved on a live sentinel bug: `get_joint` returned `None`, the
+  crash landed on line 14, the typo was on line 11.** ⚠ **A sentinel return moves
+  the failure away from its cause.**
+
+### 3. THE DRILL — `drills/s36_signals.py`, 35/35
+
+One type, four functions, 35 tests, validated against a reference solution that
+was then deleted. Three rounds:
+
+1. **Two consecutive collection failures on an identifier the spec wrote down.**
+   Asked for `OverLimit`, he wrote `JointLimitError` (the name from the mentor's
+   demo), then `OverLimitError` (the mentor's own "convention" footnote applied
+   over the literal spec). **Zero tests ran either time.**
+   ⚠⚠ **NEW FINDING, AND IT IS CHEAP TO FIX AND EXPENSIVE TO LEAVE: IDENTIFIERS
+   ARE NOT PARAPHRASABLE.** Note the shape — **the thing on screen five minutes
+   ago beat the spec in front of him**, twice. That is the same mechanism as the
+   catch-all and the same mechanism as S35's bare `except:`.
+2. **Two real bugs, both found by him on "find it"** — the `"over"` list holding
+   strings instead of ints, and `audited` raising a FRESH exception so the
+   traceback no longer pointed at `check_limit`.
+3. ✅ **THE REST WAS RIGHT FIRST TIME:** `except Exception` ordered last, bare
+   `raise`, `check_limit` called rather than copied, `read_limit` raising with the
+   joint named.
+
+⚠ **HE INVENTED `UnknownJointError` UNASKED AND FLAGGED IT HIMSELF** — *"I have
+done more than what was asked"*. **Ruled NOT scope-creep but a defensible design
+trade**, and priced honestly rather than praised: let `KeyError` fly in internal
+code; raise your own type in a library, because **it hides that `config` happens
+to be a dict**, and callers catching `KeyError` break when it stops being one.
+
+### 4. THE LEDGER
+
+- ✅ **PROMOTED: `try` / `except` → `[x]`** on two cold later-day recalls, both
+  7/10. **First 1.9 tick.**
+- ⚠ **DEMOTED: `StopIteration` `[x]` → `[~]`.** Mechanism intact after three
+  weeks (`10`, `20`, then a raise, and the third `print` never runs); **the LABEL
+  came back as "EndofIteration".** Self-rated 6. **His exact signature: the
+  machinery holds, the arbitrary word does not.** Re-derivation given instead of
+  the word.
+- ⚠ **`SyntaxError` no-frames half — MISSED AGAIN, SECOND FIRING, AND THEN
+  RECLASSIFIED.** Asked whether line 1 printed above a missing colon he said yes;
+  it does not. **He pushed back that the ask was unfair** (pushback 64) —
+  **UPHELD IN PART**: the framing pointed at line 1 and asked a yes/no about
+  printing, rather than *what happens when you run this*. **NOT upheld on
+  "syntax errors are easy to miss"** — he will never need to spot one by eye;
+  Python does it with a caret and a line number. **His actual claim was "I know
+  the rule", and it was TESTED IMMEDIATELY on a clean no-code ask (40 lines,
+  missing colon on line 40): he answered correctly with the mechanism.**
+  ⇒ **The entry is reclassified from KNOWLEDGE GAP to DETECTION MISS UNDER A BAD
+  FRAME.** Row stays `[~]`.
+- ⚠⚠ **AND THE MENTOR REFUSED ITS OWN PROMOTION, OUT LOUD.** The compile/run
+  split could have been ticked on that answer — but the mentor had **quoted his
+  S35 derivation back at him and stated the mechanism two turns earlier.**
+  **That is echo, not recall.** Held for a clean cold ask, with the reason given
+  to his face and the S15 precedent named (he refused a rating on fresh material;
+  the mentor applied the same standard to itself).
+- `TypeError` passed cold at 7/10 on the sentinel bug, matching yesterday's
+  discriminator exactly.
+
+### 5. MENTOR FAILURES THIS SESSION — four, and one is a tool bug
+
+1. ⚠⚠ **`tools/retest.py` HAD A SILENT PROMOTION BUG.** Built in S35, it demoted
+   on a fail and **never promoted on a pass** — every pass since would have been
+   under-recorded, in a tool whose entire purpose is that the ledger stops being
+   hand-scheduled. Found by noticing a `[~]` printed after a recorded pass, fixed
+   in session, and **shown to him rather than quietly patched.** This is exactly
+   the file's own principle: *an artefact that looks authoritative while being
+   wrong is worse than one that is missing.*
+2. ⚠ **CONSOLIDATED QUESTION WITHOUT ITS CODE — S19's rule, breached.** The
+   raise-vs-return question was posed as a fragment referencing `cfg` and `angle`,
+   neither defined; it was not even runnable. **He stopped it** (*"the whole code
+   should be in front of eyes … otherwise we need to waste time to go up and
+   see"*). **Pushback 62, upheld in full.** Re-posed complete and he answered
+   immediately.
+3. ⚠ **FRAME FIRST, BREACHED.** He was told to edit line 30 of his own file
+   without being told what the edit was FOR, and asked directly: *"what is it you
+   actually want from this exercise?"* **Pushback 61, upheld.** The honest reason
+   (this is the transfer test; the measure of a taught idea is whether it shows up
+   in your next file) landed immediately once given.
+4. ⚠ **THE STUDENT'S OWN CODE WAS MISQUOTED BACK AT HIM.** Restating
+   `total_valid`, the mentor wrote `return filtered_readings and sum(...)`; his
+   file said `return sum(...)`. **He did not catch it; the mentor caught it and
+   logged it against itself.** A wrong quote from the mentor is more dangerous
+   than no quote.
+5. ⚠ **NO CONFIDENCE RATINGS WERE TAKEN ON THE DRILL FUNCTIONS**, which is why
+   `raise` could not promote despite being written cold and correctly a day after
+   it was taught. **RULES S16-3 requires the rating. Take one per function at the
+   next drill close.**
+
+### 6. THE NEW RULE'S SECOND DATA POINT — and it was not good
+
+The done-line fired for the first time under adoption. He said only **"Done"**;
+the gate was held; what came back was **a scope report** (*"the function that
+worries me is `sort_faults` … I have done more than what was asked"*), **not a
+failure prediction.** `sort_faults` did carry the session's real bug, so the
+instinct pointed at the right function for the wrong reason. **The line asks
+WHICH CASE BREAKS IT. Hold that or the rule decays into a formality.**
+
+### 7. PUSHBACK
+
+**DENOMINATOR: 64 raised, 63 upheld or part-upheld.** S36 raised four (61, 62,
+63, 64); **three upheld in full or part, and one — pushback 63, "I haven't been
+taught imports" — upheld in part**: `import` genuinely has never been taught and
+the import was in the mentor's own test file, so the minimum was defined (*go
+into your file and fetch these five names*) and nothing more.
+
+**RULES was adopted to v6.** CURRICULUM: one promotion (`try`/`except`), four
+bullets opened at `[~]`, one demotion (`StopIteration`).

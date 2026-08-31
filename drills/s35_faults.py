@@ -27,8 +27,8 @@ def total_valid(readings):
     for i in readings:
         try:
             filtered_readings.append(int(i))
-        except:
-            pass 
+        except ValueError as e:
+            print(f"There is a problem with the reading {i} you are supposed to enter numbers only")
     return sum(filtered_readings)
 
 
