@@ -80,6 +80,12 @@ them apart:
 
 "Value is wrong" includes **the wrong type**. `"240"` is not an `int`.
 
+**One field can never produce both codes** — if the key is absent there is no
+value to be wrong about. Per field: one code, or none. Never two.
+
+**A record can mix the two kinds across different fields**, and the list stays
+in FIELD order — `id`, `frames`, `fps`, `task` — not grouped by kind.
+
 ---
 
 # L1
@@ -108,6 +114,9 @@ faults({"id": 3, "frames": 90, "fps": 30})
 
 faults({"id": 3, "frames": "90", "fps": 30, "task": "grasp"})
     == ["frames"]
+
+faults({"id": 3, "frames": "90", "fps": 30})
+    == ["frames", "missing:task"]
 ```
 
 ⚠ Look at the last two again. **A record can hand you a `KeyError` and a

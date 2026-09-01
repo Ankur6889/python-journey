@@ -59,6 +59,11 @@ def test_L1_wrong_type_on_id_and_on_task():
     assert faults(record) == ["id", "task"]
 
 
+def test_L1_missing_and_wrong_mix_in_field_order():
+    record = {"id": 3, "frames": "90", "fps": 30}
+    assert faults(record) == ["frames", "missing:task"]
+
+
 def test_L1_zero_id_is_allowed_but_zero_frames_is_not():
     # id >= 0, frames >= 1. The two boundaries sit on either side of 0.
     assert faults({"id": 0, "frames": 1, "fps": 10, "task": "x"}) == []
