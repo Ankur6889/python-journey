@@ -367,7 +367,19 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **36**
+- Sessions Completed: **37**
+- **SESSION 38 (Tue 1 Sep 2026, 14:29–21:20) — PURE REVISION, OLDEST-FIRST, AT
+  HIS REQUEST.** He opened with *"in this session I don't want to study anything
+  new, lets revise or clear the oldest content... start with the oldest and as we
+  progress come towards the newer content."* The interval gate made it the only
+  legal instrument anyway — S37 had closed 8h50m earlier, same calendar day, so
+  the August gauntlet deferred a second time and nothing from S37 was testable.
+  **20 queue rows fired, 15 passes / 5 fails. Queue 66 [x] → 77 [x]; overdue
+  38 → 25; never-asked 12 → 8.** The eleven-session `while` debt paid at 20/20
+  cold; the compile/run split paid at the third asking. **Two curriculum bullets
+  moved — 1.8 `list` → [x] and 1.9 `Common built-in exceptions` [ ] → [~] —
+  the first curriculum movement since S36.** ⚠ **Four of the five failures were
+  LABELS on intact mechanisms.**
 - **SESSION 37 (Tue 1 Sep 2026, 00:18–05:35, ~5¼h) — COLD BUILD BLOCK 02.**
   The August gauntlet was scheduled for this session and the INTERVAL GATE moved
   it in the first sixty seconds: S36 had ended 27 minutes earlier, so no recall
@@ -857,6 +869,7 @@
 | 35 | **1.9 ERROR HANDLING — opened, framed and half-taught; plus the two one-line asks that closed the 1.8 `set` bullet** | **`drills/s35_faults.py` — four functions under constraints naming no mechanism: `total_valid` (sum the strings that spell whole numbers, ignore the rest, never crash), `check_angle` (hand back an allowed angle; report a disallowed one as a `ValueError` whose message names both numbers in order), `safe_angles` (keep only allowed readings, deciding via `check_angle` and holding NO second copy of the rule — enforced by a source-inspecting test), `measure` (hand back the number, do not hide the failure from the caller, and log `"closed"` on every way out); 29 mentor-written tests. Plus `drills/s35_check.py`, a mentor-built five-checks runner that calls his functions and prints what came back** | **Complete — 29/29 GREEN ON THE FIRST RUN** | **ONE PROMOTION (`{}` builds a dict / `set()` is the only empty set, 7/10, cold, seven days after S27, mechanism attached to both containers unprompted) — **CLOSING THE 1.8 `set` BULLET**. ONE CURRICULUM TICK. ⚠⚠ **THE HEADLINE: A TRANSFER GAP.** He predicted the bare-`except:` disaster, named the silent `total: 0` as more dangerous than the crash unprompted — *"you ended up believing that program is running fine"* — and wrote `except: pass` in his own code forty minutes later. **Understanding held in [PREDICT] and did not survive into PRODUCTION.** ⚠⚠ **FOUR-STATION HOOK RETIRED** — *"I still don't remember that hook, it has not been working for me"* — second artefact failure on the same material, logged against the artefact; replaced by **"HOW FAR DID PYTHON GET?"**, which he walked correctly and unaided on first use (6/10, under-rated). ⚠⚠ **HE DERIVED THE COMPILE→BYTECODE→RUN SPLIT HIMSELF off one traceback**, third session running with an unprompted derivation. ⚠ **`SyntaxError` LABEL HIT COLD — first time in three firings** (missed S27, S32), on a new shape; **the no-frames half broke in the same breath and he rated the wrong half 7 — his first over-rating in a long while.** ⚠ **`constructors` was one word from `[x]` and the mentor's own [TEACH-BACK] tag cost it** — he said *"the constructor… **builds** the set object"* as his first word, inside a block that is never ledger-eligible. ⚠ **He talked himself OUT of a correct answer because the mentor singled a case out** — named to his face: the framing of a question is not evidence. **THREE PUSHBACKS, ALL UPHELD IN WHOLE OR PART, 60/59: (58)** he refused to answer a `raise ValueError(...)` question because exception classes had never been defined as TYPES — **define-before-use, ELEVENTH occurrence, and the first time he has invoked the eligibility rule himself**; **(59)** the cost of reporting five checks per function — part-upheld, the mentor had escalated past his own S24 ruling, and the cost was fixed with a TOOL not a lecture; **(60)** the drill flow — *"I will just say Done and you execute the test"* — upheld, now parked as the S36 rule candidate with the one-line pre-run call he accepted. ⚠⚠ **MENTOR: THE INTERVAL GATE MAY HAVE BEEN RULED ON THE WRONG DATE.** |
 | 36 | 1.9 finished — custom exceptions, hierarchy + ordering, re-raise, control flow | `drills/s36_signals.py` (1 type, 4 functions) | Complete | **35/35.** 3 collection failures first (`OverLimit` misnamed twice), then 2 real bugs found by him on "find it": str-not-int in `"over"`, and a fresh `raise` losing the traceback. ⚠ Shipped a catch-all `except Exception` — removed after a [PREDICT] |
 | 37 | **COLD BUILD BLOCK 02 — the measurement instrument, not a curriculum item. The August gauntlet was displaced to S38 by the interval gate (27 min since S36).** | **`builds/block_02_episode_validator/validator.py` — written cold, no AI, no notes, against a mentor-written 27-test suite. L1 `faults(record)` → list of fault-code strings, field order, `"missing:<f>"` vs `"<f>"`; L2 `validate_all(records)` → `{"clean": [...], "faulty": {id: [...]}}`, dataset unmutated; L3 `UnidentifiedEpisode`, raised when the report is keyed by something the record does not have; L4 `validate_logged(records, log)` — log without altering the fault. L5 not attempted.** | **Complete — 27/27, 2h 55m (`a3cb34e` → `9d03b48`)** | **ONE bug in the whole block (`return output, log`), in the function his DONE LINE named, fixed off the raw assertion with no answer given — RULES v6's third data point and its first good one. ⚠⚠ **THE TRANSFER GAP POSITIVE: zero bare `except:` or `except Exception:` in 81 lines**, same interval as the S36 failure. DRY held structurally unprompted (`fps_defaults` once; `validate_all` asks `faults`); nothing prints; `sort(key=record_struct.index)` reused 14 sessions after S23; he designed the `KeyError` out of existence rather than catching it. ⚠ **`short-circuit` DEMOTED on a cold miss** — said `type(x) != int or x < 0` raises `TypeError`; it prints `True`; **his code was right and his model of why was wrong**, leaving three unreachable `except TypeError:` blocks he had defended in prose. ⚠ **THE COMPILE/RUN SPLIT ASKED TWICE AND ANSWERED NEITHER TIME** — he gave the CAUSE of his own `SyntaxError` instead, correctly; third asking now owed. ⚠ **ZERO PROMOTIONS, correctly — same sitting throughout.** FIVE pushbacks, all upheld in whole or part, running total 69/68, **all five against the SPEC** — one of them found a case neither the brief nor the tests covered and added a 27th test. ⚠ **He closed with the tree RED by explicit ruling** (*"close it, let those remain there"*) after a cleanup deleted three `except` lines and left their `try:` behind. |
+| 38 | **PURE REVISION SESSION, oldest-first, requested by the student. No new curriculum material. Twenty ledger rows fired in age order: compile/run split (S27) → `while` mechanics (S17) → frames/namespaces (S14) → the mutating tell + `str` immutability (S17/S34) → `constructors` (S15, asked UN-TAGGED) → `del`/`.clear()` (S18) → `sorted`/`key=`/`lambda`/`reversed()` (S22–S23) → hashability + `subscriptable` (S24) → unpacking `ValueError` + `zip`'s two silent failures (S29–S30) → `.keys()` as a view (S35).** | **`drills/s38_while.py` — two functions under constraints naming no mechanism: `backoff_steps(gap)` (count the halvings until a gap reaches 0 — an unknown trip count, so no closed form and no `for` over a known range) and `first_bad(rows)` (first negative in a list of lists, row-major, returned as `(row, col)`, `None` if absent — nested iteration with an early exit); 20 mentor-written tests. Everything else ran as text asks with runnable snippets.** | **Complete — 20/20 GREEN ON FIRST SUBMISSION** | **ELEVEN PROMOTIONS, the largest single-session queue movement in the file, and every one on material 8–24 days old: compile/run split; `while` mechanics/nested loops/found-flag (**eleven sessions overdue — the oldest debt in the file, now paid**); frames; namespace-vs-frame; the mutating tell (**both halves — he stated the one-directional rule himself and applied it to an UNSEEN method, `extend`**); in-place mutators return `None`; the mutable/immutable discriminator; `str` immutability; `constructors` (**"constructor" as his FIRST word on an un-tagged ask**); `sort` vs `sorted` + `key=` + `lambda` + `reversed()` (one correct line, `list(reversed(sorted(records, key=lambda x: x["frames"])))`, `records` unmutated); `zip`'s two silent failures. **TWO CURRICULUM TICKS: 1.8 `list` [~] → [x]** (both recorded blockers cleared — the S24 `sort`/`sorted` inversion and the returns-`None` tell that broke live in S34) **and 1.9 `Common built-in exceptions` [ ] → [~]**, the last untouched bullet in 1.9. ⚠⚠ **FOUR OF THE FIVE FAILURES WERE LABELS SITTING ON INTACT MECHANISMS** — `del` (gap declared honestly, then taught; his teach-back was the sharpest line of the session: *"del does not return anything, and by nothing I don't mean None"*); `hashable` (**derived mutable ⇒ unhashable ⇒ not a key unaided, then *"can't come up with the error myself"*); `subscriptable` (said `IndexError`, having used the exact right type-vs-value discriminator sixty seconds earlier); unpacking (**named the count mismatch precisely and then reasoned himself OUT of `ValueError` on a too-narrow definition of it**). ⚠⚠ **THE FIFTH FAILURE IS THE SESSION'S REAL FINDING: `.keys()` AS A VIEW — A MISSING INDEX, NOT A MISSING FACT.** He wrote `list(reversed(...))` unprompted and explained `zip` exhaustion as *"forward only state, once consumed need to be recreated"* — then said a `dict_keys` object could not see a key added after it was made. **He owns the lazy-vs-snapshot pattern and did not recognise the third instance of it.** ⚠ **CONFIDENCE: seven consecutive 7s on seven correct answers, challenged to his face with his own S17 record, after which he spread to 8/8/6/6/5 — the 6 correctly flagging the one he got wrong, but the bottom of the scale now UNDER-reading.** ⚠ **DEAD CODE, second instance and his own: an `if gap != 0:` guard that could never change the outcome, whose origin he explained correctly and unaided (written for an older spec, left behind when the spec changed).** ⚠ **STATE.md CARRIED A FALSE ALARM INTO THE SESSION** — the S37 header said the tree was RED with three unclosed `try:` blocks; `HEAD` was green and 27/27 on the first run. ⚠ **MENTOR: the `.keys()` snippet was RUN BEFORE his rating was taken, leaking the answer — self-caught, disclosed, rating not logged.** **ONE PUSHBACK (70), UPHELD IN FULL: the drill spec read as recursion** — *"seems like you want to see recursion, can you be more clear"* — rewritten before he started, after which he passed 20/20 first submission. Running total **70 raised, 69 upheld or part-upheld.** He closed by asking whether the promise to make him able to read complex codebases was still in the plan, and was given the arithmetic rather than reassurance. |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -4275,3 +4288,183 @@ explicit ruling, and fixing it is the first item of S38.
 **RULES unchanged at v6 — no rule was adopted and none was parked. CURRICULUM
 unchanged — zero ticks moved, correctly, because the entire session was one
 sitting.**
+
+
+## What Session 38 established (Tuesday 1 September 2026, 14:29 → 21:20)
+
+**The session he asked for, and the instrument the interval gate would have
+chosen anyway.** His opening: *"in this session I don't want to study anything
+new, lets revise or clear the oldest content that we studied and still there
+for x — start with the oldest, ask me questions or drills, and as we progress
+come towards the newer content."* The gate then verified S37 had closed 8h50m
+earlier on the same calendar day, which deferred the August gauntlet a second
+time and made everything from S37 untestable — **and left exactly one legal,
+high-value instrument: cold asks on material 8–24 days old.** The request and
+the constraint pointed at the same session.
+
+**Result: 20 rows fired, 15 passes, 5 fails. Queue 66 [x] → 77 [x]; overdue
+38 → 25; never-asked 12 → 8. Two curriculum bullets moved.**
+
+### 1. THE OLDEST DEBT IN THE FILE IS PAID
+
+`while` mechanics / nested loops / found-flag had not been tested since 10 Aug —
+**eleven sessions.** `drills/s38_while.py`, two functions, **20/20 green on the
+first submission**: two `while` loops, a nested `while` with an early `return`,
+and `first_bad` falling off the end to return `None` correctly. Written cold, no
+AI, no notes.
+
+`backoff_steps` was deliberately built so the mechanism was **necessary** — an
+unknown trip count, no closed form available with what he has been taught, and
+no `for` over a known range. That is RULES proposal 1 applied properly for once.
+
+### 2. THE COMPILE/RUN SPLIT, THIRD TIME OF ASKING, PAID IN ONE TURN
+
+Fired cold and standalone as the session's first question, with nothing about
+syntax in the preceding turns, exactly as S37 specified. He gave the label first
+(*"syntax Error, if doesn't have a :"*) — which is the CAUSE, not the question,
+and is what happened twice in S37. **Depth-before-answer was applied instead of
+being let go: the question was re-asked in one line, narrowed to the output.**
+He then produced the full mechanism:
+
+> *"it will show nothing at all because the code execution starts once the code
+> has been converted to bytecode, but since syntaxError, it will never enter the
+> execution state"*
+
+**The rule worked precisely where it had failed the session before.** Re-asking
+cost one line; letting it go cost S37 the whole item.
+
+### 3. THE SESSION'S REAL FINDING: A MISSING INDEX, NOT A MISSING FACT
+
+The one mechanism failure of the day was `.keys()` as a view. Given
+`k = d.keys()` then `d["c"] = 3`, he said `k` prints `dict_keys(['a','b'])`,
+*"the line comes after, so it will not impact k"*.
+
+**What makes this the finding rather than a missed fact: in the same session,
+twice, he handled the identical pattern correctly and unprompted.** He wrote
+`list(reversed(sorted(...)))` — the `list()` there is not decoration, it is the
+snapshot of a lazy object — and he explained `zip` exhaustion in his own words
+as *"kind of like iterator with forward only state, once consumed need to be
+recreated"*.
+
+**He owns lazy-vs-snapshot. He did not recognise `.keys()` as an instance of it.**
+Every previous formulation of the transfer gap has been about time or channel
+(S33 where the ask sits; S34 execution; S35 predict-vs-apply; S36 the last
+lesson displacing the one before). **This one is cleaner: the pattern is
+present, general, and correctly applied twice — and the third case did not get
+indexed to it.** The remedy written into STATE is to ask it AS an instance:
+*which of `d.keys()`, `list(d.keys())`, `zip(a,b)` are live and which are frozen?*
+
+### 4. FOUR OF THE FIVE FAILURES WERE LABELS ON INTACT MECHANISMS
+
+This is now the most replicated finding in the file, and S38 produced three
+textbook cases in twenty minutes:
+
+- **`hashable`** — he derived the whole mechanism unaided (*"every key on the
+  dict are hashed... should be unique object, so should be immutables, this
+  should give error because list are mutable so non-hashable"*) and then:
+  *"can't come up with the error myself."* `TypeError` was gone.
+- **`subscriptable`** — he said `IndexError`, **sixty seconds after using the
+  correct type-vs-value discriminator on the dict key.** Rated 6, and the 6 was
+  the only rating of the day that flagged a wrong answer.
+- **unpacking** — he named the count mismatch exactly, ruled out `TypeError` for
+  the right reason, and then **reasoned himself out of the correct answer** on a
+  too-narrow definition: *"value Error is when we give a value which is not
+  directly convertible."* That is one instance of `ValueError`, not its
+  definition.
+
+**Taught in response, as a discriminator rather than a roster** (the S17 method
+that this file already says is the right answer to every roster-shaped
+question): `TypeError` = wrong TYPE, the operation is impossible for this kind
+of thing. `ValueError` = RIGHT type, WRONG value. `IndexError` = the type
+indexes fine, THIS index does not exist. **Item count is a property of the
+value, not the type — which is why unpacking raises `ValueError`.** That
+teaching is what moved 1.9's last untouched bullet from `[ ]` to `[~]`.
+
+### 5. CONFIDENCE CALIBRATION — CHALLENGED, MOVED, THEN OVERSHOT
+
+He opened with **seven consecutive 7s on seven correct answers.** Named to his
+face, with his own record as the evidence rather than encouragement: a flat 7
+across six passes aims the next re-test at nothing, and S17 is on file where his
+per-item ratings were sharp enough to be used as a targeting signal.
+
+**He spread them immediately: 8, 8, 6, 6, 5.** The 6 on `subscriptable` caught
+the one he got wrong. But the bottom of the scale now reads low — **6 → correct,
+5 → correct** — and the 5 sat on an answer containing the complete lazy-iterator
+model. Recorded as drift in the opposite direction, not as a fix.
+
+### 6. HE AUDITED THE LEDGER MID-SESSION
+
+Unprompted, after six passes: *"wait before I do the next one, what is happening
+to the items I have reproduced cold, are you 'x'ing them??"*
+
+He was given a table: what was provisionally earned, that **nothing is ticked
+mid-session**, that both items were queue rows rather than CURRICULUM bullets so
+**curriculum movement at that point was zero**, and that the ticks were legal
+because the MATERIAL was 22 and 10 days old even though the SESSION gap was nine
+hours. **This is the eighth or ninth instance of him policing the measurement
+system he depends on, and it arrived at exactly the moment the mentor had begun
+accumulating passes without saying where they were going.**
+
+### 7. THE CLOSING QUESTION, AND THE ANSWER HE WAS GIVEN
+
+*"When we started the course, the agreement was to make me capable of reading
+and understanding complex code bases — is that still part of plan and if yes
+when will we reach that stage?"*
+
+Answered with arithmetic rather than reassurance: it is one of the four things
+RULES.md says Layer 0 must deliver; **it is not a unit and never was**, which is
+why he has not seen it; it is blocked on 1.10 (the map — where a name comes
+from, `__init__.py`, `sys.path`), 1.12 (LeRobot, openpi and PyTorch **are** class
+hierarchies) and 1.13 (`@property`, `@torch.no_grad()`, `__call__`,
+`__getitem__`); **realistically the third week of September**; and the honest
+risk was named — **1.12 is the largest unopened unit while `class` is already on
+credit, with four exception classes written and the construct never taught.**
+
+One option was put to him explicitly **as a scheduling choice and not as a
+rule** (nothing is parked; the cap is intact): once 1.10 lands, point the weekly
+cold build block at a real LeRobot file instead of a synthetic task. **His ruling
+is owed at the S39 open.**
+
+### 8. STRIKE-THROUGH AND CORRECTION TO THE S37 RECORD
+
+S37's block states the session closed with the working tree **red** by his
+explicit ruling — three `try:` blocks whose `except` lines had been deleted,
+zero tests collecting — and S37's STATE header made fixing it the first action
+of S38.
+
+**~~The tree was red at S37's close.~~ IT WAS NOT.** Checked against the repo
+before teaching: `HEAD` (`0c95d93`) contains all three `except TypeError:`
+blocks, `git status` was clean, and `test_validator.py` ran **27/27 on the first
+attempt.** The file mtime is 05:32 — **between his 05:29 breakage and his 05:35
+ruling** — so he had already repaired it, and the ruling was recorded without
+re-reading the file.
+
+**The lesson is the one this file already states about itself and had not yet
+applied to itself: an artefact that looks authoritative while being wrong is
+worse than one that is missing.** STATE.md is such an artefact. **Verify a STATE
+warning against the repo before acting on it** — written into the S39 header.
+
+### 9. MENTOR ERRORS
+
+1. **SPEC BEFORE PUZZLE, breached — pushback 70, upheld in full.** The first
+   version of `backoff_steps` described "a control cycle that closes HALF the
+   remaining gap", and he stopped it: *"the description is not very helpful,
+   seems like you want to see recursion, can you be more clear."* He was right
+   twice over — the jargon was dressing, and a self-referential shrinking
+   process genuinely reads as recursion. **Rewritten to plain steps with two
+   worked traces, and he was told what was being measured (loop work) while the
+   part that IS the measurement (which loop, and how structured) was withheld.
+   He then passed 20/20 on first submission.**
+2. **THE CONFIDENCE RULE'S OPERATIONAL HALF, breached.** The `.keys()` snippet
+   was executed in a visible tool call **before** his rating was taken, which
+   can leak the answer to a rating that is supposed to precede the verdict.
+   **Self-caught and disclosed to him in the same turn; no rating logged.** The
+   binding rule is about the ORDER of rating and verdict — running the code is
+   part of the verdict.
+3. **STATE.md's own false alarm** (section 8) — not a live error, since it was
+   checked, but it is a defect in the mentor's own artefact and it is logged
+   as one.
+
+**RULES unchanged at v6 — no rule was adopted and none is parked. CURRICULUM:
+TWO ticks moved, 1.8 `list` → [x] and 1.9 `Common built-in exceptions`
+[ ] → [~].**

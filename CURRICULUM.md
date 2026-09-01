@@ -1147,7 +1147,7 @@ false.
 > items]`). Both are listed in 1.8. Mark them seen-but-not-taught.**
 
 #### 1.8 Data Structures
-- [~] list — methods, indexing, slicing — **TAUGHT S24** (`drills/s24_lists.py`,
+- [x] list — methods, indexing, slicing — **TAUGHT S24, EARNED S38** (`drills/s24_lists.py`,
  11/11 pytest, one guided fix). Covered: INDEXING formally (0-based, last
  index is `len-1`, negative indices, `IndexError`) — **it had never been
  defined, despite `__closure__[0]` being used for two sessions; caught by
@@ -1166,6 +1166,23 @@ false.
  in the volley (`sort` "returns a new list for sure") — the block was
  tagged [PREDICT], so **that miss is NOT ledgered**; it needs a clean cold
  [RECALL] pass. Shallow-vs-deep copy PARKED to "nested data structures".
+ ⚠ **PROMOTED S38 (1 Sep 2026). BOTH recorded blockers cleared cold, later-day,
+ in one session.** (a) THE SORT/SORTED INVERSION, which is what this bullet said
+ it was waiting for: asked cold 13 days on, he wrote
+ `list(reversed(sorted(records, key=lambda x: x["frames"])))` unaided, left
+ `records` unmutated, and wrapped `reversed` in `list()` because it returns an
+ ITERATOR — rated 8. (b) THE RETURNS-`None` TELL, which broke live in S34: he
+ stated the one-directional discriminator himself, unprompted and in the file's
+ own terms — *"all the methods that return None are mutating method but all the
+ mutating methods doesen't return None"* — and applied it to an UNSEEN method
+ (`extend`) to infer that the list had been mutated. `.sort()`, `.clear()` and
+ `.pop()` all read correctly. Nested indexing (`rows[row_index][column_index]`,
+ `len(rows[row_index])`) was written cold in `drills/s38_while.py`, 20/20.
+ SLICING is not part of today's evidence and does not need to be — it is
+ already `[x]` in the queue (`slicing / SHALLOW COPY`, S26/S33).
+ Evidence: S38 transcript + `drills/s38_while.py` + queue rows
+ `sort vs sorted`, `key=`, `reversed() vs .reverse()`, `in-place mutators
+ return None`, `mutable/immutable discriminator`.
 - [x] **Copy semantics: a slice copies the REFERENCES, not the items** —
  **TAUGHT S26, DERIVED UNPROMPTED S32, PROMOTED S33.** Asked cold the next
  evening on `dict(defaults)` with a nested list: he gave the correct printed
@@ -1666,7 +1683,23 @@ false.
  described in PROSE and he rebuilt it wrong, not having noticed that the
  `print("SAFETY:")` moves DOWN with its block. Re-posed as literal code, he got it
  immediately. **S19's rule again: the code goes next to the question.**
-- [ ] Common built-in exceptions
+- [~] **Common built-in exceptions — OPENED S38 (1 Sep 2026), after being the
+ only untouched bullet in 1.9.** Not taught as a roster; taught as the
+ DISCRIMINATOR, which is the Level-2 form. Fired cold: `TypeError` on an
+ unhashable dict key (mechanism produced unaided — mutable ⇒ unhashable ⇒ not
+ a key — LABEL missing); `'int' object is not subscriptable` (**MISS — he said
+ `IndexError`**, rated 6, and the 6 correctly flagged his own wrong answer);
+ `a, b = [1, 2, 3]` (**MISS — mechanism right, count mismatch named exactly,
+ but he reasoned himself OUT of `ValueError` on a too-narrow definition:**
+ *"value Error is when we give a value which is not directly convertible"*).
+ TAUGHT IN RESPONSE: **`TypeError` = wrong TYPE, the operation is impossible
+ for this kind of thing; `ValueError` = RIGHT type, WRONG value; `IndexError`
+ = the type indexes fine, THIS index does not exist.** Item count is a
+ property of the value, not the type — hence `ValueError` on unpacking.
+ `NameError` (the NAME broke) and `SyntaxError` (compile time, nothing runs)
+ both landed clean the same session. ⚠ **STAYS `[~]`: three of the misses were
+ LABELS on intact mechanisms, which is this student's diagnosed signature.
+ Queue rows `hashable`, `subscriptable`, `unpacking` all due 2 Sep.**
 - [~] **Using exceptions for control flow vs error handling — TAUGHT S36, and the S15 IOU was finally paid.** (**pre-loaded S15
  — the iteration protocol IS exception-driven control flow, and that is a
  genuinely interesting design point to raise here**)
