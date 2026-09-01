@@ -570,9 +570,9 @@
   {
     "term": "short-circuit",
     "hook": "and/or stop early, return the OPERAND",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
+    "status": "~",
+    "next_due": "2026-09-02",
+    "last_asked": "2026-09-01",
     "rating": null
   },
   {

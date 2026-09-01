@@ -73,7 +73,7 @@ def validate_logged(records, log):
         log.append("UNIDENTIFIED")
         raise
     
-    return output,log
+    return output
 
 
     
