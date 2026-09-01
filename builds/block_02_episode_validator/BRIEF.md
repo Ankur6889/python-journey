@@ -293,6 +293,23 @@ nothing is a dead end, and you killed that exact bug in block 01.
 
 Assume every record has all four keys at L5.
 
+One shape that works — **the exact format is yours, this is untested**:
+
+```
+  id  frames   fps  faults
+   7     240    30  ok
+   4       0     7  frames, fps, task
+   9     150    30  ok
+
+3 episodes, 2 clean, 1 faulty
+```
+
+and the call still hands back
+`{'clean': [7, 9], 'faulty': {4: ['frames', 'fps', 'task']}}`.
+
+The only two things that are not negotiable: one line per record, and it
+RETURNS the report as well as printing it.
+
 ---
 
 # GREEN IS THE BAR
