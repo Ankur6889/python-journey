@@ -367,7 +367,20 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **37**
+- Sessions Completed: **39** *(this counter read **37** from S37 until the S39 close; corrected here, nothing else altered)*
+- **SESSION 39 (Tue 1 Sep 2026, 21:28 → Wed 2 Sep 2026, 18:55) — 1.10 OPENED,
+  THE FIRST NEW CURRICULUM UNIT SINCE S36.** He set the shape before a file was
+  read: *"lets start a new session, and actually the next block instead of
+  gauntlet, we will do the gauntlet tomorrow."* **The interval gate then made
+  it the only legal call anyway — S38 had committed three minutes earlier.**
+  The August gauntlet is now deferred THREE times; the first two were the
+  gate's rulings, **this one was his.** **Five master bullets `[ ] → [~]` plus
+  one added at his request; seven new queue rows; ZERO promotions, correctly.**
+  Three pushbacks, all upheld — two of them the SAME mentor defect inside one
+  session (consolidated code / forked demo files), one of them him disproving a
+  mentor claim by testing it in Jupyter. ⚠ **The arithmetic to carry: a
+  pure-teaching day costs ~15 overdue rows. Overdue went 25 → 40. Two of these
+  in a row would undo S38.**
 - **SESSION 38 (Tue 1 Sep 2026, 14:29–21:20) — PURE REVISION, OLDEST-FIRST, AT
   HIS REQUEST.** He opened with *"in this session I don't want to study anything
   new, lets revise or clear the oldest content... start with the oldest and as we
@@ -870,6 +883,7 @@
 | 36 | 1.9 finished — custom exceptions, hierarchy + ordering, re-raise, control flow | `drills/s36_signals.py` (1 type, 4 functions) | Complete | **35/35.** 3 collection failures first (`OverLimit` misnamed twice), then 2 real bugs found by him on "find it": str-not-int in `"over"`, and a fresh `raise` losing the traceback. ⚠ Shipped a catch-all `except Exception` — removed after a [PREDICT] |
 | 37 | **COLD BUILD BLOCK 02 — the measurement instrument, not a curriculum item. The August gauntlet was displaced to S38 by the interval gate (27 min since S36).** | **`builds/block_02_episode_validator/validator.py` — written cold, no AI, no notes, against a mentor-written 27-test suite. L1 `faults(record)` → list of fault-code strings, field order, `"missing:<f>"` vs `"<f>"`; L2 `validate_all(records)` → `{"clean": [...], "faulty": {id: [...]}}`, dataset unmutated; L3 `UnidentifiedEpisode`, raised when the report is keyed by something the record does not have; L4 `validate_logged(records, log)` — log without altering the fault. L5 not attempted.** | **Complete — 27/27, 2h 55m (`a3cb34e` → `9d03b48`)** | **ONE bug in the whole block (`return output, log`), in the function his DONE LINE named, fixed off the raw assertion with no answer given — RULES v6's third data point and its first good one. ⚠⚠ **THE TRANSFER GAP POSITIVE: zero bare `except:` or `except Exception:` in 81 lines**, same interval as the S36 failure. DRY held structurally unprompted (`fps_defaults` once; `validate_all` asks `faults`); nothing prints; `sort(key=record_struct.index)` reused 14 sessions after S23; he designed the `KeyError` out of existence rather than catching it. ⚠ **`short-circuit` DEMOTED on a cold miss** — said `type(x) != int or x < 0` raises `TypeError`; it prints `True`; **his code was right and his model of why was wrong**, leaving three unreachable `except TypeError:` blocks he had defended in prose. ⚠ **THE COMPILE/RUN SPLIT ASKED TWICE AND ANSWERED NEITHER TIME** — he gave the CAUSE of his own `SyntaxError` instead, correctly; third asking now owed. ⚠ **ZERO PROMOTIONS, correctly — same sitting throughout.** FIVE pushbacks, all upheld in whole or part, running total 69/68, **all five against the SPEC** — one of them found a case neither the brief nor the tests covered and added a 27th test. ⚠ **He closed with the tree RED by explicit ruling** (*"close it, let those remain there"*) after a cleanup deleted three `except` lines and left their `try:` behind. |
 | 38 | **PURE REVISION SESSION, oldest-first, requested by the student. No new curriculum material. Twenty ledger rows fired in age order: compile/run split (S27) → `while` mechanics (S17) → frames/namespaces (S14) → the mutating tell + `str` immutability (S17/S34) → `constructors` (S15, asked UN-TAGGED) → `del`/`.clear()` (S18) → `sorted`/`key=`/`lambda`/`reversed()` (S22–S23) → hashability + `subscriptable` (S24) → unpacking `ValueError` + `zip`'s two silent failures (S29–S30) → `.keys()` as a view (S35).** | **`drills/s38_while.py` — two functions under constraints naming no mechanism: `backoff_steps(gap)` (count the halvings until a gap reaches 0 — an unknown trip count, so no closed form and no `for` over a known range) and `first_bad(rows)` (first negative in a list of lists, row-major, returned as `(row, col)`, `None` if absent — nested iteration with an early exit); 20 mentor-written tests. Everything else ran as text asks with runnable snippets.** | **Complete — 20/20 GREEN ON FIRST SUBMISSION** | **ELEVEN PROMOTIONS, the largest single-session queue movement in the file, and every one on material 8–24 days old: compile/run split; `while` mechanics/nested loops/found-flag (**eleven sessions overdue — the oldest debt in the file, now paid**); frames; namespace-vs-frame; the mutating tell (**both halves — he stated the one-directional rule himself and applied it to an UNSEEN method, `extend`**); in-place mutators return `None`; the mutable/immutable discriminator; `str` immutability; `constructors` (**"constructor" as his FIRST word on an un-tagged ask**); `sort` vs `sorted` + `key=` + `lambda` + `reversed()` (one correct line, `list(reversed(sorted(records, key=lambda x: x["frames"])))`, `records` unmutated); `zip`'s two silent failures. **TWO CURRICULUM TICKS: 1.8 `list` [~] → [x]** (both recorded blockers cleared — the S24 `sort`/`sorted` inversion and the returns-`None` tell that broke live in S34) **and 1.9 `Common built-in exceptions` [ ] → [~]**, the last untouched bullet in 1.9. ⚠⚠ **FOUR OF THE FIVE FAILURES WERE LABELS SITTING ON INTACT MECHANISMS** — `del` (gap declared honestly, then taught; his teach-back was the sharpest line of the session: *"del does not return anything, and by nothing I don't mean None"*); `hashable` (**derived mutable ⇒ unhashable ⇒ not a key unaided, then *"can't come up with the error myself"*); `subscriptable` (said `IndexError`, having used the exact right type-vs-value discriminator sixty seconds earlier); unpacking (**named the count mismatch precisely and then reasoned himself OUT of `ValueError` on a too-narrow definition of it**). ⚠⚠ **THE FIFTH FAILURE IS THE SESSION'S REAL FINDING: `.keys()` AS A VIEW — A MISSING INDEX, NOT A MISSING FACT.** He wrote `list(reversed(...))` unprompted and explained `zip` exhaustion as *"forward only state, once consumed need to be recreated"* — then said a `dict_keys` object could not see a key added after it was made. **He owns the lazy-vs-snapshot pattern and did not recognise the third instance of it.** ⚠ **CONFIDENCE: seven consecutive 7s on seven correct answers, challenged to his face with his own S17 record, after which he spread to 8/8/6/6/5 — the 6 correctly flagging the one he got wrong, but the bottom of the scale now UNDER-reading.** ⚠ **DEAD CODE, second instance and his own: an `if gap != 0:` guard that could never change the outcome, whose origin he explained correctly and unaided (written for an older spec, left behind when the spec changed).** ⚠ **STATE.md CARRIED A FALSE ALARM INTO THE SESSION** — the S37 header said the tree was RED with three unclosed `try:` blocks; `HEAD` was green and 27/27 on the first run. ⚠ **MENTOR: the `.keys()` snippet was RUN BEFORE his rating was taken, leaking the answer — self-caught, disclosed, rating not logged.** **ONE PUSHBACK (70), UPHELD IN FULL: the drill spec read as recursion** — *"seems like you want to see recursion, can you be more clear"* — rewritten before he started, after which he passed 20/20 first submission. Running total **70 raised, 69 upheld or part-upheld.** He closed by asking whether the promise to make him able to read complex codebases was still in the plan, and was given the arithmetic rather than reassurance. |
+| 39 | **OPEN 1.10 MODULES, PACKAGES AND IMPORTS — the first new curriculum unit since S36. Chosen by him at the open (*"the next block instead of gauntlet, we will do the gauntlet tomorrow"*) and independently forced by the interval gate: S38 had committed 3 MINUTES earlier, so new teaching was the only legal instrument.** | **No student drill — a teaching session. `teaching/s39_imports/` holds six mentor-written demo files, every one shown with real output: `main.py`/`robot.py` (import RUNS the file), `twice.py` (runs ONCE — the cache), `bare.py` (`NameError` on an unbound `MAX_ANGLE`), `partial.py` (`from x import y` runs the whole file and binds only `y`), `alias.py` (aliasing REPLACES the name), `peek.py` (`type(m)` is `module`; `vars(m)` is the real namespace dict), `dots.py` (a dict has no `__dict__`), and `fix/` (the `__name__` guard, working).** | **Complete — 1.10 opened, ~40%. ZERO promotions, correctly.** | **FIVE MASTER BULLETS `[ ] → [~]` (what a module is; `import`; `from x import y`; `import as`; `__name__ == "__main__"`), plus ONE BULLET ADDED at his request (the module namespace as a real dict). SEVEN new queue rows, all due 3 Sep; queue 121 → 128. ⚠⚠ **THE SESSION'S FINDING, AND IT IS THE INVERSE OF THE USUAL ONE: HE REFUSED TO GUESS TWICE AND BOTH REFUSALS WERE CORRECT** — on `from robot import clamp` he named the exact undetermined fork (*"will it run the entire file, or will just import the function"*), and on the aliasing snippet he located a real hole in the mentor's own compression of the cache rule (*"this file has already been run, so what will happen now I am not sure"*). Both were taught, then re-asked, then answered correctly. **Do not push through a refusal of this shape.** ⚠⚠ **THE TRANSFER GAP, SAME SIGNATURE AS EVER: he produced `if __name__ == "__main__":` UNPROMPTED and then put the guard in the WRONG FILE** — he had the construct and not the direction (it protects the file being IMPORTED, not the consumer). ⚠⚠ **HE TESTED A MENTOR CLAIM IN JUPYTER AND DISPROVED IT** — told *"the dot is sugar over a dict access"*, he tried `d.key`, found it failed, and brought it back. **Pushback 72, upheld: true for a MODULE, false in general; `vars({})` raises `TypeError` because a dict has no `__dict__` at all.** Second TECHNICAL pushback on his record. ⚠ **HE DROPPED THE MODULE-LEVEL `print` FROM HIS PREDICTED OUTPUT TWICE** — channel checked first (the second ask was genuinely ambiguous), then honestly owned (*"I forgot to write that line, I am clear conceptually"*); nothing logged, but the line he drops is the SIDE EFFECT OF AN IMPORT, the invisible thing that bites in real codebases. ⚠ **HE ASKED WHERE BREAKPOINT DEBUGGING LIVES — and it has NO bullet anywhere in 1.1–1.13 (grepped). `pdb` is a MODULE, so he named the tool by its shape one unit before it arrives, FIFTH session running. Ruling parked for him: tail of 1.10, or 1.11.** ⚠⚠ **MENTOR: THE SAME FAILURE TWICE IN ONE SESSION — consolidated-questions-carry-their-own-code (S19). Pushback 71 (*"write them together, it is difficult to scroll up and down"*), fixed, then breached again in a worse form by forking `sensors.py`/`app.py` into numbered variants and then asking about the un-numbered one — pushback 73 (*"I am getting frustrated... what you want is not clear"*). Rule of thumb earned: two files, fixed names, both shown in full; CHANGE a demo file, never fork it.** ⚠ **MENTOR: `cache` used repeatedly as a naked term until he asked *"what's cache"*.** THREE PUSHBACKS, ALL UPHELD IN FULL — running total **73 raised, 72 upheld or part-upheld.** ⚠ **THE COST OF A PURE-TEACHING DAY, STATED AS ARITHMETIC: overdue 25 → 40.** |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -4468,3 +4482,243 @@ warning against the repo before acting on it** — written into the S39 header.
 **RULES unchanged at v6 — no rule was adopted and none is parked. CURRICULUM:
 TWO ticks moved, 1.8 `list` → [x] and 1.9 `Common built-in exceptions`
 [ ] → [~].**
+
+## What Session 39 established (Tue 1 September 2026, 21:28 → Wed 2 September 2026, 18:55)
+
+**The first new curriculum unit since S36, opened under the tightest interval
+gate in the file's history — three minutes.** He set the shape himself before
+anything was read: *"lets start a new session, and actually the next block
+instead of gauntlet, we will do the gauntlet tomorrow."* The gate then verified
+from `date`, `git log -1` and mtimes that S38 had committed at 21:25:15 and
+this session opened at 21:28. **Three minutes. Same sitting.** Which made the
+deferral not merely his preference but the only legal call — and made 1.10 the
+one instrument that could run, because **new teaching is the only thing a
+zero-gap session can legitimately do.**
+
+**Result: 1.10 OPENED. Five master bullets `[ ] → [~]`, one bullet added at his
+request, seven new queue rows. ZERO promotions and zero ledger-eligible asks,
+correctly. Three pushbacks, all upheld in full.**
+
+### 0. THE GATE, AND THE FIRST TIME HE CALLED IT HIMSELF
+
+The August gauntlet has now been deferred three times. **S37 and S38 were the
+gate's rulings. S39 was his** — he named the deferral in his opening message,
+before the mentor had read a file, and the gate independently agreed with him
+minutes later. That is the third instrument in this file he has started
+operating without being prompted, after the ledger audit (S38) and the
+confidence rule (S15).
+
+**It also produced the one thing to watch: overdue went 25 → 40.** S39 fired no
+recall at all, correctly, but the queue does not care about the reason. **A
+pure-teaching day costs about fifteen overdue rows.** Written into STATE.md as
+arithmetic rather than as a worry.
+
+### 1. THE FRAME LANDED — AND THE HONEST HALF IS WHY
+
+1.10 opened under FRAME FIRST with three parts and one explicit refusal. What
+it is: **a module is a `.py` file, and that is the whole definition.** Why it
+exists: separate namespaces, and access to code he did not write. **And the
+reason that was explicitly NOT claimed: "it organises your code."** Splitting a
+200-line script into six files makes it worse; organisation is a consequence,
+not a motive. **The motivation-rejection pattern (S18/S19, four demolished
+closure examples) was pre-empted rather than walked into.**
+
+The load-bearing sell was the one he had asked for at the S38 close: **the
+import block at the top of a file is that file's dependency list, and reading
+it tells you what a LeRobot file is about before you read a line of its logic.**
+His verdict: *"the frame lands, and is good."*
+
+**The cheap half was named as cheap out loud** — the four import forms are
+vocabulary, ten minutes, not the point — **and the load-bearing half was
+compressed to one sentence: `import` is executable code; it runs a file, top to
+bottom, once, and then binds a name.** Everything else in the unit was derived
+from that sentence rather than listed.
+
+### 2. THE TEACHING SEQUENCE — FIVE SNIPPETS, EACH ONE A [PREDICT]
+
+All in `teaching/s39_imports/`, mentor-written, all shown with real output.
+
+1. **`main.py` importing `robot.py`.** He predicted four lines and got four of
+   five. **The missing line was `robot.py is running`** — a module-level
+   `print` nobody called. That single line is the unit: *import is not a fetch,
+   it is a run.* His own reading had been *"getting all the functions and
+   variables in that file in our current file"* — the fetch model, and it is
+   what cost him the line.
+2. **The same file imported twice.** He predicted the run happened twice. It
+   ran once. **The cache rule** was then given with its mechanism: a dict of
+   module name → module object, checked first, and the practical payoff he will
+   actually meet — *this is why editing a `.py` and re-importing in a notebook
+   does not pick up your edit.*
+3. **`import robot` then bare `MAX_ANGLE`.** He named `NameError` cold, before
+   the traceback, with the right reason: *"we are not accessing it using
+   robot."* **S27's rule working exactly as designed.** This established the
+   second half of the model: **`import robot` binds exactly ONE name.**
+4. **`from robot import clamp` then `robot.MAX_ANGLE`.** See section 3 — he
+   refused, correctly.
+5. **`import robot as r` plus `from robot import MAX_ANGLE as LIMIT`.** Both
+   values right, `NameError` right, on the right line. **Aliasing REPLACES the
+   name rather than adding one** — the point of the snippet.
+
+Then the module namespace, which he had asked for by name: `type(robot)` is
+`module`; `vars(robot)` hands back the real dict; eight dunders Python put
+there plus his two names in creation order; and `vars(robot)["MAX_ANGLE"]`
+returning the same `180` as `robot.MAX_ANGLE`. **The module namespace was
+taught BY CONTRAST with the frame he traced unaided in S38 — same idea,
+different lifetime — and he followed it with no re-explanation. That is the
+S38 promotion paying a dividend inside twenty-four hours.**
+
+Finally `__name__`, taught problem-first: a `sensors.py` whose self-test fires
+when `app.py` imports it, then the three lines showing the same file reporting
+`"sensors2"` when imported and `"__main__"` when run.
+
+### 3. THE SESSION'S REAL FINDING: HE REFUSED TO GUESS, TWICE, AND BOTH REFUSALS WERE CORRECT
+
+**This is the exact inverse of the depth-before-answer failure this file has
+logged for twenty sessions, and it deserves the headline.**
+
+On `from robot import clamp`: *"I will pass this... I am not sure how `from
+robot import clamp` will work, will it run the entire file, or will just import
+the function so I am not answering."* **Nothing he had been shown decided that
+fork.** He did not say "I don't know" — he named the undetermined branch.
+
+On the aliasing snippet, after being pushed: *"you earlier at some point said
+first time binding gets done but I didn't understand that statement... this file
+has already been run, so what will happen now I am not sure about that and
+that's the reason I am not answering."* **He had located a real hole in the
+mentor's own teaching** — the cache rule had been compressed into half a clause
+(*"hit → skip all of that and just bind the name"*) and never decomposed.
+
+The repair, written up because it is the model to keep: **every import statement
+runs two INDEPENDENT steps. Step 1 gets the module object (cache miss → find,
+run, store; cache hit → take the stored one). Step 2 binds name(s) in your
+namespace, and step 2 ALWAYS runs.** A cache hit does not mean the import did
+nothing; it means step 1 was free. **Given that, he answered the held question
+correctly.**
+
+**OPERATIONAL LESSON: do not push through a refusal of this shape. It is not
+avoidance — it is him correctly reporting that the mentor has under-specified
+the mechanism. Teach the missing half and re-ask.**
+
+### 4. THE ONE THING HE GOT AND THEN MISPLACED — AND IT IS THE TRANSFER GAP AGAIN
+
+Asked to fix the self-test-fires-on-import problem, he produced the construct
+unprompted and correctly: *"I know what you are trying to open, it's
+`if __name__=="__main__":`"* — **and then placed it in the wrong file**: *"you
+want me to put content of app.py under this if block."*
+
+It is the other way round. **The guard lives in the file being IMPORTED,
+because it exists to protect that file from its own top-level code running
+when someone imports it.** `app.py` — the file you actually run — needs no
+guard at all.
+
+**Same signature as every previous instance: he had the construct and not the
+direction.** S38 was the pattern applied twice and dropped on the third
+instance; S39 is the idiom recalled and pointed the wrong way. **The index, not
+the fact.**
+
+### 5. THE LINE HE DROPPED TWICE — AND THE CHANNEL WAS CHECKED FIRST
+
+He omitted `robot.py is running` from his predicted terminal output on snippet
+1, and again on snippet 5. **The channel was checked before anything was
+logged, as rule 4 requires** — the second ask's wording (*"which lines print"*)
+could legitimately have been read as *"which of the three `print()` calls
+succeed"*, under which his answer was complete. He answered honestly:
+*"actually I forgot to write that line, I am clear conceptually that the line
+should be there."*
+
+**Nothing was logged in the ledger — [PREDICT] never is — and it was said to
+his face in two lines rather than laboured: an answer he meant but did not
+write is, to any examiner, an answer he did not have.** ⚠ **Note WHICH line he
+drops: the side effect of an import. That is precisely the invisible thing that
+bites in real codebases, because nobody wrote a call for it.**
+
+### 6. HE TESTED A MENTOR CLAIM IN A NOTEBOOK AND DISPROVED IT
+
+Told that *"the dot is sugar over a dict access"*, he went away, tried `d.key`
+on a real dict in Jupyter, found it failed, and brought it back: *"you said we
+can access dictionary keys with `.`, I just tried it on jupyter notebook but
+didn't work."*
+
+**Pushback 72, upheld in full.** The claim is true for a MODULE and false as a
+general statement. The corrected version, now in the queue as its own row:
+
+- **`d["k"]` — subscription — looks in the object's CONTENTS.**
+- **`obj.k` — attribute access — looks in the object's NAMESPACE (`__dict__`).**
+- **They coincide for a module ONLY, because a module's contents ARE its
+  namespace.** A plain dict's items are data it holds, not names bound on it.
+
+And the sharper proof, run for him: **`vars({})` raises `TypeError: vars()
+argument must have __dict__ attribute`. A dict does not have dot access
+*disabled* — there is no namespace there for the dot to search.**
+
+**This is the second TECHNICAL (not process) pushback on his record, after the
+S18 mutable-methods generalisation. It is the behaviour the whole course exists
+to produce.**
+
+### 7. THE GOVERNANCE QUESTION — DEBUGGING, AND IT HAS NO BULLET
+
+Mid-material he asked where breakpoint debugging is covered. He was given
+arithmetic, checked rather than remembered:
+
+- It IS one of the four things RULES.md says Layer 0 must deliver.
+- **It is NOT a unit. `grep` across 1.1–1.13 returns zero bullets for `pdb`,
+  `breakpoint` or a debugger.** Same shape as the codebase-reading answer he
+  got at the S38 close: a stated deliverable with no unit behind it.
+- **What he has had is the traceback half** — `traceback` defined S15, the
+  retired four-station hook, and the S27 rule he proposed himself.
+- **What he has not had is the no-traceback case, which is his oldest recorded
+  weakness.**
+- **And the timing was his, not luck: `pdb` is a MODULE, and VS Code's debugger
+  is a front end on it. It is gated on the unit he was sitting in.** Fifth
+  session running of him naming a tool by its shape one unit before it arrives.
+- Cost quoted: 45–60 minutes, most of it cheap Level-1 button-pressing, with
+  **one load-bearing piece — VS Code's Call Stack panel is the frame stack he
+  traced unaided in S38.**
+
+**RULING PARKED FOR HIM, explicitly not offered as a rule: bolt a debugger
+block onto the tail of 1.10, or leave it to 1.11.**
+
+### 8. MENTOR FAILURES — TWO, AND THEY ARE THE SAME FAILURE TWICE
+
+1. ⚠⚠ **CONSOLIDATED QUESTIONS CARRY THEIR OWN CODE (S19), BREACHED TWICE IN
+   ONE SESSION.** First as *"please whatever files are needed write them
+   together, it is difficult to scroll up and down continuously"* (**pushback
+   71**) — four snippets had been posed with `robot.py` shown once and then
+   referred to as "unchanged". Fixed, acknowledged, and then **breached again
+   forty minutes later in a worse form**: the `__name__` block introduced
+   `sensors2.py`/`app2.py` as numbered variants alongside `sensors.py`/`app.py`,
+   and the follow-up question then named the un-numbered file. He said so
+   plainly: *"again I am getting frustrated bcoz you have already made multiple
+   versions of the file and what you want is not clear"* (**pushback 73**).
+   **THE RULE OF THUMB EARNED, now in STATE.md: two files, fixed names, both
+   shown in full, every time. If a demo needs different content, CHANGE the
+   file — do not fork it.**
+2. ⚠ **NO NAKED TERMS, breached on `cache`.** The mechanism was given (a dict
+   of already-imported modules) but the WORD was used repeatedly without ever
+   being defined. He asked: *"what's cache"*. Repaired with the name-decoding
+   the Term Retention System requires — *cacher*, to hide; a hidden stash of
+   results kept so the work is not redone.
+
+**And one thing that held and is worth recording as such: the doubt gate fired
+four times and every new block waited for him to clear the floor.**
+
+### 9. THE LEDGER
+
+**ZERO promotions and zero ledger-eligible asks — correct, and the only correct
+outcome at a three-minute gap.** Everything taught in S39 entered the queue at
+`[~]` with no rating, per the S15/S18 rules, and is due cold on 3 Sep.
+
+**Seven new rows:** `import RUNS the file`; `import binds ONE name`; `the import
+cache / sys.modules`; `a module IS an object, its namespace IS a dict`;
+`vars()`; `subscription vs attribute access`; `__name__ and __main__`.
+**Queue: 121 → 128 rows; 77 [x], 51 [~]; overdue 25 → 40.**
+
+**CURRICULUM: five 1.10 bullets `[ ] → [~]`, plus one bullet added (the module
+namespace as a real dict) because he asked for it twice by name and it is the
+thing that makes the other five true. RULES unchanged at v6 — no rule adopted,
+none parked.**
+
+**His own closing report, and it is the correct one:** *"I read everything
+mostly clear, but I won't say I remember everything now."* Answered with the
+design rather than reassurance — nothing taught tonight can be retained
+tonight; tomorrow's cold ask is where it is measured.

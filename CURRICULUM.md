@@ -1733,8 +1733,20 @@ false.
  division-of-labour argument `raise` was taught with in S35.
 
 #### 1.10 Modules, Packages, and Imports
-- [ ] What a module is / [ ] import statement / [ ] from x import y
-- [ ] import as aliasing / [ ] `__name__ == "__main__"`
+**OPENED S39 (1–2 Sep 2026). All S39 marks are [~] and cannot be more: the
+session opened 3 minutes after S38 closed, so every bullet below was taught
+and demonstrated in the SAME SITTING. Cold later-day asks are queued for S40.**
+- [~] What a module is / [~] import statement / [~] from x import y
+      (S39 — `teaching/s39_imports/`: import RUNS the file top to bottom,
+      ONCE per process, then binds names; `from x import y` runs the whole
+      file too and binds only `y`)
+- [~] import as aliasing / [~] `__name__ == "__main__"`
+      (S39 — aliasing REPLACES the name rather than adding one, proved by
+      `NameError: name 'robot' is not defined` after `import robot as r`;
+      the guard derived by him unprompted, PLACEMENT corrected by the mentor)
+- [~] The module namespace as a real dict — `vars(m)`, the dunder roster,
+      and the dot as a namespace lookup (S39; not a master bullet, added
+      because he asked for it twice by name)
 - [ ] The standard library / [ ] pip and third-party packages
 - [ ] What a package is / [ ] Relative vs absolute imports
 - [ ] Circular imports / [ ] sys.path
