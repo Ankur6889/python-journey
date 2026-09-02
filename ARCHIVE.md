@@ -367,7 +367,21 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **39** *(this counter read **37** from S37 until the S39 close; corrected here, nothing else altered)*
+- Sessions Completed: **40**
+- **SESSION 40 (Wed 2 Sep 2026, 20:21–20:50) — A THIRTY-MINUTE TERM-TAX, THE
+  FIRST SINCE S36, AND HE ENDED IT HIMSELF TO GO AND READ.** The gate found 80
+  minutes since the S39 commit, so 1.10 was untestable — but 1.9 and older
+  were 23–48 hours cold, so the term-tax was legal and ran. **Eight terms:
+  four passes, four fails. `StopIteration`, `hashable`, `abs()` promoted; the
+  `UnboundLocalError` MECHANISM had faded (taught four times), and
+  `AttributeError`, `subscriptable` and the `finally` guarantee were gaps.
+  Overdue 40 → 35.** The August gauntlet is deferred a FOURTH time — he had
+  two hours and stopped at thirty minutes: *"I need to see the notes
+  tonight."* Ruled: the debugger goes to 1.11. Pushback 74 (*"you are checking
+  my memory and naming it mechanism"*) — checked, not remembered: the mechanism
+  was taught S19/S21/S22/S26; **not upheld on the item, upheld on the remedy.**
+  Mentor defect: one verdict turn carrying a table, two corrections, a demo, a
+  [PREDICT] and a [TEACH-BACK]. He asked for the answer directly, correctly.
 - **SESSION 39 (Tue 1 Sep 2026, 21:28 → Wed 2 Sep 2026, 18:55) — 1.10 OPENED,
   THE FIRST NEW CURRICULUM UNIT SINCE S36.** He set the shape before a file was
   read: *"lets start a new session, and actually the next block instead of
@@ -884,6 +898,7 @@
 | 37 | **COLD BUILD BLOCK 02 — the measurement instrument, not a curriculum item. The August gauntlet was displaced to S38 by the interval gate (27 min since S36).** | **`builds/block_02_episode_validator/validator.py` — written cold, no AI, no notes, against a mentor-written 27-test suite. L1 `faults(record)` → list of fault-code strings, field order, `"missing:<f>"` vs `"<f>"`; L2 `validate_all(records)` → `{"clean": [...], "faulty": {id: [...]}}`, dataset unmutated; L3 `UnidentifiedEpisode`, raised when the report is keyed by something the record does not have; L4 `validate_logged(records, log)` — log without altering the fault. L5 not attempted.** | **Complete — 27/27, 2h 55m (`a3cb34e` → `9d03b48`)** | **ONE bug in the whole block (`return output, log`), in the function his DONE LINE named, fixed off the raw assertion with no answer given — RULES v6's third data point and its first good one. ⚠⚠ **THE TRANSFER GAP POSITIVE: zero bare `except:` or `except Exception:` in 81 lines**, same interval as the S36 failure. DRY held structurally unprompted (`fps_defaults` once; `validate_all` asks `faults`); nothing prints; `sort(key=record_struct.index)` reused 14 sessions after S23; he designed the `KeyError` out of existence rather than catching it. ⚠ **`short-circuit` DEMOTED on a cold miss** — said `type(x) != int or x < 0` raises `TypeError`; it prints `True`; **his code was right and his model of why was wrong**, leaving three unreachable `except TypeError:` blocks he had defended in prose. ⚠ **THE COMPILE/RUN SPLIT ASKED TWICE AND ANSWERED NEITHER TIME** — he gave the CAUSE of his own `SyntaxError` instead, correctly; third asking now owed. ⚠ **ZERO PROMOTIONS, correctly — same sitting throughout.** FIVE pushbacks, all upheld in whole or part, running total 69/68, **all five against the SPEC** — one of them found a case neither the brief nor the tests covered and added a 27th test. ⚠ **He closed with the tree RED by explicit ruling** (*"close it, let those remain there"*) after a cleanup deleted three `except` lines and left their `try:` behind. |
 | 38 | **PURE REVISION SESSION, oldest-first, requested by the student. No new curriculum material. Twenty ledger rows fired in age order: compile/run split (S27) → `while` mechanics (S17) → frames/namespaces (S14) → the mutating tell + `str` immutability (S17/S34) → `constructors` (S15, asked UN-TAGGED) → `del`/`.clear()` (S18) → `sorted`/`key=`/`lambda`/`reversed()` (S22–S23) → hashability + `subscriptable` (S24) → unpacking `ValueError` + `zip`'s two silent failures (S29–S30) → `.keys()` as a view (S35).** | **`drills/s38_while.py` — two functions under constraints naming no mechanism: `backoff_steps(gap)` (count the halvings until a gap reaches 0 — an unknown trip count, so no closed form and no `for` over a known range) and `first_bad(rows)` (first negative in a list of lists, row-major, returned as `(row, col)`, `None` if absent — nested iteration with an early exit); 20 mentor-written tests. Everything else ran as text asks with runnable snippets.** | **Complete — 20/20 GREEN ON FIRST SUBMISSION** | **ELEVEN PROMOTIONS, the largest single-session queue movement in the file, and every one on material 8–24 days old: compile/run split; `while` mechanics/nested loops/found-flag (**eleven sessions overdue — the oldest debt in the file, now paid**); frames; namespace-vs-frame; the mutating tell (**both halves — he stated the one-directional rule himself and applied it to an UNSEEN method, `extend`**); in-place mutators return `None`; the mutable/immutable discriminator; `str` immutability; `constructors` (**"constructor" as his FIRST word on an un-tagged ask**); `sort` vs `sorted` + `key=` + `lambda` + `reversed()` (one correct line, `list(reversed(sorted(records, key=lambda x: x["frames"])))`, `records` unmutated); `zip`'s two silent failures. **TWO CURRICULUM TICKS: 1.8 `list` [~] → [x]** (both recorded blockers cleared — the S24 `sort`/`sorted` inversion and the returns-`None` tell that broke live in S34) **and 1.9 `Common built-in exceptions` [ ] → [~]**, the last untouched bullet in 1.9. ⚠⚠ **FOUR OF THE FIVE FAILURES WERE LABELS SITTING ON INTACT MECHANISMS** — `del` (gap declared honestly, then taught; his teach-back was the sharpest line of the session: *"del does not return anything, and by nothing I don't mean None"*); `hashable` (**derived mutable ⇒ unhashable ⇒ not a key unaided, then *"can't come up with the error myself"*); `subscriptable` (said `IndexError`, having used the exact right type-vs-value discriminator sixty seconds earlier); unpacking (**named the count mismatch precisely and then reasoned himself OUT of `ValueError` on a too-narrow definition of it**). ⚠⚠ **THE FIFTH FAILURE IS THE SESSION'S REAL FINDING: `.keys()` AS A VIEW — A MISSING INDEX, NOT A MISSING FACT.** He wrote `list(reversed(...))` unprompted and explained `zip` exhaustion as *"forward only state, once consumed need to be recreated"* — then said a `dict_keys` object could not see a key added after it was made. **He owns the lazy-vs-snapshot pattern and did not recognise the third instance of it.** ⚠ **CONFIDENCE: seven consecutive 7s on seven correct answers, challenged to his face with his own S17 record, after which he spread to 8/8/6/6/5 — the 6 correctly flagging the one he got wrong, but the bottom of the scale now UNDER-reading.** ⚠ **DEAD CODE, second instance and his own: an `if gap != 0:` guard that could never change the outcome, whose origin he explained correctly and unaided (written for an older spec, left behind when the spec changed).** ⚠ **STATE.md CARRIED A FALSE ALARM INTO THE SESSION** — the S37 header said the tree was RED with three unclosed `try:` blocks; `HEAD` was green and 27/27 on the first run. ⚠ **MENTOR: the `.keys()` snippet was RUN BEFORE his rating was taken, leaking the answer — self-caught, disclosed, rating not logged.** **ONE PUSHBACK (70), UPHELD IN FULL: the drill spec read as recursion** — *"seems like you want to see recursion, can you be more clear"* — rewritten before he started, after which he passed 20/20 first submission. Running total **70 raised, 69 upheld or part-upheld.** He closed by asking whether the promise to make him able to read complex codebases was still in the plan, and was given the arithmetic rather than reassurance. |
 | 39 | **OPEN 1.10 MODULES, PACKAGES AND IMPORTS — the first new curriculum unit since S36. Chosen by him at the open (*"the next block instead of gauntlet, we will do the gauntlet tomorrow"*) and independently forced by the interval gate: S38 had committed 3 MINUTES earlier, so new teaching was the only legal instrument.** | **No student drill — a teaching session. `teaching/s39_imports/` holds six mentor-written demo files, every one shown with real output: `main.py`/`robot.py` (import RUNS the file), `twice.py` (runs ONCE — the cache), `bare.py` (`NameError` on an unbound `MAX_ANGLE`), `partial.py` (`from x import y` runs the whole file and binds only `y`), `alias.py` (aliasing REPLACES the name), `peek.py` (`type(m)` is `module`; `vars(m)` is the real namespace dict), `dots.py` (a dict has no `__dict__`), and `fix/` (the `__name__` guard, working).** | **Complete — 1.10 opened, ~40%. ZERO promotions, correctly.** | **FIVE MASTER BULLETS `[ ] → [~]` (what a module is; `import`; `from x import y`; `import as`; `__name__ == "__main__"`), plus ONE BULLET ADDED at his request (the module namespace as a real dict). SEVEN new queue rows, all due 3 Sep; queue 121 → 128. ⚠⚠ **THE SESSION'S FINDING, AND IT IS THE INVERSE OF THE USUAL ONE: HE REFUSED TO GUESS TWICE AND BOTH REFUSALS WERE CORRECT** — on `from robot import clamp` he named the exact undetermined fork (*"will it run the entire file, or will just import the function"*), and on the aliasing snippet he located a real hole in the mentor's own compression of the cache rule (*"this file has already been run, so what will happen now I am not sure"*). Both were taught, then re-asked, then answered correctly. **Do not push through a refusal of this shape.** ⚠⚠ **THE TRANSFER GAP, SAME SIGNATURE AS EVER: he produced `if __name__ == "__main__":` UNPROMPTED and then put the guard in the WRONG FILE** — he had the construct and not the direction (it protects the file being IMPORTED, not the consumer). ⚠⚠ **HE TESTED A MENTOR CLAIM IN JUPYTER AND DISPROVED IT** — told *"the dot is sugar over a dict access"*, he tried `d.key`, found it failed, and brought it back. **Pushback 72, upheld: true for a MODULE, false in general; `vars({})` raises `TypeError` because a dict has no `__dict__` at all.** Second TECHNICAL pushback on his record. ⚠ **HE DROPPED THE MODULE-LEVEL `print` FROM HIS PREDICTED OUTPUT TWICE** — channel checked first (the second ask was genuinely ambiguous), then honestly owned (*"I forgot to write that line, I am clear conceptually"*); nothing logged, but the line he drops is the SIDE EFFECT OF AN IMPORT, the invisible thing that bites in real codebases. ⚠ **HE ASKED WHERE BREAKPOINT DEBUGGING LIVES — and it has NO bullet anywhere in 1.1–1.13 (grepped). `pdb` is a MODULE, so he named the tool by its shape one unit before it arrives, FIFTH session running. Ruling parked for him: tail of 1.10, or 1.11.** ⚠⚠ **MENTOR: THE SAME FAILURE TWICE IN ONE SESSION — consolidated-questions-carry-their-own-code (S19). Pushback 71 (*"write them together, it is difficult to scroll up and down"*), fixed, then breached again in a worse form by forking `sensors.py`/`app.py` into numbered variants and then asking about the un-numbered one — pushback 73 (*"I am getting frustrated... what you want is not clear"*). Rule of thumb earned: two files, fixed names, both shown in full; CHANGE a demo file, never fork it.** ⚠ **MENTOR: `cache` used repeatedly as a naked term until he asked *"what's cache"*.** THREE PUSHBACKS, ALL UPHELD IN FULL — running total **73 raised, 72 upheld or part-upheld.** ⚠ **THE COST OF A PURE-TEACHING DAY, STATED AS ARITHMETIC: overdue 25 → 40.** |
+| 40 | **TERM-TAX at a LEGAL gap — the first since S36. 80 minutes after S39 (1.10 untestable), 23–48 hours after S36–S38 (1.9 and older testable). He had two hours, ruled the gauntlet out, and stopped at thirty minutes to read notes tonight; the gauntlet is deferred a FOURTH time.** | **No student drill. Eight cold terms in one volley, ratings taken after his answers and before verdicts: `StopIteration`, `UnboundLocalError`, `AttributeError`, `hashable`, `subscriptable`, `finally` (what it guarantees), `abs()`, `_` as a name. `teaching/s40_termtax/` holds five mentor demo files with real output (`ubl.py`, `ubl_fixed.py`, `attr.py`, `subs.py`, `fin.py`, `hashes.py`).** | **Complete as far as it went — ended by him at 20:50.** | **4 PASS / 4 FAIL. PASS → [x]: `StopIteration` (7 — the "EndofIteration" label came back; phrasing fix issued a third time, the ITERATOR is exhausted, never the iterable), `hashable` (4 — "unique" corrected to "equal values hash equal, collisions exist"), `abs()` (7 — never formally taught, passed anyway). FAIL, due 3 Sep: `UnboundLocalError` (WHERE intact, WHY gone — compile-time locality, taught S19/S21/S22/S26, declared honestly: *"can't come to it myself"*), `AttributeError` (gap; named by instance in S27), `subscriptable` (gap; second miss after S38), `finally` (gave the SHAPE, not the guarantee — rated 3, and the 3 predicted the miss). `_` — gave the right answer and withdrew it; not logged. Queue 77 → 80 [x], overdue 40 → 35, never-asked 8 → 6. ZERO curriculum movement. ⚠⚠ **PUSHBACK 74 — *"you are actually checking my memory, and naming it mechanism"* — checked against the notes, not remembered: the mechanism was taught FOUR times. NOT upheld on the item; UPHELD on the remedy he named (recall first, notes second — step 3). Running total 74 raised, 73 upheld or part-upheld.** ⚠⚠ **MENTOR DEFECT: the verdict turn carried an 8-row table, two corrections, a runnable demo, a [PREDICT] AND a [TEACH-BACK] — S20 rule 2 breached — and the [PREDICT] was fired on top of a DECLARED gap, which is the wrong instrument.** He said *"directly give the answer, I am unable to understand your explanation"* and got it in three steps. **RULED: breakpoint debugging → 1.11.** Still owed his ruling: the build block on a real LeRobot file. `.keys()` asked, unanswered. |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -4722,3 +4737,130 @@ none parked.**
 mostly clear, but I won't say I remember everything now."* Answered with the
 design rather than reassurance — nothing taught tonight can be retained
 tonight; tomorrow's cold ask is where it is measured.
+
+
+## What Session 40 established (Wed 2 September 2026, 20:21 → 20:50)
+
+**Thirty minutes. A term-tax at a legal gap — the first since S36 — and then
+he stopped to go and read.** He opened with *"this will be continuation of
+1.9, I just have around 2 hours today so gauntlet won't be possible."* The
+gate, from `date` and `git log -1`, found 80 minutes since the S39 commit.
+**That made 1.10 untestable and everything from S36–S38 legal**, which is the
+gate applied per-material rather than per-day, as RULES S17-1 actually
+words it. The August gauntlet is deferred a FOURTH time.
+
+**Result: 4 passes / 4 fails on eight terms, three queue promotions, zero
+curriculum movement, one ruling taken (debugger → 1.11), one pushback (74),
+one mentor defect, and a session ended by him at the half-hour.**
+
+### 0. THE GATE, AND THE PER-MATERIAL READING
+
+CLAUDE.md compresses the interval gate to "same-day means no promotable
+evidence." RULES S17-1 says something narrower: *state when the MATERIAL was
+last taught and how long ago.* S40 is the first session where the two
+readings gave different answers — 80 minutes since S39, but 1.9 last touched
+in S38 (23h) and S36/S37 (48h). **The narrower rule was applied, said out
+loud, and he did not object.** Three of the four passes tonight were on
+material more than a day old. Had the router's compression been followed
+literally, the session would have had nothing legal to do.
+
+### 1. THE TERM-TAX — WHAT HELD AND WHAT DID NOT
+
+Eight terms fired in one volley, one line each, "gap" allowed. Ratings taken
+after his answers and before any verdict; he gave them in a separate message.
+
+| Term | Answer | Rating | Result |
+|---|---|---|---|
+| `StopIteration` | "an exception or a signal … the iterator has forward-only state … the iterable can be used again and again" | 7 | **PASS → [x].** The label that came back as "EndofIteration" in S36 is back. |
+| `UnboundLocalError` | WHERE exact (inside a function, on `count = count + 1`); contrast with module-level `NameError` right; *"I am forgetting the reason for this, can't come to it myself"* | 4 | **FAIL.** The compile-time locality rule, taught S19/S21/S22/S26, had faded. |
+| `AttributeError` | "pass" | — | **FAIL.** Named by instance in S27 (`robot.append` on a dict). Label gone. |
+| `hashable` | "all the non-mutable are hashable, hashing generates a unique value" | 4 | **PASS → [x]**, "unique" corrected. |
+| `subscriptable` | "pass" | — | **FAIL.** Second miss (S38: said `IndexError`). |
+| `finally` | the SHAPE — "try: something, except Exception: something, finally, that's it" | 3 | **FAIL.** Asked what it guarantees; got the syntax. **The 3 predicted the miss.** |
+| `abs()` | "discard the sign … magnitude" | 7 | **PASS → [x].** Never formally taught. |
+| `_` | "anything can be here but it's not important, e.g. `for _ in range` … actually this is also pass" | — | **Withdrew a correct answer.** Not logged. |
+
+**Language correction, third issue:** *"StopIteration marks the ending of an
+Iterable."* The iterable never ends; the ITERATOR is exhausted. S15 (a), S36,
+S40. It is a habit now, and habits need repetition (S17 precedent).
+
+**Noted, not logged:** *"python sees this during compilation … throws
+NameError"* — `NameError` is a runtime error with frames; he derived that
+himself in S35. The item under test was `UnboundLocalError`, so nothing was
+recorded against a different row.
+
+### 2. THE FADED MECHANISM, AND HOW IT WAS RE-TAUGHT
+
+The first attempt stacked a [PREDICT] on top of his declared gap — *"which
+line makes `count` local, and when is that decided?"* — inside a turn that
+also carried the verdict table, two corrections and a [TEACH-BACK]. **He
+replied: *"directly give the answer, I am unable to understand your
+explanation."*** Correct on both counts: the turn was too long (S20 rule 2)
+and a [PREDICT] is the wrong instrument for a gap he has just declared.
+
+The direct answer, in three steps, is in `notes/session_40_notes.md` §1.1
+with `teaching/s40_termtax/ubl.py` and `ubl_fixed.py`. The shape that
+works: **(1)** the compiler scans the whole body first and marks any ASSIGNED
+name local everywhere in it; **(2)** the call makes a frame with an empty
+slot for that name; **(3)** the read finds the slot empty — local and
+unbound. Then the deletion test: remove the assignment and the same read
+prints `0`. He said *"I think I get the point"* and did not answer the
+deletion test — it is queued for tomorrow as the ask.
+
+### 3. PUSHBACK 74 — THE FIRST NOT UPHELD ON ITS FACT, AND STILL HALF RIGHT
+
+*"You are actually checking my memory, and naming it mechanism."*
+
+Checked before answering, by grep, not from memory: the `UnboundLocalError`
+mechanism appears in the notes for S19, S21, S22 and S26, and in his own
+flashcards as **compile-time locality**. So the ask was a check of a taught
+mechanism that had faded — which is exactly the queue's job. **Not upheld on
+the item.** But the remedy he named in the same breath — *"I should go back to
+notes once in a while"* — IS the rule's step 3 (RECALL FIRST, NOTES SECOND:
+ask cold, say gap, then check). **Upheld on the remedy.** Told to him as
+arithmetic: 74 raised, 73 upheld or part-upheld.
+
+The `.keys()` view snippet was then fired — `d.keys()`, `list(d.keys())`,
+`zip(d, [10, 20])`, then `d["c"] = 3`: which sees `"c"`? — and he ended the
+session on it: *"I am ending the session right now going back to notes, I
+believe I need to see the notes tonight."* Unanswered, still the cheapest
+tick on the board, now owed three sessions.
+
+### 4. HE ENDED A SESSION TO GO AND READ
+
+First time on record. He had two hours, used thirty minutes, and stopped on
+his own diagnosis. Session length is his call (S18 rule 2) and nothing was
+said to keep him. **What it means for tomorrow: the four S40 misses come back
+after a same-night review.** That is legal — a day is a day — and it is
+what spaced repetition is. Log the results; let his rating set the interval.
+
+### 5. THE RULING
+
+**Breakpoint debugging / `pdb` / the VS Code debugger → 1.11.** Given in
+four words at the open. The second decision (the build block on a real
+LeRobot file) was not reached; he stopped first. Carried.
+
+### 6. MENTOR FAILURES
+
+1. **Response-length cap breached (S20 rule 2).** One turn: 8-row verdict
+   table, two corrections, a runnable demo, a [PREDICT], a [TEACH-BACK]. He
+   could not use it and said so. **The mentor defect of S40.**
+2. **Wrong instrument on a declared gap.** [PREDICT] where a definition was
+   owed. Declared gap → frame → definition → [TEACH-BACK].
+3. **Three labels left naked for one turn.** Verdicts before meanings.
+
+**Held:** the gate in the first minute, from the repo; ratings after answers
+and before verdicts; the queue script for every result; `_`'s withdrawn
+answer not logged against him; the stop honoured instantly; no drill file
+touched.
+
+### 7. THE LEDGER
+
+**Queue:** 128 rows; [x] 77 → 80; [~] 51 → 48; overdue 40 → 35; never-asked
+8 → 6. Promoted: `StopIteration` (7, due 7 Sep), `hashable` (4, due 4 Sep),
+`abs()` (7, due 7 Sep). Failed, due 3 Sep: `UnboundLocalError`,
+`AttributeError`, `subscriptable`, `else / finally`.
+
+**CURRICULUM: untouched.** Nothing at subsection level moved; `finally`'s
+miss keeps the 1.9 `else`/`finally` bullet at [~] where it already was.
+**RULES unchanged at v6** — no rule adopted, none parked.

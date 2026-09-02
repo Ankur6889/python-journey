@@ -218,10 +218,10 @@
   {
     "term": "hashable",
     "hook": "hash must be STABLE => key must be immutable",
-    "status": "~",
-    "next_due": "2026-09-02",
-    "last_asked": "2026-09-01",
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-04",
+    "last_asked": "2026-09-02",
+    "rating": 4
   },
   {
     "term": "zip FAILS SILENTLY -- TWICE",
@@ -235,17 +235,17 @@
     "term": "AttributeError",
     "hook": "the name after the DOT is not on the object",
     "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
+    "next_due": "2026-09-03",
+    "last_asked": "2026-09-02",
     "rating": null
   },
   {
     "term": "subscriptable",
     "hook": "can be indexed with [ ]. list/tuple/str/dict are; set is NOT",
     "status": "~",
-    "next_due": "2026-09-02",
-    "last_asked": "2026-09-01",
-    "rating": 6
+    "next_due": "2026-09-03",
+    "last_asked": "2026-09-02",
+    "rating": null
   },
   {
     "term": "unpacking",
@@ -362,10 +362,10 @@
   {
     "term": "abs()",
     "hook": "distance from zero, sign discarded. STILL NEVER PROPERLY TAUGHT",
-    "status": "~",
-    "next_due": null,
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-07",
+    "last_asked": "2026-09-02",
+    "rating": 7
   },
   {
     "term": "print()",
@@ -610,10 +610,10 @@
   {
     "term": "StopIteration",
     "hook": "the stop signal; an EXCEPTION. list() is what CATCHES it",
-    "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": "2026-08-31",
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-07",
+    "last_asked": "2026-09-02",
+    "rating": 7
   },
   {
     "term": "next() / iter()",
@@ -715,8 +715,8 @@
     "term": "UnboundLocalError",
     "hook": "name IS local, no value bound yet",
     "status": "~",
-    "next_due": null,
-    "last_asked": null,
+    "next_due": "2026-09-03",
+    "last_asked": "2026-09-02",
     "rating": null
   },
   {
@@ -956,8 +956,8 @@
     "term": "else / finally",
     "hook": "else = the try did NOT raise. finally = ALWAYS -- through a return, through an uncaught exception. NEW S35",
     "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": null,
+    "next_due": "2026-09-03",
+    "last_asked": "2026-09-02",
     "rating": null
   },
   {
