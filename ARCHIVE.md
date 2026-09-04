@@ -367,7 +367,25 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **40**
+- Sessions Completed: **41**
+- **SESSION 41 (Thu 3 Sep 21:43 → Fri 4 Sep 2026 01:36, resumed 21:22 → 23:10) —
+  THE AUGUST GAUNTLET, RUN ON THE FIFTH SCHEDULING.** Gate from the repo: 25h
+  since S40, 51h since S39, so everything through 1.10 was legal. Pure recall,
+  no new material. **Four blocks fired: the six-snippet volley (5/6 — the
+  `UnboundLocalError` mechanism was the one gap, taught directly, teach-back
+  clean); 1.10 as instances (7/7 at 7 — every S39 bullet promoted); the cold
+  1.9 drill `drills/s41_commands.py` (zero catch-alls again; `run` finished
+  clean with a nested try and a once-only `finally`; then the hierarchy
+  DIRECTION inverted and he SKIPPED the drill — first skipped drill on
+  record); the owed-terms volley (5/7) and the strict-legend audit of 1.1–1.5
+  (11/12 survive; augmented assignment demoted on right-output-wrong-model).**
+  Queue [x] 80 → 96; CURRICULUM: 1.8 CLOSED, 1.10's taught half [x], two
+  1.9 bullets [x], one 1.5 bullet reverted. **RE-BASELINE ARITHMETIC RUN AND
+  RECORDED: ~0.8 subsection-equivalents/week observed since 16 Aug; ~5.2
+  units remain; derived close ≈ 22 Oct 2026. The 30 Sep gate is missed at
+  the observed rate; the ladder's first rung (weekend blocks) is invoked.**
+  Pushbacks 75 (not upheld) and 76 (part-upheld): 76 raised, 74 upheld or
+  part-upheld. RULES unchanged at v6.
 - **SESSION 40 (Wed 2 Sep 2026, 20:21–20:50) — A THIRTY-MINUTE TERM-TAX, THE
   FIRST SINCE S36, AND HE ENDED IT HIMSELF TO GO AND READ.** The gate found 80
   minutes since the S39 commit, so 1.10 was untestable — but 1.9 and older
@@ -899,6 +917,7 @@
 | 38 | **PURE REVISION SESSION, oldest-first, requested by the student. No new curriculum material. Twenty ledger rows fired in age order: compile/run split (S27) → `while` mechanics (S17) → frames/namespaces (S14) → the mutating tell + `str` immutability (S17/S34) → `constructors` (S15, asked UN-TAGGED) → `del`/`.clear()` (S18) → `sorted`/`key=`/`lambda`/`reversed()` (S22–S23) → hashability + `subscriptable` (S24) → unpacking `ValueError` + `zip`'s two silent failures (S29–S30) → `.keys()` as a view (S35).** | **`drills/s38_while.py` — two functions under constraints naming no mechanism: `backoff_steps(gap)` (count the halvings until a gap reaches 0 — an unknown trip count, so no closed form and no `for` over a known range) and `first_bad(rows)` (first negative in a list of lists, row-major, returned as `(row, col)`, `None` if absent — nested iteration with an early exit); 20 mentor-written tests. Everything else ran as text asks with runnable snippets.** | **Complete — 20/20 GREEN ON FIRST SUBMISSION** | **ELEVEN PROMOTIONS, the largest single-session queue movement in the file, and every one on material 8–24 days old: compile/run split; `while` mechanics/nested loops/found-flag (**eleven sessions overdue — the oldest debt in the file, now paid**); frames; namespace-vs-frame; the mutating tell (**both halves — he stated the one-directional rule himself and applied it to an UNSEEN method, `extend`**); in-place mutators return `None`; the mutable/immutable discriminator; `str` immutability; `constructors` (**"constructor" as his FIRST word on an un-tagged ask**); `sort` vs `sorted` + `key=` + `lambda` + `reversed()` (one correct line, `list(reversed(sorted(records, key=lambda x: x["frames"])))`, `records` unmutated); `zip`'s two silent failures. **TWO CURRICULUM TICKS: 1.8 `list` [~] → [x]** (both recorded blockers cleared — the S24 `sort`/`sorted` inversion and the returns-`None` tell that broke live in S34) **and 1.9 `Common built-in exceptions` [ ] → [~]**, the last untouched bullet in 1.9. ⚠⚠ **FOUR OF THE FIVE FAILURES WERE LABELS SITTING ON INTACT MECHANISMS** — `del` (gap declared honestly, then taught; his teach-back was the sharpest line of the session: *"del does not return anything, and by nothing I don't mean None"*); `hashable` (**derived mutable ⇒ unhashable ⇒ not a key unaided, then *"can't come up with the error myself"*); `subscriptable` (said `IndexError`, having used the exact right type-vs-value discriminator sixty seconds earlier); unpacking (**named the count mismatch precisely and then reasoned himself OUT of `ValueError` on a too-narrow definition of it**). ⚠⚠ **THE FIFTH FAILURE IS THE SESSION'S REAL FINDING: `.keys()` AS A VIEW — A MISSING INDEX, NOT A MISSING FACT.** He wrote `list(reversed(...))` unprompted and explained `zip` exhaustion as *"forward only state, once consumed need to be recreated"* — then said a `dict_keys` object could not see a key added after it was made. **He owns the lazy-vs-snapshot pattern and did not recognise the third instance of it.** ⚠ **CONFIDENCE: seven consecutive 7s on seven correct answers, challenged to his face with his own S17 record, after which he spread to 8/8/6/6/5 — the 6 correctly flagging the one he got wrong, but the bottom of the scale now UNDER-reading.** ⚠ **DEAD CODE, second instance and his own: an `if gap != 0:` guard that could never change the outcome, whose origin he explained correctly and unaided (written for an older spec, left behind when the spec changed).** ⚠ **STATE.md CARRIED A FALSE ALARM INTO THE SESSION** — the S37 header said the tree was RED with three unclosed `try:` blocks; `HEAD` was green and 27/27 on the first run. ⚠ **MENTOR: the `.keys()` snippet was RUN BEFORE his rating was taken, leaking the answer — self-caught, disclosed, rating not logged.** **ONE PUSHBACK (70), UPHELD IN FULL: the drill spec read as recursion** — *"seems like you want to see recursion, can you be more clear"* — rewritten before he started, after which he passed 20/20 first submission. Running total **70 raised, 69 upheld or part-upheld.** He closed by asking whether the promise to make him able to read complex codebases was still in the plan, and was given the arithmetic rather than reassurance. |
 | 39 | **OPEN 1.10 MODULES, PACKAGES AND IMPORTS — the first new curriculum unit since S36. Chosen by him at the open (*"the next block instead of gauntlet, we will do the gauntlet tomorrow"*) and independently forced by the interval gate: S38 had committed 3 MINUTES earlier, so new teaching was the only legal instrument.** | **No student drill — a teaching session. `teaching/s39_imports/` holds six mentor-written demo files, every one shown with real output: `main.py`/`robot.py` (import RUNS the file), `twice.py` (runs ONCE — the cache), `bare.py` (`NameError` on an unbound `MAX_ANGLE`), `partial.py` (`from x import y` runs the whole file and binds only `y`), `alias.py` (aliasing REPLACES the name), `peek.py` (`type(m)` is `module`; `vars(m)` is the real namespace dict), `dots.py` (a dict has no `__dict__`), and `fix/` (the `__name__` guard, working).** | **Complete — 1.10 opened, ~40%. ZERO promotions, correctly.** | **FIVE MASTER BULLETS `[ ] → [~]` (what a module is; `import`; `from x import y`; `import as`; `__name__ == "__main__"`), plus ONE BULLET ADDED at his request (the module namespace as a real dict). SEVEN new queue rows, all due 3 Sep; queue 121 → 128. ⚠⚠ **THE SESSION'S FINDING, AND IT IS THE INVERSE OF THE USUAL ONE: HE REFUSED TO GUESS TWICE AND BOTH REFUSALS WERE CORRECT** — on `from robot import clamp` he named the exact undetermined fork (*"will it run the entire file, or will just import the function"*), and on the aliasing snippet he located a real hole in the mentor's own compression of the cache rule (*"this file has already been run, so what will happen now I am not sure"*). Both were taught, then re-asked, then answered correctly. **Do not push through a refusal of this shape.** ⚠⚠ **THE TRANSFER GAP, SAME SIGNATURE AS EVER: he produced `if __name__ == "__main__":` UNPROMPTED and then put the guard in the WRONG FILE** — he had the construct and not the direction (it protects the file being IMPORTED, not the consumer). ⚠⚠ **HE TESTED A MENTOR CLAIM IN JUPYTER AND DISPROVED IT** — told *"the dot is sugar over a dict access"*, he tried `d.key`, found it failed, and brought it back. **Pushback 72, upheld: true for a MODULE, false in general; `vars({})` raises `TypeError` because a dict has no `__dict__` at all.** Second TECHNICAL pushback on his record. ⚠ **HE DROPPED THE MODULE-LEVEL `print` FROM HIS PREDICTED OUTPUT TWICE** — channel checked first (the second ask was genuinely ambiguous), then honestly owned (*"I forgot to write that line, I am clear conceptually"*); nothing logged, but the line he drops is the SIDE EFFECT OF AN IMPORT, the invisible thing that bites in real codebases. ⚠ **HE ASKED WHERE BREAKPOINT DEBUGGING LIVES — and it has NO bullet anywhere in 1.1–1.13 (grepped). `pdb` is a MODULE, so he named the tool by its shape one unit before it arrives, FIFTH session running. Ruling parked for him: tail of 1.10, or 1.11.** ⚠⚠ **MENTOR: THE SAME FAILURE TWICE IN ONE SESSION — consolidated-questions-carry-their-own-code (S19). Pushback 71 (*"write them together, it is difficult to scroll up and down"*), fixed, then breached again in a worse form by forking `sensors.py`/`app.py` into numbered variants and then asking about the un-numbered one — pushback 73 (*"I am getting frustrated... what you want is not clear"*). Rule of thumb earned: two files, fixed names, both shown in full; CHANGE a demo file, never fork it.** ⚠ **MENTOR: `cache` used repeatedly as a naked term until he asked *"what's cache"*.** THREE PUSHBACKS, ALL UPHELD IN FULL — running total **73 raised, 72 upheld or part-upheld.** ⚠ **THE COST OF A PURE-TEACHING DAY, STATED AS ARITHMETIC: overdue 25 → 40.** |
 | 40 | **TERM-TAX at a LEGAL gap — the first since S36. 80 minutes after S39 (1.10 untestable), 23–48 hours after S36–S38 (1.9 and older testable). He had two hours, ruled the gauntlet out, and stopped at thirty minutes to read notes tonight; the gauntlet is deferred a FOURTH time.** | **No student drill. Eight cold terms in one volley, ratings taken after his answers and before verdicts: `StopIteration`, `UnboundLocalError`, `AttributeError`, `hashable`, `subscriptable`, `finally` (what it guarantees), `abs()`, `_` as a name. `teaching/s40_termtax/` holds five mentor demo files with real output (`ubl.py`, `ubl_fixed.py`, `attr.py`, `subs.py`, `fin.py`, `hashes.py`).** | **Complete as far as it went — ended by him at 20:50.** | **4 PASS / 4 FAIL. PASS → [x]: `StopIteration` (7 — the "EndofIteration" label came back; phrasing fix issued a third time, the ITERATOR is exhausted, never the iterable), `hashable` (4 — "unique" corrected to "equal values hash equal, collisions exist"), `abs()` (7 — never formally taught, passed anyway). FAIL, due 3 Sep: `UnboundLocalError` (WHERE intact, WHY gone — compile-time locality, taught S19/S21/S22/S26, declared honestly: *"can't come to it myself"*), `AttributeError` (gap; named by instance in S27), `subscriptable` (gap; second miss after S38), `finally` (gave the SHAPE, not the guarantee — rated 3, and the 3 predicted the miss). `_` — gave the right answer and withdrew it; not logged. Queue 77 → 80 [x], overdue 40 → 35, never-asked 8 → 6. ZERO curriculum movement. ⚠⚠ **PUSHBACK 74 — *"you are actually checking my memory, and naming it mechanism"* — checked against the notes, not remembered: the mechanism was taught FOUR times. NOT upheld on the item; UPHELD on the remedy he named (recall first, notes second — step 3). Running total 74 raised, 73 upheld or part-upheld.** ⚠⚠ **MENTOR DEFECT: the verdict turn carried an 8-row table, two corrections, a runnable demo, a [PREDICT] AND a [TEACH-BACK] — S20 rule 2 breached — and the [PREDICT] was fired on top of a DECLARED gap, which is the wrong instrument.** He said *"directly give the answer, I am unable to understand your explanation"* and got it in three steps. **RULED: breakpoint debugging → 1.11.** Still owed his ruling: the build block on a real LeRobot file. `.keys()` asked, unanswered. |
+| 41 | **THE AUGUST GAUNTLET, fifth scheduling, first run. 25h after S40 from the repo. Pure mixed recall, no new material: snippet volley → 1.10 instances → cold 1.9 drill → owed terms → strict-legend audit of 1.1–1.5 → re-baseline arithmetic.** | **`drills/s41_commands.py` + `tests/test_s41_commands.py` (36 tests, mentor-written): `BadCommand` (must be catchable by `except ValueError:` without being named), `to_angle(text)` → int or `BadCommand`, `check(joint, angle)` → angle / `BadCommand` / built-in `TypeError` for a wrong type, `run(cmds, log)` → per-command bad/ok entries, any other report passes through, `("done", n)` ALWAYS last. `teaching/s41_gauntlet/fin_loop.py` — the two `finally` shapes, mentor demo.** | **SKIPPED BY HIM at 22:08 on 4 Sep, after a 20-hour break inside the drill. Best state reached: 32/34 (only the class line and the float type test left). Committed as it stood at close (24/34).** | **ZERO catch-alls in the whole file, unprompted, and `except Exception` rejected out loud with the right reason — second consecutive cold file. THE DONE LINE was held for the second time (*"all ok"* is a verdict, not a prediction). `run` finished clean: `try` inside the loop for per-command handling, a second `try` AROUND it for the once-only `finally`, the counter in the inner `else`. The four Group-3 reds (hardcoded `1`, the bad entry carrying the int, then the ok entry carrying the text) were each found off ONE pointer. What did not hold, at the end: the HIERARCHY DIRECTION — he changed `except ValueError:` to `except BadCommand:` around `int(text)` after being told a child is caught by its parent's catcher, i.e. applied the rule backwards — and the float type test, where he put `int(angle)` INSIDE the comparison (converts instead of refuses). Then: *"please edit the code and show me my error"* — REFUSED, structure given in words instead — and *"I want to strictly skip this exercise."* Pushback 75 (*"you should have mentioned this explicitly"*, the int-vs-text log entries): NOT upheld — prose said `("ok", joint, angle)` and the example had the quotes. Pushback 76 (*"be very specific when to use BadCommand and when the original error type"*): PART-UPHELD — the CASES were tabled in the docstring, but the wrong-type outcome was DESCRIBED (*"the built-in report for a wrong TYPE"*) rather than NAMED `TypeError`. Rule of thumb earned: the exception TYPE NAME is interface, write it; the construct (`raise`/`except`) is mechanism, withhold it. MENTOR DEFECT: eight reds delivered as raw pytest assertion lines in one message — *"I am unable to understand the errors from the log"* — then re-delivered one group at a time in words, which worked.** |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -4864,3 +4883,253 @@ touched.
 **CURRICULUM: untouched.** Nothing at subsection level moved; `finally`'s
 miss keeps the 1.9 `else`/`finally` bullet at [~] where it already was.
 **RULES unchanged at v6** — no rule adopted, none parked.
+
+## What Session 41 established (Thu 3 September 2026, 21:43 → Fri 4 September 01:36; resumed 21:22 → 23:10)
+
+**The August gauntlet ran, on its fifth scheduling.** The gate came from the
+repo in the first minute: S40's commit at Wed 20:51, `date` at Thu 21:43 —
+25 hours — and 1.10 last taught in S39, 51 hours earlier. Everything through
+1.10 was legal. Pure mixed recall, no new material, term-tax inside it.
+ARCHIVE.md and the master were loaded at the open under the gauntlet
+exception. He did not answer either opening question (how long; the LeRobot
+build-block decision) and said *"lets start the gaunlet"*; the plan was
+stated out loud in five blocks and all five ran.
+
+**Result in one line: 32 cold asks, 27 passes; queue [x] 80 → 96; 1.8 CLOSED;
+1.10's taught half [x]; two 1.9 bullets [x] (three of ten now); one 1.5
+tick reverted; the strict-legend audit of 1.1–1.5 passed 11/12; the re-baseline arithmetic is
+recorded and it misses the 30 Sep gate; the cold drill was SKIPPED by him
+with two lines left; two pushbacks (75 not upheld, 76 part-upheld); one
+mentor defect that cost twenty minutes; RULES unchanged at v6.**
+
+### 0. THE GATE, AND THE BREAK IN THE MIDDLE
+
+The session had two sittings. The first ran 21:43 → 01:36 and stalled inside
+the drill; the second began at 21:22 the next evening (`drills/s41_commands.py`
+mtime) and ran to the close. **The break was not re-gated and the drill was
+not re-framed on resumption.** The drill evidence is still cold — it was
+written four days after S36/S37 — but the second sitting was a tired
+continuation of a stalled fix, and that is where the collapse in §3 happened.
+Recorded as a mentor omission, not a rule.
+
+### 1. THE SNIPPET VOLLEY — 5/6, AND THE ONE GAP WAS THE S40 ONE
+
+Six snippets, each with its own code, each named before it was run
+(S27 rule). Ratings taken after his answers, before verdicts.
+
+| # | Snippet | Answer | Rating | Result |
+|---|---|---|---|---|
+| 1 | `robot.append(2)` on a dict | `AttributeError`, "all methods are attributes of the object" | 6 | PASS → [x]. Gap in S40. |
+| 2 | `5[0]` | `TypeError` | 5 | PASS → [x]. Third asking, first cold pass. |
+| 3 | `type(x) != int or x < 0`, `x = "90"` | "short-circuiting, True" | 7 | PASS → [x]. The S37 demotion reversed. |
+| 4 | `return` inside `try`, `finally` prints | `finally ran` then `from try` | 7 | PASS → [x]. The GUARANTEE this time, not the shape. |
+| 5 | `count = count + 1` after `print(count)` | label right; mechanism: *"gap, please give me clear cut logic"* | — | FAIL on the mechanism, logged. Then taught directly (below). |
+| 6 | `k = d.keys()`, `l = list(d.keys())`, `z = zip(d, ...)`, then `d["c"] = 3` | "k live view, list is a snapshot and immutable, zip is an iterator" | 6 | PASS → [x] — **closes the 1.8 `dict` bullet, owed since S38.** "immutable" corrected to *snapshot*. |
+
+**The `UnboundLocalError` mechanism, a declared gap, was handled the way S40
+said it should be: frame → definition → [TEACH-BACK], no [PREDICT].** Three
+steps (compile-time scan marks any assigned name local for the whole body; the
+call makes a frame with an empty slot; the read finds the slot empty), then
+the deletion test with both outputs. His teach-back: *"any variable with `=`
+inside the body is considered local without executing… when we remove
+`count = count + 1` it is not considered local at the time of creating the
+function object."* Accepted, sharpened by one clause: decided when the FILE
+is compiled, before `def` runs.
+
+**Footnote shown after, right-sized as a footnote:** `list(z)` after the
+insert raises `RuntimeError: dictionary changed size during iteration` — the
+`mutate-while-iterating` row wearing new clothes. Nothing logged.
+
+### 2. 1.10 AS INSTANCES — 7/7, ALL AT 7
+
+Two files, fixed names (`robot.py`, `main.py`), CHANGED between asks and never
+forked (the S39 lesson, applied). Three asks:
+
+- Three imports of `robot` plus a bare `MAX_ANGLE`: *"robot loaded / 90 / 90 /
+  NameError"* — exact, **including the module-level print he dropped twice in
+  S39, and printed ONCE.** Depth ask, why once: *"if it is not there in cache,
+  executed, otherwise retrieved from cache."* → `import RUNS the file`,
+  `import binds ONE name`, `the import cache` promoted.
+- `type(robot)`, `robot.MAX_ANGLE`, `vars(robot)["MAX_ANGLE"]`,
+  `robot["MAX_ANGLE"]`: *"module / 90 / 90 / TypeError"* → `a module IS an
+  object`, `vars()`, `subscription vs attribute access` promoted.
+- The `__name__` pair, run directly and imported: both exact → promoted.
+
+**One confusion, raised by him and resolved against his own answer:** *"what if
+the name of the running file is not main?"* — he had just written `__main__`
+for a file called `robot.py`. `__main__` is not a filename. Teach-back on
+`app.py`: *"robot.py's output will be the same, it doesn't depend on app.py."*
+Clean.
+
+### 3. THE DRILL — ZERO CATCH-ALLS AGAIN, `run` CLEAN, THEN SKIPPED
+
+`drills/s41_commands.py`: `BadCommand`, `to_angle`, `check`, `run`; 36
+mentor tests. The instrument was the TRANSFER GAP — catch-all count as the
+measurement, defined in STATE before the session.
+
+**What held.** Zero `except:` / `except Exception:` in the file, and this time
+he said why unprompted: *"I feel `except Exception` could have worked, but
+then I thought that will also open doors for unknown errors, so didn't use
+it."* **Second consecutive cold file with a zero count, and the first with the
+reason spoken.** The 1.9 `specific vs bare except` bullet is promoted on it.
+
+**The done line was held for the second time.** *"Done, I believe all the
+functions are ok"* → *"that is a verdict, not a prediction"* → he named `run`
+and the except structure. The first red was the type's NAME (`OutofLimit`
+where the spec said `BadCommand`), found off the import line.
+
+**The Group-3 sequence, each found off ONE pointer:** hardcoded
+`("done", 1)` / `return 1` → a counter; the bad entry carrying the int
+because he had rebound `original_angle_value` → a second name; then the ok
+entry carrying the TEXT because he over-corrected → the int name. 26 → 28 →
+28 → 30 passes.
+
+**Group 4 — the `finally` placement — was the real teaching moment.** He
+named `finally` immediately, then asked *"is it not the one that gets executed
+first?"* and then *"I am not getting what you are saying"* about the loop.
+A mentor demo (`teaching/s41_gauntlet/fin_loop.py`) showed the two shapes
+with output: `finally` INSIDE the loop runs per item; AROUND the loop, once.
+He then moved the whole `try/except/else` out around the loop — losing the
+per-command handling and producing a live `UnboundLocalError` on `joint_name`
+for the empty list (tonight's term, in his own traceback). Told in words:
+two `try` statements, one inside the other, the outer one with only
+`finally`. **He wrote it correctly: 31/34, `run` finished.**
+
+**The collapse.** Two reds left: the class line (`BadCommand(Exception)` must
+be catchable by `except ValueError:`) and the float (`0 <= 45.0 <= 90` raises
+nothing; the type must be tested explicitly). The break happened here.
+Next evening: he fixed the class line to `ValueError` — and at the same time
+changed `to_angle`'s clause from `except ValueError:` to `except BadCommand:`,
+which is the hierarchy rule applied BACKWARDS (a child's catcher does not
+catch the parent; `int("n/a")` raises a plain `ValueError`). And in `check`
+he put `int(angle)` inside the comparison, which CONVERTS a float instead of
+refusing it. 32 → 24. Then: *"you know what please edit the code and show me
+my error"* — refused, the one line the mentor never crosses; the structure
+was said in words. Then: *"this is not happening, I want to strictly skip this
+exercise."* Skipped. **First skipped drill on record.** The file is committed
+as it stood (24/34 at close).
+
+**What the drill measured, honestly:** the transfer gap on catch-alls is
+CLOSED — two files, zero count, reason given. The custom-exception hierarchy
+is NOT closed: he can write `class X(Y)` and he can say the rule, but under
+fatigue he applied its direction backwards. `raise` was used correctly
+throughout but carries no rating, so its bullet stays [~] on the letter of
+S16-3.
+
+### 4. THE OWED TERMS — 5/7
+
+`print()` (mechanism with `sep`/`end`; returns `None` on the follow-up, 7 —
+both rows [x]); `when to use which` (*"too vague"* — then he listed the five
+discriminating questions, which IS the framework; 6, [x] — never asked in 16
+days); `comprehension scope` (7, [x], *"unlike a normal for loop"*); `_`
+(*"ordinary name to Python, without any consequence"*, 6, [x] — the S40
+withdrawal reversed).
+
+**Two fails.** `* on a sequence`: `[1,2,1,2,1,2]` right, then the grid —
+`[[0]*3]*3; grid[0][0] = 1` → he predicted three independent rows; it is
+`[[1,0,0],[1,0,0],[1,0,0]]`, one inner list under three references. **Rated 3
+before the verdict; the 3 predicted the miss.** `None`-as-absence: *"I don't
+remember this distinction"*, then gave the mutating tell (a different row,
+correctly). Taught on its own with `first_over` returning `0` vs `None`, the
+`-1`-is-a-real-index point, and the `if not result` trap; teach-back
+(*"-1 is considered the last value in indexing"*) clean.
+
+### 5. THE STRICT-LEGEND AUDIT — 11/12 OF THE OLDEST TICKS SURVIVE
+
+Two volleys on [x] marks awarded S3–S16 under the looser legend.
+
+**1.1–1.2, six of six:** the run pipeline (7; "line by line" sharpened to
+instructions); CPython (5; sharpened to compiler AND PVM); the alias
+(`[1, 2]`, and on the re-ask the full why); `==` vs `is` as `id(a) == id(b)`
+(8); `True + True` → `2` (7); `id()` — address first, then on the re-ask the
+guarantee with lifetime and reclamation.
+
+**1.3–1.5, five of six:** `2 ** 3 ** 2` → 512 right-to-left (8) and
+`1 + 2 * 3 ** 2` → 19 (8) — **the bundled precedence/associativity tick that
+hid an empty item in S25 is now two separate cold passes**; `-7 // 2, -7 % 2`
+→ `-4 1`, **and he wrote the identity `2*(-4) + r = -7` unprompted — the
+symbolic form owed since S18**; `3 / 1` → `3.0` (8); the shallow slice with
+`deepcopy` as the fix (7).
+
+**The one revert: augmented assignment.** `x += [2]` → `y` sees `[1, 2]`,
+right. Then: *"`x = x + [2]` mutates the original object, that's why"* — wrong;
+`+` builds a new list and `=` rebinds. **Right output, wrong model, the S37
+`short-circuit` signature; rated 5.** [x] → [~], re-ask in two days.
+
+### 6. PUSHBACKS 75 AND 76 — 76 RAISED, 74 UPHELD OR PART-UPHELD
+
+**75, NOT upheld.** *"Don't you think you should have mentioned this
+explicitly — I saw the others with quotes and thought that's what you are
+doing."* Checked against the file: the prose said `("ok", joint, angle)` with
+`angle` the return of `to_angle`, and the worked example had
+`("ok", "shoulder", 45)` unquoted beside `("bad", "elbow", "n/a")` quoted.
+The quotes were the point. Told as arithmetic, which he prefers.
+
+**76, PART-upheld.** *"Your instructions for what error to raise and by what
+name are not clear… be very specific when to use BadCommand and when the
+original error type."* The CASES were tabled in the `check` docstring, three
+outcomes, two of them `BadCommand` — not upheld there. But the third outcome
+read *"the built-in report for a wrong TYPE"* instead of `TypeError`, and the
+type section described what must catch `BadCommand` instead of naming
+`ValueError`. Under SPEC BEFORE PUZZLE the exception type is interface.
+**Rule of thumb, not a rule: the exception TYPE NAME is interface, write it;
+the CONSTRUCT (`raise`, `except`, subclassing) is mechanism, withhold it.**
+A full where/case/what-leaves table was then given and he accepted it.
+
+### 7. MENTOR FAILURES
+
+1. **Eight reds delivered as raw pytest assertion lines in one message.**
+   *"I am unable to understand the errors from the log you have given."*
+   Correct complaint. Re-delivered one group at a time, in words, with the
+   test's call and its expectation — and every group was then found off a
+   single pointer. **Rule of thumb: red comes back as ONE group, in words,
+   never as a dump.** Cost: about twenty minutes.
+2. **Described `TypeError` instead of naming it** (pushback 76).
+3. **The 20-hour break inside the drill was neither re-gated nor re-framed.**
+   The second sitting opened cold on a half-fixed file and the direction
+   error followed.
+4. **A [RECALL] on `joint_name` was fired mid-drill as the third item in a
+   turn** and went unanswered. Dropped, not logged.
+
+**Held:** gate from the repo in the first minute; the plan stated before the
+first question; every snippet verified by running it before it was posed;
+ratings after answers and before verdicts throughout; the done line held;
+the drill file never touched, including when he asked; the skip honoured
+instantly; no session end proposed.
+
+### 8. THE RE-BASELINE ARITHMETIC — RECORDED WHATEVER IT SAYS
+
+Window: S21 (16 Aug) → S41 (4 Sep), 19 days, 21 sessions.
+Closed in the window: the 1.7 tail (~0.3), 1.8 in full (1.0), 1.9 to three
+bullets of ten (~0.3), 1.10 to six bullets of twelve (0.5) — **~2.1
+subsection-equivalents in 2.7 weeks ≈ 0.8 per week.**
+Remaining: 1.9 (0.7), 1.10 (0.5), 1.11 (1.0), 1.12 (weighted 2.0 — the master
+says it is several times the size of 1.6), 1.13 trimmed (1.0) — **~5.2
+units.** At 0.8/week: **~6.5 weeks → derived close ≈ 22 Oct 2026.** The
+30 Sep gate is 3.7 weeks away and would need ~1.4/week, nearly double the
+observed rate. **The ladder's first rung is invoked: weekend blocks first,
+recompute at the September gauntlet.** Nothing is de-scoped.
+
+**File-growth review (job d):** the split is holding. ARCHIVE is 352 KB and
+was loaded only tonight; STATE was 2,632 words at the open, over its 2,000
+target, and is trimmed at this close.
+
+### 9. THE LEDGER
+
+**Queue:** 128 rows; [x] 80 → 96; [~] 48 → 32; never-asked 6 → 2 (`sum()`,
+`when NOT to use a comprehension`); overdue 35 → 40 (the count includes rows
+due 3–4 Sep that were not reached: `slicing`, `zip`, `KeyError vs
+IndexError`, `hashable`). Promoted tonight (17): `AttributeError`,
+`subscriptable`, `short-circuit`, `else / finally`, `.items()/.keys()/.values()`,
+all seven 1.10 rows, `comprehension scope`, `print()`, `print() sep/end`,
+`when-to-use-which`, `_ as a name`, `specific vs bare except` (no rating —
+count-measured). Failed: `UnboundLocalError` (mechanism, then taught),
+`* on a sequence` (3), `None-as-absence` (gap, then taught).
+
+**CURRICULUM:** 1.8 CLOSED. 1.5 augmented assignment [x] → [~]. 1.9:
+`specific vs bare except`, `else/finally` → [x]. 1.10: six bullets → [x];
+the untaught six stay [ ]. 1.1–1.5 audit: 11/12 confirmed under the strict
+legend.
+
+**Decisions:** the LeRobot build-block ruling — asked at the open, not
+answered, carried a THIRD time. **RULES unchanged at v6; nothing parked.**

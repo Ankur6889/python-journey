@@ -43,9 +43,9 @@
     "term": "* on a sequence",
     "hook": "repeats the REFERENCE, not the contents. [[0]*3]*3 shares one row",
     "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-05",
+    "last_asked": "2026-09-04",
+    "rating": 3
   },
   {
     "term": "mutate-while-iterating",
@@ -58,10 +58,10 @@
   {
     "term": "when-to-use-which",
     "hook": "THE DECIDING QUESTION IS 'WHAT AM I GOING TO ASK THIS CONTAINER?' in here -> set; value for a name -> dict; order/position -> list; never changes -> tuple",
-    "status": "~",
-    "next_due": null,
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-09",
+    "last_asked": "2026-09-04",
+    "rating": 6
   },
   {
     "term": "set difference -",
@@ -170,10 +170,10 @@
   {
     "term": ".items() / .keys() / .values()",
     "hook": "looping a dict gives the KEYS; .items() gives TUPLES; .keys() is a VIEW that BUILDS NOTHING and supports set ops directly",
-    "status": "~",
-    "next_due": "2026-09-02",
-    "last_asked": "2026-09-01",
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 6
   },
   {
     "term": "set -- UNORDERED",
@@ -234,18 +234,18 @@
   {
     "term": "AttributeError",
     "hook": "the name after the DOT is not on the object",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": "2026-09-02",
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 6
   },
   {
     "term": "subscriptable",
     "hook": "can be indexed with [ ]. list/tuple/str/dict are; set is NOT",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": "2026-09-02",
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-05",
+    "last_asked": "2026-09-03",
+    "rating": 5
   },
   {
     "term": "unpacking",
@@ -370,10 +370,10 @@
   {
     "term": "print()",
     "hook": "takes ANY object and calls str() on it -- NOT 'a string'",
-    "status": "~",
-    "next_due": null,
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-09",
+    "last_asked": "2026-09-04",
+    "rating": 7
   },
   {
     "term": "import",
@@ -386,10 +386,10 @@
   {
     "term": "_ as a name",
     "hook": "an ordinary name, convention for 'I am not going to use this value'",
-    "status": "~",
-    "next_due": null,
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-09",
+    "last_asked": "2026-09-04",
+    "rating": 6
   },
   {
     "term": "list comprehension",
@@ -458,10 +458,10 @@
   {
     "term": "comprehension scope",
     "hook": "its variable does not exist afterwards => NameError. A FOOTNOTE",
-    "status": "~",
-    "next_due": null,
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-09",
+    "last_asked": "2026-09-04",
+    "rating": 7
   },
   {
     "term": "when NOT to use a comprehension",
@@ -570,10 +570,10 @@
   {
     "term": "short-circuit",
     "hook": "and/or stop early, return the OPERAND",
-    "status": "~",
-    "next_due": "2026-09-02",
-    "last_asked": "2026-09-01",
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 7
   },
   {
     "term": "modulo identity",
@@ -667,9 +667,9 @@
     "term": "print() sep/end",
     "hook": "between items; after everything; returns None",
     "status": "x",
-    "next_due": "2026-09-11",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-09",
+    "last_asked": "2026-09-04",
+    "rating": 7
   },
   {
     "term": "break / continue / pass",
@@ -715,8 +715,8 @@
     "term": "UnboundLocalError",
     "hook": "name IS local, no value bound yet",
     "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": "2026-09-02",
+    "next_due": "2026-09-04",
+    "last_asked": "2026-09-03",
     "rating": null
   },
   {
@@ -763,8 +763,8 @@
     "term": "None-as-absence vs empty container",
     "hook": "collectors give ()/{}; optional attributes give None",
     "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
+    "next_due": "2026-09-05",
+    "last_asked": "2026-09-04",
     "rating": null
   },
   {
@@ -922,10 +922,10 @@
   {
     "term": "specific vs bare except",
     "hook": "catch the exception you EXPECT. A bare except: turns a typo into a SILENT WRONG ANSWER. NEW S35 -- and he wrote one 40 min after agreeing it was the worst case",
-    "status": "~",
-    "next_due": "2026-09-05",
-    "last_asked": "2026-08-31",
-    "rating": 7,
+    "status": "x",
+    "next_due": "2026-09-07",
+    "last_asked": "2026-09-04",
+    "rating": null,
     "note": "S36: the cold ASK passed (7/10) but CURRICULUM sets a stricter condition on this bullet -- it does not promote until his own fresh code stops containing a catch-all. s36_signals shipped an `except Exception` filing into \"broken\"; removed only after a PREDICT. Held [~]."
   },
   {
@@ -955,10 +955,10 @@
   {
     "term": "else / finally",
     "hook": "else = the try did NOT raise. finally = ALWAYS -- through a return, through an uncaught exception. NEW S35",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": "2026-09-02",
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 7
   },
   {
     "term": "finally vs code after the block",
@@ -971,57 +971,57 @@
   {
     "term": "import RUNS the file",
     "hook": "import is NOT a fetch, it is a RUN: Python finds the .py, executes it top to bottom like a program, THEN binds a name. A module-level print() fires on import. Taught S39; he dropped this line from predicted output TWICE",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 7
   },
   {
     "term": "import binds ONE name",
     "hook": "`import robot` binds ONLY `robot` -- MAX_ANGLE never enters your namespace. `from robot import clamp` binds ONLY `clamp` (and NOT `robot`). `import robot as r` binds ONLY `r` -- aliasing REPLACES, it does not add. Ask via NameError. Taught S39",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 7
   },
   {
     "term": "the import cache / sys.modules",
     "hook": "cache = cacher, to hide: a store of results kept so the work is not redone. dict of module name -> module object. HIT = skip the run; MISS = find, run, store. Step 2 (binding) ALWAYS fires either way. This is why a notebook re-import does not pick up your edit. Taught S39",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 7
   },
   {
     "term": "a module IS an object, its namespace IS a dict",
     "hook": "type(m) is `module`. vars(m) hands back the REAL namespace dict: 8 dunders Python put there + the names the file created, in creation order. Taught S39",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 7
   },
   {
     "term": "vars()",
     "hook": "vars(obj) -> the object's namespace dictionary (its __dict__). A plain dict has NO __dict__ -- vars({}) raises TypeError. Taught S39",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 7
   },
   {
     "term": "subscription vs attribute access",
     "hook": "d['k'] = SUBSCRIPTION, looks in the object's CONTENTS. obj.k = ATTRIBUTE access, looks in the object's NAMESPACE. They coincide for a MODULE only, because a module's contents ARE its namespace. `d.k` on a dict -> AttributeError. MENTOR ERROR S39: said 'the dot is sugar over a dict access'; he tested it in Jupyter and disproved it (pushback 72)",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 7
   },
   {
     "term": "__name__ and __main__",
     "hook": "A string in every module's namespace. Imported -> the module's own name ('sensors'). The file handed to python3 -> '__main__', whichever file that is. So a file can ask at runtime: was I run, or imported? THE GUARD LIVES IN THE FILE BEING IMPORTED, not the consumer -- he named the idiom unprompted S39 and put it in the wrong file",
-    "status": "~",
-    "next_due": "2026-09-03",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-08",
+    "last_asked": "2026-09-03",
+    "rating": 7
   }
 ]

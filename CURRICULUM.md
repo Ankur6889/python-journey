@@ -148,7 +148,7 @@
  the re-ask he produced the distinction unaided: precedence = rank between
  DIFFERENT operators; associativity = direction within the SAME rank. The S25
  hook (*rank barabar? ab direction dekho*) held. ORIGINALLY:** Promoted S16; asked ALONE and cold in S25 he answered **"gap"** — a flat empty. Re-taught S25 with a hook (*rank barabar? ab direction dekho; sab left se, sirf `**` right se*). **The S16 promotion had bundled it with precedence and never tested it on its own.**
-- [x] Augmented assignment (+=, -=, etc.) — **PROMOTED S16**
+- [~] Augmented assignment (+=, -=, etc.) — PROMOTED S16, **DEMOTED S41 (gauntlet audit): `x += [2]` output right, but said `x = x + [2]` also mutates in place — right output, wrong model, rated 5. Re-ask the `+=`-vs-`=` contrast cold.**
 - [~] Short-circuit evaluation in and/or — S13
 
 > **1.5 STATUS: COVERED END-TO-END — Session 13.** Most items promoted in the
@@ -1146,7 +1146,7 @@ false.
 > flagged it himself) and LIST COMPREHENSIONS (in `[(key(x), x) for x in
 > items]`). Both are listed in 1.8. Mark them seen-but-not-taught.**
 
-#### 1.8 Data Structures
+#### 1.8 Data Structures — **CLOSED S41 (4 Sep 2026): the last two [~] bullets (`dict`, `when to use which`) promoted at the gauntlet.**
 - [x] list — methods, indexing, slicing — **TAUGHT S24, EARNED S38** (`drills/s24_lists.py`,
  11/11 pytest, one guided fix). Covered: INDEXING formally (0-based, last
  index is `len-1`, negative indices, `IndexError`) — **it had never been
@@ -1220,7 +1220,7 @@ false.
  (guarantee you can stop reading / loud failure at the cause / states intent).
  ⚠ (Historic, S26: NOT [x] — SAME-DAY SESSION, and **no drill file was
  written**. Needs a task-first cold pass.) **DISCHARGED S34.**
-- [~] dict — **~⅔ TAUGHT S26.** Motivated from the parallel-lists failure — he
+- [x] dict — **PROMOTED S41 (gauntlet, 4 Sep): `.keys()` as a LIVE VIEW vs `list(d.keys())` as a snapshot, cold at a real gap, rated 6 — the answer owed since S38.** ~⅔ TAUGHT S26. Motivated from the parallel-lists failure — he
  found BOTH defects unaided (the pairing isn't enforced; `.index()` costs a
  LINEAR scan, which he named). Covered: key→value; `[]` takes a KEY; **keys are
  UNIQUE and it is derivable — `[]` must return one value**; existing key
@@ -1293,7 +1293,7 @@ false.
  `command.keys() - supported` needs no conversion. `if bad:` on the empty set as the
  falsy idiom. ⚠ NOT [x]: same-session throughout, and **no set drill file was
  written** — task-first cold pass owed.
-- [~] **When to use which — decision framework — TAUGHT S27.**
+- [x] **When to use which — decision framework — TAUGHT S27, PROMOTED S41 (gauntlet): the framework produced cold as five discriminating questions (mutable or fixed; growing or same size; pairs or single values; unique or repeated; lookup speed), rated 6. Never asked before, 16+ days.**
  Asked for **ONE deciding question**, he gave four correct usage statements instead
  (*tuple if it must not change / list for flexibility / dict if things come in pairs
  / set if things are unique*) — **all four correct, all four about what you STORE,
@@ -1586,7 +1586,7 @@ false.
  ⚠ **LANGUAGE CORRECTION ISSUED (S9 rule): he said "no errors will be caught."
  INVERTED — the error IS caught; that is the crime. The phrase is "no error is
  REPORTED."****
-- [~] **Catching specific exceptions vs bare except — TAUGHT S35, AND IT PRODUCED
+- [x] **Catching specific exceptions vs bare except — PROMOTED S41: ZERO catch-alls in two cold files at real gaps (`builds/block_02_episode_validator/validator.py` S37; `drills/s41_commands.py` S41), and `except Exception` considered and rejected unprompted with the right reason ("opens doors for unknown errors"). TAUGHT S35, AND IT PRODUCED
  THE SESSION'S HEADLINE FINDING.** Demonstrated by typo'ing a variable name inside
  the `try`: with `except ValueError:` the program dies loudly on a `NameError`
  (correct — the bug screams); with a bare `except:` the SAME file prints "skipping
@@ -1614,7 +1614,7 @@ false.
  (**pre-loaded S15: `for`
  catching `StopIteration` internally is the first real example of an
  exception being caught and handled quietly — reuse it here**)
-- [~] **else and finally clauses — TAUGHT S35, with the worth of each stated out
+- [x] **else and finally clauses — PROMOTED S41: the `return`-inside-`try` guarantee answered cold at 7 the day after the S40 miss, and both used correctly in `drills/s41_commands.py` (`finally` AROUND the loop for the once-only entry, `else` for the ok path, counter in the `else`). TAUGHT S35, with the worth of each stated out
  loud before the mechanics (S28 corollary): "finally is load-bearing, else is a
  scoping tool worth about one line."** `else` = the `try` did NOT raise; `finally`
  = **always**. ⚠ **The load-bearing demonstration was a function with NO `except`
@@ -1736,15 +1736,15 @@ false.
 **OPENED S39 (1–2 Sep 2026). All S39 marks are [~] and cannot be more: the
 session opened 3 minutes after S38 closed, so every bullet below was taught
 and demonstrated in the SAME SITTING. Cold later-day asks are queued for S40.**
-- [~] What a module is / [~] import statement / [~] from x import y
+- [x] What a module is / [x] import statement / [x] from x import y — **PROMOTED S41 (gauntlet, ~51h after S39): full trace of a three-import `main.py` cold, module-level print ONCE, `NameError` on the unbound name, cache stated as the reason; rated 7 (`drills/`-free, mentor snippets, see ARCHIVE S41 §2)**
       (S39 — `teaching/s39_imports/`: import RUNS the file top to bottom,
       ONCE per process, then binds names; `from x import y` runs the whole
       file too and binds only `y`)
-- [~] import as aliasing / [~] `__name__ == "__main__"`
+- [x] import as aliasing / [x] `__name__ == "__main__"` — **PROMOTED S41: both runs of the `__name__` pair cold, rated 7; `__main__`-is-not-a-filename confusion raised and resolved against his own answer**
       (S39 — aliasing REPLACES the name rather than adding one, proved by
       `NameError: name 'robot' is not defined` after `import robot as r`;
       the guard derived by him unprompted, PLACEMENT corrected by the mentor)
-- [~] The module namespace as a real dict — `vars(m)`, the dunder roster,
+- [x] The module namespace as a real dict — **PROMOTED S41: `type(robot)`, `vars(robot)["MAX_ANGLE"]` vs `robot["MAX_ANGLE"]` → `TypeError` named cold, rated 7** — `vars(m)`, the dunder roster,
       and the dot as a namespace lookup (S39; not a master bullet, added
       because he asked for it twice by name)
 - [ ] The standard library / [ ] pip and third-party packages
