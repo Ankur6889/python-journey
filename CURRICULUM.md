@@ -1665,7 +1665,7 @@ false.
  then `OverLimitError` (the mentor's own "convention" footnote applied over the
  literal spec). Two collection failures, zero tests run. **Named as its own finding:
  identifiers are not paraphrasable.**
-- [~] **The exception hierarchy + `except` ORDERING — TAUGHT S36.** He supplied the
+- [~] **The exception hierarchy + `except` ORDERING — TAUGHT S36; RE-TAUGHT S42 (5 Sep 2026) WITH THE DIRECTION DRAWN after the S41 inversion: a catcher reaches DOWN the tree, never up; ordering re-derived by him (*"the wide catcher caught it before it reached the narrow one"*); `raise ... from` and `except Exception` vs bare `except` (`BaseException` siblings) taught the same night, teach-backs clean; `except ... as e` (`e` is an OBJECT) parked ON CREDIT until 1.12. 1.9 is now TAUGHT IN FULL. Cold asks due 7 Sep.** He supplied the
  tool himself before it was taught — *"I want to catch all types of exception…
  something more general"* — which is the second session running he has asked for a
  mechanism by its shape before being handed it. Taught as a FAMILY TREE:
@@ -1749,7 +1749,8 @@ and demonstrated in the SAME SITTING. Cold later-day asks are queued for S40.**
       because he asked for it twice by name)
 - [ ] The standard library / [ ] pip and third-party packages
 - [ ] What a package is / [ ] Relative vs absolute imports
-- [ ] Circular imports / [ ] sys.path
+- [ ] Circular imports / [~] sys.path — **OPENED S42 (5 Sep 2026, ~02:50): framed as a plain LIST of folders searched in order, first match wins, entry 0 = the script's folder; printed from his own machine (ROS Jazzy site-packages second); proof `import s22_counter` from the repo root → `ModuleNotFoundError`. The two-fixes [PREDICT] is unanswered — he stopped there.**
+- [~] **`.pyc` / what bytecode is — the S35 promise PAID S42.** Cached compiler output in `__pycache__` for IMPORTED modules (shown on his own `drills/__pycache__/s22_counter.cpython-312.pyc`); buys faster IMPORT only; mtime+size stamp → never stale, demonstrated live; bytecode = instructions for the PVM, Level 2 only. **His question answered: CPython is a COMPILER followed by an INTERPRETER (PVM) — "compiled to bytecode, then interpreted."** Cold ask due 7 Sep.
 
 #### 1.11 File Handling
 - [ ] open() / [ ] Read modes / [ ] read(), readline(), readlines()

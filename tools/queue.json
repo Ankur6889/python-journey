@@ -27,17 +27,17 @@
     "term": "copy.deepcopy",
     "hook": "new outer container AND new contents recursively, all the way down",
     "status": "x",
-    "next_due": "2026-09-02",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-17",
+    "last_asked": "2026-09-05",
+    "rating": 8
   },
   {
     "term": "slicing / SHALLOW COPY",
     "hook": "[start:stop:step] half-open, builds a NEW list; l[:], list(l), l.copy() copy the OUTER container, references SHARED",
     "status": "x",
-    "next_due": "2026-09-03",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-17",
+    "last_asked": "2026-09-05",
+    "rating": 8
   },
   {
     "term": "* on a sequence",
@@ -99,9 +99,9 @@
     "term": "None IS NOT NOTHING",
     "hook": "None is an OBJECT and fills a slot: len([None]) == 1",
     "status": "x",
-    "next_due": "2026-09-02",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-17",
+    "last_asked": "2026-09-05",
+    "rating": 8
   },
   {
     "term": "list()",
@@ -155,9 +155,9 @@
     "term": "while vs for",
     "hook": "condition re-checked vs walking an iterable",
     "status": "x",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-17",
+    "last_asked": "2026-09-05",
+    "rating": 8
   },
   {
     "term": "while mechanics / nested loops / found-flag",
@@ -187,8 +187,8 @@
     "term": "{} is a DICT",
     "hook": "{} builds an empty dict; set() is the ONLY way to write an empty set",
     "status": "x",
-    "next_due": "2026-09-04",
-    "last_asked": "2026-08-30",
+    "next_due": "2026-09-10",
+    "last_asked": "2026-09-05",
     "rating": 7
   },
   {
@@ -227,9 +227,9 @@
     "term": "zip FAILS SILENTLY -- TWICE",
     "hook": "unequal lengths => truncates to the SHORTEST; exhausted => [], no error",
     "status": "x",
-    "next_due": "2026-09-03",
-    "last_asked": "2026-09-01",
-    "rating": 5
+    "next_due": "2026-09-17",
+    "last_asked": "2026-09-05",
+    "rating": 8
   },
   {
     "term": "AttributeError",
@@ -259,9 +259,9 @@
     "term": "THE RAISE-VS-SHRUG PAIRING",
     "hook": "d[k]/.get(), del d[k]/.pop(k,default), remove/discard. Raise when absence is a BUG; shrug when expected",
     "status": "x",
-    "next_due": "2026-09-02",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-17",
+    "last_asked": "2026-09-05",
+    "rating": 8
   },
   {
     "term": ".get() vs []",
@@ -283,9 +283,9 @@
     "term": "tuple immutability",
     "hook": "item assignment on a tuple => TypeError",
     "status": "x",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-10",
+    "last_asked": "2026-09-05",
+    "rating": 7
   },
   {
     "term": "dict",
@@ -443,9 +443,9 @@
     "term": "zip",
     "hook": "pairs parallel ITERABLES; each pass yields a TUPLE",
     "status": "x",
-    "next_due": "2026-09-03",
-    "last_asked": "2026-09-01",
-    "rating": 5
+    "next_due": "2026-09-17",
+    "last_asked": "2026-09-05",
+    "rating": 8
   },
   {
     "term": "braces hold an EXPRESSION",
@@ -499,9 +499,9 @@
     "term": "ValueError",
     "hook": "value wrong, TYPE OK; int('2.6'). Change only the VALUE and it works => ValueError",
     "status": "x",
-    "next_due": "2026-09-01",
-    "last_asked": "2026-08-30",
-    "rating": 5
+    "next_due": "2026-09-10",
+    "last_asked": "2026-09-05",
+    "rating": 7
   },
   {
     "term": "TypeError",
@@ -555,9 +555,9 @@
     "term": "expression vs statement",
     "hook": "value vs action. HIS OWN TEST: can it go inside print(...)?",
     "status": "x",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-17",
+    "last_asked": "2026-09-05",
+    "rating": 8
   },
   {
     "term": "precedence / associativity",
@@ -739,9 +739,9 @@
     "term": "docstring / __doc__",
     "hook": "FIRST statement of the body; POSITION makes it",
     "status": "x",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-10",
+    "last_asked": "2026-09-05",
+    "rating": 7
   },
   {
     "term": "key=",
@@ -754,9 +754,9 @@
   {
     "term": "cell / closure four layers",
     "hook": "one-slot box; name -> function -> __closure__ -> CELL -> cell_contents",
-    "status": "x",
-    "next_due": "2026-09-01",
-    "last_asked": null,
+    "status": "~",
+    "next_due": "2026-09-06",
+    "last_asked": "2026-09-05",
     "rating": null
   },
   {
@@ -827,9 +827,9 @@
     "term": "mutable default trap + sentinel",
     "hook": "",
     "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-06",
+    "last_asked": "2026-09-05",
+    "rating": 6
   },
   {
     "term": "in-place mutators return None",
@@ -882,10 +882,10 @@
   {
     "term": "function object vs call (f vs f())",
     "hook": "one direct cold test promotes",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-09",
+    "last_asked": "2026-09-04",
+    "rating": 7
   },
   {
     "term": "recursion",
@@ -948,9 +948,9 @@
     "term": "except ... as e",
     "hook": "binds the exception OBJECT to a name. NEW S35",
     "status": "~",
-    "next_due": "2026-09-02",
-    "last_asked": null,
-    "rating": null
+    "next_due": "2026-09-06",
+    "last_asked": "2026-09-05",
+    "rating": 8
   },
   {
     "term": "else / finally",
@@ -1023,5 +1023,69 @@
     "next_due": "2026-09-08",
     "last_asked": "2026-09-03",
     "rating": 7
+  },
+  {
+    "term": "raise ... from",
+    "hook": "raise NEW from e records e as the CAUSE; traceback middle line becomes 'The above exception was the direct cause of' instead of 'During handling of'. Taught S42, restated twice",
+    "status": "~",
+    "next_due": "2026-09-07",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "except Exception vs bare except",
+    "hook": "BaseException sits ABOVE Exception; KeyboardInterrupt/SystemExit are its siblings. Bare except catches all of BaseException and eats Ctrl-C. Never bare. Taught S42",
+    "status": "~",
+    "next_due": "2026-09-07",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "hierarchy DIRECTION (catcher reaches DOWN)",
+    "hook": "a catcher covers its own node and everything BELOW it, never above. except ValueError catches BadCommand(ValueError); except BadCommand does NOT catch a plain ValueError. Failed under fatigue S41, re-taught with the tree drawn S42",
+    "status": "~",
+    "next_due": "2026-09-07",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "except ORDERING (child first)",
+    "hook": "first match wins, top to bottom; a parent catcher above a child catcher makes the child unreachable. Taught S36, re-taught S42",
+    "status": "~",
+    "next_due": "2026-09-07",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "exception INSTANCE (e is an OBJECT)",
+    "hook": "ValueError('msg') is a CONSTRUCTOR CALL like list(); raise throws the OBJECT; except..as e binds e to it; type(e) is the class, print(e) is the message. ON CREDIT until 1.12 class->instance. S42 teach-back failed twice; root cause mentor-side",
+    "status": "~",
+    "next_due": "2026-09-07",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": ".pyc / bytecode cache",
+    "hook": "compiler output saved in __pycache__/<name>.cpython-312.pyc for IMPORTED modules; buys faster import only; source mtime+size stamped in the header, mismatch => recompile; deleting is always safe. Taught S42",
+    "status": "~",
+    "next_due": "2026-09-07",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "compiled AND interpreted (PVM)",
+    "hook": "CPython = a compiler (source->bytecode, SyntaxError lives here) + an interpreter loop / PVM (runs bytecode, every other error lives here). C compiles to machine code, no interpreter at run time. His question S42",
+    "status": "~",
+    "next_due": "2026-09-07",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "sys.path",
+    "hook": "a plain LIST of folder paths searched IN ORDER, first match wins; entry 0 = the script's folder ('' = cwd in REPL/-c); every ModuleNotFoundError = not in any folder on it. OPENED S42, [PREDICT] unanswered (he stopped)",
+    "status": "~",
+    "next_due": "2026-09-07",
+    "last_asked": null,
+    "rating": null
   }
 ]
