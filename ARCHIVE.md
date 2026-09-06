@@ -367,7 +367,27 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **42**
+- Sessions Completed: **43**
+- **SESSION 43 (Sat 5 Sep 17:03 → paused after the term-tax → Sun 6 Sep 2026
+  ~23:00) — TERM-TAX, ONE NEW RULE OF THE LANGUAGE, THE IMPORT STORY RE-TOLD,
+  `sys.path` TO THE GROUND, PACKAGES OPENED.** Gate from the repo: 14h since
+  S42, 18h since S41, so everything before S42 was legal. **Term-tax 4 terms:
+  `unpacking` and `ZeroDivisionError` promoted; `< > ^` failed (`^` and the
+  override missing); the keyword half of `keyword argument / parameter vs
+  argument` failed (*"default argument"*, rated 7 on the miss).** The
+  positional-vs-keyword ORDER + DOUBLE-FILL rule (`SyntaxError` at compile vs
+  `TypeError` at the call) was NEW and was taught straight after **pushback
+  79** (he asked a question and got a [PREDICT] back — upheld). He asked to
+  restart from the cache: the five-step import story re-told, two caches
+  distinguished, full-flow teach-back clean. `sys.path` needed THREE
+  restatements before *"what is it, physically"* landed; REPL defined at last;
+  the [PREDICT] answered (append ✓; files-together declined; `import ~/path`
+  → `SyntaxError`). **Packages opened** in `teaching/s43_packages/` after
+  **pushback 80** (files created silently, tree unexplained — upheld); the
+  bound-name [PREDICT] missed (`arm.limits`); stopped one teach-back short.
+  Mentor also clobbered the untracked S42 `where.py`. Queue 136 → 137, [x] 99,
+  overdue 28 → 36 (date rolled). Pushbacks 79, 80 upheld — running 80/78.
+  Curriculum: `packages` [ ] → [~]. Zero curriculum [x], correctly.
 - **SESSION 42 (Fri 4 Sep 23:15 → Sat 5 Sep 2026 02:56) — SAME SITTING AS S41,
   gate applied PER MATERIAL.** The owed decision answered in his first line
   (build block → a real LeRobot file once 1.10 lands). **Overdue volley,
@@ -933,6 +953,7 @@
 | 40 | **TERM-TAX at a LEGAL gap — the first since S36. 80 minutes after S39 (1.10 untestable), 23–48 hours after S36–S38 (1.9 and older testable). He had two hours, ruled the gauntlet out, and stopped at thirty minutes to read notes tonight; the gauntlet is deferred a FOURTH time.** | **No student drill. Eight cold terms in one volley, ratings taken after his answers and before verdicts: `StopIteration`, `UnboundLocalError`, `AttributeError`, `hashable`, `subscriptable`, `finally` (what it guarantees), `abs()`, `_` as a name. `teaching/s40_termtax/` holds five mentor demo files with real output (`ubl.py`, `ubl_fixed.py`, `attr.py`, `subs.py`, `fin.py`, `hashes.py`).** | **Complete as far as it went — ended by him at 20:50.** | **4 PASS / 4 FAIL. PASS → [x]: `StopIteration` (7 — the "EndofIteration" label came back; phrasing fix issued a third time, the ITERATOR is exhausted, never the iterable), `hashable` (4 — "unique" corrected to "equal values hash equal, collisions exist"), `abs()` (7 — never formally taught, passed anyway). FAIL, due 3 Sep: `UnboundLocalError` (WHERE intact, WHY gone — compile-time locality, taught S19/S21/S22/S26, declared honestly: *"can't come to it myself"*), `AttributeError` (gap; named by instance in S27), `subscriptable` (gap; second miss after S38), `finally` (gave the SHAPE, not the guarantee — rated 3, and the 3 predicted the miss). `_` — gave the right answer and withdrew it; not logged. Queue 77 → 80 [x], overdue 40 → 35, never-asked 8 → 6. ZERO curriculum movement. ⚠⚠ **PUSHBACK 74 — *"you are actually checking my memory, and naming it mechanism"* — checked against the notes, not remembered: the mechanism was taught FOUR times. NOT upheld on the item; UPHELD on the remedy he named (recall first, notes second — step 3). Running total 74 raised, 73 upheld or part-upheld.** ⚠⚠ **MENTOR DEFECT: the verdict turn carried an 8-row table, two corrections, a runnable demo, a [PREDICT] AND a [TEACH-BACK] — S20 rule 2 breached — and the [PREDICT] was fired on top of a DECLARED gap, which is the wrong instrument.** He said *"directly give the answer, I am unable to understand your explanation"* and got it in three steps. **RULED: breakpoint debugging → 1.11.** Still owed his ruling: the build block on a real LeRobot file. `.keys()` asked, unanswered. |
 | 41 | **THE AUGUST GAUNTLET, fifth scheduling, first run. 25h after S40 from the repo. Pure mixed recall, no new material: snippet volley → 1.10 instances → cold 1.9 drill → owed terms → strict-legend audit of 1.1–1.5 → re-baseline arithmetic.** | **`drills/s41_commands.py` + `tests/test_s41_commands.py` (36 tests, mentor-written): `BadCommand` (must be catchable by `except ValueError:` without being named), `to_angle(text)` → int or `BadCommand`, `check(joint, angle)` → angle / `BadCommand` / built-in `TypeError` for a wrong type, `run(cmds, log)` → per-command bad/ok entries, any other report passes through, `("done", n)` ALWAYS last. `teaching/s41_gauntlet/fin_loop.py` — the two `finally` shapes, mentor demo.** | **SKIPPED BY HIM at 22:08 on 4 Sep, after a 20-hour break inside the drill. Best state reached: 32/34 (only the class line and the float type test left). Committed as it stood at close (24/34).** | **ZERO catch-alls in the whole file, unprompted, and `except Exception` rejected out loud with the right reason — second consecutive cold file. THE DONE LINE was held for the second time (*"all ok"* is a verdict, not a prediction). `run` finished clean: `try` inside the loop for per-command handling, a second `try` AROUND it for the once-only `finally`, the counter in the inner `else`. The four Group-3 reds (hardcoded `1`, the bad entry carrying the int, then the ok entry carrying the text) were each found off ONE pointer. What did not hold, at the end: the HIERARCHY DIRECTION — he changed `except ValueError:` to `except BadCommand:` around `int(text)` after being told a child is caught by its parent's catcher, i.e. applied the rule backwards — and the float type test, where he put `int(angle)` INSIDE the comparison (converts instead of refuses). Then: *"please edit the code and show me my error"* — REFUSED, structure given in words instead — and *"I want to strictly skip this exercise."* Pushback 75 (*"you should have mentioned this explicitly"*, the int-vs-text log entries): NOT upheld — prose said `("ok", joint, angle)` and the example had the quotes. Pushback 76 (*"be very specific when to use BadCommand and when the original error type"*): PART-UPHELD — the CASES were tabled in the docstring, but the wrong-type outcome was DESCRIBED (*"the built-in report for a wrong TYPE"*) rather than NAMED `TypeError`. Rule of thumb earned: the exception TYPE NAME is interface, write it; the construct (`raise`/`except`) is mechanism, withhold it. MENTOR DEFECT: eight reds delivered as raw pytest assertion lines in one message — *"I am unable to understand the errors from the log"* — then re-delivered one group at a time in words, which worked.** |
 | 42 | **REVISION (40 overdue rows, oldest-first) + 1.9 TAIL + 1.10 SECOND HALF OPENED. Same sitting as S41 (3 min); gate per material.** | **No student drill. Sixteen snippet/write-it asks, each verified by running first: `clamp` alias + `b(5)`; `add_reading(value, log=[])`; `halvings(n)` written cold; `zip` truncation and exhaustion; `grid[:]`; `{}.add`; fall-off-the-end `None`; `(1, 2, [3, 4])`; `copy.deepcopy`; six-line expression/statement classification; `int("2.6")`; `.get` vs `[]`; `__doc__` position; `make_scaler` closure; `except ValueError as e`. Teaching demos in scratch, outputs in `notes/session_42_notes.md`.** | **Complete as far as it went — he stopped at 02:56 mid-`sys.path`.** | **13 PASS / 3 FAIL. One promotion (`function object vs call`), one demotion (`closure`, declared gap), two stay [~] (`mutable default` — model inverted, re-taught; `except ... as e` — over-rated at 8, root cause class → object on credit). Decision owed for three sessions answered: build block → real LeRobot file. 1.9 tail taught in full, four ideas one per turn, every teach-back clean once the demo was cut to ONE block. `.pyc` paid; his "compiled or interpreted?" question answered and he supplied "PVM" himself. `sys.path` [ ] → [~]. Eight queue rows added, due 7 Sep. Pushback 77 (complete code, S19) and 78 (language not clear) both upheld — 78 raised, 76 upheld or part-upheld. MENTOR: S27 breach ("this one raises"); two `try` blocks in one demo; `except as e` built on an untaught construct; abstract-first `raise from` frame.** |
+| 43 | **TERM-TAX (4 terms) + positional/keyword ORDER taught + import cache RE-TOLD at his request + `sys.path` finished + PACKAGES OPENED.** Two calendar days (paused after the term-tax). | **No student drill.** Mentor demos: `teaching/s43_packages/` (`use_arm.py`, `arm/__init__.py`, `arm/limits.py`); `teaching/s39_imports/twice.py` re-run; `where.py` rewritten. | Packages open, teach-back HELD | **Term-tax 2/4 promoted.** Keyword label gap → taught (double-fill `TypeError`, bare-after-named `SyntaxError`), teach-back clean. Cache five-step teach-back clean. `sys.path` [PREDICT]: append ✓, files-together declined, `import ~/…` → `SyntaxError`. Packages bound-name [PREDICT] missed. Pushbacks 79, 80 upheld. |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -5339,3 +5360,160 @@ Prerequisite gate declared out loud: try/except [x]; `raise` and `class X(Y)`
 - **Schedule: 1.9 is now TAUGHT IN FULL; 1.10 has one new bullet open and four
   untouched (packages, relative/absolute, circular, stdlib/pip).** Re-baseline
   unchanged from S41 (derived close ≈ 22 Oct).
+
+## What Session 43 established (Sat 5 September 2026, 17:03 → paused → Sun 6 September ~23:00)
+
+**Two calendar days in one session. Opened Saturday afternoon fourteen hours after
+S42's 03:00 close; the term-tax and the keyword-argument exchange ran Saturday;
+the session then sat idle and resumed Sunday (resume time not recorded) for the
+cache, `sys.path` and packages work, closing Sunday ~23:00 at his word:
+*"lets take this tommorw, and close this session."* Gate applied per material:
+S42's rows were untouchable Saturday and were not asked Sunday either; everything
+older was legal, and the four term-tax rows were all last asked in August.**
+
+### 0. THE GATE
+- Verified from `date`, `git log -1` and mtimes. Stated to him with a table:
+  14h since S42, 18h since S41. Ruling spoken: S42 material askable but not
+  promotable; everything else fully eligible. No decision owed, none parked.
+
+### 1. THE TERM-TAX — 4 TERMS, 2 PROMOTED, 2 FAILED
+- **`unpacking`** — he challenged whether it had been taught. Checked against
+  the queue before answering: taught S21, asked 1 Sep. His definition was the
+  mechanism (equal count of names to items) with two label slips fixed
+  ("placeholders" → NAMES; the thing taken apart is a TUPLE). The never-asked
+  count-mismatch half was fired as an S27 snippet, `a, b = (1, 2, 3)`, and he
+  named `ValueError` with the reason at 7. **[~] → [x], rated 5, due 7 Sep.**
+- **`ZeroDivisionError`** — decoded, rated 6. **[~] → [x].**
+- **`< > ^ in a format spec`** — `<` left, `>` right, `^` forgotten, and the
+  hook ("they OVERRIDE the type default") absent. He asked for the one line and
+  got it after his attempt. **Stays [~], due 6 Sep.**
+- **`keyword argument / parameter vs argument`** — the parameter/argument half
+  was exact (`def ankur(x, y)` vs `ankur(tiwari, raipur)`, rated 6). The keyword
+  half: he called `city="raipur"` on the call line a *default argument*, rated
+  7, then on the pointer ("def line or call line?") correctly retracted the
+  label but could not produce the right one. **Row failed, stays [~].** Second
+  data point for 7-or-8-on-a-label-miss.
+- Not logged: he used `enumerate()` correctly in his unpacking answer. Never
+  taught. Parked with a note to define it at the next natural place.
+
+### 2. PUSHBACK 79 AND THE RULE OF THE LANGUAGE THAT FOLLOWED
+- His own example, `ankur(city="jaipur", tiwari)`, was put on screen for the
+  S27 name-the-error rep. He said *"seems to be a normal function call"* and
+  declared the gap. Then he wrote two calls of his own — bare, bare, named
+  (`arg1=`) and named, bare, bare — and asked whether the second errors. **The
+  mentor answered with a [PREDICT] on both.** He stopped it: *"you are asking
+  another question on top of that without even answering the question, this is
+  really bad teaching ... simply teach."* **Upheld in full.** The ordering rule
+  had never been taught, so FOUNDATION BEFORE PREDICTION applied and the
+  correct instrument was a lesson, not a prediction.
+- Taught straight, one rule and two failures, both run: `f(arg1=1, 10, 20)` →
+  `SyntaxError: positional argument follows keyword argument`, at compile,
+  needing no `def`; `f(10, 20, arg1=99)` → `TypeError: got multiple values for
+  argument 'arg1'`, at the call, because `10` had already filled `arg1`. Ranked
+  out loud: double-fill is the one that bites; left-to-right is a one-liner.
+- His first reply was *"understood"*. Held for the teach-back ("I got it" is
+  not evidence). The teach-back was complete: compile-time shape violation vs
+  run-time slot filled twice. Two precision fixes: the compiler does not consult
+  the `def` for the `SyntaxError`, and the double fill is caught AT the call,
+  not "inside" the body. **New row `positional vs keyword ORDER + double-fill`
+  [~], due 8 Sep.**
+
+### 3. THE IMPORT STORY, RE-TOLD FROM THE CACHE AT HIS REQUEST
+- The plan was to re-gate and re-frame `sys.path` and fire the S42 [PREDICT].
+  He asked instead: *"can we start again from the caching part, then build
+  towards sys."* The cache is an [x] row from S41, due 8 Sep. **Logged as a
+  WATCH, not a miss** — no cold question was posed, and a request for a
+  re-telling is not a failed retrieval.
+- Re-run of `teaching/s39_imports/twice.py`: one "robot.py is running" for two
+  imports. He then asked the good question — *"I thought there is just one
+  cache folder, `__pycache__`"* — and the two caches were separated in a
+  three-row table: `.pyc` on disk saves the COMPILE across runs; `sys.modules`
+  in memory saves the RUN within one process. He said the table was unclear;
+  the whole thing was restated as ONE linear story, five steps on a miss
+  (`sys.modules` check → walk `sys.path` → `.pyc` or compile → run → store and
+  bind) and two steps on a hit. He asked for the code again in full; given.
+- **His teach-back was complete and correct, including a hypothetical hit
+  branch he added himself.** Three language fixes on an intact mechanism: the
+  IMPORT MACHINERY searches, not "the compiler"; `sys.modules` is a dict, not a
+  file; the STORE step was skipped in the telling and is what makes the second
+  import a hit.
+
+### 4. `sys.path` TO THE GROUND — THREE RESTATEMENTS
+- First frame (the S42 one, "entry 0 is the folder of the script you ran") did
+  not land: *"keep the language simpler."* Second attempt printed the real
+  seven-entry list with `drills` visibly absent; still no: *"what is this
+  sys.path, explain from there the 0 thing."* **Third attempt landed, and the
+  difference was PHYSICAL-FIRST:** `sys` is a module, `path` is a variable in
+  it holding a list, seven strings, Python searches ONLY those folders, slot 0
+  is the folder the script lives in. This is the S28 FRAME-FIRST rule applied
+  one level lower — "what it IS" before "what it is FOR".
+- His question: *"does sys.path hold all the paths where we have run Python,
+  or where python believes an installation is?"* — neither; built fresh per
+  process from (a) this run's script folder and (b) the fixed installation
+  folders. Proved with `where.py` run from two directories: same slot 0.
+- His hypothetical (`~/tools/helper.py` imported from `~/Desktop/codes/
+  python_codes/ankur.py`) traced correctly by him to `ModuleNotFoundError`.
+- *"You said something about REPL which I didn't understand"* — **REPL was
+  finally defined**: Read-Eval-Print-Loop, `python3` with no file, `>>>`, no
+  script so slot 0 is `''` = the terminal's folder. Shown live from `drills/`
+  where `import s22_counter` succeeds.
+- **The S42 [PREDICT], answered on his own case:** `sys.path.append(~/tools)` —
+  right move, two caveats given (a string in quotes; Python does not expand
+  `~`); `import ~/tools/helper.py` — he said "import takes a name, not a path,
+  this will not work", the label `SyntaxError` was supplied after his
+  reason; the files-side-by-side move he declined to guess and was given.
+  Append-before-import teach-back clean. Row stays [~], due 7 Sep — taught
+  this sitting.
+
+### 5. PACKAGES OPENED — AND PUSHBACK 80
+- Gate said out loud as fresh-not-proven. Frame: a folder Python treats as
+  importable; exists because a flat folder stops scaling; buys the dotted path
+  that reads as what it is. Built `teaching/s43_packages/` with `use_arm.py`,
+  `arm/__init__.py`, `arm/limits.py`, ran it: `__init__.py` prints first,
+  `limits.py` second, one statement.
+- **Pushback 80:** *"if you have created a folder tell that explicitly ...
+  what do I make from this [tree] ... you can actually make files and ask me to
+  read files by explicitly naming them and also giving codes simultaneously."*
+  **Upheld in full.** Restated with each file's repo path as a link and its
+  code directly beneath. He opened the files in VS Code.
+- **[PREDICT] on the bound name: he said `arm.limits`.** Not ledger-eligible.
+  Shown by running: `print(arm)` → the module from `arm/__init__.py`;
+  `print(arm.limits)` → the module from `arm/limits.py`; `print(limits)` →
+  `NameError`. The chain `arm.limits.MAX_ANGLE` is one NAME and two ATTRIBUTE
+  lookups. His follow-up — why `__init__.py` runs automatically — answered:
+  the package object IS `__init__.py`, so it must exist before anything can
+  hang off it.
+- **The closing [TEACH-BACK] ("why does `__init__.py` run first and what does it
+  become?") is HELD** — he closed the session there.
+
+### 6. MENTOR FAILURES
+1. **Pushback 79** — a direct question about an untaught rule answered with a
+   [PREDICT]. FOUNDATION BEFORE PREDICTION, S5, breached.
+2. **Pushback 80** — files created on disk without saying so; a tree diagram
+   with no explanation of what indentation means.
+3. **`teaching/s39_imports/where.py`, untracked from S42, was overwritten by a
+   `printf >` without being read first.** The S42 content is lost (it was
+   never committed; the S42 notes carry the `sys.path` listing it presumably
+   printed). "Before deleting or overwriting, look at the target" — not done.
+4. Three restatements of `sys.path` before the plain one. The S42 frame was
+   re-used verbatim when a break inside an open idea called for a re-frame
+   FROM SCRATCH, and "entry 0" / "slot" are jargon he had not been given.
+5. The two-caches table was correct and unusable; the linear story worked.
+   Tables compare; stories teach a flow.
+- Held clean: interval gate from the repo; every snippet run before posing;
+  S27 name-the-error on all three raising snippets; ratings after answers;
+  the "understood" was not accepted as evidence; the [x] restart request was
+  logged as a watch rather than a miss; the [PREDICT] miss on the bound name
+  was not logged.
+
+### 7. THE LEDGER
+- Queue: 136 → 137 rows (`positional vs keyword ORDER + double-fill`, [~], due
+  8 Sep). [x] 97 → 99 (`unpacking`, `ZeroDivisionError`); [~] 39 → 38; overdue
+  28 → 36 (the date rolled to 6 Sep; nothing from the 5–6 Sep list was fired).
+- Curriculum: **1.10 `What a package is` [ ] → [~]**; `sys.path` annotation
+  updated with the answered [PREDICT]. **Zero [x] at curriculum level,
+  correctly.**
+- Pushbacks: 80 raised, 78 upheld or part-upheld (79, 80 both upheld).
+- Schedule: ~0.4 unit-equivalent. Re-baseline unchanged (derived close ≈ 22
+  Oct). 1.10 has one bullet open (packages, one teach-back from done) and
+  three untouched.
