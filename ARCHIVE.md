@@ -368,7 +368,7 @@
 
 ## D. PROGRESS TRACKER
 - Sessions Completed: **44**
-- **SESSION 44 (Mon 7 Sep 2026, 07:27 → ~08:40) — PACKAGES CLOSED FOR THE
+- **SESSION 44 (Mon 7 Sep 2026, 07:27 → ~09:00; paused ~11h; ~20:20 → 21:18) — PACKAGES CLOSED FOR THE
   DAY, RELATIVE vs ABSOLUTE IMPORTS OPENED, A VOICE RE-TEACH FILE WRITTEN.**
   Gate from the repo: 8.5h overnight since S43; S43 material illegal, older
   material legal — **but no cold ask was fired; the overdue pile grew.** He
@@ -5540,7 +5540,7 @@ older was legal, and the four term-tax rows were all last asked in August.**
   Oct). 1.10 has one bullet open (packages, one teach-back from done) and
   three untouched.
 
-## What Session 44 established (Monday 7 September 2026, 07:27 → ~08:40)
+## What Session 44 established (Monday 7 September 2026, 07:27 → ~09:00; paused ~11h; ~20:20 → 21:18)
 
 **What this session was:** two blocks with an ~11-hour gap between them (mtimes: `from_arm.py` 08:55, `quiz1.py` 20:20). Packages closed in the morning block; relative imports and the voice file in the evening block. **The gap fell between two units, so no re-frame was owed; the first write of this section wrongly recorded the close as ~08:40 and was corrected from the commit stamp before pushing.** The packages teach-back
 held from S43 was never posed as planned — he opened with a direct question
