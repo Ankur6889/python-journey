@@ -1095,5 +1095,21 @@
   "next_due": "2026-09-08",
   "last_asked": null,
   "rating": null
+ },
+ {
+  "term": "package / __init__.py / bound name",
+  "hook": "a package is a FOLDER holding __init__.py; import arm.limits runs __init__.py THEN limits.py, keys 'arm' and 'arm.limits' in sys.modules, binds ONE name arm (no dots in a name), limits is an attribute; import arm alone STOPS at __init__.py (AttributeError on arm.limits); __init__.py normally EMPTY or the front door. Taught S43-S44; bound-name miss twice",
+  "status": "~",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "relative import / the dot / run-directly trap",
+  "hook": "from .limits import X: the dot = 'my own folder', filled from the module's dotted name (arm.safety_rel -> arm); from . import limits == from arm import limits (binds limits); buys rename-safety only; run the file DIRECTLY and it is __main__ with no dotted name -> ImportError: attempted relative import with no known parent package. Taught S44",
+  "status": "~",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
  }
 ]

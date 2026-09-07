@@ -367,7 +367,28 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **43**
+- Sessions Completed: **44**
+- **SESSION 44 (Mon 7 Sep 2026, 07:27 → ~08:40) — PACKAGES CLOSED FOR THE
+  DAY, RELATIVE vs ABSOLUTE IMPORTS OPENED, A VOICE RE-TEACH FILE WRITTEN.**
+  Gate from the repo: 8.5h overnight since S43; S43 material illegal, older
+  material legal — **but no cold ask was fired; the overdue pile grew.** He
+  opened with the right question (*"shouldn't `import arm` be the start,
+  and then `arm.limits.MAX_ANGLE` valid?"*) and pushback 81 (the S43
+  bound-name question conflated LOADED with BOUND — part-upheld). Answered
+  by file: `only_arm.py` → `AttributeError`; `import arm` stops at
+  `__init__.py`. Then `__init__.py`'s two uses, `from arm import limits`
+  (`from_arm.py`), `sys.modules` keys fixed by disk. Relative imports:
+  `arm/safety.py` vs `arm/safety_rel.py`, the dot as "my own folder",
+  `arm/motion.py` + `run_motion.py` for the run-directly `ImportError`.
+  Two teach-backs at his request: bound-name miss REPEATED (`arm.limits`),
+  `from . import limits` converted to the wrong absolute form, `print(arm)`
+  called `ModuleNotFound` (it is `NameError`), the trap answered as "syntax
+  valid". **Pushbacks 82 (bare `vars()` untaught + question instead of
+  explanation) and 83 (absolute/relative prose ambiguous) upheld; `-c` used
+  undefined until he said he could not follow it.** Wrote
+  `notes/voice_teach_packages_relative_imports.md` at his request; he
+  closed to run it on the web by voice. Queue 137 → 139, [x] 99. Curriculum:
+  `relative vs absolute` [ ] → [~]. Zero promotions, correctly. ~0.3 unit.
 - **SESSION 43 (Sat 5 Sep 17:03 → paused after the term-tax → Sun 6 Sep 2026
   ~23:00) — TERM-TAX, ONE NEW RULE OF THE LANGUAGE, THE IMPORT STORY RE-TOLD,
   `sys.path` TO THE GROUND, PACKAGES OPENED.** Gate from the repo: 14h since
@@ -954,6 +975,7 @@
 | 41 | **THE AUGUST GAUNTLET, fifth scheduling, first run. 25h after S40 from the repo. Pure mixed recall, no new material: snippet volley → 1.10 instances → cold 1.9 drill → owed terms → strict-legend audit of 1.1–1.5 → re-baseline arithmetic.** | **`drills/s41_commands.py` + `tests/test_s41_commands.py` (36 tests, mentor-written): `BadCommand` (must be catchable by `except ValueError:` without being named), `to_angle(text)` → int or `BadCommand`, `check(joint, angle)` → angle / `BadCommand` / built-in `TypeError` for a wrong type, `run(cmds, log)` → per-command bad/ok entries, any other report passes through, `("done", n)` ALWAYS last. `teaching/s41_gauntlet/fin_loop.py` — the two `finally` shapes, mentor demo.** | **SKIPPED BY HIM at 22:08 on 4 Sep, after a 20-hour break inside the drill. Best state reached: 32/34 (only the class line and the float type test left). Committed as it stood at close (24/34).** | **ZERO catch-alls in the whole file, unprompted, and `except Exception` rejected out loud with the right reason — second consecutive cold file. THE DONE LINE was held for the second time (*"all ok"* is a verdict, not a prediction). `run` finished clean: `try` inside the loop for per-command handling, a second `try` AROUND it for the once-only `finally`, the counter in the inner `else`. The four Group-3 reds (hardcoded `1`, the bad entry carrying the int, then the ok entry carrying the text) were each found off ONE pointer. What did not hold, at the end: the HIERARCHY DIRECTION — he changed `except ValueError:` to `except BadCommand:` around `int(text)` after being told a child is caught by its parent's catcher, i.e. applied the rule backwards — and the float type test, where he put `int(angle)` INSIDE the comparison (converts instead of refuses). Then: *"please edit the code and show me my error"* — REFUSED, structure given in words instead — and *"I want to strictly skip this exercise."* Pushback 75 (*"you should have mentioned this explicitly"*, the int-vs-text log entries): NOT upheld — prose said `("ok", joint, angle)` and the example had the quotes. Pushback 76 (*"be very specific when to use BadCommand and when the original error type"*): PART-UPHELD — the CASES were tabled in the docstring, but the wrong-type outcome was DESCRIBED (*"the built-in report for a wrong TYPE"*) rather than NAMED `TypeError`. Rule of thumb earned: the exception TYPE NAME is interface, write it; the construct (`raise`/`except`) is mechanism, withhold it. MENTOR DEFECT: eight reds delivered as raw pytest assertion lines in one message — *"I am unable to understand the errors from the log"* — then re-delivered one group at a time in words, which worked.** |
 | 42 | **REVISION (40 overdue rows, oldest-first) + 1.9 TAIL + 1.10 SECOND HALF OPENED. Same sitting as S41 (3 min); gate per material.** | **No student drill. Sixteen snippet/write-it asks, each verified by running first: `clamp` alias + `b(5)`; `add_reading(value, log=[])`; `halvings(n)` written cold; `zip` truncation and exhaustion; `grid[:]`; `{}.add`; fall-off-the-end `None`; `(1, 2, [3, 4])`; `copy.deepcopy`; six-line expression/statement classification; `int("2.6")`; `.get` vs `[]`; `__doc__` position; `make_scaler` closure; `except ValueError as e`. Teaching demos in scratch, outputs in `notes/session_42_notes.md`.** | **Complete as far as it went — he stopped at 02:56 mid-`sys.path`.** | **13 PASS / 3 FAIL. One promotion (`function object vs call`), one demotion (`closure`, declared gap), two stay [~] (`mutable default` — model inverted, re-taught; `except ... as e` — over-rated at 8, root cause class → object on credit). Decision owed for three sessions answered: build block → real LeRobot file. 1.9 tail taught in full, four ideas one per turn, every teach-back clean once the demo was cut to ONE block. `.pyc` paid; his "compiled or interpreted?" question answered and he supplied "PVM" himself. `sys.path` [ ] → [~]. Eight queue rows added, due 7 Sep. Pushback 77 (complete code, S19) and 78 (language not clear) both upheld — 78 raised, 76 upheld or part-upheld. MENTOR: S27 breach ("this one raises"); two `try` blocks in one demo; `except as e` built on an untaught construct; abstract-first `raise from` frame.** |
 | 43 | **TERM-TAX (4 terms) + positional/keyword ORDER taught + import cache RE-TOLD at his request + `sys.path` finished + PACKAGES OPENED.** Two calendar days (paused after the term-tax). | **No student drill.** Mentor demos: `teaching/s43_packages/` (`use_arm.py`, `arm/__init__.py`, `arm/limits.py`); `teaching/s39_imports/twice.py` re-run; `where.py` rewritten. | Packages open, teach-back HELD | **Term-tax 2/4 promoted.** Keyword label gap → taught (double-fill `TypeError`, bare-after-named `SyntaxError`), teach-back clean. Cache five-step teach-back clean. `sys.path` [PREDICT]: append ✓, files-together declined, `import ~/…` → `SyntaxError`. Packages bound-name [PREDICT] missed. Pushbacks 79, 80 upheld. |
+| 44 | **PACKAGES CLOSED (held teach-back answered via his own question) + RELATIVE vs ABSOLUTE IMPORTS OPENED. 8.5h overnight after S43; S43 rows illegal, no older row fired.** | **No student drill.** Mentor demos in `teaching/s43_packages/`: `only_arm.py`, `from_arm.py`, `quiz1.py`, `run_motion.py`, `arm/safety.py`, `arm/safety_rel.py`, `arm/motion.py` (all announced by path with code). Voice re-teach file `notes/voice_teach_packages_relative_imports.md`. | Complete as far as it went — he closed at ~08:40 to do the voice pass on the web. | **Two [TEACH-BACK]s, both with flaws: bound name `arm.limits` (second time), `from . import limits` → `import arm.limits` (wrong form), `ModuleNotFound` for a missing NAME, the run-directly trap answered as "syntax valid". Correct: package definition, `sys.modules` keys after the split was stated, namespace after `from arm.limits import MAX_ANGLE`, output order. Pushbacks 81 part-upheld, 82 and 83 upheld — 83 raised, 81 upheld or part-upheld. MENTOR: bare `vars()` and `python3 -c` both used undefined; name-the-error fired into a doubt; ambiguous prose fixed by a side-by-side physical restatement.** |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -5517,3 +5539,132 @@ older was legal, and the four term-tax rows were all last asked in August.**
 - Schedule: ~0.4 unit-equivalent. Re-baseline unchanged (derived close ≈ 22
   Oct). 1.10 has one bullet open (packages, one teach-back from done) and
   three untouched.
+
+## What Session 44 established (Monday 7 September 2026, 07:27 → ~08:40)
+
+**What this session was:** a short morning session. The packages teach-back
+held from S43 was never posed as planned — he opened with a direct question
+that contained the answer's hole, and the unit was closed from there, one
+file per idea. Relative vs absolute imports were opened and taught through
+the run-directly trap. Two teach-backs, both at his request, both with real
+flaws. He closed early, by choice, to run a voice re-teach on the web from a
+file written for the purpose. **No cold ask was fired. Zero promotions.**
+
+### 1. THE GATE AND THE PLAN
+- `date` 07:27 Mon 7 Sep; last commit 23:00 Sun 6 Sep; demo mtimes 22:14
+  Sun. Gap 8.5h overnight. S43 material illegal until 8 Sep; the 49 rows
+  due on or before 7 Sep were legal. Stated at the open. **Then none of them
+  were fired.** The whole hour went to 1.10. Not a breach — he set the
+  order in S43 (packages first) — but the pile is now 49 overdue (due on or before 7 Sep).
+
+### 2. PACKAGES — CLOSED FROM HIS OWN QUESTION (pushback 81)
+- Re-frame given physical-first (folder + `__init__.py`; dots are folder
+  separators; what it buys is READING LeRobot paths), three files pasted by
+  path, the held [TEACH-BACK] posed.
+- He did not answer it. He asked instead: *"tumko package level se start
+  karna chahiye tha, `import arm`, fir `arm.limits.MAX_ANGLE` valid honi
+  chahiye na?"* — and: *"tumne poocha `import arm.limits` ne kya import
+  kiya, maine bola `arm.limits`, tumne bola nahi `arm` — confuse karne wali
+  baat."*
+- **Pushback 81, PART-UPHELD.** The S43 question asked for the bound NAME;
+  his answer was a fair reading of "what got IMPORTED". Two questions, two
+  tables: `sys.modules` (loaded: `"arm"`, `"arm.limits"`) vs the file's
+  namespace (bound: `arm`). The split was named and held for the rest of
+  the session.
+- His expectation answered by file: `only_arm.py` — `import arm` prints only
+  the `__init__.py` line; `"arm" in vars()` True, `"limits" in vars()`
+  False; `arm.limits` → `AttributeError: module 'arm' has no attribute
+  'limits'`. Python does not scan the folder.
+- **Pushback 82, UPHELD on both counts:** *"tumne mujhe `vars` ka use module
+  ki namespace dictionary access karne ke liye bataya tha, thats it. Tum
+  samjhaate kam ho, questions jyada poochte ho."* (a) bare `vars()` was
+  never taught — define-before-use breach; (b) a name-the-error ask was
+  fired into a doubt. Both fixed: `vars()` with no argument defined, the run
+  explained line by line, no question until the end.
+- He then restated the whole thing unprompted and correctly: folder +
+  `__init__.py` = package; `import arm.limits` → two `sys.modules` keys and
+  `limits` as an attribute in `arm`'s namespace. Confirmed by running:
+  `vars(arm)['limits'] is sys.modules['arm.limits']` → True.
+- `__init__.py`'s two uses taught: EMPTY is the normal case; non-empty holds
+  imports as the package's front door (the LeRobot `from .x import Y`
+  pattern). He recognised it as what he had expected `import arm` to do.
+- `from_arm.py`: `from arm import limits` — same loading, `limits` bound,
+  `arm` not. Rule restated: `import X` binds the leftmost name; `from X
+  import Y` binds `Y`; loading is the same.
+- His question *"does `from arm import limits` put `arm` and `limits`, or
+  `arm` and `arm.limits`, in `sys.modules`?"* — answered directly: keys are
+  fixed by disk position, `"arm.limits"` always; the form only changes the
+  name in the file. (Claim stated before it was run; run afterwards, correct.)
+
+### 3. [TEACH-BACK] 1 — `quiz1.py`
+- `from arm.limits import MAX_ANGLE` then `print(arm)`. Output order: right.
+  Namespace holds only `MAX_ANGLE`: right. `sys.modules` half: skipped, then
+  given as *"arm and limits"* — corrected to `"arm"` and `"arm.limits"`.
+  `print(arm)`: he said `ModuleNotFound`. It is `NameError` — line 4 is not
+  an import; `arm` is a bare NAME looked up in a namespace that does not
+  hold it. Label from the wrong table. `NameError` is [x]; WATCH, not a miss.
+
+### 4. RELATIVE vs ABSOLUTE — OPENED, PUSHBACK 83
+- Gate: packages [~] same-day, said out loud. Frame: two spellings of the
+  same import from INSIDE a package; buys rename-safety; the trap is the
+  valuable half.
+- `arm/safety.py` (absolute) shown and run via `-c`. Then `arm/safety_rel.py`
+  (relative) shown and run; a [PREDICT] on `python3 arm/safety_rel.py` posed.
+- **Pushback 83, UPHELD:** *"your language is very ambiguous, I can't
+  differentiate the cases."* Restated side by side from the folder tree:
+  absolute = the full address from the top folder, names `arm`; relative =
+  the address from where you are, the dot is a word meaning "my own
+  folder", never names `arm`. Same result; only difference is whether the
+  word `arm` appears; cost of relative = must be imported AS PART OF the
+  package. *"ok its clear."*
+
+### 5. [TEACH-BACK] 2 — `arm/motion.py`
+- `from . import limits`. His absolute form: `import arm.limits` — wrong;
+  it is `from arm import limits`. His bound name for his own form:
+  `arm.limits` — **the S43 miss, repeated.** A name has no dots.
+- `python3 arm/motion.py`: he answered *"the written form will work"* — the
+  syntax question, not the run. Run shown: `ImportError: attempted relative
+  import with no known parent package`; a script run directly is loaded as
+  `__main__`, no `arm.` to strip. Depth-before-answer named.
+- *"I don't understand what `python3 -c 'import arm.motion'` is doing at
+  all."* — `-c` had never been defined. Defined (run the quoted text as
+  code instead of a file), then RETIRED: `run_motion.py` written as a real
+  outside file and both starts run from it. He was told to run both
+  himself, side by side.
+
+### 6. THE VOICE FILE
+- *"this topic is really flaky in my memory, can you prepare a separate .md
+  file as teach instructions, I will put it in web mode with voice."* Written
+  on the spot: `notes/voice_teach_packages_relative_imports.md` — mentor
+  instructions (one idea per turn, physical first, plain words, checks not
+  tests, no ratings, answer direct questions), eight ideas in order with a
+  check each, the bound-name miss flagged for extra time, every file's code
+  with its real output. He closed to go and use it. **That pass is not
+  ledger evidence and the file says so.**
+
+### 7. MENTOR FAILURES
+1. **Pushback 81 (part)** — a question that conflated loaded with bound.
+2. **Pushback 82** — bare `vars()` used untaught, and a question fired into
+   a doubt. Define-before-use, substrate included, breached again.
+3. **`python3 -c`** used across four turns undefined, until he said he could
+   not follow it. Same rule, same session. Two substrate breaches in one
+   hour: the checklist has to cover every TOKEN in a demo line.
+4. **Pushback 83** — the first absolute/relative explanation was prose about
+   "addresses" with no picture. The fix that worked was the folder tree
+   plus one sentence per form. Physical-first is not optional.
+5. One claim stated before it was run (`sys.modules` keys under `from arm
+   import limits`). It was right. Run first anyway.
+- Held clean: interval gate from the repo; every file announced by path with
+  code (eight files); `test -e` before every write; ratings not taken on
+  same-day material and said so; [TEACH-BACK] tagged every time; no cold
+  ask on S43 material; the [PREDICT] and teach-back misses not logged.
+
+### 8. THE LEDGER
+- Queue: 137 → 139 rows (`package / __init__.py / bound name`; `relative
+  import / the dot / run-directly trap`; both [~], due 8 Sep). [x] 99
+  unchanged. 0 rows fired.
+- Curriculum: **1.10 `Relative vs absolute imports` [ ] → [~]**; packages
+  annotation extended. **Zero [x], correctly.**
+- Pushbacks: 83 raised, 81 upheld or part-upheld (81 part, 82, 83).
+- Schedule: ~0.3 unit-equivalent. Re-baseline unchanged (derived close ≈ 22
+  Oct). 1.10 has two bullets untouched (circular; stdlib/pip).
