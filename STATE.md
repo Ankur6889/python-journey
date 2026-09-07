@@ -34,7 +34,7 @@
 #      headline construct.
 #  13. ⚠ **`except ... as e` NEEDS class → object, ON CREDIT UNTIL 1.12.**
 #
-# STATE AS OF: end of Session 44, **Mon 7 Sep 2026, ~08:40** (verified).
+# STATE AS OF: end of Session 44, **Mon 7 Sep 2026, 21:18** (verified from the commit; TWO blocks — see yield).
 # **He closed to do a VOICE re-teach of packages on the web, from
 # `notes/voice_teach_packages_relative_imports.md`.** That pass is NOT
 # ledger evidence. Next: Session 45 — cold asks on packages + relative
@@ -46,7 +46,7 @@
   observed ~0.8 subsection-equivalents/week; DERIVED CLOSE ≈ 22 OCT 2026.
   The 30 Sep gate is missed at the observed rate. Nothing de-scoped.** Tell
   him the number if he asks; do not soften it.
-- **S44 yield (~1h10, 07:27 → ~08:40):** packages re-framed and CLOSED for
+- **S44 yield (~2h30 in TWO blocks: 07:27 → ~09:00 packages; paused ~11h; ~20:20 → 21:18 relative imports + voice file):** packages re-framed and CLOSED for
   the day (held teach-back answered via his own question; `import arm`
   alone, `__init__.py`'s two uses, `from arm import limits`, `sys.modules`
   keys fixed by disk position); **relative vs absolute imports OPENED and
@@ -70,7 +70,7 @@
 
 ### SESSION 45 STARTS HERE — exact resume point
 
-1. **INTERVAL GATE from `git log` + mtimes.** S44 closed Mon 7 Sep ~08:40.
+1. **INTERVAL GATE from `git log` + mtimes.** S44 closed Mon 7 Sep 21:18 (relative imports taught 20:20–21:05 — same evening).
    S44 material (packages close, relative imports, `-c`, bare `vars()`) is
    legal from 8 Sep. Ask him whether the web voice pass happened; it changes
    nothing on the ledger either way, but note it in the session block.
