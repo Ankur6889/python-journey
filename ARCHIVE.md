@@ -367,7 +367,24 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **44**
+- Sessions Completed: **45**
+- **SESSION 45 (Mon 7 Sep 2026, 21:37 → ~22:10; Tue 8 Sep ~08:50 → ~11:00; ~21:05 → 22:24) —
+  `sys.modules` DISCOMFORT WORKED TO THE GROUND, ABSOLUTE/RELATIVE RE-WALKED,
+  CIRCULAR IMPORTS TAUGHT, STDLIB OPENED.** Opened 18 min after S44 (*"I am
+  feeling uncomfortable with that idea"*). One physical demo per idea: dict →
+  two keys → bound name `arm` (right, first time) → `__init__.py` loads
+  nothing → the ROUTE rule (`arm/direct.py`: same file as `limits` or
+  `arm.limits` by `sys.path[0]`) → `__main__` as a placeholder (`whoami.py`).
+  His question *"can it be loaded independently?"* was the hinge. Quiz at his
+  request: run-directly trap missed a second time then reasoned;
+  `run_safety_rel.py` predicted in full; `from . import limits` →
+  `import arm.limits` a THIRD time, parked at his request with the answer.
+  Circular imports: `self_check.py` proved the early key; `ImportError:
+  cannot import name ... partially initialized`; both fixes run. Stdlib:
+  `__file__`, `json` from the fourth `sys.path` entry, the REAL front door in
+  `json/__init__.py` lines 106–108. **No cold ask fired, zero promotions,
+  four rows added, three re-dated. Pushbacks 84 (part), 85, 86, 87 upheld —
+  87/85.** ~0.5 unit-equivalent.
 - **SESSION 44 (Mon 7 Sep 2026, 07:27 → ~09:00; paused ~11h; ~20:20 → 21:18) — PACKAGES CLOSED FOR THE
   DAY, RELATIVE vs ABSOLUTE IMPORTS OPENED, A VOICE RE-TEACH FILE WRITTEN.**
   Gate from the repo: 8.5h overnight since S43; S43 material illegal, older
@@ -976,6 +993,7 @@
 | 42 | **REVISION (40 overdue rows, oldest-first) + 1.9 TAIL + 1.10 SECOND HALF OPENED. Same sitting as S41 (3 min); gate per material.** | **No student drill. Sixteen snippet/write-it asks, each verified by running first: `clamp` alias + `b(5)`; `add_reading(value, log=[])`; `halvings(n)` written cold; `zip` truncation and exhaustion; `grid[:]`; `{}.add`; fall-off-the-end `None`; `(1, 2, [3, 4])`; `copy.deepcopy`; six-line expression/statement classification; `int("2.6")`; `.get` vs `[]`; `__doc__` position; `make_scaler` closure; `except ValueError as e`. Teaching demos in scratch, outputs in `notes/session_42_notes.md`.** | **Complete as far as it went — he stopped at 02:56 mid-`sys.path`.** | **13 PASS / 3 FAIL. One promotion (`function object vs call`), one demotion (`closure`, declared gap), two stay [~] (`mutable default` — model inverted, re-taught; `except ... as e` — over-rated at 8, root cause class → object on credit). Decision owed for three sessions answered: build block → real LeRobot file. 1.9 tail taught in full, four ideas one per turn, every teach-back clean once the demo was cut to ONE block. `.pyc` paid; his "compiled or interpreted?" question answered and he supplied "PVM" himself. `sys.path` [ ] → [~]. Eight queue rows added, due 7 Sep. Pushback 77 (complete code, S19) and 78 (language not clear) both upheld — 78 raised, 76 upheld or part-upheld. MENTOR: S27 breach ("this one raises"); two `try` blocks in one demo; `except as e` built on an untaught construct; abstract-first `raise from` frame.** |
 | 43 | **TERM-TAX (4 terms) + positional/keyword ORDER taught + import cache RE-TOLD at his request + `sys.path` finished + PACKAGES OPENED.** Two calendar days (paused after the term-tax). | **No student drill.** Mentor demos: `teaching/s43_packages/` (`use_arm.py`, `arm/__init__.py`, `arm/limits.py`); `teaching/s39_imports/twice.py` re-run; `where.py` rewritten. | Packages open, teach-back HELD | **Term-tax 2/4 promoted.** Keyword label gap → taught (double-fill `TypeError`, bare-after-named `SyntaxError`), teach-back clean. Cache five-step teach-back clean. `sys.path` [PREDICT]: append ✓, files-together declined, `import ~/…` → `SyntaxError`. Packages bound-name [PREDICT] missed. Pushbacks 79, 80 upheld. |
 | 44 | **PACKAGES CLOSED (held teach-back answered via his own question) + RELATIVE vs ABSOLUTE IMPORTS OPENED. 8.5h overnight after S43; S43 rows illegal, no older row fired.** | **No student drill.** Mentor demos in `teaching/s43_packages/`: `only_arm.py`, `from_arm.py`, `quiz1.py`, `run_motion.py`, `arm/safety.py`, `arm/safety_rel.py`, `arm/motion.py` (all announced by path with code). Voice re-teach file `notes/voice_teach_packages_relative_imports.md`. | Complete as far as it went — he closed at 21:18 to do the voice pass on the web. | **Two [TEACH-BACK]s, both with flaws: bound name `arm.limits` (second time), `from . import limits` → `import arm.limits` (wrong form), `ModuleNotFound` for a missing NAME, the run-directly trap answered as "syntax valid". Correct: package definition, `sys.modules` keys after the split was stated, namespace after `from arm.limits import MAX_ANGLE`, output order. Pushbacks 81 part-upheld, 82 and 83 upheld — 83 raised, 81 upheld or part-upheld. MENTOR: bare `vars()` and `python3 -c` both used undefined; name-the-error fired into a doubt; ambiguous prose fixed by a side-by-side physical restatement.** |
+| 45 | **`sys.modules` RE-WALKED FROM HIS DISCOMFORT + ABSOLUTE/RELATIVE RE-WALKED AND QUIZZED + CIRCULAR IMPORTS TAUGHT + STDLIB OPENED. 18 min after S44; three blocks over two days; all same-sitting relative to the material.** | **No student drill.** Mentor demos, every one announced by path with code and run: `teaching/s45_cache/see_modules.py`; `teaching/s43_packages/` `see_arm.py`, `see_names.py`, `see_arm_ns.py`, `arm/p1–p3.py` + `run_p1–3.py`, `arm/direct.py`, `arm/whoami.py` + `run_whoami.py`, `run_safety_rel.py`; `teaching/s45_circular/` (`a.py`, `b.py`, `main.py`, `self_check.py`, `fix/`); `teaching/s45_stdlib/` (`where_is.py`, `front_door.py`). | Complete as far as it went — stopped mid-stdlib at 22:24 Tue, *"lets continue from the same point tomorrow."* | **ZERO promotions, correctly. Curriculum: circular imports [ ] → [~], standard library [ ] → [~]. Queue 139 → 143 (four [~] rows due 10 Sep); three rows re-dated 8 → 10 Sep. RIGHT: `sys.modules` definition; two keys; bound name `arm` (first time); the route rule in his own words; `run_safety_rel.py` output in full; `def` body not run at import; `json` as a package. MISSED (same-day, not logged): `from . import limits` → `import arm.limits` THIRD time (parked at his request, answer given); run-directly trap second time; "infinite loop"; key-after-completion; `NameError` for a failed from-import. Pushbacks: 84 (sequencing — part, nothing skipped but the re-walk was right), 85 (file described before it existed), 86 (a question pointing back at earlier output), 87 (*"how will I predict something I haven't seen"* — a [PREDICT] on an unseen error label). 87 raised, 85 upheld or part-upheld. MENTOR: three of the four are delivery; the gate was not re-stated at blocks 2 and 3.** |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -5668,3 +5686,182 @@ file written for the purpose. **No cold ask was fired. Zero promotions.**
 - Pushbacks: 83 raised, 81 upheld or part-upheld (81 part, 82, 83).
 - Schedule: ~0.3 unit-equivalent. Re-baseline unchanged (derived close ≈ 22
   Oct). 1.10 has two bullets untouched (circular; stdlib/pip).
+
+## What Session 45 established (Monday 7 September 2026, 21:37 → ~22:10; paused; Tuesday 8 September ~08:50 → ~11:00; paused; ~21:05 → 22:24)
+
+**What this session was:** he opened it 18 minutes after S44 committed, in
+one line: *"I want to start from `sys.modules`... I am feeling uncomfortable
+with that idea."* Three blocks over two calendar days (mtimes: `see_modules.py`
+Mon 21:38, `p1.py` Mon 22:05, `see_arm_ns.py` Tue 08:52, `whoami.py` Tue
+10:58, `run_safety_rel.py` Tue 21:06, `front_door.py` Tue 22:18). The whole
+of blocks 1 and 2 went to the discomfort, one physical demo per idea, until
+the ROUTE rule landed in his own words. He asked for a re-walk of absolute vs
+relative and a quiz on it; the quiz found the two S44 misses again. Circular
+imports were then taught and closed as taught material; the standard library
+was opened. **No cold ask fired. No rating taken. Zero promotions.** Four
+pushbacks, three of them on delivery.
+
+### 1. THE GATE
+- `date` Mon 21:37; last commit 21:19. Same sitting. Stated at the open: no
+  term-tax, no cold asks, everything [TEACH-BACK]. Asked once whether the web
+  voice pass had happened; not answered, not chased.
+- **Not re-stated when blocks 2 and 3 began on Tue.** No ledger harm (nothing
+  was rated), but the gate is per-block. Logged as mentor failure 4.
+
+### 2. `sys.modules` FROM THE GROUND (block 1)
+- `teaching/s45_cache/see_modules.py`: `type(sys.modules)` → `dict`; the key
+  `"robot"` absent, then present, value the module object. His teach-back:
+  *"a dictionary which stores all the module objects created by the import by
+  running those files"* — clean, and "created by running those files" was the
+  lever for everything after.
+- Discomfort located by him: *"when you introduced `arm.limits` and then
+  asked me what will be there in the `sys.modules`."*
+- `see_arm.py`: two files run, two keys, each key the disk position. His
+  teach-back: two keys because package and module — right — **and then,
+  unprompted: *"in the file's namespace it's `arm`??"* — the bound name RIGHT
+  for the first time** after two misses (S43, S44).
+- `see_names.py`: `"arm" in vars()` True, `"limits"` False, `"arm.limits"`
+  False; `"limits" in vars(arm)` True. Two tables drawn side by side. *"these
+  three ideas clear."*
+
+### 3. CIRCULAR POSED, THEN PUSHBACK 84 (PART-UPHELD)
+- Prerequisite gate stated (cache [x], teach-back clean tonight). Files
+  `teaching/s45_circular/a.py`, `b.py`, `main.py` created, verified by running
+  (mentor-side), posed as [PREDICT].
+- *"wait we directly moved to circular imports, are we not discussing absolute
+  and relative imports and the topics in between?"* — Answered with the 1.10
+  list in taught order: nothing was skipped; relative had been taught two
+  hours earlier. **Part-upheld:** nothing skipped, but he opened the session
+  uncomfortable with the whole import story and only the cache had been
+  re-walked; jumping to new material was the wrong read. He chose the re-walk.
+  The [PREDICT] was HELD and announced as held.
+
+### 4. ABSOLUTE vs RELATIVE RE-WALKED (block 1 → 2)
+- Full restatement as one clean block (announced as long): the folder tree,
+  absolute = full address, relative = the dot is "my own folder" filled from
+  `__name__`, buys rename-safety only, the run-directly trap.
+- His question, precise: *"`from .limits import MAX_ANGLE` causes `limits` in
+  `sys.modules`?? or `arm` and `arm.limits`?? what will all of this cause to
+  load in `sys.modules` and the local file's namespace?"* — Answered with a
+  three-row table, then three probe files `arm/p1.py`, `p2.py`, `p3.py`, each
+  run via a one-line outside runner. Same keys every time (`arm`, `arm.pN`,
+  `arm.limits`); the name follows the word after `import`. **There is never a
+  key `"limits"` from a relative import.**
+- His next question, better: *"if there is `__init__.py` in `arm` then all
+  the modules will always be added to its namespace??"* — No. `see_arm_ns.py`:
+  after `import arm`, one key and `vars(arm)` empty; after `import arm.limits`,
+  two keys and `['limits']`. A submodule enters only when an import line names
+  it.
+- **His best question of the session (block 2):** *"my question was whether
+  everything that gets loaded will be loaded as `arm.` or can be loaded
+  independently as well."* — Yes. `arm/direct.py`, run from INSIDE `arm/`:
+  `sys.path[0]` is the `arm` folder, `import limits` → key `limits`, `arm`
+  not in `sys.modules`, `__init__.py` never ran. **The key is the ROUTE from a
+  `sys.path` folder to the file.** Two-row table. His restatement: *"what
+  decides whether we will have `limits` or `arm.limits` is `sys.path[0]` or
+  the base folder from where we start."* Correct. **This is the version that
+  landed after three sessions of two-tables prose.**
+
+### 5. THE QUIZ (his request: *"ask me all the questions you can"*)
+- **Q1, `python3 arm/safety_rel.py`:** he gave the two `running` lines. Wrong
+  — `ImportError: attempted relative import with no known parent package` on
+  line 1. Second miss on this trap (S44 answered "syntax valid"). Named as
+  depth-before-answer: the route was not checked. He then asked the honest
+  thing: *"if I start from outside `arm`, `__init__.py` gets triggered... if I
+  start from inside, it doesn't?"* — yes, and the trap was welded onto it: no
+  entering → no package → name `__main__` → nothing to strip.
+- *"the file name is `__main__`, this one is a bit less intuitive"* —
+  `arm/whoami.py` run both ways: `__main__` / `True False` directly;
+  `arm.whoami` / `True True` via `run_whoami.py`. Placeholder for "the file
+  that was started"; exactly one per program.
+- **Pushback 85, UPHELD:** *"wait I can't find the file `run_safety_rel`,
+  where is this file??"* — it did not exist; the mentor had described it as
+  if on disk. Created, pasted, NOT run until he answered.
+- **`run_safety_rel.py` (block 3): predicted in full** — `__init__` line,
+  `limits` line, `arm.safety_rel`, `180` — with the reason: *"because it was
+  already in `sys.modules` by the name `arm.safety_rel`, so `.limits` means
+  limits in the same folder."* Sharpened: not "already", its `__name__` had
+  been set by the route.
+- **Q2, absolute form of `from . import limits`:** *"`import arm.limits`,
+  after this line runs the name bound is `arm`."* — THIRD time (S43, S44,
+  S45). Internally consistent, wrong at step one. Pointed at line 2 of
+  `motion.py` (`True False`) as the evidence — **Pushback 86, UPHELD:** *"don't
+  give me half scenarios, give me full scenario and then ask the question."*
+  Full scenario given (both files, full output). He asked *"doesn't `arm` and
+  `arm.motion` get added to `sys.modules`?"* — yes, different table. Then:
+  *"wait this is confusing me, can we skip this for now, it's been bugging me
+  since last 3 days."* — **Parked at his request, WITH the answer:** `from arm
+  import limits`; `import X.Y` binds `X`, `from X import Y` binds `Y`. Row
+  stays [~], comes back cold.
+
+### 6. CIRCULAR IMPORTS (block 3)
+- He chose it. *"give me complete, the question, the frame, everything"* — one
+  self-contained block: frame (what / why / buys a reading skill), three files,
+  the walk hop by hop to `b.py` line 2, the question.
+- His question: *"isn't the key built after `a` has been fully executed?? or
+  otherwise it will give `NameError`."* — No: `self_check.py` (imported by
+  `run_self_check.py`) prints `True` and `None` mid-run — the key is in before
+  line 1, the module has no `X` yet. Why: protection against the infinite
+  re-import; price: a half-built module on a hit. `NameError` corrected: an
+  attribute lookup on the module object by the import machinery.
+- **Pushback 87, UPHELD:** *"sorry I am not eligible to answer this, how will
+  I predict something I haven't seen, please stop doing this behaviour"* — the
+  [PREDICT] had asked him to NAME the error. Print lines from a walk are fair;
+  an unseen label is a guess. Run shown, traceback read as the walk.
+- His teach-back: mechanism right, *"kind of an infinite loop initiated"*
+  wrong — corrected: the early key PREVENTS the loop; `b` got the half-built
+  `a` from the cache, one lookup, one failure. Floor cleared.
+- Two fixes: third module (real, an interview answer); import inside the
+  function (patch, `fix/b.py`, run clean: `b done` before `a done`, `1`). His
+  teach-back: *"the function object gets built but is not executed till it is
+  called, so the function was built without looking for import."* Clean.
+  **Circular imports [ ] → [~].**
+
+### 7. STDLIB OPENED (block 3, ~22:10)
+- *"how long will it take for the next topic"* — 30–40 min for both halves,
+  told honestly. *"lets start with stdlib and see if we can complete it."*
+- Gate: `sys.path` [~], module-as-object [x]; `__file__` defined before use.
+  `where_is.py`: `json.__file__` → `/usr/lib/python3.12/json/__init__.py`;
+  `sys.path` printed (ROS site-packages second, `/usr/lib/python3.12` fourth).
+  His teach-back: fourth entry, `__init__.py` makes it a package — right.
+- `json/__init__.py` lines 106–108 shown unedited (`from .decoder import
+  JSONDecoder, JSONDecodeError`; `from .encoder import JSONEncoder`) — **the
+  S44 front-door debt paid on a real file.** `front_door.py`: four keys
+  (`json.scanner` via `decoder.py`), twelve names on `json`,
+  `json.decoder.__file__`. Teach-back (why `arm` empty, `json` twelve) posed;
+  he stopped: *"lets continue from the same point tomorrow."*
+  **Standard library [ ] → [~].**
+
+### 8. MENTOR FAILURES
+1. **Pushback 85** — a file referred to before it existed. Announce after
+   creating, never before.
+2. **Pushback 86** — a question pointing back at earlier output. S19 rule.
+3. **Pushback 87** — a [PREDICT] on an unseen error label. New standing line
+   in STATE: never ask him to name an error he has not seen.
+4. **Interval gate not re-stated** at the start of blocks 2 and 3 (Tue).
+5. **Pushback 84 (part)** — moved to new material while he was still
+   uncomfortable with the old.
+6. **Three sessions to land loaded-vs-bound.** The route demo (`direct.py`)
+   did in one turn what two-tables prose did not in three sessions. Physical
+   and side-by-side, from `sys.path[0]`, is the frame for anything
+   import-shaped from now on.
+- Held clean: every demo a real file (no `-c`), `test -e` before every write,
+  every snippet run before its output was shown, files announced by path with
+  code (23 files), no ratings on same-day material, tags on every block,
+  direct questions answered directly (six of them, each followed by a run),
+  the held [PREDICT] announced as held, the parked item parked with its
+  answer.
+
+### 9. THE LEDGER
+- Queue: 139 → 143 rows. Four added, all [~] due 10 Sep (`circular import /
+  partially initialized module`; `the route decides the key / __main__
+  placeholder`; `sys.modules key enters BEFORE the run`; `stdlib on disk /
+  __file__ / front door`). Three re-dated 8 → 10 Sep after same-sitting
+  re-teaching (cache [x]; package; relative). [x] 99 unchanged. 0 rows fired.
+- Curriculum: **1.10 `Circular imports` [ ] → [~]; `The standard library`
+  [ ] → [~]**; packages and relative annotations extended. **Zero [x],
+  correctly.**
+- Pushbacks: 87 raised, 85 upheld or part-upheld (84 part, 85, 86, 87).
+- Schedule: ~0.5 unit-equivalent. Re-baseline unchanged (derived close ≈ 22
+  Oct). 1.10 has one bullet untouched (pip / third-party) and one half-taught
+  (stdlib).

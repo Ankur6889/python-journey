@@ -986,9 +986,9 @@
  },
  {
   "term": "the import cache / sys.modules",
-  "hook": "cache = cacher, to hide: a store of results kept so the work is not redone. dict of module name -> module object. HIT = skip the run; MISS = find, run, store. Step 2 (binding) ALWAYS fires either way. This is why a notebook re-import does not pick up your edit. Taught S39",
+  "hook": "cache = cacher, to hide: a store of results kept so the work is not redone. dict of module name -> module object. HIT = skip the run; MISS = find, run, store. Step 2 (binding) ALWAYS fires either way. This is why a notebook re-import does not pick up your edit. Taught S39. S45: re-told from see_modules.py (dict, key absent -> present), teach-back clean same-sitting; re-dated",
   "status": "x",
-  "next_due": "2026-09-08",
+  "next_due": "2026-09-10",
   "last_asked": "2026-09-03",
   "rating": 7
  },
@@ -1098,17 +1098,49 @@
  },
  {
   "term": "package / __init__.py / bound name",
-  "hook": "a package is a FOLDER holding __init__.py; import arm.limits runs __init__.py THEN limits.py, keys 'arm' and 'arm.limits' in sys.modules, binds ONE name arm (no dots in a name), limits is an attribute; import arm alone STOPS at __init__.py (AttributeError on arm.limits); __init__.py normally EMPTY or the front door. Taught S43-S44; bound-name miss twice",
+  "hook": "a package is a FOLDER holding __init__.py; import arm.limits runs __init__.py THEN limits.py, keys 'arm' and 'arm.limits' in sys.modules, binds ONE name arm (no dots in a name), limits is an attribute; import arm alone STOPS at __init__.py (AttributeError on arm.limits); __init__.py normally EMPTY or the front door. Taught S43-S44; bound-name miss twice. S45: bound name arm said RIGHT unprompted; import arm alone leaves vars(arm) empty (see_arm_ns.py); re-dated",
   "status": "~",
-  "next_due": "2026-09-08",
+  "next_due": "2026-09-10",
   "last_asked": null,
   "rating": null
  },
  {
   "term": "relative import / the dot / run-directly trap",
-  "hook": "from .limits import X: the dot = 'my own folder', filled from the module's dotted name (arm.safety_rel -> arm); from . import limits == from arm import limits (binds limits); buys rename-safety only; run the file DIRECTLY and it is __main__ with no dotted name -> ImportError: attempted relative import with no known parent package. Taught S44",
+  "hook": "from .limits import X: the dot = 'my own folder', filled from the module's dotted name (arm.safety_rel -> arm); from . import limits == from arm import limits (binds limits); buys rename-safety only; run the file DIRECTLY and it is __main__ with no dotted name -> ImportError: attempted relative import with no known parent package. Taught S44. S45: from . import limits -> import arm.limits THIRD time, PARKED with answer (from arm import limits); trap missed 2nd time then reasoned; run_safety_rel.py predicted in full; re-dated",
   "status": "~",
-  "next_due": "2026-09-08",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "circular import / partially initialized module",
+  "hook": "two files import each other; the key enters sys.modules BEFORE line 1 runs (self_check.py), so the second import HITS a half-built module; from a import X -> ImportError: cannot import name 'X' from partially initialized module 'a'. NOT a loop: the early key prevents the loop. Fixes: third module (real) / import inside the function (patch, def body does not run at import). Taught S45",
+  "status": "~",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "the route decides the key / __main__ placeholder",
+  "hook": "sys.modules key = the route from a sys.path folder to the file, dots for slashes; same limits.py is 'arm.limits' from outside (init runs) or 'limits' from inside arm/ (init does not run) -> two module objects possible. A file run directly has no route, so __name__ and its key are the placeholder '__main__'; strip the last part of '__main__' and nothing is left -> relative import fails. teaching/s43_packages/arm/direct.py, arm/whoami.py. Taught S45",
+  "status": "~",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "sys.modules key enters BEFORE the run",
+  "hook": "the empty module object is created and stored under its key before the file's first line runs; proved by self_check.py printing True and None mid-run. Protection against infinite re-import; the price is a half-built module on a cache hit. Taught S45",
+  "status": "~",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "stdlib on disk / __file__ / front door",
+  "hook": "stdlib = /usr/lib/python3.12/, ordinary .py files, fourth sys.path entry; __file__ = path the module was built from; json is a package (json/__init__.py); json/__init__.py lines 106-108 do from .decoder import ... so ONE import json loads four keys and puts twelve names on json -- the front door; arm's __init__.py only printed, so import arm loaded nothing. Taught S45, teach-back HELD",
+  "status": "~",
+  "next_due": "2026-09-10",
   "last_asked": null,
   "rating": null
  }
