@@ -1,47 +1,52 @@
 # STATE.md — PYTHON LEARNING JOURNEY — LIVE SESSION STATE
 # ═══════════════════════════════════════════════════
 # One of FOUR files. THIS is the file that changes every session.
-# HOW TO START SESSION 46 (for Claude):
-#   1. Read RULES.md fully (**v6, unchanged — no rule adopted in S45**), then
+# HOW TO START SESSION 47 (for Claude):
+#   1. Read RULES.md fully (**v6, unchanged — no rule adopted in S46**), then
 #      this file fully. No re-introductions.
 #   2. FIRST ACTION: the INTERVAL GATE — **VERIFY THE DATE FROM `date`,
 #      `git log -1` AND FILE MTIMES, NOT FROM THE CONTEXT HEADER AND NOT BY
-#      ASKING HIM.** Held S36–S45 at the open. ⚠ **S45 LESSON: RE-STATE THE
-#      GATE WHEN A NEW BLOCK STARTS AFTER A PAUSE.** S45 ran three blocks
-#      over two calendar days and the gate was stated once. The gate is
-#      PER-MATERIAL (RULES S17-1) and per-block.
+#      ASKING HIM.** Held S36–S46 at the open. Re-state it per block.
 #   3. ⚠⚠ **VERIFY ANY WARNING IN THIS FILE AGAINST THE REPO BEFORE ACTING ON
 #      IT.** This file can be wrong; the repo cannot.
 #   4. ⚠ **NO RULE CANDIDATE IS PARKED. NO DECISION IS OWED.**
-#   5. ⚠ **THE QUEUE IS A SCRIPT.** `python3 tools/retest.py --overdue --all`
-#      at the open. **143 rows, 99 [x], 44 [~]. NOTHING FIRED IN S44 OR S45 —
-#      two sessions of 1.10 with zero volley.** `--asked` substring-matches:
-#      the bare `print()` row and the two `zip` rows need `tools/queue.json`
-#      edited directly.
+#   5. ⚠⚠⚠ **THE VOLLEY FIRES FIRST. THREE SESSIONS (S44, S45, S46) HAVE
+#      FIRED ZERO COLD ASKS.** `python3 tools/retest.py --overdue --all` at
+#      the open. **149 rows, 99 [x], 50 [~].** Say at the open, in one line,
+#      that the volley of 8 runs BEFORE any teaching and why. If he asks to
+#      start elsewhere, say what that costs and do it only if he insists.
+#      `--asked` substring-matches: the bare `print()` row and the two `zip`
+#      rows need `tools/queue.json` edited directly.
 #   6. ⚠ **PYTEST IS NOT TAUGHT. THE MENTOR WRITES AND RUNS EVERY TEST FILE.**
-#   7. ⚠ **CHECK THE FILE IS SAVED (mtime) BEFORE READING IT.** Held S37–S45.
-#   8. ⚠⚠ **ONE TEACHING IDEA PER TURN — AND ONE IDEA PER DEMO.** Held S45.
-#   9. ⚠⚠ **WHEN HE ASKS A DIRECT QUESTION, ANSWER IT. DO NOT REPLY WITH A
-#      QUESTION.** Pushbacks 79, 82. Held S45 (six direct questions, six
-#      direct answers, each followed by a run).
+#   7. ⚠ **CHECK THE FILE IS SAVED (mtime) BEFORE READING IT.** Held S37–S46.
+#   8. ⚠⚠ **ONE TEACHING IDEA PER TURN — AND ONE IDEA PER DEMO. PHYSICAL,
+#      NEVER A NUMBERED LIST OF RULES.** Pushback 89 (S46): a five-point
+#      restatement of the route rule → *"sorry not understood"*; the same
+#      walk done with `ls` in the shell landed at once. Fourth session
+#      where prose failed and a run succeeded.
+#   9. ⚠⚠ **WHEN HE ASKS A DIRECT QUESTION, ANSWER IT.** Held S46 (five).
 #  10. ⚠⚠ **FILES YOU CREATE: SAY SO, LIST THE PATHS, PASTE EACH FILE'S CODE
-#      UNDER ITS PATH — AND ONLY AFTER THEY EXIST.** Pushback 85 (S45): a
-#      file was described as if on disk before it was written.
-#  11. ⚠⚠ **NEVER OVERWRITE A FILE WITHOUT LOOKING AT IT FIRST.** Held S45.
-#  12. ⚠⚠ **NO `python3 -c` IN A DEMO. WRITE THE FILE.** Held S45.
-#  13. ⚠⚠ **A QUESTION CARRIES ITS FULL SCENARIO. NEVER "look at the output
-#      from earlier".** Pushback 86 (S45). S19 rule, breached again.
-#  14. ⚠⚠ **NEVER ASK HIM TO NAME AN ERROR HE HAS NEVER SEEN.** Pushback 87
-#      (S45): *"how will I predict something I haven't seen, please stop
-#      doing this behaviour."* [PREDICT] covers print lines and mechanism
-#      reasoned from a walk; an unseen LABEL is a guess. S27 name-the-error
-#      applies to error types already taught.
-#  15. ⚠ **`except ... as e` NEEDS class → object, ON CREDIT UNTIL 1.12.**
+#      UNDER ITS PATH, AND SHOW THE COMMAND THAT RAN IT.** Pushback 93
+#      (S46): output shown without `$ cd ...; $ python3 main.py`. Pushback
+#      91 (S46): lines quoted from a file on disk must be LABELLED read-
+#      not-run.
+#  11. ⚠⚠ **NEVER OVERWRITE A FILE WITHOUT LOOKING AT IT FIRST.** Held S46.
+#  12. ⚠⚠ **NO `python3 -c` IN A DEMO. WRITE THE FILE.** Held S46.
+#  13. ⚠⚠ **A QUESTION CARRIES ITS FULL SCENARIO.** Held S46.
+#  14. ⚠⚠ **NEVER ASK HIM TO NAME AN ERROR HE HAS NEVER SEEN.** Held S46.
+#  15. ⚠⚠ **FRAME FIRST, EVEN FOR A FUNCTION YOU ARE ONLY READING.**
+#      Pushback 90 (S46): `bisect_left` on screen with no what/why.
+#  16. ⚠⚠⚠ **WHEN HE SAYS STOP, THE CLOSE IS WRITTEN IN THAT TURN, ALL SIX
+#      STEPS, BEFORE ANYTHING ELSE.** Pushback 94 (S46): two read-only
+#      checks ran and the turn ended with nothing written; he found the
+#      uncommitted folders the next day. Never end a turn between "stop"
+#      and `git push`.
+#  17. ⚠ **`except ... as e` NEEDS class → object, ON CREDIT UNTIL 1.12.**
 #
-# STATE AS OF: end of Session 45, **Tue 8 Sep 2026, 22:24** (verified from
-# `date`; THREE blocks — Mon 21:37 → ~22:10; Tue ~08:50 → ~11:00; Tue ~21:05
-# → 22:24, from demo mtimes). Stopped mid-stdlib: *"lets continue from the
-# same point tomorrow."*
+# STATE AS OF: end of Session 46, **Thu 10 Sep 2026, ~21:45** (`date` 21:44
+# at his close request; demo mtimes 19:27 → 21:32; open 16:25). **Close
+# files written Fri 11 Sep 18:17**, see item 16. He asked *"what is the next
+# unit?"* then *"close the session for today."*
 # ═══════════════════════════════════════════════════
 
 ## SCHEDULE POSITION
@@ -49,134 +54,129 @@
   observed ~0.8 subsection-equivalents/week; DERIVED CLOSE ≈ 22 OCT 2026.
   The 30 Sep gate is missed at the observed rate. Nothing de-scoped.** Tell
   him the number if he asks; do not soften it.
-- **S45 yield (~3h across three blocks):** `sys.modules` discomfort worked
-  to the ground (dict → two keys → bound name → route rule → `__main__`);
-  absolute vs relative RE-WALKED at his request with three probe files;
-  **CIRCULAR IMPORTS taught and closed as taught material**, both fixes;
-  **STDLIB OPENED**, two ideas, the real `json` front door shown. **No cold
-  ask fired. Zero promotions, correctly.** ~0.5 unit-equivalent. Four
-  pushbacks, all upheld or part-upheld.
+- **S46 yield (~5h, one block with pauses):** stdlib RE-WALKED from its
+  frame and FINISHED (idea 3: `bisect.py` read); `enumerate()`, bare `*`,
+  `max()`/`min()` defined; **PIP / SITE-PACKAGES opened and taught with a
+  live shadowing bug. 1.10 IS TAUGHT-COMPLETE.** No cold ask fired, no
+  rating, zero promotions. ~0.5 unit-equivalent. Seven pushbacks.
 - **Position: 1.1–1.8 closed. 1.9 — three [x] of ten, seven [~], cold asks
-  OVERDUE since 7 Sep. 1.10 — six [x]; `sys.path`, `.pyc`, `packages`,
-  `relative vs absolute`, `circular imports`, `standard library` [~]; one
-  [ ] (pip / third-party).**
+  OVERDUE since 7 Sep. 1.10 — six [x], seven [~], zero [ ].**
 - ✅ **DECIDED S42:** once 1.10 lands, the weekly cold build block moves to a
-  **REAL LeRobot file**. 1.10 is one bullet from landing.
+  **REAL LeRobot file**. 1.10 is taught-complete; place the block now.
 - **RULED S40: `pdb` / VS Code debugger → 1.11.**
-- Current Layer: 1. Current Topic: **1.10 — stdlib idea 3 / pip next.**
+- Current Layer: 1. Current Topic: **1.10 cold asks → LeRobot block → 1.11.**
 
 ## RULE-CHANGE PARKING (adopt ≤1 per session, at close)
-- **NOTHING ADOPTED IN S45, NOTHING PARKED.** RULES stays at **v6**.
+- **NOTHING ADOPTED IN S46, NOTHING PARKED.** RULES stays at **v6**.
 
 ## WHERE WE LEFT OFF
 
-### SESSION 46 STARTS HERE — exact resume point
+### SESSION 47 STARTS HERE — exact resume point
 
-1. **INTERVAL GATE from `git log` + mtimes.** S45 closed Tue 8 Sep 22:24.
-   S45 material (circular, stdlib, route rule, `__main__` placeholder) is
-   legal from 9 Sep evening at the earliest; the queue rows say 10 Sep.
-   Packages / relative imports were RE-WALKED on 7–8 Sep, so their 8 Sep
-   due dates were pushed to 10 Sep. Older material (1.9, and everything
-   overdue since August) is legal now.
+1. **INTERVAL GATE from `git log` + mtimes.** S46 closed Thu 10 Sep ~21:45
+   (files Fri 11 Sep 18:17). S46 material (stdlib re-walk, `bisect`, `*`,
+   `enumerate`, pip, shadowing, key order) is legal from 12 Sep. All
+   older 1.10 rows are legal now. Everything from August is legal now.
 
-2. ⚠⚠ **OPEN WITH THE OVERDUE VOLLEY THIS TIME.** `python3 tools/retest.py
-   --overdue --all`, oldest first, task-first, text. A block of 8 BEFORE
-   any 1.10 work. Two sessions running have fired nothing. Still due from
-   S41/S42: `UnboundLocalError` deletion test; `[[0]*3]*3`; `None`-as-
-   absence; `subscriptable`; `augmented assignment` with an alias;
-   **hierarchy direction** both ways; **refuse vs convert**; `mutable
-   default + sentinel`; `except ... as e` (printed lines only); `< > ^ in a
-   format spec` (FAILED S43); `keyword argument` label (FAILED S43).
+2. ⚠⚠⚠ **THE VOLLEY. FIRST. STATE IT AT THE OPEN.** `python3 tools/
+   retest.py --overdue --all`, oldest first, task-first, text, one at a
+   time, rating after his answer. A block of 8 BEFORE anything else.
+   Volley 1 was posed in S46 and not answered; re-pose it:
+   `grid = [[0] * 3] * 3; grid[0][0] = 7; print(grid)` → exact line +
+   what the outer `* 3` makes three of (run-verified: three references
+   to ONE inner list). Then from the S41/S42 list: `UnboundLocalError`
+   deletion test; `None`-as-absence; `subscriptable`; `augmented
+   assignment` with an alias; **hierarchy direction** both ways
+   (run-verified snippet: `except LookupError` before `except KeyError`
+   on a missing dict key → `"lookup"`); **refuse vs convert**; `mutable
+   default + sentinel`; `< > ^ in a format spec` (FAILED S43); `keyword
+   argument` label (FAILED S43).
 
-3. **THEN 1.10, from the held teach-back:** *why did `import arm` give an
-   empty namespace and `import json` twelve names?* (answer: `json`'s
-   `__init__.py` holds `from .decoder import ...`; `arm`'s only prints).
-   Doubt gate. Then stdlib idea 3 — open one stdlib file and READ it
-   (`bisect.py` is short and pure Python; or `json/decoder.py` since he
-   has its `__file__`). **Define `enumerate()` here** (one line + queue
-   row). Then **pip / site-packages** (~20 min): where `pip install` puts
-   files; why that folder is on `sys.path`; his `/opt/ros/jazzy/lib/
-   python3.12/site-packages` entry (second on the list, printed S45 in
-   `teaching/s45_stdlib/where_is.py`); `sys.path.append` as a smell.
-   That closes 1.10 as taught. Then act on the S42 decision (LeRobot
-   build block).
+3. **THEN the 1.10 cold asks, task-first, each with its full scenario:**
+   - **Route rule** (GAPPED at 42h in S46): a `sys.path` list printed in
+     the question, "walk `import X` and say where it stops and what runs."
+   - **Packages bound name**: which one name is in `vars()` after
+     `import arm.limits`.
+   - ⚠⚠ **`from . import limits` absolute form** (PARKED S45 at his
+     request, answer given: `from arm import limits`; rule `import X.Y`
+     binds `X`, `from X import Y` binds `Y`). Cold task: a file inside
+     `arm/`, "which one name is in `vars()` after this line". Do not
+     re-teach; he said in S46 it is *"still hurting"* and parked it again.
+   - **Run-directly trap** (missed twice): `python3 arm/safety_rel.py`.
+   - **Circular**: the two-file scenario, error name (SEEN, so fair), why
+     not a loop, the two fixes.
+   - **`__main__` placeholder**; **shadowing** (from 12 Sep); **pip**.
 
-4. ⚠⚠ **PARKED AT HIS REQUEST, WITH THE ANSWER GIVEN:** the absolute form
-   of `from . import limits`. He converted it to `import arm.limits` for
-   the THIRD time (S43, S44, S45) and said *"can we skip this for now, its
-   been bugging me since last 3 days."* Answer given plainly: `from arm
-   import limits`; rule `import X.Y` binds `X`, `from X import Y` binds
-   `Y`. **Do not re-open it as teaching. It comes back as a cold task on
-   10 Sep or later, task-first: a file inside `arm/` and "which one name
-   is in `vars()` after this line".**
+4. **THEN act on the S42 decision:** the weekly cold build block on a REAL
+   LeRobot file. Pick the file with him; he builds the `arm` front door
+   (`arm/__init__.py` with `from .limits import MAX_ANGLE`) as the warm-up
+   — still not built by him.
 
-5. ⚠ **HE ASKED TO REVISE `*args`/`**kwargs`** — `notes/session_21_notes.md`
-   + `drills/s22_report.py`. Cold ask after. Not touched S44 or S45.
+5. **THEN 1.11 File Handling.** Prerequisite gate: 1.10 seven [~]. Frame
+   first. `pdb` and `os.path.expanduser` are parked into it.
 
-6. ⚠ **STILL NEVER ASKED:** `sum()`, `when NOT to use a comprehension`.
+6. ⚠ **HE ASKED TO REVISE `*args`/`**kwargs`** — `notes/session_21_notes.md`
+   + `drills/s22_report.py`. Cold ask after. Not touched S44–S46.
+
+7. ⚠ **STILL NEVER ASKED:** `sum()`, `when NOT to use a comprehension`.
    **STILL OWED:** `DRY`, `mutate-while-iterating`, `list method roster`,
    `HOW FAR DID PYTHON GET?`, `del` as a statement, REPL half of
    frames/REPL-vs-script (legal).
 
-**Standing turn rules: FRAME FIRST, physical-first, ROUTE FIRST for
-anything import-shaped; ANSWER A DIRECT QUESTION DIRECTLY; FILES BY PATH
-WITH CODE, AFTER THEY EXIST; NO `-c`; EVERY QUESTION CARRIES ITS FULL
+**Standing turn rules: VOLLEY FIRST; FRAME FIRST; physical-first, ROUTE
+FIRST for anything import-shaped; ANSWER A DIRECT QUESTION DIRECTLY;
+FILES BY PATH WITH CODE AND THE COMMAND, AFTER THEY EXIST; quoted lines
+labelled read-not-run; NO `-c`; EVERY QUESTION CARRIES ITS FULL
 SCENARIO; NEVER ASK FOR AN UNSEEN ERROR NAME; SPEC BEFORE PUZZLE; ONE
 TEACHING IDEA PER TURN AND PER DEMO; asks near the top; doubt gate before
-every new subsection; depth-before-answer; rating AFTER his answer and
-BEFORE the verdict; tag every block. Do not propose ending the session.
+every new subsection; depth-before-answer (re-ask a skipped WHY); rating
+AFTER his answer and BEFORE the verdict; tag every block. Do not propose
+ending the session. WHEN HE SAYS STOP, WRITE THE CLOSE IN THAT TURN.
 NEVER EDIT HIS DRILL FILE. NEVER OVERWRITE A FILE UNSEEN.**
 
 **CARRY FORWARD:**
-- ⚠⚠ **THE ROUTE RULE IS WHAT LANDED. LEAD WITH IT.** Three sessions of
-  "two tables" did not stick; one demo of the same file loaded as `limits`
-  (run from inside `arm/`) and as `arm.limits` (run from outside) did. His
-  words: *"what decides whether we will have `limits` or `arm.limits` is
-  `sys.path[0]` or the base folder from where we start."* For any future
-  import question, start from `sys.path[0]` and the route.
-- ⚠⚠ **THE BOUND-NAME MISS FLIPPED, THE FORM-CONVERSION MISS DID NOT.** He
-  said `arm` for `import arm.limits` unprompted (first time right, S45
-  block 1). He still converts `from . import limits` to `import arm.limits`
-  (third time). These are now two separate rows; see item 4.
-- ⚠ **RUN-DIRECTLY TRAP MISSED A SECOND TIME** (`python3 arm/safety_rel.py`
-  → he gave the two `running` lines). After the route rule and the
-  `__main__` demo he predicted `run_safety_rel.py` in full. Depth-before-
-  answer: he answers the happy path without checking how the file was
-  reached. Cold ask on 10 Sep decides.
-- ⚠ **`__main__` was "less intuitive" to him** — answered with
-  `arm/whoami.py` (same file, `__name__` printed both ways). He accepted
-  it as a placeholder for "the file that was started". New queue row.
-- ⚠ **Circular: "kind of an infinite loop"** — corrected; the early key
-  PREVENTS the loop. His final teach-back on the fix was clean: *"the
-  function object gets built but is not executed till it is called."*
-- ⚠ **`print(arm)` with `arm` not a name → `ModuleNotFoundError` (S44).**
-  `NameError` is [x] (due 10 Sep). WATCH.
-- ⚠ **VERIFY EVERY SNIPPET BY RUNNING IT BEFORE POSING IT.** Held S45.
-- ⚠ **Level-1 audit list:** `len()`, `range()` as an object, `.append()` vs
-  `+`, `enumerate()`.
+- ⚠⚠ **THE ROUTE RULE WAS GAPPED AT 42 HOURS.** He had `__init__.py`
+  first and "the parent of `arm/`", then *"please remind me the whole
+  thing."* Honest gap. What re-landed it: `ls -d <entry>/json
+  <entry>/json.py` down the list, then `ls` inside the hit. **For the cold
+  ask, put a real `sys.path` list in the question.**
+- ⚠⚠ **"A FOLDER IS NOT CODE" is the sentence that made `__init__.py` make
+  sense to him.** He had the label as "guess work" and not the reason.
+  Lead with the sentence, then `see_arm.py`.
+- ⚠ **HE FOUND THE KEY-ORDER CONTRADICTION HIMSELF** (insertion vs finish
+  order). Answered with `teaching/s46_stdlib/key_order/`. New row. He
+  applies the circular-import fact correctly; the mentor had given half.
+- ⚠ **"Same folder first, then `sys.path`"** — corrected: the folder IS
+  `sys.path[0]`. Watch on the shadowing / route cold asks.
+- ⚠ **Bare `*`: right answer, WHY skipped, re-asked, then right.** Mild
+  surface-answer instance. "By keyword" is the phrase.
+- ⚠ **"Run a file" vs "import a file"** — corrected once.
+- ⚠ **RELATIVE vs ABSOLUTE parked by him a SECOND time** (*"still
+  hurting, lets not waste time on it yet"*). Honour it. Cold task only.
+- ⚠ **`max()`/`min()` used undefined (mentor) — now defined and queued.**
+- ⚠ **VERIFY EVERY SNIPPET BY RUNNING IT BEFORE POSING IT.** Held S46.
+- ⚠ **Level-1 audit list:** `len()`, `range()` as an object, `.append()`
+  vs `+`. (`enumerate()` now defined.)
 - ⚠ **`[i for i in config]` is just `list(config)`** — still not said.
 - ⚠ **DEAD CODE** — three instances; full treatment still parked.
-- Governance/format requests mid-session → PARK, close material, write at end.
-- **Mentor demos, re-runnable:** `teaching/s45_cache/` (`see_modules.py`);
-  `teaching/s43_packages/` now also holds `see_arm.py`, `see_names.py`,
-  `see_arm_ns.py`, `run_p1..3.py` + `arm/p1..3.py`, `arm/direct.py`,
-  `arm/whoami.py` + `run_whoami.py`, `run_safety_rel.py`;
-  `teaching/s45_circular/` (`a.py`, `b.py`, `main.py`, `self_check.py`,
-  `run_self_check.py`, `fix/`); `teaching/s45_stdlib/` (`where_is.py`,
-  `front_door.py`).
+- Governance/format requests mid-session → PARK, close material, write at
+  end.
+- **Mentor demos, re-runnable:** `teaching/s46_stdlib/` (`key_order/`,
+  `star.py`, `enum.py`); `teaching/s46_pip/` (`where_third.py`,
+  `shadow/json.py` + `shadow/main.py` — ⚠ `shadow/` deliberately holds a
+  file named `json.py`; never run anything else from inside it);
+  `teaching/s45_stdlib/`, `s45_circular/`, `s45_cache/`, `s43_packages/`.
 - **Voice re-teach file:** `notes/voice_teach_packages_relative_imports.md`.
-  He did not say whether the web voice pass happened; asked once, not
-  answered, not chased.
+  Never confirmed used; not chased.
 
 ## TERM RE-TEST QUEUE — lives in `tools/queue.json`, driven by `tools/retest.py`.
-**143 rows, 99 [x], 44 [~].** Do not re-create the table here.
+**149 rows, 99 [x], 50 [~].** Do not re-create the table here.
 `python3 tools/retest.py --overdue --all` at the open.
-**S45: 0 rows fired. 4 rows added, all [~] due 10 Sep: `circular import /
-partially initialized`; `the route decides the key / __main__ placeholder`;
-`sys.modules key enters BEFORE the run`; `stdlib on disk / __file__ / front
-door`. Three rows re-dated 8 → 10 Sep after same-sitting re-teaching:
-`the import cache / sys.modules` [x], `package / __init__.py / bound name`,
-`relative import / the dot / run-directly trap`.**
+**S46: 0 rows fired (third session running). 6 rows added, all [~] due
+12 Sep: `enumerate()`; `keyword-only fence: bare *`; `shadowing / first
+hit wins`; `pip / site-packages`; `sys.modules key moved to END on
+finish`; `max() / min()`. Route row: asked 10 Sep, GAP, re-dated 12 Sep.
+Stdlib row re-dated 12 Sep.**
 
 ## RE-TEST QUEUE — SUBSECTION LEVEL (kept here; too coarse for the script)
 
@@ -189,86 +189,87 @@ door`. Three rows re-dated 8 → 10 Sep after same-sitting re-teaching:
 | **MUTABLE DEFAULT + SENTINEL** | S42 FAIL 6, re-taught | **[~] — OVERDUE** |
 | **CLOSURES — four layers** | S42 declared gap | **[~] at queue level — after he reads S19/S23** |
 | **`.pyc` / compiled-then-interpreted** | S42 taught | **[~] — OVERDUE (7 Sep)** |
-| **`sys.path`** | S43 taught; S45 used as the start of the route rule | **[~] — OVERDUE (7 Sep): "why does the import fail, two fixes"** |
-| **PACKAGES** | **S45: `sys.modules` keys, bound name `arm` (RIGHT, first time), `__init__.py` does not load the folder, route rule — all restated by him same-sitting** | **[~] — cold ask 10 Sep, task-first** |
-| **RELATIVE vs ABSOLUTE IMPORTS** | **S45 re-walked with probes p1–p3; `from . import limits` → `import arm.limits` THIRD time, PARKED with answer; run-directly trap missed then reasoned; `run_safety_rel.py` predicted in full** | **[~] — cold ask 10 Sep, both halves** |
-| **CIRCULAR IMPORTS** | **S45 taught: early key, half-built hit, `ImportError: cannot import name`, two fixes; teach-backs clean after "infinite loop" corrected** | **[~] — cold ask 10 Sep** |
-| **STDLIB / FRONT DOOR** | **S45 opened: `__file__`, fourth `sys.path` entry, `json/__init__.py` lines 106–108, four keys / twelve names; teach-back HELD** | **[~] — finish S46, cold ask later** |
-| **POSITIONAL vs KEYWORD ORDER + DOUBLE-FILL** | S43 taught | **[~] — due 8 Sep, now legal** |
-| **1.10 — taught half** | S41: 7/7 at 7 | **[x] — cache row re-dated 10 Sep (re-told S45)** |
-| **`.keys()` AS A VIEW** | S41: PASS 6 | **[x] — 8 Sep, legal** |
+| **`sys.path`** | S43 taught; S46 walked BY HAND with `ls` | **[~] — OVERDUE (7 Sep): "why does the import fail, two fixes"** |
+| **PACKAGES** | S45 restated same-sitting; **S46: `__init__.py` label right as "guess", reason re-taught ("a folder is not code"), teach-back clean** | **[~] — cold ask now legal, task-first** |
+| **RELATIVE vs ABSOLUTE IMPORTS** | S45 re-walked; **S46: parked by him a second time; the dot-resolves-by-NAME point taken from his own question** | **[~] — cold ask, both halves, legal now; NO re-teaching** |
+| **CIRCULAR IMPORTS** | S45 taught; **S46 doubt gate: "clear"** | **[~] — cold ask legal now** |
+| **STDLIB / FRONT DOOR** | **S46: RE-WALKED and FINISHED — route by hand, "a folder is not code", chain `decoder.py` → `scanner`, key order, `bisect_left` read** | **[~] — cold ask 12 Sep** |
+| **PIP / SITE-PACKAGES / SHADOWING** | **S46 taught; teach-backs clean after one correction** | **[~] — cold ask 12 Sep** |
+| **BARE `*` / `enumerate()`** | **S46 defined; teach-backs right after a re-ask** | **[~] — cold ask 12 Sep** |
+| **POSITIONAL vs KEYWORD ORDER + DOUBLE-FILL** | S43 taught | **[~] — legal** |
+| **1.10 — taught half** | S41: 7/7 at 7 | **[x] — cache row 10 Sep, legal** |
+| **`.keys()` AS A VIEW** | S41: PASS 6 | **[x] — legal** |
 | **THE COMPILE/RUN SPLIT** | S41 7; S42 answered | **[x] — OVERDUE** |
 | **`while` mechanics; nested loops; found-flag** | S38 20/20; S42 8 | **[x] — 17 Sep** |
 | **Frames / namespaces / execution pipeline** | S38 full trace | **[x] — OVERDUE; UBL deletion test due** |
 | **THE MUTATING TELL** | S38 both halves | **[x] — OVERDUE** |
 | **`sorted` / `key=` / `lambda` / `reversed()`** | S38 cold 8/10 | **[x] — 13 Sep** |
 | **`zip` — both silent failures** | S42: PASS 8 / 8 | **[x] — 17 Sep** |
-| **SHALLOW COPY / deepcopy / tuple slots** | S42: PASS 8 / 8 / 7 | **[x] — 10–17 Sep; `[[0]*3]*3` still due** |
+| **SHALLOW COPY / deepcopy / tuple slots** | S42: PASS 8 / 8 / 7 | **[x] — `[[0]*3]*3` posed S46, unanswered; re-pose first** |
 | **`constructors`** | S38 7/10 | **[x] — OVERDUE** |
 | **`del` as a STATEMENT** | S38 taught | **[~] — cold ask, OVERDUE** |
-| **1.9 `finally` guarantee** | S41: PASS 7 | **[x] — 8 Sep, legal** |
-| **`short-circuit`** | S41: PASS 7 | **[x] — 8 Sep, legal** |
+| **1.9 `finally` guarantee** | S41: PASS 7 | **[x] — legal** |
+| **`short-circuit`** | S41: PASS 7 | **[x] — legal** |
 | **1.9 try/except** | S41 drill clean | **[x] — OVERDUE** |
 | **RAISE-VS-SHRUG / `None` returns / expression-vs-statement** | S42: PASS 8 / 8 / 8 | **[x] — 17 Sep** |
 | **DRY / one copy of a decision** | S41 holds structurally | **[~] — later-day ASK still owed** |
 | **AUGMENTED ASSIGNMENT `+=` vs `=`** | S41 DEMOTED | **[~] — OVERDUE** |
 | **1.1–1.5 STRICT-LEGEND AUDIT** | S41: 11/12 | **DONE — next at the September gauntlet** |
-| Frames / REPL vs script | S38 frames; S43 REPL defined | [~] **cold ask on both halves now legal** |
+| Frames / REPL vs script | S38 frames; S43 REPL defined; S46 REPL re-shown | [~] **cold ask on both halves legal** |
 
 ## WATCH AREAS (full histories in ARCHIVE.md)
 - Structured foundation over patches; solo-first; AI-reliance guarded.
-- ⚠⚠ **DELIVERY, NOT RETENTION, WAS THE PROBLEM AGAIN (S43, S44, S45).**
-  S45: four pushbacks on presentation (84 sequencing, 85 phantom file, 86
-  half scenario, 87 unseen error label). Once the demo was a real file run
-  from a stated folder, he restated everything correctly. **Three sessions
-  running. The watch is on the MENTOR.**
-- ⚠⚠ **HE NAMES HIS OWN LIMIT AND PARKS** — *"can we skip this for now,
-  its been bugging me since last 3 days"* (S45) and *"I am not eligible to
-  answer this"* (S45). Both correct calls. Honour them, park with the
-  answer attached, bring the item back cold.
-- ⚠⚠ **HE ASKS TO BE QUIZZED** (S44 twice; S45: *"ask me all the questions
-  you can to check my understanding"*). Give the quiz; tag it [TEACH-BACK]
-  same-day; every question carries its full scenario.
-- ⚠ **FORM-CONVERSION MISS, THREE TIMES (`from . import limits` →
-  `import arm.limits`).** Now a real gap, parked at his request. Cold task
-  10 Sep. Root cause candidate: he reaches for the form he TYPES most.
-- ⚠ **SURFACE ANSWER on the run-directly trap, second time.** Same class as
-  S20 `digit_sum`. He recovers fully once asked "how was the file reached?"
-- ⚠ **HE ASKS THE GOOD QUESTION HIMSELF (S45):** *"can `limits.py` be loaded
-  independently, or is everything always `arm.something`?"* — exactly the
-  route question, and answering it (`arm/direct.py`) is what made the
-  whole unit land. *"isn't the key built after `a` has fully executed?"* —
-  the circular-import crux, answered with `self_check.py`.
-- ⚠ **CONFIDENCE CALIBRATION:** no ratings taken S44 or S45 (all same-day).
-  Use ≤5 as the targeting signal; a 7+ on a LABEL is unreliable until
-  three clean.
+- ⚠⚠ **DELIVERY, NOT RETENTION, WAS THE PROBLEM AGAIN (S43–S46).** S46:
+  pushbacks 89 (abstract list), 90 (no frame), 91 (read-not-run), 93 (no
+  command), 94 (close not written). Once a demo was a file run from a
+  stated folder with its command shown, he restated everything. **Four
+  sessions running. The watch is on the MENTOR.**
+- ⚠⚠ **ZERO COLD ASKS FOR THREE SESSIONS.** The ledger has had no new
+  evidence since S43. Every "[x] overdue" row is now two weeks stale. The
+  volley is not optional at the S47 open.
+- ⚠⚠ **HE NAMES HIS OWN LIMIT AND PARKS** — relative/absolute parked a
+  second time (S46). *"I won't say clear... lets finish this unit
+  today."* Honour it, cold task only.
+- ⚠⚠ **HE ASKS THE GOOD QUESTION HIMSELF (S46):** the key-order
+  contradiction; the dot-is-whose-folder question; *"what file did we
+  run?"* Each one produced a demo or a correction of the mentor.
+- ⚠ **HE NAMES A GAP INSTEAD OF GUESSING** (route rule, `json.scanner`)
+  and TAGS a guess as a guess (`__init__.py`). Keep rewarding it; never
+  log a named gap as anything but a gap.
+- ⚠ **FORM-CONVERSION MISS (`from . import limits`)** — untouched S46 by
+  his request. Cold task next.
+- ⚠ **SURFACE ANSWER, mild (bare `*` why skipped).** Re-ask works.
+- ⚠ **CONFIDENCE CALIBRATION:** no ratings taken S44–S46. Use ≤5 as the
+  targeting signal; a 7+ on a LABEL is unreliable until three clean.
 - ⚠ **HE DEBUGS WELL WITH A TRACEBACK AND POORLY WITHOUT ONE.** Unchanged.
 - ⚠ **LEVEL-1 CONSTRUCTS HE USES WITHOUT A MODEL:** `len()`, `range()`,
-  `.append()` vs `+`, `enumerate()`.
-- **FALSE ATTRIBUTION / PUSHBACK DENOMINATOR: 87 raised, 85 upheld or
-  part-upheld.** S45: 84 part-upheld, 85, 86, 87 upheld.
+  `.append()` vs `+`.
+- **FALSE ATTRIBUTION / PUSHBACK DENOMINATOR: 94 raised, 92 upheld or
+  part-upheld.** S46: 88 part, 89, 90, 91, 92, 93, 94 upheld.
 
 ## CURIOSITY PARKING LOT
 - venv; VS Code practices; notebooks; JIT; **IEEE 754 (1.13, promised)**;
   32/64-bit; `globals()`/`locals()` drill; senior traceback read; GIL (1.13);
   concurrency (post-Layer 1); GC (1.13)
-- ✅ **`.pyc` — PAID S42.** ✅ **REPL — DEFINED S43.** ✅ **`python3 -c` —
-  DEFINED S44, retired.** ✅ **bare `vars()` — DEFINED S44.** ✅ **`__file__`
-  — DEFINED S45.** ✅ **`__init__.py` as a FRONT DOOR — SHOWN LIVE S45 in
-  `json/__init__.py`; the `arm` version still not built by him (do it at
-  the LeRobot reading turn).**
-- ✅ **`sys.path.append` — SHOWN S43**, "smell in a real codebase" owed at
-  the pip/site-packages turn (S46).
-- ⚠ **Two module objects for one file** (loaded as `limits` AND as
-  `arm.limits` in one program) — stated S45 as a real bug class, not
-  demonstrated. One demo owed if it comes up.
+- ✅ **`.pyc` — PAID S42.** ✅ **REPL — DEFINED S43, re-shown S46.**
+  ✅ **`python3 -c` — DEFINED S44.** ✅ **bare `vars()` — S44.**
+  ✅ **`__file__` — S45.** ✅ **`__init__.py` as a FRONT DOOR — S45 live,
+  chain read S46; the `arm` version still not built by him (LeRobot
+  warm-up).** ✅ **`sys.path.append` smell — SAID S46;** `pip install -e .`
+  named, not shown. ✅ **`enumerate()` — DEFINED S46.** ✅ **bare `*` —
+  DEFINED S46.** ✅ **shadowing — SHOWN S46.**
+- ⚠ **Two module objects for one file** (`limits` AND `arm.limits` in one
+  program) — stated S45 as a real bug class, not demonstrated.
 - ⚠ **`..` (two dots, parent package)** — one line said S44, never shown.
-- ⚠ **`python3 -m`** — used in a mentor-side check S45, never shown to him.
-  Do not use in a demo until defined.
+- ⚠ **`python3 -m`** — never shown to him. Do not use in a demo until
+  defined.
+- ⚠ **`bisect.py` lines 111–114** (`try: from _bisect import *` — the C
+  override) — not shown; `import *` untaught.
+- ⚠ **`pip install -e .` / editable installs** — named S46, owed at the
+  LeRobot block.
 - ✅ **BREAKPOINT DEBUGGING / `pdb` — RULED S40: 1.11.**
 - `__iter__`/`__next__` + generators — 1.13. Generator EXPRESSIONS unshown.
 - ⚠ **`class` — STILL ON CREDIT.** 1.12 opens with the exception classes.
-- ⚠ **`enumerate()`** — used by him S43, never taught. Define at stdlib idea 3.
 - ⚠ **Python does not expand `~`** — said S43; `os.path.expanduser` → 1.11.
 - ⚠ **A dict iterator refuses a resized dict (`RuntimeError`)** — with
   `mutate-while-iterating`.

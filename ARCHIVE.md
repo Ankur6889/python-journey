@@ -5865,3 +5865,152 @@ pushbacks, three of them on delivery.
 - Schedule: ~0.5 unit-equivalent. Re-baseline unchanged (derived close ≈ 22
   Oct). 1.10 has one bullet untouched (pip / third-party) and one half-taught
   (stdlib).
+
+## What Session 46 established (Thursday 10 September 2026, 16:25 → ~21:45; close written Friday 11 September 18:17 after the close was left unfinished)
+
+**What this session was:** he opened 42 hours after S45 with *"start from
+the last 20 minutes of last session."* The mentor read that as the held
+stdlib teach-back and fired it; he corrected it to *"the whole thing when
+you completed circular import."* From there the standard library was
+RE-WALKED from its frame, one physical demo per idea, and then finished
+(idea 3: read `bisect.py`), `enumerate()` and the bare `*` were defined,
+and **pip / site-packages was opened and taught — the last untouched 1.10
+bullet. 1.10 is now taught-complete.** Timeline from mtimes: `key_order/`
+19:27, `star.py` 20:59, `enum.py` 21:08, `where_third.py` 21:25,
+`shadow/` 21:32; `date` 21:44 when he asked to close. **The overdue volley
+did not fire — third session running.** Volley 1 was on the table when he
+asked what came next and then closed. **The close procedure was then cut
+off after two read-only checks; nothing was written. He caught it the next
+day (pushback 94).**
+
+### 1. THE GATE
+- `date` Thu 16:25; last commit Tue 22:32; S45 notes mtime Tue 22:27. Gap
+  ~42h, stated at the open with all three sources. All S45 rows legal.
+  No rule parked, none owed. Held.
+
+### 2. THE RESUME MISREAD (pushback 88, part-upheld)
+- "Last 20 minutes" was resolved to the tail teach-back. He meant the
+  stdlib block from its opening. Ambiguous instruction, one-line question
+  owed (S17-2). Restarted from the doubt gate on circular ("clear") and
+  the stdlib FRAME.
+
+### 3. THE ROUTE RULE AT 42 HOURS — A GAP, NAMED
+- [RECALL] "walk `import json` the way you walked `import arm`". He gave:
+  `__init__.py` runs first (right), *"the path of arm, excluding arm"*
+  (right: `sys.path` holds the PARENT), then *"sorry I forgot, please
+  remind me the whole thing."* Gap named, not guessed. Logged on the
+  route row, re-dated 12 Sep, still [~].
+- The mentor then re-stated the rule as a FIVE-POINT LIST. He: *"sorry
+  not understood."* **Pushback 89, upheld.** Same failure as S43–S45
+  two-tables prose. Fix: the walk done BY HAND in the shell, `ls -d
+  <entry>/json <entry>/json.py` for entries 0–3, three misses, one hit,
+  then `ls /usr/lib/python3.12/json/`. That landed.
+- He asked how to run code without a file: REPL (S43) re-shown, `-c`
+  (S44) named, the `''` first entry noted. Direct answer, then back.
+- `__init__.py` teach-back: right, self-tagged *"guess work."* Reason
+  given as one sentence — **a folder is not code** — with `see_arm.py`
+  re-run. His teach-back: *"import <folder name> has to build a module
+  object so it needs a `__init__.py` to stand for this folder."* Clean.
+  "Run a file" corrected to "import a file."
+
+### 4. THE FRONT DOOR, FROM DISK
+- Lines 106–108 of `json/__init__.py` quoted. He: *"what file did we
+  run, or are we just discussing the structure?"* — **pushback 91,
+  upheld**: quoted lines must be labelled as read-not-run. Then HIS
+  question: does the dot mean the folder `__init__.py` sits in, or the
+  caller's? *"I presume its `__init__.py` folder because that's what
+  doing the import."* Right; sharpened to: resolved by NAME (`json` +
+  `.decoder` → key `json.decoder`), not by folder.
+- `json.scanner`: *"I am not sure where it will come from."* Gap named.
+  `grep import json/decoder.py` → line 5 `from json import scanner`.
+  Chain shown; the absolute form inside a stdlib file pointed at.
+- **HIS CHALLENGE (pushback 92, upheld, technical):** *"you said during
+  cyclic imports that the name gets added as soon as we enter — by that
+  logic `json.decoder` should come before `json.scanner`."* Correct on
+  insertion. `teaching/s46_stdlib/key_order/` built (`p/__init__.py`,
+  `p/inner.py`, `main.py`): mid-run `['p', 'p.inner']`, after import
+  `['p.inner', 'p']`. **Early in, moved to the end on finish.** New row.
+- Doubt gate: *"this is clear but absolute and relative import is still
+  hurting, lets not waste time on it yet, lets finish this unit today."*
+  Parked, his call, answer already attached from S45.
+
+### 5. IDEA 3 — READ A STDLIB FILE
+- `bisect_left` shown from `/usr/lib/python3.12/bisect.py` with NO FRAME.
+  He: *"I don't understand it, you need to explain it to me, also `*` is
+  something I don't know how to use."* **Pushback 90, upheld — FRAME
+  FIRST breach.** Frame given (what / why / lo-hi-mid), loop in words,
+  one worked trace (35 → index 3). He: *"you basically explained the
+  entire logic, there is nothing left in the function but `*`."*
+- Bare `*`: `star.py` (`clamp(value, low, high, *, verbose=False)`),
+  fourth positional → `TypeError ... takes 3 positional arguments but 4
+  were given`. **`max()`/`min()` used undefined — substrate breach, owned
+  in-turn, defined, queued.** Teach-back: *"the first one raises"* — the
+  WHY re-asked (S20-3a); *"5th tries to land on key but we didn't give
+  key with the argument"* — mechanism right, phrase → "by keyword".
+- `enumerate()` (`enum.py`): raw tuples then unpacked. His teach-back:
+  *"a tuple which is a pair of (index, element on that index)"* — right;
+  "what construct" was unclear wording → unpacking, named.
+
+### 6. PIP / SITE-PACKAGES — OPENED AND TAUGHT (`teaching/s46_pip/`)
+- Prerequisite gate declared (`sys.path`, packages both [~]). Frame: pip
+  COPIES a folder into a folder already on the list; no third tier.
+  `where_third.py`: `json` entry 3, `numpy` entry 6 (39 entries in the
+  folder), `rclpy` entry 1 (the ROS `setup.bash` line). Teach-back
+  (a `json/` copied into the ROS folder): *"it would load on second line
+  itself because the check goes on till first instance is found."* Right.
+- **Shadowing live:** `shadow/json.py` + `shadow/main.py`, run from
+  inside `shadow/`: local file runs, `__file__` local, `AttributeError`
+  on `.loads`. He: *"run from inside shadow/: but what?? you can run json
+  but you can't run main"* — **pushback 93, upheld**: the COMMAND was
+  omitted. Shown as `$ cd ...; $ python3 main.py`. His teach-back: same
+  folder → local file → no `loads`; *"if not there then it will go for
+  sys.path"* corrected: the folder IS `sys.path[0]`, one list, one rule.
+- `sys.path.append` as a smell and `pip install -e .` named, not shown.
+- **pip / third-party [ ] → [~].** Direct question *"is 1.10 fully
+  complete?"* answered with the ten-row table: taught-complete, seven
+  [~] wait on cold asks. Direct question *"what is the next unit?"*: 1.11.
+
+### 7. THE VOLLEY THAT DID NOT FIRE
+- Volley 1 (`[[0]*3]*3`, verified by run) was posed; he asked two direct
+  questions and closed. 0 of 8 fired. **Third consecutive session with
+  zero cold asks on the 1.9 / August backlog.** The mentor followed his
+  "start from the last 20 minutes" without saying, at the open, that the
+  volley would then be at risk. Next session: VOLLEY FIRST, stated as the
+  cost of not doing it, before any 1.10 cold ask or 1.11.
+
+### 8. MENTOR FAILURES
+1. **Pushback 88 (part)** — resume point resolved without a one-line
+   clarifying question.
+2. **Pushback 89** — abstract five-point list where a shell walk was
+   needed. Fourth session running: physical or nothing.
+3. **Pushback 90** — `bisect_left` with no frame. FRAME FIRST (S28).
+4. **Pushback 91** — quoted file lines not labelled read-not-run.
+5. **Pushback 92** — half a mechanism ("scanner finished first") given
+   as if whole; his insertion-order objection was correct.
+6. **Pushback 93** — output shown without its command.
+7. **Pushback 94** — the close was not performed when asked; two checks
+   ran and the turn ended. He found the uncommitted folders the next day.
+   The close is written 20 hours late from the transcript and mtimes.
+8. `max()`/`min()` undefined in a demo (substrate rule).
+9. The `startswith("p")` filter let `posix`/`posixpath` into the demo
+   output; explained as noise, should have been filtered.
+- Held clean: interval gate with three sources; every demo a real file
+  run from a stated folder; nine files announced by path with code after
+  creation; every snippet run before its output was shown; tags on every
+  block; no ratings on same-day material; the re-ask on a skipped WHY;
+  direct questions answered directly (five: REPL, what-file-ran, is-1.10-
+  complete, next-unit, and the key-order challenge); his park honoured.
+
+### 9. THE LEDGER
+- Queue: 143 → 149. Six added, all [~] due 12 Sep: `enumerate()`;
+  `keyword-only fence: bare *`; `shadowing / first hit wins`; `pip /
+  site-packages`; `sys.modules key moved to END on finish`; `max() /
+  min()`. Route row: asked 10 Sep, GAP, re-dated 12 Sep. Stdlib row
+  re-dated 12 Sep. [x] 99 unchanged. **0 rows fired.**
+- Curriculum: **1.10 `pip and third-party packages` [ ] → [~]**; stdlib
+  annotation extended (idea 3 landed). **1.10 taught-complete. Zero [x],
+  correctly.**
+- Pushbacks: 94 raised, 92 upheld or part-upheld (88 part, 89–94).
+- Schedule: ~0.5 unit-equivalent (stdlib finished, pip taught). Derived
+  close unchanged (≈ 22 Oct). Next unit 1.11 once the 1.10 cold asks and
+  the LeRobot block are placed.
