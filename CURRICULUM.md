@@ -1753,10 +1753,16 @@ and demonstrated in the SAME SITTING. Cold later-day asks are queued for S40.**
 - [~] **`.pyc` / what bytecode is — the S35 promise PAID S42.** Cached compiler output in `__pycache__` for IMPORTED modules (shown on his own `drills/__pycache__/s22_counter.cpython-312.pyc`); buys faster IMPORT only; mtime+size stamp → never stale, demonstrated live; bytecode = instructions for the PVM, Level 2 only. **His question answered: CPython is a COMPILER followed by an INTERPRETER (PVM) — "compiled to bytecode, then interpreted."** Cold ask due 7 Sep.
 
 #### 1.11 File Handling
-- [ ] open() / [ ] Read modes / [ ] read(), readline(), readlines()
-- [ ] Writing files / [ ] The with statement — context managers
-- [ ] Why context managers matter / [ ] os.path and pathlib
-- [ ] CSV basics / [ ] JSON basics
+**OPENED AND TAUGHT-COMPLETE S47 (Fri 11 Sep 2026 18:26 → ~21:40; JSON Sat 12
+Sep ~07:40 → 07:55). Every bullet [ ] → [~] in one session, fourteen ideas,
+one file per idea in `teaching/s47_files/`, every file pasted under its path
+and run with its command. Prerequisite gate declared: 1.10 taught-complete,
+seven [~]. All same-session; cold asks and the drill legal from 13 Sep.
+`pdb` (RULED S40 → 1.11) NOT yet taught; owed before 1.11 closes.**
+- [~] open() — **S47: returns a FILE OBJECT that is a CURSOR over the file (`read_it.py`, `read_twice.py`: second `.read()` → `''`); the model slip "a file is like a list of strings" corrected to one string cut at `\n` by the reader** / [~] Read modes — **S47: `"r"` default, `"w"` TRUNCATES at `open` before any write (`write_it.py` run twice, still two lines; his cursor-at-start [PREDICT] was the honest wrong model), `"a"` cursor at the END (`append_it.py`)** / [~] read(), readline(), readlines() — **S47: `read_lines.py` (three `readline()` calls, `\n` kept, `''` past the end); `loop_lines.py` (`for line in f` consumes the same cursor); `readlines()` given as vocabulary (a list, loads all)**
+- [~] Writing files — **S47: `.write()` adds no newline; goes to a BUFFER, lands on `close()` (`no_close.py`: a second reader sees `''` until `w.close()`)** / [~] The with statement — context managers — **S47: `with_it.py` (`f.closed` False inside, True after the dedent, `f` still bound); the `try`/`finally` shape shown first (`safe_close.py`) so `with` is that shape as one statement; "context manager" = set-up on entry, tear-down on exit, dunder pair ON CREDIT to 1.12**
+- [~] Why context managers matter — **S47: from HIS question *"why would f.close ever fail?"* → `skip_close.py`: `f.write(42)` raises, the close line is SKIPPED (`f.closed` False), disk empty; `with_err.py` same two writes, closed True, line on disk. Leaked handles → "Too many open files" far from the cause** / [~] os.path and pathlib — **S47: `open()` follows the SHELL (`FileNotFoundError` from the repo root, named by the mentor, never seen before) vs `import` follows the SCRIPT; `read_anywhere.py` (`Path(__file__).parent / name`, `/` = join) and `os_form.py` (`getcwd`, `abspath`+`dirname`, `join`) run from two folders; the `os` / `os.path` / `pathlib` map given as a roster; his *"do I need to remember this?"* answered: cold = `with open`, the loop, the modes, files-follow-the-shell, ONE join form; the rest is reference. `os.path.expanduser` named, not shown**
+- [~] CSV basics — **S47: `joints.csv` with a quoted comma; `read_csv.py` contrasts `csv.reader` (three fields, quotes stripped) with `.split(",")` (four, quotes kept; substrate checked against S7); every value a `str`; `write_csv.py` with `newline=""` as spelling. He right-sized it himself: *"just a convention and good to know"*** / [~] JSON basics — **S47: `config.json` → `read_json.py` (`dict` back, `15` as `int`, `true`/`null` → `True`/`None`, nested `[]`); `write_json.py` (`dump(obj, f, indent=2)`; tuple → list on the round trip, no tuple or set in JSON). Teach-back: CSV gives flat rows of `str`, JSON gives one nested structure with real types**
 
 #### 1.12 OOP
 - [ ] Why OOP exists / [ ] Classes and instances / [ ] `__init__`

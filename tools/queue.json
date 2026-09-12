@@ -35,9 +35,9 @@
     "term": "slicing / SHALLOW COPY",
     "hook": "[start:stop:step] half-open, builds a NEW list; l[:], list(l), l.copy() copy the OUTER container, references SHARED",
     "status": "x",
-    "next_due": "2026-09-17",
-    "last_asked": "2026-09-05",
-    "rating": 8
+    "next_due": "2026-09-16",
+    "last_asked": "2026-09-11",
+    "rating": 6
   },
   {
     "term": "* on a sequence",
@@ -714,10 +714,10 @@
   {
     "term": "UnboundLocalError",
     "hook": "name IS local, no value bound yet",
-    "status": "~",
-    "next_due": "2026-09-04",
-    "last_asked": "2026-09-03",
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-16",
+    "last_asked": "2026-09-11",
+    "rating": 7
   },
   {
     "term": "pre-order / post-order",
@@ -810,10 +810,10 @@
   {
     "term": "None / is None / vs 0 / False",
     "hook": "",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
+    "status": "x",
+    "next_due": "2026-09-16",
+    "last_asked": "2026-09-11",
+    "rating": 7
   },
   {
     "term": "type conversion traps",
@@ -1189,6 +1189,102 @@
     "hook": "min(a, b) returns the smaller argument, max(a, b) the larger; clamp = max(low, min(value, high)). Level-1; used UNDEFINED in star.py S46 (mentor breach), defined after",
     "status": "~",
     "next_due": "2026-09-12",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "augmented assignment += on a MUTABLE type",
+    "hook": "list += mutates IN PLACE (extend), alias sees it; a = a + [..] rebinds; immutable types must rebind",
+    "status": "~",
+    "next_due": "2026-09-13",
+    "last_asked": "2026-09-11",
+    "rating": 7
+  },
+  {
+    "term": "open() returns a FILE OBJECT with a CURSOR",
+    "hook": "read() takes cursor to the end; a second read() returns ''",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "read() vs readline() vs for line in f",
+    "hook": "whole file as ONE str / one line incl. \\n / one line per pass; readlines() = list, loads all",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "modes r / w / a",
+    "hook": "\"w\" TRUNCATES at open, before any write; \"a\" cursor at END; both create; \"r\" default",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "write buffer / close flushes",
+    "hook": "write() goes to memory; lands on disk at close(); a skipped close = lost buffer + leaked handle",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "with open(...) as f / context manager",
+    "hook": "leaving the block closes f, exception or not; try/finally shape in one statement; f still bound after",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "cwd vs script folder: open() vs import",
+    "hook": "open() follows the SHELL (cwd); import follows the SCRIPT (sys.path[0]); anchor to __file__",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "pathlib.Path / os.path",
+    "hook": "Path(__file__).parent / name; os.path.join / dirname / abspath; os.getcwd()",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "FileNotFoundError",
+    "hook": "relative path resolved against cwd, not the script folder",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "csv.reader / csv.writer",
+    "hook": "one list of STR per row; quoted commas kept whole; open with newline=\"\"",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "json.load / json.dump",
+    "hook": "real types back (int, True/None from true/null); no tuple or set: tuple -> list on the round trip",
+    "status": "~",
+    "next_due": "2026-09-14",
+    "last_asked": null,
+    "rating": null
+  },
+  {
+    "term": "LookupError",
+    "hook": "parent of KeyError and IndexError; a catcher reaches DOWN so an ancestor first swallows children",
+    "status": "~",
+    "next_due": "2026-09-14",
     "last_asked": null,
     "rating": null
   }

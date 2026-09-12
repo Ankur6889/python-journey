@@ -367,7 +367,29 @@
 
 
 ## D. PROGRESS TRACKER
-- Sessions Completed: **45**
+- Sessions Completed: **47**
+- **SESSION 47 (Fri 11 Sep 2026, 18:26 → ~21:40; Sat 12 Sep ~07:40 → 07:55) —
+  VOLLEY FIRED (4 of 8, then stopped by him after two mentor errors) + 1.11
+  FILE HANDLING OPENED AND TAUGHT-COMPLETE IN ONE SESSION.** Opened ~21h after
+  S46; asked for new content first, took the volley once the cost was stated.
+  Volley: shallow copy PASS 6 ("copies" → "references"), `UnboundLocalError`
+  + deletion test PASS 7 (label leaked, pushback 95), `is None` PASS 7, `+=`
+  on a list FAIL 7 (modelled as a rebind; fact given with `id()` after
+  pushback 96), hierarchy direction VOIDED (untaught `LookupError`, pushback
+  97). Then fourteen 1.11 ideas, one file each in `teaching/s47_files/` (27
+  files): cursor, `readline`/loop, `"w"` truncates, `"a"`, buffer/close,
+  `skip_close.py` from his own question, `with`, cwd-vs-script,
+  `pathlib`/`os.path`, CSV with a quoted comma, JSON round trip. Every
+  bullet [ ] → [~]. Queue 150 → 161, [x] 99 → 101. Pushbacks 95–99 all
+  upheld (99/97). One rule candidate parked (fact-after-fail). ~1.0 unit.
+- **SESSION 46 (Thu 10 Sep 2026, 16:25 → ~21:45; close written Fri 11 Sep
+  18:17) — STDLIB RE-WALKED AND FINISHED, PIP / SITE-PACKAGES TAUGHT, 1.10
+  TAUGHT-COMPLETE.** *(This bullet was omitted from the S46 close and is
+  written at the S47 close; narrative in section F.)* Route by hand with
+  `ls`, "a folder is not code", front-door chain, key order from his own
+  question, `bisect_left` read, bare `*` and `enumerate()` defined, live
+  shadowing bug. Zero cold asks (third session). Queue 143 → 149, [x] 99.
+  Pushbacks 88 part, 89–94 upheld (94/92).
 - **SESSION 45 (Mon 7 Sep 2026, 21:37 → ~22:10; Tue 8 Sep ~08:50 → ~11:00; ~21:05 → 22:24) —
   `sys.modules` DISCOMFORT WORKED TO THE GROUND, ABSOLUTE/RELATIVE RE-WALKED,
   CIRCULAR IMPORTS TAUGHT, STDLIB OPENED.** Opened 18 min after S44 (*"I am
@@ -994,6 +1016,8 @@
 | 43 | **TERM-TAX (4 terms) + positional/keyword ORDER taught + import cache RE-TOLD at his request + `sys.path` finished + PACKAGES OPENED.** Two calendar days (paused after the term-tax). | **No student drill.** Mentor demos: `teaching/s43_packages/` (`use_arm.py`, `arm/__init__.py`, `arm/limits.py`); `teaching/s39_imports/twice.py` re-run; `where.py` rewritten. | Packages open, teach-back HELD | **Term-tax 2/4 promoted.** Keyword label gap → taught (double-fill `TypeError`, bare-after-named `SyntaxError`), teach-back clean. Cache five-step teach-back clean. `sys.path` [PREDICT]: append ✓, files-together declined, `import ~/…` → `SyntaxError`. Packages bound-name [PREDICT] missed. Pushbacks 79, 80 upheld. |
 | 44 | **PACKAGES CLOSED (held teach-back answered via his own question) + RELATIVE vs ABSOLUTE IMPORTS OPENED. 8.5h overnight after S43; S43 rows illegal, no older row fired.** | **No student drill.** Mentor demos in `teaching/s43_packages/`: `only_arm.py`, `from_arm.py`, `quiz1.py`, `run_motion.py`, `arm/safety.py`, `arm/safety_rel.py`, `arm/motion.py` (all announced by path with code). Voice re-teach file `notes/voice_teach_packages_relative_imports.md`. | Complete as far as it went — he closed at 21:18 to do the voice pass on the web. | **Two [TEACH-BACK]s, both with flaws: bound name `arm.limits` (second time), `from . import limits` → `import arm.limits` (wrong form), `ModuleNotFound` for a missing NAME, the run-directly trap answered as "syntax valid". Correct: package definition, `sys.modules` keys after the split was stated, namespace after `from arm.limits import MAX_ANGLE`, output order. Pushbacks 81 part-upheld, 82 and 83 upheld — 83 raised, 81 upheld or part-upheld. MENTOR: bare `vars()` and `python3 -c` both used undefined; name-the-error fired into a doubt; ambiguous prose fixed by a side-by-side physical restatement.** |
 | 45 | **`sys.modules` RE-WALKED FROM HIS DISCOMFORT + ABSOLUTE/RELATIVE RE-WALKED AND QUIZZED + CIRCULAR IMPORTS TAUGHT + STDLIB OPENED. 18 min after S44; three blocks over two days; all same-sitting relative to the material.** | **No student drill.** Mentor demos, every one announced by path with code and run: `teaching/s45_cache/see_modules.py`; `teaching/s43_packages/` `see_arm.py`, `see_names.py`, `see_arm_ns.py`, `arm/p1–p3.py` + `run_p1–3.py`, `arm/direct.py`, `arm/whoami.py` + `run_whoami.py`, `run_safety_rel.py`; `teaching/s45_circular/` (`a.py`, `b.py`, `main.py`, `self_check.py`, `fix/`); `teaching/s45_stdlib/` (`where_is.py`, `front_door.py`). | Complete as far as it went — stopped mid-stdlib at 22:24 Tue, *"lets continue from the same point tomorrow."* | **ZERO promotions, correctly. Curriculum: circular imports [ ] → [~], standard library [ ] → [~]. Queue 139 → 143 (four [~] rows due 10 Sep); three rows re-dated 8 → 10 Sep. RIGHT: `sys.modules` definition; two keys; bound name `arm` (first time); the route rule in his own words; `run_safety_rel.py` output in full; `def` body not run at import; `json` as a package. MISSED (same-day, not logged): `from . import limits` → `import arm.limits` THIRD time (parked at his request, answer given); run-directly trap second time; "infinite loop"; key-after-completion; `NameError` for a failed from-import. Pushbacks: 84 (sequencing — part, nothing skipped but the re-walk was right), 85 (file described before it existed), 86 (a question pointing back at earlier output), 87 (*"how will I predict something I haven't seen"* — a [PREDICT] on an unseen error label). 87 raised, 85 upheld or part-upheld. MENTOR: three of the four are delivery; the gate was not re-stated at blocks 2 and 3.** |
+| 46 | **STDLIB RE-WALKED AND FINISHED + PIP / SITE-PACKAGES TAUGHT. 42h after S45. 1.10 taught-complete.** *(Row omitted from the S46 close; written at the S47 close.)* | **No student drill.** Mentor demos `teaching/s46_stdlib/` (`key_order/`, `star.py`, `enum.py`), `teaching/s46_pip/` (`where_third.py`, `shadow/`). | Complete as far as it went — closed at his request 21:44; close files written the next day after pushback 94. | **Zero cold asks fired; route rule GAPPED at 42h, named not guessed. Six queue rows added. Pushbacks 88 (part), 89–94 upheld.** |
+| 47 | **VOLLEY (4 asks, stopped by him) + 1.11 FILE HANDLING OPENED AND TAUGHT-COMPLETE. ~21h after S46, two blocks over two days.** | **No student drill (offered at the end; he chose to close).** Mentor demos `teaching/s47_files/` (27 files), every one pasted under its path and run with its command: `read_it.py`, `read_twice.py`, `read_lines.py`, `loop_lines.py`, `write_it.py`, `append_it.py`, `no_close.py`, `safe_close.py`, `skip_close.py`, `with_it.py`, `with_err.py`, `read_anywhere.py`, `os_form.py`, `read_csv.py`, `write_csv.py`, `read_json.py`, `write_json.py` + their inputs/outputs. Volley snippets in scratch (`v1.py`–`v5b.py`, `v4_id.py`), outputs in `notes/session_47_notes.md`. | Complete: 1.11 checklist fully [~]; `pdb` still owed inside 1.11. | **Volley 3 PASS / 1 FAIL / 1 VOIDED. Promotions: `UnboundLocalError`, `None / is None` [~] → [x]. Fail: `+=` on a list as a rebind, rated 7 (over-rated), new row due 13 Sep. Teach-backs on 1.11 all clean after the paste-then-walk fix; two model slips corrected (file-as-list; `"w"` as cursor-at-start). Pushbacks 95 (label in header), 96 (asked instead of told after a fail — he was angry, and right), 97 (untaught `LookupError`), 98 (PREDICT off-screen), 99 (file without a walk): all upheld, 99/97. Rule candidate parked: fact-after-fail. He right-sized CSV himself and asked "do I need to remember this syntax?" — answered: cold = `with open`, the loop, the modes, files-follow-the-shell, one join form.** |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -6014,3 +6038,155 @@ day (pushback 94).**
 - Schedule: ~0.5 unit-equivalent (stdlib finished, pip taught). Derived
   close unchanged (≈ 22 Oct). Next unit 1.11 once the 1.10 cold asks and
   the LeRobot block are placed.
+
+## What Session 47 established (Friday 11 September 2026, 18:26 → ~21:40; Saturday 12 September ~07:40 → 07:55)
+
+**What this session was:** he opened ~21 hours after S46 with *"lets just
+start with new content for now, and if time remains we will do the
+revision."* The cost was stated in one line (three sessions with zero cold
+asks) and he chose the volley. Four asks landed; the fifth was voided by a
+mentor error and he stopped it: *"lets skip to the teaching part because I
+don't want to waste any more time."* From there **1.11 File Handling was
+opened with its frame and taught to the end of its checklist**, fourteen
+ideas, one runnable file each, in `teaching/s47_files/` (mtimes 19:04 →
+21:35 Friday; JSON 07:43 → 07:53 Saturday). Every 1.11 bullet is [~]. He
+was offered a drill or the close and chose the close at 07:54.
+
+### 1. THE INTERVAL GATE
+Verified from `date` (Fri 11 Sep 18:26), `git log -1` (bb8223d, 18:22 the
+same day, the S46 close files) and the S46 demo mtimes (Thu 10 Sep 19:27 →
+21:32). Gap since S46 teaching ~21h; S46 material declared illegal until
+12 Sep; everything older legal. Held.
+
+### 2. THE VOLLEY — 4 asked, 3 PASS, 1 FAIL, 1 VOIDED
+1. **`grid = [[0]*3]*3; grid[0][0] = 7`** (re-posed from S46). Line exact
+   on the first try. Part 2, *"three copies of internal [[0]*3]"*, held
+   against his own output line; he resolved it: *"its the same object,
+   being used in all the three instances, may be my wordings are not
+   correct."* Rated 6 before the verdict. PASS; language precision: a copy
+   is a second object; say "three references". Row stays [x], due 16 Sep.
+2. **`UnboundLocalError`** — the deletion test. His first line: *"you
+   actually told me the answer before me even attempting"* — correct, the
+   name was in the block header. **Pushback 95, upheld.** Mechanism given
+   by him: `def` sees `count =` and binds it to the function's namespace.
+   Sharpened: the COMPILER marks the name local before anything runs; no
+   frame exists at `def`. Deletion test (remove the assignment): *"it will
+   print 0 ... nothing gets assigned hence no error"* — correct. Rated 7.
+   PASS on the mechanism; [~] → [x]; label re-check owed at 16 Sep.
+3. **`None` as absence** — `angles.get("elbow")` returning a stored `0`
+   into `if not a:`. *"the code will print missing ... 0 is a falsy value
+   and not of falsy is true"* — right, with mechanism. Fix: *"if a is
+   None, because .get gives None if the key doesn't match by default."*
+   Rated 7. PASS; [~] → [x].
+4. **`+=` with an alias** — `a = [1, 2]; b = a; a += [3]; print(b)`. He
+   gave `[1, 2]`, `[1, 2]`, `[1, 2, 3, 4]` and the reasoning *"rebind the
+   name a to a new object."* Rated 7. **FAIL.** The real output was shown
+   (`[1, 2, 3]` twice, then `[1, 2, 3, 4]`) and the mentor asked a second
+   Socratic question. His reply: *"if I would have known what a+=[3] is
+   doing my remaining logic is correct so you need to tell me that
+   instead of asking."* **Pushback 96, upheld.** The fact was then given
+   physically with `v4_id.py` (`id(a) == id(b)` True, True, False) and the
+   discriminator (mutable ⇒ in place; immutable ⇒ must rebind). No queue
+   row existed for augmented assignment (only the STATE table); one was
+   added, [~] due 13 Sep. His 7 on a wrong model is the session's
+   calibration finding.
+5. **Hierarchy direction** — posed with `except LookupError` before
+   `except KeyError`. He stopped it: *"I didn't remember this fact being
+   taught, and how am I supposed to remember so many Exception."* Grep of
+   notes/, teaching/, drills/, CURRICULUM: `LookupError` appeared only in
+   STATE's own plan. **Pushback 97, upheld; nothing logged.** His direct
+   question answered: the rule, not the roster; one fact defined
+   (`KeyError` and `IndexError` share `LookupError`). Re-posed with
+   `Exception`/`KeyError` (run-verified, `"general"`); he asked about
+   context (*"why are you behaving so dumb"*) — answered: context is not
+   the problem, the two errors were construction mistakes — and then
+   stopped the volley. Row stays overdue.
+
+### 3. 1.11 FILE HANDLING — the fourteen ideas
+Frame first (what: bytes that outlive the process; why: configs, datasets,
+logs; what it buys: persistence and the universal interface), with the
+facts ranked (load-bearing: `open`/`read`/`write`/`with`; vocabulary: the
+modes, `readline` vs `readlines`; reading skill: `os.path`/`pathlib`).
+Gate: 1.10 taught-complete, seven [~], said out loud.
+1. `read_it.py` — `open()` returns a file object; `.read()` one `str`.
+2. `read_twice.py` — the CURSOR; second `.read()` is `''`. **Posed first as
+   a [PREDICT] before the cursor had been shown; he refused it: *"how am I
+   supposed to know that."* Pushback 98, upheld; taught instead.** Linked
+   to iterator exhaustion.
+3. `read_lines.py` — `readline()` ×3. Teach-back clean.
+4. `loop_lines.py` — `for line in f`; `readlines()` as vocabulary. His
+   teach-back *"a file is basically like a list of strings"* corrected:
+   one string, the reader cuts at `\n`.
+5. `write_it.py` — `"w"` creates, `.write()` adds no newline. [PREDICT] on
+   a second run: he reasoned four lines from the cursor model; run showed
+   two. Truncation taught (truncate = cut off, S12).
+6. `append_it.py` — `"a"`, run twice. Roster ranked; teach-back clean.
+7. `no_close.py` — the buffer, two file objects on one disk file. **Pasted
+   with a one-line gloss and a teach-back; he stopped it: *"you gave the
+   file but didn't explain it at all."* Pushback 99, upheld.** Walked line
+   by line; `safe_close.py` shown (the `try`/`finally` shape) rather than
+   asked.
+8. His question *"why would f.close ever fail, we can also put it without
+   finally"* → `skip_close.py`: `f.write(42)` raises `TypeError`, the close
+   line is skipped (`f.closed` False), disk empty. Leaked handles → "Too
+   many open files". Doubt gate: *"clear now."*
+9. `with_it.py` — `with` framed (what/why/buys), `as` binds, dedent
+   closes, `f` still a name; "context manager" defined, dunders on
+   credit. `with_err.py` written at his request (*"give me the file in
+   written form"*); his [PREDICT]: closed True, line on disk — right.
+10. cwd trap — `read_it.py` run from the repo root → `FileNotFoundError`
+    (named by the mentor, first sighting). Files follow the shell,
+    imports follow the script. Teach-back clean. He asked what `2>&1 |
+    tail -3` was; answered; should not have been shown.
+11. `read_anywhere.py` — `Path(__file__).parent / name`, run from two
+    folders. `/` = join, object decides the operator.
+12. `os_form.py` at his request (*"are we not going to learn the use of
+    os module?"*) — `getcwd`, `abspath`+`dirname`, `join`; the
+    `os`/`os.path`/`pathlib` map. His question *"do I need to remember
+    this syntax?"* answered: cold = `with open`, the loop, the modes,
+    files-follow-the-shell, one join form; the rest is reference.
+13. CSV — `joints.csv` with `"tight, recheck"`; `read_csv.py` contrasts
+    `csv.reader` with `.split(",")` (both S7-taught, checked first);
+    `write_csv.py` with `newline=""`. He right-sized it: *"just a
+    convention and good to know."*
+14. JSON — `read_json.py` (types back, `true`/`null` mapping, nested
+    `[]`); `write_json.py` (tuple → list). Teach-back: CSV flat rows of
+    `str`, JSON one nested structure with real types.
+
+### 4. WHAT HE GOT RIGHT
+Shallow-copy line first time; UBL mechanism and deletion test; `is None`
+with the `.get()` reason; every 1.11 teach-back after the paste-then-walk
+fix; the `with_err.py` prediction; the cwd teach-back; his own question
+producing the best demo of the session (`skip_close.py`); right-sizing CSV
+and asking how much syntax to hold.
+
+### 5. WHAT DID NOT HOLD
+`+=` on a list (rebind model, rated 7); "three copies"; "def sees the
+assignment" for the compiler; "a file is like a list"; `"w"` as
+cursor-at-start (a [PREDICT], not logged); hierarchy direction unanswered.
+
+### 6. PUSHBACKS — 95 to 99, all upheld (99 raised, 97 upheld or part)
+95 label in the header; 96 asked instead of told after a fail; 97 untaught
+`LookupError`; 98 [PREDICT] off-screen; 99 file without a walk. Two were
+delivered in anger and both were right.
+
+### 7. MENTOR FAILURES
+The five above, plus the shell pipe shown undefined. Root cause for 95 and
+97: cold asks built from the STATE plan without checking each label
+against the repo. Root cause for 98 and 99: pace — pasting and asking
+before walking. Held: interval gate; cost-of-skipping stated; every demo a
+file with path, code and command; every snippet run first; tags; no
+same-day ratings; substrate checks; direct questions answered; the close
+written in the turn he asked.
+
+### 8. THE LEDGER
+- Queue 150 → 161 (one `+=` row, eleven 1.11 rows due 14 Sep). Fired 4:
+  PASS 6 (stays [x]), PASS 7 ([~] → [x]), PASS 7 ([~] → [x]), FAIL 7 (new
+  row [~]). **[x] 99 → 101, [~] 50 → 60.**
+- Curriculum: **1.11 all nine bullets [ ] → [~].** Zero [x], correctly.
+- Rule: nothing adopted; **one candidate parked** (fact-after-fail) for
+  his ruling at the S48 open.
+- Schedule: ~1.0 unit-equivalent (a whole subsection taught). Derived
+  close unchanged (≈ 22 Oct) until cold evidence moves it. Next: ruling,
+  clean volley, 1.10 and 1.11 cold asks, 1.11 drill, `pdb`, LeRobot block,
+  1.12.

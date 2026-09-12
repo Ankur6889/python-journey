@@ -1,0 +1,5 @@
+f = open("limits.txt")
+print(repr(f.readline()))
+print(repr(f.readline()))
+print(repr(f.readline()))
+f.close()

@@ -1,0 +1,1 @@
+{"robot": "gen3", "hz": 15, "safe": true, "joints": [{"name": "elbow", "limit": 10}, {"name": "wrist", "limit": 45}], "note": null}

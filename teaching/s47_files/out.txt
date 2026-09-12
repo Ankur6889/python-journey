@@ -1,0 +1,4 @@
+shoulder 90
+base 180
+gripper 0
+gripper 0

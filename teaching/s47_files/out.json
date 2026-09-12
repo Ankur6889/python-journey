@@ -1,0 +1,9 @@
+{
+  "robot": "gen3",
+  "limits": [
+    10,
+    45
+  ],
+  "safe": true,
+  "note": null
+}
