@@ -1,1291 +1,1339 @@
 [
-  {
-    "term": "mutating vs non-mutating -- THE TELL",
-    "hook": "(1) TYPE first (2) returns None => it mutated (3) a VALUE back tells you NOTHING -- .pop() returns the item AND mutates. S34: TYPE and MUTATES intact, RETURN-VALUE half gone",
-    "status": "x",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-01",
-    "rating": 7
-  },
-  {
-    "term": "reversed() vs .reverse()",
-    "hook": "reversed(x) is a BUILT-IN returning an ITERATOR, mutates nothing, and REVERSES -- it does not ORDER. x.reverse() is a METHOD, mutates, returns None. Taught as a pair S35",
-    "status": "x",
-    "next_due": "2026-09-13",
-    "last_asked": "2026-09-01",
-    "rating": 8
-  },
-  {
-    "term": "sort vs sorted",
-    "hook": "sort() mutates -> None; sorted() builds a NEW list",
-    "status": "x",
-    "next_due": "2026-09-13",
-    "last_asked": "2026-09-01",
-    "rating": 8
-  },
-  {
-    "term": "copy.deepcopy",
-    "hook": "new outer container AND new contents recursively, all the way down",
-    "status": "x",
-    "next_due": "2026-09-17",
-    "last_asked": "2026-09-05",
-    "rating": 8
-  },
-  {
-    "term": "slicing / SHALLOW COPY",
-    "hook": "[start:stop:step] half-open, builds a NEW list; l[:], list(l), l.copy() copy the OUTER container, references SHARED",
-    "status": "x",
-    "next_due": "2026-09-16",
-    "last_asked": "2026-09-11",
-    "rating": 6
-  },
-  {
-    "term": "* on a sequence",
-    "hook": "repeats the REFERENCE, not the contents. [[0]*3]*3 shares one row",
-    "status": "~",
-    "next_due": "2026-09-05",
-    "last_asked": "2026-09-04",
-    "rating": 3
-  },
-  {
-    "term": "mutate-while-iterating",
-    "hook": "for keeps an internal POSITION COUNTER. DON'T REMOVE -- SELECT",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "when-to-use-which",
-    "hook": "THE DECIDING QUESTION IS 'WHAT AM I GOING TO ASK THIS CONTAINER?' in here -> set; value for a name -> dict; order/position -> list; never changes -> tuple",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": "2026-09-04",
-    "rating": 6
-  },
-  {
-    "term": "set difference -",
-    "hook": "set(a) - set(b) builds a NEW set => an EXPRESSION. Not symmetric",
-    "status": "x",
-    "next_due": "2026-09-05",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "BOUNDARY-FIRST",
-    "hook": "when a condition uses < <= > >=, test the value ON the boundary FIRST",
-    "status": "x",
-    "next_due": "2026-09-05",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "THE FIVE CHECKS",
-    "hook": "Boundary pe khaali ek bahar mila. ek = smallest NON-EMPTY. bahar = TYPE as well as sign. mila = promise vs code. A CHECK IS A CASE YOU RAN",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "format spec -- ALIGNMENT",
-    "hook": "TEXT HUGS LEFT, NUMBERS HUG RIGHT",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "None IS NOT NOTHING",
-    "hook": "None is an OBJECT and fills a slot: len([None]) == 1",
-    "status": "x",
-    "next_due": "2026-09-17",
-    "last_asked": "2026-09-05",
-    "rating": 8
-  },
-  {
-    "term": "list()",
-    "hook": "CONSTRUCTOR CALL -- new list from any iterable; drains an iterator; CATCHES StopIteration => []",
-    "status": "x",
-    "next_due": "2026-09-02",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "constructors",
-    "hook": "dict()/list()/set()/tuple() BUILD A NEW CONTAINER from an iterable -- not a type conversion. S35: he said 'builds' first word, but inside a [TEACH-BACK], so not bankable",
-    "status": "x",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-01",
-    "rating": 7
-  },
-  {
-    "term": "SyntaxError",
-    "hook": "STATION 0 -- grammar broke, so NOTHING ran. NO FRAMES IN THE TRACEBACK. S35: LABEL half hit cold (first in 3 firings); no-frames half BROKE",
-    "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": "2026-08-31",
-    "rating": null
-  },
-  {
-    "term": "HOW FAR DID PYTHON GET?",
-    "hook": "the replacement for the retired four-station hook. compile checks GRAMMAR only (SyntaxError, IndentationError); everything else is runtime and has FRAMES",
-    "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "compile vs run",
-    "hook": "Python parses the WHOLE file before executing any of it. A typo'd NAME compiles fine -- names are never checked at compile time. HIS OWN derivation, S35",
-    "status": "x",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-01",
-    "rating": 7
-  },
-  {
-    "term": "del vs .pop() vs .clear()",
-    "hook": "del is a STATEMENT, hands back nothing; .pop(k) hands back the VALUE; .clear() -> None, leaves {}",
-    "status": "~",
-    "next_due": "2026-09-02",
-    "last_asked": "2026-09-01",
-    "rating": null
-  },
-  {
-    "term": "while vs for",
-    "hook": "condition re-checked vs walking an iterable",
-    "status": "x",
-    "next_due": "2026-09-17",
-    "last_asked": "2026-09-05",
-    "rating": 8
-  },
-  {
-    "term": "while mechanics / nested loops / found-flag",
-    "hook": "NOT tested since S23",
-    "status": "x",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-01",
-    "rating": 7
-  },
-  {
-    "term": ".items() / .keys() / .values()",
-    "hook": "looping a dict gives the KEYS; .items() gives TUPLES; .keys() is a VIEW that BUILDS NOTHING and supports set ops directly",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 6
-  },
-  {
-    "term": "set -- UNORDERED",
-    "hook": "a set has NO positions at all -- not 'no fixed order'",
-    "status": "x",
-    "next_due": "2026-09-05",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "{} is a DICT",
-    "hook": "{} builds an empty dict; set() is the ONLY way to write an empty set",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": "2026-09-05",
-    "rating": 7
-  },
-  {
-    "term": "tuple roster",
-    "hook": "count and index ONLY",
-    "status": "x",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "tuple (unit)",
-    "hook": "immutable ordered sequence; the COMMA makes it; TypeError on item assignment",
-    "status": "x",
-    "next_due": "2026-09-05",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "list method roster",
-    "hook": "append extend insert sort remove mutate -> None; pop returns the ITEM",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "hashable",
-    "hook": "hash must be STABLE => key must be immutable",
-    "status": "x",
-    "next_due": "2026-09-04",
-    "last_asked": "2026-09-02",
-    "rating": 4
-  },
-  {
-    "term": "zip FAILS SILENTLY -- TWICE",
-    "hook": "unequal lengths => truncates to the SHORTEST; exhausted => [], no error",
-    "status": "x",
-    "next_due": "2026-09-17",
-    "last_asked": "2026-09-05",
-    "rating": 8
-  },
-  {
-    "term": "AttributeError",
-    "hook": "the name after the DOT is not on the object",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 6
-  },
-  {
-    "term": "subscriptable",
-    "hook": "can be indexed with [ ]. list/tuple/str/dict are; set is NOT",
-    "status": "x",
-    "next_due": "2026-09-05",
-    "last_asked": "2026-09-03",
-    "rating": 5
-  },
-  {
-    "term": "unpacking",
-    "hook": "two names on the left take apart the tuple on the right. COUNT-MISMATCH => ValueError half NEVER asked",
-    "status": "x",
-    "next_due": "2026-09-07",
-    "last_asked": "2026-09-05",
-    "rating": 5
-  },
-  {
-    "term": "THE RAISE-VS-SHRUG PAIRING",
-    "hook": "d[k]/.get(), del d[k]/.pop(k,default), remove/discard. Raise when absence is a BUG; shrug when expected",
-    "status": "x",
-    "next_due": "2026-09-17",
-    "last_asked": "2026-09-05",
-    "rating": 8
-  },
-  {
-    "term": ".get() vs []",
-    "hook": "[] when missing is a BUG; .get() when absence is EXPECTED",
-    "status": "x",
-    "next_due": "2026-09-05",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "remove vs discard (sets)",
-    "hook": "same job; remove raises KeyError when absent, discard shrugs",
-    "status": "x",
-    "next_due": "2026-09-05",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "tuple immutability",
-    "hook": "item assignment on a tuple => TypeError",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": "2026-09-05",
-    "rating": 7
-  },
-  {
-    "term": "dict",
-    "hook": "key -> value; [] takes a KEY. Keys UNIQUE -- existing key OVERWRITES",
-    "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "single return value",
-    "hook": "return a, b builds ONE tuple",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "THE COMMA MAKES THE TUPLE",
-    "hook": "not the parentheses. (1) is an int; 1, 2 is a tuple",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "f-string -- THE THREE STEPS",
-    "hook": "evaluate the expression -> call str() on it -> splice it in",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "format spec -- width + precision",
-    "hook": "{v:8.1f}. THE NUMBER IS TOTAL FIELD WIDTH",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "< > ^ in a format spec",
-    "hook": "force left / right / centre -- they OVERRIDE the type default",
-    "status": "~",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-05",
-    "rating": null
-  },
-  {
-    "term": "DRY / one copy of a decision",
-    "hook": "if a rule is written in four places you will change three and miss one",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "set() / | & -",
-    "hook": "set() is the ONLY empty set. Union / intersection / difference build a NEW set => EXPRESSIONS. | still untested",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "sum()",
-    "hook": "totals an iterable; returns a new value; sum([]) is 0",
-    "status": "~",
-    "next_due": null,
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "abs()",
-    "hook": "distance from zero, sign discarded. STILL NEVER PROPERLY TAUGHT",
-    "status": "x",
-    "next_due": "2026-09-07",
-    "last_asked": "2026-09-02",
-    "rating": 7
-  },
-  {
-    "term": "print()",
-    "hook": "takes ANY object and calls str() on it -- NOT 'a string'",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": "2026-09-04",
-    "rating": 7
-  },
-  {
-    "term": "import",
-    "hook": "binds the NAME to a MODULE OBJECT",
-    "status": "x",
-    "next_due": "2026-09-20",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "_ as a name",
-    "hook": "an ordinary name, convention for 'I am not going to use this value'",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": "2026-09-04",
-    "rating": 6
-  },
-  {
-    "term": "list comprehension",
-    "hook": "an EXPRESSION that builds a NEW list. [EXPR for VAR in ITERABLE if COND]",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "comprehension execution order",
-    "hook": "iterable -> variable -> gate -> expression",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "the filter as a GATE",
-    "hook": "if runs BEFORE the expression",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "dict comprehension",
-    "hook": "{KEY: VALUE for VAR in ITERABLE}",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "dict insertion ordering",
-    "hook": "keys stay in FIRST-INSERTION order. ORDERED != SORTED",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "KeyError vs IndexError",
-    "hook": "THE BRACKETS DON'T DECIDE THE ERROR -- THE CONTAINER DOES",
-    "status": "x",
-    "next_due": "2026-09-04",
-    "last_asked": "2026-08-30",
-    "rating": 6
-  },
-  {
-    "term": "zip",
-    "hook": "pairs parallel ITERABLES; each pass yields a TUPLE",
-    "status": "x",
-    "next_due": "2026-09-17",
-    "last_asked": "2026-09-05",
-    "rating": 8
-  },
-  {
-    "term": "braces hold an EXPRESSION",
-    "hook": "calls, lookups, arithmetic, comparisons, even a COMPREHENSION -- but never a for loop",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "comprehension scope",
-    "hook": "its variable does not exist afterwards => NameError. A FOOTNOTE",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": "2026-09-04",
-    "rating": 7
-  },
-  {
-    "term": "when NOT to use a comprehension",
-    "hook": "it BUILDS A CONTAINER. If the expression DOES rather than PRODUCES, you wanted a loop",
-    "status": "~",
-    "next_due": null,
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "ZeroDivisionError",
-    "hook": "decodes cleanly; belongs to 1.9",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": "2026-09-05",
-    "rating": 6
-  },
-  {
-    "term": "negative index",
-    "hook": "counts backward from the end; -1 is last",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "coercion",
-    "hook": "coerce = force; implicit safe conversion",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "ValueError",
-    "hook": "value wrong, TYPE OK; int('2.6'). Change only the VALUE and it works => ValueError",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": "2026-09-05",
-    "rating": 7
-  },
-  {
-    "term": "TypeError",
-    "hook": "operation not defined for the type; '5'+3. Change only the TYPE and it works => TypeError. S35 WOBBLE: called 1+'a' a ValueError, recovered on one narrowing",
-    "status": "x",
-    "next_due": "2026-09-05",
-    "last_asked": "2026-08-31",
-    "rating": 7
-  },
-  {
-    "term": "truncation",
-    "hook": "cut off TOWARD ZERO",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "floor division",
-    "hook": "floors toward -inf",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "alias",
-    "hook": "two names, one object",
-    "status": "x",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "rebind",
-    "hook": "= points a NAME at an object",
-    "status": "x",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "operand",
-    "hook": "value an operator acts on",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "expression vs statement",
-    "hook": "value vs action. HIS OWN TEST: can it go inside print(...)?",
-    "status": "x",
-    "next_due": "2026-09-17",
-    "last_asked": "2026-09-05",
-    "rating": 8
-  },
-  {
-    "term": "precedence / associativity",
-    "hook": "rank between operators / direction within a rank",
-    "status": "x",
-    "next_due": "2026-09-15",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "short-circuit",
-    "hook": "and/or stop early, return the OPERAND",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 7
-  },
-  {
-    "term": "modulo identity",
-    "hook": "sign follows divisor",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "control flow / conditional / truthy-falsy / block-vs-frame",
-    "hook": "S14 set",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "indentation",
-    "hook": "spacing that DELIMITS a block",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "iterable / iterator",
-    "hook": "reusable / consumed",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "StopIteration",
-    "hook": "the stop signal; an EXCEPTION. list() is what CATCHES it",
-    "status": "x",
-    "next_due": "2026-09-07",
-    "last_asked": "2026-09-02",
-    "rating": 7
-  },
-  {
-    "term": "next() / iter()",
-    "hook": "iter() once, next() per pass",
-    "status": "x",
-    "next_due": "2026-09-11",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "range",
-    "hook": "half-open, lazy, an ITERABLE",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "indexing",
-    "hook": "[] takes a POSITION; 0-based; out of range => IndexError",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "traceback",
-    "hook": "crash report; each line = one live frame. NO frames means it never ran",
-    "status": "x",
-    "next_due": "2026-09-15",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "NameError",
-    "hook": "the NAME does not exist anywhere. A typo'd name COMPILES fine",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "function scope, not block scope",
-    "hook": "only def makes scope",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "print() sep/end",
-    "hook": "between items; after everything; returns None",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": "2026-09-04",
-    "rating": 7
-  },
-  {
-    "term": "break / continue / pass",
-    "hook": "bahar niklo / agla chakkar / jagah bharo",
-    "status": "x",
-    "next_due": "2026-09-15",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "chained comparison",
-    "hook": "middle operand evaluated ONCE",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "loop else / ternary",
-    "hook": "runs only without break / A if C else B is an EXPRESSION",
-    "status": "x",
-    "next_due": "2026-09-15",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "elif",
-    "hook": "chain, first true wins",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "keyword argument / parameter vs argument",
-    "hook": "name=value in the CALL / name in the def vs what you pass. parameter-vs-argument labels still [~]",
-    "status": "~",
-    "next_due": "2026-09-07",
-    "last_asked": "2026-09-06",
-    "rating": null
-  },
-  {
-    "term": "UnboundLocalError",
-    "hook": "name IS local, no value bound yet",
-    "status": "x",
-    "next_due": "2026-09-16",
-    "last_asked": "2026-09-11",
-    "rating": 7
-  },
-  {
-    "term": "pre-order / post-order",
-    "hook": "before the call / after the call",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "lambda",
-    "hook": "EXPRESSION form of a function",
-    "status": "x",
-    "next_due": "2026-09-13",
-    "last_asked": "2026-09-01",
-    "rating": 8
-  },
-  {
-    "term": "docstring / __doc__",
-    "hook": "FIRST statement of the body; POSITION makes it",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": "2026-09-05",
-    "rating": 7
-  },
-  {
-    "term": "key=",
-    "hook": "sorts by RESULTS, returns ORIGINAL items",
-    "status": "x",
-    "next_due": "2026-09-13",
-    "last_asked": "2026-09-01",
-    "rating": 8
-  },
-  {
-    "term": "cell / closure four layers",
-    "hook": "one-slot box; name -> function -> __closure__ -> CELL -> cell_contents",
-    "status": "~",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-05",
-    "rating": null
-  },
-  {
-    "term": "None-as-absence vs empty container",
-    "hook": "collectors give ()/{}; optional attributes give None",
-    "status": "~",
-    "next_due": "2026-09-05",
-    "last_asked": "2026-09-04",
-    "rating": null
-  },
-  {
-    "term": "frames: definition, three contents",
-    "hook": "S14 held WITH HINT",
-    "status": "x",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-01",
-    "rating": 7
-  },
-  {
-    "term": "<module> entry point; running vs paused; stack not queue",
-    "hook": "S14/S27/S28",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "namespace vs frame",
-    "hook": "",
-    "status": "x",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-01",
-    "rating": 7
-  },
-  {
-    "term": "execution pipeline; REPL vs script",
-    "hook": "FAILED S7, never re-run",
-    "status": "~",
-    "next_due": "2026-08-31",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "str immutability",
-    "hook": "[x] CANDIDATE -- one clean later-day pass",
-    "status": "x",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-01",
-    "rating": 7
-  },
-  {
-    "term": "None / is None / vs 0 / False",
-    "hook": "",
-    "status": "x",
-    "next_due": "2026-09-16",
-    "last_asked": "2026-09-11",
-    "rating": 7
-  },
-  {
-    "term": "type conversion traps",
-    "hook": "",
-    "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "mutable default trap + sentinel",
-    "hook": "",
-    "status": "~",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-05",
-    "rating": 6
-  },
-  {
-    "term": "in-place mutators return None",
-    "hook": "travels with the demoted TELL",
-    "status": "x",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-01",
-    "rating": 7
-  },
-  {
-    "term": "__defaults__",
-    "hook": "S22 cold, 7/10",
-    "status": "x",
-    "next_due": "2026-09-17",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "membership in / not in",
-    "hook": "",
-    "status": "~",
-    "next_due": "2026-09-05",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "iteration protocol",
-    "hook": "S25 PASSED COLD; S32 exhaustion cold",
-    "status": "x",
-    "next_due": "2026-09-12",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "exceptions are signals",
-    "hook": "",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "mutable/immutable discriminator",
-    "hook": "type half [x]; tell half DEMOTED S34",
-    "status": "x",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-01",
-    "rating": 7
-  },
-  {
-    "term": "function object vs call (f vs f())",
-    "hook": "one direct cold test promotes",
-    "status": "x",
-    "next_due": "2026-09-09",
-    "last_asked": "2026-09-04",
-    "rating": 7
-  },
-  {
-    "term": "recursion",
-    "hook": "S20 same-day",
-    "status": "~",
-    "next_due": "2026-09-16",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "global / *args / **kwargs",
-    "hook": "S22 10/10 and 8/10; S29 build block used all four forms cold",
-    "status": "x",
-    "next_due": "2026-09-18",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "lambdas",
-    "hook": "S23 PASS 6/6 cold",
-    "status": "x",
-    "next_due": "2026-09-13",
-    "last_asked": "2026-09-01",
-    "rating": 8
-  },
-  {
-    "term": "try / except",
-    "hook": "run this; if it RAISES, run that instead of dying. NEW S35",
-    "status": "x",
-    "next_due": "2026-09-05",
-    "last_asked": "2026-08-31",
-    "rating": 7
-  },
-  {
-    "term": "specific vs bare except",
-    "hook": "catch the exception you EXPECT. A bare except: turns a typo into a SILENT WRONG ANSWER. NEW S35 -- and he wrote one 40 min after agreeing it was the worst case",
-    "status": "x",
-    "next_due": "2026-09-07",
-    "last_asked": "2026-09-04",
-    "rating": null,
-    "note": "S36: the cold ASK passed (7/10) but CURRICULUM sets a stricter condition on this bullet -- it does not promote until his own fresh code stops containing a catch-all. s36_signals shipped an `except Exception` filing into \"broken\"; removed only after a PREDICT. Held [~]."
-  },
-  {
-    "term": "raise",
-    "hook": "build an exception OBJECT (a constructor call on a TYPE) and throw it. The function DETECTS; the caller DECIDES. NEW S35",
-    "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "exception classes are TYPES",
-    "hook": "ValueError('...') is a CONSTRUCTOR CALL; the string is the argument you read after the colon in every traceback. NEW S35",
-    "status": "~",
-    "next_due": "2026-09-01",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "except ... as e",
-    "hook": "binds the exception OBJECT to a name. NEW S35",
-    "status": "~",
-    "next_due": "2026-09-06",
-    "last_asked": "2026-09-05",
-    "rating": 8
-  },
-  {
-    "term": "else / finally",
-    "hook": "else = the try did NOT raise. finally = ALWAYS -- through a return, through an uncaught exception. NEW S35",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 7
-  },
-  {
-    "term": "finally vs code after the block",
-    "hook": "cleanup after try/except is SKIPPED when the exception leaves the function. NEW S35",
-    "status": "~",
-    "next_due": "2026-09-02",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "import RUNS the file",
-    "hook": "import is NOT a fetch, it is a RUN: Python finds the .py, executes it top to bottom like a program, THEN binds a name. A module-level print() fires on import. Taught S39; he dropped this line from predicted output TWICE",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 7
-  },
-  {
-    "term": "import binds ONE name",
-    "hook": "`import robot` binds ONLY `robot` -- MAX_ANGLE never enters your namespace. `from robot import clamp` binds ONLY `clamp` (and NOT `robot`). `import robot as r` binds ONLY `r` -- aliasing REPLACES, it does not add. Ask via NameError. Taught S39",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 7
-  },
-  {
-    "term": "the import cache / sys.modules",
-    "hook": "cache = cacher, to hide: a store of results kept so the work is not redone. dict of module name -> module object. HIT = skip the run; MISS = find, run, store. Step 2 (binding) ALWAYS fires either way. This is why a notebook re-import does not pick up your edit. Taught S39. S45: re-told from see_modules.py (dict, key absent -> present), teach-back clean same-sitting; re-dated",
-    "status": "x",
-    "next_due": "2026-09-10",
-    "last_asked": "2026-09-03",
-    "rating": 7
-  },
-  {
-    "term": "a module IS an object, its namespace IS a dict",
-    "hook": "type(m) is `module`. vars(m) hands back the REAL namespace dict: 8 dunders Python put there + the names the file created, in creation order. Taught S39",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 7
-  },
-  {
-    "term": "vars()",
-    "hook": "vars(obj) -> the object's namespace dictionary (its __dict__). A plain dict has NO __dict__ -- vars({}) raises TypeError. Taught S39",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 7
-  },
-  {
-    "term": "subscription vs attribute access",
-    "hook": "d['k'] = SUBSCRIPTION, looks in the object's CONTENTS. obj.k = ATTRIBUTE access, looks in the object's NAMESPACE. They coincide for a MODULE only, because a module's contents ARE its namespace. `d.k` on a dict -> AttributeError. MENTOR ERROR S39: said 'the dot is sugar over a dict access'; he tested it in Jupyter and disproved it (pushback 72)",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 7
-  },
-  {
-    "term": "__name__ and __main__",
-    "hook": "A string in every module's namespace. Imported -> the module's own name ('sensors'). The file handed to python3 -> '__main__', whichever file that is. So a file can ask at runtime: was I run, or imported? THE GUARD LIVES IN THE FILE BEING IMPORTED, not the consumer -- he named the idiom unprompted S39 and put it in the wrong file",
-    "status": "x",
-    "next_due": "2026-09-08",
-    "last_asked": "2026-09-03",
-    "rating": 7
-  },
-  {
-    "term": "raise ... from",
-    "hook": "raise NEW from e records e as the CAUSE; traceback middle line becomes 'The above exception was the direct cause of' instead of 'During handling of'. Taught S42, restated twice",
-    "status": "~",
-    "next_due": "2026-09-07",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "except Exception vs bare except",
-    "hook": "BaseException sits ABOVE Exception; KeyboardInterrupt/SystemExit are its siblings. Bare except catches all of BaseException and eats Ctrl-C. Never bare. Taught S42",
-    "status": "~",
-    "next_due": "2026-09-07",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "hierarchy DIRECTION (catcher reaches DOWN)",
-    "hook": "a catcher covers its own node and everything BELOW it, never above. except ValueError catches BadCommand(ValueError); except BadCommand does NOT catch a plain ValueError. Failed under fatigue S41, re-taught with the tree drawn S42",
-    "status": "~",
-    "next_due": "2026-09-07",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "except ORDERING (child first)",
-    "hook": "first match wins, top to bottom; a parent catcher above a child catcher makes the child unreachable. Taught S36, re-taught S42",
-    "status": "~",
-    "next_due": "2026-09-07",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "exception INSTANCE (e is an OBJECT)",
-    "hook": "ValueError('msg') is a CONSTRUCTOR CALL like list(); raise throws the OBJECT; except..as e binds e to it; type(e) is the class, print(e) is the message. ON CREDIT until 1.12 class->instance. S42 teach-back failed twice; root cause mentor-side",
-    "status": "~",
-    "next_due": "2026-09-07",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": ".pyc / bytecode cache",
-    "hook": "compiler output saved in __pycache__/<name>.cpython-312.pyc for IMPORTED modules; buys faster import only; source mtime+size stamped in the header, mismatch => recompile; deleting is always safe. Taught S42",
-    "status": "~",
-    "next_due": "2026-09-07",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "compiled AND interpreted (PVM)",
-    "hook": "CPython = a compiler (source->bytecode, SyntaxError lives here) + an interpreter loop / PVM (runs bytecode, every other error lives here). C compiles to machine code, no interpreter at run time. His question S42",
-    "status": "~",
-    "next_due": "2026-09-07",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "sys.path",
-    "hook": "a plain LIST of folder paths searched IN ORDER, first match wins; entry 0 = the script's folder ('' = cwd in REPL/-c); every ModuleNotFoundError = not in any folder on it. OPENED S42, [PREDICT] unanswered (he stopped)",
-    "status": "~",
-    "next_due": "2026-09-07",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "positional vs keyword ORDER + double-fill",
-    "hook": "bare values fill slots left->right, then name=value fills by name; bare AFTER named => SyntaxError at compile; a slot filled twice => TypeError at call. Taught S43 after pushback 79",
-    "status": "~",
-    "next_due": "2026-09-08",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "package / __init__.py / bound name",
-    "hook": "a package is a FOLDER holding __init__.py; import arm.limits runs __init__.py THEN limits.py, keys 'arm' and 'arm.limits' in sys.modules, binds ONE name arm (no dots in a name), limits is an attribute; import arm alone STOPS at __init__.py (AttributeError on arm.limits); __init__.py normally EMPTY or the front door. Taught S43-S44; bound-name miss twice. S45: bound name arm said RIGHT unprompted; import arm alone leaves vars(arm) empty (see_arm_ns.py); re-dated",
-    "status": "~",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "relative import / the dot / run-directly trap",
-    "hook": "from .limits import X: the dot = 'my own folder', filled from the module's dotted name (arm.safety_rel -> arm); from . import limits == from arm import limits (binds limits); buys rename-safety only; run the file DIRECTLY and it is __main__ with no dotted name -> ImportError: attempted relative import with no known parent package. Taught S44. S45: from . import limits -> import arm.limits THIRD time, PARKED with answer (from arm import limits); trap missed 2nd time then reasoned; run_safety_rel.py predicted in full; re-dated",
-    "status": "~",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "circular import / partially initialized module",
-    "hook": "two files import each other; the key enters sys.modules BEFORE line 1 runs (self_check.py), so the second import HITS a half-built module; from a import X -> ImportError: cannot import name 'X' from partially initialized module 'a'. NOT a loop: the early key prevents the loop. Fixes: third module (real) / import inside the function (patch, def body does not run at import). Taught S45",
-    "status": "~",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "the route decides the key / __main__ placeholder",
-    "hook": "sys.modules key = the route from a sys.path folder to the file, dots for slashes; same limits.py is 'arm.limits' from outside (init runs) or 'limits' from inside arm/ (init does not run) -> two module objects possible. A file run directly has no route, so __name__ and its key are the placeholder '__main__'; strip the last part of '__main__' and nothing is left -> relative import fails. teaching/s43_packages/arm/direct.py, arm/whoami.py. Taught S45; S46: [RECALL] at 42h on 'walk import json' -> GAP NAMED ('please remind me the whole thing'); arm half partly there (__init__.py first; sys.path holds the parent of arm/). Re-walked physically",
-    "status": "~",
-    "next_due": "2026-09-12",
-    "last_asked": "2026-09-10",
-    "rating": null
-  },
-  {
-    "term": "sys.modules key enters BEFORE the run",
-    "hook": "the empty module object is created and stored under its key before the file's first line runs; proved by self_check.py printing True and None mid-run. Protection against infinite re-import; the price is a half-built module on a cache hit. Taught S45",
-    "status": "~",
-    "next_due": "2026-09-10",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "stdlib on disk / __file__ / front door",
-    "hook": "stdlib = /usr/lib/python3.12/, ordinary .py files, fourth sys.path entry; __file__ = path the module was built from; json is a package (json/__init__.py); json/__init__.py lines 106-108 do from .decoder import ... so ONE import json loads four keys and puts twelve names on json -- the front door; arm's __init__.py only printed, so import arm loaded nothing. Taught S45, teach-back HELD; S46 RE-WALKED at 42h (route by hand with ls, front door chain decoder.py line 5 -> json.scanner), idea 3 (read bisect.py) added",
-    "status": "~",
-    "next_due": "2026-09-12",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "enumerate()",
-    "hook": "hands out one tuple per element: (count, element), count from 0; for i, name in enumerate(x) is two-name UNPACKING on the for line; replaces for i in range(len(x)). Taught S46 (teaching/s46_stdlib/enum.py), teach-back clean",
-    "status": "~",
-    "next_due": "2026-09-12",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "keyword-only fence: bare * in a signature",
-    "hook": "def f(a, b, *, key=None): positional filling STOPS at the star; everything right of it must be passed BY KEYWORD; a 4th positional -> TypeError 'takes 3 positional arguments but 4 were given'. Seen in bisect_left. Taught S46 (star.py); teach-back right, mechanism after a re-ask",
-    "status": "~",
-    "next_due": "2026-09-12",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "shadowing / first hit wins",
-    "hook": "the sys.path walk stops at the FIRST folder holding X.py or X/; a json.py next to your script (entry 0) hides the stdlib json; the crash lands LATER (AttributeError on .loads), not at the import line. Never name your own file after a package you import. Taught S46 (s46_pip/shadow/); teach-back clean",
-    "status": "~",
-    "next_due": "2026-09-12",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "pip / site-packages",
-    "hook": "pip COPIES a package folder into a folder already on sys.path (site-packages / dist-packages); no third tier -- same route rule; numpy in entry 6, rclpy in entry 1 (ROS setup.bash added it); sys.path.append at the top of a script = same mechanism by hand = a SMELL; clean fix pip install -e . (named, not shown). Taught S46 (where_third.py)",
-    "status": "~",
-    "next_due": "2026-09-12",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "sys.modules key moved to END on finish",
-    "hook": "key enters EARLY (before line 1; stops circular loops) AND is moved to the end of the dict when the module's run finishes -- so the final order is FINISH order; a package that imports its own files finishes last. Found from HIS question S46 (key_order/); insertion order shown mid-run, finish order after",
-    "status": "~",
-    "next_due": "2026-09-12",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "max() / min()",
-    "hook": "min(a, b) returns the smaller argument, max(a, b) the larger; clamp = max(low, min(value, high)). Level-1; used UNDEFINED in star.py S46 (mentor breach), defined after",
-    "status": "~",
-    "next_due": "2026-09-12",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "augmented assignment += on a MUTABLE type",
-    "hook": "list += mutates IN PLACE (extend), alias sees it; a = a + [..] rebinds; immutable types must rebind",
-    "status": "~",
-    "next_due": "2026-09-13",
-    "last_asked": "2026-09-11",
-    "rating": 7
-  },
-  {
-    "term": "open() returns a FILE OBJECT with a CURSOR",
-    "hook": "read() takes cursor to the end; a second read() returns ''",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "read() vs readline() vs for line in f",
-    "hook": "whole file as ONE str / one line incl. \\n / one line per pass; readlines() = list, loads all",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "modes r / w / a",
-    "hook": "\"w\" TRUNCATES at open, before any write; \"a\" cursor at END; both create; \"r\" default",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "write buffer / close flushes",
-    "hook": "write() goes to memory; lands on disk at close(); a skipped close = lost buffer + leaked handle",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "with open(...) as f / context manager",
-    "hook": "leaving the block closes f, exception or not; try/finally shape in one statement; f still bound after",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "cwd vs script folder: open() vs import",
-    "hook": "open() follows the SHELL (cwd); import follows the SCRIPT (sys.path[0]); anchor to __file__",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "pathlib.Path / os.path",
-    "hook": "Path(__file__).parent / name; os.path.join / dirname / abspath; os.getcwd()",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "FileNotFoundError",
-    "hook": "relative path resolved against cwd, not the script folder",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "csv.reader / csv.writer",
-    "hook": "one list of STR per row; quoted commas kept whole; open with newline=\"\"",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "json.load / json.dump",
-    "hook": "real types back (int, True/None from true/null); no tuple or set: tuple -> list on the round trip",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  },
-  {
-    "term": "LookupError",
-    "hook": "parent of KeyError and IndexError; a catcher reaches DOWN so an ancestor first swallows children",
-    "status": "~",
-    "next_due": "2026-09-14",
-    "last_asked": null,
-    "rating": null
-  }
+ {
+  "term": "mutating vs non-mutating -- THE TELL",
+  "hook": "(1) TYPE first (2) returns None => it mutated (3) a VALUE back tells you NOTHING -- .pop() returns the item AND mutates. S34: TYPE and MUTATES intact, RETURN-VALUE half gone",
+  "status": "x",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-01",
+  "rating": 7
+ },
+ {
+  "term": "reversed() vs .reverse()",
+  "hook": "reversed(x) is a BUILT-IN returning an ITERATOR, mutates nothing, and REVERSES -- it does not ORDER. x.reverse() is a METHOD, mutates, returns None. Taught as a pair S35",
+  "status": "x",
+  "next_due": "2026-09-13",
+  "last_asked": "2026-09-01",
+  "rating": 8
+ },
+ {
+  "term": "sort vs sorted",
+  "hook": "sort() mutates -> None; sorted() builds a NEW list",
+  "status": "x",
+  "next_due": "2026-09-13",
+  "last_asked": "2026-09-01",
+  "rating": 8
+ },
+ {
+  "term": "copy.deepcopy",
+  "hook": "new outer container AND new contents recursively, all the way down",
+  "status": "x",
+  "next_due": "2026-09-17",
+  "last_asked": "2026-09-05",
+  "rating": 8
+ },
+ {
+  "term": "slicing / SHALLOW COPY",
+  "hook": "[start:stop:step] half-open, builds a NEW list; l[:], list(l), l.copy() copy the OUTER container, references SHARED",
+  "status": "x",
+  "next_due": "2026-09-16",
+  "last_asked": "2026-09-11",
+  "rating": 6
+ },
+ {
+  "term": "* on a sequence",
+  "hook": "repeats the REFERENCE, not the contents. [[0]*3]*3 shares one row",
+  "status": "~",
+  "next_due": "2026-09-05",
+  "last_asked": "2026-09-04",
+  "rating": 3
+ },
+ {
+  "term": "mutate-while-iterating",
+  "hook": "for keeps an internal POSITION COUNTER. DON'T REMOVE -- SELECT",
+  "status": "~",
+  "next_due": "2026-08-31",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "when-to-use-which",
+  "hook": "THE DECIDING QUESTION IS 'WHAT AM I GOING TO ASK THIS CONTAINER?' in here -> set; value for a name -> dict; order/position -> list; never changes -> tuple",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": "2026-09-04",
+  "rating": 6
+ },
+ {
+  "term": "set difference -",
+  "hook": "set(a) - set(b) builds a NEW set => an EXPRESSION. Not symmetric",
+  "status": "x",
+  "next_due": "2026-09-05",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "BOUNDARY-FIRST",
+  "hook": "when a condition uses < <= > >=, test the value ON the boundary FIRST",
+  "status": "x",
+  "next_due": "2026-09-05",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "THE FIVE CHECKS",
+  "hook": "Boundary pe khaali ek bahar mila. ek = smallest NON-EMPTY. bahar = TYPE as well as sign. mila = promise vs code. A CHECK IS A CASE YOU RAN",
+  "status": "~",
+  "next_due": "2026-08-31",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "format spec -- ALIGNMENT",
+  "hook": "TEXT HUGS LEFT, NUMBERS HUG RIGHT",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "None IS NOT NOTHING",
+  "hook": "None is an OBJECT and fills a slot: len([None]) == 1",
+  "status": "x",
+  "next_due": "2026-09-17",
+  "last_asked": "2026-09-05",
+  "rating": 8
+ },
+ {
+  "term": "list()",
+  "hook": "CONSTRUCTOR CALL -- new list from any iterable; drains an iterator; CATCHES StopIteration => []",
+  "status": "x",
+  "next_due": "2026-09-02",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "constructors",
+  "hook": "dict()/list()/set()/tuple() BUILD A NEW CONTAINER from an iterable -- not a type conversion. S35: he said 'builds' first word, but inside a [TEACH-BACK], so not bankable",
+  "status": "x",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-01",
+  "rating": 7
+ },
+ {
+  "term": "SyntaxError",
+  "hook": "STATION 0 -- grammar broke, so NOTHING ran. NO FRAMES IN THE TRACEBACK. S35: LABEL half hit cold (first in 3 firings); no-frames half BROKE",
+  "status": "~",
+  "next_due": "2026-09-01",
+  "last_asked": "2026-08-31",
+  "rating": null
+ },
+ {
+  "term": "HOW FAR DID PYTHON GET?",
+  "hook": "the replacement for the retired four-station hook. compile checks GRAMMAR only (SyntaxError, IndentationError); everything else is runtime and has FRAMES",
+  "status": "~",
+  "next_due": "2026-09-01",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "compile vs run",
+  "hook": "Python parses the WHOLE file before executing any of it. A typo'd NAME compiles fine -- names are never checked at compile time. HIS OWN derivation, S35",
+  "status": "x",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-01",
+  "rating": 7
+ },
+ {
+  "term": "del vs .pop() vs .clear()",
+  "hook": "del is a STATEMENT, hands back nothing; .pop(k) hands back the VALUE; .clear() -> None, leaves {}",
+  "status": "~",
+  "next_due": "2026-09-02",
+  "last_asked": "2026-09-01",
+  "rating": null
+ },
+ {
+  "term": "while vs for",
+  "hook": "condition re-checked vs walking an iterable",
+  "status": "x",
+  "next_due": "2026-09-17",
+  "last_asked": "2026-09-05",
+  "rating": 8
+ },
+ {
+  "term": "while mechanics / nested loops / found-flag",
+  "hook": "NOT tested since S23",
+  "status": "x",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-01",
+  "rating": 7
+ },
+ {
+  "term": ".items() / .keys() / .values()",
+  "hook": "looping a dict gives the KEYS; .items() gives TUPLES; .keys() is a VIEW that BUILDS NOTHING and supports set ops directly",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 6
+ },
+ {
+  "term": "set -- UNORDERED",
+  "hook": "a set has NO positions at all -- not 'no fixed order'",
+  "status": "x",
+  "next_due": "2026-09-05",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "{} is a DICT",
+  "hook": "{} builds an empty dict; set() is the ONLY way to write an empty set",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": "2026-09-05",
+  "rating": 7
+ },
+ {
+  "term": "tuple roster",
+  "hook": "count and index ONLY",
+  "status": "x",
+  "next_due": "2026-09-01",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "tuple (unit)",
+  "hook": "immutable ordered sequence; the COMMA makes it; TypeError on item assignment",
+  "status": "x",
+  "next_due": "2026-09-05",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "list method roster",
+  "hook": "append extend insert sort remove mutate -> None; pop returns the ITEM",
+  "status": "~",
+  "next_due": "2026-08-31",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "hashable",
+  "hook": "hash must be STABLE => key must be immutable",
+  "status": "x",
+  "next_due": "2026-09-04",
+  "last_asked": "2026-09-02",
+  "rating": 4
+ },
+ {
+  "term": "zip FAILS SILENTLY -- TWICE",
+  "hook": "unequal lengths => truncates to the SHORTEST; exhausted => [], no error",
+  "status": "x",
+  "next_due": "2026-09-17",
+  "last_asked": "2026-09-05",
+  "rating": 8
+ },
+ {
+  "term": "AttributeError",
+  "hook": "the name after the DOT is not on the object",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 6
+ },
+ {
+  "term": "subscriptable",
+  "hook": "can be indexed with [ ]. list/tuple/str/dict are; set is NOT",
+  "status": "x",
+  "next_due": "2026-09-05",
+  "last_asked": "2026-09-03",
+  "rating": 5
+ },
+ {
+  "term": "unpacking",
+  "hook": "two names on the left take apart the tuple on the right. COUNT-MISMATCH => ValueError half NEVER asked",
+  "status": "x",
+  "next_due": "2026-09-07",
+  "last_asked": "2026-09-05",
+  "rating": 5
+ },
+ {
+  "term": "THE RAISE-VS-SHRUG PAIRING",
+  "hook": "d[k]/.get(), del d[k]/.pop(k,default), remove/discard. Raise when absence is a BUG; shrug when expected",
+  "status": "x",
+  "next_due": "2026-09-17",
+  "last_asked": "2026-09-05",
+  "rating": 8
+ },
+ {
+  "term": ".get() vs []",
+  "hook": "[] when missing is a BUG; .get() when absence is EXPECTED",
+  "status": "x",
+  "next_due": "2026-09-05",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "remove vs discard (sets)",
+  "hook": "same job; remove raises KeyError when absent, discard shrugs",
+  "status": "x",
+  "next_due": "2026-09-05",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "tuple immutability",
+  "hook": "item assignment on a tuple => TypeError",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": "2026-09-05",
+  "rating": 7
+ },
+ {
+  "term": "dict",
+  "hook": "key -> value; [] takes a KEY. Keys UNIQUE -- existing key OVERWRITES",
+  "status": "~",
+  "next_due": "2026-09-01",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "single return value",
+  "hook": "return a, b builds ONE tuple",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "THE COMMA MAKES THE TUPLE",
+  "hook": "not the parentheses. (1) is an int; 1, 2 is a tuple",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "f-string -- THE THREE STEPS",
+  "hook": "evaluate the expression -> call str() on it -> splice it in",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "format spec -- width + precision",
+  "hook": "{v:8.1f}. THE NUMBER IS TOTAL FIELD WIDTH",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "< > ^ in a format spec",
+  "hook": "force left / right / centre -- they OVERRIDE the type default",
+  "status": "~",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-05",
+  "rating": null
+ },
+ {
+  "term": "DRY / one copy of a decision",
+  "hook": "if a rule is written in four places you will change three and miss one",
+  "status": "~",
+  "next_due": "2026-08-31",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "set() / | & -",
+  "hook": "set() is the ONLY empty set. Union / intersection / difference build a NEW set => EXPRESSIONS. | still untested",
+  "status": "~",
+  "next_due": "2026-08-31",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "sum()",
+  "hook": "totals an iterable; returns a new value; sum([]) is 0",
+  "status": "~",
+  "next_due": null,
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "abs()",
+  "hook": "distance from zero, sign discarded. STILL NEVER PROPERLY TAUGHT",
+  "status": "x",
+  "next_due": "2026-09-07",
+  "last_asked": "2026-09-02",
+  "rating": 7
+ },
+ {
+  "term": "print()",
+  "hook": "takes ANY object and calls str() on it -- NOT 'a string'",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": "2026-09-04",
+  "rating": 7
+ },
+ {
+  "term": "import",
+  "hook": "binds the NAME to a MODULE OBJECT",
+  "status": "x",
+  "next_due": "2026-09-20",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "_ as a name",
+  "hook": "an ordinary name, convention for 'I am not going to use this value'",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": "2026-09-04",
+  "rating": 6
+ },
+ {
+  "term": "list comprehension",
+  "hook": "an EXPRESSION that builds a NEW list. [EXPR for VAR in ITERABLE if COND]",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "comprehension execution order",
+  "hook": "iterable -> variable -> gate -> expression",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "the filter as a GATE",
+  "hook": "if runs BEFORE the expression",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "dict comprehension",
+  "hook": "{KEY: VALUE for VAR in ITERABLE}",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "dict insertion ordering",
+  "hook": "keys stay in FIRST-INSERTION order. ORDERED != SORTED",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "KeyError vs IndexError",
+  "hook": "THE BRACKETS DON'T DECIDE THE ERROR -- THE CONTAINER DOES",
+  "status": "x",
+  "next_due": "2026-09-04",
+  "last_asked": "2026-08-30",
+  "rating": 6
+ },
+ {
+  "term": "zip",
+  "hook": "pairs parallel ITERABLES; each pass yields a TUPLE",
+  "status": "x",
+  "next_due": "2026-09-17",
+  "last_asked": "2026-09-05",
+  "rating": 8
+ },
+ {
+  "term": "braces hold an EXPRESSION",
+  "hook": "calls, lookups, arithmetic, comparisons, even a COMPREHENSION -- but never a for loop",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "comprehension scope",
+  "hook": "its variable does not exist afterwards => NameError. A FOOTNOTE",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": "2026-09-04",
+  "rating": 7
+ },
+ {
+  "term": "when NOT to use a comprehension",
+  "hook": "it BUILDS A CONTAINER. If the expression DOES rather than PRODUCES, you wanted a loop",
+  "status": "~",
+  "next_due": null,
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "ZeroDivisionError",
+  "hook": "decodes cleanly; belongs to 1.9",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": "2026-09-05",
+  "rating": 6
+ },
+ {
+  "term": "negative index",
+  "hook": "counts backward from the end; -1 is last",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "coercion",
+  "hook": "coerce = force; implicit safe conversion",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "ValueError",
+  "hook": "value wrong, TYPE OK; int('2.6'). Change only the VALUE and it works => ValueError",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": "2026-09-05",
+  "rating": 7
+ },
+ {
+  "term": "TypeError",
+  "hook": "operation not defined for the type; '5'+3. Change only the TYPE and it works => TypeError. S35 WOBBLE: called 1+'a' a ValueError, recovered on one narrowing",
+  "status": "x",
+  "next_due": "2026-09-05",
+  "last_asked": "2026-08-31",
+  "rating": 7
+ },
+ {
+  "term": "truncation",
+  "hook": "cut off TOWARD ZERO",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "floor division",
+  "hook": "floors toward -inf",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "alias",
+  "hook": "two names, one object",
+  "status": "x",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "rebind",
+  "hook": "= points a NAME at an object",
+  "status": "x",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "operand",
+  "hook": "value an operator acts on",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "expression vs statement",
+  "hook": "value vs action. HIS OWN TEST: can it go inside print(...)?",
+  "status": "x",
+  "next_due": "2026-09-17",
+  "last_asked": "2026-09-05",
+  "rating": 8
+ },
+ {
+  "term": "precedence / associativity",
+  "hook": "rank between operators / direction within a rank",
+  "status": "x",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "short-circuit",
+  "hook": "and/or stop early, return the OPERAND",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 7
+ },
+ {
+  "term": "modulo identity",
+  "hook": "sign follows divisor",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "control flow / conditional / truthy-falsy / block-vs-frame",
+  "hook": "S14 set",
+  "status": "~",
+  "next_due": "2026-08-31",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "indentation",
+  "hook": "spacing that DELIMITS a block",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "iterable / iterator",
+  "hook": "reusable / consumed",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "StopIteration",
+  "hook": "the stop signal; an EXCEPTION. list() is what CATCHES it",
+  "status": "x",
+  "next_due": "2026-09-07",
+  "last_asked": "2026-09-02",
+  "rating": 7
+ },
+ {
+  "term": "next() / iter()",
+  "hook": "iter() once, next() per pass",
+  "status": "x",
+  "next_due": "2026-09-11",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "range",
+  "hook": "half-open, lazy, an ITERABLE",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "indexing",
+  "hook": "[] takes a POSITION; 0-based; out of range => IndexError",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "traceback",
+  "hook": "crash report; each line = one live frame. NO frames means it never ran",
+  "status": "x",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "NameError",
+  "hook": "the NAME does not exist anywhere. A typo'd name COMPILES fine",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "function scope, not block scope",
+  "hook": "only def makes scope",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "print() sep/end",
+  "hook": "between items; after everything; returns None",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": "2026-09-04",
+  "rating": 7
+ },
+ {
+  "term": "break / continue / pass",
+  "hook": "bahar niklo / agla chakkar / jagah bharo",
+  "status": "x",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "chained comparison",
+  "hook": "middle operand evaluated ONCE",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "loop else / ternary",
+  "hook": "runs only without break / A if C else B is an EXPRESSION",
+  "status": "x",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "elif",
+  "hook": "chain, first true wins",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "keyword argument / parameter vs argument",
+  "hook": "name=value in the CALL / name in the def vs what you pass. parameter-vs-argument labels still [~]",
+  "status": "~",
+  "next_due": "2026-09-07",
+  "last_asked": "2026-09-06",
+  "rating": null
+ },
+ {
+  "term": "UnboundLocalError",
+  "hook": "name IS local, no value bound yet",
+  "status": "x",
+  "next_due": "2026-09-16",
+  "last_asked": "2026-09-11",
+  "rating": 7
+ },
+ {
+  "term": "pre-order / post-order",
+  "hook": "before the call / after the call",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "lambda",
+  "hook": "EXPRESSION form of a function",
+  "status": "x",
+  "next_due": "2026-09-13",
+  "last_asked": "2026-09-01",
+  "rating": 8
+ },
+ {
+  "term": "docstring / __doc__",
+  "hook": "FIRST statement of the body; POSITION makes it",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": "2026-09-05",
+  "rating": 7
+ },
+ {
+  "term": "key=",
+  "hook": "sorts by RESULTS, returns ORIGINAL items",
+  "status": "x",
+  "next_due": "2026-09-13",
+  "last_asked": "2026-09-01",
+  "rating": 8
+ },
+ {
+  "term": "cell / closure four layers",
+  "hook": "one-slot box; name -> function -> __closure__ -> CELL -> cell_contents",
+  "status": "~",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-05",
+  "rating": null
+ },
+ {
+  "term": "None-as-absence vs empty container",
+  "hook": "collectors give ()/{}; optional attributes give None",
+  "status": "~",
+  "next_due": "2026-09-05",
+  "last_asked": "2026-09-04",
+  "rating": null
+ },
+ {
+  "term": "frames: definition, three contents",
+  "hook": "S14 held WITH HINT",
+  "status": "x",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-01",
+  "rating": 7
+ },
+ {
+  "term": "<module> entry point; running vs paused; stack not queue",
+  "hook": "S14/S27/S28",
+  "status": "~",
+  "next_due": "2026-08-31",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "namespace vs frame",
+  "hook": "",
+  "status": "x",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-01",
+  "rating": 7
+ },
+ {
+  "term": "execution pipeline; REPL vs script",
+  "hook": "FAILED S7, never re-run",
+  "status": "~",
+  "next_due": "2026-08-31",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "str immutability",
+  "hook": "[x] CANDIDATE -- one clean later-day pass",
+  "status": "x",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-01",
+  "rating": 7
+ },
+ {
+  "term": "None / is None / vs 0 / False",
+  "hook": "",
+  "status": "x",
+  "next_due": "2026-09-16",
+  "last_asked": "2026-09-11",
+  "rating": 7
+ },
+ {
+  "term": "type conversion traps",
+  "hook": "",
+  "status": "~",
+  "next_due": "2026-09-01",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "mutable default trap + sentinel",
+  "hook": "",
+  "status": "~",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-05",
+  "rating": 6
+ },
+ {
+  "term": "in-place mutators return None",
+  "hook": "travels with the demoted TELL",
+  "status": "x",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-01",
+  "rating": 7
+ },
+ {
+  "term": "__defaults__",
+  "hook": "S22 cold, 7/10",
+  "status": "x",
+  "next_due": "2026-09-17",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "membership in / not in",
+  "hook": "",
+  "status": "~",
+  "next_due": "2026-09-05",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "iteration protocol",
+  "hook": "S25 PASSED COLD; S32 exhaustion cold",
+  "status": "x",
+  "next_due": "2026-09-12",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "exceptions are signals",
+  "hook": "",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "mutable/immutable discriminator",
+  "hook": "type half [x]; tell half DEMOTED S34",
+  "status": "x",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-01",
+  "rating": 7
+ },
+ {
+  "term": "function object vs call (f vs f())",
+  "hook": "one direct cold test promotes",
+  "status": "x",
+  "next_due": "2026-09-09",
+  "last_asked": "2026-09-04",
+  "rating": 7
+ },
+ {
+  "term": "recursion",
+  "hook": "S20 same-day",
+  "status": "~",
+  "next_due": "2026-09-16",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "global / *args / **kwargs",
+  "hook": "S22 10/10 and 8/10; S29 build block used all four forms cold",
+  "status": "x",
+  "next_due": "2026-09-18",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "lambdas",
+  "hook": "S23 PASS 6/6 cold",
+  "status": "x",
+  "next_due": "2026-09-13",
+  "last_asked": "2026-09-01",
+  "rating": 8
+ },
+ {
+  "term": "try / except",
+  "hook": "run this; if it RAISES, run that instead of dying. NEW S35",
+  "status": "x",
+  "next_due": "2026-09-05",
+  "last_asked": "2026-08-31",
+  "rating": 7
+ },
+ {
+  "term": "specific vs bare except",
+  "hook": "catch the exception you EXPECT. A bare except: turns a typo into a SILENT WRONG ANSWER. NEW S35 -- and he wrote one 40 min after agreeing it was the worst case",
+  "status": "x",
+  "next_due": "2026-09-07",
+  "last_asked": "2026-09-04",
+  "rating": null,
+  "note": "S36: the cold ASK passed (7/10) but CURRICULUM sets a stricter condition on this bullet -- it does not promote until his own fresh code stops containing a catch-all. s36_signals shipped an `except Exception` filing into \"broken\"; removed only after a PREDICT. Held [~]."
+ },
+ {
+  "term": "raise",
+  "hook": "build an exception OBJECT (a constructor call on a TYPE) and throw it. The function DETECTS; the caller DECIDES. NEW S35",
+  "status": "~",
+  "next_due": "2026-09-01",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "exception classes are TYPES",
+  "hook": "ValueError('...') is a CONSTRUCTOR CALL; the string is the argument you read after the colon in every traceback. NEW S35",
+  "status": "~",
+  "next_due": "2026-09-01",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "except ... as e",
+  "hook": "binds the exception OBJECT to a name. NEW S35",
+  "status": "~",
+  "next_due": "2026-09-06",
+  "last_asked": "2026-09-05",
+  "rating": 8
+ },
+ {
+  "term": "else / finally",
+  "hook": "else = the try did NOT raise. finally = ALWAYS -- through a return, through an uncaught exception. NEW S35",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 7
+ },
+ {
+  "term": "finally vs code after the block",
+  "hook": "cleanup after try/except is SKIPPED when the exception leaves the function. NEW S35",
+  "status": "~",
+  "next_due": "2026-09-02",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "import RUNS the file",
+  "hook": "import is NOT a fetch, it is a RUN: Python finds the .py, executes it top to bottom like a program, THEN binds a name. A module-level print() fires on import. Taught S39; he dropped this line from predicted output TWICE",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 7
+ },
+ {
+  "term": "import binds ONE name",
+  "hook": "`import robot` binds ONLY `robot` -- MAX_ANGLE never enters your namespace. `from robot import clamp` binds ONLY `clamp` (and NOT `robot`). `import robot as r` binds ONLY `r` -- aliasing REPLACES, it does not add. Ask via NameError. Taught S39",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 7
+ },
+ {
+  "term": "the import cache / sys.modules",
+  "hook": "cache = cacher, to hide: a store of results kept so the work is not redone. dict of module name -> module object. HIT = skip the run; MISS = find, run, store. Step 2 (binding) ALWAYS fires either way. This is why a notebook re-import does not pick up your edit. Taught S39. S45: re-told from see_modules.py (dict, key absent -> present), teach-back clean same-sitting; re-dated",
+  "status": "x",
+  "next_due": "2026-09-10",
+  "last_asked": "2026-09-03",
+  "rating": 7
+ },
+ {
+  "term": "a module IS an object, its namespace IS a dict",
+  "hook": "type(m) is `module`. vars(m) hands back the REAL namespace dict: 8 dunders Python put there + the names the file created, in creation order. Taught S39",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 7
+ },
+ {
+  "term": "vars()",
+  "hook": "vars(obj) -> the object's namespace dictionary (its __dict__). A plain dict has NO __dict__ -- vars({}) raises TypeError. Taught S39",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 7
+ },
+ {
+  "term": "subscription vs attribute access",
+  "hook": "d['k'] = SUBSCRIPTION, looks in the object's CONTENTS. obj.k = ATTRIBUTE access, looks in the object's NAMESPACE. They coincide for a MODULE only, because a module's contents ARE its namespace. `d.k` on a dict -> AttributeError. MENTOR ERROR S39: said 'the dot is sugar over a dict access'; he tested it in Jupyter and disproved it (pushback 72)",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 7
+ },
+ {
+  "term": "__name__ and __main__",
+  "hook": "A string in every module's namespace. Imported -> the module's own name ('sensors'). The file handed to python3 -> '__main__', whichever file that is. So a file can ask at runtime: was I run, or imported? THE GUARD LIVES IN THE FILE BEING IMPORTED, not the consumer -- he named the idiom unprompted S39 and put it in the wrong file",
+  "status": "x",
+  "next_due": "2026-09-08",
+  "last_asked": "2026-09-03",
+  "rating": 7
+ },
+ {
+  "term": "raise ... from",
+  "hook": "raise NEW from e records e as the CAUSE; traceback middle line becomes 'The above exception was the direct cause of' instead of 'During handling of'. Taught S42, restated twice",
+  "status": "~",
+  "next_due": "2026-09-07",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "except Exception vs bare except",
+  "hook": "BaseException sits ABOVE Exception; KeyboardInterrupt/SystemExit are its siblings. Bare except catches all of BaseException and eats Ctrl-C. Never bare. Taught S42",
+  "status": "~",
+  "next_due": "2026-09-07",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "hierarchy DIRECTION (catcher reaches DOWN)",
+  "hook": "a catcher covers its own node and everything BELOW it, never above. except ValueError catches BadCommand(ValueError); except BadCommand does NOT catch a plain ValueError. Failed under fatigue S41, re-taught with the tree drawn S42",
+  "status": "~",
+  "next_due": "2026-09-07",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "except ORDERING (child first)",
+  "hook": "first match wins, top to bottom; a parent catcher above a child catcher makes the child unreachable. Taught S36, re-taught S42",
+  "status": "~",
+  "next_due": "2026-09-07",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "exception INSTANCE (e is an OBJECT)",
+  "hook": "ValueError('msg') is a CONSTRUCTOR CALL like list(); raise throws the OBJECT; except..as e binds e to it; type(e) is the class, print(e) is the message. ON CREDIT until 1.12 class->instance. S42 teach-back failed twice; root cause mentor-side",
+  "status": "~",
+  "next_due": "2026-09-07",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": ".pyc / bytecode cache",
+  "hook": "compiler output saved in __pycache__/<name>.cpython-312.pyc for IMPORTED modules; buys faster import only; source mtime+size stamped in the header, mismatch => recompile; deleting is always safe. Taught S42",
+  "status": "~",
+  "next_due": "2026-09-07",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "compiled AND interpreted (PVM)",
+  "hook": "CPython = a compiler (source->bytecode, SyntaxError lives here) + an interpreter loop / PVM (runs bytecode, every other error lives here). C compiles to machine code, no interpreter at run time. His question S42",
+  "status": "~",
+  "next_due": "2026-09-07",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "sys.path",
+  "hook": "a plain LIST of folder paths searched IN ORDER, first match wins; entry 0 = the script's folder ('' = cwd in REPL/-c); every ModuleNotFoundError = not in any folder on it. OPENED S42, [PREDICT] unanswered (he stopped)",
+  "status": "~",
+  "next_due": "2026-09-07",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "positional vs keyword ORDER + double-fill",
+  "hook": "bare values fill slots left->right, then name=value fills by name; bare AFTER named => SyntaxError at compile; a slot filled twice => TypeError at call. Taught S43 after pushback 79",
+  "status": "~",
+  "next_due": "2026-09-08",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "package / __init__.py / bound name",
+  "hook": "a package is a FOLDER holding __init__.py; import arm.limits runs __init__.py THEN limits.py, keys 'arm' and 'arm.limits' in sys.modules, binds ONE name arm (no dots in a name), limits is an attribute; import arm alone STOPS at __init__.py (AttributeError on arm.limits); __init__.py normally EMPTY or the front door. Taught S43-S44; bound-name miss twice. S45: bound name arm said RIGHT unprompted; import arm alone leaves vars(arm) empty (see_arm_ns.py); re-dated",
+  "status": "~",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "relative import / the dot / run-directly trap",
+  "hook": "from .limits import X: the dot = 'my own folder', filled from the module's dotted name (arm.safety_rel -> arm); from . import limits == from arm import limits (binds limits); buys rename-safety only; run the file DIRECTLY and it is __main__ with no dotted name -> ImportError: attempted relative import with no known parent package. Taught S44. S45: from . import limits -> import arm.limits THIRD time, PARKED with answer (from arm import limits); trap missed 2nd time then reasoned; run_safety_rel.py predicted in full; re-dated",
+  "status": "~",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "circular import / partially initialized module",
+  "hook": "two files import each other; the key enters sys.modules BEFORE line 1 runs (self_check.py), so the second import HITS a half-built module; from a import X -> ImportError: cannot import name 'X' from partially initialized module 'a'. NOT a loop: the early key prevents the loop. Fixes: third module (real) / import inside the function (patch, def body does not run at import). Taught S45",
+  "status": "~",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "the route decides the key / __main__ placeholder",
+  "hook": "sys.modules key = the route from a sys.path folder to the file, dots for slashes; same limits.py is 'arm.limits' from outside (init runs) or 'limits' from inside arm/ (init does not run) -> two module objects possible. A file run directly has no route, so __name__ and its key are the placeholder '__main__'; strip the last part of '__main__' and nothing is left -> relative import fails. teaching/s43_packages/arm/direct.py, arm/whoami.py. Taught S45; S46: [RECALL] at 42h on 'walk import json' -> GAP NAMED ('please remind me the whole thing'); arm half partly there (__init__.py first; sys.path holds the parent of arm/). Re-walked physically",
+  "status": "~",
+  "next_due": "2026-09-12",
+  "last_asked": "2026-09-10",
+  "rating": null
+ },
+ {
+  "term": "sys.modules key enters BEFORE the run",
+  "hook": "the empty module object is created and stored under its key before the file's first line runs; proved by self_check.py printing True and None mid-run. Protection against infinite re-import; the price is a half-built module on a cache hit. Taught S45",
+  "status": "~",
+  "next_due": "2026-09-10",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "stdlib on disk / __file__ / front door",
+  "hook": "stdlib = /usr/lib/python3.12/, ordinary .py files, fourth sys.path entry; __file__ = path the module was built from; json is a package (json/__init__.py); json/__init__.py lines 106-108 do from .decoder import ... so ONE import json loads four keys and puts twelve names on json -- the front door; arm's __init__.py only printed, so import arm loaded nothing. Taught S45, teach-back HELD; S46 RE-WALKED at 42h (route by hand with ls, front door chain decoder.py line 5 -> json.scanner), idea 3 (read bisect.py) added",
+  "status": "~",
+  "next_due": "2026-09-12",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "enumerate()",
+  "hook": "hands out one tuple per element: (count, element), count from 0; for i, name in enumerate(x) is two-name UNPACKING on the for line; replaces for i in range(len(x)). Taught S46 (teaching/s46_stdlib/enum.py), teach-back clean",
+  "status": "~",
+  "next_due": "2026-09-12",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "keyword-only fence: bare * in a signature",
+  "hook": "def f(a, b, *, key=None): positional filling STOPS at the star; everything right of it must be passed BY KEYWORD; a 4th positional -> TypeError 'takes 3 positional arguments but 4 were given'. Seen in bisect_left. Taught S46 (star.py); teach-back right, mechanism after a re-ask",
+  "status": "~",
+  "next_due": "2026-09-12",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "shadowing / first hit wins",
+  "hook": "the sys.path walk stops at the FIRST folder holding X.py or X/; a json.py next to your script (entry 0) hides the stdlib json; the crash lands LATER (AttributeError on .loads), not at the import line. Never name your own file after a package you import. Taught S46 (s46_pip/shadow/); teach-back clean",
+  "status": "~",
+  "next_due": "2026-09-12",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "pip / site-packages",
+  "hook": "pip COPIES a package folder into a folder already on sys.path (site-packages / dist-packages); no third tier -- same route rule; numpy in entry 6, rclpy in entry 1 (ROS setup.bash added it); sys.path.append at the top of a script = same mechanism by hand = a SMELL; clean fix pip install -e . (named, not shown). Taught S46 (where_third.py)",
+  "status": "~",
+  "next_due": "2026-09-12",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "sys.modules key moved to END on finish",
+  "hook": "key enters EARLY (before line 1; stops circular loops) AND is moved to the end of the dict when the module's run finishes -- so the final order is FINISH order; a package that imports its own files finishes last. Found from HIS question S46 (key_order/); insertion order shown mid-run, finish order after",
+  "status": "~",
+  "next_due": "2026-09-12",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "max() / min()",
+  "hook": "min(a, b) returns the smaller argument, max(a, b) the larger; clamp = max(low, min(value, high)). Level-1; used UNDEFINED in star.py S46 (mentor breach), defined after",
+  "status": "~",
+  "next_due": "2026-09-12",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "augmented assignment += on a MUTABLE type",
+  "hook": "list += mutates IN PLACE (extend), alias sees it; a = a + [..] rebinds; immutable types must rebind",
+  "status": "~",
+  "next_due": "2026-09-13",
+  "last_asked": "2026-09-11",
+  "rating": 7
+ },
+ {
+  "term": "open() returns a FILE OBJECT with a CURSOR",
+  "hook": "read() takes cursor to the end; a second read() returns ''",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "read() vs readline() vs for line in f",
+  "hook": "whole file as ONE str / one line incl. \\n / one line per pass; readlines() = list, loads all",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "modes r / w / a",
+  "hook": "\"w\" TRUNCATES at open, before any write; \"a\" cursor at END; both create; \"r\" default",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "write buffer / close flushes",
+  "hook": "write() goes to memory; lands on disk at close(); a skipped close = lost buffer + leaked handle",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "with open(...) as f / context manager",
+  "hook": "leaving the block closes f, exception or not; try/finally shape in one statement; f still bound after",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "cwd vs script folder: open() vs import",
+  "hook": "open() follows the SHELL (cwd); import follows the SCRIPT (sys.path[0]); anchor to __file__",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "pathlib.Path / os.path",
+  "hook": "Path(__file__).parent / name; os.path.join / dirname / abspath; os.getcwd()",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "FileNotFoundError",
+  "hook": "relative path resolved against cwd, not the script folder",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "csv.reader / csv.writer",
+  "hook": "one list of STR per row; quoted commas kept whole; open with newline=\"\"",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "json.load / json.dump",
+  "hook": "real types back (int, True/None from true/null); no tuple or set: tuple -> list on the round trip",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "LookupError",
+  "hook": "parent of KeyError and IndexError; a catcher reaches DOWN so an ancestor first swallows children",
+  "status": "~",
+  "next_due": "2026-09-14",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "class statement makes a TYPE / calling it makes an object",
+  "hook": "class binds a type name like def binds a function; Joint() returns a fresh object each call, a is b False; type(a) shows module.Joint",
+  "status": "~",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "attribute = a key in the object's __dict__ (vars)",
+  "hook": "a.angle is a dict lookup wearing a dot; vars(a) shows the dict; a missing key through the dot is AttributeError, not KeyError",
+  "status": "~",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "built-ins carry no __dict__",
+  "hook": "list/tuple/dict/int/str refuse a.name = ... (AttributeError) and vars() on them is TypeError; functions, modules and instances of your own classes have one; fixed C layout for memory and speed",
+  "status": "~",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "__init__ vs the type call",
+  "hook": "Joint(...) makes the object, calls __init__ with it as self, returns the object; __init__ returns None (discarded); Joint.__init__(a, ...) is the by-hand form; it initialises, it does not construct",
+  "status": "~",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "self = the object left of the dot / bound method",
+  "hook": "a.move is a bound method holding a; Joint.move is a plain function; lookup: object dict first, then the class dict; the found function arrives with the asking object as its first argument",
+  "status": "~",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ },
+ {
+  "term": "TypeError (wrong call) vs AttributeError (wrong dot read)",
+  "hook": "a wrong call fails at the parentheses before any attribute exists (missing/extra args to __init__); a wrong dot read fails at the dot on an object that exists",
+  "status": "~",
+  "next_due": "2026-09-15",
+  "last_asked": null,
+  "rating": null
+ }
 ]
