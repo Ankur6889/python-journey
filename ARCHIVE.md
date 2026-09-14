@@ -368,6 +368,15 @@
 
 ## D. PROGRESS TRACKER
 - Sessions Completed: **47**
+- **SESSION 49 (Mon 14 Sep 2026, 20:47 → ~21:00) — SHORT, STOPPED TIRED.
+  ~23h after S48. Revision his call again, no volley. `class_attr.py`
+  RE-ISSUED and read; held [PREDICT] two of three right, third right after one
+  pointer → Instance vs class attributes [~]. `__repr__` taught, "dunder"
+  defined, [PREDICT] on a printed list right → Dunder methods [~].
+  `@classmethod` frame + `from_dict.py` DELIVERED, [PREDICT] unanswered — he
+  stopped (*"too much tired today"*), resume from class methods at S50.**
+  Three files in `teaching/s49_oop/`. No drill. Zero pushbacks. The parked
+  rule was asked its final time; no ruling; stays parked, no more asks.
 - **SESSION 48 (Sun 13 Sep 2026, 17:43 → 21:48) — 1.12 OOP OPENED: frame,
   `class`/instances/attributes/`__dict__`/`__init__`/methods/bound methods,
   eleven files in `teaching/s48_oop/`, FIRST STUDENT DRILL SINCE S41
@@ -1027,6 +1036,7 @@
 | 46 | **STDLIB RE-WALKED AND FINISHED + PIP / SITE-PACKAGES TAUGHT. 42h after S45. 1.10 taught-complete.** *(Row omitted from the S46 close; written at the S47 close.)* | **No student drill.** Mentor demos `teaching/s46_stdlib/` (`key_order/`, `star.py`, `enum.py`), `teaching/s46_pip/` (`where_third.py`, `shadow/`). | Complete as far as it went — closed at his request 21:44; close files written the next day after pushback 94. | **Zero cold asks fired; route rule GAPPED at 42h, named not guessed. Six queue rows added. Pushbacks 88 (part), 89–94 upheld.** |
 | 47 | **VOLLEY (4 asks, stopped by him) + 1.11 FILE HANDLING OPENED AND TAUGHT-COMPLETE. ~21h after S46, two blocks over two days.** | **No student drill (offered at the end; he chose to close).** Mentor demos `teaching/s47_files/` (27 files), every one pasted under its path and run with its command: `read_it.py`, `read_twice.py`, `read_lines.py`, `loop_lines.py`, `write_it.py`, `append_it.py`, `no_close.py`, `safe_close.py`, `skip_close.py`, `with_it.py`, `with_err.py`, `read_anywhere.py`, `os_form.py`, `read_csv.py`, `write_csv.py`, `read_json.py`, `write_json.py` + their inputs/outputs. Volley snippets in scratch (`v1.py`–`v5b.py`, `v4_id.py`), outputs in `notes/session_47_notes.md`. | Complete: 1.11 checklist fully [~]; `pdb` still owed inside 1.11. | **Volley 3 PASS / 1 FAIL / 1 VOIDED. Promotions: `UnboundLocalError`, `None / is None` [~] → [x]. Fail: `+=` on a list as a rebind, rated 7 (over-rated), new row due 13 Sep. Teach-backs on 1.11 all clean after the paste-then-walk fix; two model slips corrected (file-as-list; `"w"` as cursor-at-start). Pushbacks 95 (label in header), 96 (asked instead of told after a fail — he was angry, and right), 97 (untaught `LookupError`), 98 (PREDICT off-screen), 99 (file without a walk): all upheld, 99/97. Rule candidate parked: fact-after-fail. He right-sized CSV himself and asked "do I need to remember this syntax?" — answered: cold = `with open`, the loop, the modes, files-follow-the-shell, one join form.** |
 | 48 | **1.12 OOP OPENED — frame, class/instance, attributes, `__dict__`, `__init__`, instance methods, bound methods. ~34h after S47. Revision ruled HIS at the open; no volley.** | **`drills/s48_joint.py` + `tests/test_s48_joint.py` (mentor tests, ten): `Joint(name, angle, limit)`, `move`, `is_safe` (boundary in the tests only), `describe`.** Mentor demos `teaching/s48_oop/` (11 files): `make_one.py`, `print_one.py`, `attach.py`, `look_inside.py`, `no_dict.py`, `init.py`, `init_short.py`, `by_hand.py`, `method.py`, `bound.py`, `class_attr.py` (unread). | **10/10 on the second run.** First run 9/10: `describe` PRINTED where the spec said RETURN; given `None` + captured stdout as "find it", fixed in one edit. Same-session → [~]. | **Zero cold asks (his ruling). Done line named `is_safe` (4/4); the bug was in `describe` — third done line to miss. Two [PREDICT] misses not logged (`print(Joint())` "not sure"; missing `__init__` arg → said `AttributeError`, is `TypeError`); one named gap (what fills `self`) → `bound.py`. Two direct questions of his produced `no_dict.py` and `by_hand.py`. `AttributeError` named before the traceback. All teach-backs clean. Zero pushbacks (99/97 unchanged). Six queue rows added.** |
+| 49 | **1.12 continued — class attributes (re-issue), `__repr__`, class methods opened. ~23h after S48. Short: ~15 min, stopped tired.** | **No student drill.** Mentor demos `teaching/s49_oop/`: `shadow.py` (object-only write, class copy untouched), `no_repr.py` → `with_repr.py` (rebuild-call string; list asks each element), `from_dict.py` (`cls` = the class left of the dot; `@` as spelling only). | **Ended by him at ~21:00 before the class-method [PREDICT] was answered.** | **Zero cold asks (his ruling). [PREDICT] `a.unit = "rad"`: `rad`/`deg` right, `vars(a)` given as the class dict, right after one pointer. [PREDICT] `print([a, b])` right. `print(Joint.from_dict)` unanswered. Zero pushbacks (99/97). Two queue rows added (169). Parked rule asked its final time, unruled, stays parked.** |
 
 ## F. WHAT EACH SESSION ESTABLISHED (S20 first; append new sessions at the END of this section)
 
@@ -6340,4 +6350,95 @@ three sessions.**
 - Rule: nothing adopted; the S47 candidate stays parked, unruled.
 - Schedule: ~0.4 unit-equivalent. Derived close unchanged (≈ 22 Oct).
   Next: re-issue `class_attr.py`, `__repr__`, class/static methods,
+  inheritance (pay `except ... as e`), the rest of 1.12, LeRobot block.
+
+## What Session 49 established (Monday 14 September 2026, 20:47 → ~21:00)
+
+**Short session, ended by him after about fifteen minutes: *"I am feeling
+too much tired today lets close this session today here itself, I will
+start from class method again tomorrow."*** Opened ~23 hours after S48 with
+*"again no revision needed just start from where we left off yesterday"*.
+No volley. Three ideas in three files under `teaching/s49_oop/`; two of
+them landed, the third was delivered and not confirmed.
+
+### 1. THE INTERVAL GATE
+From `date` (Mon 14 Sep 20:47), `git log -1` (13 Sep 21:53) and mtimes
+(STATE.md 21:50). Gap ≈ 23h; S48 material legal from tonight. Stated, no
+volley run — his standing ruling.
+
+### 2. THE PARKED RULE — final ask, no ruling
+"After a failed [RECALL], the missing fact is given, not asked for" was put
+as one line for the second and last time. He answered the [PREDICT]
+instead. Per the S48 instruction it stays parked and is not asked again.
+The mentor keeps applying it as practice; it becomes adoptable only if he
+raises it. RULES stays v6.
+
+### 3. THE RE-ISSUE — `class_attr.py`, read this time
+Pasted under its path with command, output, and the six-point walk
+(assignment in the class block → class dict; object dicts carry no `unit`;
+the dot read is object-first then class; `"unit" in vars(Joint)`;
+`"__init__" in vars(Joint)` — methods are class attributes; two dicts in
+order). Then the held [PREDICT] (`a.unit = "rad"` → `a.unit`, `b.unit`,
+`vars(a)`). His answer: `rad`, `deg`, then `{"unit":deg, __init__}` — the
+first two right (shadowing on `a`, `b` falls through), the third was the
+CLASS dict where the ask was `vars(a)`. One pointer (*"your lines 1 and 2
+say the object dict was written — so what does `vars(a)` show?"*) and he
+gave `{'name': elbow, 'angle': 10, 'unit': rad}`. Proved with
+`shadow.py`, which adds `print(vars(Joint)["unit"])` → `deg`: the write
+goes into the object's dict only; `Joint.unit = ...` is the only way to
+touch the class copy. **Instance vs class attributes [ ] → [~].**
+
+### 4. `__repr__` — the S48 promise paid
+Frame first: a method Python calls when it needs the text form of an
+object; exists because without it Python has only the type and address;
+buys one readable line in every print, log and traceback. `no_repr.py`
+(address form; a list of two addresses) then `with_repr.py` (returns
+`f"Joint('{self.name}', {self.angle})"`; `"__repr__" in vars(Joint)` True).
+Walk: it RETURNS a string, never prints; stored like any method; the only
+special thing is WHO calls it. "Dunder" defined here: double-underscore, a
+name Python looks for at a fixed moment — the sixth he has met after
+`__init__`, `__dict__`, `__file__`, `__name__`, `__main__`. `__str__` one
+line (tried first by print, falls back). [PREDICT] `print([a, b])`: he gave
+`[Joint('elbow',10), Joint('writst',45)]` — right (typo is channel). Run
+to prove. **Dunder methods [ ] → [~] (repr only).**
+
+### 5. CLASS METHODS — delivered, not confirmed
+Frame: a method whose first parameter receives the class; exists because
+`__init__` takes one fixed shape and real data arrives as dicts/CSV rows,
+so you want a second door in that runs before any object exists; honest
+buy-in today is tidiness only, the real payoff (`cls` is not always
+`Joint`) lands at inheritance. `from_dict.py`: `Joint.from_dict(d)` prints
+`cls is <class '__main__.Joint'>`, returns a normal `Joint`; `@classmethod`
+given as SPELLING ONLY ("a line starting with `@` above a `def` changes how
+that `def` is stored"); `print(a.move)` shown as the S48 bound method.
+[PREDICT] `print(Joint.from_dict)` posed. He stopped. **Not confirmed read;
+re-issue at S50, then the [PREDICT], then `@staticmethod` one line.**
+
+### 6. WHAT HE GOT RIGHT / WHAT DID NOT HOLD
+Right: shadowing reasoned from the two-dict model (lines 1–2 first try);
+the object dict on one pointer; the list-of-objects `__repr__` prediction
+first try. Did not hold (none ledger-eligible): `vars(a)` answered as
+`vars(Joint)` — a which-dict slip, not a model gap, since his own first two
+lines required the object dict to have been written.
+
+### 7. PUSHBACKS — none (99 raised, 97 upheld, unchanged)
+
+### 8. MENTOR RECORD
+Held: interval gate from the repo; parked rule asked once and dropped;
+paste-walk-ask with path, command, output for all three files; frame first
+on both new ideas, with the honest "today only tidiness" on classmethod;
+[PREDICT] only from the screen; one pointer on the miss, not the answer;
+proof by running; doubt gate before each new idea; close written in the
+turn he asked. No drill was set — the session was too short to reach one.
+STATE.md trimmed toward the 2,000-word target this close.
+
+### 9. THE LEDGER
+- Queue 167 → 169 (two rows: class-vs-instance attribute, `__repr__`/
+  dunder; [~] due 16 Sep). Fired 0. **[x] 101, [~] 68.**
+- Curriculum: **1.12 — Instance vs class attributes [~], Dunder methods [~]
+  (repr only); Methods stays [~] with the class half delivered-unconfirmed.**
+  No drill file this session.
+- Rule: nothing adopted; the S47 candidate stays parked, final ask made.
+- Schedule: ~0.15 unit-equivalent. Derived close unchanged (≈ 22 Oct).
+  Next: re-issue `from_dict.py` + its [PREDICT], `@staticmethod`,
   inheritance (pay `except ... as e`), the rest of 1.12, LeRobot block.
